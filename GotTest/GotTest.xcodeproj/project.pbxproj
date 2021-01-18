@@ -71,9 +71,9 @@
 		CC76B36025B5B6D500AD405E /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsList.swift; sourceTree = "<group>"; };
 		CC76B3BD25B5C9A800AD405E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMembers.swift; sourceTree = "<group>"; };
+		CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwornMembers.swift; path = GotTest/Views/SingleHouseView/Elements/SwornMembers.swift; sourceTree = SOURCE_ROOT; };
 		CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadetBranches.swift; sourceTree = "<group>"; };
-		CC76B3E325B5D16E00AD405E /* AncestralWeapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncestralWeapons.swift; sourceTree = "<group>"; };
+		CC76B3E325B5D16E00AD405E /* AncestralWeapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AncestralWeapons.swift; path = GotTest/Views/SingleHouseView/Elements/AncestralWeapons.swift; sourceTree = SOURCE_ROOT; };
 		CC76B3E825B5D1D400AD405E /* DiedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiedOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

@@ -26,5 +26,6 @@ struct HousesView: View {
 struct HousesView_Previews: PreviewProvider {
   static var previews: some View {
     HousesView()
+      .environmentObject(HousesResultsViewModel())
   }
 }
