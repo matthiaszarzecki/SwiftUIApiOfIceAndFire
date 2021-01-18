@@ -1,5 +1,5 @@
 //
-//  DiedOut.swift
+//  Founder.swift
 //  GotTest
 //
 //  Created by Matthias Zarzecki on 18.01.21.
@@ -7,23 +7,24 @@
 
 import SwiftUI
 
-struct DiedOut: View {
+struct Founder: View {
   var house: House
+  
   var body: some View {
     return VStack {
-      if !house.diedOut.isEmpty {
-        let text = Text("House died out during:").font(.headline) + Text(" \(house.diedOut)")
-        
-        text
+      if !house.founder.isEmpty {
+        Text("Founder:")
+          .font(.headline)
+        Text("\(house.founder)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
 }
 
-struct DiedOut_Previews: PreviewProvider {
+struct Founder_Previews: PreviewProvider {
   static var previews: some View {
-    DiedOut(house: MockClasses.house)
+    Founder(house: MockClasses.house)
       .previewLayout(.sizeThatFits)
   }
 }

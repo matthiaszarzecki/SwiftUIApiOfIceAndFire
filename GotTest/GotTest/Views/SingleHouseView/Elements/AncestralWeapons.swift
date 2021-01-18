@@ -29,5 +29,6 @@ struct AncestralWeapons: View {
 struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
     AncestralWeapons(house: MockClasses.house)
+      .previewLayout(.sizeThatFits)
   }
 }

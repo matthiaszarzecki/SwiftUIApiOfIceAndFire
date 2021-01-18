@@ -1,5 +1,5 @@
 //
-//  CadetBranches.swift
+//  Seats.swift
 //  GotTest
 //
 //  Created by Matthias Zarzecki on 18.01.21.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct CadetBranches: View {
+struct Seats: View {
   var house: House
   
   var body: some View {
     return VStack {
-      if house.cadetBranches.count > 0 {
+      if house.seats.count > 0 && house.seats[0] != "" {
         VStack {
-          Text("Cadet Branches:")
+          Text("Seats:")
             .font(.headline)
-          ForEach(house.cadetBranches, id: \.self) { branch in
-            Text("\(branch)")
+          ForEach(house.seats, id: \.self) { seat in
+            Text("\(seat)")
           }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
@@ -26,9 +26,9 @@ struct CadetBranches: View {
   }
 }
 
-struct CadetBranches_Previews: PreviewProvider {
+struct Seats_Previews: PreviewProvider {
   static var previews: some View {
-    CadetBranches(house: MockClasses.house)
+    Seats(house: MockClasses.house)
       .previewLayout(.sizeThatFits)
   }
 }
