@@ -25,6 +25,9 @@
 		CC76B38B25B5BCAD00AD405E /* SearchResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */; };
 		CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3BD25B5C9A800AD405E /* Character.swift */; };
 		CC76B3D325B5CF7F00AD405E /* SwornMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */; };
+		CC76B3DF25B5D12F00AD405E /* CadetBranches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */; };
+		CC76B3E425B5D16E00AD405E /* AncestralWeapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E325B5D16E00AD405E /* AncestralWeapons.swift */; };
+		CC76B3E925B5D1D400AD405E /* DiedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E825B5D1D400AD405E /* DiedOut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsList.swift; sourceTree = "<group>"; };
 		CC76B3BD25B5C9A800AD405E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMembers.swift; sourceTree = "<group>"; };
+		CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadetBranches.swift; sourceTree = "<group>"; };
+		CC76B3E325B5D16E00AD405E /* AncestralWeapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncestralWeapons.swift; sourceTree = "<group>"; };
+		CC76B3E825B5D1D400AD405E /* DiedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiedOut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */,
+				CC76B3E325B5D16E00AD405E /* AncestralWeapons.swift */,
+				CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */,
+				CC76B3E825B5D1D400AD405E /* DiedOut.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -392,10 +401,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC76B3E425B5D16E00AD405E /* AncestralWeapons.swift in Sources */,
 				CC5FE3C125B5A94A00DC76DC /* House.swift in Sources */,
 				CC76B38B25B5BCAD00AD405E /* SearchResultsList.swift in Sources */,
 				CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */,
+				CC76B3DF25B5D12F00AD405E /* CadetBranches.swift in Sources */,
 				CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */,
+				CC76B3E925B5D1D400AD405E /* DiedOut.swift in Sources */,
 				CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */,
 				CC5FE3C625B5A97900DC76DC /* MockClasses.swift in Sources */,
 				CC76B36125B5B6D500AD405E /* String-Extension.swift in Sources */,

@@ -119,48 +119,7 @@ struct SingleHouseView: View {
       }
     }
   }
-  
-  var diedOut: some View {
-    return VStack {
-      if !house.diedOut.isEmpty {
-        let text = Text("House died out during:").font(.headline) + Text(" \(house.diedOut)")
-        
-        text
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-      }
-    }
-  }
-  
-  var ancestralWeapons: some View {
-    return VStack {
-      if house.ancestralWeapons.count > 0 && house.ancestralWeapons[0] != "" {
-        VStack {
-          Text("Ancestral Weapons:")
-            .font(.headline)
-          ForEach(house.ancestralWeapons, id: \.self) { weapon in
-            Text("🗡️ \(weapon)")
-          }
-        }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-      }
-    }
-  }
-  
-  var cadetBranches: some View {
-    return VStack {
-      if house.cadetBranches.count > 0 {
-        VStack {
-          Text("Cadet Branches:")
-            .font(.headline)
-          ForEach(house.cadetBranches, id: \.self) { branch in
-            Text("\(branch)")
-          }
-        }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-      }
-    }
-  }
-  
+
   var body: some View {
     return
       ScrollView {
@@ -176,9 +135,9 @@ struct SingleHouseView: View {
           overLord
           founded
           founder
-          diedOut
-          ancestralWeapons
-          cadetBranches
+          DiedOut(house: house)
+          AncestralWeapons(house: house)
+          CadetBranches(house: house)
           SwornMembers(house: house)
         }
       }
