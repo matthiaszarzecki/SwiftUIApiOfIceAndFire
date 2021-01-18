@@ -131,19 +131,39 @@ struct HouseView: View {
     }
   }
   
+  var ancestralWeapons: some View {
+    return VStack {
+      if house.ancestralWeapons.count > 0 && house.ancestralWeapons[0] != "" {
+        VStack {
+          Text("Ancestral Weapons:")
+            .font(.headline)
+          ForEach(house.ancestralWeapons, id: \.self) { weapon in
+            Text("\(weapon)")
+          }
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+      }
+    }
+  }
+  
   var body: some View {
     return
       ScrollView {
-        title
-        coatOfArms
-        houseMotto
-        titles
-        seats
-        currentLord
-        overLord
-        founded
-        founder
-        diedOut
+        Group {
+          title
+          coatOfArms
+          houseMotto
+          titles
+          seats
+        }
+        Group {
+          currentLord
+          overLord
+          founded
+          founder
+          diedOut
+          ancestralWeapons
+        }
       }
       .padding()
   }
