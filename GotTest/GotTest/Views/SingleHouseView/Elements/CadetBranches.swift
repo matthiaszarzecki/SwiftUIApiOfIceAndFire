@@ -17,6 +17,7 @@ struct CadetBranches: View {
           VStack {
             Text("Cadet Branches:")
               .font(.headline)
+            
             ForEach(cadetBranches, id: \.self) { house in
               NavigationLink(destination: SingleHouseView(house: house)) {
                 Text("\(house.name)")

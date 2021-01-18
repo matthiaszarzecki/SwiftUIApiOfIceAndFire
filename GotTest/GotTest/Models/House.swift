@@ -30,7 +30,7 @@ struct House: Codable, Identifiable, Hashable {
   
   /// Tells whether any field that can contain an URL contains an URL
   var cointainsUrls: Bool {
-    return founder.contains("http") || currentLord.contains("http") || heir.contains("http") || (swornMembers.count > 0 && swornMembers[0].contains("http")) || (cadetBranches.count > 0 && cadetBranches[0].contains("http"))
+    return founder.isUrl || currentLord.isUrl || heir.isUrl || (swornMembers.count > 0 && swornMembers[0].isUrl) || (cadetBranches.count > 0 && cadetBranches[0].isUrl)
   }
   
   enum CodingKeys: String, CodingKey {

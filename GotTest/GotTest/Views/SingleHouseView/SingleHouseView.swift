@@ -59,40 +59,40 @@ struct SingleHouseView: View {
       // If the ApiOfIceAndFire were graphql-compatible that would
       // be much more straightforward!
       
-      if house.founder.contains("http") {
+      if house.founder.isUrl {
         Api.getCharacter(url: house.founder) { character in
           self.houseUpdated?.founder = character
         }
       }
       
-      if house.currentLord.contains("http") {
+      if house.currentLord.isUrl {
         Api.getCharacter(url: house.currentLord) { character in
           self.houseUpdated?.currentLord = character
         }
       }
       
-      if house.heir.contains("http") {
+      if house.heir.isUrl {
         Api.getCharacter(url: house.heir) { character in
           self.houseUpdated?.heir = character
         }
       }
       
       for index in (0..<house.swornMembers.count) {
-        if house.swornMembers[index].contains("http") {
+        if house.swornMembers[index].isUrl {
           Api.getCharacter(url: house.swornMembers[index]) { character in
             self.houseUpdated?.swornMembers?[index] = character
           }
         }
       }
       
-      if house.overlord.contains("http") {
+      if house.overlord.isUrl {
         Api.getSingleHouse(url: house.overlord) { house in
           self.houseUpdated?.overlord = house
         }
       }
       
       for index in (0..<house.cadetBranches.count) {
-        if house.cadetBranches[index].contains("http") {
+        if house.cadetBranches[index].isUrl {
           Api.getSingleHouse(url: house.cadetBranches[index]) { house in
             self.houseUpdated?.cadetBranches?[index] = house
           }

@@ -15,6 +15,7 @@ struct Founded: View {
       if !house.founded.isEmpty {
         Text("Founded:")
           .font(.headline)
+        
         Text("\(house.founded)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

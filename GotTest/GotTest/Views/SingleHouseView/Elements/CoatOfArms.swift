@@ -15,6 +15,7 @@ struct CoatOfArms: View {
       if !house.coatOfArms.isEmpty {
         Text("Coat of Arms:")
           .font(.headline)
+        
         Text("\(house.coatOfArms)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
