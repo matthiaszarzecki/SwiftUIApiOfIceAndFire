@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension String {
+  public var isUrl: Bool {
+    return self.contains("http")
+  }
+}
+
 extension String: Identifiable {
   /// For the Identifiable-protocol
   public var id: Self { self }

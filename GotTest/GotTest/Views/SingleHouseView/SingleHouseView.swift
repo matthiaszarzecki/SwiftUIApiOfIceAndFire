@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SingleHouseView: View {
   var house: House
-  @State var houseUpdated: HouseUpdated?
+  
+  @State private var houseUpdated: HouseUpdated?
 
   var loader: some View {
     if let unwrappedHouseUpdated = houseUpdated {
@@ -22,6 +23,7 @@ struct SingleHouseView: View {
             Titles(house: unwrappedHouseUpdated)
             Seats(house: unwrappedHouseUpdated)
             CurrentLord(house: unwrappedHouseUpdated)
+            Heir(house: unwrappedHouseUpdated)
           }
           Group {
             Overlord(house: unwrappedHouseUpdated)
@@ -47,7 +49,8 @@ struct SingleHouseView: View {
       }
   }
   
-  /// Gets locally saved URL's and updates corresponding values
+  /// Turns the input House into a HouseUpdated
+  /// by fetching data from locally saved URL's.
   func updateHouseData() {
     houseUpdated = HouseUpdated(fromHouse: house)
     

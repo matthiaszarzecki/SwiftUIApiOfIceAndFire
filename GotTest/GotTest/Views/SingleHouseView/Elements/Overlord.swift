@@ -15,8 +15,15 @@ struct Overlord: View {
       if let overlordHouse = house.overlord {
         Text("Overlord:")
           .font(.headline)
-        Text("\(overlordHouse.name)")
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+        
+        NavigationLink(destination: SingleHouseView(house: overlordHouse)) {
+          Text("\(overlordHouse.name)")
+            .foregroundColor(.black)
+            .padding()
+            .background(Color.gray)
+            .cornerRadius(12.0)
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }

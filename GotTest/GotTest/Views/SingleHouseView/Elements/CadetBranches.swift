@@ -18,7 +18,13 @@ struct CadetBranches: View {
             Text("Cadet Branches:")
               .font(.headline)
             ForEach(cadetBranches, id: \.self) { house in
-              Text("\(house.name)")
+              NavigationLink(destination: SingleHouseView(house: house)) {
+                Text("\(house.name)")
+                  .foregroundColor(.black)
+                  .padding()
+                  .background(Color.gray)
+                  .cornerRadius(12.0)
+              }
             }
           }
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))

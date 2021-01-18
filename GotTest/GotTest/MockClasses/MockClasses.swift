@@ -40,7 +40,17 @@ struct MockClasses {
     ]
   )
   
+  static let character = Character(url: "https://www.anapioficeandfire.com/api/characters/298", name: "Delonne Allyrion")
+  
   static let houses = Array.init(repeating: house, count: 4)
   
-  static let houseUpdated = HouseUpdated(fromHouse: MockClasses.house)
+  static let houseUpdated = HouseUpdated(
+    fromHouse: MockClasses.house,
+    currentLord: MockClasses.character,
+    heir: MockClasses.character,
+    overlord: MockClasses.house,
+    founder: MockClasses.character,
+    cadetBranches: MockClasses.houses,
+    swornMembers: Array.init(repeating: MockClasses.character, count: 2)
+  )
 }

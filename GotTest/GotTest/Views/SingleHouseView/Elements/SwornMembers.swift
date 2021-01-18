@@ -18,7 +18,13 @@ struct SwornMembers: View {
             Text("Sworn Members:")
               .font(.headline)
             ForEach(swornMembers, id: \.self) { character in
-              Text("\(character.name)")
+              NavigationLink(destination: CharacterView(character: character)) {
+                Text("\(character.name)")
+                  .foregroundColor(.black)
+                  .padding()
+                  .background(Color.gray)
+                  .cornerRadius(12.0)
+              }
             }
           }
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))

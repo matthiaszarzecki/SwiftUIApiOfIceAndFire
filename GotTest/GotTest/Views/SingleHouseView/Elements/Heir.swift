@@ -1,19 +1,19 @@
 //
-//  Founder.swift
+//  Heir.swift
 //  GotTest
 //
-//  Created by Matthias Zarzecki on 18.01.21.
+//  Created by Matthias Zarzecki on 19.01.21.
 //
 
 import SwiftUI
 
-struct Founder: View {
+struct Heir: View {
   var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if let character = house.founder {
-        Text("Founder:")
+      if let character = house.heir {
+        Text("Heir:")
           .font(.headline)
         
         NavigationLink(destination: CharacterView(character: character)) {
@@ -29,9 +29,8 @@ struct Founder: View {
   }
 }
 
-struct Founder_Previews: PreviewProvider {
+struct Heir_Previews: PreviewProvider {
   static var previews: some View {
-    Founder(house: MockClasses.houseUpdated)
-      .previewLayout(.sizeThatFits)
+    Heir(house: MockClasses.houseUpdated)
   }
 }

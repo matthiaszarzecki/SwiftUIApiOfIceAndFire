@@ -15,8 +15,15 @@ struct CurrentLord: View {
       if let character = house.currentLord {
         Text("Current Lord:")
           .font(.headline)
-        Text("\(character.name)")
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+        
+        NavigationLink(destination: CharacterView(character: character)) {
+          Text("\(character.name)")
+            .foregroundColor(.black)
+            .padding()
+            .background(Color.gray)
+            .cornerRadius(12.0)
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }

@@ -72,7 +72,15 @@ struct HouseUpdated {
   var cadetBranches: [House]?
   var swornMembers: [Character]?
   
-  init(fromHouse house: House) {
+  init(
+    fromHouse house: House,
+    currentLord: Character? = nil,
+    heir: Character? = nil,
+    overlord: House? = nil,
+    founder: Character? = nil,
+    cadetBranches: [House]? = nil,
+    swornMembers: [Character]? = nil
+  ) {
     id = house.id
     name = house.name
     region = house.region
@@ -83,5 +91,12 @@ struct HouseUpdated {
     founded = house.founded
     diedOut = house.diedOut
     ancestralWeapons = house.ancestralWeapons
+    
+    self.currentLord = currentLord
+    self.heir = heir
+    self.overlord = overlord
+    self.founder = founder
+    self.cadetBranches = cadetBranches
+    self.swornMembers = swornMembers
   }
 }
