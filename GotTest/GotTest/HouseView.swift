@@ -146,6 +146,21 @@ struct HouseView: View {
     }
   }
   
+  var cadetBranches: some View {
+    return VStack {
+      if house.cadetBranches.count > 0 {
+        VStack {
+          Text("Cadet Branches:")
+            .font(.headline)
+          ForEach(house.cadetBranches, id: \.self) { branch in
+            Text("\(branch)")
+          }
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+      }
+    }
+  }
+  
   var body: some View {
     return
       ScrollView {
@@ -163,6 +178,7 @@ struct HouseView: View {
           founder
           diedOut
           ancestralWeapons
+          cadetBranches
         }
       }
       .padding()
