@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HouseView: View {
+struct SingleHouseView: View {
   var house: House
   
   var title: some View {
@@ -203,6 +203,6 @@ struct HouseView: View {
 
 struct HouseView_Previews: PreviewProvider {
   static var previews: some View {
-    HouseView(house: MockClasses.house)
+    SingleHouseView(house: MockClasses.house)
   }
 }
