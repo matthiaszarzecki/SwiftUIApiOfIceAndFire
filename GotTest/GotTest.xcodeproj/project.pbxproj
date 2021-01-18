@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37525B59CE400DC76DC /* AppDelegate.swift */; };
 		CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */; };
-		CC5FE37A25B59CE400DC76DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37925B59CE400DC76DC /* ContentView.swift */; };
+		CC5FE37A25B59CE400DC76DC /* HousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37925B59CE400DC76DC /* HousesView.swift */; };
 		CC5FE37C25B59CE800DC76DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE37B25B59CE800DC76DC /* Assets.xcassets */; };
 		CC5FE37F25B59CE800DC76DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */; };
 		CC5FE38225B59CE800DC76DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE38025B59CE800DC76DC /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		CC5FE37225B59CE400DC76DC /* GotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FE37525B59CE400DC76DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC5FE37925B59CE400DC76DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC5FE37925B59CE400DC76DC /* HousesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesView.swift; sourceTree = "<group>"; };
 		CC5FE37B25B59CE800DC76DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC5FE38125B59CE800DC76DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			children = (
 				CC5FE37525B59CE400DC76DC /* AppDelegate.swift */,
 				CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */,
-				CC5FE37925B59CE400DC76DC /* ContentView.swift */,
+				CC5FE37925B59CE400DC76DC /* HousesView.swift */,
 				CC5FE3C525B5A97900DC76DC /* MockClasses.swift */,
 				CC5FE3B525B5A14700DC76DC /* HouseView.swift */,
 				CC5FE3A825B59D0E00DC76DC /* Api.swift */,
@@ -284,7 +284,7 @@
 				CC5FE3C625B5A97900DC76DC /* MockClasses.swift in Sources */,
 				CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */,
 				CC5FE3A925B59D0E00DC76DC /* Api.swift in Sources */,
-				CC5FE37A25B59CE400DC76DC /* ContentView.swift in Sources */,
+				CC5FE37A25B59CE400DC76DC /* HousesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

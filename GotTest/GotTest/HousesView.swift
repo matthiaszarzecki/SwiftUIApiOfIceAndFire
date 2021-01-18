@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HousesView: View {
   @State var houses: [House]? = nil
   
   var loader: some View {
@@ -46,8 +46,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      ContentView(houses: MockClasses.houses)
-      ContentView()
+      HousesView(houses: MockClasses.houses)
+      HousesView()
     }
   }
 }
