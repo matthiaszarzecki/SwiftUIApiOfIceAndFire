@@ -9,7 +9,8 @@ import Foundation
 
 /// Contains all data related to a House in ASOIAF.
 struct House: Codable, Identifiable, Hashable {
-  /// The identifier for this house. Is also the direct url to its data.
+  /// The identifier for this house. Is also the direct url to its
+  /// data. Needs to be named "id" to conform to identifiable protocol.
   let id: String
   let name: String
   let region: String
