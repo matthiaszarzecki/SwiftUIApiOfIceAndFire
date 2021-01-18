@@ -19,7 +19,7 @@ struct HouseView: View {
       
       if !house.region.isEmpty {
         Text("of \(house.region)")
-        
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -30,6 +30,7 @@ struct HouseView: View {
         Text("Coat of Arms:")
           .font(.headline)
         Text("\(house.coatOfArms)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -40,6 +41,7 @@ struct HouseView: View {
         Text("Words:")
           .font(.headline)
         Text("\(house.words)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -47,11 +49,14 @@ struct HouseView: View {
   var titles: some View {
     return VStack {
       if house.titles.count > 0 {
-        Text("Titles:")
-          .font(.headline)
-        ForEach(house.titles, id: \.self) { title in
-          Text("\(title)")
+        VStack {
+          Text("Titles:")
+            .font(.headline)
+          ForEach(house.titles, id: \.self) { title in
+            Text("\(title)")
+          }
         }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -59,11 +64,14 @@ struct HouseView: View {
   var seats: some View {
     return VStack {
       if house.seats.count > 0 {
-        Text("Seats:")
-          .font(.headline)
-        ForEach(house.seats, id: \.self) { seat in
-          Text("\(seat)")
+        VStack {
+          Text("Seats:")
+            .font(.headline)
+          ForEach(house.seats, id: \.self) { seat in
+            Text("\(seat)")
+          }
         }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -74,6 +82,7 @@ struct HouseView: View {
         Text("Current Lord:")
           .font(.headline)
         Text("\(house.currentLord)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -84,6 +93,7 @@ struct HouseView: View {
         Text("Overlord:")
           .font(.headline)
         Text("\(house.overlord)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -94,6 +104,7 @@ struct HouseView: View {
         Text("Founded:")
           .font(.headline)
         Text("\(house.founded)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -102,24 +113,12 @@ struct HouseView: View {
     return
       ScrollView {
         title
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-        
         coatOfArms
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-        
         houseMotto
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-        
         titles
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-        
         seats
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
-        
         currentLord
-        
         overLord
-        
         founded
       }
       .padding()
