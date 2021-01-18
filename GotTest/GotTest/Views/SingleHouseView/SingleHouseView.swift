@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SingleHouseView: View {
-  var house: House
+  @State var house: House
 
   var body: some View {
     return ScrollView {
@@ -31,6 +31,17 @@ struct SingleHouseView: View {
       }
     }
     .padding()
+    .onAppear {
+      checkForDeeperData()
+    }
+  }
+  
+  func checkForDeeperData() {
+    if house.founder.contains("http") {
+      Api.getCharacter(url: house.founder) { character in
+        self.house.founder = character.name
+      }
+    }
   }
 }
 

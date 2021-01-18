@@ -22,7 +22,7 @@ struct House: Codable, Identifiable, Hashable {
   let heir: String
   let overlord: String
   let founded: String
-  let founder: String
+  var founder: String
   let diedOut: String
   let ancestralWeapons: [String]
   let cadetBranches: [String]
