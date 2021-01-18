@@ -39,8 +39,9 @@ struct SingleHouseView: View {
   /// Gets locally saved URL's and updates corresponding values
   func checkForDeeperData() {
     // Not really happy about this, as it is quite over-fetching.
-    // If the ApiOfIceAndFire were a graphql-compatible that would
+    // If the ApiOfIceAndFire were graphql-compatible that would
     // be much more straightforward!
+    
     if house.founder.contains("http") {
       Api.getCharacter(url: house.founder) { character in
         self.house.founder = character.name
