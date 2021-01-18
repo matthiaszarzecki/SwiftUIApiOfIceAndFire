@@ -121,27 +121,26 @@ struct SingleHouseView: View {
   }
 
   var body: some View {
-    return
-      ScrollView {
-        Group {
-          title
-          coatOfArms
-          houseMotto
-          titles
-          seats
-        }
-        Group {
-          currentLord
-          overLord
-          founded
-          founder
-          DiedOut(house: house)
-          AncestralWeapons(house: house)
-          CadetBranches(house: house)
-          SwornMembers(house: house)
-        }
+    return ScrollView {
+      Group {
+        title
+        coatOfArms
+        houseMotto
+        titles
+        seats
       }
-      .padding()
+      Group {
+        currentLord
+        overLord
+        founded
+        founder
+        DiedOut(house: house)
+        AncestralWeapons(house: house)
+        CadetBranches(house: house)
+        SwornMembers(house: house)
+      }
+    }
+    .padding()
   }
 }
 
