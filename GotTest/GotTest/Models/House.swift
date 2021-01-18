@@ -9,8 +9,7 @@ import Foundation
 
 /// Contains all data related to a House in ASOIAF.
 struct House: Codable, Identifiable, Hashable {
-  /// The identifier for this house. Is also the direct url to its data.
-  let id: String
+  let id = UUID()
   let name: String
   let region: String
   let coatOfArms: String
@@ -26,23 +25,4 @@ struct House: Codable, Identifiable, Hashable {
   let ancestralWeapons: [String]
   let cadetBranches: [String]
   let swornMembers: [String]
-  
-  enum CodingKeys: String, CodingKey {
-    case id = "url"
-    case name
-    case region
-    case coatOfArms
-    case words
-    case titles
-    case seats
-    case currentLord
-    case heir
-    case overlord
-    case founded
-    case founder
-    case diedOut
-    case ancestralWeapons
-    case cadetBranches
-    case swornMembers
-  }
 }
