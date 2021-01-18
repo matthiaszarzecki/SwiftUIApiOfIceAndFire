@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Seats: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
@@ -28,7 +28,7 @@ struct Seats: View {
 
 struct Seats_Previews: PreviewProvider {
   static var previews: some View {
-    Seats(house: MockClasses.house)
+    Seats(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

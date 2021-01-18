@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct CadetBranches: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if house.cadetBranches.count > 0 {
-        VStack {
-          Text("Cadet Branches:")
-            .font(.headline)
-          ForEach(house.cadetBranches, id: \.self) { branch in
-            Text("\(branch)")
+      if let cadetBranches = house.cadetBranches {
+        if cadetBranches.count > 0 {
+          VStack {
+            Text("Cadet Branches:")
+              .font(.headline)
+            ForEach(cadetBranches, id: \.self) { house in
+              Text("\(house.name)")
+            }
           }
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -28,7 +30,7 @@ struct CadetBranches: View {
 
 struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
-    CadetBranches(house: MockClasses.house)
+    CadetBranches(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

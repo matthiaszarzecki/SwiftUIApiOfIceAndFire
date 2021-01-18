@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoatOfArms: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
@@ -24,7 +24,7 @@ struct CoatOfArms: View {
 
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
-    CoatOfArms(house: MockClasses.house)
+    CoatOfArms(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

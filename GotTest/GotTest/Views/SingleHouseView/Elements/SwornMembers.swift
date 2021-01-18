@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct SwornMembers: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if house.swornMembers.count > 0 {
-        VStack {
-          Text("Sworn Members:")
-            .font(.headline)
-          ForEach(house.swornMembers, id: \.self) { member in
-            Text("\(member)")
+      if let swornMembers = house.swornMembers {
+        if swornMembers.count > 0 {
+          VStack {
+            Text("Sworn Members:")
+              .font(.headline)
+            ForEach(swornMembers, id: \.self) { character in
+              Text("\(character.name)")
+            }
           }
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
         }
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -28,7 +30,7 @@ struct SwornMembers: View {
 
 struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
-    SwornMembers(house: MockClasses.house)
+    SwornMembers(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

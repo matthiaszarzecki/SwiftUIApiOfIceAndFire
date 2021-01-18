@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character: Codable {
+struct Character: Codable, Hashable {
   let url: String
   let name: String
 }

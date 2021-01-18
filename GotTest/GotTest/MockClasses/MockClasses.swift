@@ -41,4 +41,6 @@ struct MockClasses {
   )
   
   static let houses = Array.init(repeating: house, count: 4)
+  
+  static let houseUpdated = HouseUpdated(fromHouse: MockClasses.house)
 }

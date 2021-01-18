@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct Founder: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if !house.founder.isEmpty {
+      if let character = house.founder {
         Text("Founder:")
           .font(.headline)
-        Text("\(house.founder)")
+        Text("\(character.name)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
@@ -24,7 +24,7 @@ struct Founder: View {
 
 struct Founder_Previews: PreviewProvider {
   static var previews: some View {
-    Founder(house: MockClasses.house)
+    Founder(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

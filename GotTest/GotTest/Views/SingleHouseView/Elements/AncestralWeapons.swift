@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AncestralWeapons: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
@@ -28,7 +28,7 @@ struct AncestralWeapons: View {
 
 struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
-    AncestralWeapons(house: MockClasses.house)
+    AncestralWeapons(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

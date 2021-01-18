@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CurrentLord: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if !house.currentLord.isEmpty {
+      if let character = house.currentLord {
         Text("Current Lord:")
           .font(.headline)
-        Text("\(house.currentLord)")
+        Text("\(character.name)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
@@ -24,7 +24,7 @@ struct CurrentLord: View {
 
 struct CurrentLord_Previews: PreviewProvider {
   static var previews: some View {
-    CurrentLord(house: MockClasses.house)
+    CurrentLord(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct DiedOut: View {
-  var house: House
+  var house: HouseUpdated
+  
   var body: some View {
     return VStack {
       if !house.diedOut.isEmpty {
@@ -23,7 +24,7 @@ struct DiedOut: View {
 
 struct DiedOut_Previews: PreviewProvider {
   static var previews: some View {
-    DiedOut(house: MockClasses.house)
+    DiedOut(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

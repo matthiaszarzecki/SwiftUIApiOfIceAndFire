@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct Overlord: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
-      if !house.overlord.isEmpty {
+      if let overlordHouse = house.overlord {
         Text("Overlord:")
           .font(.headline)
-        Text("\(house.overlord)")
+        Text("\(overlordHouse.name)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
@@ -24,7 +24,7 @@ struct Overlord: View {
 
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
-    Overlord(house: MockClasses.house)
+    Overlord(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

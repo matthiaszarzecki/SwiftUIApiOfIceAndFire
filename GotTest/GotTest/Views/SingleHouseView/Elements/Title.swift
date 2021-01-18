@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Title: View {
-  var house: House
+  var house: HouseUpdated
   
   var body: some View {
     return VStack {
@@ -27,7 +27,7 @@ struct Title: View {
 
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
-    Title(house: MockClasses.house)
+    Title(house: MockClasses.houseUpdated)
       .previewLayout(.sizeThatFits)
   }
 }

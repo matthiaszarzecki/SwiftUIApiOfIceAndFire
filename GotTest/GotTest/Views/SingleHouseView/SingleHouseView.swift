@@ -8,76 +8,91 @@
 import SwiftUI
 
 struct SingleHouseView: View {
-  @State var house: House
+  var house: House
+  @State var houseUpdated: HouseUpdated?
 
-  var body: some View {
-    return ScrollView {
-      Group {
-        Title(house: house)
-        CoatOfArms(house: house)
-        HouseMotto(house: house)
-        Titles(house: house)
-        Seats(house: house)
-        CurrentLord(house: house)
-      }
-      Group {
-        Overlord(house: house)
-        Founded(house: house)
-        Founder(house: house)
-        DiedOut(house: house)
-        AncestralWeapons(house: house)
-        CadetBranches(house: house)
-        SwornMembers(house: house)
-      }
-    }
-    .padding()
-    .onAppear {
-      checkForDeeperData()
+  var loader: some View {
+    if let unwrappedHouseUpdated = houseUpdated {
+      return AnyView(
+        ScrollView {
+          Group {
+            Title(house: unwrappedHouseUpdated)
+            CoatOfArms(house: unwrappedHouseUpdated)
+            HouseMotto(house: unwrappedHouseUpdated)
+            Titles(house: unwrappedHouseUpdated)
+            Seats(house: unwrappedHouseUpdated)
+            CurrentLord(house: unwrappedHouseUpdated)
+          }
+          Group {
+            Overlord(house: unwrappedHouseUpdated)
+            Founded(house: unwrappedHouseUpdated)
+            Founder(house: unwrappedHouseUpdated)
+            DiedOut(house: unwrappedHouseUpdated)
+            AncestralWeapons(house: unwrappedHouseUpdated)
+            CadetBranches(house: unwrappedHouseUpdated)
+            SwornMembers(house: unwrappedHouseUpdated)
+          }
+        }
+        .padding()
+      )
+    } else {
+      return AnyView(Text("Loading"))
     }
   }
   
+  var body: some View {
+    loader
+      .onAppear {
+        updateHouseData()
+      }
+  }
+  
   /// Gets locally saved URL's and updates corresponding values
-  func checkForDeeperData() {
-    // Not really happy about this, as it is quite over-fetching.
-    // If the ApiOfIceAndFire were graphql-compatible that would
-    // be much more straightforward!
+  func updateHouseData() {
+    houseUpdated = HouseUpdated(fromHouse: house)
     
-    if house.founder.contains("http") {
-      Api.getCharacter(url: house.founder) { character in
-        self.house.founder = character.name
-      }
-    }
-    
-    if house.currentLord.contains("http") {
-      Api.getCharacter(url: house.currentLord) { character in
-        self.house.currentLord = character.name
-      }
-    }
-    
-    if house.heir.contains("http") {
-      Api.getCharacter(url: house.heir) { character in
-        self.house.heir = character.name
-      }
-    }
-    
-    for index in (0..<house.swornMembers.count) {
-      if house.swornMembers[index].contains("http") {
-        Api.getCharacter(url: house.swornMembers[index]) { character in
-          self.house.swornMembers[index] = character.name
+    if house.cointainsUrls {
+      // Not really happy about this, as it is quite over-fetching.
+      // If the ApiOfIceAndFire were graphql-compatible that would
+      // be much more straightforward!
+      
+      if house.founder.contains("http") {
+        Api.getCharacter(url: house.founder) { character in
+          self.houseUpdated?.founder = character
         }
       }
-    }
-    
-    if house.overlord.contains("http") {
-      Api.getSingleHouse(url: house.overlord) { house in
-        self.house.overlord = house.name
+      
+      if house.currentLord.contains("http") {
+        Api.getCharacter(url: house.currentLord) { character in
+          self.houseUpdated?.currentLord = character
+        }
       }
-    }
-    
-    for index in (0..<house.cadetBranches.count) {
-      if house.cadetBranches[index].contains("http") {
-        Api.getCharacter(url: house.cadetBranches[index]) { house in
-          self.house.cadetBranches[index] = house.name
+      
+      if house.heir.contains("http") {
+        Api.getCharacter(url: house.heir) { character in
+          self.houseUpdated?.heir = character
+        }
+      }
+      
+      for index in (0..<house.swornMembers.count) {
+        if house.swornMembers[index].contains("http") {
+          Api.getCharacter(url: house.swornMembers[index]) { character in
+            self.houseUpdated?.swornMembers?[index] = character
+          }
+        }
+      }
+      
+      if house.overlord.contains("http") {
+        Api.getSingleHouse(url: house.overlord) { house in
+          self.houseUpdated?.overlord = house
+        }
+      }
+      
+      for index in (0..<house.cadetBranches.count) {
+        if house.cadetBranches[index].contains("http") {
+          Api.getSingleHouse(url: house.cadetBranches[index]) { house in
+            self.houseUpdated?.cadetBranches?[index] = house
+          }
         }
       }
     }

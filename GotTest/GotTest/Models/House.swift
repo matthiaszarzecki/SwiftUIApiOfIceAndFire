@@ -28,6 +28,11 @@ struct House: Codable, Identifiable, Hashable {
   var cadetBranches: [String]
   var swornMembers: [String]
   
+  /// Tells whether any field that can contain an URL contains an URL
+  var cointainsUrls: Bool {
+    return founder.contains("http") || currentLord.contains("http") || heir.contains("http") || (swornMembers.count > 0 && swornMembers[0].contains("http")) || (cadetBranches.count > 0 && cadetBranches[0].contains("http"))
+  }
+  
   enum CodingKeys: String, CodingKey {
     case id = "url"
     case name
@@ -45,5 +50,38 @@ struct House: Codable, Identifiable, Hashable {
     case ancestralWeapons
     case cadetBranches
     case swornMembers
+  }
+}
+
+struct HouseUpdated {
+  let id: String
+  let name: String
+  let region: String
+  let coatOfArms: String
+  let words: String
+  let titles: [String]
+  let seats: [String]
+  let founded: String
+  let diedOut: String
+  let ancestralWeapons: [String]
+  
+  var currentLord: Character?
+  var heir: Character?
+  var overlord: House?
+  var founder: Character?
+  var cadetBranches: [House]?
+  var swornMembers: [Character]?
+  
+  init(fromHouse house: House) {
+    id = house.id
+    name = house.name
+    region = house.region
+    coatOfArms = house.coatOfArms
+    words = house.words
+    titles = house.titles
+    seats = house.seats
+    founded = house.founded
+    diedOut = house.diedOut
+    ancestralWeapons = house.ancestralWeapons
   }
 }
