@@ -120,6 +120,17 @@ struct HouseView: View {
     }
   }
   
+  var diedOut: some View {
+    return VStack {
+      if !house.diedOut.isEmpty {
+        let text = Text("House died out during:").font(.headline) + Text(" \(house.diedOut)")
+        
+        text
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+      }
+    }
+  }
+  
   var body: some View {
     return
       ScrollView {
@@ -132,6 +143,7 @@ struct HouseView: View {
         overLord
         founded
         founder
+        diedOut
       }
       .padding()
   }
