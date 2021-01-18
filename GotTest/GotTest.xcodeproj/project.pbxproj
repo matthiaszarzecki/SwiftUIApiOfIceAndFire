@@ -24,6 +24,7 @@
 		CC76B36125B5B6D500AD405E /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B36025B5B6D500AD405E /* String-Extension.swift */; };
 		CC76B38B25B5BCAD00AD405E /* SearchResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */; };
 		CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3BD25B5C9A800AD405E /* Character.swift */; };
+		CC76B3D325B5CF7F00AD405E /* SwornMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CC76B36025B5B6D500AD405E /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
 		CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsList.swift; sourceTree = "<group>"; };
 		CC76B3BD25B5C9A800AD405E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMembers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +249,17 @@
 			isa = PBXGroup;
 			children = (
 				CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */,
+				CC76B3DA25B5D10700AD405E /* Elements */,
 			);
 			path = SingleHouseView;
+			sourceTree = "<group>";
+		};
+		CC76B3DA25B5D10700AD405E /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				CC76B35425B5B53200AD405E /* HousesResultsViewModel.swift in Sources */,
 				CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */,
 				CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */,
+				CC76B3D325B5CF7F00AD405E /* SwornMembers.swift in Sources */,
 				CC5FE3A925B59D0E00DC76DC /* Api.swift in Sources */,
 				CC5FE37A25B59CE400DC76DC /* HousesView.swift in Sources */,
 			);
