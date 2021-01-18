@@ -8,5 +8,6 @@
 import Foundation
 
 struct Character: Codable {
+  let url: String
   let name: String
 }

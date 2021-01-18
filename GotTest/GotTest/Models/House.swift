@@ -18,15 +18,15 @@ struct House: Codable, Identifiable, Hashable {
   let words: String
   let titles: [String]
   let seats: [String]
-  let currentLord: String
-  let heir: String
-  let overlord: String
+  var currentLord: String
+  var heir: String
+  var overlord: String
   let founded: String
   var founder: String
   let diedOut: String
   let ancestralWeapons: [String]
-  let cadetBranches: [String]
-  let swornMembers: [String]
+  var cadetBranches: [String]
+  var swornMembers: [String]
   
   enum CodingKeys: String, CodingKey {
     case id = "url"
