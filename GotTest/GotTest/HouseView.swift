@@ -48,7 +48,7 @@ struct HouseView: View {
   
   var titles: some View {
     return VStack {
-      if house.titles.count > 0 {
+      if house.titles.count > 0 && house.titles[0] != "" {
         VStack {
           Text("Titles:")
             .font(.headline)
@@ -63,7 +63,7 @@ struct HouseView: View {
   
   var seats: some View {
     return VStack {
-      if house.seats.count > 0 {
+      if house.seats.count > 0 && house.seats[0] != "" {
         VStack {
           Text("Seats:")
             .font(.headline)
@@ -138,7 +138,7 @@ struct HouseView: View {
           Text("Ancestral Weapons:")
             .font(.headline)
           ForEach(house.ancestralWeapons, id: \.self) { weapon in
-            Text("\(weapon)")
+            Text("🗡️ \(weapon)")
           }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
