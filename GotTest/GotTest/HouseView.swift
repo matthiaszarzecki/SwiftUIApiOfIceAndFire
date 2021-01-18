@@ -161,6 +161,21 @@ struct HouseView: View {
     }
   }
   
+  var swornMembers: some View {
+    return VStack {
+      if house.swornMembers.count > 0 {
+        VStack {
+          Text("Sworn Members:")
+            .font(.headline)
+          ForEach(house.swornMembers, id: \.self) { member in
+            Text("\(member)")
+          }
+        }
+        .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+      }
+    }
+  }
+  
   var body: some View {
     return
       ScrollView {
@@ -179,6 +194,7 @@ struct HouseView: View {
           diedOut
           ancestralWeapons
           cadetBranches
+          swornMembers
         }
       }
       .padding()
