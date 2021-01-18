@@ -11,22 +11,25 @@ import Foundation
 enum Api {
   static let pageSize = 30
   
-  public static func getHouses(
-    completion: @escaping ([House]) -> ()
-  ) {
-    guard let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=1&pageSize=\(pageSize)") else {
-      return
-    }
-    
+  static func getHouses(page: Int) -> AnyPublisher<[House], Error> {
+    let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
 
-    URLSession.shared.dataTask(with: request) { (data, _, _) in
-      let houses = try! JSONDecoder().decode([House].self, from: data!)
-      DispatchQueue.main.async {
-        completion(houses)
+    return URLSession.shared
+     .dataTaskPublisher(for: request)
+      .handleEvents(
+        receiveOutput: {
+          print(NSString(data: $0.data, encoding: String.Encoding.utf8.rawValue)!)
+        }
+      )
+      .tryMap {
+        return try JSONDecoder().decode(
+          [House].self,
+          from: $0.data
+        )
       }
-    }
-    .resume()
+      .receive(on: DispatchQueue.main)
+      .eraseToAnyPublisher()
   }
 }

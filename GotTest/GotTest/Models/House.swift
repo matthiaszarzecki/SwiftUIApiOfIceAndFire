@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct House: Codable, Hashable {
+struct House: Codable, Identifiable, Hashable {
+  let id = UUID()
   let name: String
   let region: String
   let coatOfArms: String
