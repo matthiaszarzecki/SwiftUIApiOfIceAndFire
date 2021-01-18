@@ -109,6 +109,17 @@ struct HouseView: View {
     }
   }
   
+  var founder: some View {
+    return VStack {
+      if !house.founder.isEmpty {
+        Text("Founder:")
+          .font(.headline)
+        Text("\(house.founder)")
+          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+      }
+    }
+  }
+  
   var body: some View {
     return
       ScrollView {
@@ -120,6 +131,7 @@ struct HouseView: View {
         currentLord
         overLord
         founded
+        founder
       }
       .padding()
   }
