@@ -8,7 +8,7 @@
 import Foundation
 
 struct MockClasses {
-  static let house = House(
+  static let house = HouseBasic(
     id: "https://www.anapioficeandfire.com/api/characters/298",
     name: "House Allyrion of Godsgrace",
     region: "Dorne",

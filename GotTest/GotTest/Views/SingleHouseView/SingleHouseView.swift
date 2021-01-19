@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SingleHouseView: View {
-  var house: House
+  var house: HouseBasic
   
   @State private var houseUpdated: HouseUpdated?
 
@@ -54,7 +54,7 @@ struct SingleHouseView: View {
   func updateHouseData() {
     houseUpdated = HouseUpdated(fromHouse: house)
     
-    if house.cointainsUrls {
+    if house.cointainsLinks {
       // Not really happy about this, as it is quite over-fetching.
       // If the ApiOfIceAndFire were graphql-compatible that would
       // be much more straightforward!
@@ -86,14 +86,14 @@ struct SingleHouseView: View {
       }
       
       if house.overlord.isUrl {
-        Api.fetch(House.self, url: house.overlord) { house in
+        Api.fetch(HouseBasic.self, url: house.overlord) { house in
           self.houseUpdated?.overlord = house
         }
       }
       
       for index in (0..<house.cadetBranches.count) {
         if house.cadetBranches[index].isUrl {
-          Api.fetch(House.self, url: house.cadetBranches[index]) { house in
+          Api.fetch(HouseBasic.self, url: house.cadetBranches[index]) { house in
             self.houseUpdated?.cadetBranches?[index] = house
           }
         }

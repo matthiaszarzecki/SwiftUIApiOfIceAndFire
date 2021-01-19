@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchResultsList: View {
-  let searchResults: [House]
+  let searchResults: [HouseBasic]
   let isLoading: Bool
   let onScrolledAtBottom: () -> Void
   

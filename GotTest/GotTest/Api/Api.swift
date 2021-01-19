@@ -11,7 +11,7 @@ import Foundation
 enum Api {
   static let pageSize = 30
   
-  static func getHouses(page: Int) -> AnyPublisher<[House], Error> {
+  static func getHouses(page: Int) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
@@ -25,7 +25,7 @@ enum Api {
       )
       .tryMap {
         return try JSONDecoder().decode(
-          [House].self,
+          [HouseBasic].self,
           from: $0.data
         )
       }

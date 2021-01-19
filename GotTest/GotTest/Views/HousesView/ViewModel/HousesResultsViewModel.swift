@@ -34,14 +34,14 @@ class HousesResultsViewModel: ObservableObject {
     }
   }
   
-  private func onReceive(_ batch: [House]) {
+  private func onReceive(_ batch: [HouseBasic]) {
     state.houses += batch
     state.page += 1
     state.canLoadNextPage = batch.count == Api.pageSize
   }
   
   struct SearchResultsViewState {
-    var houses = [House]()
+    var houses = [HouseBasic]()
     var page: Int = 1
     var canLoadNextPage = true
   }
