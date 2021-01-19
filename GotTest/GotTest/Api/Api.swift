@@ -32,42 +32,21 @@ enum Api {
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
   }
-  
-  static func getCharacter(
+
+  static func fetch<T: Codable>(
+    _ for: T.Type = T.self,
     url: String,
-    completion: @escaping (Character) -> ()
+    completion: @escaping (T) -> ()
   ) {
-    guard let url = URL(string: url) else {
-      return
-    }
+    let url = URL(string: url)!
     
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
     
     URLSession.shared.dataTask(with: request) { (data, _, _) in
-      let character = try! JSONDecoder().decode(Character.self, from: data!)
+      let result = try! JSONDecoder().decode(T.self, from: data!)
       DispatchQueue.main.async {
-        completion(character)
-      }
-    }
-    .resume()
-  }
-  
-  static func getSingleHouse(
-    url: String,
-    completion: @escaping (House) -> ()
-  ) {
-    guard let url = URL(string: url) else {
-      return
-    }
-    
-    var request = URLRequest(url: url)
-    request.httpMethod = "GET"
-    
-    URLSession.shared.dataTask(with: request) { (data, _, _) in
-      let house = try! JSONDecoder().decode(House.self, from: data!)
-      DispatchQueue.main.async {
-        completion(house)
+        completion(result)
       }
     }
     .resume()
