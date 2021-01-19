@@ -19,7 +19,15 @@ struct SearchResultsList: View {
         NavigationLink(
           destination: SingleHouseView(houseBasic: house)
         ) {
-          Text("\(house.name)")
+          HStack {
+            Text("\(house.name)")
+            
+            // When the house contains subnavigtable pages & info show it here with an icon.
+            if house.cointainsLinks {
+              Image(systemName: "link")
+            }
+          }
+          
         }
         
         .onAppear {
