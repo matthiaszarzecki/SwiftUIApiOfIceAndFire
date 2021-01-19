@@ -8,7 +8,7 @@
 import Foundation
 
 struct MockClasses {
-  static let house = HouseBasic(
+  static let houseBasic = HouseBasic(
     id: "https://www.anapioficeandfire.com/api/characters/298",
     name: "House Allyrion of Godsgrace",
     region: "Dorne",
@@ -40,17 +40,18 @@ struct MockClasses {
     ]
   )
   
-  static let character = Character(url: "https://www.anapioficeandfire.com/api/characters/298", name: "Delonne Allyrion")
+  static let housesBasic = Array.init(repeating: houseBasic, count: 4)
   
-  static let houses = Array.init(repeating: house, count: 4)
+  static let character = Character(url: "https://www.anapioficeandfire.com/api/characters/298", name: "Delonne Allyrion")
+  static let characters = Array.init(repeating: MockClasses.character, count: 3)
   
   static let houseUpdated = HouseUpdated(
-    fromHouse: MockClasses.house,
+    fromHouse: MockClasses.houseBasic,
     currentLord: MockClasses.character,
     heir: MockClasses.character,
-    overlord: MockClasses.house,
+    overlord: MockClasses.houseBasic,
     founder: MockClasses.character,
-    cadetBranches: MockClasses.houses,
-    swornMembers: Array.init(repeating: MockClasses.character, count: 2)
+    cadetBranches: MockClasses.housesBasic,
+    swornMembers: MockClasses.characters
   )
 }
