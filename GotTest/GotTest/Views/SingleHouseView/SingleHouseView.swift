@@ -14,25 +14,28 @@ struct SingleHouseView: View {
   var loader: some View {
     if let unwrappedHouseUpdated = houseUpdated {
       return AnyView(
-        ScrollView {
-          Group {
-            Title(house: unwrappedHouseUpdated)
-            CoatOfArms(house: unwrappedHouseUpdated)
-            HouseMotto(house: unwrappedHouseUpdated)
-            Titles(house: unwrappedHouseUpdated)
-            Seats(house: unwrappedHouseUpdated)
-            CurrentLord(house: unwrappedHouseUpdated)
-            Heir(house: unwrappedHouseUpdated)
+        GeometryReader { geometry in
+          ScrollView(showsIndicators: false) {
+            Group {
+              Title(house: unwrappedHouseUpdated)
+              CoatOfArms(house: unwrappedHouseUpdated)
+              HouseMotto(house: unwrappedHouseUpdated)
+              Titles(house: unwrappedHouseUpdated)
+              Seats(house: unwrappedHouseUpdated)
+              CurrentLord(house: unwrappedHouseUpdated)
+              Heir(house: unwrappedHouseUpdated)
+            }
+            Group {
+              Overlord(house: unwrappedHouseUpdated)
+              Founded(house: unwrappedHouseUpdated)
+              Founder(house: unwrappedHouseUpdated)
+              DiedOut(house: unwrappedHouseUpdated)
+              AncestralWeapons(house: unwrappedHouseUpdated)
+              CadetBranches(house: unwrappedHouseUpdated)
+              SwornMembers(house: unwrappedHouseUpdated)
+            }
           }
-          Group {
-            Overlord(house: unwrappedHouseUpdated)
-            Founded(house: unwrappedHouseUpdated)
-            Founder(house: unwrappedHouseUpdated)
-            DiedOut(house: unwrappedHouseUpdated)
-            AncestralWeapons(house: unwrappedHouseUpdated)
-            CadetBranches(house: unwrappedHouseUpdated)
-            SwornMembers(house: unwrappedHouseUpdated)
-          }
+          .frame(width: geometry.size.width, alignment: .center)
         }
       )
     } else {
