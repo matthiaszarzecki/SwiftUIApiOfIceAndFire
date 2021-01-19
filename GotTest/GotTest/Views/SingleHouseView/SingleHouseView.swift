@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct SingleHouseView: View {
-  var house: HouseBasic
-  
-  @State private var houseUpdated: HouseUpdated?
+  var houseBasic: HouseBasic?
+  @State var houseUpdated: HouseUpdated?
 
   var loader: some View {
     if let unwrappedHouseUpdated = houseUpdated {
@@ -35,7 +34,6 @@ struct SingleHouseView: View {
             SwornMembers(house: unwrappedHouseUpdated)
           }
         }
-        .padding()
       )
     } else {
       return AnyView(Text("Loading"))
@@ -52,49 +50,51 @@ struct SingleHouseView: View {
   /// Turns the input House into a HouseUpdated
   /// by fetching data from locally saved URL's.
   func updateHouseData() {
-    houseUpdated = HouseUpdated(fromHouse: house)
-    
-    if house.cointainsLinks {
-      // Not really happy about this, as it is quite over-fetching.
-      // If the ApiOfIceAndFire were graphql-compatible that would
-      // be much more straightforward!
+    if houseUpdated == nil, let unwrappedHouse = houseBasic {
+      houseUpdated = HouseUpdated(fromHouse: unwrappedHouse)
       
-      if house.founder.isUrl {
-        Api.fetch(Character.self, url: house.founder) { character in
-          self.houseUpdated?.founder = character
-        }
-      }
-      
-      if house.currentLord.isUrl {
-        Api.fetch(Character.self, url: house.currentLord) { character in
-          self.houseUpdated?.currentLord = character
-        }
-      }
-      
-      if house.heir.isUrl {
-        Api.fetch(Character.self, url: house.heir) { character in
-          self.houseUpdated?.heir = character
-        }
-      }
-      
-      for index in (0..<house.swornMembers.count) {
-        if house.swornMembers[index].isUrl {
-          Api.fetch(Character.self, url: house.swornMembers[index]) { character in
-            self.houseUpdated?.swornMembers?[index] = character
+      if unwrappedHouse.cointainsLinks {
+        // Not really happy about this, as it is quite over-fetching.
+        // If the ApiOfIceAndFire were graphql-compatible that would
+        // be much more straightforward!
+        
+        if unwrappedHouse.founder.isUrl {
+          Api.fetch(Character.self, url: unwrappedHouse.founder) { character in
+            self.houseUpdated?.founder = character
           }
         }
-      }
-      
-      if house.overlord.isUrl {
-        Api.fetch(HouseBasic.self, url: house.overlord) { house in
-          self.houseUpdated?.overlord = house
+        
+        if unwrappedHouse.currentLord.isUrl {
+          Api.fetch(Character.self, url: unwrappedHouse.currentLord) { character in
+            self.houseUpdated?.currentLord = character
+          }
         }
-      }
-      
-      for index in (0..<house.cadetBranches.count) {
-        if house.cadetBranches[index].isUrl {
-          Api.fetch(HouseBasic.self, url: house.cadetBranches[index]) { house in
-            self.houseUpdated?.cadetBranches?[index] = house
+        
+        if unwrappedHouse.heir.isUrl {
+          Api.fetch(Character.self, url: unwrappedHouse.heir) { character in
+            self.houseUpdated?.heir = character
+          }
+        }
+        
+        for index in (0..<unwrappedHouse.swornMembers.count) {
+          if unwrappedHouse.swornMembers[index].isUrl {
+            Api.fetch(Character.self, url: unwrappedHouse.swornMembers[index]) { character in
+              self.houseUpdated?.swornMembers?[index] = character
+            }
+          }
+        }
+        
+        if unwrappedHouse.overlord.isUrl {
+          Api.fetch(HouseBasic.self, url: unwrappedHouse.overlord) { house in
+            self.houseUpdated?.overlord = house
+          }
+        }
+        
+        for index in (0..<unwrappedHouse.cadetBranches.count) {
+          if unwrappedHouse.cadetBranches[index].isUrl {
+            Api.fetch(HouseBasic.self, url: unwrappedHouse.cadetBranches[index]) { house in
+              self.houseUpdated?.cadetBranches?[index] = house
+            }
           }
         }
       }
@@ -104,6 +104,6 @@ struct SingleHouseView: View {
 
 struct SingleHouseView_Previews: PreviewProvider {
   static var previews: some View {
-    SingleHouseView(house: MockClasses.house)
+    SingleHouseView(houseUpdated: MockClasses.houseUpdated)
   }
 }

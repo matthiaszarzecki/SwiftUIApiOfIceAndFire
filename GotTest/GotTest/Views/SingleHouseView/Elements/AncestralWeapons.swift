@@ -16,7 +16,6 @@ struct AncestralWeapons: View {
         VStack {
           Text("Ancestral Weapons:")
             .font(.headline)
-            .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
           
           ForEach(house.ancestralWeapons, id: \.self) { weapon in
             Text("🗡️ \(weapon)")

@@ -17,7 +17,7 @@ struct SearchResultsList: View {
     List {
       ForEach(searchResults) { house in
         NavigationLink(
-          destination: SingleHouseView(house: house)
+          destination: SingleHouseView(houseBasic: house)
         ) {
           Text("\(house.name)")
         }
