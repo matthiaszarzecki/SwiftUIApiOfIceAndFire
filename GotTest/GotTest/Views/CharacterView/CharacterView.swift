@@ -13,6 +13,9 @@ struct CharacterView: View {
   var body: some View {
     VStack {
       Text("\(character.name)")
+        .font(.title)
+      
+      Spacer()
     }
   }
 }
