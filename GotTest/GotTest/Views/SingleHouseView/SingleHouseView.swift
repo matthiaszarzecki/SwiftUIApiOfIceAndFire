@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Shows information about the specified House.
 struct SingleHouseView: View {
   @ObservedObject private var singleHouseViewModel: SingleHouseViewModel
   

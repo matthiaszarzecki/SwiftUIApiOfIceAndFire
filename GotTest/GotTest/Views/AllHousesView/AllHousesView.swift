@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Shows a list of all ASOIAF Houses
 struct AllHousesView: View {
   @ObservedObject private var allHousesViewModel = AllHousesViewModel()
   
