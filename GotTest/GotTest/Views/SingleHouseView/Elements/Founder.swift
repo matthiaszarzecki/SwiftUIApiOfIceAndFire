@@ -18,10 +18,7 @@ struct Founder: View {
         
         NavigationLink(destination: CharacterView(character: character)) {
           Text("👑 \(character.name)")
-            .foregroundColor(.black)
-            .padding()
-            .background(Color.gray)
-            .cornerRadius(12.0)
+            .modifier(ButtonStyle())
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

@@ -20,10 +20,7 @@ struct SwornMembers: View {
             ForEach(swornMembers, id: \.self) { character in
               NavigationLink(destination: CharacterView(character: character)) {
                 Text("👱🏼 \(character.name)")
-                  .foregroundColor(.black)
-                  .padding()
-                  .background(Color.gray)
-                  .cornerRadius(12.0)
+                  .modifier(ButtonStyle())
               }
             }
           }

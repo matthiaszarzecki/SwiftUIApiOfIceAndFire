@@ -21,10 +21,7 @@ struct CadetBranches: View {
             ForEach(cadetBranches, id: \.self) { house in
               NavigationLink(destination: SingleHouseView(houseBasic: house)) {
                 Text("🛡️ \(house.name)")
-                  .foregroundColor(.black)
-                  .padding()
-                  .background(Color.gray)
-                  .cornerRadius(12.0)
+                  .modifier(ButtonStyle())
               }
             }
           }
