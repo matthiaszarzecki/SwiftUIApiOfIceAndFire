@@ -29,7 +29,7 @@ struct AllHousesDisplay: View {
   let onScrolledAtBottom: () -> Void
   
   var body: some View {
-    // This cannot be a scrollview as that tanks the performance somehow
+    // This cannot be a scrollview as that tanks the performance
     List {
       ForEach(fetchResults) { house in
         NavigationLink(
