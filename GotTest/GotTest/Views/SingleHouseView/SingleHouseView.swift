@@ -38,7 +38,7 @@ struct SingleHouseDisplay: View {
               Heir(house: unwrappedHouseUpdated)
             }
             Group {
-              Overlord(house: unwrappedHouseUpdated)
+              OverlordHouse(house: unwrappedHouseUpdated)
               Founded(house: unwrappedHouseUpdated)
               Founder(house: unwrappedHouseUpdated)
               DiedOut(house: unwrappedHouseUpdated)

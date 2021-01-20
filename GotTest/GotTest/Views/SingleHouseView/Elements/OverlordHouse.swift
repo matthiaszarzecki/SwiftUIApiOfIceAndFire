@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Overlord: View {
+struct OverlordHouse: View {
   var house: HouseUpdated
   
   var body: some View {
@@ -17,7 +17,7 @@ struct Overlord: View {
           .font(.headline)
         
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-          Text("🏰 \(overlordHouse.name)")
+          Text("🛡️ \(overlordHouse.name)")
             .foregroundColor(.black)
             .padding()
             .background(Color.gray)
@@ -31,7 +31,7 @@ struct Overlord: View {
 
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
-    Overlord(house: MockClasses.houseUpdatedWithLinks)
+    OverlordHouse(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }
