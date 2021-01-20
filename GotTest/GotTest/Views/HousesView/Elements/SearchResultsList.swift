@@ -27,9 +27,7 @@ struct SearchResultsList: View {
               Image(systemName: "link")
             }
           }
-          
         }
-        
         .onAppear {
           if self.searchResults.last == house {
             self.onScrolledAtBottom()
