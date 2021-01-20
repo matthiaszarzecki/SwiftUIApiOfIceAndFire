@@ -17,7 +17,7 @@ struct Seats: View {
           Text("Seats:")
             .font(.headline)
           ForEach(house.seats, id: \.self) { seat in
-            Text("\(seat)")
+            Text("🏰 \(seat)")
           }
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
