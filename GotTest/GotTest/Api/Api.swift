@@ -38,7 +38,9 @@ enum Api {
     url: String,
     completion: @escaping (T) -> ()
   ) {
-    let url = URL(string: url)!
+    guard let url = URL(string: url) else {
+      return
+    }
     
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
