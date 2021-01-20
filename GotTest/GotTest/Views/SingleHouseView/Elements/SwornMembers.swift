@@ -36,7 +36,7 @@ struct SwornMembers: View {
 
 struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
-    SwornMembers(house: MockClasses.houseUpdated)
+    SwornMembers(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

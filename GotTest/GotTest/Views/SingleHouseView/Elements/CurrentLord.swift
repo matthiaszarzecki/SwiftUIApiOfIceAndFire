@@ -31,7 +31,7 @@ struct CurrentLord: View {
 
 struct CurrentLord_Previews: PreviewProvider {
   static var previews: some View {
-    CurrentLord(house: MockClasses.houseUpdated)
+    CurrentLord(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

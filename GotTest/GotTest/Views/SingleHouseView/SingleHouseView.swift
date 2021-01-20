@@ -58,7 +58,8 @@ struct SingleHouseDisplay: View {
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdated)
+      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithLinks)
+      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithoutLinks)
       SingleHouseDisplay(houseUpdated: nil)
     }
   }

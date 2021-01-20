@@ -28,7 +28,7 @@ struct Seats: View {
 
 struct Seats_Previews: PreviewProvider {
   static var previews: some View {
-    Seats(house: MockClasses.houseUpdated)
+    Seats(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

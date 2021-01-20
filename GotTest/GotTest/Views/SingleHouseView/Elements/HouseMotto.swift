@@ -24,7 +24,7 @@ struct HouseMotto: View {
 
 struct HouseMotto_Previews: PreviewProvider {
   static var previews: some View {
-    HouseMotto(house: MockClasses.houseUpdated)
+    HouseMotto(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

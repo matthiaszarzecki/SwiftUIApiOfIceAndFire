@@ -28,7 +28,7 @@ struct Titles: View {
 
 struct Titles_Previews: PreviewProvider {
   static var previews: some View {
-    Titles(house: MockClasses.houseUpdated)
+    Titles(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

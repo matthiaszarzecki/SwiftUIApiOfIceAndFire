@@ -25,7 +25,7 @@ struct CoatOfArms: View {
 
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
-    CoatOfArms(house: MockClasses.houseUpdated)
+    CoatOfArms(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

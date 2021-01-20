@@ -24,7 +24,7 @@ struct DiedOut: View {
 
 struct DiedOut_Previews: PreviewProvider {
   static var previews: some View {
-    DiedOut(house: MockClasses.houseUpdated)
+    DiedOut(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

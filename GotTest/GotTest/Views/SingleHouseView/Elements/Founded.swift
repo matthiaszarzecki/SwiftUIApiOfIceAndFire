@@ -25,7 +25,7 @@ struct Founded: View {
 
 struct Founded_Previews: PreviewProvider {
   static var previews: some View {
-    Founded(house: MockClasses.houseUpdated)
+    Founded(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

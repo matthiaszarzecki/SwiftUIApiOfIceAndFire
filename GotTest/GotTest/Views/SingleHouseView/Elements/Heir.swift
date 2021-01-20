@@ -31,6 +31,6 @@ struct Heir: View {
 
 struct Heir_Previews: PreviewProvider {
   static var previews: some View {
-    Heir(house: MockClasses.houseUpdated)
+    Heir(house: MockClasses.houseUpdatedWithLinks)
   }
 }

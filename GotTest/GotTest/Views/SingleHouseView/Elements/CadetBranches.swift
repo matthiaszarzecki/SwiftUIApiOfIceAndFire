@@ -37,7 +37,7 @@ struct CadetBranches: View {
 
 struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
-    CadetBranches(house: MockClasses.houseUpdated)
+    CadetBranches(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }

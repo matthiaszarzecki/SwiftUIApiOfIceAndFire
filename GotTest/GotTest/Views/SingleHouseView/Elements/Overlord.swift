@@ -31,7 +31,7 @@ struct Overlord: View {
 
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
-    Overlord(house: MockClasses.houseUpdated)
+    Overlord(house: MockClasses.houseUpdatedWithLinks)
       .previewLayout(.sizeThatFits)
   }
 }
