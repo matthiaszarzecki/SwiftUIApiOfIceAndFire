@@ -13,7 +13,7 @@ struct CoatOfArms: View {
   var body: some View {
     return VStack {
       if !house.coatOfArms.isEmpty {
-        Text("Coat of Arms:")
+        Text("🚩 Coat of Arms:")
           .font(.headline)
         
         Text("\(house.coatOfArms)")

@@ -17,7 +17,7 @@ struct Founder: View {
           .font(.headline)
         
         NavigationLink(destination: CharacterView(character: character)) {
-          Text("\(character.name)")
+          Text("👑 \(character.name)")
             .foregroundColor(.black)
             .padding()
             .background(Color.gray)

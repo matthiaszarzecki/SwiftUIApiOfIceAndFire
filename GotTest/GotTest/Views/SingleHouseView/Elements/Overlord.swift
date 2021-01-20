@@ -17,7 +17,7 @@ struct Overlord: View {
           .font(.headline)
         
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-          Text("\(overlordHouse.name)")
+          Text("🏰 \(overlordHouse.name)")
             .foregroundColor(.black)
             .padding()
             .background(Color.gray)

@@ -29,7 +29,7 @@ struct SingleHouseDisplay: View {
         GeometryReader { geometry in
           ScrollView(showsIndicators: false) {
             Group {
-              Title(house: unwrappedHouseUpdated)
+              HouseNameAndTitle(house: unwrappedHouseUpdated)
               CoatOfArms(house: unwrappedHouseUpdated)
               HouseMotto(house: unwrappedHouseUpdated)
               Titles(house: unwrappedHouseUpdated)

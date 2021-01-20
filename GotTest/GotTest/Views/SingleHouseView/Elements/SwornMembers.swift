@@ -19,7 +19,7 @@ struct SwornMembers: View {
               .font(.headline)
             ForEach(swornMembers, id: \.self) { character in
               NavigationLink(destination: CharacterView(character: character)) {
-                Text("\(character.name)")
+                Text("👱🏼 \(character.name)")
                   .foregroundColor(.black)
                   .padding()
                   .background(Color.gray)
