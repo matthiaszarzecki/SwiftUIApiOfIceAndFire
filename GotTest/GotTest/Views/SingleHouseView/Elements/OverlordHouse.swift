@@ -17,8 +17,11 @@ struct OverlordHouse: View {
           .font(.headline)
         
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-          Text("🛡️ \(overlordHouse.name)")
-            .modifier(ButtonStyle())
+          HStack {
+            Text("🛡️ \(overlordHouse.name)")
+            Image(systemName: "chevron.right")
+          }
+          .modifier(ButtonStyle())
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

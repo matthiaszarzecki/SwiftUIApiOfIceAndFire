@@ -13,12 +13,15 @@ struct Heir: View {
   var body: some View {
     return VStack {
       if let character = house.heir {
-        Text("Heir:")
+        Text("Current heir:")
           .font(.headline)
         
         NavigationLink(destination: CharacterView(character: character)) {
-          Text("👑 \(character.name)")
-            .modifier(ButtonStyle())
+          HStack {
+            Text("👑 \(character.name)")
+            Image(systemName: "chevron.right")
+          }
+          .modifier(ButtonStyle())
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

@@ -20,8 +20,11 @@ struct CadetBranches: View {
             
             ForEach(cadetBranches, id: \.self) { house in
               NavigationLink(destination: SingleHouseView(houseBasic: house)) {
-                Text("🛡️ \(house.name)")
-                  .modifier(ButtonStyle())
+                HStack {
+                  Text("🛡️ \(house.name)")
+                  Image(systemName: "chevron.right")
+                }
+                .modifier(ButtonStyle())
               }
             }
           }

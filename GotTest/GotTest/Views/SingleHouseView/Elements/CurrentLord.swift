@@ -17,8 +17,11 @@ struct CurrentLord: View {
           .font(.headline)
         
         NavigationLink(destination: CharacterView(character: character)) {
-          Text("👑 \(character.name)")
-            .modifier(ButtonStyle())
+          HStack {
+            Text("👑 \(character.name)")
+            Image(systemName: "chevron.right")
+          }
+          .modifier(ButtonStyle())
         }
         .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

@@ -19,8 +19,11 @@ struct SwornMembers: View {
               .font(.headline)
             ForEach(swornMembers, id: \.self) { character in
               NavigationLink(destination: CharacterView(character: character)) {
-                Text("👱🏼 \(character.name)")
-                  .modifier(ButtonStyle())
+                HStack {
+                  Text("👱🏼 \(character.name)")
+                  Image(systemName: "chevron.right")
+                }
+                .modifier(ButtonStyle())
               }
             }
           }
