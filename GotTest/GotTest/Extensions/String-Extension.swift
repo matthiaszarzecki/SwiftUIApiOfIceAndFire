@@ -8,7 +8,9 @@
 import Foundation
 
 extension String {
+  /// Tells whether a string is actually an URL.
   public var isUrl: Bool {
+    // There are lots of valid alternatives on how to accomplish this.
     return self.contains("http")
   }
 }

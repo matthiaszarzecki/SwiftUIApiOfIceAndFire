@@ -13,10 +13,10 @@ class SingleHouseViewModel: ObservableObject {
   
   init(houseBasic: HouseBasic) {
     self.houseBasic = houseBasic
-    getData()
+    getDataFromNestedLinks()
   }
   
-  func getData() {
+  func getDataFromNestedLinks() {
     /// Turns the input House into a HouseUpdated
     /// by fetching data from locally saved URL's.
     state.houseUpdated = HouseUpdated(fromHouse: houseBasic)
