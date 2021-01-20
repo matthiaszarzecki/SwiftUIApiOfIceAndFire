@@ -11,6 +11,7 @@ import Foundation
 enum Api {
   static let pageSize = 30
   
+  /// Gets 30 ASOIAF Houses
   static func getHouses(page: Int) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
@@ -33,6 +34,7 @@ enum Api {
       .eraseToAnyPublisher()
   }
 
+  /// Does a get-call to the specified URL and return the type in a completion.
   static func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,

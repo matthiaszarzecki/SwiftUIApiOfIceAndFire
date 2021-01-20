@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Shows information about the specified character.
 struct CharacterView: View {
   var character: Character
   
