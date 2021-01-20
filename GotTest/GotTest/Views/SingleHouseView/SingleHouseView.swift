@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SingleHouseView: View {
-  @ObservedObject private var viewModel: SingleHouseViewModel
+  @ObservedObject private var singleHouseViewModel: SingleHouseViewModel
   
   init(houseBasic: HouseBasic) {
-    viewModel = SingleHouseViewModel(houseBasic: houseBasic)
+    singleHouseViewModel = SingleHouseViewModel(houseBasic: houseBasic)
   }
   
   var body: some View {
-    SingleHouseDisplay(houseUpdated: viewModel.state.houseUpdated)
+    SingleHouseDisplay(houseUpdated: singleHouseViewModel.state.houseUpdated)
   }
 }
 

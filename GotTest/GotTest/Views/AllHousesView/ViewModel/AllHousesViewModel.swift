@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-class HousesResultsViewModel: ObservableObject {
+class AllHousesViewModel: ObservableObject {
   @Published private(set) var state = SearchResultsViewState()
   private var subscriptions = Set<AnyCancellable>()
   

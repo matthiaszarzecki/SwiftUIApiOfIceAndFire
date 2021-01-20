@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct AllHousesView: View {
-  @ObservedObject private var viewModel = HousesResultsViewModel()
+  @ObservedObject private var allHousesViewModel = AllHousesViewModel()
   
   var body: some View {
     NavigationView {
       AllHousesDisplay(
-        fetchResults: viewModel.state.houses,
-        isLoading: viewModel.state.canLoadNextPage,
-        onScrolledAtBottom: viewModel.fetchNextPageIfPossible
+        fetchResults: allHousesViewModel.state.houses,
+        isLoading: allHousesViewModel.state.canLoadNextPage,
+        onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
       )
       .navigationTitle("ASOIAF Houses 🛡️")
-      .onAppear(perform: viewModel.fetchNextPageIfPossible)
+      .onAppear(perform: allHousesViewModel.fetchNextPageIfPossible)
     }
   }
 }
