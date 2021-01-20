@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HousesView: View {
+struct AllHousesView: View {
   @ObservedObject private var viewModel = HousesResultsViewModel()
   
   var body: some View {
@@ -25,7 +25,7 @@ struct HousesView: View {
 
 struct HousesView_Previews: PreviewProvider {
   static var previews: some View {
-    HousesView()
+    AllHousesView()
       .environmentObject(HousesResultsViewModel())
   }
 }

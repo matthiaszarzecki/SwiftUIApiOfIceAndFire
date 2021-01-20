@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     willConnectTo session: UISceneSession,
     options connectionOptions: UIScene.ConnectionOptions
   ) {
-    let contentView = HousesView()
+    let contentView = AllHousesView()
     
     if let windowScene = scene as? UIWindowScene {
       let window = UIWindow(windowScene: windowScene)

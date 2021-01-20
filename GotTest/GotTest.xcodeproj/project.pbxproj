@@ -22,7 +22,7 @@
 		CC356BFC25B864D500123558 /* SingleHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */; };
 		CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37525B59CE400DC76DC /* AppDelegate.swift */; };
 		CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */; };
-		CC5FE37A25B59CE400DC76DC /* HousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37925B59CE400DC76DC /* HousesView.swift */; };
+		CC5FE37A25B59CE400DC76DC /* AllHousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37925B59CE400DC76DC /* AllHousesView.swift */; };
 		CC5FE37C25B59CE800DC76DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE37B25B59CE800DC76DC /* Assets.xcassets */; };
 		CC5FE37F25B59CE800DC76DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */; };
 		CC5FE38225B59CE800DC76DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE38025B59CE800DC76DC /* LaunchScreen.storyboard */; };
@@ -77,7 +77,7 @@
 		CC5FE37225B59CE400DC76DC /* GotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FE37525B59CE400DC76DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC5FE37925B59CE400DC76DC /* HousesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesView.swift; sourceTree = "<group>"; };
+		CC5FE37925B59CE400DC76DC /* AllHousesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHousesView.swift; sourceTree = "<group>"; };
 		CC5FE37B25B59CE800DC76DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC5FE38125B59CE800DC76DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				6EFD04AE25B653760049D482 /* CharacterView */,
-				CC76B39725B5C2DE00AD405E /* HousesView */,
+				CC76B39725B5C2DE00AD405E /* AllHousesView */,
 				CC76B39325B5C2D300AD405E /* ModularViews */,
 				CC76B3C525B5CCC400AD405E /* SingleHouseView */,
 			);
@@ -269,14 +269,14 @@
 			path = ModularViews;
 			sourceTree = "<group>";
 		};
-		CC76B39725B5C2DE00AD405E /* HousesView */ = {
+		CC76B39725B5C2DE00AD405E /* AllHousesView */ = {
 			isa = PBXGroup;
 			children = (
-				CC5FE37925B59CE400DC76DC /* HousesView.swift */,
+				CC5FE37925B59CE400DC76DC /* AllHousesView.swift */,
 				CC76B39B25B5C2EA00AD405E /* Elements */,
 				CC76B39F25B5C2F200AD405E /* ViewModel */,
 			);
-			path = HousesView;
+			path = AllHousesView;
 			sourceTree = "<group>";
 		};
 		CC76B39B25B5C2EA00AD405E /* Elements */ = {
@@ -484,7 +484,7 @@
 				6EFD04BB25B662000049D482 /* HouseUpdated.swift in Sources */,
 				CC5FE3A925B59D0E00DC76DC /* Api.swift in Sources */,
 				6EFD047025B62B1A0049D482 /* Overlord.swift in Sources */,
-				CC5FE37A25B59CE400DC76DC /* HousesView.swift in Sources */,
+				CC5FE37A25B59CE400DC76DC /* AllHousesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
