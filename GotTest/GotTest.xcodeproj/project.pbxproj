@@ -35,7 +35,6 @@
 		CC76B35425B5B53200AD405E /* HousesResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B35325B5B53200AD405E /* HousesResultsViewModel.swift */; };
 		CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */; };
 		CC76B36125B5B6D500AD405E /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B36025B5B6D500AD405E /* String-Extension.swift */; };
-		CC76B38B25B5BCAD00AD405E /* SearchResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */; };
 		CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3BD25B5C9A800AD405E /* Character.swift */; };
 		CC76B3D325B5CF7F00AD405E /* SwornMembers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */; };
 		CC76B3DF25B5D12F00AD405E /* CadetBranches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */; };
@@ -95,7 +94,6 @@
 		CC76B35325B5B53200AD405E /* HousesResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesResultsViewModel.swift; sourceTree = "<group>"; };
 		CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpinnerView.swift; sourceTree = "<group>"; };
 		CC76B36025B5B6D500AD405E /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
-		CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsList.swift; sourceTree = "<group>"; };
 		CC76B3BD25B5C9A800AD405E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		CC76B3D225B5CF7F00AD405E /* SwornMembers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwornMembers.swift; path = GotTest/Views/SingleHouseView/Elements/SwornMembers.swift; sourceTree = SOURCE_ROOT; };
 		CC76B3DE25B5D12F00AD405E /* CadetBranches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadetBranches.swift; sourceTree = "<group>"; };
@@ -273,18 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				CC5FE37925B59CE400DC76DC /* AllHousesView.swift */,
-				CC76B39B25B5C2EA00AD405E /* Elements */,
 				CC76B39F25B5C2F200AD405E /* ViewModel */,
 			);
 			path = AllHousesView;
-			sourceTree = "<group>";
-		};
-		CC76B39B25B5C2EA00AD405E /* Elements */ = {
-			isa = PBXGroup;
-			children = (
-				CC76B38A25B5BCAD00AD405E /* SearchResultsList.swift */,
-			);
-			path = Elements;
 			sourceTree = "<group>";
 		};
 		CC76B39F25B5C2F200AD405E /* ViewModel */ = {
@@ -461,7 +450,6 @@
 				CC5FE3C125B5A94A00DC76DC /* HouseBasic.swift in Sources */,
 				6EFD047F25B62BC90049D482 /* Titles.swift in Sources */,
 				6EFD04A925B650890049D482 /* CharacterView.swift in Sources */,
-				CC76B38B25B5BCAD00AD405E /* SearchResultsList.swift in Sources */,
 				CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */,
 				CC76B3DF25B5D12F00AD405E /* CadetBranches.swift in Sources */,
 				6EFD046B25B62AE40049D482 /* Founded.swift in Sources */,

@@ -12,8 +12,8 @@ struct AllHousesView: View {
   
   var body: some View {
     NavigationView {
-      SearchResultsList(
-        searchResults: viewModel.state.houses,
+      AllHousesDisplay(
+        fetchResults: viewModel.state.houses,
         isLoading: viewModel.state.canLoadNextPage,
         onScrolledAtBottom: viewModel.fetchNextPageIfPossible
       )
@@ -23,9 +23,57 @@ struct AllHousesView: View {
   }
 }
 
-struct HousesView_Previews: PreviewProvider {
+struct AllHousesDisplay: View {
+  let fetchResults: [HouseBasic]
+  let isLoading: Bool
+  let onScrolledAtBottom: () -> Void
+  
+  var body: some View {
+    // This cannot be a scrollview as that tanks the performance somehow
+    List {
+      ForEach(fetchResults) { house in
+        NavigationLink(
+          destination: SingleHouseView(houseBasic: house)
+        ) {
+          HStack {
+            Text("\(house.name)")
+            
+            // When the house contains subnavigatable
+            // pages & info show it here with an icon.
+            if house.cointainsLinks {
+              Image(systemName: "link")
+            }
+          }
+        }
+        .onAppear {
+          if self.fetchResults.last == house {
+            self.onScrolledAtBottom()
+          }
+        }
+      }
+      
+      if isLoading {
+        SearchSpinnerView()
+          .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+      }
+    }
+  }
+}
+
+struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    AllHousesView()
-      .environmentObject(HousesResultsViewModel())
+    Group {
+      AllHousesDisplay(
+        fetchResults: MockClasses.housesBasic,
+        isLoading: false,
+        onScrolledAtBottom: {}
+      )
+      
+      AllHousesDisplay(
+        fetchResults: MockClasses.housesBasic,
+        isLoading: true,
+        onScrolledAtBottom: {}
+      )
+    }
   }
 }
