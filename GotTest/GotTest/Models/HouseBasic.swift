@@ -19,15 +19,15 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let words: String
   let titles: [String]
   let seats: [String]
-  var currentLord: String
-  var heir: String
-  var overlord: String
+  let currentLord: String
+  let heir: String
+  let overlord: String
   let founded: String
-  var founder: String
+  let founder: String
   let diedOut: String
   let ancestralWeapons: [String]
-  var cadetBranches: [String]
-  var swornMembers: [String]
+  let cadetBranches: [String]
+  let swornMembers: [String]
   
   /// Tells whether at least one field that can contain an URL has an URL
   var cointainsLinks: Bool {
