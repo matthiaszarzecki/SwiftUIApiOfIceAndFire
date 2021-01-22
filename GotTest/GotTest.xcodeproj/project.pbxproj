@@ -219,8 +219,8 @@
 		CC76B34625B5B32E00AD405E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6EFD04AE25B653760049D482 /* CharacterView */,
 				CC76B39725B5C2DE00AD405E /* AllHousesView */,
+				6EFD04AE25B653760049D482 /* CharacterView */,
 				CC76B39325B5C2D300AD405E /* ModularViews */,
 				CC76B3C525B5CCC400AD405E /* SingleHouseView */,
 			);
