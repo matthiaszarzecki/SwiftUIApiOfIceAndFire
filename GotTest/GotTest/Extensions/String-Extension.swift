@@ -10,7 +10,8 @@ import Foundation
 extension String {
   /// Tells whether a string is actually an URL.
   public var isUrl: Bool {
-    // There are lots of valid alternatives on how to accomplish this.
+    // Doing a quick check here as this one will be called A LOT, and
+    // is presumably quicker than URL-casting or using a RegEx.
     return self.contains("http")
   }
 }
