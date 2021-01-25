@@ -35,7 +35,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateFounder() {
-    if houseBasic.founder.isUrl {
+    if houseBasic.founder.isLink {
       Api.fetch(Character.self, url: houseBasic.founder) { character in
         self.state.houseUpdated?.founder = character
       }
@@ -43,7 +43,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateCurrentLord() {
-    if houseBasic.currentLord.isUrl {
+    if houseBasic.currentLord.isLink {
       Api.fetch(Character.self, url: houseBasic.currentLord) { character in
         self.state.houseUpdated?.currentLord = character
       }
@@ -51,7 +51,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateHeir() {
-    if houseBasic.heir.isUrl {
+    if houseBasic.heir.isLink {
       Api.fetch(Character.self, url: houseBasic.heir) { character in
         self.state.houseUpdated?.heir = character
       }
@@ -59,7 +59,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateOverlord() {
-    if houseBasic.overlord.isUrl {
+    if houseBasic.overlord.isLink {
       Api.fetch(HouseBasic.self, url: houseBasic.overlord) { house in
         self.state.houseUpdated?.overlord = house
       }
@@ -68,7 +68,7 @@ class SingleHouseViewModel: ObservableObject {
   
   func updateCadetBranches() {
     for index in (0..<houseBasic.cadetBranches.count) {
-      if houseBasic.cadetBranches[index].isUrl {
+      if houseBasic.cadetBranches[index].isLink {
         Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { house in
           self.state.houseUpdated?.cadetBranches?[index] = house
         }
@@ -78,7 +78,7 @@ class SingleHouseViewModel: ObservableObject {
   
   func updateSwornMembers() {
     for index in (0..<houseBasic.swornMembers.count) {
-      if houseBasic.swornMembers[index].isUrl {
+      if houseBasic.swornMembers[index].isLink {
         Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { character in
           self.state.houseUpdated?.swornMembers?[index] = character
         }
