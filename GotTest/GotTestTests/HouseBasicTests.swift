@@ -11,12 +11,24 @@ import XCTest
 class HouseBasicTests: XCTestCase {
   
   func testHouseWithLinksShowsIfLinksArePresent() {
+    // GIVEN a house that contains at least one link
     let house = MockClasses.houseBasicWithLinks
-    XCTAssertTrue(house.cointainsLinks)
+    
+    // WHEN we check if it contains links at all
+    let result = house.cointainsLinks
+    
+    // THEN we receive a positive result
+    XCTAssertTrue(result)
   }
   
   func testHouseWithoutLinksShowsIfLinksAreMissing() {
+    // GIVEN a house that contains no links
     let house = MockClasses.houseBasicWithoutLinks
-    XCTAssertFalse(house.cointainsLinks)
+    
+    // WHEN we check if it contains links at all
+    let result = house.cointainsLinks
+    
+    // THEN we receive a negative result
+    XCTAssertFalse(result)
   }
 }
