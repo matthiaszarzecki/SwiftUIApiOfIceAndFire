@@ -10,12 +10,12 @@ import XCTest
 
 class HouseBasicTests: XCTestCase {
   
-  func testHouseWithLinksShowsIfLinksArePresent() throws {
+  func testHouseWithLinksShowsIfLinksArePresent() {
     let house = MockClasses.houseBasicWithLinks
     XCTAssertTrue(house.cointainsLinks)
   }
   
-  func testHouseWithoutLinksShowsIfLinksAreMissing() throws {
+  func testHouseWithoutLinksShowsIfLinksAreMissing() {
     let house = MockClasses.houseBasicWithoutLinks
     XCTAssertFalse(house.cointainsLinks)
   }

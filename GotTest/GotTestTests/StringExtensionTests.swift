@@ -10,7 +10,7 @@ import XCTest
 
 class StringExtensionTests: XCTestCase {
   
-  func testIsLink() throws {
+  func testIsLink() {
     // GIVEN a string that is a hyperlink
     let character = MockClasses.characterLink
     
@@ -21,7 +21,7 @@ class StringExtensionTests: XCTestCase {
     XCTAssertTrue(result)
   }
   
-  func testIsNotLink() throws {
+  func testIsNotLink() {
     // GIVEN a string that is not a hyperlink
     let house = MockClasses.houseName
     
