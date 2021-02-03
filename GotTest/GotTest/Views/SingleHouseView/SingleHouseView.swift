@@ -73,6 +73,16 @@ struct SingleHouseDisplay: View {
                 }
               }
               
+              // Current Heir
+              if let character = unwrappedHouseUpdated.heir {
+                Section(header: SectionHeaderView(text: "Current Heir", icon: "tray.and.arrow.up.fill")) {
+                  
+                  NavigationLink(destination: CharacterView(character: character)) {
+                    Text("👑 \(character.name)")
+                  }
+                }
+              }
+              
               // Ancestral Weapons
               if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
                 Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
@@ -91,7 +101,7 @@ struct SingleHouseDisplay: View {
                 //Titles(house: unwrappedHouseUpdated)
                 //Seats(house: unwrappedHouseUpdated)
                 //CurrentLord(house: unwrappedHouseUpdated)
-                Heir(house: unwrappedHouseUpdated)
+                //Heir(house: unwrappedHouseUpdated)
               }
               Group {
                 OverlordHouse(house: unwrappedHouseUpdated)
