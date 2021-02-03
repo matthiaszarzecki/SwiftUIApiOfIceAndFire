@@ -26,28 +26,51 @@ struct SingleHouseDisplay: View {
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
       return AnyView(
+        
         GeometryReader { geometry in
-          ScrollView(showsIndicators: false) {
-            Group {
-              HouseNameAndTitle(house: unwrappedHouseUpdated)
-              CoatOfArms(house: unwrappedHouseUpdated)
-              HouseMotto(house: unwrappedHouseUpdated)
-              Titles(house: unwrappedHouseUpdated)
-              Seats(house: unwrappedHouseUpdated)
-              CurrentLord(house: unwrappedHouseUpdated)
-              Heir(house: unwrappedHouseUpdated)
+          VStack {
+            HouseNameAndTitle(house: unwrappedHouseUpdated)
+            //CoatOfArms(house: unwrappedHouseUpdated)
+            Form {
+              // Coat of Arms
+              if !unwrappedHouseUpdated.coatOfArms.isEmpty {
+                Section(header: SectionHeaderView(text: "🚩 Coat of Arms:", icon: "tray.and.arrow.up.fill")) {
+                  Text("\(unwrappedHouseUpdated.coatOfArms)")
+                }
+              }
+              
+              // Ancestral Weapons
+              if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
+                Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
+                  ForEach(unwrappedHouseUpdated.ancestralWeapons, id: \.self) { weapon in
+                    Text("🗡️ \(weapon)")
+                  }
+                }
+              }
             }
-            Group {
-              OverlordHouse(house: unwrappedHouseUpdated)
-              Founded(house: unwrappedHouseUpdated)
-              Founder(house: unwrappedHouseUpdated)
-              DiedOut(house: unwrappedHouseUpdated)
-              AncestralWeapons(house: unwrappedHouseUpdated)
-              CadetBranches(house: unwrappedHouseUpdated)
-              SwornMembers(house: unwrappedHouseUpdated)
+            
+            ScrollView(showsIndicators: false) {
+              Group {
+                HouseNameAndTitle(house: unwrappedHouseUpdated)
+                CoatOfArms(house: unwrappedHouseUpdated)
+                HouseMotto(house: unwrappedHouseUpdated)
+                Titles(house: unwrappedHouseUpdated)
+                Seats(house: unwrappedHouseUpdated)
+                CurrentLord(house: unwrappedHouseUpdated)
+                Heir(house: unwrappedHouseUpdated)
+              }
+              Group {
+                OverlordHouse(house: unwrappedHouseUpdated)
+                Founded(house: unwrappedHouseUpdated)
+                Founder(house: unwrappedHouseUpdated)
+                DiedOut(house: unwrappedHouseUpdated)
+                AncestralWeapons(house: unwrappedHouseUpdated)
+                CadetBranches(house: unwrappedHouseUpdated)
+                SwornMembers(house: unwrappedHouseUpdated)
+              }
             }
+            .frame(width: geometry.size.width, alignment: .center)
           }
-          .frame(width: geometry.size.width, alignment: .center)
         }
       )
     } else {
