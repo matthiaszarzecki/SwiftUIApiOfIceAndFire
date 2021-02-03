@@ -39,6 +39,22 @@ struct SingleHouseDisplay: View {
                 }
               }
               
+              // Motto
+              if !unwrappedHouseUpdated.words.isEmpty {
+                Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
+                  Text("\(unwrappedHouseUpdated.words)")
+                }
+              }
+              
+              // Titles
+              if unwrappedHouseUpdated.titles.count > 0 && unwrappedHouseUpdated.titles[0] != "" {
+                Section(header: SectionHeaderView(text: "Titles", icon: "tray.and.arrow.up.fill")) {
+                  ForEach(unwrappedHouseUpdated.titles, id: \.self) { title in
+                    Text("\(title)")
+                  }
+                }
+              }
+              
               // Ancestral Weapons
               if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
                 Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
@@ -49,12 +65,12 @@ struct SingleHouseDisplay: View {
               }
             }
             
-            ScrollView(showsIndicators: false) {
+            /*ScrollView(showsIndicators: false) {
               Group {
-                HouseNameAndTitle(house: unwrappedHouseUpdated)
-                CoatOfArms(house: unwrappedHouseUpdated)
-                HouseMotto(house: unwrappedHouseUpdated)
-                Titles(house: unwrappedHouseUpdated)
+                //HouseNameAndTitle(house: unwrappedHouseUpdated)
+                //CoatOfArms(house: unwrappedHouseUpdated)
+                //HouseMotto(house: unwrappedHouseUpdated)
+                //Titles(house: unwrappedHouseUpdated)
                 Seats(house: unwrappedHouseUpdated)
                 CurrentLord(house: unwrappedHouseUpdated)
                 Heir(house: unwrappedHouseUpdated)
@@ -69,7 +85,7 @@ struct SingleHouseDisplay: View {
                 SwornMembers(house: unwrappedHouseUpdated)
               }
             }
-            .frame(width: geometry.size.width, alignment: .center)
+            .frame(width: geometry.size.width, alignment: .center)*/
           }
         }
       )
