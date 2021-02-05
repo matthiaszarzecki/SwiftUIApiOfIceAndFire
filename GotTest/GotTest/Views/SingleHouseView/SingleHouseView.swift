@@ -26,119 +26,137 @@ struct SingleHouseDisplay: View {
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
       return AnyView(
-        
         GeometryReader { geometry in
           VStack {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
             //CoatOfArms(house: unwrappedHouseUpdated)
             Form {
-              // Coat of Arms
-              if !unwrappedHouseUpdated.coatOfArms.isEmpty {
-                Section(header: SectionHeaderView(text: "🚩 Coat of Arms:", icon: "tray.and.arrow.up.fill")) {
-                  Text("\(unwrappedHouseUpdated.coatOfArms)")
+              Group {
+                
+                
+                // Coat of Arms
+                if !unwrappedHouseUpdated.coatOfArms.isEmpty {
+                  Section(header: SectionHeaderView(text: "🚩 Coat of Arms:", icon: "tray.and.arrow.up.fill")) {
+                    Text("\(unwrappedHouseUpdated.coatOfArms)")
+                  }
                 }
-              }
-              
-              // Motto
-              if !unwrappedHouseUpdated.words.isEmpty {
-                Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
-                  Text("\(unwrappedHouseUpdated.words)")
+                
+                // Motto
+                if !unwrappedHouseUpdated.words.isEmpty {
+                  Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
+                    Text("\(unwrappedHouseUpdated.words)")
+                  }
                 }
-              }
-              
-              // Titles
-              if unwrappedHouseUpdated.titles.count > 0 && unwrappedHouseUpdated.titles[0] != "" {
-                Section(header: SectionHeaderView(text: "Titles", icon: "tray.and.arrow.up.fill")) {
-                  ForEach(unwrappedHouseUpdated.titles, id: \.self) { title in
-                    Text("\(title)")
+                
+                // Titles
+                if unwrappedHouseUpdated.titles.count > 0 && unwrappedHouseUpdated.titles[0] != "" {
+                  Section(header: SectionHeaderView(text: "Titles", icon: "tray.and.arrow.up.fill")) {
+                    ForEach(unwrappedHouseUpdated.titles, id: \.self) { title in
+                      Text("\(title)")
+                    }
+                  }
+                }
+                
+                // Seats
+                if unwrappedHouseUpdated.seats.count > 0 && unwrappedHouseUpdated.seats[0] != "" {
+                  Section(header: SectionHeaderView(text: "Seats", icon: "tray.and.arrow.up.fill")) {
+                    ForEach(unwrappedHouseUpdated.seats, id: \.self) { seat in
+                      Text("🏰 \(seat)")
+                    }
+                  }
+                }
+                
+                // Current Lord
+                if let character = unwrappedHouseUpdated.currentLord {
+                  Section(header: SectionHeaderView(text: "Current Lord", icon: "tray.and.arrow.up.fill")) {
+                    NavigationLink(destination: CharacterView(character: character)) {
+                      Text("👑 \(character.name)")
+                    }
+                  }
+                }
+                
+                // Current Heir
+                if let character = unwrappedHouseUpdated.heir {
+                  Section(header: SectionHeaderView(text: "Current Heir", icon: "tray.and.arrow.up.fill")) {
+                    
+                    NavigationLink(destination: CharacterView(character: character)) {
+                      Text("👑 \(character.name)")
+                    }
+                  }
+                }
+                
+                // Overlord House
+                if let overlordHouse = unwrappedHouseUpdated.overlord {
+                  Section(header: SectionHeaderView(text: "Overlord", icon: "tray.and.arrow.up.fill")) {
+                    NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
+                      Text("🛡️ \(overlordHouse.name)")
+                    }
+                  }
+                }
+                
+                // Founded
+                if !unwrappedHouseUpdated.founded.isEmpty {
+                  Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
+                    Text("\(unwrappedHouseUpdated.founded)")
                   }
                 }
               }
               
-              // Seats
-              if unwrappedHouseUpdated.seats.count > 0 && unwrappedHouseUpdated.seats[0] != "" {
-                Section(header: SectionHeaderView(text: "Seats", icon: "tray.and.arrow.up.fill")) {
-                  ForEach(unwrappedHouseUpdated.seats, id: \.self) { seat in
-                    Text("🏰 \(seat)")
+              Group {
+                // Founder
+                if let character = unwrappedHouseUpdated.founder {
+                  Section(header: SectionHeaderView(text: "Founded by", icon: "tray.and.arrow.up.fill")) {
+                    NavigationLink(destination: CharacterView(character: character)) {
+                      Text("👑 \(character.name)")
+                    }
                   }
                 }
-              }
-              
-              // Current Lord
-              if let character = unwrappedHouseUpdated.currentLord {
-                Section(header: SectionHeaderView(text: "Current Lord", icon: "tray.and.arrow.up.fill")) {
-                  NavigationLink(destination: CharacterView(character: character)) {
-                    Text("👑 \(character.name)")
+                
+                // Died out
+                if !unwrappedHouseUpdated.diedOut.isEmpty {
+                  Section(header: SectionHeaderView(text: "House died out during", icon: "tray.and.arrow.up.fill")) {
+                    Text("\(unwrappedHouseUpdated.diedOut)")
                   }
                 }
-              }
-              
-              // Current Heir
-              if let character = unwrappedHouseUpdated.heir {
-                Section(header: SectionHeaderView(text: "Current Heir", icon: "tray.and.arrow.up.fill")) {
-                  
-                  NavigationLink(destination: CharacterView(character: character)) {
-                    Text("👑 \(character.name)")
+                
+                // Cadet Branches
+                if let cadetBranches = unwrappedHouseUpdated.cadetBranches {
+                  if cadetBranches.count > 0 {
+                    Section(header: SectionHeaderView(text: "Cadet Branches", icon: "tray.and.arrow.up.fill")) {
+                      ForEach(cadetBranches, id: \.self) { house in
+                        NavigationLink(destination: SingleHouseView(houseBasic: house)) {
+                          Text("🛡️ \(house.name)")
+                        }
+                      }
+                    }
                   }
                 }
-              }
-              
-              // Overlord House
-              if let overlordHouse = unwrappedHouseUpdated.overlord {
-                Section(header: SectionHeaderView(text: "Overlord", icon: "tray.and.arrow.up.fill")) {
-                  NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-                    Text("🛡️ \(overlordHouse.name)")
+                
+                // Sworn Members
+                if let swornMembers = unwrappedHouseUpdated.swornMembers {
+                  if swornMembers.count > 0 {
+                    Section(header: SectionHeaderView(text: "Sworn Members", icon: "tray.and.arrow.up.fill")) {
+                      VStack {
+                        ForEach(swornMembers, id: \.self) { character in
+                          NavigationLink(destination: CharacterView(character: character)) {
+                            Text("👱🏼 \(character.name)")
+                          }
+                        }
+                      }
+                    }
                   }
                 }
-              }
-              
-              // Founded
-              if !unwrappedHouseUpdated.founded.isEmpty {
-                Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
-                  Text("\(unwrappedHouseUpdated.founded)")
-                }
-              }
-              
-              // Ancestral Weapons
-              if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
-                Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
-                  ForEach(unwrappedHouseUpdated.ancestralWeapons, id: \.self) { weapon in
-                    Text("🗡️ \(weapon)")
-                  }
-                }
-              }
-              
-              // Founder
-              if let character = unwrappedHouseUpdated.founder {
-                Section(header: SectionHeaderView(text: "Founded by", icon: "tray.and.arrow.up.fill")) {
-                  NavigationLink(destination: CharacterView(character: character)) {
-                    Text("👑 \(character.name)")
+                
+                // Ancestral Weapons
+                if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
+                  Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
+                    ForEach(unwrappedHouseUpdated.ancestralWeapons, id: \.self) { weapon in
+                      Text("🗡️ \(weapon)")
+                    }
                   }
                 }
               }
             }
-            
-            /*ScrollView(showsIndicators: false) {
-              Group {
-                //HouseNameAndTitle(house: unwrappedHouseUpdated)
-                //CoatOfArms(house: unwrappedHouseUpdated)
-                //HouseMotto(house: unwrappedHouseUpdated)
-                //Titles(house: unwrappedHouseUpdated)
-                //Seats(house: unwrappedHouseUpdated)
-                //CurrentLord(house: unwrappedHouseUpdated)
-                //Heir(house: unwrappedHouseUpdated)
-              }
-              Group {
-                //OverlordHouse(house: unwrappedHouseUpdated)
-                //Founded(house: unwrappedHouseUpdated)
-                //Founder(house: unwrappedHouseUpdated)
-                DiedOut(house: unwrappedHouseUpdated)
-                //AncestralWeapons(house: unwrappedHouseUpdated)
-                CadetBranches(house: unwrappedHouseUpdated)
-                SwornMembers(house: unwrappedHouseUpdated)
-              }
-            }
-            .frame(width: geometry.size.width, alignment: .center)*/
           }
         }
       )
