@@ -83,6 +83,15 @@ struct SingleHouseDisplay: View {
                 }
               }
               
+              // Overlord House
+              if let overlordHouse = unwrappedHouseUpdated.overlord {
+                Section(header: SectionHeaderView(text: "Overlord", icon: "tray.and.arrow.up.fill")) {
+                  NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
+                    Text("🛡️ \(overlordHouse.name)")
+                  }
+                }
+              }
+              
               // Ancestral Weapons
               if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
                 Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
@@ -108,7 +117,7 @@ struct SingleHouseDisplay: View {
                 Founded(house: unwrappedHouseUpdated)
                 Founder(house: unwrappedHouseUpdated)
                 DiedOut(house: unwrappedHouseUpdated)
-                AncestralWeapons(house: unwrappedHouseUpdated)
+                //AncestralWeapons(house: unwrappedHouseUpdated)
                 CadetBranches(house: unwrappedHouseUpdated)
                 SwornMembers(house: unwrappedHouseUpdated)
               }
