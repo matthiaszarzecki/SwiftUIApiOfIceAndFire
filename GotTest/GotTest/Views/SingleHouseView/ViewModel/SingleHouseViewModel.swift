@@ -26,7 +26,8 @@ class SingleHouseViewModel: ObservableObject {
       // If the ApiOfIceAndFire were graphql-compatible that would
       // be much more straightforward!
       
-      // TODO: Combine these functions into a single one OR use a combined publisher
+      // TODO: Combine these functions into a single with an enum parameter
+      // TODO: use a combined publisher
       updateFounder()
       updateCurrentLord()
       updateHeir()
