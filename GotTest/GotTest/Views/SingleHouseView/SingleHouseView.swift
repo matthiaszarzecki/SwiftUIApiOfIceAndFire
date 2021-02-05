@@ -92,11 +92,27 @@ struct SingleHouseDisplay: View {
                 }
               }
               
+              // Founded
+              if !unwrappedHouseUpdated.founded.isEmpty {
+                Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
+                  Text("\(unwrappedHouseUpdated.founded)")
+                }
+              }
+              
               // Ancestral Weapons
               if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
                 Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
                   ForEach(unwrappedHouseUpdated.ancestralWeapons, id: \.self) { weapon in
                     Text("🗡️ \(weapon)")
+                  }
+                }
+              }
+              
+              // Founder
+              if let character = unwrappedHouseUpdated.founder {
+                Section(header: SectionHeaderView(text: "Founded by", icon: "tray.and.arrow.up.fill")) {
+                  NavigationLink(destination: CharacterView(character: character)) {
+                    Text("👑 \(character.name)")
                   }
                 }
               }
@@ -113,9 +129,9 @@ struct SingleHouseDisplay: View {
                 //Heir(house: unwrappedHouseUpdated)
               }
               Group {
-                OverlordHouse(house: unwrappedHouseUpdated)
-                Founded(house: unwrappedHouseUpdated)
-                Founder(house: unwrappedHouseUpdated)
+                //OverlordHouse(house: unwrappedHouseUpdated)
+                //Founded(house: unwrappedHouseUpdated)
+                //Founder(house: unwrappedHouseUpdated)
                 DiedOut(house: unwrappedHouseUpdated)
                 //AncestralWeapons(house: unwrappedHouseUpdated)
                 CadetBranches(house: unwrappedHouseUpdated)
