@@ -146,15 +146,8 @@ struct SingleHouseDisplay: View {
                     }
                   }
                 }
-                
-                // Ancestral Weapons
-                if unwrappedHouseUpdated.ancestralWeapons.count > 0 && unwrappedHouseUpdated.ancestralWeapons[0] != "" {
-                  Section(header: SectionHeaderView(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
-                    ForEach(unwrappedHouseUpdated.ancestralWeapons, id: \.self) { weapon in
-                      Text("🗡️ \(weapon)")
-                    }
-                  }
-                }
+
+                AncestralWeaponsSection(house: unwrappedHouseUpdated)
               }
             }
           }
