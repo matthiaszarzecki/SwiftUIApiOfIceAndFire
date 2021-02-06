@@ -12,7 +12,7 @@ struct HouseMottoSection: View {
   
   var body: some View {
     if !house.words.isEmpty {
-      Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Words", icon: "tray.and.arrow.up.fill")) {
         Text("\(house.words)")
       }
     }

@@ -13,7 +13,7 @@ struct SwornMembersSection: View {
   var body: some View {
     if let swornMembers = house.swornMembers {
       if swornMembers.count > 0 {
-        Section(header: SectionHeaderView(text: "Sworn Members", icon: "tray.and.arrow.up.fill")) {
+        Section(header: SectionHeader(text: "Sworn Members", icon: "tray.and.arrow.up.fill")) {
           ForEach(swornMembers, id: \.self) { character in
             NavigationLink(destination: CharacterView(character: character)) {
               Text("👱🏼 \(character.name)")

@@ -12,7 +12,7 @@ struct FoundedSection: View {
   
   var body: some View {
     if !house.founded.isEmpty {
-      Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Founded", icon: "tray.and.arrow.up.fill")) {
         Text("\(house.founded)")
       }
     }

@@ -13,7 +13,7 @@ struct CadetBranchesSection: View {
   var body: some View {
     if let cadetBranches = house.cadetBranches {
       if cadetBranches.count > 0 {
-        Section(header: SectionHeaderView(text: "Cadet Branches", icon: "tray.and.arrow.up.fill")) {
+        Section(header: SectionHeader(text: "Cadet Branches", icon: "tray.and.arrow.up.fill")) {
           ForEach(cadetBranches, id: \.self) { house in
             NavigationLink(destination: SingleHouseView(houseBasic: house)) {
               Text("🛡️ \(house.name)")

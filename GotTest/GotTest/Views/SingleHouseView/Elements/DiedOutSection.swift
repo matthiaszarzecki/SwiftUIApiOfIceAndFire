@@ -12,7 +12,7 @@ struct DiedOutSection: View {
   
   var body: some View {
     if !house.diedOut.isEmpty {
-      Section(header: SectionHeaderView(text: "House Died out During", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "House Died out During", icon: "tray.and.arrow.up.fill")) {
         Text("\(house.diedOut)")
       }
     }

@@ -12,7 +12,7 @@ struct CurrentLordSection: View {
   
   var body: some View {
     if let character = house.currentLord {
-      Section(header: SectionHeaderView(text: "Current Lord", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Current Lord", icon: "tray.and.arrow.up.fill")) {
         NavigationLink(destination: CharacterView(character: character)) {
           Text("👑 \(character.name)")
         }
