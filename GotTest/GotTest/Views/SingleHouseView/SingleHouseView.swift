@@ -29,11 +29,8 @@ struct SingleHouseDisplay: View {
         GeometryReader { geometry in
           VStack {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
-            //CoatOfArms(house: unwrappedHouseUpdated)
             Form {
               Group {
-                
-                
                 // Coat of Arms
                 if !unwrappedHouseUpdated.coatOfArms.isEmpty {
                   Section(header: SectionHeaderView(text: "🚩 Coat of Arms:", icon: "tray.and.arrow.up.fill")) {
@@ -103,15 +100,7 @@ struct SingleHouseDisplay: View {
               }
               
               Group {
-                // Founder
-                if let character = unwrappedHouseUpdated.founder {
-                  Section(header: SectionHeaderView(text: "Founded by", icon: "tray.and.arrow.up.fill")) {
-                    NavigationLink(destination: CharacterView(character: character)) {
-                      Text("👑 \(character.name)")
-                    }
-                  }
-                }
-                
+                FounderSection(house: unwrappedHouseUpdated)
                 DiedOutSection(house: unwrappedHouseUpdated)
                 CadetBranchesSection(house: unwrappedHouseUpdated)
                 SwornMembersSection(house: unwrappedHouseUpdated)
