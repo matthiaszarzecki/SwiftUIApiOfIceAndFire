@@ -52,7 +52,9 @@ struct SingleHouseDisplay: View {
         }
       )
     } else {
-      return AnyView(Text("Loading"))
+      return AnyView(
+        SingleHouseLoadingView()
+      )
     }
   }
 }

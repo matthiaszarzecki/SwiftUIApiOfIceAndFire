@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E96F46B25CEB91C009563E6 /* SingleHouseLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */; };
 		6EFD046625B62A7A0049D482 /* FounderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046525B62A7A0049D482 /* FounderSection.swift */; };
 		6EFD046B25B62AE40049D482 /* FoundedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046A25B62AE40049D482 /* FoundedSection.swift */; };
 		6EFD047025B62B1A0049D482 /* OverlordHouseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046F25B62B1A0049D482 /* OverlordHouseSection.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseLoadingView.swift; sourceTree = "<group>"; };
 		6EFD046525B62A7A0049D482 /* FounderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FounderSection.swift; sourceTree = "<group>"; };
 		6EFD046A25B62AE40049D482 /* FoundedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundedSection.swift; sourceTree = "<group>"; };
 		6EFD046F25B62B1A0049D482 /* OverlordHouseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlordHouseSection.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */,
+				6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */,
 				CC76B3DA25B5D10700AD405E /* Elements */,
 				CC356C0025B8656D00123558 /* ViewModel */,
 			);
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E96F46B25CEB91C009563E6 /* SingleHouseLoadingView.swift in Sources */,
 				CC76B3E425B5D16E00AD405E /* AncestralWeaponsSection.swift in Sources */,
 				6EFD048425B62BF30049D482 /* HouseMottoSection.swift in Sources */,
 				CC5FE3C125B5A94A00DC76DC /* HouseBasic.swift in Sources */,
