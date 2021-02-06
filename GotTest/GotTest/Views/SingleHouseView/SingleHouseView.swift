@@ -112,13 +112,7 @@ struct SingleHouseDisplay: View {
                   }
                 }
                 
-                // Died out
-                if !unwrappedHouseUpdated.diedOut.isEmpty {
-                  Section(header: SectionHeaderView(text: "House died out during", icon: "tray.and.arrow.up.fill")) {
-                    Text("\(unwrappedHouseUpdated.diedOut)")
-                  }
-                }
-                
+                DiedOutSection(house: unwrappedHouseUpdated)
                 CadetBranchesSection(house: unwrappedHouseUpdated)
                 SwornMembersSection(house: unwrappedHouseUpdated)
                 AncestralWeaponsSection(house: unwrappedHouseUpdated)
