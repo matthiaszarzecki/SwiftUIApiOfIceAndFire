@@ -27,31 +27,34 @@ struct SingleHouseDisplay: View {
     if let unwrappedHouseUpdated = houseUpdated {
       return AnyView(
         GeometryReader { geometry in
-          ScrollView(showsIndicators: false) {
-            Group {
-              HouseNameAndTitle(house: unwrappedHouseUpdated)
-              CoatOfArms(house: unwrappedHouseUpdated)
-              HouseMotto(house: unwrappedHouseUpdated)
-              Titles(house: unwrappedHouseUpdated)
-              Seats(house: unwrappedHouseUpdated)
-              CurrentLord(house: unwrappedHouseUpdated)
-              Heir(house: unwrappedHouseUpdated)
-            }
-            Group {
-              OverlordHouse(house: unwrappedHouseUpdated)
-              Founded(house: unwrappedHouseUpdated)
-              Founder(house: unwrappedHouseUpdated)
-              DiedOut(house: unwrappedHouseUpdated)
-              AncestralWeapons(house: unwrappedHouseUpdated)
-              CadetBranches(house: unwrappedHouseUpdated)
-              SwornMembers(house: unwrappedHouseUpdated)
+          VStack {
+            HouseNameAndTitle(house: unwrappedHouseUpdated)
+            Form {
+              Group {
+                CoatOfArmsSection(house: unwrappedHouseUpdated)
+                HouseMottoSection(house: unwrappedHouseUpdated)
+                TitlesSection(house: unwrappedHouseUpdated)
+                SeatsSection(house: unwrappedHouseUpdated)
+                CurrentLordSection(house: unwrappedHouseUpdated)
+                CurrentHeirSection(house: unwrappedHouseUpdated)
+              }
+              Group {
+                OverlordHouseSection(house: unwrappedHouseUpdated)
+                FoundedSection(house: unwrappedHouseUpdated)
+                FounderSection(house: unwrappedHouseUpdated)
+                DiedOutSection(house: unwrappedHouseUpdated)
+                CadetBranchesSection(house: unwrappedHouseUpdated)
+                SwornMembersSection(house: unwrappedHouseUpdated)
+                AncestralWeaponsSection(house: unwrappedHouseUpdated)
+              }
             }
           }
-          .frame(width: geometry.size.width, alignment: .center)
         }
       )
     } else {
-      return AnyView(Text("Loading"))
+      return AnyView(
+        SingleHouseLoadingView()
+      )
     }
   }
 }
