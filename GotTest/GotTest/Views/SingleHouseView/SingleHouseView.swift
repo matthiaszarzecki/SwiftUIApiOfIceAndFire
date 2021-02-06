@@ -31,70 +31,16 @@ struct SingleHouseDisplay: View {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
             Form {
               Group {
-                // Coat of Arms
-                if !unwrappedHouseUpdated.coatOfArms.isEmpty {
-                  Section(header: SectionHeaderView(text: "🚩 Coat of Arms:", icon: "tray.and.arrow.up.fill")) {
-                    Text("\(unwrappedHouseUpdated.coatOfArms)")
-                  }
-                }
-                
-                // Motto
-                if !unwrappedHouseUpdated.words.isEmpty {
-                  Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
-                    Text("\(unwrappedHouseUpdated.words)")
-                  }
-                }
-                
-                // Titles
-                if unwrappedHouseUpdated.titles.count > 0 && unwrappedHouseUpdated.titles[0] != "" {
-                  Section(header: SectionHeaderView(text: "Titles", icon: "tray.and.arrow.up.fill")) {
-                    ForEach(unwrappedHouseUpdated.titles, id: \.self) { title in
-                      Text("\(title)")
-                    }
-                  }
-                }
-                
-                // Seats
-                if unwrappedHouseUpdated.seats.count > 0 && unwrappedHouseUpdated.seats[0] != "" {
-                  Section(header: SectionHeaderView(text: "Seats", icon: "tray.and.arrow.up.fill")) {
-                    ForEach(unwrappedHouseUpdated.seats, id: \.self) { seat in
-                      Text("🏰 \(seat)")
-                    }
-                  }
-                }
-                
-                // Current Lord
-                if let character = unwrappedHouseUpdated.currentLord {
-                  Section(header: SectionHeaderView(text: "Current Lord", icon: "tray.and.arrow.up.fill")) {
-                    NavigationLink(destination: CharacterView(character: character)) {
-                      Text("👑 \(character.name)")
-                    }
-                  }
-                }
-                
-                // Current Heir
-                if let character = unwrappedHouseUpdated.heir {
-                  Section(header: SectionHeaderView(text: "Current Heir", icon: "tray.and.arrow.up.fill")) {
-                    
-                    NavigationLink(destination: CharacterView(character: character)) {
-                      Text("👑 \(character.name)")
-                    }
-                  }
-                }
-                
-                // Overlord House
-                if let overlordHouse = unwrappedHouseUpdated.overlord {
-                  Section(header: SectionHeaderView(text: "Overlord", icon: "tray.and.arrow.up.fill")) {
-                    NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-                      Text("🛡️ \(overlordHouse.name)")
-                    }
-                  }
-                }
-                
-                FoundedSection(house: unwrappedHouseUpdated)
+                CoatOfArmsSection(house: unwrappedHouseUpdated)
+                HouseMottoSection(house: unwrappedHouseUpdated)
+                TitlesSection(house: unwrappedHouseUpdated)
+                SeatsSection(house: unwrappedHouseUpdated)
+                CurrentLordSection(house: unwrappedHouseUpdated)
+                CurrentHeirSection(house: unwrappedHouseUpdated)
               }
-              
               Group {
+                OverlordHouseSection(house: unwrappedHouseUpdated)
+                FoundedSection(house: unwrappedHouseUpdated)
                 FounderSection(house: unwrappedHouseUpdated)
                 DiedOutSection(house: unwrappedHouseUpdated)
                 CadetBranchesSection(house: unwrappedHouseUpdated)

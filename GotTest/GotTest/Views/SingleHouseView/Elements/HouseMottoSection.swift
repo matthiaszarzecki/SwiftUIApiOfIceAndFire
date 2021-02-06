@@ -7,16 +7,13 @@
 
 import SwiftUI
 
-struct HouseMotto: View {
+struct HouseMottoSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    return VStack {
-      if !house.words.isEmpty {
-        Text("Words:")
-          .font(.headline)
+    if !house.words.isEmpty {
+      Section(header: SectionHeaderView(text: "Words", icon: "tray.and.arrow.up.fill")) {
         Text("\(house.words)")
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }
     }
   }
@@ -24,7 +21,8 @@ struct HouseMotto: View {
 
 struct HouseMotto_Previews: PreviewProvider {
   static var previews: some View {
-    HouseMotto(house: MockClasses.houseUpdatedWithLinks)
-      .previewLayout(.sizeThatFits)
+    Form {
+      HouseMottoSection(house: MockClasses.houseUpdatedWithLinks)
+    }
   }
 }
