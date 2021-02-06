@@ -295,8 +295,8 @@
 		CC76B3C525B5CCC400AD405E /* SingleHouseView */ = {
 			isa = PBXGroup;
 			children = (
-				CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */,
 				6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */,
+				CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */,
 				CC76B3DA25B5D10700AD405E /* Elements */,
 				CC356C0025B8656D00123558 /* ViewModel */,
 			);
