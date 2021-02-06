@@ -1,0 +1,28 @@
+//
+//  Founded.swift
+//  GotTest
+//
+//  Created by Matthias Zarzecki on 18.01.21.
+//
+
+import SwiftUI
+
+struct FoundedSection: View {
+  var house: HouseUpdated
+  
+  var body: some View {
+    if !house.founded.isEmpty {
+      Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
+        Text("\(house.founded)")
+      }
+    }
+  }
+}
+
+struct Founded_Previews: PreviewProvider {
+  static var previews: some View {
+    Form {
+      FoundedSection(house: MockClasses.houseUpdatedWithLinks)
+    }
+  }
+}

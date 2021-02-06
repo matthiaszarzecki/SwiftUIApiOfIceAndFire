@@ -91,12 +91,7 @@ struct SingleHouseDisplay: View {
                   }
                 }
                 
-                // Founded
-                if !unwrappedHouseUpdated.founded.isEmpty {
-                  Section(header: SectionHeaderView(text: "Founded", icon: "tray.and.arrow.up.fill")) {
-                    Text("\(unwrappedHouseUpdated.founded)")
-                  }
-                }
+                FoundedSection(house: unwrappedHouseUpdated)
               }
               
               Group {
