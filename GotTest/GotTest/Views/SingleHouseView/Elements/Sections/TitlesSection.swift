@@ -12,7 +12,7 @@ struct TitlesSection: View {
   
   var body: some View {
     if house.titles.count > 0 && house.titles[0] != "" {
-      Section(header: SectionHeader(text: "Titles", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Titles")) {
         ForEach(house.titles, id: \.self) { title in
           Text("\(title)")
         }

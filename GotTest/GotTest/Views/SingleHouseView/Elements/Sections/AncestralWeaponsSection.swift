@@ -12,7 +12,7 @@ struct AncestralWeaponsSection: View {
   
   var body: some View {
     if house.ancestralWeapons.count > 0 && house.ancestralWeapons[0] != "" {
-      Section(header: SectionHeader(text: "Ancestral Weapons", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Ancestral Weapons")) {
         ForEach(house.ancestralWeapons, id: \.self) { weapon in
           Text("🗡️ \(weapon)")
         }

@@ -12,8 +12,7 @@ struct CurrentHeirSection: View {
   
   var body: some View {
     if let character = house.heir {
-      Section(header: SectionHeader(text: "Current Heir", icon: "tray.and.arrow.up.fill")) {
-        
+      Section(header: SectionHeader(text: "Current Heir")) {
         NavigationLink(destination: CharacterView(character: character)) {
           Text("👑 \(character.name)")
         }

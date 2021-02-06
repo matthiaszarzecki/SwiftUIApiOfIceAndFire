@@ -12,7 +12,7 @@ struct FounderSection: View {
   
   var body: some View {
     if let character = house.founder {
-      Section(header: SectionHeader(text: "Founded by", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Founded by")) {
         NavigationLink(destination: CharacterView(character: character)) {
           Text("👑 \(character.name)")
         }

@@ -12,7 +12,7 @@ struct SeatsSection: View {
   
   var body: some View {
     if house.seats.count > 0 && house.seats[0] != "" {
-      Section(header: SectionHeader(text: "Seats", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Seats")) {
         ForEach(house.seats, id: \.self) { seat in
           Text("🏰 \(seat)")
         }

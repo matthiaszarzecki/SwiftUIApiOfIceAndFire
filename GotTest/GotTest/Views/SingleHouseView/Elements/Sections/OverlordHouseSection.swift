@@ -12,7 +12,7 @@ struct OverlordHouseSection: View {
   
   var body: some View {
     if let overlordHouse = house.overlord {
-      Section(header: SectionHeader(text: "Overlord", icon: "tray.and.arrow.up.fill")) {
+      Section(header: SectionHeader(text: "Overlord")) {
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
           Text("🛡️ \(overlordHouse.name)")
         }
