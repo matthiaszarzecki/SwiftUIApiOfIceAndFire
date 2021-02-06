@@ -120,22 +120,7 @@ struct SingleHouseDisplay: View {
                 }
                 
                 CadetBranchesSection(house: unwrappedHouseUpdated)
-                
-                // Sworn Members
-                if let swornMembers = unwrappedHouseUpdated.swornMembers {
-                  if swornMembers.count > 0 {
-                    Section(header: SectionHeaderView(text: "Sworn Members", icon: "tray.and.arrow.up.fill")) {
-                      VStack {
-                        ForEach(swornMembers, id: \.self) { character in
-                          NavigationLink(destination: CharacterView(character: character)) {
-                            Text("👱🏼 \(character.name)")
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
+                SwornMembersSection(house: unwrappedHouseUpdated)
                 AncestralWeaponsSection(house: unwrappedHouseUpdated)
               }
             }
