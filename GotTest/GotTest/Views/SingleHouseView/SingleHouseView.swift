@@ -119,18 +119,7 @@ struct SingleHouseDisplay: View {
                   }
                 }
                 
-                // Cadet Branches
-                if let cadetBranches = unwrappedHouseUpdated.cadetBranches {
-                  if cadetBranches.count > 0 {
-                    Section(header: SectionHeaderView(text: "Cadet Branches", icon: "tray.and.arrow.up.fill")) {
-                      ForEach(cadetBranches, id: \.self) { house in
-                        NavigationLink(destination: SingleHouseView(houseBasic: house)) {
-                          Text("🛡️ \(house.name)")
-                        }
-                      }
-                    }
-                  }
-                }
+                CadetBranchesSection(house: unwrappedHouseUpdated)
                 
                 // Sworn Members
                 if let swornMembers = unwrappedHouseUpdated.swornMembers {
