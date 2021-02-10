@@ -13,10 +13,12 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// data. Must be named "id" to conform to identifiable protocol.
   let id: String
   
+  // Api ALWAYS returns a string for each field. If a field
+  // is not assigned it will return an empty string "".
   let name: String
   let region: String
   let coatOfArms: String
-  let words: String
+  let motto: String
   let titles: [String]
   let seats: [String]
   let currentLord: String
@@ -39,7 +41,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
     case name
     case region
     case coatOfArms
-    case words
+    case motto = "words"
     case titles
     case seats
     case currentLord

@@ -11,9 +11,9 @@ struct DiedOutSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if !house.diedOut.isEmpty {
+    if !house.diedOutPeriod.isEmpty {
       Section(header: SectionHeader(text: "House Died out During")) {
-        Text("\(house.diedOut)")
+        Text("\(house.diedOutPeriod)")
       }
     }
   }

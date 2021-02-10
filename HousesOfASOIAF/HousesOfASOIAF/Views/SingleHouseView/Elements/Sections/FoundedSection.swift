@@ -11,9 +11,9 @@ struct FoundedSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if !house.founded.isEmpty {
+    if !house.foundingPeriod.isEmpty {
       Section(header: SectionHeader(text: "Founded")) {
-        Text("\(house.founded)")
+        Text("\(house.foundingPeriod)")
       }
     }
   }

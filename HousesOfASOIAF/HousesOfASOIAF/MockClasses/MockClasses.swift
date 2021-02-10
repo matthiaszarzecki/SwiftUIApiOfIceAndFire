@@ -16,7 +16,7 @@ struct MockClasses {
     name: MockClasses.houseName,
     region: "Dorne",
     coatOfArms: "Gyronny Gules and Sable, a hand couped Or",
-    words: "No Foe May Pass",
+    motto: "No Foe May Pass",
     titles: [
       "King of Mountain and Vale (formerly)",
       "Lord of the Eyrie",
@@ -43,7 +43,7 @@ struct MockClasses {
     name: MockClasses.houseName,
     region: "Dorne",
     coatOfArms: "Gyronny Gules and Sable, a hand couped Or",
-    words: "No Foe May Pass",
+    motto: "No Foe May Pass",
     titles: [
       "King of Mountain and Vale (formerly)",
       "Lord of the Eyrie",

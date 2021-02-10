@@ -14,17 +14,17 @@ struct HouseUpdated {
   let name: String
   let region: String
   let coatOfArms: String
-  let words: String
+  let motto: String
   let titles: [String]
   let seats: [String]
-  let founded: String
-  let diedOut: String
+  let foundingPeriod: String
+  let diedOutPeriod: String
   let ancestralWeapons: [String]
   
   var currentLord: Character?
   var heir: Character?
-  var overlord: HouseBasic?
-  var founder: Character?
+  var overlordHouse: HouseBasic?
+  var foundedByCharacter: Character?
   var cadetBranches: [HouseBasic]?
   var swornMembers: [Character]?
   
@@ -41,17 +41,17 @@ struct HouseUpdated {
     name = house.name
     region = house.region
     coatOfArms = house.coatOfArms
-    words = house.words
+    motto = house.motto
     titles = house.titles
     seats = house.seats
-    founded = house.foundingPeriod
-    diedOut = house.diedOutPeriod
+    foundingPeriod = house.foundingPeriod
+    diedOutPeriod = house.diedOutPeriod
     ancestralWeapons = house.ancestralWeapons
     
     self.currentLord = currentLord
     self.heir = heir
-    self.overlord = overlord
-    self.founder = founder
+    self.overlordHouse = overlord
+    self.foundedByCharacter = founder
     self.cadetBranches = cadetBranches
     self.swornMembers = swornMembers
   }

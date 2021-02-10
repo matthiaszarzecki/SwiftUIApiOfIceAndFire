@@ -11,7 +11,7 @@ struct FounderSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if let character = house.founder {
+    if let character = house.foundedByCharacter {
       Section(header: SectionHeader(text: "Founded by")) {
         NavigationLink(destination: CharacterView(character: character)) {
           Text("👑 \(character.name)")

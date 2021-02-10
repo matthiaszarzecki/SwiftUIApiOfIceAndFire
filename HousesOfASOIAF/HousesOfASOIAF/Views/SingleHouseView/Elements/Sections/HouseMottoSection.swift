@@ -11,9 +11,9 @@ struct HouseMottoSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if !house.words.isEmpty {
+    if !house.motto.isEmpty {
       Section(header: SectionHeader(text: "Words")) {
-        Text("\(house.words)")
+        Text("\(house.motto)")
       }
     }
   }
