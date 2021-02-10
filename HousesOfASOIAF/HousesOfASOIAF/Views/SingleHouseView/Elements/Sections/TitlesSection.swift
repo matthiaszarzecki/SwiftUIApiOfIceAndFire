@@ -14,7 +14,7 @@ struct TitlesSection: View {
     if house.titles.count > 0 && house.titles[0] != "" {
       Section(header: SectionHeader(text: "Titles")) {
         ForEach(house.titles, id: \.self) { title in
-          Text("\(title)")
+          Text("🎖️ \(title)")
         }
       }
     }
