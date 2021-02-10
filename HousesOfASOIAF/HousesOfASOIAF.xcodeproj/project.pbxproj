@@ -147,6 +147,7 @@
 				6EFD046525B62A7A0049D482 /* FounderSection.swift */,
 				6EFD048325B62BF30049D482 /* HouseMottoSection.swift */,
 				6EFD046F25B62B1A0049D482 /* OverlordHouseSection.swift */,
+				6EFD047925B62B910049D482 /* SeatsSection.swift */,
 				CC76B3D225B5CF7F00AD405E /* SwornMembersSection.swift */,
 				6EFD047E25B62BC90049D482 /* TitlesSection.swift */,
 			);
@@ -328,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				6EFD048E25B62C780049D482 /* HouseNameAndTitle.swift */,
-				6EFD047925B62B910049D482 /* SeatsSection.swift */,
 				6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */,
 				6E96F47725CEBA69009563E6 /* Sections */,
 			);

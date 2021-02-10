@@ -14,6 +14,16 @@ extension String {
     // is presumably quicker than URL-casting or using a RegEx.
     return self.contains("http")
   }
+  
+  /// Returns a new string with the first letter capitalized.
+  func capitalizeFirstLetter() -> String {
+    return prefix(1).capitalized + dropFirst()
+  }
+  
+  /// Capitalizes the first letter of a string in place.
+  mutating func capitalizeFirstLetterInPlace() {
+    self = self.capitalizeFirstLetter()
+  }
 }
 
 extension String: Identifiable {

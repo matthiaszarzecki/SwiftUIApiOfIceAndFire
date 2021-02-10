@@ -12,7 +12,7 @@ struct FoundedSection: View {
   
   var body: some View {
     if !house.foundingPeriod.isEmpty {
-      Section(header: SectionHeader(text: "Founded")) {
+      Section(header: SectionHeader(text: "Founded During")) {
         Text("\(house.foundingPeriod)")
       }
     }
