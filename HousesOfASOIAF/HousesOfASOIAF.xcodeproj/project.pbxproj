@@ -31,7 +31,7 @@
 		CC5FE37F25B59CE800DC76DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */; };
 		CC5FE38225B59CE800DC76DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5FE38025B59CE800DC76DC /* LaunchScreen.storyboard */; };
 		CC5FE38D25B59CE800DC76DC /* HouseBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE38C25B59CE800DC76DC /* HouseBasicTests.swift */; };
-		CC5FE39825B59CE800DC76DC /* GotTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE39725B59CE800DC76DC /* GotTestUITests.swift */; };
+		CC5FE39825B59CE800DC76DC /* HousesOfASOIAFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE39725B59CE800DC76DC /* HousesOfASOIAFUITests.swift */; };
 		CC5FE3A925B59D0E00DC76DC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE3A825B59D0E00DC76DC /* Api.swift */; };
 		CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */; };
 		CC5FE3C125B5A94A00DC76DC /* HouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE3C025B5A94A00DC76DC /* HouseBasic.swift */; };
@@ -81,7 +81,7 @@
 		CC123D8925BED47D0068E99E /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseViewModel.swift; sourceTree = "<group>"; };
 		CC356C2825B8735600123558 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
-		CC5FE37225B59CE400DC76DC /* GotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FE37225B59CE400DC76DC /* HousesOfASOIAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfASOIAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FE37525B59CE400DC76DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC5FE37925B59CE400DC76DC /* AllHousesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHousesView.swift; sourceTree = "<group>"; };
@@ -89,11 +89,11 @@
 		CC5FE37E25B59CE800DC76DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC5FE38125B59CE800DC76DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5FE38325B59CE800DC76DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5FE38825B59CE800DC76DC /* GotTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GotTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FE38825B59CE800DC76DC /* HousesOfASOIAFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesOfASOIAFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FE38C25B59CE800DC76DC /* HouseBasicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseBasicTests.swift; sourceTree = "<group>"; };
 		CC5FE38E25B59CE800DC76DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5FE39325B59CE800DC76DC /* GotTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GotTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC5FE39725B59CE800DC76DC /* GotTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotTestUITests.swift; sourceTree = "<group>"; };
+		CC5FE39325B59CE800DC76DC /* HousesOfASOIAFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesOfASOIAFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC5FE39725B59CE800DC76DC /* HousesOfASOIAFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesOfASOIAFUITests.swift; sourceTree = "<group>"; };
 		CC5FE39925B59CE800DC76DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC5FE3A825B59D0E00DC76DC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		CC5FE3B525B5A14700DC76DC /* SingleHouseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseView.swift; sourceTree = "<group>"; };
@@ -172,9 +172,9 @@
 		CC5FE36925B59CE400DC76DC = {
 			isa = PBXGroup;
 			children = (
-				CC5FE37425B59CE400DC76DC /* GotTest */,
-				CC5FE38B25B59CE800DC76DC /* GotTestTests */,
-				CC5FE39625B59CE800DC76DC /* GotTestUITests */,
+				CC5FE37425B59CE400DC76DC /* HousesOfASOIAF */,
+				CC5FE38B25B59CE800DC76DC /* HousesOfASOIAFTests */,
+				CC5FE39625B59CE800DC76DC /* HousesOfASOIAFUITests */,
 				CC5FE37325B59CE400DC76DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,14 +182,14 @@
 		CC5FE37325B59CE400DC76DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC5FE37225B59CE400DC76DC /* GotTest.app */,
-				CC5FE38825B59CE800DC76DC /* GotTestTests.xctest */,
-				CC5FE39325B59CE800DC76DC /* GotTestUITests.xctest */,
+				CC5FE37225B59CE400DC76DC /* HousesOfASOIAF.app */,
+				CC5FE38825B59CE800DC76DC /* HousesOfASOIAFTests.xctest */,
+				CC5FE39325B59CE800DC76DC /* HousesOfASOIAFUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC5FE37425B59CE400DC76DC /* GotTest */ = {
+		CC5FE37425B59CE400DC76DC /* HousesOfASOIAF */ = {
 			isa = PBXGroup;
 			children = (
 				CC5FE37525B59CE400DC76DC /* AppDelegate.swift */,
@@ -202,7 +202,7 @@
 				CC76B35225B5B36A00AD405E /* SupportingFiles */,
 				CC76B34625B5B32E00AD405E /* Views */,
 			);
-			path = GotTest;
+			path = HousesOfASOIAF;
 			sourceTree = "<group>";
 		};
 		CC5FE37D25B59CE800DC76DC /* Preview Content */ = {
@@ -213,23 +213,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CC5FE38B25B59CE800DC76DC /* GotTestTests */ = {
+		CC5FE38B25B59CE800DC76DC /* HousesOfASOIAFTests */ = {
 			isa = PBXGroup;
 			children = (
 				CC5FE38C25B59CE800DC76DC /* HouseBasicTests.swift */,
 				CC123D8925BED47D0068E99E /* StringExtensionTests.swift */,
 				CC5FE38E25B59CE800DC76DC /* Info.plist */,
 			);
-			path = GotTestTests;
+			path = HousesOfASOIAFTests;
 			sourceTree = "<group>";
 		};
-		CC5FE39625B59CE800DC76DC /* GotTestUITests */ = {
+		CC5FE39625B59CE800DC76DC /* HousesOfASOIAFUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CC5FE39725B59CE800DC76DC /* GotTestUITests.swift */,
+				CC5FE39725B59CE800DC76DC /* HousesOfASOIAFUITests.swift */,
 				CC5FE39925B59CE800DC76DC /* Info.plist */,
 			);
-			path = GotTestUITests;
+			path = HousesOfASOIAFUITests;
 			sourceTree = "<group>";
 		};
 		CC76B34225B5B32100AD405E /* Models */ = {
@@ -338,9 +338,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC5FE37125B59CE400DC76DC /* GotTest */ = {
+		CC5FE37125B59CE400DC76DC /* HousesOfASOIAF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC5FE39C25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTest" */;
+			buildConfigurationList = CC5FE39C25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAF" */;
 			buildPhases = (
 				CC5FE36E25B59CE400DC76DC /* Sources */,
 				CC5FE36F25B59CE400DC76DC /* Frameworks */,
@@ -350,14 +350,14 @@
 			);
 			dependencies = (
 			);
-			name = GotTest;
+			name = HousesOfASOIAF;
 			productName = GotTest;
-			productReference = CC5FE37225B59CE400DC76DC /* GotTest.app */;
+			productReference = CC5FE37225B59CE400DC76DC /* HousesOfASOIAF.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC5FE38725B59CE800DC76DC /* GotTestTests */ = {
+		CC5FE38725B59CE800DC76DC /* HousesOfASOIAFTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC5FE39F25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTestTests" */;
+			buildConfigurationList = CC5FE39F25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAFTests" */;
 			buildPhases = (
 				CC5FE38425B59CE800DC76DC /* Sources */,
 				CC5FE38525B59CE800DC76DC /* Frameworks */,
@@ -368,14 +368,14 @@
 			dependencies = (
 				CC5FE38A25B59CE800DC76DC /* PBXTargetDependency */,
 			);
-			name = GotTestTests;
+			name = HousesOfASOIAFTests;
 			productName = GotTestTests;
-			productReference = CC5FE38825B59CE800DC76DC /* GotTestTests.xctest */;
+			productReference = CC5FE38825B59CE800DC76DC /* HousesOfASOIAFTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CC5FE39225B59CE800DC76DC /* GotTestUITests */ = {
+		CC5FE39225B59CE800DC76DC /* HousesOfASOIAFUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC5FE3A225B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTestUITests" */;
+			buildConfigurationList = CC5FE3A225B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAFUITests" */;
 			buildPhases = (
 				CC5FE38F25B59CE800DC76DC /* Sources */,
 				CC5FE39025B59CE800DC76DC /* Frameworks */,
@@ -386,9 +386,9 @@
 			dependencies = (
 				CC5FE39525B59CE800DC76DC /* PBXTargetDependency */,
 			);
-			name = GotTestUITests;
+			name = HousesOfASOIAFUITests;
 			productName = GotTestUITests;
-			productReference = CC5FE39325B59CE800DC76DC /* GotTestUITests.xctest */;
+			productReference = CC5FE39325B59CE800DC76DC /* HousesOfASOIAFUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -413,7 +413,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CC5FE36D25B59CE400DC76DC /* Build configuration list for PBXProject "GotTest" */;
+			buildConfigurationList = CC5FE36D25B59CE400DC76DC /* Build configuration list for PBXProject "HousesOfASOIAF" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -426,9 +426,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC5FE37125B59CE400DC76DC /* GotTest */,
-				CC5FE38725B59CE800DC76DC /* GotTestTests */,
-				CC5FE39225B59CE800DC76DC /* GotTestUITests */,
+				CC5FE37125B59CE400DC76DC /* HousesOfASOIAF */,
+				CC5FE38725B59CE800DC76DC /* HousesOfASOIAFTests */,
+				CC5FE39225B59CE800DC76DC /* HousesOfASOIAFUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -512,7 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5FE39825B59CE800DC76DC /* GotTestUITests.swift in Sources */,
+				CC5FE39825B59CE800DC76DC /* HousesOfASOIAFUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,12 +521,12 @@
 /* Begin PBXTargetDependency section */
 		CC5FE38A25B59CE800DC76DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC5FE37125B59CE400DC76DC /* GotTest */;
+			target = CC5FE37125B59CE400DC76DC /* HousesOfASOIAF */;
 			targetProxy = CC5FE38925B59CE800DC76DC /* PBXContainerItemProxy */;
 		};
 		CC5FE39525B59CE800DC76DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC5FE37125B59CE400DC76DC /* GotTest */;
+			target = CC5FE37125B59CE400DC76DC /* HousesOfASOIAF */;
 			targetProxy = CC5FE39425B59CE800DC76DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -665,15 +665,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GotTest/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfASOIAF/Preview Content\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GotTest/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HousesOfASOIAF/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GotTest.matthiaszarzecki;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -686,15 +688,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"GotTest/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfASOIAF/Preview Content\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GotTest/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HousesOfASOIAF/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.GotTest.matthiaszarzecki;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,18 +712,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDUTEX33CU;
-				INFOPLIST_FILE = GotTestTests/Info.plist;
+				INFOPLIST_FILE = HousesOfASOIAFTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asd.GotTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.unit-tests.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GotTest.app/GotTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HousesOfASOIAF.app/HousesOfASOIAF";
 			};
 			name = Debug;
 		};
@@ -730,18 +734,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDUTEX33CU;
-				INFOPLIST_FILE = GotTestTests/Info.plist;
+				INFOPLIST_FILE = HousesOfASOIAFTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asd.GotTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.unit-tests.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GotTest.app/GotTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HousesOfASOIAF.app/HousesOfASOIAF";
 			};
 			name = Release;
 		};
@@ -751,17 +755,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDUTEX33CU;
-				INFOPLIST_FILE = GotTestUITests/Info.plist;
+				INFOPLIST_FILE = HousesOfASOIAFUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asd.GotTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.ui-tests.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GotTest;
+				TEST_TARGET_NAME = HousesOfASOIAF;
 			};
 			name = Debug;
 		};
@@ -771,24 +775,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QDUTEX33CU;
-				INFOPLIST_FILE = GotTestUITests/Info.plist;
+				INFOPLIST_FILE = HousesOfASOIAFUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asd.GotTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.asoiaf-houses.ui-tests.matthiaszarzecki";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GotTest;
+				TEST_TARGET_NAME = HousesOfASOIAF;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC5FE36D25B59CE400DC76DC /* Build configuration list for PBXProject "GotTest" */ = {
+		CC5FE36D25B59CE400DC76DC /* Build configuration list for PBXProject "HousesOfASOIAF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC5FE39A25B59CE800DC76DC /* Debug */,
@@ -797,7 +801,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC5FE39C25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTest" */ = {
+		CC5FE39C25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC5FE39D25B59CE800DC76DC /* Debug */,
@@ -806,7 +810,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC5FE39F25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTestTests" */ = {
+		CC5FE39F25B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAFTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC5FE3A025B59CE800DC76DC /* Debug */,
@@ -815,7 +819,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC5FE3A225B59CE800DC76DC /* Build configuration list for PBXNativeTarget "GotTestUITests" */ = {
+		CC5FE3A225B59CE800DC76DC /* Build configuration list for PBXNativeTarget "HousesOfASOIAFUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CC5FE3A325B59CE800DC76DC /* Debug */,

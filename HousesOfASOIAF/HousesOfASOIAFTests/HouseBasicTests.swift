@@ -6,10 +6,9 @@
 //
 
 import XCTest
-@testable import GotTest
+@testable import HousesOfASOIAF
 
 class HouseBasicTests: XCTestCase {
-  
   func testHouseWithLinksShowsIfLinksArePresent() {
     // GIVEN a house that contains at least one link
     let house = MockClasses.houseBasicWithLinks

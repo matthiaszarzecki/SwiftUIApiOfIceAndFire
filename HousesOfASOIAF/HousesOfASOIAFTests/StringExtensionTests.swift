@@ -6,10 +6,9 @@
 //
 
 import XCTest
-@testable import GotTest
+@testable import HousesOfASOIAF
 
 class StringExtensionTests: XCTestCase {
-  
   func testIsLink() {
     // GIVEN a string that is a hyperlink
     let character = MockClasses.characterLink
