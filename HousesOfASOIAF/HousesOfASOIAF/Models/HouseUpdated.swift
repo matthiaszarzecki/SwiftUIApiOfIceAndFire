@@ -44,8 +44,8 @@ struct HouseUpdated {
     words = house.words
     titles = house.titles
     seats = house.seats
-    founded = house.founded
-    diedOut = house.diedOut
+    founded = house.foundingPeriod
+    diedOut = house.diedOutPeriod
     ancestralWeapons = house.ancestralWeapons
     
     self.currentLord = currentLord

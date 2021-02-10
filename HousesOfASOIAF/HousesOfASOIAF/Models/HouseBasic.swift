@@ -21,17 +21,17 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let seats: [String]
   let currentLord: String
   let heir: String
-  let overlord: String
-  let founded: String
-  let founder: String
-  let diedOut: String
+  let overlordHouse: String
+  let foundingPeriod: String
+  let foundedByCharacter: String
+  let diedOutPeriod: String
   let ancestralWeapons: [String]
   let cadetBranches: [String]
   let swornMembers: [String]
   
   /// Tells whether at least one field that can contain an URL has an URL
   var cointainsLinks: Bool {
-    return founder.isLink || currentLord.isLink || heir.isLink || (swornMembers.count > 0 && swornMembers[0].isLink) || (cadetBranches.count > 0 && cadetBranches[0].isLink)
+    return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || (swornMembers.count > 0 && swornMembers[0].isLink) || (cadetBranches.count > 0 && cadetBranches[0].isLink)
   }
   
   enum CodingKeys: String, CodingKey {
@@ -44,10 +44,10 @@ struct HouseBasic: Codable, Identifiable, Hashable {
     case seats
     case currentLord
     case heir
-    case overlord
-    case founded
-    case founder
-    case diedOut
+    case overlordHouse = "overlord"
+    case foundingPeriod = "founded"
+    case foundedByCharacter = "founder"
+    case diedOutPeriod = "diedOut"
     case ancestralWeapons
     case cadetBranches
     case swornMembers

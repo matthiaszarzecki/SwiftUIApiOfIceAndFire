@@ -37,8 +37,8 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateFounder() {
-    if houseBasic.founder.isLink {
-      Api.fetch(Character.self, url: houseBasic.founder) { character in
+    if houseBasic.foundedByCharacter.isLink {
+      Api.fetch(Character.self, url: houseBasic.foundedByCharacter) { character in
         self.state.houseUpdated?.founder = character
       }
     }
@@ -61,8 +61,8 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateOverlord() {
-    if houseBasic.overlord.isLink {
-      Api.fetch(HouseBasic.self, url: houseBasic.overlord) { house in
+    if houseBasic.overlordHouse.isLink {
+      Api.fetch(HouseBasic.self, url: houseBasic.overlordHouse) { house in
         self.state.houseUpdated?.overlord = house
       }
     }
