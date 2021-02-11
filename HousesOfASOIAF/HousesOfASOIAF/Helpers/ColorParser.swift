@@ -56,9 +56,10 @@ struct ColorParser {
     
     let synonymsForLightBlue = ["sky", "celeste"]
     if words.contains(where: synonymsForLightBlue.contains) {
-      // Add color-hex-extension
-      // add sky blue #87ceeb
+      colors.append(Color(hex: "#87ceeb"))
     }
+    
+    let color = #colorLiteral(red: 0.9489265084, green: 0.949085772, blue: 0.9704096913, alpha: 1)
     
     let synonymsForGreen = ["green", "vert"]
     if words.contains(where: synonymsForGreen.contains) {
@@ -67,7 +68,7 @@ struct ColorParser {
 
     let synonymsForWhite = ["argent", "silver", "white"]
     if words.contains(where: synonymsForWhite.contains) {
-      colors.append(.white)
+      colors.append(Color(hex: "#F2F2F7"))
     }
      
     let synonymsForGray = ["grey", "gray", "gules", "cendrée"]

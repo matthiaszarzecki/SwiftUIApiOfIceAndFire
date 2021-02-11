@@ -33,7 +33,7 @@ struct SingleHouseDisplay: View {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
                 
-                if let colors = unwrappedHouseUpdated.heraldryColors {
+                if let colors = unwrappedHouseUpdated.heraldryColors, !colors.isEmpty {
                   Section(header: SectionHeader(text: "Heraldry Colors")) {
                     HStack {
                       ForEach(colors, id: \.self) { color in
