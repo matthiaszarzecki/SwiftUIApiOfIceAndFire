@@ -34,10 +34,14 @@ struct SingleHouseDisplay: View {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
                 
                 if let colors = unwrappedHouseUpdated.heraldryColors {
-                  Section {
-                    VStack {
-                      Text("Hello")
-                        .backgroundColor(colors[0])
+                  Section(header: SectionHeader(text: "Heraldry Colors")) {
+                    HStack {
+                      ForEach(colors, id: \.self) { color in
+                        Rectangle()
+                          .frame(width: 35, height: 35, alignment: .center)
+                          .foregroundColor(color)
+                          .cornerRadius(12.0)
+                      }
                     }
                   }
                 }
