@@ -17,13 +17,18 @@ struct ColorParser {
     // Lowercase text for easier comparison
     var adaptedText = text.lowercased()
     
-    // Remove punctuation
-    adaptedText = adaptedText.replacingOccurrences(of: ",", with: " ")
-    adaptedText.removeAll { $0 == "," }
-
-    // Turn string into array for easier comparison
-    let words = adaptedText.components(separatedBy: " ")
+    // Remove punctuation - replaces it with spaces, so
+    // that the words can be turned into an array later
+    adaptedText = adaptedText.replacingOccurrences(of: "[,:;()-_]", with: " ", options: .regularExpression)
     
+    // Turn string into array for easier comparison
+    var words = adaptedText.components(separatedBy: " ")
+    
+    // Remove empty array entries
+    words.removeAll { $0 == "" }
+    
+    // Check if any words that describe colors are present, and
+    // if so add the corresponding color to the return-collection.
     let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
     if words.contains(where: synonymsForYellow.contains) {
       colors.append(.yellow)
@@ -58,8 +63,6 @@ struct ColorParser {
     if words.contains(where: synonymsForLightBlue.contains) {
       colors.append(Color(hex: "#87ceeb"))
     }
-    
-    let color = #colorLiteral(red: 0.9489265084, green: 0.949085772, blue: 0.9704096913, alpha: 1)
     
     let synonymsForGreen = ["green", "vert"]
     if words.contains(where: synonymsForGreen.contains) {
