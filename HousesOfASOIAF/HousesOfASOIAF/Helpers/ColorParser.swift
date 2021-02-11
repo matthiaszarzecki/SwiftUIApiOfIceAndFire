@@ -19,7 +19,11 @@ struct ColorParser {
     
     // Remove punctuation - replaces it with spaces, so
     // that the words can be turned into an array later
-    adaptedText = adaptedText.replacingOccurrences(of: "[,:;()-_]", with: " ", options: .regularExpression)
+    adaptedText = adaptedText.replacingOccurrences(
+      of: "[,:;()-_]",
+      with: " ",
+      options: .regularExpression
+    )
     
     // Turn string into array for easier comparison
     var words = adaptedText.components(separatedBy: " ")
@@ -51,7 +55,7 @@ struct ColorParser {
     
     let synonymsForPurple = ["purple", "purpure", "murrey"]
     if words.contains(where: synonymsForPurple.contains) {
-      colors.append(.white)
+      colors.append(.purple)
     }
     
     let synonymsForBlue = ["blue", "azure"]
@@ -61,7 +65,8 @@ struct ColorParser {
     
     let synonymsForLightBlue = ["sky", "celeste"]
     if words.contains(where: synonymsForLightBlue.contains) {
-      colors.append(Color(hex: "#87ceeb"))
+      let customLightBlueColor = Color(hex: "#87CEEB")
+      colors.append(customLightBlueColor)
     }
     
     let synonymsForGreen = ["green", "vert"]
@@ -69,9 +74,10 @@ struct ColorParser {
       colors.append(.green)
     }
 
-    let synonymsForWhite = ["argent", "silver", "white"]
+    let synonymsForWhite = ["white", "argent", "silver"]
     if words.contains(where: synonymsForWhite.contains) {
-      colors.append(Color(hex: "#F2F2F7"))
+      let customWhiteColor = Color(hex: "F2F2F7")
+      colors.append(customWhiteColor)
     }
      
     let synonymsForGray = ["grey", "gray", "gules", "cendrée"]
@@ -81,7 +87,8 @@ struct ColorParser {
     
     let synonymsForBlack = ["black", "sable"]
     if words.contains(where: synonymsForBlack.contains) {
-      colors.append(.black)
+      let customBlackColor = Color(hex: "111111")
+      colors.append(customBlackColor)
     }
     
     return colors
