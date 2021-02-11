@@ -32,20 +32,7 @@ struct SingleHouseDisplay: View {
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
-                
-                if let colors = unwrappedHouseUpdated.heraldryColors, !colors.isEmpty {
-                  Section(header: SectionHeader(text: "Heraldry Colors")) {
-                    HStack {
-                      ForEach(colors, id: \.self) { color in
-                        Rectangle()
-                          .frame(width: 35, height: 35, alignment: .center)
-                          .foregroundColor(color)
-                          .cornerRadius(12.0)
-                      }
-                    }
-                  }
-                }
- 
+                HeraldryColorsSection(house: unwrappedHouseUpdated)
                 HouseMottoSection(house: unwrappedHouseUpdated)
                 TitlesSection(house: unwrappedHouseUpdated)
                 SeatsSection(house: unwrappedHouseUpdated)
