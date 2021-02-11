@@ -14,6 +14,7 @@ struct Character: Codable, Hashable {
   
   let url: String
   let name: String
+  let culture: String
   let born: String
   let died: String
   let titles: [String]
@@ -23,13 +24,14 @@ struct Character: Codable, Hashable {
   let spouse: String
   let allegiances: [String]
   let bookAppearances: [String]
-  let pointOfViewChaptersInBooks: [String]
+  let hasPointOfViewChaptersInBooks: [String]
   let tvShowAppearances: [String]
-  let portrayedBy: String
+  let portrayedBy: [String]
   
   enum CodingKeys: String, CodingKey {
     case url
     case name
+    case culture
     case born
     case died
     case titles
@@ -39,7 +41,7 @@ struct Character: Codable, Hashable {
     case spouse
     case allegiances
     case bookAppearances = "books"
-    case pointOfViewChaptersInBooks = "povBooks"
+    case hasPointOfViewChaptersInBooks = "povBooks"
     case tvShowAppearances = "tvSeries"
     case portrayedBy = "playedBy"
   }

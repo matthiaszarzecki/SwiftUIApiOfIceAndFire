@@ -33,7 +33,10 @@ struct MockClasses {
     foundingPeriod: "Coming of the Andals",
     foundedByCharacter: "https://www.anapioficeandfire.com/api/characters/144",
     diedOutPeriod: "260 AC",
-    ancestralWeapons: ["Blackfyre", "Whitefyre"],
+    ancestralWeapons: [
+      "Blackfyre",
+      "Whitefyre"
+    ],
     cadetBranches: ["https://www.anapioficeandfire.com/api/houses/6"],
     swornMembers: Array.init(repeating: MockClasses.characterLink, count: 4)
   )
@@ -60,7 +63,10 @@ struct MockClasses {
     foundingPeriod: "",
     foundedByCharacter: "",
     diedOutPeriod: "260 AC",
-    ancestralWeapons: ["Blackfyre", "Whitefyre"],
+    ancestralWeapons: [
+      "Blackfyre",
+      "Whitefyre"
+    ],
     cadetBranches: [],
     swornMembers: []
   )
@@ -74,7 +80,38 @@ struct MockClasses {
   
   static let character = Character(
     url: "https://www.anapioficeandfire.com/api/characters/298",
-    name: "Delonne Allyrion"
+    name: "Delonne Allyrion",
+    culture: "Northmen",
+    born: "In 283 AC",
+    died: "In 283 AC",
+    titles: ["Lord Commander of the Night's Watch"],
+    aliases: [
+      "Lord Snow",
+      "Ned Stark's Bastard",
+      "The Snow of Winterfell",
+      "The Crow-Come-Over",
+      "The 998th Lord Commander of the Night's Watch"
+    ],
+    father: "https://www.anapioficeandfire.com/api/characters/836",
+    mother: "https://www.anapioficeandfire.com/api/characters/112",
+    spouse: "https://www.anapioficeandfire.com/api/characters/66",
+    allegiances: ["https://anapioficeandfire.com/api/houses/362"],
+    bookAppearances: ["https://anapioficeandfire.com/api/books/5"],
+    hasPointOfViewChaptersInBooks: [
+      "https://anapioficeandfire.com/api/books/1",
+      "https://anapioficeandfire.com/api/books/2",
+      "https://anapioficeandfire.com/api/books/3",
+      "https://anapioficeandfire.com/api/books/8"
+    ],
+    tvShowAppearances: [
+      "Season 1",
+      "Season 2",
+      "Season 3",
+      "Season 4",
+      "Season 5",
+      "Season 6"
+    ],
+    portrayedBy: ["Kit Harington"]
   )
   
   static let characters = Array.init(repeating: MockClasses.character, count: 3)
