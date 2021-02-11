@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E96F46B25CEB91C009563E6 /* SingleHouseLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */; };
 		6E96F47025CEB9BF009563E6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */; };
+		6EA3074725D4AD9C0088BF75 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3074625D4AD9C0088BF75 /* ColorParser.swift */; };
 		6EFD046625B62A7A0049D482 /* FounderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046525B62A7A0049D482 /* FounderSection.swift */; };
 		6EFD046B25B62AE40049D482 /* FoundedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046A25B62AE40049D482 /* FoundedSection.swift */; };
 		6EFD047025B62B1A0049D482 /* OverlordHouseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD046F25B62B1A0049D482 /* OverlordHouseSection.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseLoadingView.swift; sourceTree = "<group>"; };
 		6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		6EA3074625D4AD9C0088BF75 /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
 		6EFD046525B62A7A0049D482 /* FounderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FounderSection.swift; sourceTree = "<group>"; };
 		6EFD046A25B62AE40049D482 /* FoundedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundedSection.swift; sourceTree = "<group>"; };
 		6EFD046F25B62B1A0049D482 /* OverlordHouseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlordHouseSection.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Sections;
 			sourceTree = "<group>";
 		};
+		6EA3074B25D4ADF70088BF75 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6EA3074625D4AD9C0088BF75 /* ColorParser.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		6EFD04AE25B653760049D482 /* CharacterView */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 				CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */,
 				CC76B34E25B5B34700AD405E /* Api */,
 				CC76B36E25B5BB7800AD405E /* Extensions */,
+				6EA3074B25D4ADF70088BF75 /* Helpers */,
 				CC76B34D25B5B33500AD405E /* MockClasses */,
 				CC76B34225B5B32100AD405E /* Models */,
 				CC5FE37D25B59CE800DC76DC /* Preview Content */,
@@ -489,6 +500,7 @@
 				6EFD04B325B654570049D482 /* CurrentHeirSection.swift in Sources */,
 				CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */,
 				CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */,
+				6EA3074725D4AD9C0088BF75 /* ColorParser.swift in Sources */,
 				CC76B3D325B5CF7F00AD405E /* SwornMembersSection.swift in Sources */,
 				6EFD046625B62A7A0049D482 /* FounderSection.swift in Sources */,
 				6EFD047A25B62B910049D482 /* SeatsSection.swift in Sources */,
