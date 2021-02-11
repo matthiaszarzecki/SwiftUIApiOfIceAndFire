@@ -14,7 +14,8 @@ struct SeatsSection: View {
     if house.seats.count > 0 && house.seats[0] != "" {
       Section(header: SectionHeader(text: "Seats")) {
         ForEach(house.seats, id: \.self) { seat in
-          // Occasionally a seat with a lowercase name is returned.
+          // Occasionally a seat with a lowercase
+          // name ("unnamed castle") is returned.
           let displaySeat = seat.capitalizeFirstLetter()
           
           Text("🏰 \(displaySeat)")

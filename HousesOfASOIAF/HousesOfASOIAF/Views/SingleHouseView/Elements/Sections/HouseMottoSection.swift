@@ -13,7 +13,7 @@ struct HouseMottoSection: View {
   var body: some View {
     if !house.motto.isEmpty {
       Section(header: SectionHeader(text: "Words")) {
-        Text("\(house.motto)")
+        Text("🪶 \(house.motto)")
       }
     }
   }
