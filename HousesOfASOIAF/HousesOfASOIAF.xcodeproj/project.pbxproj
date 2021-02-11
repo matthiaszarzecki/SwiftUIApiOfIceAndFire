@@ -293,6 +293,7 @@
 			children = (
 				CC356C2825B8735600123558 /* ButtonStyle.swift */,
 				CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */,
+				6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */,
 			);
 			path = ModularViews;
 			sourceTree = "<group>";
@@ -329,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				6EFD048E25B62C780049D482 /* HouseNameAndTitle.swift */,
-				6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */,
 				6E96F47725CEBA69009563E6 /* Sections */,
 			);
 			path = Elements;
