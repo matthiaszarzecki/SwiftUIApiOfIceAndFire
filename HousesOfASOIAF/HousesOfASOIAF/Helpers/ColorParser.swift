@@ -14,8 +14,15 @@ struct ColorParser {
   func getColors(fromString text: String) -> [Color] {
     var colors: [Color] = []
 
-    let words = text.lowercased().components(separatedBy: " ")
-    // Also remove punctuation
+    // Lowercase text for easier comparison
+    var adaptedText = text.lowercased()
+    
+    // Remove punctuation
+    adaptedText = adaptedText.replacingOccurrences(of: ",", with: " ")
+    adaptedText.removeAll { $0 == "," }
+
+    // Turn string into array for easier comparison
+    let words = adaptedText.components(separatedBy: " ")
     
     let synonymsForRed = ["red", "gules", "sanguine", "fiery"]
     if words.contains(where: synonymsForRed.contains) {
