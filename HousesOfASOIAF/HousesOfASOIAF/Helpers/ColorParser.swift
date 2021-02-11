@@ -38,12 +38,18 @@ struct ColorParser {
       colors.append(.yellow)
     }
     
-    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre"]
+    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre", "copper", "saffron"]
     if words.contains(where: synonymsForOrange.contains) {
       colors.append(.orange)
     }
     
-    let synonymsForRed = ["red", "gules", "sanguine", "fiery"]
+    let synonymsForBrown = ["brown", "ermine"]
+    if words.contains(where: synonymsForBrown.contains) {
+      let customBrownColor = Color(hex: "773D1C")
+      colors.append(customBrownColor)
+    }
+    
+    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood"]
     if words.contains(where: synonymsForRed.contains) {
       colors.append(.red)
     }
@@ -59,7 +65,7 @@ struct ColorParser {
       colors.append(.purple)
     }
     
-    let synonymsForBlue = ["blue", "azure"]
+    let synonymsForBlue = ["blue", "azure", "indigo"]
     if words.contains(where: synonymsForBlue.contains) {
       colors.append(.blue)
     }
