@@ -32,6 +32,16 @@ struct SingleHouseDisplay: View {
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
+                
+                if let colors = unwrappedHouseUpdated.heraldryColors {
+                  Section {
+                    VStack {
+                      Text("Hello")
+                        .backgroundColor(colors[0])
+                    }
+                  }
+                }
+ 
                 HouseMottoSection(house: unwrappedHouseUpdated)
                 TitlesSection(house: unwrappedHouseUpdated)
                 SeatsSection(house: unwrappedHouseUpdated)

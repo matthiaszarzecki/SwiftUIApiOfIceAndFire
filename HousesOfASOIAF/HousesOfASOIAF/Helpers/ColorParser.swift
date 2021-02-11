@@ -69,7 +69,7 @@ struct ColorParser {
     
     let synonymsForLightBlue = ["sky", "celeste"]
     if words.contains(where: synonymsForLightBlue.contains) {
-      //Add color-extension
+      // Add color-hex-extension
       // add sky blue #87ceeb
     }
     

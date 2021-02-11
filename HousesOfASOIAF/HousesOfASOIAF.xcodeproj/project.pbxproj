@@ -23,6 +23,7 @@
 		6EFD04B325B654570049D482 /* CurrentHeirSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD04B225B654570049D482 /* CurrentHeirSection.swift */; };
 		6EFD04BB25B662000049D482 /* HouseUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD04BA25B662000049D482 /* HouseUpdated.swift */; };
 		CC123D8A25BED47D0068E99E /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC123D8925BED47D0068E99E /* StringExtensionTests.swift */; };
+		CC2132CF25D53805004A8186 /* View-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2132CE25D53805004A8186 /* View-Extension.swift */; };
 		CC356BFC25B864D500123558 /* SingleHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */; };
 		CC356C2925B8735600123558 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC356C2825B8735600123558 /* ButtonStyle.swift */; };
 		CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37525B59CE400DC76DC /* AppDelegate.swift */; };
@@ -81,6 +82,7 @@
 		6EFD04B225B654570049D482 /* CurrentHeirSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentHeirSection.swift; sourceTree = "<group>"; };
 		6EFD04BA25B662000049D482 /* HouseUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseUpdated.swift; sourceTree = "<group>"; };
 		CC123D8925BED47D0068E99E /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		CC2132CE25D53805004A8186 /* View-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Extension.swift"; sourceTree = "<group>"; };
 		CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseViewModel.swift; sourceTree = "<group>"; };
 		CC356C2825B8735600123558 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		CC5FE37225B59CE400DC76DC /* HousesOfASOIAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfASOIAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				CC76B36025B5B6D500AD405E /* String-Extension.swift */,
+				CC2132CE25D53805004A8186 /* View-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */,
 				6EA3074725D4AD9C0088BF75 /* ColorParser.swift in Sources */,
 				CC76B3D325B5CF7F00AD405E /* SwornMembersSection.swift in Sources */,
+				CC2132CF25D53805004A8186 /* View-Extension.swift in Sources */,
 				6EFD046625B62A7A0049D482 /* FounderSection.swift in Sources */,
 				6EFD047A25B62B910049D482 /* SeatsSection.swift in Sources */,
 				6EFD04BB25B662000049D482 /* HouseUpdated.swift in Sources */,
