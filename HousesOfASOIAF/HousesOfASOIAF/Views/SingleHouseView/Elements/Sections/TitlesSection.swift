@@ -14,7 +14,11 @@ struct TitlesSection: View {
     if house.titles.count > 0 && house.titles[0] != "" {
       Section(header: SectionHeader(text: "Titles")) {
         ForEach(house.titles, id: \.self) { title in
-          Text("🎖️ \(title)")
+          // Occasionally a title with a lowercase
+          // name ("the Knight of...") is returned.
+          let displayTitle = title.capitalizeFirstLetter()
+          
+          Text("🎖️ \(displayTitle)")
         }
       }
     }
