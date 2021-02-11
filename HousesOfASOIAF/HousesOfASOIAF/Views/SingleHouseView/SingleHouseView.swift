@@ -32,6 +32,7 @@ struct SingleHouseDisplay: View {
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
+                HeraldryColorsSection(house: unwrappedHouseUpdated)
                 HouseMottoSection(house: unwrappedHouseUpdated)
                 TitlesSection(house: unwrappedHouseUpdated)
                 SeatsSection(house: unwrappedHouseUpdated)
