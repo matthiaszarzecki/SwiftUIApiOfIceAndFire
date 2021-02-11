@@ -24,24 +24,19 @@ struct ColorParser {
     // Turn string into array for easier comparison
     let words = adaptedText.components(separatedBy: " ")
     
+    let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
+    if words.contains(where: synonymsForYellow.contains) {
+      colors.append(.yellow)
+    }
+    
+    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre"]
+    if words.contains(where: synonymsForOrange.contains) {
+      colors.append(.orange)
+    }
+    
     let synonymsForRed = ["red", "gules", "sanguine", "fiery"]
     if words.contains(where: synonymsForRed.contains) {
       colors.append(.red)
-    }
-    
-    let synonymsForGreen = ["green", "vert"]
-    if words.contains(where: synonymsForGreen.contains) {
-      colors.append(.green)
-    }
-    
-    let synonymsForBlue = ["blue", "azure"]
-    if words.contains(where: synonymsForBlue.contains) {
-      colors.append(.blue)
-    }
-    
-    let synonymsForBlack = ["black", "sable"]
-    if words.contains(where: synonymsForBlack.contains) {
-      colors.append(.black)
     }
     
     let synonymsForPink = ["pink"]
@@ -49,35 +44,40 @@ struct ColorParser {
       colors.append(.pink)
     }
     
-    let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
-    if words.contains(where: synonymsForYellow.contains) {
-      colors.append(.yellow)
-    }
-    
-    let synonymsForWhite = ["argent", "silver", "white"]
-    if words.contains(where: synonymsForWhite.contains) {
-      colors.append(.white)
-    }
-    
     let synonymsForPurple = ["purple", "purpure", "murrey"]
     if words.contains(where: synonymsForPurple.contains) {
       colors.append(.white)
     }
     
-    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre"]
-    if words.contains(where: synonymsForOrange.contains) {
-      colors.append(.white)
-    }
-    
-    let synonymsForGray = ["grey", "gray", "gules", "cendrée"]
-    if words.contains(where: synonymsForGray.contains) {
-      colors.append(.gray)
+    let synonymsForBlue = ["blue", "azure"]
+    if words.contains(where: synonymsForBlue.contains) {
+      colors.append(.blue)
     }
     
     let synonymsForLightBlue = ["sky", "celeste"]
     if words.contains(where: synonymsForLightBlue.contains) {
       // Add color-hex-extension
       // add sky blue #87ceeb
+    }
+    
+    let synonymsForGreen = ["green", "vert"]
+    if words.contains(where: synonymsForGreen.contains) {
+      colors.append(.green)
+    }
+
+    let synonymsForWhite = ["argent", "silver", "white"]
+    if words.contains(where: synonymsForWhite.contains) {
+      colors.append(.white)
+    }
+     
+    let synonymsForGray = ["grey", "gray", "gules", "cendrée"]
+    if words.contains(where: synonymsForGray.contains) {
+      colors.append(.gray)
+    }
+    
+    let synonymsForBlack = ["black", "sable"]
+    if words.contains(where: synonymsForBlack.contains) {
+      colors.append(.black)
     }
     
     return colors
