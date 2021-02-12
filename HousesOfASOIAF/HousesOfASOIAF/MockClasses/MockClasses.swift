@@ -83,7 +83,7 @@ struct MockClasses {
     name: "Delonne Allyrion",
     culture: "Northmen",
     born: "In 283 AC",
-    died: "In 283 AC",
+    died: "In 372 AC",
     titles: ["Lord Commander of the Night's Watch"],
     aliases: [
       "Lord Snow",

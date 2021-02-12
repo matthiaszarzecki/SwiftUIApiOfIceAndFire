@@ -16,7 +16,57 @@ struct CharacterView: View {
       Text("\(character.name)")
         .font(.title)
       
-      Spacer()
+      Form {
+        if character.born.exists {
+          Section(header: SectionHeader(text: "Born")) {
+            Text("\(character.born)")
+          }
+        }
+        
+        if character.culture.exists {
+          Section(header: SectionHeader(text: "Culture")) {
+            Text("\(character.culture)")
+          }
+        }
+        
+        if character.died.exists {
+          Section(header: SectionHeader(text: "Died")) {
+            Text("☠️ \(character.died)")
+          }
+        }
+        
+        if character.titles.hasNonEmptyEntries {
+          Section(header: SectionHeader(text: "Titles")) {
+            ForEach(character.titles, id: \.self) { title in
+              Text("🎖️ \(title)")
+            }
+          }
+        }
+        
+        if character.aliases.hasNonEmptyEntries {
+          Section(header: SectionHeader(text: "Aliases")) {
+            ForEach(character.aliases, id: \.self) { alias in
+              Text("\(alias)")
+            }
+          }
+        }
+        
+        if character.tvShowAppearances.hasNonEmptyEntries {
+          Section(header: SectionHeader(text: "TV Show Appearances")) {
+            ForEach(character.tvShowAppearances, id: \.self) { appearance in
+              Text("📺 \(appearance)")
+            }
+          }
+        }
+        
+        if character.portrayedBy.hasNonEmptyEntries {
+          Section(header: SectionHeader(text: "Portayed by")) {
+            ForEach(character.portrayedBy, id: \.self) { actor in
+              Text("\(actor)")
+            }
+          }
+        }
+      }
     }
   }
 }
