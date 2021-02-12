@@ -18,9 +18,11 @@ struct ColorParser {
     var adaptedText = text.lowercased()
     
     // Remove punctuation - replaces it with spaces, so
-    // that the words can be turned into an array later
+    // that the words can be turned into an array later.
+    // We DO NOT remove hyphens "-", as those are part
+    // of some colors, like "dark-green".
     adaptedText = adaptedText.replacingOccurrences(
-      of: "[,:;()-_]",
+      of: "[,:;()_]",
       with: " ",
       options: .regularExpression
     )
@@ -56,7 +58,7 @@ struct ColorParser {
     
     let synonymsForPink = ["pink"]
     if words.contains(where: synonymsForPink.contains) {
-      let customPinkColor = Color(hex: "FF41B9")
+      let customPinkColor = Color(hex: "E87AA4")
       colors.append(customPinkColor)
     }
     
@@ -79,6 +81,12 @@ struct ColorParser {
     let synonymsForGreen = ["green", "vert"]
     if words.contains(where: synonymsForGreen.contains) {
       colors.append(.green)
+    }
+    
+    let synonymsForDarkGreen = ["dark-green"]
+    if words.contains(where: synonymsForDarkGreen.contains) {
+      let customDarkGreenColor = Color(hex: "134B0E")
+      colors.append(customDarkGreenColor)
     }
 
     let synonymsForWhite = ["white", "argent", "silver", "ice"]
