@@ -8,10 +8,12 @@
 import Combine
 import Foundation
 
+/// Contains functions to request and receive data from the ApiOfIceAndFire.
 struct Api {
+  /// The number of houses that are requested in a single call.
   static let pageSize = 30
   
-  /// Gets 30 ASOIAF Houses
+  /// Gets 30 ASOIAF Houses.
   static func getHouses(page: Int) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
@@ -34,7 +36,7 @@ struct Api {
       .eraseToAnyPublisher()
   }
 
-  /// Does a get-call to the specified URL and return the type in a completion.
+  /// Does a GET-call to the specified URL and returns the type in a completion.
   static func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,
@@ -45,7 +47,7 @@ struct Api {
     }
     
     var request = URLRequest(url: url)
-    request.httpMethod = "GET"
+    request.httpMethod = RequestMethod.get.rawValue
     
     URLSession.shared.dataTask(with: request) { (data, _, _) in
       let result = try! JSONDecoder().decode(T.self, from: data!)
