@@ -11,7 +11,7 @@ struct CadetBranchesSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if let cadetBranches = house.cadetBranches, cadetBranches.count > 0 {
+    if let cadetBranches = house.cadetBranches, cadetBranches.hasEntries {
       Section(header: SectionHeader(text: "Cadet Branches")) {
         ForEach(cadetBranches, id: \.self) { house in
           NavigationLink(destination: SingleHouseView(houseBasic: house)) {

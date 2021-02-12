@@ -37,7 +37,7 @@ struct AllHousesDisplay: View {
           destination: SingleHouseView(houseBasic: house)
         ) {
           HStack {
-            if let colors = house.heraldryColors, colors.count > 0 {
+            if let colors = house.heraldryColors, colors.hasEntries {
               let circleSize: CGFloat = 32
               CircularColorDisplay(colors: colors)
                 .frame(width: circleSize, height: circleSize, alignment: .center)

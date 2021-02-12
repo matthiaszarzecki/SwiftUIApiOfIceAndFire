@@ -11,7 +11,7 @@ struct TitlesSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if house.titles.hasEntries {
+    if house.titles.hasNonEmptyEntries {
       Section(header: SectionHeader(text: "Titles")) {
         ForEach(house.titles, id: \.self) { title in
           // Occasionally a title with a lowercase
