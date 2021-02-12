@@ -11,7 +11,7 @@ struct SeatsSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if house.seats.count > 0 && house.seats[0] != "" {
+    if house.seats.hasEntries {
       Section(header: SectionHeader(text: "Seats")) {
         ForEach(house.seats, id: \.self) { seat in
           // Occasionally a seat with a lowercase
