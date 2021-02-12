@@ -21,7 +21,7 @@ class SingleHouseViewModel: ObservableObject {
     /// by fetching data from locally saved URL's.
     state.houseUpdated = HouseUpdated(fromHouse: houseBasic)
     
-    if houseBasic.cointainsLinks {
+    if houseBasic.containsLinks {
       // Not really happy about this, as it is quite over-fetching.
       // If the ApiOfIceAndFire were graphql-compatible that would
       // be much more straightforward!

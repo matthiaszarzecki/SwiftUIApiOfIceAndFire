@@ -48,7 +48,7 @@ struct AllHousesDisplay: View {
             
             // When the house contains subnavigatable
             // pages & info show it here with an icon.
-            if house.cointainsLinks {
+            if house.containsLinks {
               Image(systemName: "link")
             }
           }

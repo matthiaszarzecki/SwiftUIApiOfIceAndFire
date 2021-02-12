@@ -33,7 +33,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let swornMembers: [String]
   
   /// Tells whether at least one field that can contain an URL has an URL
-  var cointainsLinks: Bool {
+  var containsLinks: Bool {
     return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || (swornMembers.count > 0 && swornMembers[0].isLink) || (cadetBranches.count > 0 && cadetBranches[0].isLink)
   }
   
