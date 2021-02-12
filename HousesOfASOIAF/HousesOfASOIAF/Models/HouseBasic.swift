@@ -39,7 +39,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   }
   
   var heraldryColors: [Color] {
-    return ColorParser().getColors(fromString: coatOfArms)
+    return ColorParser.getColors(fromString: coatOfArms)
   }
   
   enum CodingKeys: String, CodingKey {

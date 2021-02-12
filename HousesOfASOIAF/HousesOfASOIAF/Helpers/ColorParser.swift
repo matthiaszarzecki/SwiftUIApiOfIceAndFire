@@ -11,7 +11,7 @@ import SwiftUI
 struct ColorParser {
   /// Reads the colors named in a string and turns
   /// these into an array of SwiftUI Colors
-  func getColors(fromString text: String) -> [Color] {
+  static func getColors(fromString text: String) -> [Color] {
     var colors: [Color] = []
 
     // Lowercase text for easier comparison

@@ -8,14 +8,14 @@
 import Combine
 import Foundation
 
-enum Api {
+struct Api {
   static let pageSize = 30
   
   /// Gets 30 ASOIAF Houses
   static func getHouses(page: Int) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
-    request.httpMethod = "GET"
+    request.httpMethod = RequestMethod.get.rawValue
 
     return URLSession.shared
      .dataTaskPublisher(for: request)
