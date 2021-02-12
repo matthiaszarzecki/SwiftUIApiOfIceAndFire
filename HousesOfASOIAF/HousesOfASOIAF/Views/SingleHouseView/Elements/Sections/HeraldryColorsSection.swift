@@ -15,7 +15,7 @@ struct HeraldryColorsSection: View {
     if let colors = house.heraldryColors, !colors.isEmpty {
       Section(header: SectionHeader(text: "Heraldry Colors")) {
         HStack {
-          let estimatedPadding: CGFloat = 80
+          let estimatedPadding: CGFloat = 76
           let colorWidth = (width - estimatedPadding) / CGFloat(colors.count)
           
           ForEach(colors, id: \.self) { color in

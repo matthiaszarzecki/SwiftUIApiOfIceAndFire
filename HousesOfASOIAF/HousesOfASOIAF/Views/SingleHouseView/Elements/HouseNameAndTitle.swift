@@ -19,7 +19,7 @@ struct HouseNameAndTitle: View {
       
       if house.region.exists {
         Text("of \(house.region)")
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+          .padding(.bottom, 16)
       }
     }
   }

@@ -26,7 +26,7 @@ class SingleHouseViewModel: ObservableObject {
       // If the ApiOfIceAndFire were graphql-compatible that would
       // be much more straightforward!
       
-      // TODO: Combine these functions into a single with an enum parameter
+      // TODO: Combine these functions into a single function with an enum parameter
       // TODO: use a combined publisher
       updateFounder()
       updateCurrentLord()
@@ -69,7 +69,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateCadetBranches() {
-    for index in (0..<houseBasic.cadetBranches.count) {
+    for index in 0..<houseBasic.cadetBranches.count {
       if houseBasic.cadetBranches[index].isLink {
         Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { house in
           self.state.houseUpdated?.cadetBranches?[index] = house
@@ -79,7 +79,7 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   func updateSwornMembers() {
-    for index in (0..<houseBasic.swornMembers.count) {
+    for index in 0..<houseBasic.swornMembers.count {
       if houseBasic.swornMembers[index].isLink {
         Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { character in
           self.state.houseUpdated?.swornMembers?[index] = character
