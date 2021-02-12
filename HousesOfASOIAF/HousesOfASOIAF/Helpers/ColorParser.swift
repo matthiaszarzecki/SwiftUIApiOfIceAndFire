@@ -56,13 +56,13 @@ struct ColorParser {
       colors.append(.red)
     }
     
-    let synonymsForPink = ["pink"]
+    let synonymsForPink = ["pink", "carnation"]
     if words.contains(where: synonymsForPink.contains) {
       let customPinkColor = Color(hex: "E87AA4")
       colors.append(customPinkColor)
     }
     
-    let synonymsForPurple = ["purple", "purpure", "murrey", "grape"]
+    let synonymsForPurple = ["purple", "purpure", "murrey", "grape", "amaranth"]
     if words.contains(where: synonymsForPurple.contains) {
       colors.append(.purple)
     }
