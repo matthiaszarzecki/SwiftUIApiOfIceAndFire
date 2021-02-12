@@ -51,7 +51,7 @@ struct ColorParser {
       colors.append(customBrownColor)
     }
     
-    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody"]
+    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody", "pommes"]
     if words.contains(where: synonymsForRed.contains) {
       colors.append(.red)
     }
