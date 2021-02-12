@@ -10,11 +10,11 @@ import SwiftUI
 
 /// Contains all data related to a House in ASOIAF.
 struct HouseBasic: Codable, Identifiable, Hashable {
-  // Api ALWAYS returns a string for each field. If a field
-  // is not assigned it will return an empty string "".
+  // ThE Api ALWAYS returns a string for each field. If a
+  // field is not assigned it will return an empty string "".
   
-  /// The identifier for this house. Is also the direct url to its
-  /// data. Must be named "id" to conform to identifiable protocol.
+  /// The identifier for this house. Is also the direct URL to its
+  /// data. Must be named "id" to conform to the identifiable protocol.
   let id: String
   
   let name: String
@@ -23,21 +23,24 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let motto: String
   let titles: [String]
   let seats: [String]
+  let foundingPeriod: String
+  let diedOutPeriod: String
+  let ancestralWeapons: [String]
+
+  // When assigned these fields are URL's as string.
   let currentLord: String
   let heir: String
   let overlordHouse: String
-  let foundingPeriod: String
   let foundedByCharacter: String
-  let diedOutPeriod: String
-  let ancestralWeapons: [String]
   let cadetBranches: [String]
   let swornMembers: [String]
   
   /// A Boolean indicating whether at least one field that can contain an URL has an URL.
   var containsLinks: Bool {
-    return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || swornMembers.hasLinkEntries || cadetBranches.hasLinkEntries
+    return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || overlordHouse.isLink || swornMembers.hasLinkEntries || cadetBranches.hasLinkEntries
   }
   
+  /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
   }

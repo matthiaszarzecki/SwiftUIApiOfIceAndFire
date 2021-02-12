@@ -22,7 +22,7 @@ struct HouseUpdated {
   let diedOutPeriod: String
   let ancestralWeapons: [String]
   
-  /// The colors mentioned in the Coat of Arms, as SwiftUI Colors
+  /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
   let heraldryColors: [Color]?
   
   var currentLord: Character?
