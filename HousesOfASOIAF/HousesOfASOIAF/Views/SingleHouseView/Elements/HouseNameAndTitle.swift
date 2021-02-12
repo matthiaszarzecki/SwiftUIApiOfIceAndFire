@@ -12,12 +12,12 @@ struct HouseNameAndTitle: View {
   
   var body: some View {
     return VStack {
-      if !house.name.isEmpty {
+      if house.name.exists {
         Text("\(house.name)")
           .font(.title)
       }
       
-      if !house.region.isEmpty {
+      if house.region.exists {
         Text("of \(house.region)")
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
       }

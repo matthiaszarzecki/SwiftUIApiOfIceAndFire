@@ -11,7 +11,7 @@ struct CoatOfArmsSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if !house.coatOfArms.isEmpty {
+    if house.coatOfArms.exists {
       Section(header: SectionHeader(text: "Coat of Arms")) {
         Text("\(house.coatOfArms)")
       }
