@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /// Contains all data related to a House in ASOIAF.
 struct HouseBasic: Codable, Identifiable, Hashable {
@@ -35,6 +36,10 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// Tells whether at least one field that can contain an URL has an URL
   var containsLinks: Bool {
     return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || (swornMembers.count > 0 && swornMembers[0].isLink) || (cadetBranches.count > 0 && cadetBranches[0].isLink)
+  }
+  
+  var heraldryColors: [Color] {
+    return ColorParser().getColors(fromString: coatOfArms)
   }
   
   enum CodingKeys: String, CodingKey {

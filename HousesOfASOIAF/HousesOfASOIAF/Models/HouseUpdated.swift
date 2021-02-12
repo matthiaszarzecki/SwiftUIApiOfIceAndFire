@@ -51,6 +51,7 @@ struct HouseUpdated {
     foundingPeriod = house.foundingPeriod
     diedOutPeriod = house.diedOutPeriod
     ancestralWeapons = house.ancestralWeapons
+    heraldryColors = house.heraldryColors
     
     self.currentLord = currentLord
     self.heir = heir
@@ -58,7 +59,5 @@ struct HouseUpdated {
     self.foundedByCharacter = founder
     self.cadetBranches = cadetBranches
     self.swornMembers = swornMembers
-    
-    self.heraldryColors = ColorParser().getColors(fromString: house.coatOfArms)
   }
 }

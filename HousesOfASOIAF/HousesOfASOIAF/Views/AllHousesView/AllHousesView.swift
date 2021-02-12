@@ -33,12 +33,11 @@ struct AllHousesDisplay: View {
     // This cannot be a scrollview as that tanks the performance
     List {
       ForEach(fetchResults) { house in
-        let destination = SingleHouseView(houseBasic: house)
         NavigationLink(
-          destination: destination
+          destination: SingleHouseView(houseBasic: house)
         ) {
           HStack {
-            if let colors = destination.getHeraldryColors(), colors.count > 0 {
+            if let colors = house.heraldryColors, colors.count > 0 {
               let circleSize: CGFloat = 32
               CircularColorDisplay(colors: colors)
                 .frame(width: circleSize, height: circleSize, alignment: .center)

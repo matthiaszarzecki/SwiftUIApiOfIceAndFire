@@ -18,10 +18,6 @@ struct SingleHouseView: View {
   var body: some View {
     SingleHouseDisplay(houseUpdated: singleHouseViewModel.state.houseUpdated)
   }
-  
-  public func getHeraldryColors() -> [Color]? {
-    return singleHouseViewModel.state.houseUpdated?.heraldryColors
-  }
 }
 
 struct SingleHouseDisplay: View {

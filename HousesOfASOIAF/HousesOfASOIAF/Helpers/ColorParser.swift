@@ -22,7 +22,7 @@ struct ColorParser {
     // We DO NOT remove hyphens "-", as those are part
     // of some colors, like "dark-green".
     adaptedText = adaptedText.replacingOccurrences(
-      of: "[,:;()_]",
+      of: "[.,:;()_]",
       with: " ",
       options: .regularExpression
     )
@@ -40,18 +40,18 @@ struct ColorParser {
       colors.append(.yellow)
     }
     
-    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre", "copper", "saffron"]
+    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre", "copper", "saffron", "rusty", "black-and-orange", "bronze"]
     if words.contains(where: synonymsForOrange.contains) {
       colors.append(.orange)
     }
     
-    let synonymsForBrown = ["brown", "ermine"]
+    let synonymsForBrown = ["brown", "ermine", "erminois", "oaken", "oak", "tree"]
     if words.contains(where: synonymsForBrown.contains) {
       let customBrownColor = Color(hex: "773D1C")
       colors.append(customBrownColor)
     }
     
-    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood"]
+    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody"]
     if words.contains(where: synonymsForRed.contains) {
       colors.append(.red)
     }
@@ -62,20 +62,32 @@ struct ColorParser {
       colors.append(customPinkColor)
     }
     
-    let synonymsForPurple = ["purple", "purpure", "murrey"]
+    let synonymsForPurple = ["purple", "purpure", "murrey", "grape"]
     if words.contains(where: synonymsForPurple.contains) {
       colors.append(.purple)
     }
     
-    let synonymsForBlue = ["blue", "azure", "indigo"]
+    let synonymsForBlue = ["blue", "azure", "indigo", "fountain"]
     if words.contains(where: synonymsForBlue.contains) {
       colors.append(.blue)
     }
     
-    let synonymsForLightBlue = ["sky", "celeste"]
+    let synonymsForLightBlue = ["sky", "celeste", "sky-blue"]
     if words.contains(where: synonymsForLightBlue.contains) {
       let customLightBlueColor = Color(hex: "87CEEB")
       colors.append(customLightBlueColor)
+    }
+    
+    let synonymsForCyan = ["cyan", "turquoise"]
+    if words.contains(where: synonymsForCyan.contains) {
+      let customCyanColor = Color(hex: "00FFFF")
+      colors.append(customCyanColor)
+    }
+    
+    let synonymsForLightGreen = ["pale-green"]
+    if words.contains(where: synonymsForLightGreen.contains) {
+      let customLightGreenColor = Color(hex: "77C344")
+      colors.append(customLightGreenColor)
     }
     
     let synonymsForGreen = ["green", "vert"]
@@ -89,7 +101,7 @@ struct ColorParser {
       colors.append(customDarkGreenColor)
     }
 
-    let synonymsForWhite = ["white", "argent", "silver", "ice"]
+    let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain"]
     if words.contains(where: synonymsForWhite.contains) {
       let customWhiteColor = Color(hex: "F2F2F7")
       colors.append(customWhiteColor)
@@ -100,7 +112,7 @@ struct ColorParser {
       colors.append(.gray)
     }
     
-    let synonymsForBlack = ["black", "sable"]
+    let synonymsForBlack = ["black", "sable", "black-and-orange"]
     if words.contains(where: synonymsForBlack.contains) {
       let customBlackColor = Color(hex: "111111")
       colors.append(customBlackColor)
