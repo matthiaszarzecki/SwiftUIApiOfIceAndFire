@@ -27,16 +27,16 @@ struct MockClasses {
       "Godsgrace",
       "Gates of the Moon (winter)"
     ],
-    currentLord: MockClasses.characterLink,
-    heir: MockClasses.characterLink,
-    overlordHouse: "https://www.anapioficeandfire.com/api/houses/285",
     foundingPeriod: "Coming of the Andals",
-    foundedByCharacter: "https://www.anapioficeandfire.com/api/characters/144",
     diedOutPeriod: "260 AC",
     ancestralWeapons: [
       "Blackfyre",
       "Whitefyre"
     ],
+    currentLord: MockClasses.characterLink,
+    heir: MockClasses.characterLink,
+    overlordHouse: "https://www.anapioficeandfire.com/api/houses/285",
+    foundedByCharacter: "https://www.anapioficeandfire.com/api/characters/144",
     cadetBranches: ["https://www.anapioficeandfire.com/api/houses/6"],
     swornMembers: Array.init(repeating: MockClasses.characterLink, count: 4)
   )
@@ -57,16 +57,16 @@ struct MockClasses {
       "Godsgrace",
       "Gates of the Moon (winter)"
     ],
-    currentLord: "",
-    heir: "",
-    overlordHouse: "",
     foundingPeriod: "",
-    foundedByCharacter: "",
     diedOutPeriod: "260 AC",
     ancestralWeapons: [
       "Blackfyre",
       "Whitefyre"
     ],
+    currentLord: "",
+    heir: "",
+    overlordHouse: "",
+    foundedByCharacter: "",
     cadetBranches: [],
     swornMembers: []
   )
