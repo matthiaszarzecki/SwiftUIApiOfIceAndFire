@@ -33,30 +33,12 @@ struct AllHousesDisplay: View {
     // This cannot be a scrollview as that tanks the performance
     List {
       ForEach(fetchResults) { house in
-        NavigationLink(
-          destination: SingleHouseView(houseBasic: house)
-        ) {
-          HStack {
-            if let colors = house.heraldryColors, colors.hasEntries {
-              let circleSize: CGFloat = 32
-              CircularColorDisplay(colors: colors)
-                .frame(width: circleSize, height: circleSize, alignment: .center)
-            }
-            
-            Text("\(house.name)")
-            
-            // When the house contains subnavigatable
-            // pages & info show it here with an icon.
-            if house.containsLinks {
-              Image(systemName: "link")
+        SingleHouseCell(house: house)
+          .onAppear {
+            if self.fetchResults.last == house {
+              self.onScrolledAtBottom()
             }
           }
-        }
-        .onAppear {
-          if self.fetchResults.last == house {
-            self.onScrolledAtBottom()
-          }
-        }
       }
       
       if isLoading {
