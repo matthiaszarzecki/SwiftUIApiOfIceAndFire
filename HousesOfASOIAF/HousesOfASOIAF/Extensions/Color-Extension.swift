@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Color {
+  static let housesOfWesterosRed = Color(hex: "89170B")
+  
   /// Creates a SwiftUI color from a hex code
   init(hex: String) {
     let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
