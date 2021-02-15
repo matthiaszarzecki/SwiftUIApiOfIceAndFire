@@ -8,8 +8,8 @@
 import Foundation
 
 extension Array where Element == String {
-  /// Returns true if the array has usable
-  /// entries (>0 and first not an empty string)
+  /// Returns true if the array has usable entries
+  /// (>0 elements and first elements not an empty string).
   var hasNonEmptyEntries: Bool {
     return self.hasEntries && self[0] != ""
   }

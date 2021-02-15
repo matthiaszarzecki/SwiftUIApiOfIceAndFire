@@ -14,7 +14,7 @@ struct ColorParser {
   static func getColors(fromString text: String) -> [Color] {
     var colors: [Color] = []
 
-    // Lowercase text for easier comparison
+    // Turn test lowercase for easier comparison
     var adaptedText = text.lowercased()
     
     // Remove punctuation - replaces it with spaces, so

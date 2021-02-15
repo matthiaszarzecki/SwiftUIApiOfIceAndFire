@@ -9,7 +9,7 @@ import Foundation
 
 /// Contains all data related to a Character in ASOIAF.
 struct Character: Codable, Hashable {
-  // Api ALWAYS returns a string for each field. If a field
+  // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
   
   let url: String

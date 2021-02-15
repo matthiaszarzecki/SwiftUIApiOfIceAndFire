@@ -10,7 +10,7 @@ import SwiftUI
 
 /// Contains all data related to a House in ASOIAF.
 struct HouseBasic: Codable, Identifiable, Hashable {
-  // ThE Api ALWAYS returns a string for each field. If a
+  // The Api ALWAYS returns a string for each field. If a
   // field is not assigned it will return an empty string "".
   
   /// The identifier for this house. Is also the direct URL to its
