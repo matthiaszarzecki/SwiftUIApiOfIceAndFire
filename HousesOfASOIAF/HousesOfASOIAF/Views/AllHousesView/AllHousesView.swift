@@ -21,6 +21,7 @@ struct AllHousesView: View {
       .navigationTitle("Houses of Westeros 🛡️")
       .onAppear(perform: allHousesViewModel.fetchNextPageIfPossible)
     }
+    .accentColor(.housesOfWesterosRed)
   }
 }
 
