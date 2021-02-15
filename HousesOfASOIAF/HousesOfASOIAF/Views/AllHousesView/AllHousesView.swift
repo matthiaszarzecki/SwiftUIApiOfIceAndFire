@@ -18,7 +18,7 @@ struct AllHousesView: View {
         isLoading: allHousesViewModel.state.canLoadNextPage,
         onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
       )
-      .navigationTitle("Houses of ASOIAF 🛡️")
+      .navigationTitle("Houses of Westeros 🛡️")
       .onAppear(perform: allHousesViewModel.fetchNextPageIfPossible)
     }
   }
