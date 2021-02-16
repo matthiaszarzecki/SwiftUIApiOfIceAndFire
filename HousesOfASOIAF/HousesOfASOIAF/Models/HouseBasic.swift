@@ -35,14 +35,27 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let cadetBranches: [String]
   let swornMembers: [String]
   
-  /// A Boolean indicating whether at least one field that can contain an URL has an URL.
+  /// A Boolean indicating whether at least one field that
+  /// can contain an URL has an URL.
   var containsLinks: Bool {
-    return foundedByCharacter.isLink || currentLord.isLink || heir.isLink || overlordHouse.isLink || swornMembers.hasLinkEntries || cadetBranches.hasLinkEntries
+    // We are leaving out the "id" field as that URL is never
+    // actually used to offer a link to somewhere else.
+    return foundedByCharacter.isLink
+      || currentLord.isLink
+      || heir.isLink
+      || overlordHouse.isLink
+      || swornMembers.hasLinkEntries
+      || cadetBranches.hasLinkEntries
   }
   
   /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
+  }
+  
+  /// The initial letter of the House-name without "House " prefixed.
+  var initialLetter: String {
+    return name[6]
   }
   
   enum CodingKeys: String, CodingKey {

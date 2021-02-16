@@ -8,6 +8,11 @@
 import Foundation
 
 extension String {
+  /// Allows to access characters as strings via array-index, e.g. "hello[2]".
+  subscript (index: Int) -> String {
+    return String(self[self.index(self.startIndex, offsetBy: index)])
+  }
+  
   /// A Boolean value indicating whether a string has characters.
   public var exists: Bool {
     return !self.isEmpty

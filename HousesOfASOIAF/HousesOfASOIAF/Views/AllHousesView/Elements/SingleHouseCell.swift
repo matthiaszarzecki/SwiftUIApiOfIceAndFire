@@ -15,8 +15,16 @@ struct SingleHouseCell: View {
       destination: SingleHouseView(houseBasic: house)
     ) {
       HStack {
+        let circleSize: CGFloat = 32
         if let colors = house.heraldryColors, colors.hasEntries {
-          CircularColorDisplay(colors: colors, size: 32)
+          CircularColorDisplay(colors: colors, size: circleSize)
+        } else {
+          ZStack {
+            Circle()
+              .frame(width: circleSize, height: circleSize, alignment: .center)
+            Text("\(house.initialLetter)")
+              .foregroundColor(.white)
+          }
         }
         
         Text("\(house.name)")
