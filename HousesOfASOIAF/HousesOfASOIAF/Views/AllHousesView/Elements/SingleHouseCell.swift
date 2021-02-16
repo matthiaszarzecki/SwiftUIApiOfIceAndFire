@@ -9,26 +9,35 @@ import SwiftUI
 
 struct SingleHouseCell: View {
   let house: HouseBasic
+  
+  var houseIcon: some View {
+    let circleSize: CGFloat = 32
+    if house.heraldryColors.hasEntries {
+      // When colors exists, create a CircularColorDisplay
+      return AnyView(
+        CircularColorDisplay(colors: house.heraldryColors, size: circleSize)
+      )
+    } else {
+      // When no colors exists, show first letter of house on colored circle.
+      return AnyView(
+        ZStack {
+          Circle()
+            .foregroundColor(.housesOfWesterosRed)
+            .frame(width: circleSize, height: circleSize, alignment: .center)
+          
+          Text("\(house.initialLetter)")
+            .foregroundColor(.white)
+        }
+      )
+    }
+  }
 
   var body: some View {
     NavigationLink(
       destination: SingleHouseView(houseBasic: house)
     ) {
       HStack {
-        let circleSize: CGFloat = 32
-        if let colors = house.heraldryColors, colors.hasEntries {
-          CircularColorDisplay(colors: colors, size: circleSize)
-        } else {
-          ZStack {
-            Circle()
-              .foregroundColor(.housesOfWesterosRed)
-              .frame(width: circleSize, height: circleSize, alignment: .center)
-            
-            Text("\(house.initialLetter)")
-              .foregroundColor(.white)
-          }
-        }
-        
+        houseIcon
         Text("\(house.name)")
         
         // When the house contains subnavigatable
