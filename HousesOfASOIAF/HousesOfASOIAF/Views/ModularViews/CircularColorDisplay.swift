@@ -19,7 +19,7 @@ struct CircularColorDisplay: View {
   }
   
   var body: some View {
-    GeometryReader { geometry in
+    ZStack {
       ForEach(0..<colors.count) { index in
         let rotation = getRotationAngleForElement(withIndex: index)
         

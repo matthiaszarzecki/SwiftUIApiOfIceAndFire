@@ -16,8 +16,7 @@ struct SingleHouseCell: View {
     ) {
       HStack {
         if let colors = house.heraldryColors, colors.hasEntries {
-          let circleSize: CGFloat = 32
-          CircularColorDisplay(colors: colors, size: circleSize)
+          CircularColorDisplay(colors: colors, size: 32)
         }
         
         Text("\(house.name)")
