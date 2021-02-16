@@ -21,7 +21,9 @@ struct SingleHouseCell: View {
         } else {
           ZStack {
             Circle()
+              .foregroundColor(.housesOfWesterosRed)
               .frame(width: circleSize, height: circleSize, alignment: .center)
+            
             Text("\(house.initialLetter)")
               .foregroundColor(.white)
           }
@@ -43,8 +45,9 @@ struct SingleHouseCell: View {
 struct SingleHouseCell_Previews: PreviewProvider {
   static var previews: some View {
     List {
-      SingleHouseCell(house: MockClasses.houseBasicWithLinks)
-      SingleHouseCell(house: MockClasses.houseBasicWithoutLinks)
+      ForEach(MockClasses.housesBasic, id: \.self) { house in
+        SingleHouseCell(house: house)
+      }
     }
   }
 }

@@ -9,60 +9,97 @@ import Foundation
 
 struct MockClasses {
   static let characterLink = "https://www.anapioficeandfire.com/api/characters/298"
-  static let houseName = "House Allyrion of Godsgrace"
+  static let houseLink = "https://www.anapioficeandfire.com/api/houses/285"
   
-  static let houseBasicWithLinks = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/298",
-    name: MockClasses.houseName,
-    region: "Dorne",
-    coatOfArms: "Gyronny Gules and Sable, a hand couped Or",
-    motto: "No Foe May Pass",
-    titles: [
-      "King of Mountain and Vale (formerly)",
-      "Lord of the Eyrie",
-      "Defender of the Vale",
-      "Warden of the East"
-    ],
-    seats: [
-      "Godsgrace",
-      "Gates of the Moon (winter)"
-    ],
-    foundingPeriod: "Coming of the Andals",
-    diedOutPeriod: "260 AC",
-    ancestralWeapons: [
-      "Blackfyre",
-      "Whitefyre"
-    ],
-    currentLord: MockClasses.characterLink,
-    heir: MockClasses.characterLink,
-    overlordHouse: "https://www.anapioficeandfire.com/api/houses/285",
-    foundedByCharacter: "https://www.anapioficeandfire.com/api/characters/144",
-    cadetBranches: ["https://www.anapioficeandfire.com/api/houses/6"],
-    swornMembers: Array.init(repeating: MockClasses.characterLink, count: 4)
+  static let houseName = "House Allyrion of Godsgrace"
+  static let houseRegion = "Dorne"
+  static let coatOfArms = "Gyronny Gules and Sable, a hand couped Or"
+  static let motto = "No Foe May Pass"
+  static let titles = [
+    "King of Mountain and Vale (formerly)",
+    "Lord of the Eyrie",
+    "Defender of the Vale",
+    "Warden of the East"
+  ]
+  static let seats = [
+    "Godsgrace",
+    "Gates of the Moon (winter)"
+  ]
+  static let foundingPeriod = "Coming of the Andals"
+  static let diedOutPeriod = "260 AC"
+  static let ancestralWeapons = [
+    "Blackfyre",
+    "Whitefyre"
+  ]
+  
+  static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
+    id: "https://www.anapioficeandfire.com/api/house/290",
+    name: houseName,
+    region: houseRegion,
+    coatOfArms: coatOfArms,
+    motto: motto,
+    titles: titles,
+    seats: seats,
+    foundingPeriod: foundingPeriod,
+    diedOutPeriod: diedOutPeriod,
+    ancestralWeapons: ancestralWeapons,
+    currentLord: characterLink,
+    heir: characterLink,
+    overlordHouse: houseLink,
+    foundedByCharacter: characterLink,
+    cadetBranches: Array.init(repeating: houseLink, count: 2),
+    swornMembers: Array.init(repeating: characterLink, count: 4)
   )
   
-  static let houseBasicWithoutLinks = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/298",
-    name: MockClasses.houseName,
-    region: "Dorne",
-    coatOfArms: "Gyronny Gules and Sable, a hand couped Or",
-    motto: "No Foe May Pass",
-    titles: [
-      "King of Mountain and Vale (formerly)",
-      "Lord of the Eyrie",
-      "Defender of the Vale",
-      "Warden of the East"
-    ],
-    seats: [
-      "Godsgrace",
-      "Gates of the Moon (winter)"
-    ],
-    foundingPeriod: "",
-    diedOutPeriod: "260 AC",
-    ancestralWeapons: [
-      "Blackfyre",
-      "Whitefyre"
-    ],
+  static let houseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
+    id: "https://www.anapioficeandfire.com/api/house/291",
+    name: houseName,
+    region: houseRegion,
+    coatOfArms: "",
+    motto: motto,
+    titles: titles,
+    seats: seats,
+    foundingPeriod: foundingPeriod,
+    diedOutPeriod: diedOutPeriod,
+    ancestralWeapons: ancestralWeapons,
+    currentLord: characterLink,
+    heir: characterLink,
+    overlordHouse: houseLink,
+    foundedByCharacter: characterLink,
+    cadetBranches: Array.init(repeating: houseLink, count: 2),
+    swornMembers: Array.init(repeating: characterLink, count: 4)
+  )
+  
+  static let houseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
+    id: "https://www.anapioficeandfire.com/api/house/292",
+    name: houseName,
+    region: houseRegion,
+    coatOfArms: coatOfArms,
+    motto: motto,
+    titles: titles,
+    seats: seats,
+    foundingPeriod: foundingPeriod,
+    diedOutPeriod: diedOutPeriod,
+    ancestralWeapons: ancestralWeapons,
+    currentLord: "",
+    heir: "",
+    overlordHouse: "",
+    foundedByCharacter: "",
+    cadetBranches: [],
+    swornMembers: []
+  )
+  
+  static let houseBasicWithoutLinksAndWithoutCoatOfArms = HouseBasic(
+    id: "https://www.anapioficeandfire.com/api/house/293",
+    name: houseName,
+    region: houseRegion,
+    coatOfArms: "",
+    motto: motto,
+    titles: titles,
+    seats: seats,
+    foundingPeriod: foundingPeriod,
+    diedOutPeriod: diedOutPeriod,
+    ancestralWeapons: ancestralWeapons,
     currentLord: "",
     heir: "",
     overlordHouse: "",
@@ -72,14 +109,14 @@ struct MockClasses {
   )
   
   static let housesBasic = [
-    MockClasses.houseBasicWithLinks,
-    MockClasses.houseBasicWithoutLinks,
-    MockClasses.houseBasicWithLinks,
-    MockClasses.houseBasicWithoutLinks
+    houseBasicWithLinksAndWithCoatOfArms,
+    houseBasicWithLinksAndWithoutCoatOfArms,
+    houseBasicWithoutLinksAndWithCoatOfArms,
+    houseBasicWithoutLinksAndWithoutCoatOfArms
   ]
   
   static let character = Character(
-    url: "https://www.anapioficeandfire.com/api/characters/298",
+    url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
     culture: "Northmen",
     born: "In 283 AC",
@@ -114,19 +151,19 @@ struct MockClasses {
     portrayedBy: ["Kit Harington"]
   )
   
-  static let characters = Array.init(repeating: MockClasses.character, count: 3)
+  static let characters = Array.init(repeating: character, count: 3)
   
   static let houseUpdatedWithLinks = HouseUpdated(
-    fromHouse: MockClasses.houseBasicWithLinks,
-    currentLord: MockClasses.character,
-    heir: MockClasses.character,
-    overlord: MockClasses.houseBasicWithLinks,
-    founder: MockClasses.character,
-    cadetBranches: MockClasses.housesBasic,
-    swornMembers: MockClasses.characters
+    fromHouse: houseBasicWithLinksAndWithCoatOfArms,
+    currentLord: character,
+    heir: character,
+    overlord: houseBasicWithLinksAndWithCoatOfArms,
+    founder: character,
+    cadetBranches: housesBasic,
+    swornMembers: characters
   )
   
   static let houseUpdatedWithoutLinks = HouseUpdated(
-    fromHouse: MockClasses.houseBasicWithoutLinks
+    fromHouse: houseBasicWithoutLinksAndWithCoatOfArms
   )
 }
