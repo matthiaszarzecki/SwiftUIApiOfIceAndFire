@@ -14,7 +14,14 @@ struct OverlordHouseSection: View {
     if let overlordHouse = house.overlordHouse {
       Section(header: SectionHeader(text: "Overlord")) {
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-          Text("🛡️ \(overlordHouse.name)")
+          HStack {
+            HouseIcon(
+              colors: overlordHouse.heraldryColors,
+              initialLetter: overlordHouse.initialLetter,
+              size: 24
+            )
+            Text("\(overlordHouse.name)")
+          }
         }
       }
     }

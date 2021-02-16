@@ -23,7 +23,10 @@ struct HouseUpdated {
   let ancestralWeapons: [String]
   
   /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
-  let heraldryColors: [Color]?
+  let heraldryColors: [Color]
+  
+  /// The initial letter of the House-name without "House " prefixed.
+  let initialLetter: String
   
   var currentLord: Character?
   var heir: Character?
@@ -52,6 +55,7 @@ struct HouseUpdated {
     diedOutPeriod = house.diedOutPeriod
     ancestralWeapons = house.ancestralWeapons
     heraldryColors = house.heraldryColors
+    initialLetter = house.initialLetter
     
     self.currentLord = currentLord
     self.heir = heir
