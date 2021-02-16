@@ -13,19 +13,20 @@ struct CircularColorDisplay: View {
   var colors: [Color]
   var size: CGFloat
   
+  /// The amount each segment will take up
+  private var degreesForEachElement: Double {
+    360.0 / Double(colors.count)
+  }
+  
   var body: some View {
     GeometryReader { geometry in
       ForEach(0..<colors.count) { index in
         let rotation = getRotationAngleForElement(withIndex: index)
         
         Path { path in
-          let minimumSize = min(size, size)
-          let maximumSize = max(size, size)
-          let center: CGPoint = .init(x: minimumSize / 2, y: maximumSize / 2)
-          
+          let center: CGPoint = .init(x: size / 2, y: size / 2)
           path.move(to: .init(x: center.x, y: center.y))
           
-          let degreesForEachElement = 360.0 / Double(colors.count)
           path.addArc(
             center: center,
             radius: center.x - 0.05 * center.x,
@@ -51,7 +52,7 @@ struct CircularColorDisplay: View {
     if index == 0 {
       return 0.0
     } else {
-      return Double(index) * 360.0 / Double(colors.count)
+      return Double(index) * degreesForEachElement
     }
   }
 }
