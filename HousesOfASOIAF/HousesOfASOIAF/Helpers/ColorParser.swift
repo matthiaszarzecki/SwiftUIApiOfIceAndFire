@@ -107,7 +107,7 @@ struct ColorParser {
       colors.append(customWhiteColor)
     }
      
-    let synonymsForGray = ["grey", "gray", "gules", "cendrée"]
+    let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword"]
     if words.hasAtLeastOneItem(fromArray: synonymsForGray) {
       colors.append(.gray)
     }
