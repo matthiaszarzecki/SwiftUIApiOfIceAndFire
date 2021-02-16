@@ -34,7 +34,9 @@ struct SingleHouseCell: View {
 
   var body: some View {
     NavigationLink(
-      destination: SingleHouseView(houseBasic: house)
+      destination: NavigationLazyView(
+        SingleHouseView(houseBasic: house)
+      )
     ) {
       HStack {
         houseIcon

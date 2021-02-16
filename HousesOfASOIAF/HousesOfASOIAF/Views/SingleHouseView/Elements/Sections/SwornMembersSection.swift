@@ -14,7 +14,11 @@ struct SwornMembersSection: View {
     if let swornMembers = house.swornMembers, swornMembers.hasEntries {
       Section(header: SectionHeader(text: "Sworn Members")) {
         ForEach(swornMembers, id: \.self) { character in
-          NavigationLink(destination: CharacterView(character: character)) {
+          NavigationLink(
+            destination: NavigationLazyView(
+              CharacterView(character: character)
+            )
+          ) {
             Text("👱🏼 \(character.name)")
           }
         }

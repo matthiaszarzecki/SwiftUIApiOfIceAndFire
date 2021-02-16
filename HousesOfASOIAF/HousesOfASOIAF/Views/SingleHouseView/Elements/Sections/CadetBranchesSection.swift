@@ -14,7 +14,11 @@ struct CadetBranchesSection: View {
     if let cadetBranches = house.cadetBranches, cadetBranches.hasEntries {
       Section(header: SectionHeader(text: "Cadet Branches")) {
         ForEach(cadetBranches, id: \.self) { house in
-          NavigationLink(destination: SingleHouseView(houseBasic: house)) {
+          NavigationLink(
+            destination: NavigationLazyView(
+              SingleHouseView(houseBasic: house)
+            )
+          ) {
             Text("🛡️ \(house.name)")
           }
         }

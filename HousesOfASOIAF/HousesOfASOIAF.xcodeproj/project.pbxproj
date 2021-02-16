@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E46A3F825DC822F00748FAB /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E46A3F725DC822F00748FAB /* NavigationLazyView.swift */; };
 		6E7ADA6825D7383500E87099 /* String-Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7ADA6725D7383500E87099 /* String-Array-Extension.swift */; };
 		6E7ADA7625D73AED00E87099 /* Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7ADA7525D73AED00E87099 /* Array-Extension.swift */; };
 		6E7ADA7E25D73E8100E87099 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7ADA7D25D73E8100E87099 /* RequestMethod.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E46A3F725DC822F00748FAB /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		6E7ADA6725D7383500E87099 /* String-Array-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Array-Extension.swift"; sourceTree = "<group>"; };
 		6E7ADA7525D73AED00E87099 /* Array-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array-Extension.swift"; sourceTree = "<group>"; };
 		6E7ADA7D25D73E8100E87099 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			children = (
 				CC356C2825B8735600123558 /* ButtonStyle.swift */,
 				CC2132ED25D58318004A8186 /* CircularColorDisplay.swift */,
+				6E46A3F725DC822F00748FAB /* NavigationLazyView.swift */,
 				CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */,
 				6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */,
 			);
@@ -524,6 +527,7 @@
 				6EFD047F25B62BC90049D482 /* TitlesSection.swift in Sources */,
 				6EFD04A925B650890049D482 /* CharacterView.swift in Sources */,
 				CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */,
+				6E46A3F825DC822F00748FAB /* NavigationLazyView.swift in Sources */,
 				CC76B3DF25B5D12F00AD405E /* CadetBranchesSection.swift in Sources */,
 				CC2132EE25D58318004A8186 /* CircularColorDisplay.swift in Sources */,
 				6EFD046B25B62AE40049D482 /* FoundedSection.swift in Sources */,
