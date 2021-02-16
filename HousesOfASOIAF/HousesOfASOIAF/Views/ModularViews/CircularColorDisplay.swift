@@ -11,17 +11,7 @@ import SwiftUI
 /// where each segment has the same size.
 struct CircularColorDisplay: View {
   var colors: [Color]
-
-  /// Gets the amount an elements needs to be rotated
-  /// to align with the other circle elements. Returns
-  /// 0.0 when it is the first element.
-  func getRotationAngleForElement(withIndex index: Int) -> Double {
-    if index == 0 {
-      return 0.0
-    } else {
-      return Double(index) * 360.0 / Double(colors.count)
-    }
-  }
+  var size: CGFloat
   
   var body: some View {
     GeometryReader { geometry in
@@ -29,8 +19,8 @@ struct CircularColorDisplay: View {
         let rotation = getRotationAngleForElement(withIndex: index)
         
         Path { path in
-          let minimumSize = min(geometry.size.width, geometry.size.height)
-          let maximumSize = max(geometry.size.width, geometry.size.height)
+          let minimumSize = min(size, size)
+          let maximumSize = max(size, size)
           let center: CGPoint = .init(x: minimumSize / 2, y: maximumSize / 2)
           
           path.move(to: .init(x: center.x, y: center.y))
@@ -51,13 +41,24 @@ struct CircularColorDisplay: View {
         )
       }
     }
+    .frame(width: size, height: size, alignment: .center)
+  }
+  
+  /// Gets the amount an elements needs to be rotated
+  /// to align with the other circle elements. Returns
+  /// 0.0 when it is the first element.
+  private func getRotationAngleForElement(withIndex index: Int) -> Double {
+    if index == 0 {
+      return 0.0
+    } else {
+      return Double(index) * 360.0 / Double(colors.count)
+    }
   }
 }
 
 struct CircularColorDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    CircularColorDisplay(colors: [.red, .green, .blue])
-      .frame(width: 100, height: 100, alignment: .center)
+    CircularColorDisplay(colors: [.red, .green, .blue], size: 100)
       .padding()
       .previewLayout(.sizeThatFits)
   }
