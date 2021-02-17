@@ -16,12 +16,16 @@ struct SingleHouseView: View {
   }
   
   var body: some View {
-    SingleHouseDisplay(houseUpdated: singleHouseViewModel.state.houseUpdated)
+    SingleHouseDisplay(
+      houseUpdated: singleHouseViewModel.state.houseUpdated,
+      showError: singleHouseViewModel.state.showError
+    )
   }
 }
 
 struct SingleHouseDisplay: View {
   let houseUpdated: HouseUpdated?
+  let showError: Bool
   
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
@@ -31,6 +35,13 @@ struct SingleHouseDisplay: View {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
             Form {
               Group {
+                if showError {
+                  Section(header: SectionHeader(text: "Oh no!")) {
+                    Text("There has been an error :(")
+                      .foregroundColor(.red)
+                  }
+                }
+                
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
                 HeraldryColorsSection(
                   house: unwrappedHouseUpdated,
@@ -66,9 +77,18 @@ struct SingleHouseDisplay: View {
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithLinks)
-      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithoutLinks)
-      SingleHouseDisplay(houseUpdated: nil)
+      SingleHouseDisplay(
+        houseUpdated: MockClasses.houseUpdatedWithLinks,
+        showError: true
+      )
+      SingleHouseDisplay(
+        houseUpdated: MockClasses.houseUpdatedWithoutLinks,
+        showError: false
+      )
+      SingleHouseDisplay(
+        houseUpdated: nil,
+        showError: false
+      )
     }
   }
 }

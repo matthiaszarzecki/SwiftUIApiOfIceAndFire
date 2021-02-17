@@ -38,32 +38,56 @@ class SingleHouseViewModel: ObservableObject {
   
   func updateFounder() {
     if houseBasic.foundedByCharacter.isLink {
-      Api.fetch(Character.self, url: houseBasic.foundedByCharacter) { character in
-        self.state.houseUpdated?.foundedByCharacter = character
+      Api.fetch(Character.self, url: houseBasic.foundedByCharacter) { result in
+        switch result {
+        case .success(let character):
+          self.state.houseUpdated?.foundedByCharacter = character
+        case .failure(let error):
+          print("Error! \(error)")
+          self.state.showError = true
+        }
       }
     }
   }
   
   func updateCurrentLord() {
     if houseBasic.currentLord.isLink {
-      Api.fetch(Character.self, url: houseBasic.currentLord) { character in
-        self.state.houseUpdated?.currentLord = character
+      Api.fetch(Character.self, url: houseBasic.currentLord) { result in
+        switch result {
+        case .success(let character):
+          self.state.houseUpdated?.currentLord = character
+        case .failure(let error):
+          print("Error! \(error)")
+          self.state.showError = true
+        }
       }
     }
   }
   
   func updateHeir() {
     if houseBasic.heir.isLink {
-      Api.fetch(Character.self, url: houseBasic.heir) { character in
-        self.state.houseUpdated?.heir = character
+      Api.fetch(Character.self, url: houseBasic.heir) { result in
+        switch result {
+        case .success(let character):
+          self.state.houseUpdated?.heir = character
+        case .failure(let error):
+          print("Error! \(error)")
+          self.state.showError = true
+        }
       }
     }
   }
   
   func updateOverlord() {
     if houseBasic.overlordHouse.isLink {
-      Api.fetch(HouseBasic.self, url: houseBasic.overlordHouse) { house in
-        self.state.houseUpdated?.overlordHouse = house
+      Api.fetch(HouseBasic.self, url: houseBasic.overlordHouse) { result in
+        switch result {
+        case .success(let house):
+          self.state.houseUpdated?.overlordHouse = house
+        case .failure(let error):
+          print("Error! \(error)")
+          self.state.showError = true
+        }
       }
     }
   }
@@ -71,8 +95,14 @@ class SingleHouseViewModel: ObservableObject {
   func updateCadetBranches() {
     for index in 0..<houseBasic.cadetBranches.count {
       if houseBasic.cadetBranches[index].isLink {
-        Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { house in
-          self.state.houseUpdated?.cadetBranches?[index] = house
+        Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { result in
+          switch result {
+          case .success(let house):
+            self.state.houseUpdated?.cadetBranches?[index] = house
+          case .failure(let error):
+            print("Error! \(error)")
+            self.state.showError = true
+          }
         }
       }
     }
@@ -81,8 +111,14 @@ class SingleHouseViewModel: ObservableObject {
   func updateSwornMembers() {
     for index in 0..<houseBasic.swornMembers.count {
       if houseBasic.swornMembers[index].isLink {
-        Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { character in
-          self.state.houseUpdated?.swornMembers?[index] = character
+        Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { result in
+          switch result {
+          case .success(let character):
+            self.state.houseUpdated?.swornMembers?[index] = character
+          case .failure(let error):
+            print("Error! \(error)")
+            self.state.showError = true
+          }
         }
       }
     }
@@ -90,5 +126,6 @@ class SingleHouseViewModel: ObservableObject {
   
   struct SingleHouseViewState {
     var houseUpdated: HouseUpdated?
+    var showError = false
   }
 }
