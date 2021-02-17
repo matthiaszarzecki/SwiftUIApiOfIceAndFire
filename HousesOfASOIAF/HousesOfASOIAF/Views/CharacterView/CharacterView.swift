@@ -62,7 +62,13 @@ struct CharacterView: View {
         if character.portrayedBy.hasNonEmptyEntries {
           Section(header: SectionHeader(text: "Portayed by")) {
             ForEach(character.portrayedBy, id: \.self) { actor in
-              Text("\(actor)")
+              HStack {
+                CharacterIcon(
+                  initialLetter: actor[0],
+                  size: 24
+                )
+                Text("\(actor)")
+              }
             }
           }
         }
