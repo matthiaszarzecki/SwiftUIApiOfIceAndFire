@@ -34,6 +34,7 @@
 		CC2132EE25D58318004A8186 /* CircularColorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2132ED25D58318004A8186 /* CircularColorDisplay.swift */; };
 		CC356BFC25B864D500123558 /* SingleHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */; };
 		CC356C2925B8735600123558 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC356C2825B8735600123558 /* ButtonStyle.swift */; };
+		CC441FFB25DD56CE00F637AB /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC441FFA25DD56CE00F637AB /* Game of Thrones.ttf */; };
 		CC4E805825DA80B300C659D6 /* SingleHouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E805725DA80B300C659D6 /* SingleHouseCell.swift */; };
 		CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37525B59CE400DC76DC /* AppDelegate.swift */; };
 		CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FE37725B59CE400DC76DC /* SceneDelegate.swift */; };
@@ -102,6 +103,7 @@
 		CC2132ED25D58318004A8186 /* CircularColorDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularColorDisplay.swift; sourceTree = "<group>"; };
 		CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseViewModel.swift; sourceTree = "<group>"; };
 		CC356C2825B8735600123558 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		CC441FFA25DD56CE00F637AB /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Game of Thrones.ttf"; sourceTree = "<group>"; };
 		CC4E805725DA80B300C659D6 /* SingleHouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseCell.swift; sourceTree = "<group>"; };
 		CC5FE37225B59CE400DC76DC /* HousesOfASOIAF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfASOIAF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FE37525B59CE400DC76DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 				CC356BFB25B864D500123558 /* SingleHouseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC441FFF25DD56D100F637AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC441FFA25DD56CE00F637AB /* Game of Thrones.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CC4E805F25DA832800C659D6 /* Elements */ = {
@@ -322,6 +332,7 @@
 		CC76B35225B5B36A00AD405E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				CC441FFF25DD56D100F637AB /* Fonts */,
 				CC5FE38325B59CE800DC76DC /* Info.plist */,
 				CC5FE37B25B59CE800DC76DC /* Assets.xcassets */,
 				CC5FE38025B59CE800DC76DC /* LaunchScreen.storyboard */,
@@ -496,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5FE38225B59CE800DC76DC /* LaunchScreen.storyboard in Resources */,
+				CC441FFB25DD56CE00F637AB /* Game of Thrones.ttf in Resources */,
 				CC5FE37F25B59CE800DC76DC /* Preview Assets.xcassets in Resources */,
 				CC5FE37C25B59CE800DC76DC /* Assets.xcassets in Resources */,
 			);
