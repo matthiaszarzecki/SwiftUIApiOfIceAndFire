@@ -28,6 +28,10 @@ struct Character: Codable, Hashable {
   let tvShowAppearances: [String]
   let portrayedBy: [String]
   
+  var initialLetter: String {
+    return name[0]
+  }
+  
   enum CodingKeys: String, CodingKey {
     case url
     case name

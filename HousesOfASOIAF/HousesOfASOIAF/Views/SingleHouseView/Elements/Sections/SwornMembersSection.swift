@@ -15,7 +15,13 @@ struct SwornMembersSection: View {
       Section(header: SectionHeader(text: "Sworn Members")) {
         ForEach(swornMembers, id: \.self) { character in
           NavigationLink(destination: CharacterView(character: character)) {
-            Text("👱🏼 \(character.name)")
+            HStack {
+              CharacterIcon(
+                initialLetter: character.initialLetter,
+                size: 24
+              )
+              Text("\(character.name)")
+            }
           }
         }
       }

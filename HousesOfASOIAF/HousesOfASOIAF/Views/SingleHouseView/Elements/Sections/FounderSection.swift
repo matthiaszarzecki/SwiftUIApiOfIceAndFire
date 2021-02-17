@@ -14,7 +14,13 @@ struct FounderSection: View {
     if let character = house.foundedByCharacter {
       Section(header: SectionHeader(text: "Founded by")) {
         NavigationLink(destination: CharacterView(character: character)) {
-          Text("👑 \(character.name)")
+          HStack {
+            CharacterIcon(
+              initialLetter: character.initialLetter,
+              size: 24
+            )
+            Text("\(character.name)")
+          }
         }
       }
     }
