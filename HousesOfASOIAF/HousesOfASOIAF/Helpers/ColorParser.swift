@@ -78,7 +78,7 @@ struct ColorParser {
       colors.append(customLightBlueColor)
     }
     
-    let synonymsForCyan = ["cyan", "turquoise"]
+    let synonymsForCyan = ["cyan", "turquoise", "blue-green"]
     if words.hasAtLeastOneItem(fromArray: synonymsForCyan) {
       let customCyanColor = Color(hex: "00FFFF")
       colors.append(customCyanColor)
