@@ -35,7 +35,7 @@ struct Character: Codable, Hashable {
   /// A boolean indicating whether this
   /// character was portayed by an actor.
   var hasActor: Bool {
-    return portrayedBy.hasEntries
+    return portrayedBy.hasNonEmptyEntries
   }
   
   enum CodingKeys: String, CodingKey {
