@@ -33,6 +33,11 @@ struct SingleHouseDisplay: View {
         GeometryReader { geometry in
           VStack {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
+              // Move everything upwards to counter the
+              // auto-padding in a NavigationView.
+              .frame(width: geometry.size.width - 16*2, height: 10, alignment: .center)
+              .offset(y: -20)
+            
             Form {
               Group {
                 if showError {
@@ -77,10 +82,13 @@ struct SingleHouseDisplay: View {
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SingleHouseDisplay(
-        houseUpdated: MockClasses.houseUpdatedWithLinks,
-        showError: true
-      )
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: MockClasses.houseUpdatedWithLinks,
+          showError: true
+        )
+      }
+      
       SingleHouseDisplay(
         houseUpdated: MockClasses.houseUpdatedWithoutLinks,
         showError: false
