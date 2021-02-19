@@ -21,6 +21,10 @@ struct SwornMembersSection: View {
                 size: 24
               )
               Text("\(character.name)")
+              
+              if character.hasActor {
+                Image(systemName: "person")
+              }
             }
           }
         }
