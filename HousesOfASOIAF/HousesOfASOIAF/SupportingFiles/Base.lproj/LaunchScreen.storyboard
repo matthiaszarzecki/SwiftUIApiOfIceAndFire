@@ -6,11 +6,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Game of Thrones.ttf">
-            <string>GameofThrones</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -20,25 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tct-bA-2Mj">
-                                <rect key="frame" x="57" y="326" width="300" height="244"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-vf-iba">
+                                <rect key="frame" x="26" y="285.5" width="362" height="325"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="7O3-y5-A9u"/>
-                                    <constraint firstAttribute="height" constant="244" id="JF0-Cw-Pc0"/>
+                                    <constraint firstAttribute="height" constant="325" id="Cou-S2-ej2"/>
+                                    <constraint firstAttribute="width" constant="362" id="cI5-67-oaR"/>
                                 </constraints>
-                                <string key="text">Houses
-of
-Westeros</string>
-                                <fontDescription key="fontDescription" name="GameofThrones" family="Game of Thrones" pointSize="42"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.53725490196078429" green="0.090196078431372548" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Tct-bA-2Mj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="E4w-NB-e0X"/>
-                            <constraint firstItem="Tct-bA-2Mj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yje-7g-ENS"/>
+                            <constraint firstItem="R3M-vf-iba" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="X49-A8-Lr2"/>
+                            <constraint firstItem="R3M-vf-iba" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qW5-Sf-PrT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,4 +36,7 @@ Westeros</string>
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launch_image" width="712" height="604"/>
+    </resources>
 </document>

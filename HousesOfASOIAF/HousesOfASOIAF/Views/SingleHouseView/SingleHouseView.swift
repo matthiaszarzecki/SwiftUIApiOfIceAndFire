@@ -88,15 +88,18 @@ struct SingleHouseDisplay_Previews: PreviewProvider {
           showError: true
         )
       }
-      
-      SingleHouseDisplay(
-        houseUpdated: MockClasses.houseUpdatedWithoutLinks,
-        showError: false
-      )
-      SingleHouseDisplay(
-        houseUpdated: nil,
-        showError: false
-      )
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: MockClasses.houseUpdatedWithoutLinks,
+          showError: false
+        )
+      }
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: nil,
+          showError: false
+        )
+      }
     }
   }
 }
