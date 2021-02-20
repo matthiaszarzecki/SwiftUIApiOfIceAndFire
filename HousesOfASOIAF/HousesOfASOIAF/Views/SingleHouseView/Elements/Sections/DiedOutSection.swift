@@ -12,7 +12,7 @@ struct DiedOutSection: View {
   
   var body: some View {
     if house.diedOutPeriod.exists {
-      Section(header: SectionHeader(text: "House Died out During")) {
+      Section(header: SectionHeader(text: "House Died out")) {
         Text("☠️ \(house.diedOutPeriod)")
       }
     }
