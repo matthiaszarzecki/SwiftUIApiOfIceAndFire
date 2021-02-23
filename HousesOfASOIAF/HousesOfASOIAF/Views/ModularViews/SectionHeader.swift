@@ -12,22 +12,21 @@ struct SectionHeader: View {
 
   var body: some View {
     Text(text)
-      .lineLimit(1)
-      .textCase(nil)
-      .foregroundColor(.white)
-      .padding(.vertical, 8)
-      .padding(.horizontal, 14)
-      .background(Color.gray)
-      .mask(RoundedRectangle(cornerRadius: 14, style: .continuous))
-      .padding(.leading, -9)
-      .padding(.bottom, -10)
+      .modifier(SectionHeaderStyle())
   }
 }
 
 struct LoadingSectionHeader: View {
   var body: some View {
     Text("AAAAAAAAAAAA")
+      .modifier(SectionHeaderStyle())
       .redacted(reason: .placeholder)
+  }
+}
+
+struct SectionHeaderStyle: ViewModifier {
+  func body(content: Content) -> some View {
+    content
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
