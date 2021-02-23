@@ -40,7 +40,7 @@ struct Api {
   static func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,
-    completion: @escaping (T) -> ()
+    completion: @escaping (Result<T, NetworkError>) -> ()
   ) {
     guard let url = URL(string: url) else {
       return
@@ -49,12 +49,26 @@ struct Api {
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get.rawValue
     
-    URLSession.shared.dataTask(with: request) { (data, _, _) in
+    URLSession.shared.dataTask(with: request) { (data, response, _) in
+      // When the response is not a code 200 (success), return an error.
+      if let httpResponse = response as? HTTPURLResponse {
+        if httpResponse.statusCode != 200 {
+          completion(.failure(.requestFailed))
+        }
+      }
+      
+      // Call succesful. Proceed with decoding the json-response.
       let result = try! JSONDecoder().decode(T.self, from: data!)
       DispatchQueue.main.async {
-        completion(result)
+        completion(.success(result))
       }
     }
     .resume()
   }
+}
+
+enum NetworkError: Error {
+  case badUrl
+  case requestFailed
+  case unknown
 }

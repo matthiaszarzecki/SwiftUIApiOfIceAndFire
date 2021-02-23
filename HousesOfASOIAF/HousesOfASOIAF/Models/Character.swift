@@ -32,6 +32,12 @@ struct Character: Codable, Hashable {
     return name[0]
   }
   
+  /// A boolean indicating whether this
+  /// character was portayed by an actor.
+  var hasActor: Bool {
+    return portrayedBy.hasNonEmptyEntries
+  }
+  
   enum CodingKeys: String, CodingKey {
     case url
     case name

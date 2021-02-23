@@ -16,12 +16,18 @@ struct SingleHouseView: View {
   }
   
   var body: some View {
-    SingleHouseDisplay(houseUpdated: singleHouseViewModel.state.houseUpdated)
+    SingleHouseDisplay(
+      houseUpdated: singleHouseViewModel.state.houseUpdated,
+      showError: singleHouseViewModel.state.showError,
+      updateData: singleHouseViewModel.getDataFromNestedLinks
+    )
   }
 }
 
 struct SingleHouseDisplay: View {
   let houseUpdated: HouseUpdated?
+  let showError: Bool
+  let updateData: () -> Void
   
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
@@ -29,6 +35,11 @@ struct SingleHouseDisplay: View {
         GeometryReader { geometry in
           VStack {
             HouseNameAndTitle(house: unwrappedHouseUpdated)
+              // Move everything upwards to counter the
+              // auto-padding in a NavigationView.
+              .frame(width: geometry.size.width - 16*2, height: 10, alignment: .center)
+              .offset(y: -20)
+            
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
@@ -50,6 +61,7 @@ struct SingleHouseDisplay: View {
                 CadetBranchesSection(house: unwrappedHouseUpdated)
                 SwornMembersSection(house: unwrappedHouseUpdated)
                 AncestralWeaponsSection(house: unwrappedHouseUpdated)
+                ErrorSection(showError: showError, updateData: updateData)
               }
             }
           }
@@ -66,9 +78,27 @@ struct SingleHouseDisplay: View {
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithLinks)
-      SingleHouseDisplay(houseUpdated: MockClasses.houseUpdatedWithoutLinks)
-      SingleHouseDisplay(houseUpdated: nil)
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: MockClasses.houseUpdatedWithLinks,
+          showError: true,
+          updateData: {}
+        )
+      }
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: MockClasses.houseUpdatedWithoutLinks,
+          showError: false,
+          updateData: {}
+        )
+      }
+      NavigationView {
+        SingleHouseDisplay(
+          houseUpdated: nil,
+          showError: false,
+          updateData: {}
+        )
+      }
     }
   }
 }

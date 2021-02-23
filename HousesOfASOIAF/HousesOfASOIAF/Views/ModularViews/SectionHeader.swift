@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct SectionHeader: View {
-  let text: LocalizedStringKey
+  let text: String
 
   var body: some View {
     Text(text)
+      .modifier(SectionHeaderStyle())
+  }
+}
+
+struct LoadingSectionHeader: View {
+  var body: some View {
+    Text("AAAAAAAAAAAA")
+      .modifier(SectionHeaderStyle())
+      .redacted(reason: .placeholder)
+  }
+}
+
+struct SectionHeaderStyle: ViewModifier {
+  func body(content: Content) -> some View {
+    content
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
@@ -29,6 +44,11 @@ struct SectionHeader_Previews: PreviewProvider {
     Form {
       Section(header: SectionHeader(text: "Title")) {
         Text("\(MockClasses.houseName)")
+      }
+      
+      Section(header: LoadingSectionHeader()) {
+        Text("\(MockClasses.houseName)")
+          .redacted(reason: .placeholder)
       }
     }
   }
