@@ -18,7 +18,8 @@ struct SingleHouseView: View {
   var body: some View {
     SingleHouseDisplay(
       houseUpdated: singleHouseViewModel.state.houseUpdated,
-      showError: singleHouseViewModel.state.showError
+      showError: singleHouseViewModel.state.showError,
+      updateData: singleHouseViewModel.getDataFromNestedLinks
     )
   }
 }
@@ -26,6 +27,7 @@ struct SingleHouseView: View {
 struct SingleHouseDisplay: View {
   let houseUpdated: HouseUpdated?
   let showError: Bool
+  let updateData: () -> Void
   
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
@@ -40,13 +42,6 @@ struct SingleHouseDisplay: View {
             
             Form {
               Group {
-                if showError {
-                  Section(header: SectionHeader(text: "Oh no!")) {
-                    Text("There has been an error :(")
-                      .foregroundColor(.red)
-                  }
-                }
-                
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
                 HeraldryColorsSection(
                   house: unwrappedHouseUpdated,
@@ -66,6 +61,7 @@ struct SingleHouseDisplay: View {
                 CadetBranchesSection(house: unwrappedHouseUpdated)
                 SwornMembersSection(house: unwrappedHouseUpdated)
                 AncestralWeaponsSection(house: unwrappedHouseUpdated)
+                ErrorSection(showError: showError, updateData: updateData)
               }
             }
           }
@@ -85,19 +81,22 @@ struct SingleHouseDisplay_Previews: PreviewProvider {
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: MockClasses.houseUpdatedWithLinks,
-          showError: true
+          showError: true,
+          updateData: {}
         )
       }
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: MockClasses.houseUpdatedWithoutLinks,
-          showError: false
+          showError: false,
+          updateData: {}
         )
       }
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: nil,
-          showError: false
+          showError: false,
+          updateData: {}
         )
       }
     }
