@@ -9,7 +9,23 @@ import SwiftUI
 
 struct SingleHouseLoadingView: View {
   var body: some View {
-    Text("Loading")
+    VStack {
+      Text("AAAAAAAAAAAAAA")
+        .font(.largeTitle)
+        .redacted(reason: .placeholder)
+      
+      Text("AAAAAAAAAAAAAA")
+        .redacted(reason: .placeholder)
+      
+      Form {
+        ForEach(0..<4, id: \.self) { _ in
+          Section(header: LoadingSectionHeader()) {
+            Text("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+              .redacted(reason: .placeholder)
+          }
+        }
+      }
+    }
   }
 }
 

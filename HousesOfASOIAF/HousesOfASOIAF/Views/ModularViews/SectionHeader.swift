@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct SectionHeader: View {
-  let text: LocalizedStringKey
+  let text: String
 
   var body: some View {
     Text(text)
+      .lineLimit(1)
+      .textCase(nil)
+      .foregroundColor(.white)
+      .padding(.vertical, 8)
+      .padding(.horizontal, 14)
+      .background(Color.gray)
+      .mask(RoundedRectangle(cornerRadius: 14, style: .continuous))
+      .padding(.leading, -9)
+      .padding(.bottom, -10)
+  }
+}
+
+struct LoadingSectionHeader: View {
+  var body: some View {
+    Text("AAAAAAAAAAAA")
+      .redacted(reason: .placeholder)
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
@@ -29,6 +45,11 @@ struct SectionHeader_Previews: PreviewProvider {
     Form {
       Section(header: SectionHeader(text: "Title")) {
         Text("\(MockClasses.houseName)")
+      }
+      
+      Section(header: LoadingSectionHeader()) {
+        Text("\(MockClasses.houseName)")
+          .redacted(reason: .placeholder)
       }
     }
   }
