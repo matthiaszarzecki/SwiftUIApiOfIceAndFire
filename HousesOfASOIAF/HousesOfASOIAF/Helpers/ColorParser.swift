@@ -45,7 +45,7 @@ struct ColorParser {
       colors.append(.orange)
     }
     
-    let synonymsForBrown = ["brown", "ermine", "erminois", "oaken", "oak", "tree", "moose"]
+    let synonymsForBrown = ["brown", "ermine", "ermines", "erminois", "oaken", "oak", "tree", "moose"]
     if words.hasAtLeastOneItem(fromArray: synonymsForBrown) {
       let customBrownColor = Color(hex: "773D1C")
       colors.append(customBrownColor)
