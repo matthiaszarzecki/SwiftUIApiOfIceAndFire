@@ -121,7 +121,6 @@ class SingleHouseViewModel: ObservableObject {
             switch result {
             case .success(let house):
               self.state.houseUpdated?.cadetBranches?.append(house)
-              
               self.state.showError = false
             case .failure(let error):
               print("Error! \(error)")
