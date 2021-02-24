@@ -111,16 +111,22 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   private func updateCadetBranches() {
-    for index in 0..<houseBasic.cadetBranches.count {
-      if houseBasic.cadetBranches[index].isLink {
-        Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { result in
-          switch result {
-          case .success(let house):
-            self.state.houseUpdated?.cadetBranches?[index] = house
-            self.state.showError = false
-          case .failure(let error):
-            print("Error! \(error)")
-            self.state.showError = true
+    if houseBasic.cadetBranches.hasLinkEntries {
+      // Create new empty array
+      self.state.houseUpdated?.cadetBranches = [HouseBasic]()
+      
+      for index in 0..<houseBasic.cadetBranches.count {
+        if houseBasic.cadetBranches[index].isLink {
+          Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { result in
+            switch result {
+            case .success(let house):
+              self.state.houseUpdated?.cadetBranches?.append(house)
+              
+              self.state.showError = false
+            case .failure(let error):
+              print("Error! \(error)")
+              self.state.showError = true
+            }
           }
         }
       }
@@ -128,16 +134,21 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   private func updateSwornMembers() {
-    for index in 0..<houseBasic.swornMembers.count {
-      if houseBasic.swornMembers[index].isLink {
-        Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { result in
-          switch result {
-          case .success(let character):
-            self.state.houseUpdated?.swornMembers?[index] = character
-            self.state.showError = false
-          case .failure(let error):
-            print("Error! \(error)")
-            self.state.showError = true
+    if houseBasic.swornMembers.hasLinkEntries {
+      // Create new empty array
+      self.state.houseUpdated?.swornMembers = [Character]()
+      
+      for index in 0..<houseBasic.swornMembers.count {
+        if houseBasic.swornMembers[index].isLink {
+          Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { result in
+            switch result {
+            case .success(let character):
+              self.state.houseUpdated?.swornMembers?.append(character)
+              self.state.showError = false
+            case .failure(let error):
+              print("Error! \(error)")
+              self.state.showError = true
+            }
           }
         }
       }

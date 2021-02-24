@@ -15,11 +15,14 @@ extension Array where Element == String {
   }
   
   /// Returns true if the array has usable entries.
+  /// Checks that there are >0 entries and the first
+  /// one is not an empty string.
   var hasNonEmptyEntries: Bool {
     return self.hasEntries && self[0] != ""
   }
   
   /// A Boolean indicating whether an array contains hyperlinks.
+  /// Checks that there are >0 entries and the first one is a link.
   var hasLinkEntries: Bool {
     return self.hasEntries && self[0].isLink
   }

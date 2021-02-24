@@ -21,7 +21,7 @@ struct CadetBranchesSection: View {
                 initialLetter: cadetBranch.initialLetter,
                 size: 32
               )
-              Text("\(house.name)")
+              Text("\(cadetBranch.name)")
             }
           }
         }
