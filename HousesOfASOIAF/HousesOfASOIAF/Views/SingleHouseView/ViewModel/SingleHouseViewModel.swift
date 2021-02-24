@@ -28,7 +28,8 @@ class SingleHouseViewModel: ObservableObject {
         self.updateSingleField(Character.self, ofType: .founder)
         self.updateSingleField(Character.self, ofType: .currentLord)
         self.updateSingleField(Character.self, ofType: .heir)
-        self.updateOverlord()
+        self.updateSingleField(HouseBasic.self, ofType: .overlord)
+        
         self.updateSwornMembers()
         self.updateCadetBranches()
       }
@@ -39,6 +40,7 @@ class SingleHouseViewModel: ObservableObject {
     case founder
     case currentLord
     case heir
+    case overlord
   }
   
   private func getLinkField(
@@ -52,6 +54,8 @@ class SingleHouseViewModel: ObservableObject {
       return house.currentLord
     case .heir:
       return house.heir
+    case .overlord:
+      return house.overlordHouse
     }
   }
   
@@ -67,6 +71,8 @@ class SingleHouseViewModel: ObservableObject {
       self.state.houseUpdated?.currentLord = value as! Character
     case .heir:
       self.state.houseUpdated?.heir = value as! Character
+    case.overlord:
+      self.state.houseUpdated?.overlordHouse = value as! HouseBasic
     }
   }
   
@@ -84,21 +90,6 @@ class SingleHouseViewModel: ObservableObject {
         case .success(let receivedObject):
           // Sets the value of the HouseUpdated to the just received value.
           self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
-          self.state.showError = false
-        case .failure(let error):
-          print("Error! \(error)")
-          self.state.showError = true
-        }
-      }
-    }
-  }
-  
-  private func updateOverlord() {
-    if houseBasic.overlordHouse.isLink {
-      Api.fetch(HouseBasic.self, url: houseBasic.overlordHouse) { result in
-        switch result {
-        case .success(let house):
-          self.state.houseUpdated?.overlordHouse = house
           self.state.showError = false
         case .failure(let error):
           print("Error! \(error)")
