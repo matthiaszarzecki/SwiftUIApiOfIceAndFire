@@ -25,57 +25,61 @@ class SingleHouseViewModel: ObservableObject {
     
     if houseBasic.containsLinks {
       DispatchQueue.main.async {
-        // Not really happy about this, as it is quite over-fetching.
-        // If the ApiOfIceAndFire were graphql-compatible that would
-        // be much more straightforward!
-        
-        // TODO: Combine these functions into a single function with an enum parameter
-        // TODO: use a combined publisher
-        self.updateFounder()
-        self.updateCurrentLord()
-        self.updateHeir()
+        self.updateSingleCharacter(ofType: .founder)
+        self.updateSingleCharacter(ofType: .currentLord)
+        self.updateSingleCharacter(ofType: .heir)
         self.updateOverlord()
         self.updateSwornMembers()
+        self.updateCadetBranches()
       }
     }
   }
   
-  private func updateFounder() {
-    if houseBasic.foundedByCharacter.isLink {
-      Api.fetch(Character.self, url: houseBasic.foundedByCharacter) { result in
-        switch result {
-        case .success(let character):
-          self.state.houseUpdated?.foundedByCharacter = character
-          self.state.showError = false
-        case .failure(let error):
-          print("Error! \(error)")
-          self.state.showError = true
-        }
-      }
+  enum SingleHouseFieldType {
+    case founder
+    case currentLord
+    case heir
+  }
+  
+  private func getLinkField(
+    forType type: SingleHouseFieldType,
+    ofHouse house: HouseBasic
+  ) -> String {
+    switch type {
+    case .founder:
+      return house.foundedByCharacter
+    case .currentLord:
+      return house.currentLord
+    case .heir:
+      return house.heir
     }
   }
   
-  private func updateCurrentLord() {
-    if houseBasic.currentLord.isLink {
-      Api.fetch(Character.self, url: houseBasic.currentLord) { result in
-        switch result {
-        case .success(let character):
-          self.state.houseUpdated?.currentLord = character
-          self.state.showError = false
-        case .failure(let error):
-          print("Error! \(error)")
-          self.state.showError = true
-        }
-      }
+  private func updateHouseBasicField(
+    ofType type: SingleHouseFieldType,
+    withValue value: Character
+  ) {
+    switch type {
+    case .founder:
+      self.state.houseUpdated?.foundedByCharacter = value
+    case .currentLord:
+      self.state.houseUpdated?.currentLord = value
+    case .heir:
+      self.state.houseUpdated?.heir = value
     }
   }
   
-  private func updateHeir() {
-    if houseBasic.heir.isLink {
-      Api.fetch(Character.self, url: houseBasic.heir) { result in
+  /// Updates a field that can contain a link when a link exists with the corresponding data.
+  /// Sets error on failure.
+  private func updateSingleCharacter(ofType type: SingleHouseFieldType) {
+    let linkField = getLinkField(forType: type, ofHouse: houseBasic)
+    
+    if linkField.isLink {
+      Api.fetch(Character.self, url: linkField) { result in
         switch result {
         case .success(let character):
-          self.state.houseUpdated?.heir = character
+          // Sets the value of the HouseUpdated to the just received value.
+          self.updateHouseBasicField(ofType: type, withValue: character)
           self.state.showError = false
         case .failure(let error):
           print("Error! \(error)")
