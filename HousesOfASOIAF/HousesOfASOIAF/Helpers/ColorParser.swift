@@ -95,7 +95,7 @@ struct ColorParser {
       colors.append(.green)
     }
     
-    let synonymsForDarkGreen = ["dark-green"]
+    let synonymsForDarkGreen = ["dark-green", "grey-green"]
     if words.hasAtLeastOneItem(fromArray: synonymsForDarkGreen) {
       let customDarkGreenColor = Color(hex: "134B0E")
       colors.append(customDarkGreenColor)

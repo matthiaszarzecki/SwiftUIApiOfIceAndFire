@@ -68,13 +68,21 @@ class SingleHouseViewModel: ObservableObject {
   ) {
     switch type {
     case .founder:
-      self.state.houseUpdated?.foundedByCharacter = value as! Character
+      if let character = value as? Character {
+        self.state.houseUpdated?.foundedByCharacter = character
+      }
     case .currentLord:
-      self.state.houseUpdated?.currentLord = value as! Character
+      if let character = value as? Character {
+        self.state.houseUpdated?.currentLord = character
+      }
     case .heir:
-      self.state.houseUpdated?.heir = value as! Character
+      if let character = value as? Character {
+        self.state.houseUpdated?.heir = character
+      }
     case.overlord:
-      self.state.houseUpdated?.overlordHouse = value as! HouseBasic
+      if let houseBasic = value as? HouseBasic {
+        self.state.houseUpdated?.overlordHouse = houseBasic
+      }
     }
   }
   
