@@ -41,6 +41,8 @@ class SingleHouseViewModel: ObservableObject {
     case currentLord
     case heir
     case overlord
+    case swornMembers
+    case cadetBranches
   }
   
   private func getLinkField(
