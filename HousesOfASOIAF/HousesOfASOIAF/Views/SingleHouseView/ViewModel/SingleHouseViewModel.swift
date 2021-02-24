@@ -25,9 +25,9 @@ class SingleHouseViewModel: ObservableObject {
     
     if houseBasic.containsLinks {
       DispatchQueue.main.async {
-        self.updateSingleCharacter(ofType: .founder)
-        self.updateSingleCharacter(ofType: .currentLord)
-        self.updateSingleCharacter(ofType: .heir)
+        self.updateSingleField(Character.self, ofType: .founder)
+        self.updateSingleField(Character.self, ofType: .currentLord)
+        self.updateSingleField(Character.self, ofType: .heir)
         self.updateOverlord()
         self.updateSwornMembers()
         self.updateCadetBranches()
@@ -55,31 +55,35 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  private func updateHouseBasicField(
+  private func updateHouseBasicField<T: Codable>(
+    _ for: T.Type = T.self,
     ofType type: SingleHouseFieldType,
-    withValue value: Character
+    withValue value: T
   ) {
     switch type {
     case .founder:
-      self.state.houseUpdated?.foundedByCharacter = value
+      self.state.houseUpdated?.foundedByCharacter = value as! Character
     case .currentLord:
-      self.state.houseUpdated?.currentLord = value
+      self.state.houseUpdated?.currentLord = value as! Character
     case .heir:
-      self.state.houseUpdated?.heir = value
+      self.state.houseUpdated?.heir = value as! Character
     }
   }
   
   /// Updates a field that can contain a link when a link exists with the corresponding data.
   /// Sets error on failure.
-  private func updateSingleCharacter(ofType type: SingleHouseFieldType) {
+  private func updateSingleField<T: Codable>(
+    _ for: T.Type = T.self,
+    ofType type: SingleHouseFieldType
+  ) {
     let linkField = getLinkField(forType: type, ofHouse: houseBasic)
     
     if linkField.isLink {
-      Api.fetch(Character.self, url: linkField) { result in
+      Api.fetch(T.self, url: linkField) { result in
         switch result {
-        case .success(let character):
+        case .success(let receivedObject):
           // Sets the value of the HouseUpdated to the just received value.
-          self.updateHouseBasicField(ofType: type, withValue: character)
+          self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
           self.state.showError = false
         case .failure(let error):
           print("Error! \(error)")
