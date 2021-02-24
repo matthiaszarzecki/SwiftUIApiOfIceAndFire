@@ -41,8 +41,8 @@ class SingleHouseViewModel: ObservableObject {
     case currentLord
     case heir
     case overlord
-    case swornMembers
-    case cadetBranches
+    //case swornMembers
+    //case cadetBranches
   }
   
   private func getLinkField(
@@ -78,8 +78,8 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  /// Updates a field that can contain a link when a link exists with the corresponding data.
-  /// Sets error on failure.
+  /// Updates a field that can contain a link when a link
+  /// exists with the corresponding data. Sets error on failure.
   private func updateSingleField<T: Codable>(
     _ for: T.Type = T.self,
     ofType type: SingleHouseFieldType
@@ -92,6 +92,7 @@ class SingleHouseViewModel: ObservableObject {
         case .success(let receivedObject):
           // Sets the value of the HouseUpdated to the just received value.
           self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
+          
           self.state.showError = false
         case .failure(let error):
           print("Error! \(error)")

@@ -11,6 +11,14 @@ import SwiftUI
 struct AllHousesView: View {
   @ObservedObject private var allHousesViewModel = AllHousesViewModel()
   
+  init() {
+    // Set font for Title in large view
+    UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 24)!]
+    
+    // Set font for Title in navigation bar
+    UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 16)!]
+  }
+  
   var body: some View {
     NavigationView {
       AllHousesDisplay(
@@ -20,7 +28,7 @@ struct AllHousesView: View {
         intitialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
         onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
       )
-      .navigationTitle("Houses of Westeros 🛡️")
+      .navigationTitle("Houses of Westeros")
       .onAppear {
         allHousesViewModel.fetchNextPageIfPossible()
       }
