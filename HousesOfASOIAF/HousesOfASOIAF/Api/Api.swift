@@ -23,7 +23,7 @@ struct Api {
      .dataTaskPublisher(for: request)
       .handleEvents(
         receiveOutput: {
-          print(NSString(data: $0.data, encoding: String.Encoding.utf8.rawValue)!)
+          $0.data.printJsonFromData()
         }
       )
       .tryMap {
