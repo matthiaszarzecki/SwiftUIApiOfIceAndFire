@@ -60,6 +60,7 @@
 		CC76B3E425B5D16E00AD405E /* AncestralWeaponsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E325B5D16E00AD405E /* AncestralWeaponsSection.swift */; };
 		CC76B3E925B5D1D400AD405E /* DiedOutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E825B5D1D400AD405E /* DiedOutSection.swift */; };
 		CC7A86B625E9228900867C38 /* AliasesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86B525E9228900867C38 /* AliasesSection.swift */; };
+		CC7A86BF25E9241700867C38 /* CharacterTitlesSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */; };
 		CCC8A1C725E7D77800014BCA /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A1C625E7D77800014BCA /* Data-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		CC76B3E325B5D16E00AD405E /* AncestralWeaponsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncestralWeaponsSection.swift; sourceTree = "<group>"; };
 		CC76B3E825B5D1D400AD405E /* DiedOutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiedOutSection.swift; sourceTree = "<group>"; };
 		CC7A86B525E9228900867C38 /* AliasesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasesSection.swift; sourceTree = "<group>"; };
+		CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTitlesSections.swift; sourceTree = "<group>"; };
 		CCC8A1C625E7D77800014BCA /* Data-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				CC7A86B525E9228900867C38 /* AliasesSection.swift */,
+				CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				6EFD04B325B654570049D482 /* CurrentHeirSection.swift in Sources */,
 				CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */,
 				6EB3EC3B25E5CE35004E9634 /* AllHousesLoadingView.swift in Sources */,
+				CC7A86BF25E9241700867C38 /* CharacterTitlesSections.swift in Sources */,
 				CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */,
 				6EA3074725D4AD9C0088BF75 /* ColorParser.swift in Sources */,
 				CC76B3D325B5CF7F00AD405E /* SwornMembersSection.swift in Sources */,

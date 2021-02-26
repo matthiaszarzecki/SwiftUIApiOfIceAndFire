@@ -40,14 +40,7 @@ struct CharacterView: View {
             }
           }
           
-          if character.titles.hasNonEmptyEntries {
-            Section(header: SectionHeader(text: "Titles")) {
-              ForEach(character.titles, id: \.self) { title in
-                Text("🎖️ \(title)")
-              }
-            }
-          }
-          
+          CharacterTitlesSections(character: character)
           AliasesSection(character: character)
           
           if character.tvShowAppearances.hasNonEmptyEntries {
