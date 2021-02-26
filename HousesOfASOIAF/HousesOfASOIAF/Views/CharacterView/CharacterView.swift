@@ -48,13 +48,7 @@ struct CharacterView: View {
             }
           }
           
-          if character.aliases.hasNonEmptyEntries {
-            Section(header: SectionHeader(text: "Aliases")) {
-              ForEach(character.aliases, id: \.self) { alias in
-                Text("\(alias)")
-              }
-            }
-          }
+          AliasesSection(character: character)
           
           if character.tvShowAppearances.hasNonEmptyEntries {
             Section(header: SectionHeader(text: "TV Show Appearances")) {
