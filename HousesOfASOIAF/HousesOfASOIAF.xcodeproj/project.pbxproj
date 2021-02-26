@@ -61,6 +61,12 @@
 		CC76B3E925B5D1D400AD405E /* DiedOutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E825B5D1D400AD405E /* DiedOutSection.swift */; };
 		CC7A86B625E9228900867C38 /* AliasesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86B525E9228900867C38 /* AliasesSection.swift */; };
 		CC7A86BF25E9241700867C38 /* CharacterTitlesSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */; };
+		CC7A86C425E924C800867C38 /* CharacterDeathSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86C325E924C800867C38 /* CharacterDeathSection.swift */; };
+		CC7A86C925E924F900867C38 /* CultureSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86C825E924F900867C38 /* CultureSection.swift */; };
+		CC7A86CE25E9252400867C38 /* BornSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86CD25E9252400867C38 /* BornSection.swift */; };
+		CC7A86D325E9257300867C38 /* TvShowAppearancesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86D225E9257300867C38 /* TvShowAppearancesSection.swift */; };
+		CC7A86DB25E925AE00867C38 /* PortrayedBySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86DA25E925AE00867C38 /* PortrayedBySection.swift */; };
+		CC7A86E325E925F600867C38 /* CharacterTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7A86E225E925F600867C38 /* CharacterTitle.swift */; };
 		CCC8A1C725E7D77800014BCA /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A1C625E7D77800014BCA /* Data-Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +148,12 @@
 		CC76B3E825B5D1D400AD405E /* DiedOutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiedOutSection.swift; sourceTree = "<group>"; };
 		CC7A86B525E9228900867C38 /* AliasesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasesSection.swift; sourceTree = "<group>"; };
 		CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTitlesSections.swift; sourceTree = "<group>"; };
+		CC7A86C325E924C800867C38 /* CharacterDeathSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDeathSection.swift; sourceTree = "<group>"; };
+		CC7A86C825E924F900867C38 /* CultureSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureSection.swift; sourceTree = "<group>"; };
+		CC7A86CD25E9252400867C38 /* BornSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornSection.swift; sourceTree = "<group>"; };
+		CC7A86D225E9257300867C38 /* TvShowAppearancesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowAppearancesSection.swift; sourceTree = "<group>"; };
+		CC7A86DA25E925AE00867C38 /* PortrayedBySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortrayedBySection.swift; sourceTree = "<group>"; };
+		CC7A86E225E925F600867C38 /* CharacterTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTitle.swift; sourceTree = "<group>"; };
 		CCC8A1C625E7D77800014BCA /* Data-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				6EFD04A825B650890049D482 /* CharacterView.swift */,
+				CC7A86E725E9262700867C38 /* Elements */,
 				CC7A86BA25E923DF00867C38 /* Sections */,
 			);
 			path = CharacterView;
@@ -424,9 +437,22 @@
 			isa = PBXGroup;
 			children = (
 				CC7A86B525E9228900867C38 /* AliasesSection.swift */,
+				CC7A86CD25E9252400867C38 /* BornSection.swift */,
+				CC7A86C325E924C800867C38 /* CharacterDeathSection.swift */,
 				CC7A86BE25E9241700867C38 /* CharacterTitlesSections.swift */,
+				CC7A86C825E924F900867C38 /* CultureSection.swift */,
+				CC7A86DA25E925AE00867C38 /* PortrayedBySection.swift */,
+				CC7A86D225E9257300867C38 /* TvShowAppearancesSection.swift */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		CC7A86E725E9262700867C38 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A86E225E925F600867C38 /* CharacterTitle.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +596,7 @@
 				CCC8A1C725E7D77800014BCA /* Data-Extension.swift in Sources */,
 				6EFD04A925B650890049D482 /* CharacterView.swift in Sources */,
 				CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */,
+				CC7A86C425E924C800867C38 /* CharacterDeathSection.swift in Sources */,
 				CC76B3DF25B5D12F00AD405E /* CadetBranchesSection.swift in Sources */,
 				CC2132EE25D58318004A8186 /* CircularColorDisplay.swift in Sources */,
 				6EB3EC4325E5CF74004E9634 /* ErrorDisplay.swift in Sources */,
@@ -583,13 +610,16 @@
 				6EFD047525B62B5B0049D482 /* CurrentLordSection.swift in Sources */,
 				CC5FE37625B59CE400DC76DC /* AppDelegate.swift in Sources */,
 				6EA9E6E625DCA8A400E8DEFA /* CharacterIcon.swift in Sources */,
+				CC7A86D325E9257300867C38 /* TvShowAppearancesSection.swift in Sources */,
 				6E96F47025CEB9BF009563E6 /* SectionHeader.swift in Sources */,
+				CC7A86DB25E925AE00867C38 /* PortrayedBySection.swift in Sources */,
 				CC5FE3C625B5A97900DC76DC /* MockClasses.swift in Sources */,
 				CC76B36125B5B6D500AD405E /* String-Extension.swift in Sources */,
 				CC2132DA25D54E25004A8186 /* Color-Extension.swift in Sources */,
 				6E7ADA6825D7383500E87099 /* String-Array-Extension.swift in Sources */,
 				6E46A40925DC879200748FAB /* HouseIcon.swift in Sources */,
 				6EFD048F25B62C780049D482 /* HouseNameAndTitle.swift in Sources */,
+				CC7A86CE25E9252400867C38 /* BornSection.swift in Sources */,
 				CC76B35425B5B53200AD405E /* AllHousesViewModel.swift in Sources */,
 				6EFD04B325B654570049D482 /* CurrentHeirSection.swift in Sources */,
 				CC5FE37825B59CE400DC76DC /* SceneDelegate.swift in Sources */,
@@ -600,6 +630,7 @@
 				CC76B3D325B5CF7F00AD405E /* SwornMembersSection.swift in Sources */,
 				CC4E805825DA80B300C659D6 /* SingleHouseCell.swift in Sources */,
 				6E7ADA7625D73AED00E87099 /* Array-Extension.swift in Sources */,
+				CC7A86E325E925F600867C38 /* CharacterTitle.swift in Sources */,
 				CC2132CF25D53805004A8186 /* View-Extension.swift in Sources */,
 				CC2132DF25D5515B004A8186 /* HeraldryColorsSection.swift in Sources */,
 				6EFD046625B62A7A0049D482 /* FounderSection.swift in Sources */,
@@ -607,6 +638,7 @@
 				6EFD04BB25B662000049D482 /* HouseUpdated.swift in Sources */,
 				CC5FE3A925B59D0E00DC76DC /* Api.swift in Sources */,
 				6EFD047025B62B1A0049D482 /* OverlordHouseSection.swift in Sources */,
+				CC7A86C925E924F900867C38 /* CultureSection.swift in Sources */,
 				CC5FE37A25B59CE400DC76DC /* AllHousesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

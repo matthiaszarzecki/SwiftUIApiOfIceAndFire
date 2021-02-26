@@ -28,6 +28,7 @@ struct HouseNameAndTitle: View {
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
     HouseNameAndTitle(house: MockClasses.houseUpdatedWithLinks)
+      .padding()
       .previewLayout(.sizeThatFits)
   }
 }
