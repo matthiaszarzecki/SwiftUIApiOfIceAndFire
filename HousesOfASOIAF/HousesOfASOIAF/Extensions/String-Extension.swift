@@ -37,6 +37,6 @@ extension String {
 }
 
 extension String: Identifiable {
-  /// Necessary the Identifiable-protocol.
+  /// Necessary for the Identifiable-protocol.
   public var id: Self { self }
 }
