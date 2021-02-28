@@ -66,9 +66,3 @@ struct Api {
     .resume()
   }
 }
-
-enum NetworkError: Error {
-  case badUrl
-  case requestFailed
-  case unknown
-}
