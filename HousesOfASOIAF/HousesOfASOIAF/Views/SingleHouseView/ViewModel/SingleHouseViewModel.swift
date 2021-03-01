@@ -30,8 +30,8 @@ class SingleHouseViewModel: ObservableObject {
         self.updateSingleField(Character.self, ofType: .heir)
         self.updateSingleField(HouseBasic.self, ofType: .overlord)
         
-        self.updateSwornMembers()
-        self.updateCadetBranches()
+        self.updateArrayField(Character.self, ofType: .swornMembers)
+        self.updateArrayField(HouseBasic.self, ofType: .cadetBranches)
       }
     }
   }
@@ -49,14 +49,19 @@ class SingleHouseViewModel: ObservableObject {
     _ for: T.Type = T.self,
     ofType type: SingleHouseFieldType
   ) {
-    let linkField = getLinkField(forType: type)
+    let linkField = getSingleLinkField(forType: type)
     
     if linkField.isLink {
       Api.fetch(T.self, url: linkField) { result in
         switch result {
         case .success(let receivedObject):
-          // Sets the value of the HouseUpdated to the just received value.
-          self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
+          // Sets the value of the HouseUpdated
+          // to the just received value.
+          self.updateHouseBasicField(
+            T.self,
+            ofType: type,
+            withValue: receivedObject
+          )
           
           self.state.showError = false
         case .failure(let error):
@@ -77,7 +82,7 @@ class SingleHouseViewModel: ObservableObject {
   
   /// Returns the variables (and the therein saved
   /// link) that corresponds to the input enum.
-  private func getLinkField(
+  private func getSingleLinkField(
     forType type: SingleHouseFieldType
   ) -> String {
     switch type {
@@ -113,17 +118,29 @@ class SingleHouseViewModel: ObservableObject {
   
   //MARK: - Array Update Functions
   
-  private func updateCadetBranches() {
-    if houseBasic.cadetBranches.hasLinkEntries {
-      // Create new empty array
-      self.state.houseUpdated?.cadetBranches = [HouseBasic]()
+  ///
+  private func updateArrayField<T: Codable>(
+    _ for: T.Type = T.self,
+    ofType type: ArrayHouseFieldType
+  ) {
+    let arrayField = getArrayLinkField(forType: type)
+    
+    if arrayField.hasLinkEntries {
+      createArray(ofType: type)
       
-      for index in 0..<houseBasic.cadetBranches.count {
-        if houseBasic.cadetBranches[index].isLink {
-          Api.fetch(HouseBasic.self, url: houseBasic.cadetBranches[index]) { result in
+      for index in 0..<arrayField.count {
+        if arrayField[index].isLink {
+          Api.fetch(T.self, url: arrayField[index]) { result in
             switch result {
-            case .success(let house):
-              self.state.houseUpdated?.cadetBranches?.append(house)
+            case .success(let receivedObject):
+              // Sets the value of the HouseUpdated
+              // to the just received value.
+              self.updateHouseUpdatedArrayField(
+                T.self,
+                ofType: type,
+                withValue: receivedObject
+              )
+              
               self.state.showError = false
             case .failure(let error):
               print("Error! \(error)")
@@ -135,24 +152,51 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  private func updateSwornMembers() {
-    if houseBasic.swornMembers.hasLinkEntries {
-      // Create new empty array
+  /// Enum for updatable fields that are arrays.
+  private enum ArrayHouseFieldType {
+    case cadetBranches
+    case swornMembers
+  }
+  
+  /// Returns the array (and the therein saved
+  /// links) that corresponds to the input enum.
+  private func getArrayLinkField(
+    forType type: ArrayHouseFieldType
+  ) -> [String] {
+    switch type {
+    case .cadetBranches:
+      return houseBasic.cadetBranches
+    case .swornMembers:
+      return houseBasic.swornMembers
+    }
+  }
+  
+  /// Creates a new array in the variable
+  /// that corresponds to the input type.
+  private func createArray(ofType type: ArrayHouseFieldType) {
+    switch type {
+    case .cadetBranches:
+      self.state.houseUpdated?.cadetBranches = [HouseBasic]()
+    case .swornMembers:
       self.state.houseUpdated?.swornMembers = [Character]()
-      
-      for index in 0..<houseBasic.swornMembers.count {
-        if houseBasic.swornMembers[index].isLink {
-          Api.fetch(Character.self, url: houseBasic.swornMembers[index]) { result in
-            switch result {
-            case .success(let character):
-              self.state.houseUpdated?.swornMembers?.append(character)
-              self.state.showError = false
-            case .failure(let error):
-              print("Error! \(error)")
-              self.state.showError = true
-            }
-          }
-        }
+    }
+  }
+  
+  /// Sets the input value to the array
+  /// that corresponds to the type.
+  private func updateHouseUpdatedArrayField<T: Codable>(
+    _ for: T.Type = T.self,
+    ofType type: ArrayHouseFieldType,
+    withValue value: T
+  ) {
+    switch(type) {
+    case .cadetBranches:
+      if let houseBasic = value as? HouseBasic {
+        self.state.houseUpdated?.cadetBranches?.append(houseBasic)
+      }
+    case .swornMembers:
+      if let character = value as? Character {
+        self.state.houseUpdated?.swornMembers?.append(character)
       }
     }
   }
