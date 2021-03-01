@@ -27,7 +27,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let diedOutPeriod: String
   let ancestralWeapons: [String]
 
-  // When assigned these fields are URL's as string.
+  // When assigned these fields are URL's as strings.
   let currentLord: String
   let heir: String
   let overlordHouse: String

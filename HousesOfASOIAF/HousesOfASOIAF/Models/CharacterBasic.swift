@@ -12,21 +12,26 @@ struct CharacterBasic: Codable, Hashable {
   // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
   
-  let url: String
+  // The identifier for this house. Is also the direct URL to its
+  // data. Must be named "id" to conform to the identifiable protocol.
+  
+  let id: String
   let name: String
   let culture: String
   let born: String
   let died: String
   let titles: [String]
   let aliases: [String]
+  let tvShowAppearances: [String]
+  let portrayedBy: [String]
+  
+  // When assigned these fields are URL's as strings.
   let father: String
   let mother: String
   let spouse: String
   let allegiances: [String]
   let bookAppearances: [String]
   let hasPointOfViewChaptersInBooks: [String]
-  let tvShowAppearances: [String]
-  let portrayedBy: [String]
   
   var initialLetter: String {
     return name[0]
@@ -39,7 +44,7 @@ struct CharacterBasic: Codable, Hashable {
   }
   
   enum CodingKeys: String, CodingKey {
-    case url
+    case id = "url"
     case name
     case culture
     case born

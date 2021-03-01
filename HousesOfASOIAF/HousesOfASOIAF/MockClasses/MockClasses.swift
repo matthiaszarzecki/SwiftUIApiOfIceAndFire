@@ -116,7 +116,7 @@ struct MockClasses {
   ]
   
   static let character = CharacterBasic(
-    url: "https://www.anapioficeandfire.com/api/characters/290",
+    id: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
     culture: "Northmen",
     born: "In 283 AC",
@@ -129,6 +129,15 @@ struct MockClasses {
       "The Crow-Come-Over",
       "The 998th Lord Commander of the Night's Watch"
     ],
+    tvShowAppearances: [
+      "Season 1",
+      "Season 2",
+      "Season 3",
+      "Season 4",
+      "Season 5",
+      "Season 6"
+    ],
+    portrayedBy: ["Kit Harington"],
     father: "https://www.anapioficeandfire.com/api/characters/836",
     mother: "https://www.anapioficeandfire.com/api/characters/112",
     spouse: "https://www.anapioficeandfire.com/api/characters/66",
@@ -139,16 +148,7 @@ struct MockClasses {
       "https://anapioficeandfire.com/api/books/2",
       "https://anapioficeandfire.com/api/books/3",
       "https://anapioficeandfire.com/api/books/8"
-    ],
-    tvShowAppearances: [
-      "Season 1",
-      "Season 2",
-      "Season 3",
-      "Season 4",
-      "Season 5",
-      "Season 6"
-    ],
-    portrayedBy: ["Kit Harington"]
+    ]
   )
   
   static let characters = Array.init(repeating: character, count: 3)
