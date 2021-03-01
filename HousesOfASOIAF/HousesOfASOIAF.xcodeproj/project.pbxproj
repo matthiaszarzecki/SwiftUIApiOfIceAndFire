@@ -13,6 +13,7 @@
 		6E7ADA7E25D73E8100E87099 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7ADA7D25D73E8100E87099 /* RequestMethod.swift */; };
 		6E96F46B25CEB91C009563E6 /* SingleHouseLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */; };
 		6E96F47025CEB9BF009563E6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */; };
+		6EA2B32A25EDB5790047D458 /* CharacterUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2B32925EDB5790047D458 /* CharacterUpdated.swift */; };
 		6EA3074725D4AD9C0088BF75 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3074625D4AD9C0088BF75 /* ColorParser.swift */; };
 		6EA6655725EBFB7800AB1AD1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA6655625EBFB7800AB1AD1 /* NetworkError.swift */; };
 		6EA9E6E625DCA8A400E8DEFA /* CharacterIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA9E6E525DCA8A400E8DEFA /* CharacterIcon.swift */; };
@@ -55,7 +56,7 @@
 		CC76B35425B5B53200AD405E /* AllHousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B35325B5B53200AD405E /* AllHousesViewModel.swift */; };
 		CC76B35C25B5B65F00AD405E /* SearchSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */; };
 		CC76B36125B5B6D500AD405E /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B36025B5B6D500AD405E /* String-Extension.swift */; };
-		CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3BD25B5C9A800AD405E /* Character.swift */; };
+		CC76B3BE25B5C9A800AD405E /* CharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3BD25B5C9A800AD405E /* CharacterBasic.swift */; };
 		CC76B3D325B5CF7F00AD405E /* SwornMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3D225B5CF7F00AD405E /* SwornMembersSection.swift */; };
 		CC76B3DF25B5D12F00AD405E /* CadetBranchesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3DE25B5D12F00AD405E /* CadetBranchesSection.swift */; };
 		CC76B3E425B5D16E00AD405E /* AncestralWeaponsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76B3E325B5D16E00AD405E /* AncestralWeaponsSection.swift */; };
@@ -95,6 +96,7 @@
 		6E7ADA7D25D73E8100E87099 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		6E96F46A25CEB91C009563E6 /* SingleHouseLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseLoadingView.swift; sourceTree = "<group>"; };
 		6E96F46F25CEB9BF009563E6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		6EA2B32925EDB5790047D458 /* CharacterUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterUpdated.swift; sourceTree = "<group>"; };
 		6EA3074625D4AD9C0088BF75 /* ColorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
 		6EA6655625EBFB7800AB1AD1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6EA9E6E525DCA8A400E8DEFA /* CharacterIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterIcon.swift; sourceTree = "<group>"; };
@@ -143,7 +145,7 @@
 		CC76B35325B5B53200AD405E /* AllHousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHousesViewModel.swift; sourceTree = "<group>"; };
 		CC76B35B25B5B65F00AD405E /* SearchSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpinnerView.swift; sourceTree = "<group>"; };
 		CC76B36025B5B6D500AD405E /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
-		CC76B3BD25B5C9A800AD405E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CC76B3BD25B5C9A800AD405E /* CharacterBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBasic.swift; sourceTree = "<group>"; };
 		CC76B3D225B5CF7F00AD405E /* SwornMembersSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMembersSection.swift; sourceTree = "<group>"; };
 		CC76B3DE25B5D12F00AD405E /* CadetBranchesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadetBranchesSection.swift; sourceTree = "<group>"; };
 		CC76B3E325B5D16E00AD405E /* AncestralWeaponsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AncestralWeaponsSection.swift; sourceTree = "<group>"; };
@@ -324,7 +326,8 @@
 		CC76B34225B5B32100AD405E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CC76B3BD25B5C9A800AD405E /* Character.swift */,
+				CC76B3BD25B5C9A800AD405E /* CharacterBasic.swift */,
+				6EA2B32925EDB5790047D458 /* CharacterUpdated.swift */,
 				CC5FE3C025B5A94A00DC76DC /* HouseBasic.swift */,
 				6EFD04BA25B662000049D482 /* HouseUpdated.swift */,
 			);
@@ -602,10 +605,11 @@
 				CC5FE3B625B5A14700DC76DC /* SingleHouseView.swift in Sources */,
 				CC7A86C425E924C800867C38 /* CharacterDeathSection.swift in Sources */,
 				CC76B3DF25B5D12F00AD405E /* CadetBranchesSection.swift in Sources */,
+				6EA2B32A25EDB5790047D458 /* CharacterUpdated.swift in Sources */,
 				CC2132EE25D58318004A8186 /* CircularColorDisplay.swift in Sources */,
 				6EB3EC4325E5CF74004E9634 /* ErrorDisplay.swift in Sources */,
 				6EFD046B25B62AE40049D482 /* FoundedSection.swift in Sources */,
-				CC76B3BE25B5C9A800AD405E /* Character.swift in Sources */,
+				CC76B3BE25B5C9A800AD405E /* CharacterBasic.swift in Sources */,
 				CC76B3E925B5D1D400AD405E /* DiedOutSection.swift in Sources */,
 				6E7ADA7E25D73E8100E87099 /* RequestMethod.swift in Sources */,
 				CC356BFC25B864D500123558 /* SingleHouseViewModel.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterTitle: View {
-  var character: Character
+  var character: CharacterBasic
   
   var body: some View {
     Text("\(character.name)")

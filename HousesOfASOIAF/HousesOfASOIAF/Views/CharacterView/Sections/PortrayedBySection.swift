@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PortrayedBySection: View {
-  var character: Character
+  var character: CharacterBasic
   
   var body: some View {
     if character.portrayedBy.hasNonEmptyEntries {

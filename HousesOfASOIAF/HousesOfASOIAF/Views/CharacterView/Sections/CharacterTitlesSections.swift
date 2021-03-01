@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterTitlesSections: View {
-  var character: Character
+  var character: CharacterBasic
   
   var body: some View {
     if character.titles.hasNonEmptyEntries {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterDeathSection: View {
-  var character: Character
+  var character: CharacterBasic
   
   var body: some View {
     if character.died.exists {

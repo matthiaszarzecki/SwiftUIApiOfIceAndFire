@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CultureSection: View {
-  var character: Character
+  var character: CharacterBasic
   
   var body: some View {
     if character.culture.exists {

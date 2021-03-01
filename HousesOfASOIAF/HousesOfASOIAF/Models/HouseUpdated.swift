@@ -28,21 +28,21 @@ struct HouseUpdated {
   /// The initial letter of the House-name without "House " prefixed.
   let initialLetter: String
   
-  var currentLord: Character?
-  var heir: Character?
+  var currentLord: CharacterBasic?
+  var heir: CharacterBasic?
   var overlordHouse: HouseBasic?
-  var foundedByCharacter: Character?
+  var foundedByCharacter: CharacterBasic?
   var cadetBranches: [HouseBasic]?
-  var swornMembers: [Character]?
+  var swornMembers: [CharacterBasic]?
   
   init(
     fromHouse house: HouseBasic,
-    currentLord: Character? = nil,
-    heir: Character? = nil,
+    currentLord: CharacterBasic? = nil,
+    heir: CharacterBasic? = nil,
     overlord: HouseBasic? = nil,
-    founder: Character? = nil,
+    founder: CharacterBasic? = nil,
     cadetBranches: [HouseBasic]? = nil,
-    swornMembers: [Character]? = nil
+    swornMembers: [CharacterBasic]? = nil
   ) {
     id = house.id
     name = house.name

@@ -115,7 +115,7 @@ struct MockClasses {
     houseBasicWithoutLinksAndWithoutCoatOfArms
   ]
   
-  static let character = Character(
+  static let character = CharacterBasic(
     url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
     culture: "Northmen",

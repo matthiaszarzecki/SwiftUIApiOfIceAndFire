@@ -26,12 +26,12 @@ class SingleHouseViewModel: ObservableObject {
     
     if houseBasic.containsLinks {
       DispatchQueue.main.async {
-        self.updateSingleField(Character.self, ofType: .founder)
-        self.updateSingleField(Character.self, ofType: .currentLord)
-        self.updateSingleField(Character.self, ofType: .heir)
+        self.updateSingleField(CharacterBasic.self, ofType: .founder)
+        self.updateSingleField(CharacterBasic.self, ofType: .currentLord)
+        self.updateSingleField(CharacterBasic.self, ofType: .heir)
         self.updateSingleField(HouseBasic.self, ofType: .overlord)
         
-        self.updateArrayField(Character.self, ofType: .swornMembers)
+        self.updateArrayField(CharacterBasic.self, ofType: .swornMembers)
         self.updateArrayField(HouseBasic.self, ofType: .cadetBranches)
       }
     }
@@ -107,11 +107,11 @@ class SingleHouseViewModel: ObservableObject {
   ) {
     switch type {
     case .founder:
-      self.state.houseUpdated?.foundedByCharacter = value as? Character
+      self.state.houseUpdated?.foundedByCharacter = value as? CharacterBasic
     case .currentLord:
-      self.state.houseUpdated?.currentLord = value as? Character
+      self.state.houseUpdated?.currentLord = value as? CharacterBasic
     case .heir:
-      self.state.houseUpdated?.heir = value as? Character
+      self.state.houseUpdated?.heir = value as? CharacterBasic
     case.overlord:
       self.state.houseUpdated?.overlordHouse = value as? HouseBasic
     }
@@ -179,7 +179,7 @@ class SingleHouseViewModel: ObservableObject {
     case .cadetBranches:
       self.state.houseUpdated?.cadetBranches = [HouseBasic]()
     case .swornMembers:
-      self.state.houseUpdated?.swornMembers = [Character]()
+      self.state.houseUpdated?.swornMembers = [CharacterBasic]()
     }
   }
   
@@ -196,7 +196,7 @@ class SingleHouseViewModel: ObservableObject {
         self.state.houseUpdated?.cadetBranches?.append(houseBasic)
       }
     case .swornMembers:
-      if let character = value as? Character {
+      if let character = value as? CharacterBasic {
         self.state.houseUpdated?.swornMembers?.append(character)
       }
     }
