@@ -26,7 +26,7 @@ struct SingleHouseCell: View {
         // pages & info show it here with an icon.
         if house.containsLinks {
           Image(systemName: "link")
-            .foregroundColor(.housesOfWesterosRed)
+            .foregroundColor(.westerosRed)
         }
       }
     }

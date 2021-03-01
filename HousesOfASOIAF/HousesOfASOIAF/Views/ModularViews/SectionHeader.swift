@@ -32,8 +32,8 @@ struct SectionHeaderStyle: ViewModifier {
       .foregroundColor(.white)
       .padding(.vertical, 8)
       .padding(.horizontal, 14)
-      .background(Color.housesOfWesterosRed)
-      .mask(RoundedRectangle(cornerRadius: 14, style: .continuous))
+      .background(Color.gray)
+      .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
       .padding(.leading, -9)
       .padding(.bottom, -10)
   }

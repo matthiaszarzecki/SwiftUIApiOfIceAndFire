@@ -33,7 +33,7 @@ struct AllHousesView: View {
         allHousesViewModel.fetchNextPageIfPossible()
       }
     }
-    .accentColor(.housesOfWesterosRed)
+    .accentColor(.westerosRed)
   }
 }
 

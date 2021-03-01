@@ -14,7 +14,7 @@ struct CharacterIcon: View {
   var body: some View {
     ZStack {
       Circle()
-        .foregroundColor(.housesOfWesterosRed)
+        .foregroundColor(.westerosRed)
         .frame(width: size, height: size, alignment: .center)
       
       Text("\(initialLetter)")
