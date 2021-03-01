@@ -17,10 +17,11 @@ class SingleHouseViewModel: ObservableObject {
   }
   
   /// Updates nested links with additional data.
-  /// For error-testing set showError to turn up true within here.
+  /// For error-testing set showError to turn up
+  /// true within this function.
   public func getDataFromNestedLinks() {
-    /// Turns the input House into a HouseUpdated
-    /// by fetching data from locally saved URL's.
+    // Turns the input House into a HouseUpdated
+    // by fetching data from locally saved URL's.
     state.houseUpdated = HouseUpdated(fromHouse: houseBasic)
     
     if houseBasic.containsLinks {
