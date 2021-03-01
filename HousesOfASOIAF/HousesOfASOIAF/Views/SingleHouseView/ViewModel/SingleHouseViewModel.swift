@@ -36,31 +36,64 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  enum SingleHouseFieldType {
+  struct SingleHouseViewState {
+    var houseUpdated: HouseUpdated?
+    var showError = false
+  }
+  
+  //MARK: - Single Field Update Functions
+  
+  /// Updates a field that can contain a link when a link
+  /// exists with the corresponding data. Sets error on failure.
+  private func updateSingleField<T: Codable>(
+    _ for: T.Type = T.self,
+    ofType type: SingleHouseFieldType
+  ) {
+    let linkField = getLinkField(forType: type)
+    
+    if linkField.isLink {
+      Api.fetch(T.self, url: linkField) { result in
+        switch result {
+        case .success(let receivedObject):
+          // Sets the value of the HouseUpdated to the just received value.
+          self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
+          
+          self.state.showError = false
+        case .failure(let error):
+          print("Error! \(error)")
+          self.state.showError = true
+        }
+      }
+    }
+  }
+  
+  /// Enum for updatable fields that are not arrays.
+  private enum SingleHouseFieldType {
     case founder
     case currentLord
     case heir
     case overlord
-    //case swornMembers
-    //case cadetBranches
   }
   
+  /// Returns the variables (and the therein saved
+  /// link) that corresponds to the input enum.
   private func getLinkField(
-    forType type: SingleHouseFieldType,
-    ofHouse house: HouseBasic
+    forType type: SingleHouseFieldType
   ) -> String {
     switch type {
     case .founder:
-      return house.foundedByCharacter
+      return houseBasic.foundedByCharacter
     case .currentLord:
-      return house.currentLord
+      return houseBasic.currentLord
     case .heir:
-      return house.heir
+      return houseBasic.heir
     case .overlord:
-      return house.overlordHouse
+      return houseBasic.overlordHouse
     }
   }
   
+  /// Sets an input value to the variable
+  /// that corresponds to the type.
   private func updateHouseBasicField<T: Codable>(
     _ for: T.Type = T.self,
     ofType type: SingleHouseFieldType,
@@ -78,29 +111,7 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  /// Updates a field that can contain a link when a link
-  /// exists with the corresponding data. Sets error on failure.
-  private func updateSingleField<T: Codable>(
-    _ for: T.Type = T.self,
-    ofType type: SingleHouseFieldType
-  ) {
-    let linkField = getLinkField(forType: type, ofHouse: houseBasic)
-    
-    if linkField.isLink {
-      Api.fetch(T.self, url: linkField) { result in
-        switch result {
-        case .success(let receivedObject):
-          // Sets the value of the HouseUpdated to the just received value.
-          self.updateHouseBasicField(T.self, ofType: type, withValue: receivedObject)
-          
-          self.state.showError = false
-        case .failure(let error):
-          print("Error! \(error)")
-          self.state.showError = true
-        }
-      }
-    }
-  }
+  //MARK: - Array Update Functions
   
   private func updateCadetBranches() {
     if houseBasic.cadetBranches.hasLinkEntries {
@@ -144,10 +155,5 @@ class SingleHouseViewModel: ObservableObject {
         }
       }
     }
-  }
-  
-  struct SingleHouseViewState {
-    var houseUpdated: HouseUpdated?
-    var showError = false
   }
 }
