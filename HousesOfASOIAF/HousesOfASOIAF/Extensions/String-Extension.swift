@@ -8,6 +8,11 @@
 import Foundation
 
 extension String {
+  /// Returns the first character, as String.
+  var first: String {
+    return self[0]
+  }
+  
   /// Allows to access characters as strings via array-index, e.g. "hello[2]".
   subscript (index: Int) -> String {
     return String(self[self.index(self.startIndex, offsetBy: index)])
