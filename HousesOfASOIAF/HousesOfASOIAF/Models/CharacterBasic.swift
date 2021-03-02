@@ -34,7 +34,7 @@ struct CharacterBasic: Codable, Hashable {
   let hasPointOfViewChaptersInBooks: [String]
   
   var initialLetter: String {
-    return name[0]
+    return name.first
   }
   
   /// A boolean indicating whether this

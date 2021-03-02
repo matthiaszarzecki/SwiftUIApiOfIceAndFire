@@ -16,7 +16,7 @@ struct PortrayedBySection: View {
         ForEach(character.portrayedBy, id: \.self) { actor in
           HStack {
             CharacterIcon(
-              initialLetter: actor[0],
+              initialLetter: actor.first,
               size: 24
             )
             Text("\(actor)")

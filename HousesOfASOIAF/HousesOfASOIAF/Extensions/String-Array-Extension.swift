@@ -18,12 +18,12 @@ extension Array where Element == String {
   /// Checks that there are >0 entries and the first
   /// one is not an empty string.
   var hasNonEmptyEntries: Bool {
-    return self.hasEntries && self[0] != ""
+    return self.hasEntries && self.first != ""
   }
   
   /// A Boolean indicating whether an array contains hyperlinks.
   /// Checks that there are >0 entries and the first one is a link.
   var hasLinkEntries: Bool {
-    return self.hasEntries && self[0].isLink
+    return self.hasEntries && self.first.isLink
   }
 }
