@@ -12,7 +12,11 @@ struct SeatsSection: View {
   
   var body: some View {
     if house.seats.hasNonEmptyEntries {
-      Section(header: SectionHeader(text: "Seats")) {
+      let sectionHeader = house.seats.count > 1
+        ? SectionHeader(text: "Seats: \(house.seats.count)")
+        : SectionHeader(text: "Seat")
+      
+      Section(header: sectionHeader) {
         ForEach(house.seats, id: \.self) { seat in
           // Occasionally a seat with a lowercase
           // name ("unnamed castle") is returned.
