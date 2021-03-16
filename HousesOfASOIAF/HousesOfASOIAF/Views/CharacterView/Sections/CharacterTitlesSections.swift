@@ -12,7 +12,11 @@ struct CharacterTitlesSections: View {
   
   var body: some View {
     if character.titles.hasNonEmptyEntries {
-      Section(header: SectionHeader(text: "Titles")) {
+      let sectionHeader = character.titles.count > 1
+        ? SectionHeader(text: "Titles: \(character.titles.count)")
+        : SectionHeader(text: "Title")
+      
+      Section(header: sectionHeader) {
         ForEach(character.titles, id: \.self) { title in
           Text("🎖️ \(title)")
         }
