@@ -14,17 +14,22 @@ struct HouseIcon: View {
   
   var body: some View {
     if colors.hasEntries {
-      // When colors exists, create a CircularColorDisplay
+      // When colors exists, create
+      // a CircularColorDisplay
       return AnyView(
         CircularColorDisplay(colors: colors, size: size)
+          .shadow(color: .westerosRed, radius: 6)
       )
     } else {
-      // When no colors exists, show first letter of house on colored circle.
+      // When no colors exists, show first
+      // letter of house on colored circle.
       return AnyView(
         ZStack {
           Circle()
             .foregroundColor(.westerosRed)
+            .shadow(color: .westerosRed, radius: 6)
             .frame(width: size, height: size, alignment: .center)
+            
           
           Text("\(initialLetter)")
             .foregroundColor(.white)
