@@ -11,10 +11,19 @@ struct SwornMembersSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if let swornMembers = house.swornMembers, swornMembers.hasEntries {
-      Section(header: SectionHeader(text: "Sworn Members")) {
+    if let swornMembers = house.swornMembers,
+       swornMembers.hasEntries {
+      let sectionHeader = swornMembers.count > 1
+        ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
+        : SectionHeader(text: "Sworn Member")
+      
+      Section(header: sectionHeader) {
         ForEach(swornMembers, id: \.self) { character in
-          NavigationLink(destination: CharacterView(character: character)) {
+          NavigationLink(
+            destination: CharacterView(
+              character: character
+            )
+          ) {
             HStack {
               CharacterIcon(
                 initialLetter: character.initialLetter,
@@ -36,7 +45,9 @@ struct SwornMembersSection: View {
 struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      SwornMembersSection(house: MockClasses.houseUpdatedWithLinks)
+      SwornMembersSection(
+        house: MockClasses.houseUpdatedWithLinks
+      )
     }
   }
 }

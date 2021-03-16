@@ -11,10 +11,19 @@ struct CadetBranchesSection: View {
   var house: HouseUpdated
   
   var body: some View {
-    if let cadetBranches = house.cadetBranches, cadetBranches.hasEntries {
-      Section(header: SectionHeader(text: "Cadet Branches")) {
+    if let cadetBranches = house.cadetBranches,
+       cadetBranches.hasEntries {
+      let sectionHeader = cadetBranches.count > 1
+        ? SectionHeader(text: "Cadet Branches: \(cadetBranches.count)")
+        : SectionHeader(text: "Cadet Branch")
+      
+      Section(header: sectionHeader) {
         ForEach(cadetBranches, id: \.self) { cadetBranch in
-          NavigationLink(destination: SingleHouseView(houseBasic: cadetBranch)) {
+          NavigationLink(
+            destination: SingleHouseView(
+              houseBasic: cadetBranch
+            )
+          ) {
             HStack {
               HouseIcon(
                 colors: cadetBranch.heraldryColors,
@@ -33,7 +42,9 @@ struct CadetBranchesSection: View {
 struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CadetBranchesSection(house: MockClasses.houseUpdatedWithLinks)
+      CadetBranchesSection(
+        house: MockClasses.houseUpdatedWithLinks
+      )
     }
   }
 }
