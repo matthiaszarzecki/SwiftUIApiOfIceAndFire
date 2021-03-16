@@ -30,7 +30,6 @@ struct HouseIcon: View {
             .shadow(color: .westerosRed, radius: 6)
             .frame(width: size, height: size, alignment: .center)
             
-          
           Text("\(initialLetter)")
             .foregroundColor(.white)
         }
