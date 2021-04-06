@@ -15,10 +15,16 @@ struct HouseIcon: View {
   var body: some View {
     if colors.hasEntries {
       // When colors exists, create
-      // a CircularColorDisplay
+      // a CircularColorDisplay.
       return AnyView(
-        CircularColorDisplay(colors: colors, size: size)
-          .shadow(color: .westerosRed, radius: 6)
+        ZStack {
+          let backgroundSize = size - 2
+          Circle()
+            .frame(width: backgroundSize, height: backgroundSize, alignment: .center)
+            .shadow(color: .westerosRed, radius: 6)
+          
+          CircularColorDisplay(colors: colors, size: size)
+        }
       )
     } else {
       // When no colors exists, show first
