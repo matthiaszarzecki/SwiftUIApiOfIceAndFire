@@ -67,7 +67,7 @@ struct ColorParser {
       colors.append(.purple)
     }
     
-    let synonymsForBlue = ["blue", "azure", "indigo", "fountain"]
+    let synonymsForBlue = ["blue", "azure", "indigo", "fountain", "vair"]
     if words.hasAtLeastOneItem(fromArray: synonymsForBlue) {
       colors.append(.blue)
     }
@@ -101,7 +101,7 @@ struct ColorParser {
       colors.append(customDarkGreenColor)
     }
 
-    let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain", "ice-white"]
+    let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain", "ice-white", "scythe"]
     if words.hasAtLeastOneItem(fromArray: synonymsForWhite) {
       let customWhiteColor = Color(hex: "F2F2F7")
       colors.append(customWhiteColor)
