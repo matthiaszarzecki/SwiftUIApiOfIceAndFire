@@ -35,8 +35,8 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let cadetBranches: [String]
   let swornMembers: [String]
   
-  /// A Boolean indicating whether at least one field that
-  /// can contain an URL has an URL.
+  /// A Boolean indicating whether at least one
+  /// field that can contain an URL has an URL.
   var containsLinks: Bool {
     // We are leaving out the "id" field as that URL is never
     // actually used to offer a link to somewhere else.

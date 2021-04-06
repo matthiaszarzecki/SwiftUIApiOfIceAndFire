@@ -14,7 +14,6 @@ struct CharacterBasic: Codable, Hashable {
   
   // The identifier for this house. Is also the direct URL to its
   // data. Must be named "id" to conform to the identifiable protocol.
-  
   let id: String
   let name: String
   let culture: String

@@ -13,7 +13,7 @@ struct CircularColorDisplay: View {
   var colors: [Color]
   var size: CGFloat
   
-  /// The amount each segment will take up
+  /// The amount each segment will take up.
   private var degreesForEachElement: Double {
     360.0 / Double(colors.count)
   }
