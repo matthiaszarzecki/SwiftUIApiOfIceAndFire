@@ -12,7 +12,9 @@ struct TvShowAppearancesSection: View {
 
   var body: some View {
     if character.tvShowAppearances.hasNonEmptyEntries {
-      Section(header: SectionHeader(text: "TV Show Appearances")) {
+      Section(
+        header: SectionHeader(text: "TV Show Appearances")
+      ) {
         ForEach(character.tvShowAppearances, id: \.self) { appearance in
           Text("📺 \(appearance)")
         }
