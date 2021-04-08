@@ -17,6 +17,8 @@ struct AboutView: View {
     }
   }
   
+  /// Button that opens the AppStore.
+  /// Does not work in the simulator.
   var appsAndGamesRow: some View {
     Button(action: {
       if let url = URL(
