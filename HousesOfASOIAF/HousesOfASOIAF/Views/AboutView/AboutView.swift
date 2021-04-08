@@ -9,16 +9,26 @@ import SwiftUI
 
 struct AboutView: View {
   var shareRow: some View {
-    HStack {
-      SettingsIcon(systemIcon: "square.and.arrow.up")
-      Text("Share")
+    Button(action: shareApp) {
+      HStack {
+        SettingsIcon(systemIcon: "square.and.arrow.up")
+        Text("Share")
+          .foregroundColor(.black)
+      }
     }
   }
   
   var appsAndGamesRow: some View {
-    HStack {
-      SettingsIcon(systemIcon: "square.grid.2x2.fill")
-      Text("Our Apps & Games")
+    Button(action: {
+      if let url = URL(string: "itms-apps://apple.com/app/id1394075736") {
+        UIApplication.shared.open(url)
+      }
+    }) {
+      HStack {
+        SettingsIcon(systemIcon: "square.grid.2x2.fill")
+        Text("Our Apps & Games")
+          .foregroundColor(.black)
+      }
     }
   }
   
@@ -85,8 +95,7 @@ struct AboutView: View {
   var appVersion: some View {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
     return VStack {
-      Text("Houses of Westeros")
-      Text("Version \(appVersion)")
+      Text("Houses of Westeros - Version \(appVersion)")
     }
   }
   
@@ -113,6 +122,24 @@ struct AboutView: View {
       }
       .navigationTitle("About")
     }
+  }
+  
+  func shareApp() {
+    guard let data = URL(
+      string: "https://github.com/matthiaszarzecki/SwiftUIApiOfIceAndFire"
+    ) else {
+      return
+    }
+    
+    let viewController = UIActivityViewController(
+      activityItems: [data],
+      applicationActivities: nil
+    )
+    UIApplication.shared.windows.first?.rootViewController?.present(
+      viewController,
+      animated: true,
+      completion: nil
+    )
   }
 }
 
