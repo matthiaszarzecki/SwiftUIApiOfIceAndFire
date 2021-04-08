@@ -20,7 +20,7 @@ struct AboutView: View {
   var appsAndGamesRow: some View {
     Button(action: {
       if let url = URL(
-          string: "itms-apps://apple.com/app/id1394075736"
+        string: "itms-apps://apple.com/app/id1394075736"
       ) {
         UIApplication.shared.open(url)
       }
