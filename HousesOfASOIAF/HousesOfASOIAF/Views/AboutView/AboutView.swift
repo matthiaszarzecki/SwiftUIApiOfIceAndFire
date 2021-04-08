@@ -10,25 +10,25 @@ import SwiftUI
 struct AboutView: View {
   var shareRow: some View {
     Button(action: shareApp) {
-      HStack {
-        SettingsIcon(systemIcon: "square.and.arrow.up")
-        Text("Share")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "square.and.arrow.up",
+        text: "Share"
+      )
     }
   }
   
   var appsAndGamesRow: some View {
     Button(action: {
-      if let url = URL(string: "itms-apps://apple.com/app/id1394075736") {
+      if let url = URL(
+          string: "itms-apps://apple.com/app/id1394075736"
+      ) {
         UIApplication.shared.open(url)
       }
     }) {
-      HStack {
-        SettingsIcon(systemIcon: "square.grid.2x2.fill")
-        Text("Our Apps & Games")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "square.grid.2x2.fill",
+        text: "Our Apps & Games"
+      )
     }
   }
   
@@ -36,11 +36,10 @@ struct AboutView: View {
     Link(
       destination: URL(string: "https://twitter.com/matthias_code")!
     ) {
-      HStack {
-        SettingsIcon(systemIcon: "heart.text.square")
-        Text("Twitter")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "heart.text.square",
+        text: "Twitter"
+      )
     }
   }
   
@@ -48,11 +47,10 @@ struct AboutView: View {
     Link(
       destination: URL(string: "https://github.com/matthiaszarzecki")!
     ) {
-      HStack {
-        SettingsIcon(systemIcon: "heart.text.square")
-        Text("Github")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "heart.text.square",
+        text: "Github"
+      )
     }
   }
   
@@ -60,11 +58,10 @@ struct AboutView: View {
     Link(
       destination: URL(string: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g")!
     ) {
-      HStack {
-        SettingsIcon(systemIcon: "heart.text.square")
-        Text("Youtube")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "heart.text.square",
+        text: "Youtube"
+      )
     }
   }
   
@@ -72,11 +69,10 @@ struct AboutView: View {
     Link(
       destination: URL(string: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/")!
     ) {
-      HStack {
-        SettingsIcon(systemIcon: "heart.text.square")
-        Text("LinkedIn")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "heart.text.square",
+        text: "LinkedIn"
+      )
     }
   }
   
@@ -84,11 +80,10 @@ struct AboutView: View {
     Link(
       destination: URL(string: "https://twitter.com/matthias_code")!
     ) {
-      HStack {
-        SettingsIcon(systemIcon: "signature")
-        Text("Matthias Zarzecki")
-          .foregroundColor(.black)
-      }
+      SettingsRow(
+        systemIcon: "signature",
+        text: "Matthias Zarzecki"
+      )
     }
   }
   
