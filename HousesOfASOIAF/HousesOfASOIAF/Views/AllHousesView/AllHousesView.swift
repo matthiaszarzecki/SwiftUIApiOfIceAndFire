@@ -50,7 +50,8 @@ struct AllHousesDisplay: View {
     } else if showError {
       ErrorDisplay(reloadData: onScrolledAtBottom)
     } else {
-      // This cannot be a scrollview as that tanks the performance
+      // This cannot be a scrollview as
+      // that tanks the performance.
       List {
         ForEach(fetchResults) { house in
           SingleHouseCell(house: house)
