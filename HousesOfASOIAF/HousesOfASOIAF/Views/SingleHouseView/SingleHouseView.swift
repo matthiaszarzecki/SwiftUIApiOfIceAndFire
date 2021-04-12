@@ -58,9 +58,9 @@ struct SingleHouseDisplay: View {
                 FoundedSection(house: unwrappedHouseUpdated)
                 FounderSection(house: unwrappedHouseUpdated)
                 DiedOutSection(house: unwrappedHouseUpdated)
+                AncestralWeaponsSection(house: unwrappedHouseUpdated)
                 CadetBranchesSection(house: unwrappedHouseUpdated)
                 SwornMembersSection(house: unwrappedHouseUpdated)
-                AncestralWeaponsSection(house: unwrappedHouseUpdated)
                 ErrorSection(showError: showError, updateData: updateData)
               }
             }
