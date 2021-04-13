@@ -9,11 +9,6 @@ import SwiftUI
 
 struct BaseView: View {
   init() {
-    for family in UIFont.familyNames.sorted() {
-          let names = UIFont.fontNames(forFamilyName: family)
-          print("Family: \(family) Font Names: \(names)")
-        }
-    
     // Set font for Title in large view
     UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 24)!]
     
