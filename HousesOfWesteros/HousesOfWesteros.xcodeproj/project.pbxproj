@@ -248,12 +248,12 @@
 		CC0E1DEA262597D700C285D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1DEB262597D700C285D8 /* Data-Extension.swift */,
-				CC0E1DEC262597D700C285D8 /* String-Extension.swift */,
-				CC0E1DED262597D700C285D8 /* Color-Extension.swift */,
 				CC0E1DEE262597D700C285D8 /* Array-Extension.swift */,
-				CC0E1DEF262597D700C285D8 /* View-Extension.swift */,
+				CC0E1DED262597D700C285D8 /* Color-Extension.swift */,
+				CC0E1DEB262597D700C285D8 /* Data-Extension.swift */,
 				CC0E1DF0262597D700C285D8 /* String-Array-Extension.swift */,
+				CC0E1DEC262597D700C285D8 /* String-Extension.swift */,
+				CC0E1DEF262597D700C285D8 /* View-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,10 +293,10 @@
 		CC0E1DF8262597D800C285D8 /* AllHousesView */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1DF9262597D800C285D8 /* ViewModel */,
 				CC0E1DFB262597D800C285D8 /* AllHousesLoadingView.swift */,
 				CC0E1DFC262597D800C285D8 /* AllHousesView.swift */,
 				CC0E1DFD262597D800C285D8 /* Elements */,
+				CC0E1DF9262597D800C285D8 /* ViewModel */,
 			);
 			path = AllHousesView;
 			sourceTree = "<group>";
@@ -312,8 +312,8 @@
 		CC0E1DFD262597D800C285D8 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1DFE262597D800C285D8 /* SingleHouseCell.swift */,
 				CC0E1DFF262597D800C285D8 /* ErrorDisplay.swift */,
+				CC0E1DFE262597D800C285D8 /* SingleHouseCell.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -337,9 +337,9 @@
 		CC0E1E04262597D800C285D8 /* CharacterView */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E05262597D800C285D8 /* Sections */,
 				CC0E1E0D262597D800C285D8 /* CharacterView.swift */,
 				CC0E1E0E262597D800C285D8 /* Elements */,
+				CC0E1E05262597D800C285D8 /* Sections */,
 			);
 			path = CharacterView;
 			sourceTree = "<group>";
@@ -347,13 +347,13 @@
 		CC0E1E05262597D800C285D8 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E06262597D800C285D8 /* PortrayedBySection.swift */,
-				CC0E1E07262597D800C285D8 /* CharacterDeathSection.swift */,
-				CC0E1E08262597D800C285D8 /* CultureSection.swift */,
-				CC0E1E09262597D800C285D8 /* BornSection.swift */,
 				CC0E1E0A262597D800C285D8 /* AliasesSection.swift */,
-				CC0E1E0B262597D800C285D8 /* TvShowAppearancesSection.swift */,
+				CC0E1E09262597D800C285D8 /* BornSection.swift */,
+				CC0E1E07262597D800C285D8 /* CharacterDeathSection.swift */,
 				CC0E1E0C262597D800C285D8 /* CharacterTitlesSections.swift */,
+				CC0E1E08262597D800C285D8 /* CultureSection.swift */,
+				CC0E1E06262597D800C285D8 /* PortrayedBySection.swift */,
+				CC0E1E0B262597D800C285D8 /* TvShowAppearancesSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -369,10 +369,10 @@
 		CC0E1E10262597D800C285D8 /* SingleHouseView */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E11262597D800C285D8 /* ViewModel */,
+				CC0E1E26262597D800C285D8 /* SingleHouseLoadingView.swift */,
 				CC0E1E13262597D800C285D8 /* SingleHouseView.swift */,
 				CC0E1E14262597D800C285D8 /* Elements */,
-				CC0E1E26262597D800C285D8 /* SingleHouseLoadingView.swift */,
+				CC0E1E11262597D800C285D8 /* ViewModel */,
 			);
 			path = SingleHouseView;
 			sourceTree = "<group>";
@@ -388,8 +388,8 @@
 		CC0E1E14262597D800C285D8 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E15262597D800C285D8 /* Sections */,
 				CC0E1E25262597D800C285D8 /* HouseNameAndTitle.swift */,
+				CC0E1E15262597D800C285D8 /* Sections */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -397,21 +397,21 @@
 		CC0E1E15262597D800C285D8 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E16262597D800C285D8 /* HouseMottoSection.swift */,
-				CC0E1E17262597D800C285D8 /* CurrentHeirSection.swift */,
-				CC0E1E18262597D800C285D8 /* HeraldryColorsSection.swift */,
-				CC0E1E19262597D800C285D8 /* CurrentLordSection.swift */,
-				CC0E1E1A262597D800C285D8 /* ErrorSection.swift */,
-				CC0E1E1B262597D800C285D8 /* TitlesSection.swift */,
-				CC0E1E1C262597D800C285D8 /* FounderSection.swift */,
-				CC0E1E1D262597D800C285D8 /* SwornMembersSection.swift */,
-				CC0E1E1E262597D800C285D8 /* DiedOutSection.swift */,
-				CC0E1E1F262597D800C285D8 /* CoatOfArmsSection.swift */,
-				CC0E1E20262597D800C285D8 /* SeatsSection.swift */,
 				CC0E1E21262597D800C285D8 /* AncestralWeaponsSection.swift */,
 				CC0E1E22262597D800C285D8 /* CadetBranchesSection.swift */,
+				CC0E1E1F262597D800C285D8 /* CoatOfArmsSection.swift */,
+				CC0E1E17262597D800C285D8 /* CurrentHeirSection.swift */,
+				CC0E1E19262597D800C285D8 /* CurrentLordSection.swift */,
+				CC0E1E1E262597D800C285D8 /* DiedOutSection.swift */,
+				CC0E1E1A262597D800C285D8 /* ErrorSection.swift */,
 				CC0E1E23262597D800C285D8 /* FoundedSection.swift */,
+				CC0E1E1C262597D800C285D8 /* FounderSection.swift */,
+				CC0E1E18262597D800C285D8 /* HeraldryColorsSection.swift */,
+				CC0E1E16262597D800C285D8 /* HouseMottoSection.swift */,
 				CC0E1E24262597D800C285D8 /* OverlordHouseSection.swift */,
+				CC0E1E20262597D800C285D8 /* SeatsSection.swift */,
+				CC0E1E1D262597D800C285D8 /* SwornMembersSection.swift */,
+				CC0E1E1B262597D800C285D8 /* TitlesSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -419,13 +419,13 @@
 		CC0E1E27262597D800C285D8 /* ModularViews */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E28262597D800C285D8 /* SettingsIcon.swift */,
-				CC0E1E29262597D800C285D8 /* HouseIcon.swift */,
 				CC0E1E2A262597D800C285D8 /* CharacterIcon.swift */,
 				CC0E1E2B262597D800C285D8 /* CircularColorDisplay.swift */,
-				CC0E1E2C262597D800C285D8 /* SettingsRow.swift */,
+				CC0E1E29262597D800C285D8 /* HouseIcon.swift */,
 				CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */,
 				CC0E1E2E262597D800C285D8 /* SectionHeader.swift */,
+				CC0E1E28262597D800C285D8 /* SettingsIcon.swift */,
+				CC0E1E2C262597D800C285D8 /* SettingsRow.swift */,
 			);
 			path = ModularViews;
 			sourceTree = "<group>";
@@ -465,9 +465,9 @@
 		CC0E1E37262597D800C285D8 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1E38262597D800C285D8 /* RequestMethod.swift */,
 				CC0E1E39262597D800C285D8 /* Api.swift */,
 				CC0E1E3A262597D800C285D8 /* NetworkError.swift */,
+				CC0E1E38262597D800C285D8 /* RequestMethod.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -476,9 +476,9 @@
 			isa = PBXGroup;
 			children = (
 				CC0E1E3C262597D800C285D8 /* CharacterBasic.swift */,
+				CC0E1E3F262597D800C285D8 /* CharacterUpdated.swift */,
 				CC0E1E3D262597D800C285D8 /* HouseBasic.swift */,
 				CC0E1E3E262597D800C285D8 /* HouseUpdated.swift */,
-				CC0E1E3F262597D800C285D8 /* CharacterUpdated.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -22,7 +22,7 @@ struct HeraldryColorsSection: View {
             Rectangle()
               .frame(width: colorWidth, height: 32, alignment: .center)
               .foregroundColor(color)
-              .cornerRadius(12.0)
+              .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
           }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
