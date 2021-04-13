@@ -10,11 +10,11 @@ import SwiftUI
 
 struct ColorParser {
   /// Reads the colors named in a string and turns
-  /// these into an array of SwiftUI Colors
+  /// these into an array of SwiftUI Colors.
   static func getColors(fromString text: String) -> [Color] {
     var colors: [Color] = []
 
-    // Turn test lowercase for easier comparison
+    // Turn text lowercase for easier comparison.
     var adaptedText = text.lowercased()
     
     // Remove punctuation - replaces it with spaces, so
@@ -27,10 +27,10 @@ struct ColorParser {
       options: .regularExpression
     )
     
-    // Turn string into array for easier comparison
+    // Turn string into array for easier comparison.
     var words = adaptedText.components(separatedBy: " ")
     
-    // Remove empty array entries
+    // Remove empty array entries.
     words.removeAll { $0 == "" || $0 == " " }
     
     // Check if any words that describe colors are present, and
@@ -107,7 +107,7 @@ struct ColorParser {
       colors.append(customWhiteColor)
     }
      
-    let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword"]
+    let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword", "scythe"]
     if words.hasAtLeastOneItem(fromArray: synonymsForGray) {
       colors.append(.gray)
     }
