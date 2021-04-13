@@ -36,7 +36,8 @@ struct Api {
       .eraseToAnyPublisher()
   }
 
-  /// Does a GET-call to the specified URL and returns the type in a completion.
+  /// Does a GET-call to the specified URL
+  /// and returns the type in a completion.
   static func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,
