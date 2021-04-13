@@ -21,8 +21,9 @@ extension Array where Element == String {
     return self.hasEntries && self.first != ""
   }
   
-  /// A Boolean indicating whether an array contains hyperlinks.
-  /// Checks that there are >0 entries and the first one is a link.
+  /// A Boolean indicating whether an array
+  /// contains hyperlinks. Checks that there are
+  /// >0 entries and if the first entry is a link.
   var hasLinkEntries: Bool {
     return self.hasEntries && ((self.first?.isLink) != nil)
   }

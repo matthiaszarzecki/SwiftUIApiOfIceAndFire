@@ -11,7 +11,7 @@ extension Color {
   static let westerosRed = Color(hex: "89170B")
   static let redactedGray = Color(hex: "D6D6D6")
   
-  /// Creates a SwiftUI color from a hex code
+  /// Creates a SwiftUI color from a hex code.
   init(hex: String) {
     let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
     var int: UInt64 = 0
