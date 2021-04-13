@@ -1,0 +1,1001 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCA8F3FE2625856300AB9D7C /* HousesOfWesterosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F3FD2625856300AB9D7C /* HousesOfWesterosApp.swift */; };
+		CCA8F4022625856500AB9D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA8F4012625856500AB9D7C /* Assets.xcassets */; };
+		CCA8F4052625856500AB9D7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA8F4042625856500AB9D7C /* Preview Assets.xcassets */; };
+		CCA8F41B2625856500AB9D7C /* Houses_of_WesterosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F41A2625856500AB9D7C /* Houses_of_WesterosUITests.swift */; };
+		CCA8F442262585D700AB9D7C /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F42F262585D600AB9D7C /* Data-Extension.swift */; };
+		CCA8F443262585D700AB9D7C /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F430262585D600AB9D7C /* String-Extension.swift */; };
+		CCA8F444262585D700AB9D7C /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F431262585D600AB9D7C /* Color-Extension.swift */; };
+		CCA8F445262585D700AB9D7C /* Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F432262585D600AB9D7C /* Array-Extension.swift */; };
+		CCA8F446262585D700AB9D7C /* View-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F433262585D600AB9D7C /* View-Extension.swift */; };
+		CCA8F447262585D700AB9D7C /* String-Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F434262585D600AB9D7C /* String-Array-Extension.swift */; };
+		CCA8F448262585D700AB9D7C /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F436262585D600AB9D7C /* MockClasses.swift */; };
+		CCA8F449262585D700AB9D7C /* CharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F438262585D600AB9D7C /* CharacterBasic.swift */; };
+		CCA8F44A262585D700AB9D7C /* HouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F439262585D600AB9D7C /* HouseBasic.swift */; };
+		CCA8F44B262585D700AB9D7C /* HouseUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F43A262585D600AB9D7C /* HouseUpdated.swift */; };
+		CCA8F44C262585D700AB9D7C /* CharacterUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F43B262585D600AB9D7C /* CharacterUpdated.swift */; };
+		CCA8F44D262585D700AB9D7C /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F43D262585D600AB9D7C /* ColorParser.swift */; };
+		CCA8F44E262585D700AB9D7C /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F43F262585D700AB9D7C /* RequestMethod.swift */; };
+		CCA8F44F262585D700AB9D7C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F440262585D700AB9D7C /* Api.swift */; };
+		CCA8F450262585D700AB9D7C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F441262585D700AB9D7C /* NetworkError.swift */; };
+		CCA8F4C32625867D00AB9D7C /* Game of Thrones.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCA8F4C22625867D00AB9D7C /* Game of Thrones.ttf */; };
+		CCA8F4E02625914400AB9D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCA8F4DF2625914400AB9D7C /* LaunchScreen.storyboard */; };
+		CCA8F4E9262592E500AB9D7C /* HouseBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4E7262592E500AB9D7C /* HouseBasicTests.swift */; };
+		CCA8F4EA262592E500AB9D7C /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4E8262592E500AB9D7C /* StringExtensionTests.swift */; };
+		CCA8F52F2625940A00AB9D7C /* AllHousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4FA2625940A00AB9D7C /* AllHousesViewModel.swift */; };
+		CCA8F5302625940A00AB9D7C /* AllHousesLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4FB2625940A00AB9D7C /* AllHousesLoadingView.swift */; };
+		CCA8F5312625940A00AB9D7C /* AllHousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4FC2625940A00AB9D7C /* AllHousesView.swift */; };
+		CCA8F5322625940A00AB9D7C /* SingleHouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4FE2625940A00AB9D7C /* SingleHouseCell.swift */; };
+		CCA8F5332625940A00AB9D7C /* ErrorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F4FF2625940A00AB9D7C /* ErrorDisplay.swift */; };
+		CCA8F5342625940A00AB9D7C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5012625940A00AB9D7C /* AboutView.swift */; };
+		CCA8F5352625940A00AB9D7C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5032625940A00AB9D7C /* BaseView.swift */; };
+		CCA8F5362625940A00AB9D7C /* PortrayedBySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5062625940A00AB9D7C /* PortrayedBySection.swift */; };
+		CCA8F5372625940A00AB9D7C /* CharacterDeathSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5072625940A00AB9D7C /* CharacterDeathSection.swift */; };
+		CCA8F5382625940A00AB9D7C /* CultureSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5082625940A00AB9D7C /* CultureSection.swift */; };
+		CCA8F5392625940A00AB9D7C /* BornSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5092625940A00AB9D7C /* BornSection.swift */; };
+		CCA8F53A2625940A00AB9D7C /* AliasesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F50A2625940A00AB9D7C /* AliasesSection.swift */; };
+		CCA8F53B2625940A00AB9D7C /* TvShowAppearancesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F50B2625940A00AB9D7C /* TvShowAppearancesSection.swift */; };
+		CCA8F53C2625940A00AB9D7C /* CharacterTitlesSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F50C2625940A00AB9D7C /* CharacterTitlesSections.swift */; };
+		CCA8F53D2625940A00AB9D7C /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F50D2625940A00AB9D7C /* CharacterView.swift */; };
+		CCA8F53E2625940A00AB9D7C /* CharacterTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F50F2625940A00AB9D7C /* CharacterTitle.swift */; };
+		CCA8F53F2625940A00AB9D7C /* SingleHouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5122625940A00AB9D7C /* SingleHouseViewModel.swift */; };
+		CCA8F5402625940A00AB9D7C /* SingleHouseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5132625940A00AB9D7C /* SingleHouseView.swift */; };
+		CCA8F5412625940A00AB9D7C /* HouseMottoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5162625940A00AB9D7C /* HouseMottoSection.swift */; };
+		CCA8F5422625940A00AB9D7C /* CurrentHeirSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5172625940A00AB9D7C /* CurrentHeirSection.swift */; };
+		CCA8F5432625940A00AB9D7C /* HeraldryColorsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5182625940A00AB9D7C /* HeraldryColorsSection.swift */; };
+		CCA8F5442625940A00AB9D7C /* CurrentLordSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5192625940A00AB9D7C /* CurrentLordSection.swift */; };
+		CCA8F5452625940A00AB9D7C /* ErrorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51A2625940A00AB9D7C /* ErrorSection.swift */; };
+		CCA8F5462625940A00AB9D7C /* TitlesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51B2625940A00AB9D7C /* TitlesSection.swift */; };
+		CCA8F5472625940A00AB9D7C /* FounderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51C2625940A00AB9D7C /* FounderSection.swift */; };
+		CCA8F5482625940A00AB9D7C /* SwornMembersSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51D2625940A00AB9D7C /* SwornMembersSection.swift */; };
+		CCA8F5492625940A00AB9D7C /* DiedOutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51E2625940A00AB9D7C /* DiedOutSection.swift */; };
+		CCA8F54A2625940A00AB9D7C /* CoatOfArmsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F51F2625940A00AB9D7C /* CoatOfArmsSection.swift */; };
+		CCA8F54B2625940A00AB9D7C /* SeatsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5202625940A00AB9D7C /* SeatsSection.swift */; };
+		CCA8F54C2625940A00AB9D7C /* AncestralWeaponsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5212625940A00AB9D7C /* AncestralWeaponsSection.swift */; };
+		CCA8F54D2625940A00AB9D7C /* CadetBranchesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5222625940A00AB9D7C /* CadetBranchesSection.swift */; };
+		CCA8F54E2625940A00AB9D7C /* FoundedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5232625940A00AB9D7C /* FoundedSection.swift */; };
+		CCA8F54F2625940A00AB9D7C /* OverlordHouseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5242625940A00AB9D7C /* OverlordHouseSection.swift */; };
+		CCA8F5502625940A00AB9D7C /* HouseNameAndTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5252625940A00AB9D7C /* HouseNameAndTitle.swift */; };
+		CCA8F5512625940A00AB9D7C /* SingleHouseLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5262625940A00AB9D7C /* SingleHouseLoadingView.swift */; };
+		CCA8F5522625940A00AB9D7C /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5282625940A00AB9D7C /* SettingsIcon.swift */; };
+		CCA8F5532625940A00AB9D7C /* HouseIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F5292625940A00AB9D7C /* HouseIcon.swift */; };
+		CCA8F5542625940A00AB9D7C /* CharacterIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F52A2625940A00AB9D7C /* CharacterIcon.swift */; };
+		CCA8F5552625940A00AB9D7C /* CircularColorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F52B2625940A00AB9D7C /* CircularColorDisplay.swift */; };
+		CCA8F5562625940A00AB9D7C /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F52C2625940A00AB9D7C /* SettingsRow.swift */; };
+		CCA8F5572625940A00AB9D7C /* SearchSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F52D2625940A00AB9D7C /* SearchSpinnerView.swift */; };
+		CCA8F5582625940A00AB9D7C /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8F52E2625940A00AB9D7C /* SectionHeader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCA8F40C2625856500AB9D7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA8F3F22625856300AB9D7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA8F3F92625856300AB9D7C;
+			remoteInfo = "Houses of Westeros";
+		};
+		CCA8F4172625856500AB9D7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCA8F3F22625856300AB9D7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCA8F3F92625856300AB9D7C;
+			remoteInfo = "Houses of Westeros";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCA8F3FA2625856300AB9D7C /* HousesOfWesteros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfWesteros.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA8F3FD2625856300AB9D7C /* HousesOfWesterosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesOfWesterosApp.swift; sourceTree = "<group>"; };
+		CCA8F4012625856500AB9D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCA8F4042625856500AB9D7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCA8F4062625856500AB9D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA8F40B2625856500AB9D7C /* HousesOfWesterosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesOfWesterosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA8F4112625856500AB9D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA8F4162625856500AB9D7C /* HousesOfWesterosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesOfWesterosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCA8F41A2625856500AB9D7C /* Houses_of_WesterosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses_of_WesterosUITests.swift; sourceTree = "<group>"; };
+		CCA8F41C2625856500AB9D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCA8F42F262585D600AB9D7C /* Data-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F430262585D600AB9D7C /* String-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F431262585D600AB9D7C /* Color-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F432262585D600AB9D7C /* Array-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F433262585D600AB9D7C /* View-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F434262585D600AB9D7C /* String-Array-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Array-Extension.swift"; sourceTree = "<group>"; };
+		CCA8F436262585D600AB9D7C /* MockClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClasses.swift; sourceTree = "<group>"; };
+		CCA8F438262585D600AB9D7C /* CharacterBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterBasic.swift; sourceTree = "<group>"; };
+		CCA8F439262585D600AB9D7C /* HouseBasic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseBasic.swift; sourceTree = "<group>"; };
+		CCA8F43A262585D600AB9D7C /* HouseUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseUpdated.swift; sourceTree = "<group>"; };
+		CCA8F43B262585D600AB9D7C /* CharacterUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterUpdated.swift; sourceTree = "<group>"; };
+		CCA8F43D262585D600AB9D7C /* ColorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
+		CCA8F43F262585D700AB9D7C /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		CCA8F440262585D700AB9D7C /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CCA8F441262585D700AB9D7C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CCA8F4C22625867D00AB9D7C /* Game of Thrones.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Game of Thrones.ttf"; sourceTree = "<group>"; };
+		CCA8F4DF2625914400AB9D7C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCA8F4E7262592E500AB9D7C /* HouseBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseBasicTests.swift; sourceTree = "<group>"; };
+		CCA8F4E8262592E500AB9D7C /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		CCA8F4FA2625940A00AB9D7C /* AllHousesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesViewModel.swift; sourceTree = "<group>"; };
+		CCA8F4FB2625940A00AB9D7C /* AllHousesLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesLoadingView.swift; sourceTree = "<group>"; };
+		CCA8F4FC2625940A00AB9D7C /* AllHousesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesView.swift; sourceTree = "<group>"; };
+		CCA8F4FE2625940A00AB9D7C /* SingleHouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHouseCell.swift; sourceTree = "<group>"; };
+		CCA8F4FF2625940A00AB9D7C /* ErrorDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplay.swift; sourceTree = "<group>"; };
+		CCA8F5012625940A00AB9D7C /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		CCA8F5032625940A00AB9D7C /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CCA8F5062625940A00AB9D7C /* PortrayedBySection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortrayedBySection.swift; sourceTree = "<group>"; };
+		CCA8F5072625940A00AB9D7C /* CharacterDeathSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDeathSection.swift; sourceTree = "<group>"; };
+		CCA8F5082625940A00AB9D7C /* CultureSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CultureSection.swift; sourceTree = "<group>"; };
+		CCA8F5092625940A00AB9D7C /* BornSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BornSection.swift; sourceTree = "<group>"; };
+		CCA8F50A2625940A00AB9D7C /* AliasesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliasesSection.swift; sourceTree = "<group>"; };
+		CCA8F50B2625940A00AB9D7C /* TvShowAppearancesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShowAppearancesSection.swift; sourceTree = "<group>"; };
+		CCA8F50C2625940A00AB9D7C /* CharacterTitlesSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTitlesSections.swift; sourceTree = "<group>"; };
+		CCA8F50D2625940A00AB9D7C /* CharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		CCA8F50F2625940A00AB9D7C /* CharacterTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTitle.swift; sourceTree = "<group>"; };
+		CCA8F5122625940A00AB9D7C /* SingleHouseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHouseViewModel.swift; sourceTree = "<group>"; };
+		CCA8F5132625940A00AB9D7C /* SingleHouseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHouseView.swift; sourceTree = "<group>"; };
+		CCA8F5162625940A00AB9D7C /* HouseMottoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseMottoSection.swift; sourceTree = "<group>"; };
+		CCA8F5172625940A00AB9D7C /* CurrentHeirSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentHeirSection.swift; sourceTree = "<group>"; };
+		CCA8F5182625940A00AB9D7C /* HeraldryColorsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeraldryColorsSection.swift; sourceTree = "<group>"; };
+		CCA8F5192625940A00AB9D7C /* CurrentLordSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLordSection.swift; sourceTree = "<group>"; };
+		CCA8F51A2625940A00AB9D7C /* ErrorSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSection.swift; sourceTree = "<group>"; };
+		CCA8F51B2625940A00AB9D7C /* TitlesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesSection.swift; sourceTree = "<group>"; };
+		CCA8F51C2625940A00AB9D7C /* FounderSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FounderSection.swift; sourceTree = "<group>"; };
+		CCA8F51D2625940A00AB9D7C /* SwornMembersSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwornMembersSection.swift; sourceTree = "<group>"; };
+		CCA8F51E2625940A00AB9D7C /* DiedOutSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiedOutSection.swift; sourceTree = "<group>"; };
+		CCA8F51F2625940A00AB9D7C /* CoatOfArmsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoatOfArmsSection.swift; sourceTree = "<group>"; };
+		CCA8F5202625940A00AB9D7C /* SeatsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatsSection.swift; sourceTree = "<group>"; };
+		CCA8F5212625940A00AB9D7C /* AncestralWeaponsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AncestralWeaponsSection.swift; sourceTree = "<group>"; };
+		CCA8F5222625940A00AB9D7C /* CadetBranchesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadetBranchesSection.swift; sourceTree = "<group>"; };
+		CCA8F5232625940A00AB9D7C /* FoundedSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundedSection.swift; sourceTree = "<group>"; };
+		CCA8F5242625940A00AB9D7C /* OverlordHouseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlordHouseSection.swift; sourceTree = "<group>"; };
+		CCA8F5252625940A00AB9D7C /* HouseNameAndTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseNameAndTitle.swift; sourceTree = "<group>"; };
+		CCA8F5262625940A00AB9D7C /* SingleHouseLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHouseLoadingView.swift; sourceTree = "<group>"; };
+		CCA8F5282625940A00AB9D7C /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
+		CCA8F5292625940A00AB9D7C /* HouseIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseIcon.swift; sourceTree = "<group>"; };
+		CCA8F52A2625940A00AB9D7C /* CharacterIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterIcon.swift; sourceTree = "<group>"; };
+		CCA8F52B2625940A00AB9D7C /* CircularColorDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularColorDisplay.swift; sourceTree = "<group>"; };
+		CCA8F52C2625940A00AB9D7C /* SettingsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
+		CCA8F52D2625940A00AB9D7C /* SearchSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSpinnerView.swift; sourceTree = "<group>"; };
+		CCA8F52E2625940A00AB9D7C /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCA8F3F72625856300AB9D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4082625856500AB9D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4132625856500AB9D7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCA8F3F12625856300AB9D7C = {
+			isa = PBXGroup;
+			children = (
+				CCA8F3FC2625856300AB9D7C /* HousesOfWesteros */,
+				CCA8F40E2625856500AB9D7C /* HousesOfWesterosTests */,
+				CCA8F4192625856500AB9D7C /* HousesOfWesterosUITests */,
+				CCA8F3FB2625856300AB9D7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCA8F3FB2625856300AB9D7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F3FA2625856300AB9D7C /* HousesOfWesteros.app */,
+				CCA8F40B2625856500AB9D7C /* HousesOfWesterosTests.xctest */,
+				CCA8F4162625856500AB9D7C /* HousesOfWesterosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCA8F3FC2625856300AB9D7C /* HousesOfWesteros */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F43E262585D600AB9D7C /* Api */,
+				CCA8F4542625860600AB9D7C /* AppDelegate */,
+				CCA8F42E262585D600AB9D7C /* Extensions */,
+				CCA8F43C262585D600AB9D7C /* Helpers */,
+				CCA8F435262585D600AB9D7C /* MockClasses */,
+				CCA8F437262585D600AB9D7C /* Models */,
+				CCA8F4032625856500AB9D7C /* Preview Content */,
+				CCA8F4582625861B00AB9D7C /* SupportingFiles */,
+				CCA8F4F72625940A00AB9D7C /* Views */,
+			);
+			path = HousesOfWesteros;
+			sourceTree = "<group>";
+		};
+		CCA8F4032625856500AB9D7C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4042625856500AB9D7C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCA8F40E2625856500AB9D7C /* HousesOfWesterosTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4112625856500AB9D7C /* Info.plist */,
+				CCA8F4E7262592E500AB9D7C /* HouseBasicTests.swift */,
+				CCA8F4E8262592E500AB9D7C /* StringExtensionTests.swift */,
+			);
+			path = HousesOfWesterosTests;
+			sourceTree = "<group>";
+		};
+		CCA8F4192625856500AB9D7C /* HousesOfWesterosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F41A2625856500AB9D7C /* Houses_of_WesterosUITests.swift */,
+				CCA8F41C2625856500AB9D7C /* Info.plist */,
+			);
+			path = HousesOfWesterosUITests;
+			sourceTree = "<group>";
+		};
+		CCA8F42E262585D600AB9D7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F432262585D600AB9D7C /* Array-Extension.swift */,
+				CCA8F431262585D600AB9D7C /* Color-Extension.swift */,
+				CCA8F42F262585D600AB9D7C /* Data-Extension.swift */,
+				CCA8F434262585D600AB9D7C /* String-Array-Extension.swift */,
+				CCA8F430262585D600AB9D7C /* String-Extension.swift */,
+				CCA8F433262585D600AB9D7C /* View-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCA8F435262585D600AB9D7C /* MockClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F436262585D600AB9D7C /* MockClasses.swift */,
+			);
+			path = MockClasses;
+			sourceTree = "<group>";
+		};
+		CCA8F437262585D600AB9D7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F438262585D600AB9D7C /* CharacterBasic.swift */,
+				CCA8F43B262585D600AB9D7C /* CharacterUpdated.swift */,
+				CCA8F439262585D600AB9D7C /* HouseBasic.swift */,
+				CCA8F43A262585D600AB9D7C /* HouseUpdated.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CCA8F43C262585D600AB9D7C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F43D262585D600AB9D7C /* ColorParser.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CCA8F43E262585D600AB9D7C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F440262585D700AB9D7C /* Api.swift */,
+				CCA8F441262585D700AB9D7C /* NetworkError.swift */,
+				CCA8F43F262585D700AB9D7C /* RequestMethod.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CCA8F4542625860600AB9D7C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F3FD2625856300AB9D7C /* HousesOfWesterosApp.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CCA8F4582625861B00AB9D7C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4DF2625914400AB9D7C /* LaunchScreen.storyboard */,
+				CCA8F4062625856500AB9D7C /* Info.plist */,
+				CCA8F4012625856500AB9D7C /* Assets.xcassets */,
+				CCA8F4C12625867D00AB9D7C /* Fonts */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CCA8F4C12625867D00AB9D7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4C22625867D00AB9D7C /* Game of Thrones.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CCA8F4F72625940A00AB9D7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5002625940A00AB9D7C /* AboutView */,
+				CCA8F4F82625940A00AB9D7C /* AllHousesView */,
+				CCA8F5022625940A00AB9D7C /* BaseView */,
+				CCA8F5042625940A00AB9D7C /* CharacterView */,
+				CCA8F5272625940A00AB9D7C /* ModularViews */,
+				CCA8F5102625940A00AB9D7C /* SingleHouseView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCA8F4F82625940A00AB9D7C /* AllHousesView */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4F92625940A00AB9D7C /* ViewModel */,
+				CCA8F4FB2625940A00AB9D7C /* AllHousesLoadingView.swift */,
+				CCA8F4FC2625940A00AB9D7C /* AllHousesView.swift */,
+				CCA8F4FD2625940A00AB9D7C /* Elements */,
+			);
+			path = AllHousesView;
+			sourceTree = "<group>";
+		};
+		CCA8F4F92625940A00AB9D7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4FA2625940A00AB9D7C /* AllHousesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCA8F4FD2625940A00AB9D7C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F4FE2625940A00AB9D7C /* SingleHouseCell.swift */,
+				CCA8F4FF2625940A00AB9D7C /* ErrorDisplay.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CCA8F5002625940A00AB9D7C /* AboutView */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5012625940A00AB9D7C /* AboutView.swift */,
+			);
+			path = AboutView;
+			sourceTree = "<group>";
+		};
+		CCA8F5022625940A00AB9D7C /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5032625940A00AB9D7C /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		CCA8F5042625940A00AB9D7C /* CharacterView */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5052625940A00AB9D7C /* Sections */,
+				CCA8F50D2625940A00AB9D7C /* CharacterView.swift */,
+				CCA8F50E2625940A00AB9D7C /* Elements */,
+			);
+			path = CharacterView;
+			sourceTree = "<group>";
+		};
+		CCA8F5052625940A00AB9D7C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5062625940A00AB9D7C /* PortrayedBySection.swift */,
+				CCA8F5072625940A00AB9D7C /* CharacterDeathSection.swift */,
+				CCA8F5082625940A00AB9D7C /* CultureSection.swift */,
+				CCA8F5092625940A00AB9D7C /* BornSection.swift */,
+				CCA8F50A2625940A00AB9D7C /* AliasesSection.swift */,
+				CCA8F50B2625940A00AB9D7C /* TvShowAppearancesSection.swift */,
+				CCA8F50C2625940A00AB9D7C /* CharacterTitlesSections.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		CCA8F50E2625940A00AB9D7C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F50F2625940A00AB9D7C /* CharacterTitle.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CCA8F5102625940A00AB9D7C /* SingleHouseView */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5112625940A00AB9D7C /* ViewModel */,
+				CCA8F5132625940A00AB9D7C /* SingleHouseView.swift */,
+				CCA8F5142625940A00AB9D7C /* Elements */,
+				CCA8F5262625940A00AB9D7C /* SingleHouseLoadingView.swift */,
+			);
+			path = SingleHouseView;
+			sourceTree = "<group>";
+		};
+		CCA8F5112625940A00AB9D7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5122625940A00AB9D7C /* SingleHouseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCA8F5142625940A00AB9D7C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5152625940A00AB9D7C /* Sections */,
+				CCA8F5252625940A00AB9D7C /* HouseNameAndTitle.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		CCA8F5152625940A00AB9D7C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5162625940A00AB9D7C /* HouseMottoSection.swift */,
+				CCA8F5172625940A00AB9D7C /* CurrentHeirSection.swift */,
+				CCA8F5182625940A00AB9D7C /* HeraldryColorsSection.swift */,
+				CCA8F5192625940A00AB9D7C /* CurrentLordSection.swift */,
+				CCA8F51A2625940A00AB9D7C /* ErrorSection.swift */,
+				CCA8F51B2625940A00AB9D7C /* TitlesSection.swift */,
+				CCA8F51C2625940A00AB9D7C /* FounderSection.swift */,
+				CCA8F51D2625940A00AB9D7C /* SwornMembersSection.swift */,
+				CCA8F51E2625940A00AB9D7C /* DiedOutSection.swift */,
+				CCA8F51F2625940A00AB9D7C /* CoatOfArmsSection.swift */,
+				CCA8F5202625940A00AB9D7C /* SeatsSection.swift */,
+				CCA8F5212625940A00AB9D7C /* AncestralWeaponsSection.swift */,
+				CCA8F5222625940A00AB9D7C /* CadetBranchesSection.swift */,
+				CCA8F5232625940A00AB9D7C /* FoundedSection.swift */,
+				CCA8F5242625940A00AB9D7C /* OverlordHouseSection.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		CCA8F5272625940A00AB9D7C /* ModularViews */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8F5282625940A00AB9D7C /* SettingsIcon.swift */,
+				CCA8F5292625940A00AB9D7C /* HouseIcon.swift */,
+				CCA8F52A2625940A00AB9D7C /* CharacterIcon.swift */,
+				CCA8F52B2625940A00AB9D7C /* CircularColorDisplay.swift */,
+				CCA8F52C2625940A00AB9D7C /* SettingsRow.swift */,
+				CCA8F52D2625940A00AB9D7C /* SearchSpinnerView.swift */,
+				CCA8F52E2625940A00AB9D7C /* SectionHeader.swift */,
+			);
+			path = ModularViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCA8F3F92625856300AB9D7C /* HousesOfWesteros */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA8F41F2625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesteros" */;
+			buildPhases = (
+				CCA8F3F62625856300AB9D7C /* Sources */,
+				CCA8F3F72625856300AB9D7C /* Frameworks */,
+				CCA8F3F82625856300AB9D7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HousesOfWesteros;
+			productName = "Houses of Westeros";
+			productReference = CCA8F3FA2625856300AB9D7C /* HousesOfWesteros.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCA8F40A2625856500AB9D7C /* HousesOfWesterosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA8F4222625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesterosTests" */;
+			buildPhases = (
+				CCA8F4072625856500AB9D7C /* Sources */,
+				CCA8F4082625856500AB9D7C /* Frameworks */,
+				CCA8F4092625856500AB9D7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA8F40D2625856500AB9D7C /* PBXTargetDependency */,
+			);
+			name = HousesOfWesterosTests;
+			productName = "Houses of WesterosTests";
+			productReference = CCA8F40B2625856500AB9D7C /* HousesOfWesterosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCA8F4152625856500AB9D7C /* HousesOfWesterosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCA8F4252625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesterosUITests" */;
+			buildPhases = (
+				CCA8F4122625856500AB9D7C /* Sources */,
+				CCA8F4132625856500AB9D7C /* Frameworks */,
+				CCA8F4142625856500AB9D7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCA8F4182625856500AB9D7C /* PBXTargetDependency */,
+			);
+			name = HousesOfWesterosUITests;
+			productName = "Houses of WesterosUITests";
+			productReference = CCA8F4162625856500AB9D7C /* HousesOfWesterosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCA8F3F22625856300AB9D7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CCA8F3F92625856300AB9D7C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CCA8F40A2625856500AB9D7C = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+						TestTargetID = CCA8F3F92625856300AB9D7C;
+					};
+					CCA8F4152625856500AB9D7C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CCA8F3F92625856300AB9D7C;
+					};
+				};
+			};
+			buildConfigurationList = CCA8F3F52625856300AB9D7C /* Build configuration list for PBXProject "HousesOfWesteros" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCA8F3F12625856300AB9D7C;
+			productRefGroup = CCA8F3FB2625856300AB9D7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCA8F3F92625856300AB9D7C /* HousesOfWesteros */,
+				CCA8F40A2625856500AB9D7C /* HousesOfWesterosTests */,
+				CCA8F4152625856500AB9D7C /* HousesOfWesterosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCA8F3F82625856300AB9D7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8F4052625856500AB9D7C /* Preview Assets.xcassets in Resources */,
+				CCA8F4E02625914400AB9D7C /* LaunchScreen.storyboard in Resources */,
+				CCA8F4022625856500AB9D7C /* Assets.xcassets in Resources */,
+				CCA8F4C32625867D00AB9D7C /* Game of Thrones.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4092625856500AB9D7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4142625856500AB9D7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCA8F3F62625856300AB9D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8F5462625940A00AB9D7C /* TitlesSection.swift in Sources */,
+				CCA8F5302625940A00AB9D7C /* AllHousesLoadingView.swift in Sources */,
+				CCA8F5392625940A00AB9D7C /* BornSection.swift in Sources */,
+				CCA8F5512625940A00AB9D7C /* SingleHouseLoadingView.swift in Sources */,
+				CCA8F54D2625940A00AB9D7C /* CadetBranchesSection.swift in Sources */,
+				CCA8F5372625940A00AB9D7C /* CharacterDeathSection.swift in Sources */,
+				CCA8F450262585D700AB9D7C /* NetworkError.swift in Sources */,
+				CCA8F5342625940A00AB9D7C /* AboutView.swift in Sources */,
+				CCA8F44B262585D700AB9D7C /* HouseUpdated.swift in Sources */,
+				CCA8F5532625940A00AB9D7C /* HouseIcon.swift in Sources */,
+				CCA8F5412625940A00AB9D7C /* HouseMottoSection.swift in Sources */,
+				CCA8F54E2625940A00AB9D7C /* FoundedSection.swift in Sources */,
+				CCA8F448262585D700AB9D7C /* MockClasses.swift in Sources */,
+				CCA8F3FE2625856300AB9D7C /* HousesOfWesterosApp.swift in Sources */,
+				CCA8F54A2625940A00AB9D7C /* CoatOfArmsSection.swift in Sources */,
+				CCA8F443262585D700AB9D7C /* String-Extension.swift in Sources */,
+				CCA8F52F2625940A00AB9D7C /* AllHousesViewModel.swift in Sources */,
+				CCA8F53A2625940A00AB9D7C /* AliasesSection.swift in Sources */,
+				CCA8F5442625940A00AB9D7C /* CurrentLordSection.swift in Sources */,
+				CCA8F44C262585D700AB9D7C /* CharacterUpdated.swift in Sources */,
+				CCA8F5332625940A00AB9D7C /* ErrorDisplay.swift in Sources */,
+				CCA8F5572625940A00AB9D7C /* SearchSpinnerView.swift in Sources */,
+				CCA8F446262585D700AB9D7C /* View-Extension.swift in Sources */,
+				CCA8F447262585D700AB9D7C /* String-Array-Extension.swift in Sources */,
+				CCA8F5402625940A00AB9D7C /* SingleHouseView.swift in Sources */,
+				CCA8F5322625940A00AB9D7C /* SingleHouseCell.swift in Sources */,
+				CCA8F5382625940A00AB9D7C /* CultureSection.swift in Sources */,
+				CCA8F5472625940A00AB9D7C /* FounderSection.swift in Sources */,
+				CCA8F5312625940A00AB9D7C /* AllHousesView.swift in Sources */,
+				CCA8F449262585D700AB9D7C /* CharacterBasic.swift in Sources */,
+				CCA8F445262585D700AB9D7C /* Array-Extension.swift in Sources */,
+				CCA8F5542625940A00AB9D7C /* CharacterIcon.swift in Sources */,
+				CCA8F444262585D700AB9D7C /* Color-Extension.swift in Sources */,
+				CCA8F53D2625940A00AB9D7C /* CharacterView.swift in Sources */,
+				CCA8F53B2625940A00AB9D7C /* TvShowAppearancesSection.swift in Sources */,
+				CCA8F53C2625940A00AB9D7C /* CharacterTitlesSections.swift in Sources */,
+				CCA8F442262585D700AB9D7C /* Data-Extension.swift in Sources */,
+				CCA8F44D262585D700AB9D7C /* ColorParser.swift in Sources */,
+				CCA8F5432625940A00AB9D7C /* HeraldryColorsSection.swift in Sources */,
+				CCA8F5352625940A00AB9D7C /* BaseView.swift in Sources */,
+				CCA8F5582625940A00AB9D7C /* SectionHeader.swift in Sources */,
+				CCA8F5482625940A00AB9D7C /* SwornMembersSection.swift in Sources */,
+				CCA8F53F2625940A00AB9D7C /* SingleHouseViewModel.swift in Sources */,
+				CCA8F5492625940A00AB9D7C /* DiedOutSection.swift in Sources */,
+				CCA8F44E262585D700AB9D7C /* RequestMethod.swift in Sources */,
+				CCA8F5422625940A00AB9D7C /* CurrentHeirSection.swift in Sources */,
+				CCA8F54C2625940A00AB9D7C /* AncestralWeaponsSection.swift in Sources */,
+				CCA8F5562625940A00AB9D7C /* SettingsRow.swift in Sources */,
+				CCA8F5502625940A00AB9D7C /* HouseNameAndTitle.swift in Sources */,
+				CCA8F5552625940A00AB9D7C /* CircularColorDisplay.swift in Sources */,
+				CCA8F5362625940A00AB9D7C /* PortrayedBySection.swift in Sources */,
+				CCA8F54F2625940A00AB9D7C /* OverlordHouseSection.swift in Sources */,
+				CCA8F44F262585D700AB9D7C /* Api.swift in Sources */,
+				CCA8F5452625940A00AB9D7C /* ErrorSection.swift in Sources */,
+				CCA8F53E2625940A00AB9D7C /* CharacterTitle.swift in Sources */,
+				CCA8F44A262585D700AB9D7C /* HouseBasic.swift in Sources */,
+				CCA8F54B2625940A00AB9D7C /* SeatsSection.swift in Sources */,
+				CCA8F5522625940A00AB9D7C /* SettingsIcon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4072625856500AB9D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8F4EA262592E500AB9D7C /* StringExtensionTests.swift in Sources */,
+				CCA8F4E9262592E500AB9D7C /* HouseBasicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCA8F4122625856500AB9D7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA8F41B2625856500AB9D7C /* Houses_of_WesterosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCA8F40D2625856500AB9D7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA8F3F92625856300AB9D7C /* HousesOfWesteros */;
+			targetProxy = CCA8F40C2625856500AB9D7C /* PBXContainerItemProxy */;
+		};
+		CCA8F4182625856500AB9D7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCA8F3F92625856300AB9D7C /* HousesOfWesteros */;
+			targetProxy = CCA8F4172625856500AB9D7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CCA8F41D2625856500AB9D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCA8F41E2625856500AB9D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCA8F4202625856500AB9D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/Preview Content\"";
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-Westeros";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCA8F4212625856500AB9D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/Preview Content\"";
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-Westeros";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CCA8F4232625856500AB9D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-WesterosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HousesOfWesteros.app/HousesOfWesteros";
+			};
+			name = Debug;
+		};
+		CCA8F4242625856500AB9D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-WesterosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HousesOfWesteros.app/HousesOfWesteros";
+			};
+			name = Release;
+		};
+		CCA8F4262625856500AB9D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				INFOPLIST_FILE = HousesOfWesterosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-WesterosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Houses of Westeros";
+			};
+			name = Debug;
+		};
+		CCA8F4272625856500AB9D7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				INFOPLIST_FILE = HousesOfWesterosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matthiaszarzecki.Houses-of-WesterosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Houses of Westeros";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCA8F3F52625856300AB9D7C /* Build configuration list for PBXProject "HousesOfWesteros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA8F41D2625856500AB9D7C /* Debug */,
+				CCA8F41E2625856500AB9D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA8F41F2625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesteros" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA8F4202625856500AB9D7C /* Debug */,
+				CCA8F4212625856500AB9D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA8F4222625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesterosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA8F4232625856500AB9D7C /* Debug */,
+				CCA8F4242625856500AB9D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCA8F4252625856500AB9D7C /* Build configuration list for PBXNativeTarget "HousesOfWesterosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCA8F4262625856500AB9D7C /* Debug */,
+				CCA8F4272625856500AB9D7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCA8F3F22625856300AB9D7C /* Project object */;
+}
