@@ -72,6 +72,7 @@
 		CC0E1E7E262597D800C285D8 /* CharacterUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3F262597D800C285D8 /* CharacterUpdated.swift */; };
 		CC0E1E8D2625981000C285D8 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E8B2625981000C285D8 /* StringExtensionTests.swift */; };
 		CC0E1E8E2625981000C285D8 /* HouseBasicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E8C2625981000C285D8 /* HouseBasicTests.swift */; };
+		CC52917226272E4700411AF7 /* URLResponse-Optional-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52917126272E4700411AF7 /* URLResponse-Optional-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +164,7 @@
 		CC0E1E3F262597D800C285D8 /* CharacterUpdated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterUpdated.swift; sourceTree = "<group>"; };
 		CC0E1E8B2625981000C285D8 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		CC0E1E8C2625981000C285D8 /* HouseBasicTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseBasicTests.swift; sourceTree = "<group>"; };
+		CC52917126272E4700411AF7 /* URLResponse-Optional-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse-Optional-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				CC0E1DEB262597D700C285D8 /* Data-Extension.swift */,
 				CC0E1DF0262597D700C285D8 /* String-Array-Extension.swift */,
 				CC0E1DEC262597D700C285D8 /* String-Extension.swift */,
+				CC52917126272E4700411AF7 /* URLResponse-Optional-Extension.swift */,
 				CC0E1DEF262597D700C285D8 /* View-Extension.swift */,
 			);
 			path = Extensions;
@@ -649,6 +652,7 @@
 				CC0E1E4E262597D800C285D8 /* ErrorDisplay.swift in Sources */,
 				CC0E1E67262597D800C285D8 /* AncestralWeaponsSection.swift in Sources */,
 				CC0E1E5C262597D800C285D8 /* HouseMottoSection.swift in Sources */,
+				CC52917226272E4700411AF7 /* URLResponse-Optional-Extension.swift in Sources */,
 				CC0E1E4F262597D800C285D8 /* AboutView.swift in Sources */,
 				CC0E1E7E262597D800C285D8 /* CharacterUpdated.swift in Sources */,
 				CC0E1E7A262597D800C285D8 /* NetworkError.swift in Sources */,

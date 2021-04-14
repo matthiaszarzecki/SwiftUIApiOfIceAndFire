@@ -52,12 +52,10 @@ struct Api {
     
     URLSession.shared.dataTask(with: request) { (data, response, _) in
       // When the response is not a code 200 (success), return an error.
-      if let httpResponse = response as? HTTPURLResponse {
-        if httpResponse.statusCode != 200 {
-          completion(.failure(.requestFailed))
-        }
+      if response.statusCode != 200 {
+        completion(.failure(.requestFailed))
       }
-      
+
       // Call succesful. Proceed with decoding the json-response.
       let result = try! JSONDecoder().decode(T.self, from: data!)
       DispatchQueue.main.async {
