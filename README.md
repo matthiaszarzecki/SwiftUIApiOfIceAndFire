@@ -21,6 +21,7 @@ Contains:
 - CI with BitRise
 - Unit-Tests
 - Detailed comments
+- Custom color-parser to create custom icons per house
 
 Todo:
 - Tap tabbar icons to reset view
