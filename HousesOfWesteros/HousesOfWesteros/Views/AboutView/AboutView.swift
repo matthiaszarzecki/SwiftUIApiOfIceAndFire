@@ -29,7 +29,7 @@ struct AboutView: View {
     }) {
       SettingsRow(
         systemIcon: "square.grid.2x2.fill",
-        text: "Our Apps & Games"
+        text: "More Apps & Games"
       )
     }
   }
