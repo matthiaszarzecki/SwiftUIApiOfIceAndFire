@@ -8,4 +8,29 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 ![screenshot](media/screenshot_10.png)
 ![screenshot](media/screenshot_11.png)
 
+Contains:
+- SwiftUI
+- Combine
+- Pagination
+- Nested API-Calls
+- Graceful Failure
+- Detailed House-Views
+- Detailed Character-View
+- List of all Houses
+- Error-Handling
+- CI with BitRise
+- Unit-Tests
+- Detailed comments
+
+Todo:
+- Tap tabbar icons to reset view
+- Combine Api Calls also on singular calls
+- RealmDB Caching
+- Major Houses Display
+- House of the Day View
+- Actor Images through IMDB
+- More Unit-Tests
+- Monkey-Tests
+- UI-Tests
+
 Created by Matthias Zarzecki, 2021-01
