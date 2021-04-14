@@ -14,14 +14,15 @@ Contains:
 - Pagination
 - Nested API-Calls
 - Graceful Failure
+- MVVM Architecture
 - Detailed House-Views
 - Detailed Character-View
 - List of all Houses
-- Error-Handling
+- Elegant in-view error-handling (no popups!)
 - CI with BitRise
 - Unit-Tests
 - Detailed comments
-- Custom color-parser to create custom icons per house
+- Custom color-parser to create icons per house
 
 Todo:
 - Tap tabbar icons to reset view
