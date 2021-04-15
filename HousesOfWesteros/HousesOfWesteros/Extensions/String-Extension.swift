@@ -16,7 +16,9 @@ extension String {
   /// Allows to access characters as strings
   /// via array-index, e.g. "hello[2]".
   subscript (index: Int) -> String {
-    if self.isEmpty {
+    // When string is empty or index is out
+    // of bounds return empty emptry string.
+    if self.isEmpty || index >= self.count || index < 0 {
       return ""
     } else {
       return String(self[self.index(self.startIndex, offsetBy: index)])
