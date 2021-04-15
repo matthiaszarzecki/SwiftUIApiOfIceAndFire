@@ -119,4 +119,28 @@ class StringExtensionTests: XCTestCase {
     // THEN an empty string is returned
     XCTAssertEqual(result, "")
   }
+  
+  // MARK: - First Tests
+  
+  func testFirst() {
+    // GIVEN a string
+    let character = "Delonne Allyrion"
+    
+    // WHEN we call the "first" computed variable
+    let result = character.first
+    
+    // THEN the first character is returned
+    XCTAssertEqual(result, "D")
+  }
+  
+  func testFirstOnEmptyString() {
+    // GIVEN an empty string
+    let character = ""
+    
+    // WHEN we call the "first" computed variable
+    let result = character.first
+    
+    // THEN an empty string is returned
+    XCTAssertEqual(result, "")
+  }
 }

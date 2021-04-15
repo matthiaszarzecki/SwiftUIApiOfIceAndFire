@@ -8,7 +8,8 @@
 import Foundation
 
 extension String {
-  /// Returns the first character as String.
+  /// Returns the first character as String. Returns
+  /// an empty string when called on an empty string.
   var first: String {
     return self[0]
   }
