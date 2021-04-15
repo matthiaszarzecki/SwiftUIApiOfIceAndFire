@@ -8,7 +8,7 @@
 import Foundation
 
 /// Contains all data related to a Character in ASOIAF.
-struct CharacterBasic: Codable, Hashable {
+struct CharacterBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
   
