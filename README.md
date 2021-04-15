@@ -20,10 +20,11 @@ Contains:
 - Detailed Character-View
 - List of all Houses
 - Elegant in-view error-handling (no popups!)
-- CI with BitRise
+- Continuous Integration with BitRise
 - Unit-Tests
 - Detailed comments
-- Custom color-parser to create icons per house
+- Custom color-parser to create icons per house from description of the Coat of Arms
+- Small Screen Support
 
 Todo:
 - Fetch nested data for Characters
