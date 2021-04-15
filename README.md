@@ -10,7 +10,8 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 
 Contains:
 - SwiftUI
-- Combine
+- Combine-Subscriptions
+- Generic Native API Calls
 - Pagination
 - Nested API-Calls
 - Graceful Failure
@@ -25,8 +26,9 @@ Contains:
 - Custom color-parser to create icons per house
 
 Todo:
+- Fetch nested data for Characters
 - Tap tabbar icons to reset view
-- Combine Api Calls also on singular calls
+- Replace generic native calls with combine-subscriptions
 - RealmDB Caching
 - Major Houses Display
 - House of the Day View
