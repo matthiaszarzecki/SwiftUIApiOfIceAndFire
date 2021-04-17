@@ -25,6 +25,7 @@ Contains:
 - Detailed comments
 - Custom color-parser to create icons per house from description of the Coat of Arms
 - Small Screen Support
+- Extensive SwiftUI Previews
 
 Todo:
 - Fetch nested data for Characters

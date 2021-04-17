@@ -23,6 +23,7 @@ struct CurrentHeirSection: View {
             
             if character.hasActor {
               Image(systemName: "person")
+                .foregroundColor(.westerosRed)
             }
           }
         }

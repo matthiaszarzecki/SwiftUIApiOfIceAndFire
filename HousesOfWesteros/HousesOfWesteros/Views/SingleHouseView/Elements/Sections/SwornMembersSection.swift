@@ -33,6 +33,7 @@ struct SwornMembersSection: View {
               
               if character.hasActor {
                 Image(systemName: "person")
+                  .foregroundColor(.westerosRed)
               }
             }
           }

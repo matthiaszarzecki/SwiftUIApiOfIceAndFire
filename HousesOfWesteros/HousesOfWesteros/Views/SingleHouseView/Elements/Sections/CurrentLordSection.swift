@@ -23,6 +23,7 @@ struct CurrentLordSection: View {
             
             if character.hasActor {
               Image(systemName: "person")
+                .foregroundColor(.westerosRed)
             }
           }
         }
