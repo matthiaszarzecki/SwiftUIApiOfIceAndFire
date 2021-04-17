@@ -37,5 +37,7 @@ Todo:
 - More Unit-Tests
 - Monkey-Tests
 - UI-Tests
+- Dark Color Scheme & switching
+- Automated test for error-handling
 
 Created by Matthias Zarzecki, 2021-01
