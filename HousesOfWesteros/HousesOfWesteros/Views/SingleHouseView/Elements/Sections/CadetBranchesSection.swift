@@ -31,6 +31,11 @@ struct CadetBranchesSection: View {
                 size: 32
               )
               Text("\(cadetBranch.name)")
+              
+              if house.containsSubViews {
+                Image(systemName: "link")
+                  .foregroundColor(.westerosRed)
+              }
             }
           }
         }

@@ -21,6 +21,11 @@ struct OverlordHouseSection: View {
               size: 24
             )
             Text("\(overlordHouse.name)")
+            
+            if house.containsSubViews {
+              Image(systemName: "link")
+                .foregroundColor(.westerosRed)
+            }
           }
         }
       }

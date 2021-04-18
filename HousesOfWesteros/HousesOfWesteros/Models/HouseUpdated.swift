@@ -23,11 +23,19 @@ struct HouseUpdated {
   let diedOutPeriod: String
   let ancestralWeapons: [String]
   
-  /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
+  /// The colors mentioned in the
+  /// Coat of Arms, as SwiftUI Colors.
   let heraldryColors: [Color]
   
-  /// The initial letter of the House-name without "House " prefixed.
+  /// The initial letter of the House
+  /// name without "House " prefixed.
   let initialLetter: String
+  
+  /// A Boolean indicating whether a
+  /// subview is linked from this house.
+  /// Is initialed from "containsLinks"
+  /// value from HouseBasic.
+  let containsSubViews: Bool
   
   var currentLord: CharacterBasic?
   var heir: CharacterBasic?
@@ -62,6 +70,7 @@ struct HouseUpdated {
     ancestralWeapons = house.ancestralWeapons
     heraldryColors = house.heraldryColors
     initialLetter = house.initialLetter
+    containsSubViews = house.containsLinks
     
     self.currentLord = currentLord
     self.heir = heir
