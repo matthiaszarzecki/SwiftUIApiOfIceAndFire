@@ -11,7 +11,8 @@ import SwiftUI
 /// The house-data but with the URL's called
 /// and replaced by their corresponding data.
 struct HouseUpdated {
-  let id: String
+  let id: Int
+  let url: String
   let name: String
   let region: String
   let coatOfArms: String
@@ -35,6 +36,10 @@ struct HouseUpdated {
   var cadetBranches: [HouseBasic]?
   var swornMembers: [CharacterBasic]?
   
+  var isGreatHouse: Bool {
+    return Constants.greatHouses.contains(id)
+  }
+  
   init(
     fromHouse house: HouseBasic,
     currentLord: CharacterBasic? = nil,
@@ -45,6 +50,7 @@ struct HouseUpdated {
     swornMembers: [CharacterBasic]? = nil
   ) {
     id = house.id
+    url = house.url
     name = house.name
     region = house.region
     coatOfArms = house.coatOfArms

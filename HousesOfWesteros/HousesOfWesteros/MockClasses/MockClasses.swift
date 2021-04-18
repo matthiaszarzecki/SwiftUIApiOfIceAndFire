@@ -33,7 +33,7 @@ struct MockClasses {
   ]
   
   static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/290",
+    url: "https://www.anapioficeandfire.com/api/house/290",
     name: houseName,
     region: houseRegion,
     coatOfArms: coatOfArms,
@@ -52,7 +52,7 @@ struct MockClasses {
   )
   
   static let houseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/291",
+    url: "https://www.anapioficeandfire.com/api/house/291",
     name: houseName,
     region: houseRegion,
     coatOfArms: "",
@@ -71,7 +71,7 @@ struct MockClasses {
   )
   
   static let houseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/292",
+    url: "https://www.anapioficeandfire.com/api/house/292",
     name: houseName,
     region: houseRegion,
     coatOfArms: coatOfArms,
@@ -90,7 +90,7 @@ struct MockClasses {
   )
   
   static let houseBasicWithoutLinksAndWithoutCoatOfArms = HouseBasic(
-    id: "https://www.anapioficeandfire.com/api/house/293",
+    url: "https://www.anapioficeandfire.com/api/house/293",
     name: houseName,
     region: houseRegion,
     coatOfArms: "",
