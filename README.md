@@ -19,15 +19,17 @@ Contains:
 - Detailed House-View
 - Detailed Character-View
 - List of all Houses
-- Elegant in-view error-handling (no popups!)
+- Elegant in-view error-handling on SingleHouse and Character Views (no popups!)
 - Continuous Integration with BitRise
 - Unit-Tests
 - Detailed comments
 - Custom color-parser to create icons per house from description of the Coat of Arms
 - Small Screen Support
 - Extensive SwiftUI Previews
+- Skeleton Loading View
 
 Todo:
+- Timeout on Main Screen
 - Fetch nested data for Characters
 - Tap tabbar icons to reset view
 - Replace generic native calls with combine-subscriptions
