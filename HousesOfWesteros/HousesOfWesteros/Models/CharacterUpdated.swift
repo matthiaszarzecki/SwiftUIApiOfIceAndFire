@@ -13,6 +13,7 @@ import SwiftUI
 struct CharacterUpdated {
   let id: String
   let name: String
+  let displayName: String
   let culture: String
   let born: String
   let died: String
@@ -26,6 +27,7 @@ struct CharacterUpdated {
   ) {
     id = character.id
     name = character.name
+    displayName = character.displayName
     culture = character.culture
     born = character.born
     died = character.died

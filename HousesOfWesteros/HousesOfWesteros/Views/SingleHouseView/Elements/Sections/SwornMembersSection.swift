@@ -29,7 +29,7 @@ struct SwornMembersSection: View {
                 initialLetter: character.initialLetter,
                 size: 24
               )
-              Text("\(character.name)")
+              Text("\(character.displayName)")
               
               if character.hasActor {
                 Image(systemName: "person")

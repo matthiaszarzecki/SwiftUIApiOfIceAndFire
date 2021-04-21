@@ -11,7 +11,7 @@ struct CharacterTitle: View {
   var character: CharacterBasic
   
   var body: some View {
-    Text("\(character.name)")
+    Text("\(character.displayName)")
       .font(.title)
   }
 }

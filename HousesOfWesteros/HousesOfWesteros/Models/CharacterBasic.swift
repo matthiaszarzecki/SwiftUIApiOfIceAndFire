@@ -15,6 +15,9 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   // The identifier for this house. Is also the direct URL to its
   // data. Must be named "id" to conform to the identifiable protocol.
   let id: String
+  
+  /// Name of the character. Use displayName
+  /// instead when using name for display.
   let name: String
   let culture: String
   let born: String
@@ -33,13 +36,23 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   let hasPointOfViewChaptersInBooks: [String]
   
   var initialLetter: String {
-    return name.first
+    return displayName.first
   }
   
   /// A boolean indicating whether this
   /// character was portayed by an actor.
   var hasActor: Bool {
     return portrayedBy.hasNonEmptyEntries
+  }
+  
+  /// Returns the name of the character. If
+  /// the name is empty tries to return an
+  /// alias. Returns empty string otherwise.
+  var displayName: String {
+    if name == "" && aliases.hasNonEmptyEntries {
+      return aliases.first ?? name
+    }
+    return name
   }
   
   enum CodingKeys: String, CodingKey {
