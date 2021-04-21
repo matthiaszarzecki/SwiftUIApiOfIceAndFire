@@ -218,14 +218,6 @@
 			path = HouseBasicTests.swift;
 			sourceTree = "<group>";
 		};
-		6E9FF7B6262CCBBF00CA7743 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				6E9FF7B1262CCB7900CA7743 /* Constants.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		6EAC70202630B22C00988D47 /* ColorParserTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +251,6 @@
 			children = (
 				CC0E1E37262597D800C285D8 /* Api */,
 				CC0E1E2F262597D800C285D8 /* AppDelegate */,
-				6E9FF7B6262CCBBF00CA7743 /* Constants */,
 				CC0E1DEA262597D700C285D8 /* Extensions */,
 				CC0E1E35262597D800C285D8 /* Helpers */,
 				CC0E1E33262597D800C285D8 /* MockClasses */,
@@ -505,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0E1E36262597D800C285D8 /* ColorParser.swift */,
+				6E9FF7B1262CCB7900CA7743 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
