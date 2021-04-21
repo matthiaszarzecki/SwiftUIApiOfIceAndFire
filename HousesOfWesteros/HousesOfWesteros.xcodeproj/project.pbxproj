@@ -318,12 +318,12 @@
 		CC0E1DF7262597D800C285D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E1DF8262597D800C285D8 /* AllHousesView */,
 				CC0E1E00262597D800C285D8 /* AboutView */,
+				CC0E1DF8262597D800C285D8 /* AllHousesView */,
 				CC0E1E02262597D800C285D8 /* BaseView */,
 				CC0E1E04262597D800C285D8 /* CharacterView */,
-				CC0E1E10262597D800C285D8 /* SingleHouseView */,
 				CC0E1E27262597D800C285D8 /* ModularViews */,
+				CC0E1E10262597D800C285D8 /* SingleHouseView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

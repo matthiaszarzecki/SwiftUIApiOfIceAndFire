@@ -89,6 +89,17 @@ struct AboutView: View {
     }
   }
   
+  var apiLink: some View {
+    Link(
+      destination: URL(string: "https://anapioficeandfire.com/")!
+    ) {
+      SettingsRow(
+        systemIcon: "chevron.left.slash.chevron.right",
+        text: "The Api of Ice and Fire"
+      )
+    }
+  }
+  
   var appVersion: some View {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
     return VStack {
@@ -99,20 +110,32 @@ struct AboutView: View {
   var body: some View {
     NavigationView {
       Form {
-        Section(header: SectionHeader(text: "About")) {
+        Section(
+          header: SectionHeader(text: "About")
+        ) {
           shareRow
           appsAndGamesRow
         }
         
-        Section(header: SectionHeader(text: "Follow Us")) {
+        Section(
+          header: SectionHeader(text: "Follow Us")
+        ) {
           twitterLink
           githubLink
           youtubeLink
           linkedInLink
         }
         
-        Section(header: SectionHeader(text: "Developed by")) {
+        Section(
+          header: SectionHeader(text: "Developed by")
+        ) {
           developedByLink
+        }
+        
+        Section(
+          header: SectionHeader(text: "Based on")
+        ) {
+          apiLink
         }
         
         appVersion
