@@ -11,7 +11,7 @@ struct MockClasses {
   static let characterLink = "https://www.anapioficeandfire.com/api/characters/298"
   static let houseLink = "https://www.anapioficeandfire.com/api/houses/285"
   
-  static let houseName = "House Allyrion of Godsgrace"
+  static let houseName = "House Goodbrother of Crow Spike Keep"
   static let houseRegion = "Dorne"
   static let coatOfArms = "Gyronny Gules and Sable, a hand couped Or"
   static let motto = "No Foe May Pass"

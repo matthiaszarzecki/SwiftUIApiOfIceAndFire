@@ -28,18 +28,16 @@ struct SingleHouseDisplay: View {
   let houseUpdated: HouseUpdated?
   let showError: Bool
   let updateData: () -> Void
-  
+
   var body: some View {
     if let unwrappedHouseUpdated = houseUpdated {
       return AnyView(
         GeometryReader { geometry in
           VStack {
-            HouseNameAndTitle(house: unwrappedHouseUpdated)
-              .frame(width: geometry.size.width - 16*2, height: 10, alignment: .center)
-              
-              // Move everything upwards to counter the
-              // auto-padding in a NavigationView.
-              .offset(y: -20)
+            HouseNameAndTitle(
+              house: unwrappedHouseUpdated,
+              width: geometry.size.width - 16*2
+            )
             
             Form {
               Group {

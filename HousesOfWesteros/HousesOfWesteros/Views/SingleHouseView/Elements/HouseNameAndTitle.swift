@@ -9,12 +9,15 @@ import SwiftUI
 
 struct HouseNameAndTitle: View {
   var house: HouseUpdated
+  var width: CGFloat
   
   var body: some View {
     return VStack {
       if house.name.exists {
         Text("\(house.name)")
-          .font(.title)
+          .font(.system(size: 200))
+          .minimumScaleFactor(0.1)
+          .frame(width: width, height: 40, alignment: .center)
       }
       
       if house.region.exists {
@@ -22,13 +25,27 @@ struct HouseNameAndTitle: View {
           .padding(.bottom, 16)
       }
     }
+    
+    // In order for this to look good on the view above
+    // on top of a Form this needs to be super-small and
+    // offset to the top.
+    .frame(width: width, height: 10, alignment: .center)
+    
+    // Move everything upwards to counter the
+    // auto-padding in a NavigationView.
+    .offset(y: -20)
   }
 }
 
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
-    HouseNameAndTitle(house: MockClasses.houseUpdatedWithLinks)
-      .padding()
-      .previewLayout(.sizeThatFits)
+    GeometryReader { geometry in
+      HouseNameAndTitle(
+        house: MockClasses.houseUpdatedWithLinks,
+        width: geometry.size.width
+      )
+      
+    }
+    .previewLayout(.sizeThatFits)
   }
 }
