@@ -46,12 +46,16 @@ struct AllHousesDisplay: View {
       // that tanks the performance.
       List {
         ForEach(fetchResults) { house in
-          SingleHouseCell(house: house)
-            .onAppear {
-              if self.fetchResults.last == house {
-                self.onScrolledAtBottom()
-              }
+          NavigationLink(
+            destination: SingleHouseView(houseBasic: house)
+          ) {
+            HouseCellBasic(house: house, iconSize: 32)
+          }
+          .onAppear {
+            if self.fetchResults.last == house {
+              self.onScrolledAtBottom()
             }
+          }
         }
         
         if isLoading {

@@ -12,21 +12,12 @@ struct OverlordHouseSection: View {
   
   var body: some View {
     if let overlordHouse = house.overlordHouse {
-      Section(header: SectionHeader(text: "Overlord")) {
-        NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)) {
-          HStack {
-            HouseIcon(
-              colors: overlordHouse.heraldryColors,
-              initialLetter: overlordHouse.initialLetter,
-              size: 24
-            )
-            Text("\(overlordHouse.name)")
-            
-            if house.containsSubViews {
-              Image(systemName: "link")
-                .foregroundColor(.westerosRed)
-            }
-          }
+      Section(
+        header: SectionHeader(text: "Overlord")
+      ) {
+        NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)
+        ) {
+          HouseCellUpdated(house: house)
         }
       }
     }

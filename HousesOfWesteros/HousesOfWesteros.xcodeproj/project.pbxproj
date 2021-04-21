@@ -12,6 +12,7 @@
 		6E9FF7B2262CCB7900CA7743 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF7B1262CCB7900CA7743 /* Constants.swift */; };
 		6EAC701C2630AEB800988D47 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC701B2630AEB800988D47 /* ColorParserTests.swift */; };
 		6EAC70312630C8E600988D47 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC70302630C8E600988D47 /* CharacterCell.swift */; };
+		6EAC70362630CB0500988D47 /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC70352630CB0500988D47 /* HouseCell.swift */; };
 		CC0E1DD7262597B200C285D8 /* HousesOfWesterosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DD6262597B200C285D8 /* HousesOfWesterosUITests.swift */; };
 		CC0E1E40262597D800C285D8 /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEB262597D700C285D8 /* Data-Extension.swift */; };
 		CC0E1E41262597D800C285D8 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEC262597D700C285D8 /* String-Extension.swift */; };
@@ -25,7 +26,6 @@
 		CC0E1E4A262597D800C285D8 /* AllHousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DFA262597D800C285D8 /* AllHousesViewModel.swift */; };
 		CC0E1E4B262597D800C285D8 /* AllHousesLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DFB262597D800C285D8 /* AllHousesLoadingView.swift */; };
 		CC0E1E4C262597D800C285D8 /* AllHousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DFC262597D800C285D8 /* AllHousesView.swift */; };
-		CC0E1E4D262597D800C285D8 /* SingleHouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DFE262597D800C285D8 /* SingleHouseCell.swift */; };
 		CC0E1E4E262597D800C285D8 /* ErrorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DFF262597D800C285D8 /* ErrorDisplay.swift */; };
 		CC0E1E4F262597D800C285D8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E01262597D800C285D8 /* AboutView.swift */; };
 		CC0E1E50262597D800C285D8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E03262597D800C285D8 /* BaseView.swift */; };
@@ -103,6 +103,7 @@
 		6E9FF7B1262CCB7900CA7743 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6EAC701B2630AEB800988D47 /* ColorParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
 		6EAC70302630C8E600988D47 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		6EAC70352630CB0500988D47 /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
 		CC0E1DB6262597B000C285D8 /* HousesOfWesteros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfWesteros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0E1DC7262597B200C285D8 /* HousesOfWesterosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesOfWesterosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0E1DCD262597B200C285D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +123,6 @@
 		CC0E1DFA262597D800C285D8 /* AllHousesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesViewModel.swift; sourceTree = "<group>"; };
 		CC0E1DFB262597D800C285D8 /* AllHousesLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesLoadingView.swift; sourceTree = "<group>"; };
 		CC0E1DFC262597D800C285D8 /* AllHousesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllHousesView.swift; sourceTree = "<group>"; };
-		CC0E1DFE262597D800C285D8 /* SingleHouseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleHouseCell.swift; sourceTree = "<group>"; };
 		CC0E1DFF262597D800C285D8 /* ErrorDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplay.swift; sourceTree = "<group>"; };
 		CC0E1E01262597D800C285D8 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CC0E1E03262597D800C285D8 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -353,7 +353,6 @@
 			isa = PBXGroup;
 			children = (
 				CC0E1DFF262597D800C285D8 /* ErrorDisplay.swift */,
-				CC0E1DFE262597D800C285D8 /* SingleHouseCell.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -459,14 +458,15 @@
 		CC0E1E27262597D800C285D8 /* ModularViews */ = {
 			isa = PBXGroup;
 			children = (
+				6EAC70302630C8E600988D47 /* CharacterCell.swift */,
 				CC0E1E2A262597D800C285D8 /* CharacterIcon.swift */,
 				CC0E1E2B262597D800C285D8 /* CircularColorDisplay.swift */,
+				6EAC70352630CB0500988D47 /* HouseCell.swift */,
 				CC0E1E29262597D800C285D8 /* HouseIcon.swift */,
 				CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */,
 				CC0E1E2E262597D800C285D8 /* SectionHeader.swift */,
 				CC0E1E28262597D800C285D8 /* SettingsIcon.swift */,
 				CC0E1E2C262597D800C285D8 /* SettingsRow.swift */,
-				6EAC70302630C8E600988D47 /* CharacterCell.swift */,
 			);
 			path = ModularViews;
 			sourceTree = "<group>";
@@ -660,7 +660,6 @@
 				CC0E1E78262597D800C285D8 /* RequestMethod.swift in Sources */,
 				CC0E1E5F262597D800C285D8 /* CurrentLordSection.swift in Sources */,
 				CC0E1E79262597D800C285D8 /* Api.swift in Sources */,
-				CC0E1E4D262597D800C285D8 /* SingleHouseCell.swift in Sources */,
 				CC0E1E52262597D800C285D8 /* CharacterDeathSection.swift in Sources */,
 				CC0E1E71262597D800C285D8 /* SettingsRow.swift in Sources */,
 				CC0E1E57262597D800C285D8 /* CharacterTitlesSections.swift in Sources */,
@@ -691,6 +690,7 @@
 				6EAC70312630C8E600988D47 /* CharacterCell.swift in Sources */,
 				CC0E1E4E262597D800C285D8 /* ErrorDisplay.swift in Sources */,
 				CC0E1E67262597D800C285D8 /* AncestralWeaponsSection.swift in Sources */,
+				6EAC70362630CB0500988D47 /* HouseCell.swift in Sources */,
 				CC0E1E5C262597D800C285D8 /* HouseMottoSection.swift in Sources */,
 				CC52917226272E4700411AF7 /* URLResponse-Optional-Extension.swift in Sources */,
 				6E9FF7B2262CCB7900CA7743 /* Constants.swift in Sources */,

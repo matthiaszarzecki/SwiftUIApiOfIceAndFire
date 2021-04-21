@@ -24,18 +24,7 @@ struct SwornMembersSection: View {
               character: character
             )
           ) {
-            HStack {
-              CharacterIcon(
-                initialLetter: character.initialLetter,
-                size: 24
-              )
-              Text("\(character.displayName)")
-              
-              if character.hasActor {
-                Image(systemName: "person")
-                  .foregroundColor(.westerosRed)
-              }
-            }
+            CharacterCell(character: character)
           }
         }
       }

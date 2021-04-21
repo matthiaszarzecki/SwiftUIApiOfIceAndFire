@@ -24,19 +24,10 @@ struct CadetBranchesSection: View {
               houseBasic: cadetBranch
             )
           ) {
-            HStack {
-              HouseIcon(
-                colors: cadetBranch.heraldryColors,
-                initialLetter: cadetBranch.initialLetter,
-                size: 32
-              )
-              Text("\(cadetBranch.name)")
-              
-              if house.containsSubViews {
-                Image(systemName: "link")
-                  .foregroundColor(.westerosRed)
-              }
-            }
+            HouseCellBasic(
+              house: cadetBranch,
+              iconSize: 24
+            )
           }
         }
       }
