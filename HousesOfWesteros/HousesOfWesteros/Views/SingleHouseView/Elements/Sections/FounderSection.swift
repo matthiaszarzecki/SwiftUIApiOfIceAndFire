@@ -12,20 +12,13 @@ struct FounderSection: View {
   
   var body: some View {
     if let character = house.foundedByCharacter {
-      Section(header: SectionHeader(text: "Founded by")) {
-        NavigationLink(destination: CharacterView(character: character)) {
-          HStack {
-            CharacterIcon(
-              initialLetter: character.initialLetter,
-              size: 24
-            )
-            Text("\(character.displayName)")
-            
-            if character.hasActor {
-              Image(systemName: "person")
-                .foregroundColor(.westerosRed)
-            }
-          }
+      Section(
+        header: SectionHeader(text: "Founded by")
+      ) {
+        NavigationLink(
+          destination: CharacterView(character: character)
+        ) {
+          CharacterCell(character: character)
         }
       }
     }

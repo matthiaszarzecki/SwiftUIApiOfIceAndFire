@@ -12,20 +12,13 @@ struct CurrentLordSection: View {
   
   var body: some View {
     if let character = house.currentLord {
-      Section(header: SectionHeader(text: "Current Lord")) {
-        NavigationLink(destination: CharacterView(character: character)) {
-          HStack {
-            CharacterIcon(
-              initialLetter: character.initialLetter,
-              size: 24
-            )
-            Text("\(character.displayName)")
-            
-            if character.hasActor {
-              Image(systemName: "person")
-                .foregroundColor(.westerosRed)
-            }
-          }
+      Section(
+        header: SectionHeader(text: "Current Lord")
+      ) {
+        NavigationLink(
+          destination: CharacterView(character: character)
+        ) {
+          CharacterCell(character: character)
         }
       }
     }

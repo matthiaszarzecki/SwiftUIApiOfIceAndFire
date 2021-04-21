@@ -51,7 +51,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
       || swornMembers.hasLinkEntries
       || cadetBranches.hasLinkEntries
   }
-  
+
   /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
