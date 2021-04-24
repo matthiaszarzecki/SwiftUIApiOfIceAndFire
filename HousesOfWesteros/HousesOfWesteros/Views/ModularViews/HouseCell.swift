@@ -33,11 +33,20 @@ struct HouseCellBasic: View {
   
   var body: some View {
     HStack {
-      HouseIcon(
-        colors: house.heraldryColors,
-        initialLetter: house.initialLetter,
-        size: iconSize
-      )
+
+      if house.isGreatHouse {
+        Image("house_icon_\(house.id)")
+          .resizable()
+          .frame(width: iconSize, height: iconSize, alignment: .center)
+          .shadow(color: .westerosRed, radius: 6)
+      } else {
+        HouseIcon(
+          colors: house.heraldryColors,
+          initialLetter: house.initialLetter,
+          size: iconSize
+        )
+      }
+      
       Text("\(house.name)")
       
       if house.containsLinks {

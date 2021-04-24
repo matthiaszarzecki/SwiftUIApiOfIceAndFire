@@ -52,14 +52,23 @@ struct HouseBasic: Codable, Identifiable, Hashable {
       || cadetBranches.hasLinkEntries
   }
 
-  /// The colors mentioned in the Coat of Arms, as SwiftUI Colors.
+  /// The colors mentioned in the Coat
+  /// of Arms, as SwiftUI Colors.
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
   }
   
-  /// The initial letter of the House-name without "House " prefixed.
+  /// The initial letter of the House-name
+  /// without "House " prefixed.
   var initialLetter: String {
     return name[6]
+  }
+  
+  /// Boolean indicating whether this house
+  /// belongs to the great houses and has
+  /// an image file associated.
+  var isGreatHouse: Bool {
+    return Constants.greatHouses.contains(id)
   }
   
   enum CodingKeys: String, CodingKey {

@@ -44,10 +44,6 @@ struct HouseUpdated {
   var cadetBranches: [HouseBasic]?
   var swornMembers: [CharacterBasic]?
   
-  var isGreatHouse: Bool {
-    return Constants.greatHouses.contains(id)
-  }
-  
   init(
     fromHouse house: HouseBasic,
     currentLord: CharacterBasic? = nil,
