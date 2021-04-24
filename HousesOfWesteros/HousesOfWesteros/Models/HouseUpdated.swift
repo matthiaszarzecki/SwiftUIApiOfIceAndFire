@@ -37,16 +37,14 @@ struct HouseUpdated {
   /// value from HouseBasic.
   let containsSubViews: Bool
   
+  let isGreatHouse: Bool
+  
   var currentLord: CharacterBasic?
   var heir: CharacterBasic?
   var overlordHouse: HouseBasic?
   var foundedByCharacter: CharacterBasic?
   var cadetBranches: [HouseBasic]?
   var swornMembers: [CharacterBasic]?
-  
-  var isGreatHouse: Bool {
-    return Constants.greatHouses.contains(id)
-  }
   
   init(
     fromHouse house: HouseBasic,
@@ -71,6 +69,7 @@ struct HouseUpdated {
     heraldryColors = house.heraldryColors
     initialLetter = house.initialLetter
     containsSubViews = house.containsLinks
+    isGreatHouse = house.isGreatHouse
     
     self.currentLord = currentLord
     self.heir = heir

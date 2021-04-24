@@ -7,25 +7,21 @@
 
 import SwiftUI
 
-/// Shows a list of all ASOIAF Houses
+/// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
   @ObservedObject private var allHousesViewModel = AllHousesViewModel()
   
   var body: some View {
-    NavigationView {
-      AllHousesDisplay(
-        fetchResults: allHousesViewModel.state.houses,
-        isLoading: allHousesViewModel.state.canLoadNextPage,
-        showError: allHousesViewModel.state.showError,
-        intitialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
-        onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
-      )
-      .navigationTitle("Houses of Westeros")
-      .onAppear {
-        allHousesViewModel.fetchNextPageIfPossible()
-      }
+    AllHousesDisplay(
+      fetchResults: allHousesViewModel.state.houses,
+      isLoading: allHousesViewModel.state.canLoadNextPage,
+      showError: allHousesViewModel.state.showError,
+      intitialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
+      onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
+    )
+    .onAppear {
+      allHousesViewModel.fetchNextPageIfPossible()
     }
-    .accentColor(.westerosRed)
   }
 }
 
@@ -37,33 +33,37 @@ struct AllHousesDisplay: View {
   let onScrolledAtBottom: () -> Void
   
   var body: some View {
-    if intitialLoadingPhase {
-      AllHousesLoadingView()
-    } else if showError {
-      ErrorDisplay(reloadData: onScrolledAtBottom)
-    } else {
-      // This cannot be a scrollview as
-      // that tanks the performance.
-      List {
-        ForEach(fetchResults) { house in
-          NavigationLink(
-            destination: SingleHouseView(houseBasic: house)
-          ) {
-            HouseCellBasic(house: house, iconSize: 32)
-          }
-          .onAppear {
-            if self.fetchResults.last == house {
-              self.onScrolledAtBottom()
+    NavigationView {
+      if intitialLoadingPhase {
+        AllHousesLoadingView()
+      } else if showError {
+        ErrorDisplay(reloadData: onScrolledAtBottom)
+      } else {
+        // This cannot be a scrollview as
+        // that tanks the performance.
+        List {
+          ForEach(fetchResults) { house in
+            NavigationLink(
+              destination: SingleHouseView(houseBasic: house)
+            ) {
+              HouseCellBasic(house: house, iconSize: 32)
+            }
+            .onAppear {
+              if self.fetchResults.last == house {
+                self.onScrolledAtBottom()
+              }
             }
           }
+          
+          if isLoading {
+            SearchSpinnerView()
+              .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+          }
         }
-        
-        if isLoading {
-          SearchSpinnerView()
-            .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
-        }
+        .navigationTitle("All Houses of Westeros")
       }
     }
+    .accentColor(.westerosRed)
   }
 }
 

@@ -44,3 +44,6 @@ Todo:
 - Automated test for error-handling
 
 Created by Matthias Zarzecki, 2021-01
+
+# Attribution
+Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License.
