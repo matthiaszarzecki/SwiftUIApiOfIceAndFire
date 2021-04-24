@@ -10,7 +10,7 @@ import SwiftUI
 struct BaseView: View {
   init() {
     // Set font for Title in large view
-    UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 24)!]
+    UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 20)!]
     
     // Set font for Title in navigation bar
     UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 16)!]
@@ -18,18 +18,28 @@ struct BaseView: View {
   
   var body: some View {
     TabView {
-      GreatHousesView().tabItem {
-        Label("Great Houses", systemImage: "shield.checkerboard")
-      }
+      GreatHousesView()
+        .tabItem {
+          Label(
+            "Great Houses",
+            systemImage: "shield.checkerboard"
+          )
+        }
       
       AllHousesView()
         .tabItem {
-          Label("All Houses", systemImage: "shield.lefthalf.fill")
+          Label(
+            "All Houses",
+            systemImage: "shield.lefthalf.fill"
+          )
         }
       
       AboutView()
         .tabItem {
-          Label("About", systemImage: "gear")
+          Label(
+            "About",
+            systemImage: "gear"
+          )
         }
     }
     .accentColor(.westerosRed)

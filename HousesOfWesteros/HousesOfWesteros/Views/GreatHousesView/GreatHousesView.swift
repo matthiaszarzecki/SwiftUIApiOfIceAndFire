@@ -7,30 +7,6 @@
 
 import SwiftUI
 
-class GreatHousesViewModel: ObservableObject {
-  @Published private(set) var state = GreatHousesViewState()
-  
-  init() {
-    for id in Constants.greatHouses {
-      Api.getSingleHouse(id: id) { result in
-        switch result {
-        case .success(let receivedObject):
-          print("")
-          // Add house to local collection
-          //self.state.showError = false
-        case .failure(let error):
-          print("Error! \(error)")
-          //self.state.showError = true
-        }
-      }
-    }
-  }
-  
-  struct GreatHousesViewState {
-    var houses = [HouseBasic]()
-  }
-}
-
 struct GreatHousesView: View {
   @ObservedObject private var greatHousesViewModel = GreatHousesViewModel()
   
@@ -45,7 +21,22 @@ struct GreatHousesDisplay: View {
   var houses: [HouseBasic]
   
   var body: some View {
-    Text("Hello, World!")
+    if houses.hasEntries {
+      NavigationView {
+        List {
+          ForEach(houses) { house in
+            NavigationLink(
+              destination: SingleHouseView(houseBasic: house)
+            ) {
+              HouseCellBasic(house: house, iconSize: 32)
+            }
+          }
+        }
+        .navigationTitle("Great Houses of Westeros")
+      }
+    } else {
+      AllHousesLoadingView()
+    }
   }
 }
 
@@ -53,6 +44,10 @@ struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(
       houses: MockClasses.housesBasic
+    )
+    
+    GreatHousesDisplay(
+      houses: [HouseBasic]()
     )
   }
 }
