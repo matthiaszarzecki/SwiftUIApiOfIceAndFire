@@ -9,14 +9,14 @@ import Foundation
 
 struct Constants {
   /// The Ids of the 9 great houses:
-  /// - Targaryen of King's Landing
-  /// - Stark of Winterfell
-  /// - Lannister of Casterly Rock
-  /// - Arryn of the Eyrie
-  /// - Tully of Riverrun
-  /// - Greyjoy of Pyke
-  /// - Baratheon of Storm's End
-  /// - Tyrell of Highgarden
-  /// - Martell of Sunspear
+  /// 378 - Targaryen of King's Landing
+  /// 362 - Stark of Winterfell
+  /// 229 - Lannister of Casterly Rock
+  ///   7 - Arryn of the Eyrie
+  /// 395 - Tully of Riverrun
+  /// 169 - Greyjoy of Pyke
+  ///  17 - Baratheon of Storm's End
+  /// 398 - Tyrell of Highgarden
+  /// 285 - Martell of Sunspear
   static let greatHouses = [7, 17, 169, 229, 285, 362, 378, 395, 398]
 }
