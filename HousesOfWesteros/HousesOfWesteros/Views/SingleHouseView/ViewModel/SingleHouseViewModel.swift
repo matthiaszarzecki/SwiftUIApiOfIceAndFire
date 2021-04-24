@@ -117,7 +117,7 @@ class SingleHouseViewModel: ObservableObject {
     }
   }
   
-  //MARK: - Array Update Functions
+  // MARK: - Array Update Functions
   
   ///
   private func updateArrayField<T: Codable>(

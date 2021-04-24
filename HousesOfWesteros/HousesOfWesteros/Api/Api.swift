@@ -35,6 +35,18 @@ struct Api {
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
   }
+  
+  static func getSingleHouse(
+    id: Int,
+    completion: @escaping (Result<HouseBasic, NetworkError>) -> ()
+  ) {
+    fetch(
+      HouseBasic.self,
+      url: "https://anapioficeandfire.com/api/houses/\(id)"
+    ) { result in
+      completion(result)
+    }
+  }
 
   /// Does a GET-call to the specified URL
   /// and returns the type in a completion.
