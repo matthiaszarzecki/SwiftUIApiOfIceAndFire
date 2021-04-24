@@ -10,13 +10,31 @@ import SwiftUI
 struct HouseCellUpdated: View {
   var house: HouseUpdated
   
+  private let iconSize: CGFloat = 24
+  
+  var icon: some View {
+    if house.isGreatHouse {
+      return AnyView(
+        HouseIconSigil(
+          iconSize: iconSize,
+          id: house.id
+        )
+      )
+    } else {
+      return AnyView(
+        HouseIconColors(
+          colors: house.heraldryColors,
+          initialLetter: house.initialLetter,
+          size: iconSize
+        )
+      )
+    }
+  }
+  
   var body: some View {
     HStack {
-      HouseIcon(
-        colors: house.heraldryColors,
-        initialLetter: house.initialLetter,
-        size: 24
-      )
+      icon
+      
       Text("\(house.name)")
       
       if house.containsSubViews {
@@ -31,21 +49,28 @@ struct HouseCellBasic: View {
   var house: HouseBasic
   var iconSize: CGFloat
   
-  var body: some View {
-    HStack {
-
-      if house.isGreatHouse {
-        Image("house_icon_\(house.id)")
-          .resizable()
-          .frame(width: iconSize, height: iconSize, alignment: .center)
-          .shadow(color: .westerosRed, radius: 6)
-      } else {
-        HouseIcon(
+  var icon: some View {
+    if house.isGreatHouse {
+      return AnyView(
+        HouseIconSigil(
+          iconSize: iconSize,
+          id: house.id
+        )
+      )
+    } else {
+      return AnyView(
+        HouseIconColors(
           colors: house.heraldryColors,
           initialLetter: house.initialLetter,
           size: iconSize
         )
-      }
+      )
+    }
+  }
+  
+  var body: some View {
+    HStack {
+      icon
       
       Text("\(house.name)")
       

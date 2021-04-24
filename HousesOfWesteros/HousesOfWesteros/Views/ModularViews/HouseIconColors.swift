@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HouseIcon: View {
+struct HouseIconColors: View {
   var colors: [Color]
   var initialLetter: String
   var size: CGFloat
@@ -52,7 +52,7 @@ struct HouseIcon_Previews: PreviewProvider {
     ]
     
     ForEach(houses, id: \.self) { house in
-      HouseIcon(
+      HouseIconColors(
         colors: house.heraldryColors,
         initialLetter: house.initialLetter,
         size: 32

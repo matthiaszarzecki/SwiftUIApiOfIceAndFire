@@ -8,6 +8,8 @@
 import Foundation
 
 struct MockClasses {
+  static let idGreatHouse = 17
+  
   static let characterLink = "https://www.anapioficeandfire.com/api/characters/298"
   static let houseLink = "https://www.anapioficeandfire.com/api/houses/285"
   
