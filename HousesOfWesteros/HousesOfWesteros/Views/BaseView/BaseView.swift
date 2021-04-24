@@ -18,9 +18,13 @@ struct BaseView: View {
   
   var body: some View {
     TabView {
+      GreatHousesView().tabItem {
+        Label("Great Houses", systemImage: "shield.checkerboard")
+      }
+      
       AllHousesView()
         .tabItem {
-          Label("Houses of Westeros", systemImage: "shield.checkerboard")
+          Label("All Houses", systemImage: "shield.lefthalf.fill")
         }
       
       AboutView()
