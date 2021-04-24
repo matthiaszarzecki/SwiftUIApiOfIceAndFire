@@ -42,10 +42,14 @@ struct SingleHouseDisplay: View {
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
-                HeraldryColorsSection(
-                  house: unwrappedHouseUpdated,
-                  width: geometry.size.width
-                )
+                
+                if !unwrappedHouseUpdated.isGreatHouse {
+                  HeraldryColorsSection(
+                    house: unwrappedHouseUpdated,
+                    width: geometry.size.width
+                  )
+                }
+                
                 HouseMottoSection(house: unwrappedHouseUpdated)
                 TitlesSection(house: unwrappedHouseUpdated)
                 SeatsSection(house: unwrappedHouseUpdated)

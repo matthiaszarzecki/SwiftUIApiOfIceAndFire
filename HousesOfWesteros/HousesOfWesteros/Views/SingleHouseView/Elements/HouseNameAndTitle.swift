@@ -13,15 +13,27 @@ struct HouseNameAndTitle: View {
   
   var body: some View {
     return VStack {
-      if house.name.exists {
-        Text("\(house.name)")
-          .font(.system(size: 200))
-          .minimumScaleFactor(0.1)
-          .frame(width: width, height: 40, alignment: .center)
+      let isGreatHouse = house.isGreatHouse
+      let adaptedWidth = isGreatHouse ? width - 72 : width
+      
+      HStack {
+        if isGreatHouse {
+          HouseIconSigil(iconSize: 32, id: house.id)
+        }
+        
+        if house.name.exists {
+          Text("\(house.name)")
+            .font(.system(size: 200))
+            .minimumScaleFactor(0.08)
+            .frame(width: adaptedWidth, height: 40, alignment: .center)
+        }
       }
       
       if house.region.exists {
         Text("of \(house.region)")
+          // Move this up to be directly
+          // underneath the text in the HStack
+          .offset(y: -8)
           .padding(.bottom, 16)
       }
     }
