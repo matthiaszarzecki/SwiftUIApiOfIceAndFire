@@ -39,11 +39,11 @@ struct Constants {
     case 362:
       return Color(hex: "F0F0F0")
     case 378:
-      return Color(hex: "A07774")
+      return Color(hex: "DEADA9")
     case 395:
-      return Color(hex: "7F7EB1")
+      return Color(hex: "9C9BD6")
     case 398:
-      return Color(hex: "6F8D67")
+      return Color(hex: "A8C998")
     default:
       return .white
     }
