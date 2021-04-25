@@ -46,4 +46,5 @@ Todo:
 Created by Matthias Zarzecki, 2021-01
 
 # Attribution
-Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License.
+- Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License.
+- Dragon Icon created by Ramy Wafaa.
