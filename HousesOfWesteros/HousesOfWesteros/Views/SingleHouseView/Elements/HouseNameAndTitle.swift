@@ -18,7 +18,7 @@ struct HouseNameAndTitle: View {
       
       HStack {
         if isGreatHouse {
-          HouseIconSigil(iconSize: 32, id: house.id)
+          HouseIconSigil(iconSize: .largeForHeader, id: house.id)
         }
         
         if house.name.exists {
@@ -51,13 +51,11 @@ struct HouseNameAndTitle: View {
 
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
-    GeometryReader { geometry in
-      HouseNameAndTitle(
-        house: MockClasses.houseUpdatedWithLinks,
-        width: geometry.size.width
-      )
-      
-    }
+    HouseNameAndTitle(
+      house: MockClasses.houseUpdatedWithLinks,
+      width: PreviewConstants.width
+    )
+    .padding()
     .previewLayout(.sizeThatFits)
   }
 }

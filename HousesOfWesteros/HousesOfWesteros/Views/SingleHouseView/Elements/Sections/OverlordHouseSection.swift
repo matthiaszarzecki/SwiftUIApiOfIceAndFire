@@ -19,7 +19,7 @@ struct OverlordHouseSection: View {
         ) {
           HouseCellBasic(
             house: overlordHouse,
-            iconSize: 24
+            iconSize: .smallForNestedCells
           )
         }
       }

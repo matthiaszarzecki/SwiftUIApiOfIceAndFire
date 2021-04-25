@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HouseCellUpdated: View {
   var house: HouseUpdated
-  
-  private let iconSize: CGFloat = 24
+  var iconSize: IconSize
   
   var icon: some View {
     if house.isGreatHouse {
@@ -25,7 +24,7 @@ struct HouseCellUpdated: View {
         HouseIconColors(
           colors: house.heraldryColors,
           initialLetter: house.initialLetter,
-          size: iconSize
+          iconSize: iconSize
         )
       )
     }
@@ -47,7 +46,7 @@ struct HouseCellUpdated: View {
 
 struct HouseCellBasic: View {
   var house: HouseBasic
-  var iconSize: CGFloat
+  var iconSize: IconSize
   
   var icon: some View {
     if house.isGreatHouse {
@@ -62,7 +61,7 @@ struct HouseCellBasic: View {
         HouseIconColors(
           colors: house.heraldryColors,
           initialLetter: house.initialLetter,
-          size: iconSize
+          iconSize: iconSize
         )
       )
     }
@@ -85,14 +84,15 @@ struct HouseCellBasic: View {
 struct HouseCell_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellUpdated(
-      house: MockClasses.houseUpdatedWithLinks
+      house: MockClasses.houseUpdatedWithLinks,
+      iconSize: .smallForNestedCells
     )
     .padding()
     .previewLayout(.sizeThatFits)
     
     HouseCellBasic(
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
-      iconSize: 24
+      iconSize: .smallForNestedCells
     )
     .padding()
     .previewLayout(.sizeThatFits)

@@ -26,7 +26,7 @@ struct CadetBranchesSection: View {
           ) {
             HouseCellBasic(
               house: cadetBranch,
-              iconSize: 24
+              iconSize: .smallForNestedCells
             )
           }
         }

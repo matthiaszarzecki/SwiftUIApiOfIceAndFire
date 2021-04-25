@@ -10,7 +10,7 @@ import SwiftUI
 struct HouseIconColors: View {
   var colors: [Color]
   var initialLetter: String
-  var size: CGFloat
+  var iconSize: IconSize
   
   var body: some View {
     if colors.hasEntries {
@@ -18,12 +18,12 @@ struct HouseIconColors: View {
       // a CircularColorDisplay.
       return AnyView(
         ZStack {
-          let backgroundSize = size - 2
+          let backgroundSize = iconSize.rawValue - 2
           Circle()
             .frame(width: backgroundSize, height: backgroundSize, alignment: .center)
             .shadow(color: .westerosRed, radius: 6)
           
-          CircularColorDisplay(colors: colors, size: size)
+          CircularColorDisplay(colors: colors, size: iconSize.rawValue)
         }
       )
     } else {
@@ -34,7 +34,7 @@ struct HouseIconColors: View {
           Circle()
             .foregroundColor(.westerosRed)
             .shadow(color: .westerosRed, radius: 6)
-            .frame(width: size, height: size, alignment: .center)
+            .frame(width: iconSize.rawValue, height: iconSize.rawValue, alignment: .center)
             
           Text("\(initialLetter)")
             .foregroundColor(.white)
@@ -55,7 +55,7 @@ struct HouseIcon_Previews: PreviewProvider {
       HouseIconColors(
         colors: house.heraldryColors,
         initialLetter: house.initialLetter,
-        size: 32
+        iconSize: .largeForMajorCells
       )
       .padding()
       .previewLayout(.sizeThatFits)

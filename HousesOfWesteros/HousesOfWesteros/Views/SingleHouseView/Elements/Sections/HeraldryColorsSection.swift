@@ -33,13 +33,11 @@ struct HeraldryColorsSection: View {
 
 struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
-    GeometryReader { geometry in
-      Form {
-        HeraldryColorsSection(
-          house: MockClasses.houseUpdatedWithLinks,
-          width: geometry.size.width
-        )
-      }
+    Form {
+      HeraldryColorsSection(
+        house: MockClasses.houseUpdatedWithLinks,
+        width: PreviewConstants.width
+      )
     }
   }
 }

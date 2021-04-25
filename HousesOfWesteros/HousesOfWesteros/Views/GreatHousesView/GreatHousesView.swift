@@ -28,7 +28,7 @@ struct GreatHousesDisplay: View {
             NavigationLink(
               destination: SingleHouseView(houseBasic: house)
             ) {
-              HouseCellBasic(house: house, iconSize: 32)
+              HouseCellBasic(house: house, iconSize: .largeForMajorCells)
             }
           }
         }
