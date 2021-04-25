@@ -19,20 +19,22 @@ struct GreatHousesView: View {
 
 struct GreatHousesDisplay: View {
   var houses: [HouseBasic]
-  
+
   var body: some View {
     if houses.hasEntries {
-      NavigationView {
-        List {
-          ForEach(houses) { house in
-            NavigationLink(
-              destination: SingleHouseView(houseBasic: house)
-            ) {
-              HouseCellBasic(house: house, iconSize: .largeForMajorCells)
+      GeometryReader { geometry in
+        NavigationView {
+          List {
+            ForEach(houses) { house in
+              NavigationLink(
+                destination: SingleHouseView(houseBasic: house)
+              ) {
+                HouseCellLarge(house: house, width: geometry.size.width - 16*2)
+              }
             }
           }
+          .navigationTitle("Great Houses of Westeros")
         }
-        .navigationTitle("Great Houses of Westeros")
       }
     } else {
       AllHousesLoadingView()

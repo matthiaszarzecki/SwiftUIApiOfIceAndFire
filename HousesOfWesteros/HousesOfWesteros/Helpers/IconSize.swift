@@ -12,4 +12,5 @@ enum IconSize: CGFloat {
   case smallForNestedCells = 24
   case largeForMajorCells = 32
   case largeForHeader = 40
+  case greatHouseCell = 56
 }
