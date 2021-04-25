@@ -17,7 +17,10 @@ struct OverlordHouseSection: View {
       ) {
         NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)
         ) {
-          HouseCellUpdated(house: house)
+          HouseCellBasic(
+            house: overlordHouse,
+            iconSize: 24
+          )
         }
       }
     }
