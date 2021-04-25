@@ -42,6 +42,7 @@ struct HouseCellLarge: View {
     }
     
     return Text(text)
+      .shadow(color: .white, radius: 6)
       .frame(width: textElementWidth, height: 24, alignment: .leading)
       .multilineTextAlignment(.leading)
   }
@@ -54,6 +55,7 @@ struct HouseCellLarge: View {
         
         VStack {
           Text(house.name)
+            .shadow(color: .white, radius: 6)
             .font(.title2)
             .frame(width: textElementWidth, height: 60, alignment: .topLeading)
             .multilineTextAlignment(.leading)
@@ -64,7 +66,7 @@ struct HouseCellLarge: View {
       }
     }
     .frame(width: width, height: 100, alignment: .center)
-    .backgroundColor(.white)
+    .backgroundColor(Constants.greatHousesMajorColor(id: house.id))
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }
