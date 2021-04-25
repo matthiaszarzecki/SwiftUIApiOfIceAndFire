@@ -25,6 +25,7 @@ struct HouseNameAndTitle: View {
           Text("\(house.name)")
             .font(.system(size: 200))
             .minimumScaleFactor(0.08)
+            .multilineTextAlignment(.center)
             .frame(width: adaptedWidth, height: 40, alignment: .center)
         }
       }

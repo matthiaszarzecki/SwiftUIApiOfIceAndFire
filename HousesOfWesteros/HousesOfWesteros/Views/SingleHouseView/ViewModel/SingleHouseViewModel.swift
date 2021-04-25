@@ -42,7 +42,7 @@ class SingleHouseViewModel: ObservableObject {
     var showError = false
   }
   
-  //MARK: - Single Field Update Functions
+  // MARK: - Single Field Update Functions
   
   /// Updates a field that can contain a link when a link
   /// exists with the corresponding data. Sets error on failure.
@@ -119,7 +119,7 @@ class SingleHouseViewModel: ObservableObject {
   
   // MARK: - Array Update Functions
   
-  ///
+  /// Updates a nested field that contains data as an array.
   private func updateArrayField<T: Codable>(
     _ for: T.Type = T.self,
     ofType type: ArrayHouseFieldType
