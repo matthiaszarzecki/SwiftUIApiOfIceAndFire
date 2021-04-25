@@ -21,6 +21,9 @@ struct Constants {
   /// 285 - Martell of Sunspear
   static let greatHouses = [7, 17, 169, 229, 285, 362, 378, 395, 398]
   
+  /// Returns a lighter version of the
+  /// major color of a great houses sigil
+  /// for use as background-color.
   static func greatHousesMajorColor(id: Int) -> Color {
     switch(id) {
     case 7:
