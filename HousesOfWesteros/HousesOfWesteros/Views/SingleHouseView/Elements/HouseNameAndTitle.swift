@@ -56,6 +56,7 @@ struct Title_Previews: PreviewProvider {
       house: MockClasses.houseUpdatedWithLinks,
       width: PreviewConstants.width
     )
+    .offset(y: 50)
     .padding()
     .previewLayout(.sizeThatFits)
   }
