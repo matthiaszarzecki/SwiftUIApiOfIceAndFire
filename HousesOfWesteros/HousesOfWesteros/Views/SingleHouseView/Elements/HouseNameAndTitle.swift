@@ -38,11 +38,12 @@ struct HouseNameAndTitle: View {
           .padding(.bottom, 16)
       }
     }
+    .padding(.top, 24)
     
     // In order for this to look good on the view above
     // on top of a Form this needs to be super-small and
     // offset to the top.
-    .frame(width: width, height: 10, alignment: .center)
+    .frame(width: width, height: 34, alignment: .center)
     
     // Move everything upwards to counter the
     // auto-padding in a NavigationView.
