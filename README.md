@@ -27,6 +27,7 @@ Contains:
 - Small Screen Support
 - Extensive SwiftUI Previews
 - Skeleton Loading View
+- Major Houses Display
 
 Todo:
 - Timeout on Main Screen
@@ -34,8 +35,7 @@ Todo:
 - Tap tabbar icons to reset view
 - Replace generic native calls with combine-subscriptions
 - RealmDB Caching
-- Major Houses Display
-- House of the Day View
+- Welcome Tab with House of the Day View
 - Actor Images through IMDB
 - More Unit-Tests
 - Monkey-Tests
