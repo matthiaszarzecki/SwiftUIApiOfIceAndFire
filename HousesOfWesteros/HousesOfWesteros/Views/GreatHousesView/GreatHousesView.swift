@@ -18,18 +18,22 @@ struct GreatHousesView: View {
 }
 
 struct GreatHousesDisplay: View {
-  var houses: [HouseBasic]
+  var houses: [HouseBasic?]
 
   var body: some View {
     if houses.hasEntries {
       GeometryReader { geometry in
         NavigationView {
           List {
-            ForEach(houses) { house in
-              NavigationLink(
-                destination: SingleHouseView(houseBasic: house)
-              ) {
-                HouseCellLarge(house: house, width: geometry.size.width - 16*2)
+            ForEach(
+              0..<Constants.greatHouses.count
+            ) { index in
+              if let unwrappedHouse = houses[index] {
+                NavigationLink(
+                  destination: SingleHouseView(houseBasic: unwrappedHouse)
+                ) {
+                  HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
+                }
               }
             }
           }

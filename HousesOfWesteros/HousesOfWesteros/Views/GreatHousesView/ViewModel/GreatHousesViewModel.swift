@@ -11,11 +11,12 @@ class GreatHousesViewModel: ObservableObject {
   @Published private(set) var state = GreatHousesViewState()
   
   init() {
-    for id in Constants.greatHouses {
+    for (index, id) in Constants.greatHouses.enumerated() {
       Api.getSingleHouse(id: id) { result in
         switch result {
         case .success(let receivedObject):
-          self.state.houses.append(receivedObject)
+          //self.state.houses.append(receivedObject)
+          self.state.houses[index] = receivedObject
         case .failure(let error):
           print("Error! \(error)")
         }
@@ -24,6 +25,6 @@ class GreatHousesViewModel: ObservableObject {
   }
   
   struct GreatHousesViewState {
-    var houses = [HouseBasic]()
+    var houses: [HouseBasic?] = Array(repeating: nil, count: Constants.greatHouses.count)
   }
 }
