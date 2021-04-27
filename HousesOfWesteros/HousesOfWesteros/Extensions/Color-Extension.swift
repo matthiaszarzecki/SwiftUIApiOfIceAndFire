@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Color {
-  static let westerosRed = Color(hex: "89170B")
+  static let westerosRed = Color(hex: "9C1E19")
   static let redactedGray = Color(hex: "D6D6D6")
   
   /// Creates a SwiftUI color from a hex code.
