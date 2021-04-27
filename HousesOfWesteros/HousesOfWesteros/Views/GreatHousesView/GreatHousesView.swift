@@ -34,6 +34,7 @@ struct GreatHousesDisplay: View {
                 ) {
                   HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
                 }
+                .buttonStyle(PlainButtonStyle())
               }
             }
           }
