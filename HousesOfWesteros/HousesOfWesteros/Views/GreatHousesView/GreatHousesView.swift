@@ -19,7 +19,9 @@ struct GreatHousesView: View {
 
 struct GreatHousesDisplay: View {
   var houses: [HouseBasic?]
-
+  
+  /// A boolean indicating whether houses
+  /// contains at least 1 non-nil entry.
   var hasViableEntries: Bool {
     for house in houses {
       if house != nil {
@@ -30,32 +32,31 @@ struct GreatHousesDisplay: View {
   }
   
   var body: some View {
-    if houses.hasEntries {
-      GeometryReader { geometry in
-        NavigationView {
+    GeometryReader { geometry in
+      NavigationView {
+        let title = "Great Houses of Westeros"
+        
+        if hasViableEntries {
           List {
-            if hasViableEntries {
-              ForEach(
-                0..<Constants.greatHouses.count
-              ) { index in
-                if let unwrappedHouse = houses[index] {
-                  NavigationLink(
-                    destination: SingleHouseView(houseBasic: unwrappedHouse)
-                  ) {
-                    HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
-                  }
-                  .buttonStyle(PlainButtonStyle())
+            ForEach(
+              0..<Constants.greatHouses.count
+            ) { index in
+              if let unwrappedHouse = houses[index] {
+                NavigationLink(
+                  destination: SingleHouseView(houseBasic: unwrappedHouse)
+                ) {
+                  HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
                 }
+                .buttonStyle(PlainButtonStyle())
               }
-            } else {
-              GreatHousesLoadingView()
             }
           }
-          .navigationTitle("Great Houses of Westeros")
+          .navigationTitle(title)
+        } else {
+          GreatHousesLoadingView(width: geometry.size.width - 16*2)
+            .navigationTitle(title)
         }
       }
-    } else {
-      AllHousesLoadingView()
     }
   }
 }
@@ -70,6 +71,8 @@ struct GreatHousesView_Previews: PreviewProvider {
       houses: [HouseBasic]()
     )
     
-    GreatHousesLoadingView()
+    GreatHousesLoadingView(
+      width: PreviewConstants.width
+    )
   }
 }
