@@ -12,7 +12,7 @@ struct HouseCellLarge: View {
   var width: CGFloat
   
   var textElementWidth: CGFloat {
-    return width - 100
+    return width - 120
   }
   
   var icon: some View {
