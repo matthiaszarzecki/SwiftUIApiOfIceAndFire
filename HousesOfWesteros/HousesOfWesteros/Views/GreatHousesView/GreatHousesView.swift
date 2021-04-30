@@ -20,22 +20,35 @@ struct GreatHousesView: View {
 struct GreatHousesDisplay: View {
   var houses: [HouseBasic?]
 
+  var hasViableEntries: Bool {
+    for house in houses {
+      if house != nil {
+        return true
+      }
+    }
+    return false
+  }
+  
   var body: some View {
     if houses.hasEntries {
       GeometryReader { geometry in
         NavigationView {
           List {
-            ForEach(
-              0..<Constants.greatHouses.count
-            ) { index in
-              if let unwrappedHouse = houses[index] {
-                NavigationLink(
-                  destination: SingleHouseView(houseBasic: unwrappedHouse)
-                ) {
-                  HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
+            if hasViableEntries {
+              ForEach(
+                0..<Constants.greatHouses.count
+              ) { index in
+                if let unwrappedHouse = houses[index] {
+                  NavigationLink(
+                    destination: SingleHouseView(houseBasic: unwrappedHouse)
+                  ) {
+                    HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
+                  }
+                  .buttonStyle(PlainButtonStyle())
                 }
-                .buttonStyle(PlainButtonStyle())
               }
+            } else {
+              GreatHousesLoadingView()
             }
           }
           .navigationTitle("Great Houses of Westeros")
@@ -56,5 +69,7 @@ struct GreatHousesView_Previews: PreviewProvider {
     GreatHousesDisplay(
       houses: [HouseBasic]()
     )
+    
+    GreatHousesLoadingView()
   }
 }
