@@ -8,13 +8,17 @@
 import Combine
 import Foundation
 
-/// Contains functions to request and receive data from the ApiOfIceAndFire.
+/// Contains functions to request and
+/// receive data from the ApiOfIceAndFire.
 struct Api {
-  /// The number of houses that are requested in a single call.
+  /// The number of houses that are
+  /// requested in a single call.
   static let pageSize = 30
   
   /// Gets 30 ASOIAF Houses.
-  static func getHouses(page: Int) -> AnyPublisher<[HouseBasic], Error> {
+  static func getHouses(
+    page: Int
+  ) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get.rawValue
