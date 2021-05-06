@@ -55,6 +55,19 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
     return name
   }
   
+  /// A boolean indicating whether this character
+  /// has any information at all that would be
+  /// displayed on a character-page.
+  var hasInformation: Bool {
+    return culture.exists ||
+      born.exists ||
+      died.exists ||
+      titles.hasNonEmptyEntries ||
+      aliases.hasNonEmptyEntries ||
+      tvShowAppearances.hasNonEmptyEntries ||
+      portrayedBy.hasNonEmptyEntries
+  }
+  
   enum CodingKeys: String, CodingKey {
     case id = "url"
     case name

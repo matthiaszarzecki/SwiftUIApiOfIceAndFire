@@ -15,9 +15,13 @@ struct CurrentLordSection: View {
       Section(
         header: SectionHeader(text: "Current Lord")
       ) {
-        NavigationLink(
-          destination: CharacterView(character: character)
-        ) {
+        if character.hasInformation {
+          NavigationLink(
+            destination: CharacterView(character: character)
+          ) {
+            CharacterCell(character: character)
+          }
+        } else {
           CharacterCell(character: character)
         }
       }
