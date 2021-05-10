@@ -287,7 +287,6 @@
 				CC0E1E2F262597D800C285D8 /* AppDelegate */,
 				CC0E1DEA262597D700C285D8 /* Extensions */,
 				CC0E1E35262597D800C285D8 /* Helpers */,
-				CC0E1E33262597D800C285D8 /* MockClasses */,
 				CC0E1E3B262597D800C285D8 /* Models */,
 				CC0E1E31262597D800C285D8 /* Preview Content */,
 				CC0E1DF1262597D700C285D8 /* SupportingFiles */,
@@ -517,18 +516,11 @@
 		CC0E1E31262597D800C285D8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				CC0E1E34262597D800C285D8 /* MockClasses.swift */,
+				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
 				CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CC0E1E33262597D800C285D8 /* MockClasses */ = {
-			isa = PBXGroup;
-			children = (
-				CC0E1E34262597D800C285D8 /* MockClasses.swift */,
-				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
-			);
-			path = MockClasses;
 			sourceTree = "<group>";
 		};
 		CC0E1E35262597D800C285D8 /* Helpers */ = {
