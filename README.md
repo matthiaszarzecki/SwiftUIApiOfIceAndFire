@@ -31,17 +31,19 @@ Contains:
 
 Todo:
 - Timeout on Main Screen
-- Fetch nested data for Characters
 - Tap tabbar icons to reset view
+- More Unit-Tests
+
+Nice to Have:
+- Monkey-Tests
+- Fetch nested data for Characters
+- UI-Tests
+- Actor Images through IMDB
+- Dark Color Scheme & switching
+- Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
 - RealmDB Caching
 - Welcome Tab with House of the Day View
-- Actor Images through IMDB
-- More Unit-Tests
-- Monkey-Tests
-- UI-Tests
-- Dark Color Scheme & switching
-- Automated test for error-handling
 
 Created by Matthias Zarzecki, 2021-01
 
