@@ -40,12 +40,17 @@ struct GreatHousesDisplay: View {
           List {
             ForEach(houses, id: \.self) { house in
               if let unwrappedHouse = house {
-                NavigationLink(
-                  destination: SingleHouseView(houseBasic: unwrappedHouse)
-                ) {
+                ZStack {
+                  NavigationLink(
+                    destination: SingleHouseView(houseBasic: unwrappedHouse)
+                  ) {
+                    // Workaround to remove indicators
+                    EmptyView()
+                  }
+                  .buttonStyle(PlainButtonStyle())
+                  
                   HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 16*2)
                 }
-                .buttonStyle(PlainButtonStyle())
               }
             }
           }
