@@ -38,10 +38,8 @@ struct GreatHousesDisplay: View {
       NavigationView {
         if hasViableEntries {
           List {
-            ForEach(
-              0..<Constants.greatHouses.count
-            ) { index in
-              if let unwrappedHouse = houses[index] {
+            ForEach(houses, id: \.self) { house in
+              if let unwrappedHouse = house {
                 NavigationLink(
                   destination: SingleHouseView(houseBasic: unwrappedHouse)
                 ) {
@@ -69,10 +67,6 @@ struct GreatHousesView_Previews: PreviewProvider {
     
     GreatHousesDisplay(
       houses: [HouseBasic]()
-    )
-    
-    GreatHousesLoadingView(
-      width: PreviewConstants.width
     )
   }
 }
