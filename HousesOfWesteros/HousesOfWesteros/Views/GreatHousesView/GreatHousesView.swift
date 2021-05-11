@@ -20,6 +20,8 @@ struct GreatHousesView: View {
 struct GreatHousesDisplay: View {
   var houses: [HouseBasic?]
   
+  private let viewTitle = "Great Houses of Westeros"
+  
   /// A boolean indicating whether houses
   /// contains at least 1 non-nil entry.
   var hasViableEntries: Bool {
@@ -34,8 +36,6 @@ struct GreatHousesDisplay: View {
   var body: some View {
     GeometryReader { geometry in
       NavigationView {
-        let title = "Great Houses of Westeros"
-        
         if hasViableEntries {
           List {
             ForEach(
@@ -51,10 +51,10 @@ struct GreatHousesDisplay: View {
               }
             }
           }
-          .navigationTitle(title)
+          .navigationTitle(viewTitle)
         } else {
           GreatHousesLoadingView(width: geometry.size.width - 16*2)
-            .navigationTitle(title)
+            .navigationTitle(viewTitle)
         }
       }
     }

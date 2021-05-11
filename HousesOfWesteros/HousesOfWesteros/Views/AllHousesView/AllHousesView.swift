@@ -32,12 +32,16 @@ struct AllHousesDisplay: View {
   var intitialLoadingPhase: Bool
   let onScrolledAtBottom: () -> Void
   
+  private let viewTitle = "All Houses of Westeros"
+  
   var body: some View {
     NavigationView {
       if intitialLoadingPhase {
         AllHousesLoadingView()
+          .navigationTitle(viewTitle)
       } else if showError {
         ErrorDisplay(reloadData: onScrolledAtBottom)
+          .navigationTitle(viewTitle)
       } else {
         // This cannot be a scrollview as
         // that tanks the performance.
@@ -60,7 +64,7 @@ struct AllHousesDisplay: View {
               .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
           }
         }
-        .navigationTitle("All Houses of Westeros")
+        .navigationTitle(viewTitle)
       }
     }
     .accentColor(.westerosRed)
