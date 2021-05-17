@@ -6,6 +6,6 @@
 //
 
 /// Enum containing REST methods as strings.
-enum RequestMethod: String {
-  case get = "GET"
+enum RequestMethod {
+  static let get = "GET"
 }

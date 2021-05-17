@@ -21,7 +21,7 @@ struct Api {
   ) -> AnyPublisher<[HouseBasic], Error> {
     let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
     var request = URLRequest(url: url)
-    request.httpMethod = RequestMethod.get.rawValue
+    request.httpMethod = RequestMethod.get
 
     return URLSession.shared
      .dataTaskPublisher(for: request)
@@ -64,7 +64,7 @@ struct Api {
     }
     
     var request = URLRequest(url: url)
-    request.httpMethod = RequestMethod.get.rawValue
+    request.httpMethod = RequestMethod.get
     
     URLSession.shared.dataTask(with: request) { (data, response, _) in
       // When the response is not a code 200 (success), return an error.
