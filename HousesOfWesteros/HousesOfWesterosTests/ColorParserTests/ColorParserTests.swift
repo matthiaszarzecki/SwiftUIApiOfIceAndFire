@@ -5,8 +5,8 @@
 //  Created by Matthias Zarzecki on 21.04.21.
 //
 
-import XCTest
 import SwiftUI
+import XCTest
 @testable import HousesOfWesteros
 
 class ColorParserTests: XCTestCase {
