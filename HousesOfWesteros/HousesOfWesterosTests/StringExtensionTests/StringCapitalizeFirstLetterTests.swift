@@ -33,4 +33,15 @@ class StringCapitalizeFirstLetterTests: XCTestCase {
     // THEN the new string is also empty
     XCTAssertEqual(result, "")
   }
+  
+  func testCapitalizedStringCapitalizeFirstLetter() {
+    // GIVEN a string beginning with an uppercase letter
+    let string = "Lorem"
+    
+    // WHEN we call the "CapitalizeFirstLetter" function
+    let result = string.capitalizeFirstLetter()
+    
+    // THEN the string remains unchanged
+    XCTAssertEqual(string, result)
+  }
 }
