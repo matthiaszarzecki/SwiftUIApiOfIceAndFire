@@ -13,7 +13,7 @@ class ArrayHasEntriesTests: XCTestCase {
     // GIVEN an array with multiple entries
     let array = [1, 2, 3]
     
-    // WHEN we call the hasEntries variable
+    // WHEN we call the "hasEntries" variable
     let result = array.hasEntries
     
     // THEN true is returned
@@ -24,7 +24,7 @@ class ArrayHasEntriesTests: XCTestCase {
     // GIVEN an empty array
     let array = [Int]()
     
-    // WHEN we call the hasEntries variable
+    // WHEN we call the "hasEntries" variable
     let result = array.hasEntries
     
     // THEN false is returned
