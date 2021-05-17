@@ -11,18 +11,27 @@ struct HouseNameAndTitle: View {
   var house: HouseUpdated
   var width: CGFloat
   
+  var displayRegion: String {
+    // Very rarely a house has no region. We
+    // add a default here to ensure the view
+    // still works.
+    return house.region != ""
+      ? house.region
+      : "Westeros"
+  }
+  
   var body: some View {
     return VStack {
       let isGreatHouse = house.isGreatHouse
       let adaptedWidth = isGreatHouse ? width - 72 : width
-      
+
       HStack {
         if isGreatHouse {
           HouseIconSigil(iconSize: .largeForHeader, id: house.id)
         }
         
         if house.name.exists {
-          Text("\(house.name)")
+          Text(house.name)
             .font(.system(size: 200))
             .minimumScaleFactor(0.08)
             .multilineTextAlignment(.center)
@@ -30,13 +39,8 @@ struct HouseNameAndTitle: View {
         }
       }
       
-      if house.region.exists {
-        Text("of \(house.region)")
-          // Move this up to be directly
-          // underneath the text in the HStack
-          .offset(y: -8)
-          .padding(.bottom, 16)
-      }
+      Text("of \(displayRegion)")
+        .padding(.bottom, 16)
     }
     .padding(.top, 24)
     
