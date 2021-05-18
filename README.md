@@ -14,7 +14,7 @@ Contains:
 - Native API Calls with generic types 
 - Pagination
 - Nested API-Calls
-- Graceful Failure
+- Graceful Failure - elements that do not exist (yet) are not shown instead of showing empty elements or errors
 - MVVM Architecture
 - Detailed House-View
 - Detailed Character-View
@@ -22,24 +22,26 @@ Contains:
 - Elegant in-view error-handling on SingleHouse and Character Views (no popups!)
 - Continuous Integration with BitRise
 - Unit-Tests
-- Detailed comments
+- Extensive, detailed comments
 - Custom color-parser to create icons per house from description of the Coat of Arms
 - Small Screen Support
 - Extensive SwiftUI Previews
-- Skeleton Loading View
+- Skeleton Loading Views
 - Major Houses Display
 
 Todo:
 - Timeout on Main Screen
 - Tap tabbar icons to reset view
 - More Unit-Tests
+- Unit-tests for ViewModels
 
 Nice to Have:
+- CodeCov integration in CICD
 - Monkey-Tests
 - Fetch nested data for Characters
 - UI-Tests
 - Actor Images through IMDB
-- Dark Color Scheme & switching
+- Dark Color Scheme &  scheme switching
 - Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
 - RealmDB Caching
