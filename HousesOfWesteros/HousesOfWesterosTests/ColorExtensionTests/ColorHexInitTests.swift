@@ -37,7 +37,7 @@ class ColorHexInitTests: XCTestCase {
   }
   
   func testHexFromThreeCharacters() {
-    // GIVEN a hex-string that encodes "green" without a hashsign
+    // GIVEN a 3-character hex-string that encodes "green"
     let hex = "0F0"
     
     // WHEN we create a color from that string
@@ -45,12 +45,12 @@ class ColorHexInitTests: XCTestCase {
 
     // THEN the resulting SwiftUI Color is identical
     // to a regularly initialized SwiftUI Color.
-    let colorRed = Color(.sRGB, red: 0.0, green: 1.0, blue: 0.0, opacity: 1.0)
-    XCTAssertEqual(result, colorRed)
+    let colorGreen = Color(.sRGB, red: 0.0, green: 1.0, blue: 0.0, opacity: 1.0)
+    XCTAssertEqual(result, colorGreen)
   }
   
   func testHexWithAlpha() {
-    // GIVEN a hex-string that encodes "red" without a hashsign
+    // GIVEN an 8-character-hex-string that encodes "red"
     let hex = "FFFF0000"
     
     // WHEN we create a color from that string
@@ -62,16 +62,28 @@ class ColorHexInitTests: XCTestCase {
     XCTAssertEqual(result, colorRed)
   }
   
-  func testInvalidInput() {
-    // GIVEN a hex-string that encodes "red" without a hashsign
+  func testInvalidInputWithHex() {
+    // GIVEN a hex-string that does not conform to
+    // the supported 3, 6 or 8 input-characters
     let hex = "FFFF"
     
     // WHEN we create a color from that string
     let result = Color(hex: hex)
 
-    // THEN the resulting SwiftUI Color is identical
-    // to a regularly initialized SwiftUI Color.
-    let colorRed = Color(.sRGB, red: 1.0, green: 1.0, blue: 1.0, opacity: 1.0)
-    XCTAssertEqual(result, colorRed)
+    // THEN the default white color is returned.
+    let colorWhite = Color(.sRGB, red: 1.0, green: 1.0, blue: 1.0, opacity: 1.0)
+    XCTAssertEqual(result, colorWhite)
+  }
+  
+  func testInvalidInputWithString() {
+    // GIVEN a string that is not a hex-string
+    let hex = "lorem ipsum"
+    
+    // WHEN we create a color from that string
+    let result = Color(hex: hex)
+
+    // THEN the default white color is returned.
+    let colorWhite = Color(.sRGB, red: 1.0, green: 1.0, blue: 1.0, opacity: 1.0)
+    XCTAssertEqual(result, colorWhite)
   }
 }

@@ -14,6 +14,10 @@ extension Color {
   /// Creates a SwiftUI color from a hex code. Can take
   /// input as 3, 6 or 8 characters, with or without a
   /// hash-sign prefixed, in upper or lower case.
+  ///
+  /// Returns .white on faulty input.
+  ///
+  /// Possible Inputs:
   /// - 12 Bit (3 characters): R G B, e.g. "FF0"
   /// - 24 Bit (6 characters): RR GG BB, e.g. "FF0000"
   /// - 32 Bit (8 characters): AA RR GG BB, e.g. "FFFF0000"
