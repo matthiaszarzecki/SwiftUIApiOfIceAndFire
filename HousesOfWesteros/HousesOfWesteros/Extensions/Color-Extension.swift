@@ -11,7 +11,16 @@ extension Color {
   static let westerosRed = Color(hex: "9C1E19")
   static let redactedGray = Color(hex: "D6D6D6")
   
-  /// Creates a SwiftUI color from a hex code.
+  /// Creates a SwiftUI color from a hex code. Can take
+  /// input as 3, 6 or 8 characters, with or without a
+  /// hash-sign prefixed, in upper or lower case.
+  ///
+  /// Returns .white on faulty input.
+  ///
+  /// Possible Inputs:
+  /// - 12 Bit (3 characters): R G B, e.g. "FF0"
+  /// - 24 Bit (6 characters): RR GG BB, e.g. "FF0000"
+  /// - 32 Bit (8 characters): AA RR GG BB, e.g. "FFFF0000"
   init(hex: String) {
     let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
     var int: UInt64 = 0
@@ -25,7 +34,8 @@ extension Color {
     case 8: // ARGB (32-bit)
       (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
     default:
-      (a, r, g, b) = (1, 1, 1, 0)
+      // Defaults to white on faulty input.
+      (a, r, g, b) = (255, 255, 255, 255)
     }
     
     self.init(

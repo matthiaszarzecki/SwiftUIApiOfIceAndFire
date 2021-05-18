@@ -21,9 +21,9 @@ extension String {
     // of bounds return empty emptry string.
     if self.isEmpty || index >= self.count || index < 0 {
       return ""
-    } else {
-      return String(self[self.index(self.startIndex, offsetBy: index)])
     }
+    
+    return String(self[self.index(self.startIndex, offsetBy: index)])
   }
   
   /// A Boolean value indicating whether

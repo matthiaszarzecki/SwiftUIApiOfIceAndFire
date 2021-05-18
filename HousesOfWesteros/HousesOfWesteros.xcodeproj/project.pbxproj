@@ -24,6 +24,7 @@
 		6EAC701C2630AEB800988D47 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC701B2630AEB800988D47 /* ColorParserTests.swift */; };
 		6EAC70312630C8E600988D47 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC70302630C8E600988D47 /* CharacterCell.swift */; };
 		6EAC70362630CB0500988D47 /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC70352630CB0500988D47 /* HouseCell.swift */; };
+		6EB4C06326532112006DA267 /* ColorHexInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB4C06226532112006DA267 /* ColorHexInitTests.swift */; };
 		6EB5E7022635DBB80057D715 /* IconSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E7012635DBB80057D715 /* IconSize.swift */; };
 		6EB5E7072635DFBE0057D715 /* PreviewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */; };
 		6EB5E70C263615FE0057D715 /* HouseCellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */; };
@@ -129,6 +130,7 @@
 		6EAC701B2630AEB800988D47 /* ColorParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
 		6EAC70302630C8E600988D47 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		6EAC70352630CB0500988D47 /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
+		6EB4C06226532112006DA267 /* ColorHexInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexInitTests.swift; sourceTree = "<group>"; };
 		6EB5E7012635DBB80057D715 /* IconSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSize.swift; sourceTree = "<group>"; };
 		6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewConstants.swift; sourceTree = "<group>"; };
 		6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCellLarge.swift; sourceTree = "<group>"; };
@@ -295,6 +297,14 @@
 			path = ColorParserTests;
 			sourceTree = "<group>";
 		};
+		6EB4C061265320D6006DA267 /* ColorExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EB4C06226532112006DA267 /* ColorHexInitTests.swift */,
+			);
+			path = ColorExtensionTests;
+			sourceTree = "<group>";
+		};
 		CC0E1DAD262597B000C285D8 = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +345,7 @@
 			children = (
 				CC0E1DCD262597B200C285D8 /* Info.plist */,
 				6E350A3E2651F84D00FD520F /* ArrayExtensionTests */,
+				6EB4C061265320D6006DA267 /* ColorExtensionTests */,
 				6EAC70202630B22C00988D47 /* ColorParserTests */,
 				6E170B63262B09160074314E /* HouseBasicTests.swift */,
 				6E350A452652002F00FD520F /* StringArrayExtensionTests */,
@@ -798,6 +809,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB4C06326532112006DA267 /* ColorHexInitTests.swift in Sources */,
 				6E5DCAA226529FE300BC8AB0 /* StringArrayHasNonEmptyEntriesTests.swift in Sources */,
 				6E170B53262B088E0074314E /* StringIsLinkTests.swift in Sources */,
 				6E350A422651F9C200FD520F /* StringCapitalizeFirstLetterTests.swift in Sources */,
