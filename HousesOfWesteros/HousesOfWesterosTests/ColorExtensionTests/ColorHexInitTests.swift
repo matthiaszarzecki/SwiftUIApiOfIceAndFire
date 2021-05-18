@@ -16,8 +16,10 @@ class ColorHexInitTests: XCTestCase {
     
     // WHEN we create a color from that string
     let result = Color(hex: hex)
-    
-    // THEN the resulting SwiftUI Color is Color.red
-    XCTAssertEqual(.red, result)
+
+    // THEN the resulting SwiftUI Color is identical
+    // to a regularly initialized SwiftUI Color.
+    let colorRed = Color(.sRGB, red: 1.0, green: 0, blue: 0, opacity: 1.0)
+    XCTAssertEqual(result, colorRed)
   }
 }
