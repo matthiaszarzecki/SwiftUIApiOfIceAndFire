@@ -11,6 +11,15 @@ extension Color {
   static let westerosRed = Color(hex: "9C1E19")
   static let redactedGray = Color(hex: "D6D6D6")
   
+  static let customBrown = Color(hex: "773D1C")
+  static let customPink = Color(hex: "E87AA4")
+  static let customLightBlue = Color(hex: "87CEEB")
+  static let customCyan = Color(hex: "00FFFF")
+  static let customLightGreen = Color(hex: "77C344")
+  static let customDarkGreen = Color(hex: "134B0E")
+  static let customWhite = Color(hex: "F2F2F7")
+  static let customBlack = Color(hex: "111111")
+  
   /// Creates a SwiftUI color from a hex code. Can take
   /// input as 3, 6 or 8 characters, with or without a
   /// hash-sign prefixed, in upper or lower case.
