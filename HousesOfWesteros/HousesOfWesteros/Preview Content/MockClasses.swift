@@ -152,6 +152,24 @@ struct MockClasses {
       "https://anapioficeandfire.com/api/books/8"
     ]
   )
+
+  static let characterWithNoData = CharacterBasic(
+    id: "https://www.anapioficeandfire.com/api/characters/290",
+    name: "",
+    culture: "",
+    born: "",
+    died: "",
+    titles: [],
+    aliases: [],
+    tvShowAppearances: [],
+    portrayedBy: [],
+    father: "",
+    mother: "",
+    spouse: "",
+    allegiances: [],
+    bookAppearances: [],
+    hasPointOfViewChaptersInBooks: []
+  )
   
   static let characters = Array.init(repeating: character, count: 3)
   
