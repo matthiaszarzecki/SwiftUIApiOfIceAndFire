@@ -170,6 +170,24 @@ struct MockClasses {
     bookAppearances: [],
     hasPointOfViewChaptersInBooks: []
   )
+
+  static let characterWithNoNameButAlias = CharacterBasic(
+    id: "https://www.anapioficeandfire.com/api/characters/290",
+    name: "",
+    culture: "",
+    born: "",
+    died: "",
+    titles: [],
+    aliases: ["The Knight"],
+    tvShowAppearances: [],
+    portrayedBy: [],
+    father: "",
+    mother: "",
+    spouse: "",
+    allegiances: [],
+    bookAppearances: [],
+    hasPointOfViewChaptersInBooks: []
+  )
   
   static let characters = Array.init(repeating: character, count: 3)
   
