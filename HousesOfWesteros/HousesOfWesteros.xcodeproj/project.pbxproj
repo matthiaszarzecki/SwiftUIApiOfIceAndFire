@@ -300,10 +300,10 @@
 		6E7BC56F2656950D00E805C8 /* CharacterBasicTests */ = {
 			isa = PBXGroup;
 			children = (
+				6E7EF0982657BB6400C4D876 /* CharacterBasicDisplayNameTests.swift */,
 				6E7BC5702656954200E805C8 /* CharacterBasicHasActorTests.swift */,
 				6EB183A82656CCB600E6B3BD /* CharacterBasicHasInformationTests.swift */,
 				6E7EF0962657BABF00C4D876 /* CharacterBasicInitialLetterTests.swift */,
-				6E7EF0982657BB6400C4D876 /* CharacterBasicDisplayNameTests.swift */,
 			);
 			path = CharacterBasicTests;
 			sourceTree = "<group>";
