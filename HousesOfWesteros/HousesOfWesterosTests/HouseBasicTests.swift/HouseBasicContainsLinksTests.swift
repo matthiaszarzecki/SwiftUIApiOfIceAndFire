@@ -8,8 +8,8 @@
 import XCTest
 @testable import HousesOfWesteros
 
-class HouseBasicTests: XCTestCase {
-  func testHouseWithLinksShowsIfLinksArePresent() {
+class HouseBasicContainsLinksTests: XCTestCase {
+  func testHouseWithLinksContainsLinks() {
     // GIVEN a house that contains at least one link
     let house = MockClasses.houseBasicWithLinksAndWithCoatOfArms
     
@@ -20,7 +20,7 @@ class HouseBasicTests: XCTestCase {
     XCTAssertTrue(result)
   }
   
-  func testHouseWithoutLinksShowsIfLinksAreMissing() {
+  func testHouseWithoutLinksShowsContainsNoLinks() {
     // GIVEN a house that contains no links
     let house = MockClasses.houseBasicWithoutLinksAndWithCoatOfArms
     
