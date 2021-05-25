@@ -15,7 +15,7 @@ class ColorGreatHousesMajorColorTests: XCTestCase {
     let house = MockClasses.houseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we access a the associated GreatHouseMajorColor
-    let result = Color.greatHousesMajorColor(id: house.id)
+    let result = Color.greatHousesMajorColor(id: house.id!)
 
     // THEN we receive a color that is not .white
     XCTAssertNotEqual(result, .white)
@@ -23,10 +23,10 @@ class ColorGreatHousesMajorColorTests: XCTestCase {
 
   func testNotGettingAColorOfAGreatHouse() {
     // GIVEN a house that is not a Great House
-    let house = MockClasses.houseWithNoData
+    let house = MockClasses.houseWithOnlyUrl
 
     // WHEN we access a the associated GreatHouseMajorColor
-    let result = Color.greatHousesMajorColor(id: house.id)
+    let result = Color.greatHousesMajorColor(id: house.id!)
 
     // THEN we receive the fallback-color, which is .white
     XCTAssertEqual(result, .white)

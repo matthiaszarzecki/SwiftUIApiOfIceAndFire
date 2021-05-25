@@ -22,7 +22,7 @@ class HouseBasicIsGreatHouseTests: XCTestCase {
 
   func testHouseIsNotGreatHouse() {
     // GIVEN a house that is not a Great House
-    let house = MockClasses.houseWithNoData
+    let house = MockClasses.houseWithOnlyUrl
 
     // WHEN we check the "isGreatHouse" variable
     let result = house.isGreatHouse

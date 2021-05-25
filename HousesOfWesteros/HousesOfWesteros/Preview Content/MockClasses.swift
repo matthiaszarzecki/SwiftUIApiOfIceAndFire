@@ -110,8 +110,27 @@ struct MockClasses {
     swornMembers: []
   )
 
-  static let houseWithNoData = HouseBasic(
+  static let houseWithOnlyUrl = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/113",
+    name: "",
+    region: "",
+    coatOfArms: "",
+    motto: "",
+    titles: [],
+    seats: [],
+    foundingPeriod: "",
+    diedOutPeriod: "",
+    ancestralWeapons: [],
+    currentLord: "",
+    heir: "",
+    overlordHouse: "",
+    foundedByCharacter: "",
+    cadetBranches: [],
+    swornMembers: []
+  )
+
+  static let houseWithNoData = HouseBasic(
+    url: "",
     name: "",
     region: "",
     coatOfArms: "",

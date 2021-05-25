@@ -11,7 +11,7 @@ import SwiftUI
 /// The house-data but with the URL's called
 /// and replaced by their corresponding data.
 struct HouseUpdated {
-  let id: Int
+  let id: Int?
   let url: String
   let name: String
   let region: String

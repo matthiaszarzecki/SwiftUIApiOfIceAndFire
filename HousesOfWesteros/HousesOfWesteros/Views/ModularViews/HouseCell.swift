@@ -12,11 +12,12 @@ struct HouseCellUpdated: View {
   var iconSize: IconSize
   
   var icon: some View {
-    if house.isGreatHouse {
+    if let unwrappedId = house.id,
+       house.isGreatHouse {
       return AnyView(
         HouseIconSigil(
           iconSize: iconSize,
-          id: house.id
+          id: unwrappedId
         )
       )
     } else {
@@ -49,11 +50,12 @@ struct HouseCellBasic: View {
   var iconSize: IconSize
   
   var icon: some View {
-    if house.isGreatHouse {
+    if let unwrappedId = house.id,
+       house.isGreatHouse {
       return AnyView(
         HouseIconSigil(
           iconSize: iconSize,
-          id: house.id
+          id: unwrappedId
         )
       )
     } else {

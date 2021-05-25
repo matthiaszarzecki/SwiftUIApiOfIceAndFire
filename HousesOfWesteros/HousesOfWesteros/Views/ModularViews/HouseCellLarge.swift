@@ -16,11 +16,12 @@ struct HouseCellLarge: View {
   }
   
   var icon: some View {
-    if house.isGreatHouse {
+    if let unwrappedId = house.id,
+       house.isGreatHouse {
       return AnyView(
         HouseIconSigil(
           iconSize: .greatHouseCell,
-          id: house.id
+          id: unwrappedId
         )
       )
     } else {
@@ -46,6 +47,13 @@ struct HouseCellLarge: View {
       .frame(width: textElementWidth, height: 24, alignment: .leading)
       .multilineTextAlignment(.leading)
   }
+
+  var backgroundColor: Color {
+    if let unwrappedId = house.id {
+      return .greatHousesMajorColor(id: unwrappedId)
+    }
+    return .white
+  }
   
   var body: some View {
     VStack {
@@ -66,7 +74,7 @@ struct HouseCellLarge: View {
       }
     }
     .frame(width: width, height: 100, alignment: .center)
-    .backgroundColor(.greatHousesMajorColor(id: house.id))
+    .backgroundColor(backgroundColor)
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }

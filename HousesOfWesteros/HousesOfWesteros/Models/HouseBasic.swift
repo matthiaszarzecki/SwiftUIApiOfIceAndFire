@@ -15,9 +15,9 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   
   /// The number-id for the house.
   /// Is also the last part of the url.
-  var id: Int {
+  var id: Int? {
     let urlElements = url.components(separatedBy: "/")
-    return Int(urlElements.last ?? "") ?? 0
+    return Int(urlElements.last ?? "") ?? nil
   }
   
   let url: String
@@ -68,7 +68,10 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// belongs to the great houses and has
   /// an image file associated.
   var isGreatHouse: Bool {
-    return Constants.greatHouses.contains(id)
+    if let unwrappedId = id {
+      return Constants.greatHouses.contains(unwrappedId)
+    }
+    return false
   }
   
   enum CodingKeys: String, CodingKey {
