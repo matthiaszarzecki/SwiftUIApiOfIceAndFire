@@ -66,7 +66,7 @@ struct HouseCellLarge: View {
       }
     }
     .frame(width: width, height: 100, alignment: .center)
-    .backgroundColor(Constants.greatHousesMajorColor(id: house.id))
+    .backgroundColor(.greatHousesMajorColor(id: house.id))
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }
