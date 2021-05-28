@@ -38,7 +38,6 @@
 		6EB5E7072635DFBE0057D715 /* PreviewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */; };
 		6EB5E70C263615FE0057D715 /* HouseCellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */; };
 		6EE5C39F265D872000188DE2 /* StringIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5C39E265D872000188DE2 /* StringIdTests.swift */; };
-		9936576311323429A5979729 /* libPods-HousesOfWesterosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4C31BAD023FFFE3DCBBFFF /* libPods-HousesOfWesterosTests.a */; };
 		CC0E1DD7262597B200C285D8 /* HousesOfWesterosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DD6262597B200C285D8 /* HousesOfWesterosUITests.swift */; };
 		CC0E1E40262597D800C285D8 /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEB262597D700C285D8 /* Data-Extension.swift */; };
 		CC0E1E41262597D800C285D8 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEC262597D700C285D8 /* String-Extension.swift */; };
@@ -124,9 +123,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D7CA7409AC3E9DA01DAA208 /* Pods-HousesOfWesterosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesOfWesterosTests.debug.xcconfig"; path = "Target Support Files/Pods-HousesOfWesterosTests/Pods-HousesOfWesterosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		315659D5605064EB2C91012E /* Pods-HousesOfWesterosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesOfWesterosTests.release.xcconfig"; path = "Target Support Files/Pods-HousesOfWesterosTests/Pods-HousesOfWesterosTests.release.xcconfig"; sourceTree = "<group>"; };
-		3E4C31BAD023FFFE3DCBBFFF /* libPods-HousesOfWesterosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HousesOfWesterosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E170B52262B088E0074314E /* StringIsLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIsLinkTests.swift; sourceTree = "<group>"; };
 		6E170B57262B08C30074314E /* StringSubscriptingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSubscriptingTests.swift; sourceTree = "<group>"; };
 		6E1DE0EF2634489E00222676 /* HouseIconSigil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseIconSigil.swift; sourceTree = "<group>"; };
@@ -243,7 +239,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9936576311323429A5979729 /* libPods-HousesOfWesterosTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +252,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5599A5865327AE85BF2A0E74 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3E4C31BAD023FFFE3DCBBFFF /* libPods-HousesOfWesterosTests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6E170B5C262B09000074314E /* StringExtensionTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,16 +342,6 @@
 			path = ColorExtensionTests;
 			sourceTree = "<group>";
 		};
-		CA75220351C0F5FE393D574D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D7CA7409AC3E9DA01DAA208 /* Pods-HousesOfWesterosTests.debug.xcconfig */,
-				315659D5605064EB2C91012E /* Pods-HousesOfWesterosTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		CC0E1DAD262597B000C285D8 = {
 			isa = PBXGroup;
 			children = (
@@ -372,8 +349,6 @@
 				CC0E1DCA262597B200C285D8 /* HousesOfWesterosTests */,
 				CC0E1DD5262597B200C285D8 /* HousesOfWesterosUITests */,
 				CC0E1DB7262597B000C285D8 /* Products */,
-				CA75220351C0F5FE393D574D /* Pods */,
-				5599A5865327AE85BF2A0E74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -689,7 +664,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC0E1DDE262597B200C285D8 /* Build configuration list for PBXNativeTarget "HousesOfWesterosTests" */;
 			buildPhases = (
-				265246063393AB6411F50455 /* [CP] Check Pods Manifest.lock */,
 				CC0E1DC3262597B200C285D8 /* Sources */,
 				CC0E1DC4262597B200C285D8 /* Frameworks */,
 				CC0E1DC5262597B200C285D8 /* Resources */,
@@ -792,31 +766,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		265246063393AB6411F50455 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HousesOfWesterosTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC0E1DB2262597B000C285D8 /* Sources */ = {
@@ -1114,7 +1063,6 @@
 		};
 		CC0E1DDF262597B200C285D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D7CA7409AC3E9DA01DAA208 /* Pods-HousesOfWesterosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1139,7 +1087,6 @@
 		};
 		CC0E1DE0262597B200C285D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 315659D5605064EB2C91012E /* Pods-HousesOfWesterosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
