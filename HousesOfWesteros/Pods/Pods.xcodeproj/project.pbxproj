@@ -32,13 +32,14 @@
 		2A38A1F33486A7048BB9A1EDBDA492BD /* TouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8110EF5E191AE934B649C5E33B17071 /* TouchBar.swift */; };
 		2AA1F2F467F05407014B5182D8F3908D /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D889B711B84A2C1EA73BEF47023B2 /* TextAttributes.swift */; };
 		3168DB4A50CAE73D41E5E50C911561CE /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3CA692B71218721DA073911FED81D8 /* NavigationView.swift */; };
-		329E484EBDE6CF5F20D3A04508D1E45F /* Pods-HousesOfWesteros-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4789020618423FDD4B9CEC05D78D2814 /* Pods-HousesOfWesteros-dummy.m */; };
 		38BAE872EB5FB8E2FDFE0C5B0D3EE069 /* TupleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69931317732B2F195870A3A43947D2F /* TupleView.swift */; };
 		3D22F373E19EDC37D22EB98DC24F6675 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04899FDECE73803D6F98AE4E5351E46 /* Button.swift */; };
 		3E22563BCCCB71B1991613307EF86E30 /* TransformingModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169D0207155E4472BEB763F319CEB050 /* TransformingModifiers.swift */; };
 		48FE1A57D99C28F24584317A26CD64EF /* ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBA24BAB70161FCF8821348F3C3748 /* ZStack.swift */; };
+		4A6AB09CB212559E065A6A2C4AB83E22 /* Pods-HousesOfWesterosTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6E3125C73160480522A677F0AE9388 /* Pods-HousesOfWesterosTests-dummy.m */; };
 		4B478F3DF5F364B2323A03726B6FE495 /* PreviewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEC7C2990B4F6DC535CBE21F6ECB7F /* PreviewModifiers.swift */; };
 		4C4637C7FA6F740A3318F186411950B8 /* ClassifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33059A145C6815678784CE6FEE8114D3 /* ClassifiedView.swift */; };
+		4F0175840C2CF4E06EC9C8F70CEE3021 /* Pods-HousesOfWesterosTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E19F73B018B91EB0B4FEE4EECFDF9B24 /* Pods-HousesOfWesterosTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		526759611E9857AAA0B723FDD77B0FA8 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D9415B40868991AF48BA573403C800 /* EditButton.swift */; };
 		558D19F5CB57009E2311ADBCA3950D74 /* TextInputModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C74AC3A0FEE2819BA178911A62F6A /* TextInputModifiers.swift */; };
 		5725930CDC4A59B1AB76D2CB13621E8E /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B8692971D186CCD825415E75FD01D0 /* AnyView.swift */; };
@@ -87,7 +88,6 @@
 		D00B36340C7D75A282D9CBA465A85DB6 /* GestureModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18750EE9FC2FBBC25DD1611D195F0C66 /* GestureModifiers.swift */; };
 		D010AD7C4FF64225FF883141D5C5E169 /* GeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7CEEC706DBCDDB0A8D516B17810CB /* GeometryReader.swift */; };
 		D170A8874257065EBC388D9E9CA2296E /* LazyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22371EA1656F4227A5B4589FD0131746 /* LazyVStack.swift */; };
-		D22DDBF486A8C797561CD34B93C2DAE7 /* Pods-HousesOfWesteros-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0DC12FAC400AF31EFAC2133A72D64F1 /* Pods-HousesOfWesteros-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D3FAE8B19ADD22518D499E09B3D1B025 /* AngularGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5375E01F9A19C4D0F4A80CBCB55F7 /* AngularGradient.swift */; };
 		DBF4064F4A9D593106C94F7068EF957C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1822433648B2FF02562649024E9D35 /* TextField.swift */; };
 		DC4CAD95994D0FD81B13B3A99D5F941A /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F147E6F25C4289A79A25BBB962A0F /* Spacer.swift */; };
@@ -110,7 +110,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C67D3DDDEA7D0CBCA0843E7B4F5A6C12 /* PBXContainerItemProxy */ = {
+		7DA71FE9A08052CE136AB6928F405CC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -126,6 +126,7 @@
 		06D9415B40868991AF48BA573403C800 /* EditButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EditButton.swift; path = Sources/ViewInspector/SwiftUI/EditButton.swift; sourceTree = "<group>"; };
 		06F36450E2C98E8C24A99064998B00F5 /* RadialGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadialGradient.swift; path = Sources/ViewInspector/SwiftUI/RadialGradient.swift; sourceTree = "<group>"; };
 		073824719B38941864A6BDE1D911C896 /* ViewSearch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewSearch.swift; path = Sources/ViewInspector/ViewSearch.swift; sourceTree = "<group>"; };
+		0820B2AD390CC3B42F9462C5A2454139 /* Pods-HousesOfWesterosTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HousesOfWesterosTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		093942ADC6FD8A400FA823042D4D82BB /* NavigationLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationLink.swift; path = Sources/ViewInspector/SwiftUI/NavigationLink.swift; sourceTree = "<group>"; };
 		09FAD957EDA1D65F3E099D071FB658B1 /* ColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorPicker.swift; path = Sources/ViewInspector/SwiftUI/ColorPicker.swift; sourceTree = "<group>"; };
 		0A1B11AA854B7271ED524F19FA8CA5F3 /* TransitiveModifiers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitiveModifiers.swift; path = Sources/ViewInspector/Modifiers/TransitiveModifiers.swift; sourceTree = "<group>"; };
@@ -156,22 +157,24 @@
 		3E5801507BB780A4DAC08698320354C8 /* Overlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Overlay.swift; path = Sources/ViewInspector/SwiftUI/Overlay.swift; sourceTree = "<group>"; };
 		40DAD1AF627939C14225B3DDB160B9F8 /* Inspector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Inspector.swift; path = Sources/ViewInspector/Inspector.swift; sourceTree = "<group>"; };
 		44729BDB353FD583AFB9F595F9165CE1 /* AnimationModifiers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationModifiers.swift; path = Sources/ViewInspector/Modifiers/AnimationModifiers.swift; sourceTree = "<group>"; };
-		4789020618423FDD4B9CEC05D78D2814 /* Pods-HousesOfWesteros-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HousesOfWesteros-dummy.m"; sourceTree = "<group>"; };
 		4E994EC639F4A7CF0C5254E8043DF510 /* BaseTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseTypes.swift; path = Sources/ViewInspector/BaseTypes.swift; sourceTree = "<group>"; };
 		5927BBE3F18A31B7579CB7E5553092C0 /* Toggle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toggle.swift; path = Sources/ViewInspector/SwiftUI/Toggle.swift; sourceTree = "<group>"; };
+		5D7DA95CF1BF4A70D8BE41F3A33A3A7A /* Pods-HousesOfWesterosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HousesOfWesterosTests.release.xcconfig"; sourceTree = "<group>"; };
 		6428E4491F15E10E49C5FD10446C5061 /* ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = Sources/ViewInspector/SwiftUI/ScrollView.swift; sourceTree = "<group>"; };
 		643C2EEE5F0171EA6CF4498C1C3DDC6A /* ViewSearchIndex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewSearchIndex.swift; path = Sources/ViewInspector/ViewSearchIndex.swift; sourceTree = "<group>"; };
-		649EEE09E9B99A6BD4D6D3A59BF6A92E /* Pods-HousesOfWesteros-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HousesOfWesteros-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6710F5D647EE90A70DD8E31C2A8A90BE /* OutlineGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OutlineGroup.swift; path = Sources/ViewInspector/SwiftUI/OutlineGroup.swift; sourceTree = "<group>"; };
 		6C038817EEA1CB58E486813C721505CD /* EnvironmentReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnvironmentReaderView.swift; path = Sources/ViewInspector/SwiftUI/EnvironmentReaderView.swift; sourceTree = "<group>"; };
 		6C70BBA2959BAB44C6EBA1A975914BCA /* ViewHosting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewHosting.swift; path = Sources/ViewInspector/ViewHosting.swift; sourceTree = "<group>"; };
 		6EB64DC1B46B2B529A3AD24E55DB38FC /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Sources/ViewInspector/SwiftUI/Form.swift; sourceTree = "<group>"; };
+		732716B858E7E57ADCC8FDD4A43E4E09 /* Pods-HousesOfWesterosTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HousesOfWesterosTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7405E5673F9E309071F9DFE410BF0623 /* libViewInspector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libViewInspector.a; path = libViewInspector.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F09BC1553174455ACC134313A07B00 /* LazyHStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyHStack.swift; path = Sources/ViewInspector/SwiftUI/LazyHStack.swift; sourceTree = "<group>"; };
 		76EC01FCED3BBB82CB0A5AC6D9907C46 /* DatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePicker.swift; path = Sources/ViewInspector/SwiftUI/DatePicker.swift; sourceTree = "<group>"; };
 		79D3657B2A9E59CB76907EDA8064E971 /* Picker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Picker.swift; path = Sources/ViewInspector/SwiftUI/Picker.swift; sourceTree = "<group>"; };
+		7A55C9F8D6F5EC3916196F9555435141 /* Pods-HousesOfWesterosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HousesOfWesterosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B0F147E6F25C4289A79A25BBB962A0F /* Spacer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spacer.swift; path = Sources/ViewInspector/SwiftUI/Spacer.swift; sourceTree = "<group>"; };
 		7B8FBC298ACDF5109C78B1A15FFA01C2 /* Menu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Menu.swift; path = Sources/ViewInspector/SwiftUI/Menu.swift; sourceTree = "<group>"; };
+		7C6E3125C73160480522A677F0AE9388 /* Pods-HousesOfWesterosTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HousesOfWesterosTests-dummy.m"; sourceTree = "<group>"; };
 		7F15D6107FC70E7334EE86D6F9E96578 /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Sources/ViewInspector/SwiftUI/Alert.swift; sourceTree = "<group>"; };
 		807D889B711B84A2C1EA73BEF47023B2 /* TextAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAttributes.swift; path = Sources/ViewInspector/SwiftUI/TextAttributes.swift; sourceTree = "<group>"; };
 		82C9C43D1CD18B8F17F7F0C9F4CF8150 /* Gesture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gesture.swift; path = Sources/ViewInspector/SwiftUI/Gesture.swift; sourceTree = "<group>"; };
@@ -186,10 +189,9 @@
 		9FF1CC6A942363007ECD93D88E1D56CE /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Sources/ViewInspector/SwiftUI/Color.swift; sourceTree = "<group>"; };
 		A15529C6BF02996DAAF7923274A2197B /* TreeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TreeView.swift; path = Sources/ViewInspector/SwiftUI/TreeView.swift; sourceTree = "<group>"; };
 		A1887543AC00D283E33CE266F3B16D3E /* ModifiedContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModifiedContent.swift; path = Sources/ViewInspector/SwiftUI/ModifiedContent.swift; sourceTree = "<group>"; };
+		A319A0A6B03D06894245898B074E2766 /* Pods-HousesOfWesterosTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HousesOfWesterosTests.modulemap"; sourceTree = "<group>"; };
 		A40995E4F2563F0EFBB1510FCED8624C /* ViewInspector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewInspector-prefix.pch"; sourceTree = "<group>"; };
-		A460C33CC67E211B5973F7E7F3227361 /* Pods-HousesOfWesteros.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HousesOfWesteros.debug.xcconfig"; sourceTree = "<group>"; };
 		A69931317732B2F195870A3A43947D2F /* TupleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TupleView.swift; path = Sources/ViewInspector/SwiftUI/TupleView.swift; sourceTree = "<group>"; };
-		A9576706E0E9940A8E44095AC157E31B /* libPods-HousesOfWesteros.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HousesOfWesteros.a"; path = "libPods-HousesOfWesteros.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5411AD274172DD49B6B5C669A345EA /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = Sources/ViewInspector/SwiftUI/Shape.swift; sourceTree = "<group>"; };
 		AC3A6C5045262A3AB5CDBEBD83FCCA64 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/ViewInspector/SwiftUI/Image.swift; sourceTree = "<group>"; };
 		AE0570771D4D99BE028F21AB92976C43 /* Label.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Label.swift; path = Sources/ViewInspector/SwiftUI/Label.swift; sourceTree = "<group>"; };
@@ -206,18 +208,17 @@
 		C5BCA75AC99444A5398233AAB9F1061A /* EmptyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = Sources/ViewInspector/SwiftUI/EmptyView.swift; sourceTree = "<group>"; };
 		C5C7CEEC706DBCDDB0A8D516B17810CB /* GeometryReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GeometryReader.swift; path = Sources/ViewInspector/SwiftUI/GeometryReader.swift; sourceTree = "<group>"; };
 		C5E26CB4B49DB3EB5F224BCDC5B9C6EC /* PasteButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PasteButton.swift; path = Sources/ViewInspector/SwiftUI/PasteButton.swift; sourceTree = "<group>"; };
-		C72C4E959F19622BDBF6D6CF35AD8133 /* Pods-HousesOfWesteros.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HousesOfWesteros.release.xcconfig"; sourceTree = "<group>"; };
 		C8110EF5E191AE934B649C5E33B17071 /* TouchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TouchBar.swift; path = Sources/ViewInspector/SwiftUI/TouchBar.swift; sourceTree = "<group>"; };
 		D0BB813323B738670E00AF7BDD077C45 /* LazyGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyGroup.swift; path = Sources/ViewInspector/LazyGroup.swift; sourceTree = "<group>"; };
-		D0DC12FAC400AF31EFAC2133A72D64F1 /* Pods-HousesOfWesteros-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HousesOfWesteros-umbrella.h"; sourceTree = "<group>"; };
 		D17C74AC3A0FEE2819BA178911A62F6A /* TextInputModifiers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextInputModifiers.swift; path = Sources/ViewInspector/Modifiers/TextInputModifiers.swift; sourceTree = "<group>"; };
 		D38A998BFB40888DF7B7051FDACD4DDC /* OptionalContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalContent.swift; path = Sources/ViewInspector/SwiftUI/OptionalContent.swift; sourceTree = "<group>"; };
 		D40CDD157800FE6EE3DBB8F6E922FDEA /* GroupBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupBox.swift; path = Sources/ViewInspector/SwiftUI/GroupBox.swift; sourceTree = "<group>"; };
 		D75D4CF729EBFD31B3EF3875781C8939 /* SecureField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureField.swift; path = Sources/ViewInspector/SwiftUI/SecureField.swift; sourceTree = "<group>"; };
 		D8B815C7D52C4486BD6D031C132CC54F /* HStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HStack.swift; path = Sources/ViewInspector/SwiftUI/HStack.swift; sourceTree = "<group>"; };
 		DA9871AA0E6BD5A62621F48E55A4CC18 /* Stepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stepper.swift; path = Sources/ViewInspector/SwiftUI/Stepper.swift; sourceTree = "<group>"; };
+		E1441C14F382685D47CFA46CD04C0EE0 /* libPods-HousesOfWesterosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HousesOfWesterosTests.a"; path = "libPods-HousesOfWesterosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19F73B018B91EB0B4FEE4EECFDF9B24 /* Pods-HousesOfWesterosTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HousesOfWesterosTests-umbrella.h"; sourceTree = "<group>"; };
 		E2C43CA601B074C0D1EA1727C4F0B5EB /* IDView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IDView.swift; path = Sources/ViewInspector/SwiftUI/IDView.swift; sourceTree = "<group>"; };
-		E575EDAF6664AD3878AC618581E5D2C8 /* Pods-HousesOfWesteros.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HousesOfWesteros.modulemap"; sourceTree = "<group>"; };
 		E68613819818052EB76B53404CC9CECD /* CustomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomView.swift; path = Sources/ViewInspector/SwiftUI/CustomView.swift; sourceTree = "<group>"; };
 		E6986E63279EF1E30E457EA09D350586 /* ViewInspector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewInspector.debug.xcconfig; sourceTree = "<group>"; };
 		E6B8692971D186CCD825415E75FD01D0 /* AnyView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyView.swift; path = Sources/ViewInspector/SwiftUI/AnyView.swift; sourceTree = "<group>"; };
@@ -225,7 +226,6 @@
 		EF33C6B4857B982C4D978BA17EEE1358 /* EquatableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EquatableView.swift; path = Sources/ViewInspector/SwiftUI/EquatableView.swift; sourceTree = "<group>"; };
 		EFEE9DDAB544B268896587A86DA00E56 /* Sheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sheet.swift; path = Sources/ViewInspector/SwiftUI/Sheet.swift; sourceTree = "<group>"; };
 		F04899FDECE73803D6F98AE4E5351E46 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Sources/ViewInspector/SwiftUI/Button.swift; sourceTree = "<group>"; };
-		F3CDB4045DB74267F8772C2BA08A7FDE /* Pods-HousesOfWesteros-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HousesOfWesteros-acknowledgements.plist"; sourceTree = "<group>"; };
 		F7C5A481FC3C6293D2EED71523C1347B /* Link.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Link.swift; path = Sources/ViewInspector/SwiftUI/Link.swift; sourceTree = "<group>"; };
 		FAD197032CFD1485127677795A643C29 /* ViewInspector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewInspector-umbrella.h"; sourceTree = "<group>"; };
 		FB3B10AC278186126472EB38941EE920 /* MenuButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuButton.swift; path = Sources/ViewInspector/SwiftUI/MenuButton.swift; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C869C57DB48AB63FE58C7DC160A0694 /* Frameworks */ = {
+		9EE4F619ED9D4886B4B0A9D1AA881CAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,10 +357,10 @@
 			path = ViewInspector;
 			sourceTree = "<group>";
 		};
-		27AEED8D9E0F3AE161250FFAB5E246D2 /* Products */ = {
+		2B0904B9A9CC8F4C17C9A88AA395408F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9576706E0E9940A8E44095AC157E31B /* libPods-HousesOfWesteros.a */,
+				E1441C14F382685D47CFA46CD04C0EE0 /* libPods-HousesOfWesterosTests.a */,
 				7405E5673F9E309071F9DFE410BF0623 /* libViewInspector.a */,
 			);
 			name = Products;
@@ -374,14 +374,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		6768F8C850D91E51E14EFF85EE78FC96 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8669F576BDE50A2D29299AF0AB6492E1 /* Pods-HousesOfWesterosTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8669F576BDE50A2D29299AF0AB6492E1 /* Pods-HousesOfWesterosTests */ = {
+			isa = PBXGroup;
+			children = (
+				A319A0A6B03D06894245898B074E2766 /* Pods-HousesOfWesterosTests.modulemap */,
+				0820B2AD390CC3B42F9462C5A2454139 /* Pods-HousesOfWesterosTests-acknowledgements.markdown */,
+				732716B858E7E57ADCC8FDD4A43E4E09 /* Pods-HousesOfWesterosTests-acknowledgements.plist */,
+				7C6E3125C73160480522A677F0AE9388 /* Pods-HousesOfWesterosTests-dummy.m */,
+				E19F73B018B91EB0B4FEE4EECFDF9B24 /* Pods-HousesOfWesterosTests-umbrella.h */,
+				7A55C9F8D6F5EC3916196F9555435141 /* Pods-HousesOfWesterosTests.debug.xcconfig */,
+				5D7DA95CF1BF4A70D8BE41F3A33A3A7A /* Pods-HousesOfWesterosTests.release.xcconfig */,
+			);
+			name = "Pods-HousesOfWesterosTests";
+			path = "Target Support Files/Pods-HousesOfWesterosTests";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				3F9679E8DBEF92D323E93F46D969CDC9 /* Pods */,
-				27AEED8D9E0F3AE161250FFAB5E246D2 /* Products */,
-				E5C1449AC0A665C925DD0CAEFC0CBFEA /* Targets Support Files */,
+				2B0904B9A9CC8F4C17C9A88AA395408F /* Products */,
+				6768F8C850D91E51E14EFF85EE78FC96 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -390,29 +413,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E5C1449AC0A665C925DD0CAEFC0CBFEA /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F26682914CB0FFFEB6B963593C761E7D /* Pods-HousesOfWesteros */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F26682914CB0FFFEB6B963593C761E7D /* Pods-HousesOfWesteros */ = {
-			isa = PBXGroup;
-			children = (
-				E575EDAF6664AD3878AC618581E5D2C8 /* Pods-HousesOfWesteros.modulemap */,
-				649EEE09E9B99A6BD4D6D3A59BF6A92E /* Pods-HousesOfWesteros-acknowledgements.markdown */,
-				F3CDB4045DB74267F8772C2BA08A7FDE /* Pods-HousesOfWesteros-acknowledgements.plist */,
-				4789020618423FDD4B9CEC05D78D2814 /* Pods-HousesOfWesteros-dummy.m */,
-				D0DC12FAC400AF31EFAC2133A72D64F1 /* Pods-HousesOfWesteros-umbrella.h */,
-				A460C33CC67E211B5973F7E7F3227361 /* Pods-HousesOfWesteros.debug.xcconfig */,
-				C72C4E959F19622BDBF6D6CF35AD8133 /* Pods-HousesOfWesteros.release.xcconfig */,
-			);
-			name = "Pods-HousesOfWesteros";
-			path = "Target Support Files/Pods-HousesOfWesteros";
 			sourceTree = "<group>";
 		};
 		F4BA032F76A778C7AA4BF86DAEAFEBB5 /* Support Files */ = {
@@ -432,6 +432,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		29600C4C04DE440F4947A990C29976CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0175840C2CF4E06EC9C8F70CEE3021 /* Pods-HousesOfWesterosTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FC94427C8CE30F31101A70E60AF95F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,17 +448,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C91B4729D2ED33951BC8FD8C57335D3E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D22DDBF486A8C797561CD34B93C2DAE7 /* Pods-HousesOfWesteros-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		025DD76595DCBA2D16522DDA56C5597B /* Pods-HousesOfWesterosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27AF999CB93120FABCAB93F779C3F8DF /* Build configuration list for PBXNativeTarget "Pods-HousesOfWesterosTests" */;
+			buildPhases = (
+				29600C4C04DE440F4947A990C29976CB /* Headers */,
+				F63907281D8584CCE271BB8CEEA89E01 /* Sources */,
+				9EE4F619ED9D4886B4B0A9D1AA881CAB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38D3505C77789FD63539C69A60A5ABCE /* PBXTargetDependency */,
+			);
+			name = "Pods-HousesOfWesterosTests";
+			productName = "Pods-HousesOfWesterosTests";
+			productReference = E1441C14F382685D47CFA46CD04C0EE0 /* libPods-HousesOfWesterosTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		18E2297FEECC3F6F2C8676B172C75A86 /* ViewInspector */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 385DA1F9F0252D035D274F124CE42B5C /* Build configuration list for PBXNativeTarget "ViewInspector" */;
@@ -467,24 +485,6 @@
 			name = ViewInspector;
 			productName = ViewInspector;
 			productReference = 7405E5673F9E309071F9DFE410BF0623 /* libViewInspector.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F62C75161BCCA3F35AB72E1156EEA74E /* Pods-HousesOfWesteros */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FBB0EDB3D5824E67D11D301AC38B2151 /* Build configuration list for PBXNativeTarget "Pods-HousesOfWesteros" */;
-			buildPhases = (
-				C91B4729D2ED33951BC8FD8C57335D3E /* Headers */,
-				E3D5D03E5745EB08A5F583AB597FB534 /* Sources */,
-				9C869C57DB48AB63FE58C7DC160A0694 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2B627DE4FD836702A388AA68CFF561B /* PBXTargetDependency */,
-			);
-			name = "Pods-HousesOfWesteros";
-			productName = "Pods-HousesOfWesteros";
-			productReference = A9576706E0E9940A8E44095AC157E31B /* libPods-HousesOfWesteros.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -505,11 +505,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 27AEED8D9E0F3AE161250FFAB5E246D2 /* Products */;
+			productRefGroup = 2B0904B9A9CC8F4C17C9A88AA395408F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F62C75161BCCA3F35AB72E1156EEA74E /* Pods-HousesOfWesteros */,
+				025DD76595DCBA2D16522DDA56C5597B /* Pods-HousesOfWesterosTests */,
 				18E2297FEECC3F6F2C8676B172C75A86 /* ViewInspector */,
 			);
 		};
@@ -647,50 +647,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3D5D03E5745EB08A5F583AB597FB534 /* Sources */ = {
+		F63907281D8584CCE271BB8CEEA89E01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329E484EBDE6CF5F20D3A04508D1E45F /* Pods-HousesOfWesteros-dummy.m in Sources */,
+				4A6AB09CB212559E065A6A2C4AB83E22 /* Pods-HousesOfWesterosTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D2B627DE4FD836702A388AA68CFF561B /* PBXTargetDependency */ = {
+		38D3505C77789FD63539C69A60A5ABCE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ViewInspector;
 			target = 18E2297FEECC3F6F2C8676B172C75A86 /* ViewInspector */;
-			targetProxy = C67D3DDDEA7D0CBCA0843E7B4F5A6C12 /* PBXContainerItemProxy */;
+			targetProxy = 7DA71FE9A08052CE136AB6928F405CC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		429757F034BC852ECC91D88CF1AF2ACA /* Release */ = {
+		87BAD6AC748D7B3B2EE9818C8680873C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C72C4E959F19622BDBF6D6CF35AD8133 /* Pods-HousesOfWesteros.release.xcconfig */;
+			baseConfigurationReference = 93E4F5BCE44DDEB4F321CE8C53C7DA8A /* ViewInspector.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HousesOfWesteros/Pods-HousesOfWesteros.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/ViewInspector/ViewInspector-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULEMAP_FILE = Headers/Public/ViewInspector/ViewInspector.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ViewInspector;
+				PRODUCT_NAME = ViewInspector;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -743,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -756,33 +759,7 @@
 			};
 			name = Debug;
 		};
-		87BAD6AC748D7B3B2EE9818C8680873C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93E4F5BCE44DDEB4F321CE8C53C7DA8A /* ViewInspector.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ViewInspector/ViewInspector-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MODULEMAP_FILE = Headers/Public/ViewInspector/ViewInspector.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ViewInspector;
-				PRODUCT_NAME = ViewInspector;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -832,7 +809,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -843,6 +820,28 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		A0E5FF158CB06ED09CD04B30CEB587C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A55C9F8D6F5EC3916196F9555435141 /* Pods-HousesOfWesterosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HousesOfWesterosTests/Pods-HousesOfWesterosTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		AAB891DABAD01E3591FBE702B982A5F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -869,18 +868,18 @@
 			};
 			name = Debug;
 		};
-		E8628F3813D0678FE2672D5B63E6B3D1 /* Debug */ = {
+		DF71DB031A698925110BC7BD62794C31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A460C33CC67E211B5973F7E7F3227361 /* Pods-HousesOfWesteros.debug.xcconfig */;
+			baseConfigurationReference = 5D7DA95CF1BF4A70D8BE41F3A33A3A7A /* Pods-HousesOfWesterosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HousesOfWesteros/Pods-HousesOfWesteros.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-HousesOfWesterosTests/Pods-HousesOfWesterosTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -888,12 +887,22 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27AF999CB93120FABCAB93F779C3F8DF /* Build configuration list for PBXNativeTarget "Pods-HousesOfWesterosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0E5FF158CB06ED09CD04B30CEB587C8 /* Debug */,
+				DF71DB031A698925110BC7BD62794C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		385DA1F9F0252D035D274F124CE42B5C /* Build configuration list for PBXNativeTarget "ViewInspector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -906,17 +915,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
-				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FBB0EDB3D5824E67D11D301AC38B2151 /* Build configuration list for PBXNativeTarget "Pods-HousesOfWesteros" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8628F3813D0678FE2672D5B63E6B3D1 /* Debug */,
-				429757F034BC852ECC91D88CF1AF2ACA /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

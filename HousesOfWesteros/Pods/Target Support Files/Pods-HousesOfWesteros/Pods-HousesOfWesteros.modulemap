@@ -1,6 +1,0 @@
-module Pods_HousesOfWesteros {
-  umbrella header "Pods-HousesOfWesteros-umbrella.h"
-
-  export *
-  module * { export * }
-}

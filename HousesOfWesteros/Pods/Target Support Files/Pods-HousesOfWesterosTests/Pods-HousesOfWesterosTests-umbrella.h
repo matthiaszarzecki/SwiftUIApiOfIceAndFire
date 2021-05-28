@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_HousesOfWesterosVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_HousesOfWesterosVersionString[];
+FOUNDATION_EXPORT double Pods_HousesOfWesterosTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_HousesOfWesterosTestsVersionString[];
 
