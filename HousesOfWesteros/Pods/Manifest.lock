@@ -1,0 +1,16 @@
+PODS:
+  - ViewInspector (0.7.7)
+
+DEPENDENCIES:
+  - ViewInspector
+
+SPEC REPOS:
+  trunk:
+    - ViewInspector
+
+SPEC CHECKSUMS:
+  ViewInspector: 69fb020ed7301b632d5617995d8e9b4c58eb7b96
+
+PODFILE CHECKSUM: cecb988eabe169c5c2499cda84ff8dff3985615b
+
+COCOAPODS: 1.10.1

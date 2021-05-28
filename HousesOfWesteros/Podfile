@@ -1,0 +1,5 @@
+platform :ios, '14.0'
+
+target 'HousesOfWesteros' do
+  pod 'ViewInspector'
+end
