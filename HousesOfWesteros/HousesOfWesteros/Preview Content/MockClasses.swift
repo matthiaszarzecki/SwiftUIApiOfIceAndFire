@@ -15,7 +15,7 @@ struct MockClasses {
   
   static let houseName = "House Goodbrother of Crow Spike Keep"
   static let houseRegion = "Dorne"
-  static let coatOfArms = "Gyronny Gules and Sable, a hand couped Or"
+  static let coatOfArms = "A Gold Dove on a Green Field"
   static let motto = "No Foe May Pass"
   static let titles = [
     "King of Mountain and Vale (formerly)",
