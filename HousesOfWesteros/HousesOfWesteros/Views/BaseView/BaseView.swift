@@ -9,17 +9,17 @@ import SwiftUI
 
 struct BaseView: View {
   @State private var selection = 0
-
   @State private var resetNavigationIDForGreatHousesView = UUID()
+  @State private var resetNavigationIDForAllHousesView = UUID()
 
   var handler: Binding<Int> { Binding(
     get: { self.selection },
     set: {
       if $0 == self.selection {
         if $0 == 0 {
-          // Reset great houses view
-          print("asdasdas")
           self.resetNavigationIDForGreatHousesView = UUID()
+        } else if $0 == 1 {
+          self.resetNavigationIDForAllHousesView = UUID()
         }
       }
       self.selection = $0
@@ -31,7 +31,6 @@ struct BaseView: View {
     if let font = UIFont(name: "GameofThrones", size: 20) {
       UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
     }
-
 
     // Set font for Title in navigation bar
     if let font = UIFont(name: "GameofThrones", size: 16) {
@@ -49,6 +48,7 @@ struct BaseView: View {
           )
         }
         .id(resetNavigationIDForGreatHousesView)
+        .tag(0)
       
       AllHousesView()
         .tabItem {
@@ -57,6 +57,7 @@ struct BaseView: View {
             systemImage: "shield.lefthalf.fill"
           )
         }
+        .id(resetNavigationIDForAllHousesView)
         .tag(1)
       
       AboutView()
