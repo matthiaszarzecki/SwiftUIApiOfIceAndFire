@@ -10,10 +10,10 @@ import Foundation
 class GreatHousesViewModel: ObservableObject {
   @Published private(set) var state = GreatHousesViewState()
 
-  private var downloader: SingleHouseBasicDownloaderProtocol
+  private let downloader: SingleHouseBasicDownloaderProtocol
   
-  init() {
-    downloader = SingleHouseBasicDownloader()
+  init(downloader: SingleHouseBasicDownloaderProtocol) {
+    self.downloader = downloader
 
     loadAllGreatHouses()
   }
