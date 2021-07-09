@@ -409,11 +409,11 @@
 				6E7BC56F2656950D00E805C8 /* CharacterBasicTests */,
 				6EB4C061265320D6006DA267 /* ColorExtensionTests */,
 				6EAC70202630B22C00988D47 /* ColorParserTests */,
+				6E89D84B269869F100F0B069 /* GreatHousesViewModelTests */,
 				6E170B63262B09160074314E /* HouseBasicTests.swift */,
+				6E89D84A269869D900F0B069 /* MockClasses */,
 				6E350A452652002F00FD520F /* StringArrayExtensionTests */,
 				6E170B5C262B09000074314E /* StringExtensionTests */,
-				6E89D84A269869D900F0B069 /* MockClasses */,
-				6E89D84B269869F100F0B069 /* GreatHousesViewModelTests */,
 			);
 			path = HousesOfWesterosTests;
 			sourceTree = "<group>";
@@ -651,8 +651,8 @@
 				CC0E1E39262597D800C285D8 /* Api.swift */,
 				CC0E1E3A262597D800C285D8 /* NetworkError.swift */,
 				CC0E1E38262597D800C285D8 /* RequestMethod.swift */,
-				6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */,
 				6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */,
+				6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
