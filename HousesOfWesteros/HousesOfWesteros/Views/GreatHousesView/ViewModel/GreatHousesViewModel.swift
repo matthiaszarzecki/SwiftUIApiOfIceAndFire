@@ -9,10 +9,18 @@ import Foundation
 
 class GreatHousesViewModel: ObservableObject {
   @Published private(set) var state = GreatHousesViewState()
+
+  private var downloader: SingleHouseBasicDownloaderProtocol
   
   init() {
+    downloader = SingleHouseBasicDownloader()
+
+    loadAllGreatHouses()
+  }
+
+  func loadAllGreatHouses() {
     for (index, id) in Constants.greatHouses.enumerated() {
-      Api.getSingleHouse(id: id) { result in
+      downloader.getSingleHouse(id: id) { result in
         switch result {
         case .success(let receivedObject):
           self.state.houses[index] = receivedObject
@@ -22,7 +30,7 @@ class GreatHousesViewModel: ObservableObject {
       }
     }
   }
-  
+
   struct GreatHousesViewState {
     // The great houses are always supposed
     // to be in the same order, therefore
