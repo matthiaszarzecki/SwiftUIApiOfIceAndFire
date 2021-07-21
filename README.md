@@ -33,7 +33,7 @@ Todo:
 - Timeout on Main Screen
 - Tap tabbar icons to reset view
 - More Unit-Tests
-- Unit-tests for ViewModels
+- More Unit-tests for ViewModels
 
 Nice to Have:
 - CodeCov integration in CICD

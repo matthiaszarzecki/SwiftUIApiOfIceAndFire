@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GreatHousesView: View {
-  @ObservedObject private var greatHousesViewModel = GreatHousesViewModel()
+  @ObservedObject private var greatHousesViewModel = GreatHousesViewModel(
+    downloader: SingleHouseBasicDownloader()
+  )
   
   var body: some View {
     GreatHousesDisplay(

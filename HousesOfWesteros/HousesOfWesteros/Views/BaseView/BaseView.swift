@@ -8,16 +8,38 @@
 import SwiftUI
 
 struct BaseView: View {
+  @State private var selection = 0
+  @State private var resetNavigationIDForGreatHousesView = UUID()
+  @State private var resetNavigationIDForAllHousesView = UUID()
+
+  var handler: Binding<Int> { Binding(
+    get: { self.selection },
+    set: {
+      if $0 == self.selection {
+        if $0 == 0 {
+          self.resetNavigationIDForGreatHousesView = UUID()
+        } else if $0 == 1 {
+          self.resetNavigationIDForAllHousesView = UUID()
+        }
+      }
+      self.selection = $0
+    }
+  )}
+
   init() {
     // Set font for Title in large view
-    UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 20)!]
-    
+    if let font = UIFont(name: "GameofThrones", size: 20) {
+      UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
+    }
+
     // Set font for Title in navigation bar
-    UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "GameofThrones", size: 16)!]
+    if let font = UIFont(name: "GameofThrones", size: 16) {
+      UINavigationBar.appearance().titleTextAttributes = [.font : font]
+    }
   }
   
   var body: some View {
-    TabView {
+    TabView(selection: handler) {
       GreatHousesView()
         .tabItem {
           Label(
@@ -25,6 +47,8 @@ struct BaseView: View {
             systemImage: "shield.checkerboard"
           )
         }
+        .id(resetNavigationIDForGreatHousesView)
+        .tag(0)
       
       AllHousesView()
         .tabItem {
@@ -33,6 +57,8 @@ struct BaseView: View {
             systemImage: "shield.lefthalf.fill"
           )
         }
+        .id(resetNavigationIDForAllHousesView)
+        .tag(1)
       
       AboutView()
         .tabItem {
@@ -41,6 +67,7 @@ struct BaseView: View {
             systemImage: "gear"
           )
         }
+        .tag(2)
     }
     .accentColor(.westerosRed)
   }
