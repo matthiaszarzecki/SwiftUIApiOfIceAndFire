@@ -44,6 +44,9 @@ struct Provider: IntentTimelineProvider {
 
     let id = Int.random(in: 0..<444)
     
+    
+    // THIS MIGHT NOT WORK - Get data in main
+    // app, and share between app and widget.
     Api.getSingleHouse(id: id) { result in
       switch result {
       case .success(let receivedObject):
@@ -104,6 +107,8 @@ struct HousesOfWesterosWidgetEntryView : View {
 struct HousesOfWesterosWidget: Widget {
   let kind: String = "HousesOfWesterosWidget"
 
+  // Configuration can be INTENT or STATIC. Intent
+  // can handle more dynamic data display.
   var body: some WidgetConfiguration {
     IntentConfiguration(
       kind: kind,
@@ -112,6 +117,7 @@ struct HousesOfWesterosWidget: Widget {
     ) { entry in
       HousesOfWesterosWidgetEntryView(entry: entry)
     }
+    // These appear when selecting the widget-size.
     .configurationDisplayName("My Widget")
     .description("This is an example widget.")
   }
