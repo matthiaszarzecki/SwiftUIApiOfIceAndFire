@@ -44,7 +44,6 @@ struct Provider: IntentTimelineProvider {
 
     let id = Int.random(in: 0..<444)
     
-    
     // THIS MIGHT NOT WORK - Get data in main
     // app, and share between app and widget.
     Api.getSingleHouse(id: id) { result in
@@ -54,12 +53,11 @@ struct Provider: IntentTimelineProvider {
 
         // Generate a timeline consisting of five entries
         // an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
+        for hourOffset in 0 ..< 99 {
           let entryDate = Calendar.current.date(
-            byAdding: .minute,
+            byAdding: .second,
             value: hourOffset,
-            to: currentDate
+            to: Date()
           )!
           let entry = SimpleEntry(
             date: entryDate,
@@ -93,6 +91,7 @@ struct HousesOfWesterosWidgetEntryView : View {
   var body: some View {
     VStack {
       Text("\(entry.index), \(entry.date, style: .time)")
+      Text("\(Int.random(in: 0..<999))")
       Text(entry.house.name)
       HouseIconColors(
         colors: entry.house.heraldryColors,
