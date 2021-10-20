@@ -31,6 +31,25 @@
 		6E89D845269866F600F0B069 /* SingleHouseBasicDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */; };
 		6E89D8472698672200F0B069 /* MockSingleHouseBasicDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D8462698672200F0B069 /* MockSingleHouseBasicDownloader.swift */; };
 		6E89D8492698688300F0B069 /* GreatHousesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D8482698688300F0B069 /* GreatHousesViewModelTests.swift */; };
+		6E90CB4627206422008D5585 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E90CB4527206422008D5585 /* WidgetKit.framework */; };
+		6E90CB4827206422008D5585 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E90CB4727206422008D5585 /* SwiftUI.framework */; };
+		6E90CB4B27206422008D5585 /* HousesOfWesterosWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E90CB4A27206422008D5585 /* HousesOfWesterosWidget.swift */; };
+		6E90CB4E27206425008D5585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E90CB4D27206425008D5585 /* Assets.xcassets */; };
+		6E90CB5027206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */; };
+		6E90CB5127206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */; };
+		6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E90CB592720646B008D5585 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E39262597D800C285D8 /* Api.swift */; };
+		6E90CB5A272065DC008D5585 /* HouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3D262597D800C285D8 /* HouseBasic.swift */; };
+		6E90CB5B272065F7008D5585 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3A262597D800C285D8 /* NetworkError.swift */; };
+		6E90CB5C27206600008D5585 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E38262597D800C285D8 /* RequestMethod.swift */; };
+		6E90CB5D27206608008D5585 /* Data-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEB262597D700C285D8 /* Data-Extension.swift */; };
+		6E90CB5E2720660F008D5585 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEC262597D700C285D8 /* String-Extension.swift */; };
+		6E90CB5F27206617008D5585 /* String-Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DF0262597D700C285D8 /* String-Array-Extension.swift */; };
+		6E90CB602720661F008D5585 /* Array-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DEE262597D700C285D8 /* Array-Extension.swift */; };
+		6E90CB6127206625008D5585 /* URLResponse-Optional-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC52917126272E4700411AF7 /* URLResponse-Optional-Extension.swift */; };
+		6E90CB622720662C008D5585 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E36262597D800C285D8 /* ColorParser.swift */; };
+		6E90CB6327206635008D5585 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF7B1262CCB7900CA7743 /* Constants.swift */; };
+		6E90CB652720663A008D5585 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DED262597D700C285D8 /* Color-Extension.swift */; };
 		6E9FB007263C669E00C5CBF3 /* GreatHousesLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FB006263C669E00C5CBF3 /* GreatHousesLoadingView.swift */; };
 		6E9FF7B2262CCB7900CA7743 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF7B1262CCB7900CA7743 /* Constants.swift */; };
 		6EAC701C2630AEB800988D47 /* ColorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC701B2630AEB800988D47 /* ColorParserTests.swift */; };
@@ -110,6 +129,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6E90CB5227206425008D5585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC0E1DAE262597B000C285D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E90CB4227206422008D5585;
+			remoteInfo = HousesOfWesterosWidgetExtension;
+		};
 		CC0E1DC8262597B200C285D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC0E1DAE262597B000C285D8 /* Project object */;
@@ -125,6 +151,20 @@
 			remoteInfo = HousesOfWesteros;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E90CB5527206425008D5585 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E170B52262B088E0074314E /* StringIsLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIsLinkTests.swift; sourceTree = "<group>"; };
@@ -151,6 +191,13 @@
 		6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseBasicDownloader.swift; sourceTree = "<group>"; };
 		6E89D8462698672200F0B069 /* MockSingleHouseBasicDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSingleHouseBasicDownloader.swift; sourceTree = "<group>"; };
 		6E89D8482698688300F0B069 /* GreatHousesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatHousesViewModelTests.swift; sourceTree = "<group>"; };
+		6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HousesOfWesterosWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E90CB4527206422008D5585 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6E90CB4727206422008D5585 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		6E90CB4A27206422008D5585 /* HousesOfWesterosWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesOfWesterosWidget.swift; sourceTree = "<group>"; };
+		6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = HousesOfWesterosWidget.intentdefinition; sourceTree = "<group>"; };
+		6E90CB4D27206425008D5585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E90CB4F27206425008D5585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9FB006263C669E00C5CBF3 /* GreatHousesLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatHousesLoadingView.swift; sourceTree = "<group>"; };
 		6E9FF7B1262CCB7900CA7743 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6EAC701B2630AEB800988D47 /* ColorParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorParserTests.swift; sourceTree = "<group>"; };
@@ -236,6 +283,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E90CB4027206422008D5585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E90CB4827206422008D5585 /* SwiftUI.framework in Frameworks */,
+				6E90CB4627206422008D5585 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC0E1DB3262597B000C285D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +405,26 @@
 			path = GreatHousesViewModelTests;
 			sourceTree = "<group>";
 		};
+		6E90CB4427206422008D5585 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E90CB4527206422008D5585 /* WidgetKit.framework */,
+				6E90CB4727206422008D5585 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E90CB4927206422008D5585 /* HousesOfWesterosWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6E90CB4A27206422008D5585 /* HousesOfWesterosWidget.swift */,
+				6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */,
+				6E90CB4D27206425008D5585 /* Assets.xcassets */,
+				6E90CB4F27206425008D5585 /* Info.plist */,
+			);
+			path = HousesOfWesterosWidget;
+			sourceTree = "<group>";
+		};
 		6EAC70202630B22C00988D47 /* ColorParserTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +448,8 @@
 				CC0E1DB8262597B000C285D8 /* HousesOfWesteros */,
 				CC0E1DCA262597B200C285D8 /* HousesOfWesterosTests */,
 				CC0E1DD5262597B200C285D8 /* HousesOfWesterosUITests */,
+				6E90CB4927206422008D5585 /* HousesOfWesterosWidget */,
+				6E90CB4427206422008D5585 /* Frameworks */,
 				CC0E1DB7262597B000C285D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -382,6 +460,7 @@
 				CC0E1DB6262597B000C285D8 /* HousesOfWesteros.app */,
 				CC0E1DC7262597B200C285D8 /* HousesOfWesterosTests.xctest */,
 				CC0E1DD2262597B200C285D8 /* HousesOfWesterosUITests.xctest */,
+				6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -671,6 +750,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E90CB4227206422008D5585 /* HousesOfWesterosWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E90CB5827206425008D5585 /* Build configuration list for PBXNativeTarget "HousesOfWesterosWidgetExtension" */;
+			buildPhases = (
+				6E90CB3F27206422008D5585 /* Sources */,
+				6E90CB4027206422008D5585 /* Frameworks */,
+				6E90CB4127206422008D5585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HousesOfWesterosWidgetExtension;
+			productName = HousesOfWesterosWidgetExtension;
+			productReference = 6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CC0E1DB5262597B000C285D8 /* HousesOfWesteros */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC0E1DDB262597B200C285D8 /* Build configuration list for PBXNativeTarget "HousesOfWesteros" */;
@@ -678,10 +774,12 @@
 				CC0E1DB2262597B000C285D8 /* Sources */,
 				CC0E1DB3262597B000C285D8 /* Frameworks */,
 				CC0E1DB4262597B000C285D8 /* Resources */,
+				6E90CB5527206425008D5585 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6E90CB5327206425008D5585 /* PBXTargetDependency */,
 			);
 			name = HousesOfWesteros;
 			productName = HousesOfWesteros;
@@ -730,9 +828,12 @@
 		CC0E1DAE262597B000C285D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					6E90CB4227206422008D5585 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					CC0E1DB5262597B000C285D8 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -763,11 +864,20 @@
 				CC0E1DB5262597B000C285D8 /* HousesOfWesteros */,
 				CC0E1DC6262597B200C285D8 /* HousesOfWesterosTests */,
 				CC0E1DD1262597B200C285D8 /* HousesOfWesterosUITests */,
+				6E90CB4227206422008D5585 /* HousesOfWesterosWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E90CB4127206422008D5585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E90CB4E27206425008D5585 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC0E1DB4262597B000C285D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -796,6 +906,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E90CB3F27206422008D5585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E90CB592720646B008D5585 /* Api.swift in Sources */,
+				6E90CB6127206625008D5585 /* URLResponse-Optional-Extension.swift in Sources */,
+				6E90CB5A272065DC008D5585 /* HouseBasic.swift in Sources */,
+				6E90CB5E2720660F008D5585 /* String-Extension.swift in Sources */,
+				6E90CB622720662C008D5585 /* ColorParser.swift in Sources */,
+				6E90CB602720661F008D5585 /* Array-Extension.swift in Sources */,
+				6E90CB5F27206617008D5585 /* String-Array-Extension.swift in Sources */,
+				6E90CB6327206635008D5585 /* Constants.swift in Sources */,
+				6E90CB5027206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */,
+				6E90CB4B27206422008D5585 /* HousesOfWesterosWidget.swift in Sources */,
+				6E90CB5D27206608008D5585 /* Data-Extension.swift in Sources */,
+				6E90CB5C27206600008D5585 /* RequestMethod.swift in Sources */,
+				6E90CB5B272065F7008D5585 /* NetworkError.swift in Sources */,
+				6E90CB652720663A008D5585 /* Color-Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC0E1DB2262597B000C285D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -858,6 +989,7 @@
 				CC0E1E42262597D800C285D8 /* Color-Extension.swift in Sources */,
 				CC0E1E6A262597D800C285D8 /* OverlordHouseSection.swift in Sources */,
 				CC0E1E7B262597D800C285D8 /* CharacterBasic.swift in Sources */,
+				6E90CB5127206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */,
 				6EB5E7072635DFBE0057D715 /* PreviewConstants.swift in Sources */,
 				CC0E1E5D262597D800C285D8 /* CurrentHeirSection.swift in Sources */,
 				CC0E1E54262597D800C285D8 /* BornSection.swift in Sources */,
@@ -916,6 +1048,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E90CB5327206425008D5585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E90CB4227206422008D5585 /* HousesOfWesterosWidgetExtension */;
+			targetProxy = 6E90CB5227206425008D5585 /* PBXContainerItemProxy */;
+		};
 		CC0E1DC9262597B200C285D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CC0E1DB5262597B000C285D8 /* HousesOfWesteros */;
@@ -929,6 +1066,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6E90CB5627206425008D5585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HousesOfWesterosWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HousesOfWesterosWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthiaszarzecki.HousesOfWesteros.HousesOfWesterosWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E90CB5727206425008D5585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDUTEX33CU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HousesOfWesterosWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HousesOfWesterosWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matthiaszarzecki.HousesOfWesteros.HousesOfWesterosWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CC0E1DD9262597B200C285D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1048,6 +1243,7 @@
 		CC0E1DDC262597B200C285D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1072,6 +1268,7 @@
 		CC0E1DDD262597B200C285D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1183,6 +1380,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E90CB5827206425008D5585 /* Build configuration list for PBXNativeTarget "HousesOfWesterosWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E90CB5627206425008D5585 /* Debug */,
+				6E90CB5727206425008D5585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC0E1DB1262597B000C285D8 /* Build configuration list for PBXProject "HousesOfWesteros" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
