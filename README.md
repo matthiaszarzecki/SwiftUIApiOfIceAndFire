@@ -37,6 +37,7 @@ Todo:
 
 Nice to Have:
 - CodeCov integration in CICD
+- Unit-Testing Views with ViewInspector Plugin
 - Monkey-Tests
 - Fetch nested data for Characters
 - UI-Tests
