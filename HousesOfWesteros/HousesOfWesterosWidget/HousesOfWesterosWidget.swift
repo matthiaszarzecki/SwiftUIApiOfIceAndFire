@@ -10,22 +10,26 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
+  // Is shown as "redacted" when placing widget,
+  // before loading the actual widget.
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
-      index: 0,
+      index: 77,
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       configuration: ConfigurationIntent()
     )
   }
 
+  // Defines the preview for the widget
+  // when choosing widget-sizes.
   func getSnapshot(
     for configuration: ConfigurationIntent,
     in context: Context, completion: @escaping (SimpleEntry) -> ()
   ) {
     let entry = SimpleEntry(
       date: Date(),
-      index: 0,
+      index: 2,
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       configuration: configuration
     )
@@ -38,7 +42,9 @@ struct Provider: IntentTimelineProvider {
   ) {
     var entries: [SimpleEntry] = []
 
-    Api.getSingleHouse(id: 43) { result in
+    let id = Int.random(in: 0..<444)
+    
+    Api.getSingleHouse(id: id) { result in
       switch result {
       case .success(let receivedObject):
         let house: HouseBasic = receivedObject
