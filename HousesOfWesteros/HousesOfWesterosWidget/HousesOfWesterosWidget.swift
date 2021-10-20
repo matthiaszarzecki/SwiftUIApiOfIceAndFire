@@ -44,8 +44,10 @@ struct Provider: IntentTimelineProvider {
 
     let id = Int.random(in: 0..<444)
     
-    // THIS MIGHT NOT WORK - Get data in main
-    // app, and share between app and widget.
+    // THIS WILL NOT WORK - Get data in main
+    // app, on a background refresh, save in
+    // defaults, and access from widget view
+    // when updating widget.
     Api.getSingleHouse(id: id) { result in
       switch result {
       case .success(let receivedObject):
