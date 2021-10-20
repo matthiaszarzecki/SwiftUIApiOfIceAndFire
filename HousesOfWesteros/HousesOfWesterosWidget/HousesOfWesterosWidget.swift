@@ -8,12 +8,14 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import HousesOfWesteros
 
 struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
-      text: "Placeholder",
+      index: 0,
+      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       configuration: ConfigurationIntent()
     )
   }
@@ -24,8 +26,10 @@ struct Provider: IntentTimelineProvider {
   ) {
     let entry = SimpleEntry(
       date: Date(),
-      text: "Snapshot",
-      configuration: configuration)
+      index: 0,
+      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+      configuration: configuration
+    )
     completion(entry)
   }
 
@@ -35,13 +39,10 @@ struct Provider: IntentTimelineProvider {
   ) {
     var entries: [SimpleEntry] = []
 
-    var text = ""
-
     Api.getSingleHouse(id: 43) { result in
       switch result {
       case .success(let receivedObject):
         let house: HouseBasic = receivedObject
-        text = house.name
 
         // Generate a timeline consisting of five entries
         // an hour apart, starting from the current date.
@@ -54,7 +55,8 @@ struct Provider: IntentTimelineProvider {
           )!
           let entry = SimpleEntry(
             date: entryDate,
-            text: "\(hourOffset) \(text)",
+            index: hourOffset,
+            house: house,
             configuration: configuration
           )
           entries.append(entry)
@@ -72,7 +74,8 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
   let date: Date
-  let text: String
+  let index: Int
+  let house: HouseBasic
   let configuration: ConfigurationIntent
 }
 
@@ -81,8 +84,13 @@ struct HousesOfWesterosWidgetEntryView : View {
 
   var body: some View {
     VStack {
-      Text(entry.date, style: .time)
-      Text(entry.text)
+      Text("\(entry.index), \(entry.date, style: .time)")
+      Text(entry.house.name)
+      HouseIconColors(
+        colors: entry.house.heraldryColors,
+        initialLetter: entry.house.initialLetter,
+        iconSize: .largeForHeader
+      )
     }
   }
 }
@@ -109,7 +117,8 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        text: "text",
+        index: 0,
+        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
     )
