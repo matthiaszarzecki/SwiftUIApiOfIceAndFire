@@ -128,5 +128,25 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
       )
     )
     .previewContext(WidgetPreviewContext(family: .systemSmall))
+    
+    HousesOfWesterosWidgetEntryView(
+      entry: SimpleEntry(
+        date: Date(),
+        index: 0,
+        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+        configuration: ConfigurationIntent()
+      )
+    )
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+    
+    HousesOfWesterosWidgetEntryView(
+      entry: SimpleEntry(
+        date: Date(),
+        index: 0,
+        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+        configuration: ConfigurationIntent()
+      )
+    )
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
   }
 }
