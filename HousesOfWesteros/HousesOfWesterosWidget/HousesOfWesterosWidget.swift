@@ -8,7 +8,6 @@
 import WidgetKit
 import SwiftUI
 import Intents
-import HousesOfWesteros
 
 struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {

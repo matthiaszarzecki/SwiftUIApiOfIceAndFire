@@ -52,8 +52,3 @@ extension String {
     self = self.capitalizeFirstLetter()
   }
 }
-
-extension String: Identifiable {
-  /// Necessary for the Identifiable-protocol.
-  public var id: Self { self }
-}
