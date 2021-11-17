@@ -8,10 +8,8 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 ![screenshot](media/screenshot_10.png)
 ![screenshot](media/screenshot_11.png)
 
-WIP:
-- Widget
-
 Contains:
+- Widgets
 - SwiftUI
 - Combine-Subscriptions
 - Native API Calls with generic types 
@@ -26,13 +24,14 @@ Contains:
 - Continuous Integration with BitRise
 - Unit-Tests
 - Extensive, detailed comments
-- Custom color-parser to create icons per house from description of the Coat of Arms
+- Custom color-parser to create icons per house from text-only description of the Coat of Arms
 - Small Screen Support
 - Extensive SwiftUI Previews
 - Skeleton Loading Views
 - Major Houses Display
 
 Todo:
+- Nicer Widgets
 - Timeout on Main Screen
 - Tap tabbar icons to reset view
 - More Unit-Tests
