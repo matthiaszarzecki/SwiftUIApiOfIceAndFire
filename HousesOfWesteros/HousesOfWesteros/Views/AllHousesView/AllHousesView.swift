@@ -16,7 +16,7 @@ struct AllHousesView: View {
       fetchResults: allHousesViewModel.state.houses,
       isLoading: allHousesViewModel.state.canLoadNextPage,
       showError: allHousesViewModel.state.showError,
-      intitialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
+      initialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
       onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
     )
     .onAppear {
@@ -29,14 +29,14 @@ struct AllHousesDisplay: View {
   let fetchResults: [HouseBasic]
   let isLoading: Bool
   var showError: Bool
-  var intitialLoadingPhase: Bool
+  var initialLoadingPhase: Bool
   let onScrolledAtBottom: () -> Void
   
   private let viewTitle = "All Houses of Westeros"
   
   var body: some View {
     NavigationView {
-      if intitialLoadingPhase {
+      if initialLoadingPhase {
         AllHousesLoadingView()
           .navigationTitle(viewTitle)
       } else if showError {
@@ -78,7 +78,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: MockClasses.housesBasic,
         isLoading: false,
         showError: false,
-        intitialLoadingPhase: false,
+        initialLoadingPhase: false,
         onScrolledAtBottom: {}
       )
       
@@ -86,7 +86,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: false,
-        intitialLoadingPhase: false,
+        initialLoadingPhase: false,
         onScrolledAtBottom: {}
       )
       
@@ -94,7 +94,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: true,
-        intitialLoadingPhase: false,
+        initialLoadingPhase: false,
         onScrolledAtBottom: {}
       )
       
@@ -102,7 +102,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: false,
-        intitialLoadingPhase: true,
+        initialLoadingPhase: true,
         onScrolledAtBottom: {}
       )
     }
