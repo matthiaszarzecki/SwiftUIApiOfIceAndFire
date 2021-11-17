@@ -58,7 +58,7 @@ struct GreatHousesDisplay: View {
           }
           .navigationTitle(viewTitle)
         } else {
-          GreatHousesLoadingView(width: geometry.size.width - 16*2)
+          GreatHousesLoadingView(width: geometry.size.width - 38*2)
             .navigationTitle(viewTitle)
         }
       }
