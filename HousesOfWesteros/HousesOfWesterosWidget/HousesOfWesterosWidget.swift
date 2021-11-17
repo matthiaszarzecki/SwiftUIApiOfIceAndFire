@@ -56,10 +56,12 @@ struct Provider: IntentTimelineProvider {
         )
         entries.append(entry)
 
+        // 60 secs * 60 min * 12 hours
+        let interval: Double = 60 * 60 * 12
+
         let timeline = Timeline(
           entries: entries,
-          // 60secs * 60
-          policy: .after(Date().addingTimeInterval(60 * 30))
+          policy: .after(Date().addingTimeInterval(interval))
         )
 
         completion(timeline)
@@ -117,7 +119,7 @@ struct HousesOfWesterosWidget: Widget {
     }
     // These appear when selecting the widget-size.
     .configurationDisplayName("House of the Day")
-    .description("You will get a random House of the Day displayed")
+    .description("You will get a shortcut to a House of the Day, which will change periodically.")
   }
 }
 
