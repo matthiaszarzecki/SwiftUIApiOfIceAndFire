@@ -15,7 +15,6 @@ struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
-      index: 77,
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       configuration: ConfigurationIntent()
     )
@@ -29,7 +28,6 @@ struct Provider: IntentTimelineProvider {
   ) {
     let entry = SimpleEntry(
       date: Date(),
-      index: 2,
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       configuration: configuration
     )
@@ -42,35 +40,27 @@ struct Provider: IntentTimelineProvider {
   ) {
     var entries: [SimpleEntry] = []
 
-    let id = Int.random(in: 0..<444)
-    
-    // THIS WILL NOT WORK - Get data in main
-    // app, on a background refresh, save in
-    // defaults, and access from widget view
-    // when updating widget.
+    let numberOfHouses = 444
+    let id = Int.random(in: 0..<numberOfHouses)
+
     Api.getSingleHouse(id: id) { result in
       switch result {
       case .success(let receivedObject):
         let house: HouseBasic = receivedObject
 
-        // Generate a timeline consisting of five entries
-        // an hour apart, starting from the current date.
-        for hourOffset in 0 ..< 99 {
-          let entryDate = Calendar.current.date(
-            byAdding: .second,
-            value: hourOffset,
-            to: Date()
-          )!
-          let entry = SimpleEntry(
-            date: entryDate,
-            index: hourOffset,
-            house: house,
-            configuration: configuration
-          )
-          entries.append(entry)
-        }
+        let entry = SimpleEntry(
+          date: Date(),
+          house: house,
+          configuration: configuration
+        )
+        entries.append(entry)
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(
+          entries: entries,
+          // 60secs * 60
+          policy: .after(Date().addingTimeInterval(60 * 30))
+        )
+
         completion(timeline)
 
       case .failure(let error):
@@ -82,7 +72,6 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
   let date: Date
-  let index: Int
   let house: HouseBasic
   let configuration: ConfigurationIntent
 }
@@ -91,16 +80,20 @@ struct HousesOfWesterosWidgetEntryView : View {
   var entry: Provider.Entry
 
   var body: some View {
-    VStack {
-      Text("\(entry.index), \(entry.date, style: .time)")
-      Text("\(Int.random(in: 0..<999))")
-      Text(entry.house.name)
+    ZStack {
       HouseIconColors(
         colors: entry.house.heraldryColors,
         initialLetter: entry.house.initialLetter,
-        iconSize: .largeForHeader
+        iconSize: .widgetBackground
       )
+      VStack {
+        Text("House of the Day:")
+          .font(.caption)
+        Text(entry.house.name)
+          .font(.caption)
+      }
     }
+    .padding()
   }
 }
 
@@ -119,8 +112,8 @@ struct HousesOfWesterosWidget: Widget {
       HousesOfWesterosWidgetEntryView(entry: entry)
     }
     // These appear when selecting the widget-size.
-    .configurationDisplayName("My Widget")
-    .description("This is an example widget.")
+    .configurationDisplayName("House of the Day")
+    .description("You will get a random House of the Day displayed")
   }
 }
 
@@ -129,7 +122,6 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        index: 0,
         house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
@@ -139,7 +131,6 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        index: 0,
         house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
@@ -149,7 +140,6 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        index: 0,
         house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
