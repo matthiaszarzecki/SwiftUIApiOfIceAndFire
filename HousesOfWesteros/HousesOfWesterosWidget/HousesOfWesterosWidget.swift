@@ -90,8 +90,11 @@ struct HousesOfWesterosWidgetEntryView : View {
       VStack {
         Text("House of the Day:")
           .font(.caption)
+          .shadow(color: .white, radius: 5)
+
         Text(entry.house.name)
           .font(.caption)
+          .shadow(color: .white, radius: 5)
       }
     }
     .padding()

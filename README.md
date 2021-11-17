@@ -32,6 +32,7 @@ Contains:
 
 Todo:
 - Nicer Widgets
+- Open House-page on tap on widgets
 - Timeout on Main Screen
 - Tap tabbar icons to reset view
 - More Unit-Tests
