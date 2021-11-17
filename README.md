@@ -33,7 +33,6 @@ Contains:
 - Major Houses Display
 
 Todo:
-- Fix new iOS 15 Layout on main screen
 - Timeout on Main Screen
 - Tap tabbar icons to reset view
 - More Unit-Tests
@@ -45,8 +44,8 @@ Nice to Have:
 - Monkey-Tests
 - Fetch nested data for Characters
 - UI-Tests
-- Actor Images through IMDB
-- Dark Color Scheme &  scheme switching
+- Actor Images through a movie api
+- Dark Color Scheme & scheme switching
 - Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
 - RealmDB Caching
