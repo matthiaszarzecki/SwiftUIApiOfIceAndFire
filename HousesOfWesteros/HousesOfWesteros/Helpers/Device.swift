@@ -10,9 +10,9 @@ import Foundation
 class Device {
   static var isSimulator: Bool {
 #if targetEnvironment(simulator)
-    true
+    return true
 #else
-    false
+    return false
 #endif
   }
 }
