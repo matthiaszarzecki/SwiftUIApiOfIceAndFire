@@ -69,7 +69,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   /// displayed on a character-page.
   var hasInformation: Bool {
     // We are leaving out the "url" field as that URL
-    // leads back to this house, and not anywhere else.
+    // leads back to this character, and not anywhere else.
     return culture.exists ||
       born.exists ||
       died.exists ||
