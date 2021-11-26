@@ -31,6 +31,7 @@ Contains:
 - Extensive SwiftUI Previews
 - Skeleton Loading Views
 - Major Houses Display
+- Downloader-Protocol for unit-test mocking
 
 Todo:
 - Nicer Widgets
