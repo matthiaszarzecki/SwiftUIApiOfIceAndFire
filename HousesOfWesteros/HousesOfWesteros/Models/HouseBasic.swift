@@ -13,8 +13,8 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a
   // field is not assigned it will return an empty string "".
   
-  /// The number-id for the house.
-  /// Is also the last part of the url.
+  /// The number-id for the house. Is
+  /// also the last part of the url.
   var id: Int? {
     let urlElements = url.components(separatedBy: "/")
     return Int(urlElements.last ?? "") ?? nil
