@@ -12,20 +12,6 @@ struct BaseView: View {
   @State private var resetNavigationIDForGreatHousesView = UUID()
   @State private var resetNavigationIDForAllHousesView = UUID()
 
-  var handler: Binding<Int> { Binding(
-    get: { self.selection },
-    set: {
-      if $0 == self.selection {
-        if $0 == 0 {
-          self.resetNavigationIDForGreatHousesView = UUID()
-        } else if $0 == 1 {
-          self.resetNavigationIDForAllHousesView = UUID()
-        }
-      }
-      self.selection = $0
-    }
-  )}
-
   init() {
     // Set font for Title in large view
     if let font = UIFont(name: "GameofThrones", size: 20) {
@@ -39,7 +25,7 @@ struct BaseView: View {
   }
   
   var body: some View {
-    TabView(selection: handler) {
+    TabView {
       GreatHousesView()
         .tabItem {
           Label(
@@ -47,7 +33,6 @@ struct BaseView: View {
             systemImage: "shield.checkerboard"
           )
         }
-        .id(resetNavigationIDForGreatHousesView)
         .tag(0)
       
       AllHousesView()
@@ -57,7 +42,6 @@ struct BaseView: View {
             systemImage: "shield.lefthalf.fill"
           )
         }
-        .id(resetNavigationIDForAllHousesView)
         .tag(1)
       
       AboutView()
