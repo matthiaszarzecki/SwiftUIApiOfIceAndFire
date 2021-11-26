@@ -58,7 +58,7 @@ struct AboutView: View {
       destination: URL(string: "https://twitter.com/matthias_code")!
     ) {
       SettingsRow(
-        systemIcon: "heart.text.square",
+        systemIcon: "number.square",
         text: "Twitter"
       )
     }
@@ -69,7 +69,7 @@ struct AboutView: View {
       destination: URL(string: "https://github.com/matthiaszarzecki")!
     ) {
       SettingsRow(
-        systemIcon: "heart.text.square",
+        systemIcon: "chevron.left.forwardslash.chevron.right",
         text: "Github"
       )
     }
@@ -80,7 +80,7 @@ struct AboutView: View {
       destination: URL(string: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g")!
     ) {
       SettingsRow(
-        systemIcon: "heart.text.square",
+        systemIcon: "film",
         text: "Youtube"
       )
     }
@@ -91,7 +91,7 @@ struct AboutView: View {
       destination: URL(string: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/")!
     ) {
       SettingsRow(
-        systemIcon: "heart.text.square",
+        systemIcon: "doc.richtext",
         text: "LinkedIn"
       )
     }

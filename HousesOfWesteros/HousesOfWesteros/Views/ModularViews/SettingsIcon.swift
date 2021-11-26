@@ -12,6 +12,7 @@ struct SettingsIcon: View {
   
   var body: some View {
     Image(systemName: systemIcon)
+      .frame(width: 28, height: 20, alignment: .center)
       .foregroundColor(.white)
       .padding(6)
       .backgroundColor(.westerosRed)
