@@ -14,11 +14,11 @@ extension String {
     return self[0]
   }
   
-  /// Allows to access characters as strings
-  /// via array-index, e.g. "hello[2]".
+  /// Allows to access characters as strings via
+  /// array-index, e.g. "hello[2]". Returns an
+  /// empty string when string is already empty,
+  /// or the index is out of bounds.
   subscript (index: Int) -> String {
-    // When string is empty or index is out
-    // of bounds return empty emptry string.
     if self.isEmpty || index >= self.count || index < 0 {
       return ""
     }
