@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-  /// The name of the app, as it appears on the home-screen.
+  /// The version of the app, as defined in the build-settings.
   static var appVersion: String {
     return self.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
   }
