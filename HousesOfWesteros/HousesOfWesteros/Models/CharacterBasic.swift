@@ -12,9 +12,13 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
   
-  // The identifier for this house. Is also the direct URL to its
-  // data. Must be named "id" to conform to the identifiable protocol.
-  let id: String
+  // The identifier for this house. Is
+  // also the direct URL to its data.
+  var id: String {
+    return url
+  }
+  
+  let url: String
   
   /// Name of the character. Use displayName
   /// instead when using name for display.
@@ -76,7 +80,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   }
   
   enum CodingKeys: String, CodingKey {
-    case id = "url"
+    case url
     case name
     case culture
     case born

@@ -156,7 +156,7 @@ struct MockClasses {
   ]
   
   static let character = CharacterBasic(
-    id: "https://www.anapioficeandfire.com/api/characters/290",
+    url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
     culture: "Northmen",
     born: "In 283 AC",
@@ -192,7 +192,7 @@ struct MockClasses {
   )
 
   static let characterWithNoData = CharacterBasic(
-    id: "https://www.anapioficeandfire.com/api/characters/290",
+    url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "",
     culture: "",
     born: "",
@@ -210,7 +210,7 @@ struct MockClasses {
   )
 
   static let characterWithNoNameButAlias = CharacterBasic(
-    id: "https://www.anapioficeandfire.com/api/characters/290",
+    url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "",
     culture: "",
     born: "",

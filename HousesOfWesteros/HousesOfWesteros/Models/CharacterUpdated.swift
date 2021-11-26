@@ -11,7 +11,7 @@ import SwiftUI
 /// The character-data but with the URL's called
 /// and replaced by their corresponding data.
 struct CharacterUpdated {
-  let id: String
+  let url: String
   let name: String
   let displayName: String
   let culture: String
@@ -25,7 +25,7 @@ struct CharacterUpdated {
   init(
     fromCharacter character: CharacterBasic
   ) {
-    id = character.id
+    url = character.url
     name = character.name
     displayName = character.displayName
     culture = character.culture
