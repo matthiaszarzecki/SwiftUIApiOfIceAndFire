@@ -38,12 +38,6 @@ class AllHousesViewModel: ObservableObject {
     case .finished:
       state.showError = false
       state.intitialLoadingPhase = false
-
-      print(state.showError)
-      print(state.intitialLoadingPhase)
-      print(state.page)
-      print(state.canLoadNextPage)
-      print(state.houses.count)
       break
     case .failure:
       state.canLoadNextPage = false
