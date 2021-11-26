@@ -485,7 +485,7 @@
 				CC0E1DEA262597D700C285D8 /* Extensions */,
 				CC0E1E35262597D800C285D8 /* Helpers */,
 				CC0E1E3B262597D800C285D8 /* Models */,
-				CC0E1E31262597D800C285D8 /* Preview Content */,
+				CC0E1E31262597D800C285D8 /* PreviewContent */,
 				CC0E1DF1262597D700C285D8 /* SupportingFiles */,
 				CC0E1DF7262597D800C285D8 /* Views */,
 			);
@@ -718,14 +718,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		CC0E1E31262597D800C285D8 /* Preview Content */ = {
+		CC0E1E31262597D800C285D8 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
 				CC0E1E34262597D800C285D8 /* MockClasses.swift */,
 				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
 				CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 		CC0E1E35262597D800C285D8 /* Helpers */ = {
@@ -1272,7 +1272,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/PreviewContent\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
@@ -1297,7 +1297,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/PreviewContent\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
