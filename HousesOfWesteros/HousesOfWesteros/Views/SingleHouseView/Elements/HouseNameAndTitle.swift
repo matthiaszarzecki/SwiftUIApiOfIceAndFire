@@ -47,7 +47,8 @@ struct HouseNameAndTitle: View {
     
     // In order for this to look good on the view above
     // on top of a Form this needs to be super-small and
-    // offset to the top.
+    // offset to the top. This also breaks the local
+    // preview but works within the encompassing view.
     .frame(width: width, height: 34, alignment: .center)
     
     // Move everything upwards to counter the
