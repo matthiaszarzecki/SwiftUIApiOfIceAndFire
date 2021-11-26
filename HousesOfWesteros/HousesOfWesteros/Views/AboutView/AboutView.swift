@@ -115,10 +115,8 @@ struct AboutView: View {
   }
   
   var appVersion: some View {
-    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
-    return VStack {
-      Text("Houses of Westeros - Version \(appVersion)")
-    }
+    Text("Houses of Westeros - Version \(Bundle.appVersion)")
+      .font(.caption)
   }
   
   var body: some View {
