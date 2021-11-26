@@ -10,22 +10,13 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 ![screenshot](media/screenshot_11.png)
 ![screenshot](media/screenshot_06.png)
 
-Todo:
-- Fix occasional iOS 15 Loading-bug in All Houses View
-- Nicer Widgets
-- Open House-page on tap on widget
-- Timeout on Main Screen
-- Tap tabbar icons to reset view
-- More Unit-Tests
-- More Unit-tests for ViewModels
-
 Contains:
-- Widgets
 - SwiftUI
 - Combine-Subscriptions
 - Native API Calls with generic types 
 - Pagination
 - Nested API-Calls
+- Widgets
 - Graceful Failure - elements that do not exist (yet) are not shown instead of showing empty elements or errors
 - MVVM Architecture
 - Detailed House-View
@@ -40,6 +31,14 @@ Contains:
 - Extensive SwiftUI Previews
 - Skeleton Loading Views
 - Major Houses Display
+
+Todo:
+- Nicer Widgets
+- Open House-page on tap on widget
+- Timeout on Main Screen
+- Tap tabbar icons to reset view
+- More Unit-Tests
+- More Unit-tests for ViewModels
 
 Nice to Have:
 - CodeCov integration in CICD
