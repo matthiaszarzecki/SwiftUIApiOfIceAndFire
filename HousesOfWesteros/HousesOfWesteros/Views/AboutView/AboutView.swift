@@ -19,33 +19,38 @@ struct AboutView: View {
   
   /// Button that opens the AppStore, when running on an actual
   /// device. On the simulator this does not work, so we open
-  /// a link instead.
+  /// a link to a different website instead (appstore-links that
+  /// work in a desktop-browser are not allowed on iOS Safari).
   var appsAndGamesRow: some View {
     let settingsRow = SettingsRow(
       systemIcon: "square.grid.2x2.fill",
       text: "More Apps & Games"
     )
 
-#if targetEnvironment(simulator)
-    return Link(
-      destination: URL(string: "https://twitter.com/matthias_code")!
-    ) {
-      settingsRow
-    }
-#else
-    return Button(
-      action: {
-        if let url = URL(
-          string: "itms-apps://apple.com/app/id1394075736"
+    if Device.isSimulator {
+      return AnyView(
+        Link(
+          destination: URL(string: "https://twitter.com/matthias_code")!
         ) {
-          UIApplication.shared.open(url)
+          settingsRow
         }
-      },
-      label: {
-        settingsRow
-      }
-    )
-#endif
+      )
+    } else {
+      return AnyView(
+        Button(
+          action: {
+            if let url = URL(
+              string: "itms-apps://apple.com/app/id1394075736"
+            ) {
+              UIApplication.shared.open(url)
+            }
+          },
+          label: {
+            settingsRow
+          }
+        )
+      )
+    }
   }
   
   var twitterLink: some View {
