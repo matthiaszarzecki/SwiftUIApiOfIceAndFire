@@ -30,7 +30,7 @@ struct AboutView: View {
     if Device.isSimulator {
       return AnyView(
         Link(
-          destination: URL(string: "https://twitter.com/matthias_code")!
+          destination: URL(string: "https://github.com/matthiaszarzecki")!
         ) {
           settingsRow
         }
