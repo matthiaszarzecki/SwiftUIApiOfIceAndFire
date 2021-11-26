@@ -42,8 +42,8 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// A Boolean indicating whether at least one
   /// field that can contain an URL has an URL.
   var containsLinks: Bool {
-    // We are leaving out the "id" field as that URL is never
-    // actually used to offer a link to somewhere else.
+    // We are leaving out the "url" field as that URL
+    // leads back to this house, and not anywhere else.
     return foundedByCharacter.isLink
       || currentLord.isLink
       || heir.isLink
@@ -59,7 +59,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   }
   
   /// The initial letter of the House-name
-  /// without "House " prefixed.
+  /// without "House " (with space) prefixed.
   var initialLetter: String {
     return name[6]
   }

@@ -27,8 +27,8 @@ struct HouseUpdated {
   /// Coat of Arms, as SwiftUI Colors.
   let heraldryColors: [Color]
   
-  /// The initial letter of the House
-  /// name without "House " prefixed.
+  /// The initial letter of the House name
+  /// without "House " (with space) prefixed.
   let initialLetter: String
   
   /// A Boolean indicating whether a
