@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Constants {
-  /// The Ids of the 9 great houses:
+  /// The ID's of the 9 great houses:
   ///   7 - Arryn of the Eyrie
   ///  17 - Baratheon of Storm's End
   /// 169 - Greyjoy of Pyke
