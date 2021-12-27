@@ -56,6 +56,7 @@ struct GreatHousesDisplay: View {
               }
             }
           }
+          .listRowBackground(Color.clear)
           .navigationTitle(viewTitle)
         } else {
           GreatHousesLoadingView(width: geometry.size.width - 38*2)
