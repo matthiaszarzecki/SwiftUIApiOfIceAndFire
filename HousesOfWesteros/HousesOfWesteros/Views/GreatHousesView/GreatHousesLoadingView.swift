@@ -9,11 +9,11 @@ import SwiftUI
 
 struct GreatHousesLoadingView: View {
   var width: CGFloat
-  
+
   var textElementWidth: CGFloat {
     return width - 120
   }
-  
+
   var cell: some View {
     VStack {
       HStack {
@@ -22,13 +22,13 @@ struct GreatHousesLoadingView: View {
           .frame(width: circleSize, height: circleSize, alignment: .center)
           .foregroundColor(.redactedGray)
           .padding()
-        
+
         VStack {
           Text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.title2)
             .frame(width: textElementWidth, height: 60, alignment: .topLeading)
             .redacted(reason: .placeholder)
-          
+
           Text("aaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.body)
             .frame(width: textElementWidth, height: 24, alignment: .leading)
@@ -42,7 +42,7 @@ struct GreatHousesLoadingView: View {
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }
-  
+
   var body: some View {
     List {
       ForEach(0..<9, id: \.self) { _ in

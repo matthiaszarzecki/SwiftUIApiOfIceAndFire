@@ -23,7 +23,7 @@ struct BaseView: View {
       UINavigationBar.appearance().titleTextAttributes = [.font: font]
     }
   }
-  
+
   var body: some View {
     TabView {
       GreatHousesView()
@@ -34,7 +34,7 @@ struct BaseView: View {
           )
         }
         .tag(0)
-      
+
       AllHousesView()
         .tabItem {
           Label(
@@ -43,7 +43,7 @@ struct BaseView: View {
           )
         }
         .tag(1)
-      
+
       AboutView()
         .tabItem {
           Label(

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterDeathSection: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     if character.died.exists {
       Section(header: SectionHeader(text: "Died")) {

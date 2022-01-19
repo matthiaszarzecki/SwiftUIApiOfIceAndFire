@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsRow: View {
   let systemIcon: String
   let text: String
-  
+
   var body: some View {
     HStack {
       SettingsIcon(systemIcon: systemIcon)

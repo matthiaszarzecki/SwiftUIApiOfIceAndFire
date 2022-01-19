@@ -11,15 +11,15 @@ import Foundation
 struct CharacterBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
-  
+
   // The identifier for this house. Is
   // also the direct URL to its data.
   var id: String {
     return url
   }
-  
+
   let url: String
-  
+
   /// Name of the character. Use displayName
   /// instead when using name for display.
   let name: String
@@ -30,7 +30,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   let aliases: [String]
   let tvShowAppearances: [String]
   let portrayedBy: [String]
-  
+
   // When assigned these fields are URL's as strings.
   let father: String
   let mother: String
@@ -38,17 +38,17 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   let allegiances: [String]
   let bookAppearances: [String]
   let hasPointOfViewChaptersInBooks: [String]
-  
+
   var initialLetter: String {
     return displayName.first
   }
-  
+
   /// A boolean indicating whether this
   /// character was portayed by an actor.
   var hasActor: Bool {
     return portrayedBy.hasNonEmptyEntries
   }
-  
+
   /// Returns the name of the character. If
   /// the name is empty tries to return an
   /// alias. Returns empty string otherwise.
@@ -63,7 +63,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
     }
     return name
   }
-  
+
   /// A boolean indicating whether this character
   /// has any information at all that would be
   /// displayed on a character-page.
@@ -78,7 +78,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
       tvShowAppearances.hasNonEmptyEntries ||
       portrayedBy.hasNonEmptyEntries
   }
-  
+
   enum CodingKeys: String, CodingKey {
     case url
     case name

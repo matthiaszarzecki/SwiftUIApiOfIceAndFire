@@ -11,7 +11,7 @@ import Foundation
 class MockSingleHouseBasicDownloader: SingleHouseBasicDownloaderProtocol {
   func getSingleHouse(
     id: Int,
-    completion: @escaping (Result<HouseBasic, NetworkError>) -> ()
+    completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   ) {
     return completion(.success(MockClasses.houseBasicWithLinksAndWithCoatOfArms))
   }

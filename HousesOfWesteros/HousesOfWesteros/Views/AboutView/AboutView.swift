@@ -16,7 +16,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   /// Button that opens the AppStore, when running on an actual
   /// device. On the simulator this does not work, so we open
   /// a link to a different website instead (appstore-links that
@@ -52,7 +52,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var twitterLink: some View {
     Link(
       destination: URL(string: "https://twitter.com/matthias_code")!
@@ -63,7 +63,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var githubLink: some View {
     Link(
       destination: URL(string: "https://github.com/matthiaszarzecki")!
@@ -74,7 +74,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var youtubeLink: some View {
     Link(
       destination: URL(string: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g")!
@@ -85,7 +85,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var linkedInLink: some View {
     Link(
       destination: URL(string: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/")!
@@ -96,7 +96,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var developedByLink: some View {
     Link(
       destination: URL(string: "https://twitter.com/matthias_code")!
@@ -107,7 +107,7 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var apiLink: some View {
     Link(
       destination: URL(string: "https://anapioficeandfire.com/")!
@@ -118,12 +118,12 @@ struct AboutView: View {
       )
     }
   }
-  
+
   var appVersion: some View {
     Text("Houses of Westeros - Version \(Bundle.appVersion)")
       .font(.caption)
   }
-  
+
   var body: some View {
     NavigationView {
       Form {
@@ -133,7 +133,7 @@ struct AboutView: View {
           shareRow
           appsAndGamesRow
         }
-        
+
         Section(
           header: SectionHeader(text: "Follow Us")
         ) {
@@ -142,32 +142,32 @@ struct AboutView: View {
           youtubeLink
           linkedInLink
         }
-        
+
         Section(
           header: SectionHeader(text: "Developed by")
         ) {
           developedByLink
         }
-        
+
         Section(
           header: SectionHeader(text: "Based on")
         ) {
           apiLink
         }
-        
+
         appVersion
       }
       .navigationTitle("About")
     }
   }
-  
+
   func shareApp() {
     guard let data = URL(
       string: "https://github.com/matthiaszarzecki/SwiftUIApiOfIceAndFire"
     ) else {
       return
     }
-    
+
     let viewController = UIActivityViewController(
       activityItems: [data],
       applicationActivities: nil

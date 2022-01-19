@@ -10,7 +10,7 @@ import SwiftUI
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
   @ObservedObject private var allHousesViewModel = AllHousesViewModel()
-  
+
   var body: some View {
     AllHousesDisplay(
       fetchResults: allHousesViewModel.state.houses,
@@ -31,9 +31,9 @@ struct AllHousesDisplay: View {
   var showError: Bool
   var initialLoadingPhase: Bool
   let onScrolledAtBottom: () -> Void
-  
+
   private let viewTitle = "All Houses of Westeros"
-  
+
   var body: some View {
     NavigationView {
       if initialLoadingPhase {
@@ -58,7 +58,7 @@ struct AllHousesDisplay: View {
               }
             }
           }
-          
+
           if isLoading {
             SearchSpinnerView()
               .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
@@ -80,21 +80,21 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         showError: false,
         initialLoadingPhase: false
       ) {}
-      
+
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: false,
         initialLoadingPhase: false
       ) {}
-      
+
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: true,
         initialLoadingPhase: false
       ) {}
-      
+
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,

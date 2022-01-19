@@ -10,7 +10,7 @@ import SwiftUI
 struct ErrorSection: View {
   var showError: Bool
   let updateData: () -> Void
-  
+
   var body: some View {
     if showError {
       Section(header: SectionHeader(text: "Oh No!")) {

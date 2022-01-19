@@ -12,21 +12,21 @@ class ArrayHasEntriesTests: XCTestCase {
   func testHasEntries() {
     // GIVEN an array with multiple entries
     let array = [1, 2, 3]
-    
+
     // WHEN we call the "hasEntries" variable
     let result = array.hasEntries
-    
+
     // THEN true is returned
     XCTAssertTrue(result)
   }
-  
+
   func testHasNoEntries() {
     // GIVEN an empty array
     let array = [Int]()
-    
+
     // WHEN we call the "hasEntries" variable
     let result = array.hasEntries
-    
+
     // THEN false is returned
     XCTAssertFalse(result)
   }

@@ -24,7 +24,7 @@ struct Provider: IntentTimelineProvider {
   // when choosing widget-sizes.
   func getSnapshot(
     for configuration: ConfigurationIntent,
-    in context: Context, completion: @escaping (SimpleEntry) -> ()
+    in context: Context, completion: @escaping (SimpleEntry) -> Void
   ) {
     let entry = SimpleEntry(
       date: Date(),
@@ -37,7 +37,7 @@ struct Provider: IntentTimelineProvider {
   func getTimeline(
     for configuration: ConfigurationIntent,
     in context: Context,
-    completion: @escaping (Timeline<Entry>) -> ()
+    completion: @escaping (Timeline<Entry>) -> Void
   ) {
     var entries: [SimpleEntry] = []
 
@@ -79,7 +79,7 @@ struct SimpleEntry: TimelineEntry {
   let configuration: ConfigurationIntent
 }
 
-struct HousesOfWesterosWidgetEntryView : View {
+struct HousesOfWesterosWidgetEntryView: View {
   var entry: Provider.Entry
 
   var body: some View {
@@ -133,7 +133,7 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
       )
     )
     .previewContext(WidgetPreviewContext(family: .systemSmall))
-    
+
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
@@ -142,7 +142,7 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
       )
     )
     .previewContext(WidgetPreviewContext(family: .systemMedium))
-    
+
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),

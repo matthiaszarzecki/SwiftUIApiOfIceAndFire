@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrentLordSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if let character = house.currentLord {
       Section(

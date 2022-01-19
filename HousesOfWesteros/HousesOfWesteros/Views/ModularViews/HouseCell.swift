@@ -10,7 +10,7 @@ import SwiftUI
 struct HouseCellUpdated: View {
   var house: HouseUpdated
   var iconSize: IconSize
-  
+
   var icon: some View {
     if let unwrappedId = house.id,
        house.isGreatHouse {
@@ -30,13 +30,13 @@ struct HouseCellUpdated: View {
       )
     }
   }
-  
+
   var body: some View {
     HStack {
       icon
-      
+
       Text("\(house.name)")
-      
+
       if house.containsSubViews {
         Image(systemName: "link")
           .foregroundColor(.westerosRed)
@@ -48,7 +48,7 @@ struct HouseCellUpdated: View {
 struct HouseCellBasic: View {
   var house: HouseBasic
   var iconSize: IconSize
-  
+
   var icon: some View {
     if let unwrappedId = house.id,
        house.isGreatHouse {
@@ -68,13 +68,13 @@ struct HouseCellBasic: View {
       )
     }
   }
-  
+
   var body: some View {
     HStack {
       icon
-      
+
       Text("\(house.name)")
-      
+
       if house.containsLinks {
         Image(systemName: "link")
           .foregroundColor(.westerosRed)
@@ -91,7 +91,7 @@ struct HouseCell_Previews: PreviewProvider {
     )
     .padding()
     .previewLayout(.sizeThatFits)
-    
+
     HouseCellBasic(
       house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
       iconSize: .smallForNestedCells

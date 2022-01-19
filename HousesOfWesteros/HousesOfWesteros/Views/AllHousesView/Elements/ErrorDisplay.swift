@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ErrorDisplay: View {
   let reloadData: () -> Void
-  
+
   var body: some View {
     List {
       Text("Oh No!")

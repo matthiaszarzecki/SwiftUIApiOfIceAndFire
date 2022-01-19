@@ -10,11 +10,11 @@ import SwiftUI
 struct HouseCellLarge: View {
   var house: HouseBasic
   var width: CGFloat
-  
+
   var textElementWidth: CGFloat {
     return width - 120
   }
-  
+
   var icon: some View {
     if let unwrappedId = house.id,
        house.isGreatHouse {
@@ -34,14 +34,14 @@ struct HouseCellLarge: View {
       )
     }
   }
-  
+
   var subtitleText: some View {
     var text = "Members: \(house.swornMembers.count)"
-    
+
     if house.cadetBranches.hasEntries {
       text += " - Branches: \(house.cadetBranches.count)"
     }
-    
+
     return Text(text)
       .shadow(color: .white, radius: 6)
       .frame(width: textElementWidth, height: 24, alignment: .leading)
@@ -54,20 +54,20 @@ struct HouseCellLarge: View {
     }
     return .white
   }
-  
+
   var body: some View {
     VStack {
       HStack {
         icon
           .padding()
-        
+
         VStack {
           Text(house.name)
             .shadow(color: .white, radius: 6)
             .font(.title2)
             .frame(width: textElementWidth, height: 60, alignment: .topLeading)
             .multilineTextAlignment(.leading)
-          
+
           subtitleText
         }
         .frame(width: textElementWidth, height: 80, alignment: .center)

@@ -14,7 +14,7 @@ enum Api {
   /// The number of houses that are
   /// requested in a single call.
   static let pageSize = 30
-  
+
   /// Gets 30 ASOIAF Houses.
   static func getHouses(
     page: Int
@@ -39,7 +39,7 @@ enum Api {
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()
   }
-  
+
   static func getSingleHouse(
     id: Int,
     completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
@@ -62,10 +62,10 @@ enum Api {
     guard let url = URL(string: url) else {
       return
     }
-    
+
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get
-    
+
     URLSession.shared.dataTask(with: request) { data, response, _ in
       // When the response is not a code 200 (success), return an error.
       if response.statusCode != 200 {

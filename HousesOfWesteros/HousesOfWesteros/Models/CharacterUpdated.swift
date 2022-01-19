@@ -21,7 +21,7 @@ struct CharacterUpdated {
   let aliases: [String]
   let tvShowAppearances: [String]
   let portrayedBy: [String]
-  
+
   init(
     fromCharacter character: CharacterBasic
   ) {

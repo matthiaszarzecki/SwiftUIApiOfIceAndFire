@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiedOutSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if house.diedOutPeriod.exists {
       Section(header: SectionHeader(text: "House Died out")) {

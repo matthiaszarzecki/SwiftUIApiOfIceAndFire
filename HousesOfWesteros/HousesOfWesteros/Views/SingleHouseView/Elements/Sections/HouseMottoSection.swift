@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HouseMottoSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if house.motto.exists {
       Section(header: SectionHeader(text: "Words")) {

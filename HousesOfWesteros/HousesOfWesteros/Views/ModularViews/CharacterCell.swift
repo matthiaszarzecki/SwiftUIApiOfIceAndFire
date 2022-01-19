@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterCell: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     return HStack {
       CharacterIcon(
@@ -17,7 +17,7 @@ struct CharacterCell: View {
         size: 24
       )
       Text("\(character.displayName)")
-      
+
       if character.hasActor {
         Image(systemName: "person")
           .foregroundColor(.westerosRed)

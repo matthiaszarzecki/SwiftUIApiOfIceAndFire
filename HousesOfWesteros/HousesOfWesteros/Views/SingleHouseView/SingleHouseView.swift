@@ -10,11 +10,11 @@ import SwiftUI
 /// Shows information about the specified House.
 struct SingleHouseView: View {
   @ObservedObject private var singleHouseViewModel: SingleHouseViewModel
-  
+
   init(houseBasic: HouseBasic) {
     singleHouseViewModel = SingleHouseViewModel(houseBasic: houseBasic)
   }
-  
+
   var body: some View {
     SingleHouseDisplay(
       houseUpdated: singleHouseViewModel.state.houseUpdated,
@@ -38,18 +38,18 @@ struct SingleHouseDisplay: View {
               house: unwrappedHouseUpdated,
               width: geometry.size.width - 16 * 2
             )
-            
+
             Form {
               Group {
                 CoatOfArmsSection(house: unwrappedHouseUpdated)
-                
+
                 if !unwrappedHouseUpdated.isGreatHouse {
                   HeraldryColorsSection(
                     house: unwrappedHouseUpdated,
                     width: geometry.size.width
                   )
                 }
-                
+
                 HouseMottoSection(house: unwrappedHouseUpdated)
                 TitlesSection(house: unwrappedHouseUpdated)
                 SeatsSection(house: unwrappedHouseUpdated)

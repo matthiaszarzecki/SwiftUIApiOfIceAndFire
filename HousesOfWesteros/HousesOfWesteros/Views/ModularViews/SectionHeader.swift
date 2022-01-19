@@ -45,7 +45,7 @@ struct SectionHeader_Previews: PreviewProvider {
       Section(header: SectionHeader(text: "Title")) {
         Text("\(MockClasses.houseName)")
       }
-      
+
       Section(header: LoadingSectionHeader()) {
         Text("\(MockClasses.houseName)")
           .redacted(reason: .placeholder)

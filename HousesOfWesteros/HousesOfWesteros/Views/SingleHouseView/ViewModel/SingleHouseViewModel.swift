@@ -10,12 +10,12 @@ import SwiftUI
 class SingleHouseViewModel: ObservableObject {
   var houseBasic: HouseBasic
   @Published private(set) var state = SingleHouseViewState()
-  
+
   init(houseBasic: HouseBasic) {
     self.houseBasic = houseBasic
     getDataFromNestedLinks()
   }
-  
+
   /// Updates nested links with additional data.
   /// For error-testing set showError to turn up
   /// true within this function.
@@ -23,27 +23,27 @@ class SingleHouseViewModel: ObservableObject {
     // Turns the input House into a HouseUpdated
     // by fetching data from locally saved URL's.
     state.houseUpdated = HouseUpdated(fromHouse: houseBasic)
-    
+
     if houseBasic.containsLinks {
       DispatchQueue.main.async {
         self.updateSingleField(CharacterBasic.self, ofType: .founder)
         self.updateSingleField(CharacterBasic.self, ofType: .currentLord)
         self.updateSingleField(CharacterBasic.self, ofType: .heir)
         self.updateSingleField(HouseBasic.self, ofType: .overlord)
-        
+
         self.updateArrayField(CharacterBasic.self, ofType: .swornMembers)
         self.updateArrayField(HouseBasic.self, ofType: .cadetBranches)
       }
     }
   }
-  
+
   struct SingleHouseViewState {
     var houseUpdated: HouseUpdated?
     var showError = false
   }
-  
+
   // MARK: - Single Field Update Functions
-  
+
   /// Updates a field that can contain a link when a link
   /// exists with the corresponding data. Sets error on failure.
   private func updateSingleField<T: Codable>(
@@ -51,7 +51,7 @@ class SingleHouseViewModel: ObservableObject {
     ofType type: SingleHouseFieldType
   ) {
     let linkField = getSingleLinkField(forType: type)
-    
+
     if linkField.isLink {
       Api.fetch(T.self, url: linkField) { result in
         switch result {
@@ -63,7 +63,7 @@ class SingleHouseViewModel: ObservableObject {
             ofType: type,
             withValue: receivedObject
           )
-          
+
           self.state.showError = false
         case .failure(let error):
           print("Error! \(error)")
@@ -72,7 +72,7 @@ class SingleHouseViewModel: ObservableObject {
       }
     }
   }
-  
+
   /// Enum for updatable fields that are not arrays.
   private enum SingleHouseFieldType {
     case founder
@@ -80,7 +80,7 @@ class SingleHouseViewModel: ObservableObject {
     case heir
     case overlord
   }
-  
+
   /// Returns the variables (and the therein saved
   /// link) that corresponds to the input enum.
   private func getSingleLinkField(
@@ -97,7 +97,7 @@ class SingleHouseViewModel: ObservableObject {
       return houseBasic.overlordHouse
     }
   }
-  
+
   /// Sets an input value to the variable
   /// that corresponds to the type.
   private func updateHouseBasicField<T: Codable>(
@@ -116,19 +116,19 @@ class SingleHouseViewModel: ObservableObject {
       self.state.houseUpdated?.overlordHouse = value as? HouseBasic
     }
   }
-  
+
   // MARK: - Array Update Functions
-  
+
   /// Updates a nested field that contains data as an array.
   private func updateArrayField<T: Codable>(
     _ for: T.Type = T.self,
     ofType type: ArrayHouseFieldType
   ) {
     let arrayField = getArrayLinkField(forType: type)
-    
+
     if arrayField.hasLinkEntries {
       createArray(ofType: type)
-      
+
       for index in 0..<arrayField.count where arrayField[index].isLink {
         Api.fetch(T.self, url: arrayField[index]) { result in
           switch result {
@@ -140,7 +140,7 @@ class SingleHouseViewModel: ObservableObject {
               ofType: type,
               withValue: receivedObject
             )
-            
+
             self.state.showError = false
           case .failure(let error):
             print("Error! \(error)")
@@ -150,13 +150,13 @@ class SingleHouseViewModel: ObservableObject {
       }
     }
   }
-  
+
   /// Enum for updatable fields that are arrays.
   private enum ArrayHouseFieldType {
     case cadetBranches
     case swornMembers
   }
-  
+
   /// Returns the array (and the therein saved
   /// links) that corresponds to the input enum.
   private func getArrayLinkField(
@@ -169,7 +169,7 @@ class SingleHouseViewModel: ObservableObject {
       return houseBasic.swornMembers
     }
   }
-  
+
   /// Creates a new array in the variable
   /// that corresponds to the input type.
   private func createArray(ofType type: ArrayHouseFieldType) {
@@ -180,7 +180,7 @@ class SingleHouseViewModel: ObservableObject {
       self.state.houseUpdated?.swornMembers = []
     }
   }
-  
+
   /// Sets the input value to the array
   /// that corresponds to the type.
   private func updateHouseUpdatedArrayField<T: Codable>(

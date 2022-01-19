@@ -11,7 +11,7 @@ struct GreatHousesView: View {
   @ObservedObject private var greatHousesViewModel = GreatHousesViewModel(
     downloader: SingleHouseBasicDownloader()
   )
-  
+
   var body: some View {
     GreatHousesDisplay(
       houses: greatHousesViewModel.state.houses
@@ -21,9 +21,9 @@ struct GreatHousesView: View {
 
 struct GreatHousesDisplay: View {
   var houses: [HouseBasic?]
-  
+
   private let viewTitle = "Great Houses of Westeros"
-  
+
   /// A boolean indicating whether houses
   /// contains at least 1 non-nil entry.
   var hasViableEntries: Bool {
@@ -32,7 +32,7 @@ struct GreatHousesDisplay: View {
     }
     return false
   }
-  
+
   var body: some View {
     GeometryReader { geometry in
       NavigationView {
@@ -48,7 +48,7 @@ struct GreatHousesDisplay: View {
                     EmptyView()
                   }
                   .buttonStyle(PlainButtonStyle())
-                  
+
                   HouseCellLarge(
                     house: unwrappedHouse,
                     width: geometry.size.width - 38 * 2
@@ -73,7 +73,7 @@ struct GreatHousesView_Previews: PreviewProvider {
     GreatHousesDisplay(
       houses: MockClasses.housesBasic
     )
-    
+
     GreatHousesDisplay(
       houses: [HouseBasic]()
     )

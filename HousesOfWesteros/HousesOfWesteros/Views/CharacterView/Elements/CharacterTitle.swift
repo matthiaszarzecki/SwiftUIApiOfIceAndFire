@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterTitle: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     Text("\(character.displayName)")
       .font(.title)
