@@ -72,6 +72,16 @@ custom_rules:
     regex: "== false"
     message: "Don't compare to false, use !value."
 
+  commented_out_code:
+    regex: '(?&lt;!:|\/)\/\/\h*[a-z.](?!wiftlint)'
+    message: "Comment starting with lowercase letter - did you forget to delete old code?"
+
+  multiline_commented_out_code:
+    regex: '^\s*[a-z]'
+    match_kinds: comment
+    message: "Comment starting with lowercase letter - did you forget to delete old code?"
+
+
 attributes:
   always_on_same_line:
     - "@IBSegueAction"
