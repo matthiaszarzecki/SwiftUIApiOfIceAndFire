@@ -60,6 +60,17 @@ custom_rules:
     message: "Use explicit type annotation when initializing empty arrays and dictionaries"
     severity: warning
 
+  auto_generated_leftovers:
+    regex: 'func [^\n]*\{\n(\s*super\.[^\n]*\n(\s*\/\/[^\n]*\n)*|(\s*\/\/[^\n]*\n)+)\s*\}'
+    message: "Delete auto-generated functions that you don't use"
+
+  already_true:
+    regex: "== true"
+    message: "Don't compare to true, use the bool value."
+
+  already_false:
+    regex: "== false"
+    message: "Don't compare to false, use !value."
 
 attributes:
   always_on_same_line:
