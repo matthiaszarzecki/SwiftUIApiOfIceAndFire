@@ -129,24 +129,22 @@ class SingleHouseViewModel: ObservableObject {
     if arrayField.hasLinkEntries {
       createArray(ofType: type)
       
-      for index in 0..<arrayField.count {
-        if arrayField[index].isLink {
-          Api.fetch(T.self, url: arrayField[index]) { result in
-            switch result {
-            case .success(let receivedObject):
-              // Sets the value of the HouseUpdated
-              // to the just received value.
-              self.updateHouseUpdatedArrayField(
-                T.self,
-                ofType: type,
-                withValue: receivedObject
-              )
-              
-              self.state.showError = false
-            case .failure(let error):
-              print("Error! \(error)")
-              self.state.showError = true
-            }
+      for index in 0..<arrayField.count where arrayField[index].isLink {
+        Api.fetch(T.self, url: arrayField[index]) { result in
+          switch result {
+          case .success(let receivedObject):
+            // Sets the value of the HouseUpdated
+            // to the just received value.
+            self.updateHouseUpdatedArrayField(
+              T.self,
+              ofType: type,
+              withValue: receivedObject
+            )
+            
+            self.state.showError = false
+          case .failure(let error):
+            print("Error! \(error)")
+            self.state.showError = true
           }
         }
       }
@@ -177,9 +175,9 @@ class SingleHouseViewModel: ObservableObject {
   private func createArray(ofType type: ArrayHouseFieldType) {
     switch type {
     case .cadetBranches:
-      self.state.houseUpdated?.cadetBranches = [HouseBasic]()
+      self.state.houseUpdated?.cadetBranches = []
     case .swornMembers:
-      self.state.houseUpdated?.swornMembers = [CharacterBasic]()
+      self.state.houseUpdated?.swornMembers = []
     }
   }
   

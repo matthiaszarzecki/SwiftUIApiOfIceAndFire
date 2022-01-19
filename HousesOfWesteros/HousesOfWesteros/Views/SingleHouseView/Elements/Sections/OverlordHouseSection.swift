@@ -15,7 +15,8 @@ struct OverlordHouseSection: View {
       Section(
         header: SectionHeader(text: "Overlord")
       ) {
-        NavigationLink(destination: SingleHouseView(houseBasic: overlordHouse)
+        NavigationLink(
+          destination: SingleHouseView(houseBasic: overlordHouse)
         ) {
           HouseCellBasic(
             house: overlordHouse,

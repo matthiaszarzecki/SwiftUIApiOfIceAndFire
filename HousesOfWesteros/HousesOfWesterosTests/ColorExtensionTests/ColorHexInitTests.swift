@@ -52,7 +52,7 @@ class ColorHexInitTests: XCTestCase {
   func testHexInitPurple() {
     // GIVEN a hex-string that encodes "purple"
     let hex = "FF00FF"
-    
+
     // WHEN we create a color from that string
     let result = Color(hex: hex)
 
@@ -61,7 +61,7 @@ class ColorHexInitTests: XCTestCase {
     let colorPurple = Color(.sRGB, red: 1.0, green: 0.0, blue: 1.0, opacity: 1.0)
     XCTAssertEqual(result, colorPurple)
   }
-  
+
   func testHexInitCyan() {
     // GIVEN a hex-string that encodes "cyan"
     let hex = "00FFFF"

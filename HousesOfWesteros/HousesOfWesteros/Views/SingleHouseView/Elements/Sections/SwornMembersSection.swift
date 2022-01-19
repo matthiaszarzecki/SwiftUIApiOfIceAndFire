@@ -12,7 +12,7 @@ struct SwornMembersSection: View {
   
   var body: some View {
     if let swornMembers = house.swornMembers,
-       swornMembers.hasEntries {
+      swornMembers.hasEntries {
       let sectionHeader = swornMembers.count > 1
         ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
         : SectionHeader(text: "Sworn Member")

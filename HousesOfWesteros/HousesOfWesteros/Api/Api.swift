@@ -24,7 +24,7 @@ enum Api {
     request.httpMethod = RequestMethod.get
 
     return URLSession.shared
-     .dataTaskPublisher(for: request)
+      .dataTaskPublisher(for: request)
       .handleEvents(
         receiveOutput: {
           $0.data.printJsonFromData()

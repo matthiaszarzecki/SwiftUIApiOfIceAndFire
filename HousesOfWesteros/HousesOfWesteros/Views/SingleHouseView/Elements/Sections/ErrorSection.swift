@@ -35,9 +35,8 @@ struct ErrorSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       ErrorSection(
-        showError: true,
-        updateData: {}
-      )
+        showError: true
+      ) {}
     }
   }
 }

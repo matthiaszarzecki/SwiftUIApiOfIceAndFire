@@ -36,7 +36,7 @@ struct SingleHouseDisplay: View {
           VStack {
             HouseNameAndTitle(
               house: unwrappedHouseUpdated,
-              width: geometry.size.width - 16*2
+              width: geometry.size.width - 16 * 2
             )
             
             Form {
@@ -84,23 +84,20 @@ struct SingleHouseDisplay_Previews: PreviewProvider {
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: MockClasses.houseUpdatedWithLinks,
-          showError: true,
-          updateData: {}
-        )
+          showError: true
+        ) {}
       }
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: MockClasses.houseUpdatedWithoutLinks,
-          showError: false,
-          updateData: {}
-        )
+          showError: false
+        ) {}
       }
       NavigationView {
         SingleHouseDisplay(
           houseUpdated: nil,
-          showError: false,
-          updateData: {}
-        )
+          showError: false
+        ) {}
       }
     }
   }
