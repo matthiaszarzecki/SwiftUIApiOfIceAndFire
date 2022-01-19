@@ -9,7 +9,14 @@ import Foundation
 import SwiftUI
 
 enum ColorParser {
-  static private let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
+  static private let synonymsForYellow = [
+    "yellow",
+    "gold",
+    "golden",
+    "or",
+    "sun"
+  ]
+
   static private let synonymsForOrange = [
     "orange",
     "tenné",
@@ -21,19 +28,99 @@ enum ColorParser {
     "black-and-orange",
     "bronze"
   ]
-  static private let synonymsForBrown = ["brown", "ermine", "ermines", "erminois", "oaken", "oak", "tree", "moose"]
-  static private let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody", "pommes"]
-  static private let synonymsForPink = ["pink", "carnation"]
-  static private let synonymsForPurple = ["purple", "purpure", "murrey", "grape", "amaranth"]
-  static private let synonymsForBlue = ["blue", "azure", "indigo", "fountain", "vair"]
-  static private let synonymsForLightBlue = ["sky", "celeste", "sky-blue"]
-  static private let synonymsForCyan = ["cyan", "turquoise", "blue-green"]
-  static private let synonymsForLightGreen = ["pale-green"]
-  static private let synonymsForGreen = ["green", "vert"]
-  static private let synonymsForDarkGreen = ["dark-green", "grey-green"]
-  static private let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain", "ice-white", "scythe"]
-  static private let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword", "scythe"]
-  static private let synonymsForBlack = ["black", "sable", "black-and-orange"]
+
+  static private let synonymsForBrown = [
+    "brown",
+    "ermine",
+    "ermines",
+    "erminois",
+    "oaken",
+    "oak",
+    "tree",
+    "moose"
+  ]
+
+  static private let synonymsForRed = [
+    "red",
+    "gules",
+    "sanguine",
+    "fiery",
+    "blood",
+    "bloody",
+    "pommes"
+  ]
+
+  static private let synonymsForPink = [
+    "pink",
+    "carnation"
+  ]
+
+  static private let synonymsForPurple = [
+    "purple",
+    "purpure",
+    "murrey",
+    "grape",
+    "amaranth"
+  ]
+
+  static private let synonymsForBlue = [
+    "blue",
+    "azure",
+    "indigo",
+    "fountain",
+    "vair"
+  ]
+
+  static private let synonymsForLightBlue = [
+    "sky",
+    "celeste",
+    "sky-blue"
+  ]
+
+  static private let synonymsForCyan = [
+    "cyan",
+    "turquoise",
+    "blue-green"
+  ]
+
+  static private let synonymsForLightGreen = [
+    "pale-green"
+  ]
+
+  static private let synonymsForGreen = [
+    "green",
+    "vert"
+  ]
+
+  static private let synonymsForDarkGreen = [
+    "dark-green",
+    "grey-green"
+  ]
+
+  static private let synonymsForWhite = [
+    "white",
+    "argent",
+    "silver",
+    "ice",
+    "fountain",
+    "ice-white",
+    "scythe"
+  ]
+
+  static private let synonymsForGray = [
+    "grey",
+    "gray",
+    "gules",
+    "cendrée",
+    "sword",
+    "scythe"
+  ]
+
+  static private let synonymsForBlack = [
+    "black",
+    "sable",
+    "black-and-orange"
+  ]
 
   /// Reads the colors named in a string and turns
   /// these into an array of SwiftUI Colors.
