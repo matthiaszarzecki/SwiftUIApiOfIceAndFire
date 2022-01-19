@@ -57,7 +57,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
   }
-  
+
   /// The initial letter of the House-name
   /// without "House " (with space) prefixed.
   var initialLetter: String {
