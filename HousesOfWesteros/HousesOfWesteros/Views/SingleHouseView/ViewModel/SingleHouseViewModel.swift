@@ -190,7 +190,7 @@ class SingleHouseViewModel: ObservableObject {
     ofType type: ArrayHouseFieldType,
     withValue value: T
   ) {
-    switch(type) {
+    switch type {
     case .cadetBranches:
       if let houseBasic = value as? HouseBasic {
         self.state.houseUpdated?.cadetBranches?.append(houseBasic)

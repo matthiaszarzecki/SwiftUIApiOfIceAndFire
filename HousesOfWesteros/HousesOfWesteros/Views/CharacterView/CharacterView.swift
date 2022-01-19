@@ -15,7 +15,11 @@ struct CharacterView: View {
     GeometryReader { geometry in
       VStack {
         CharacterTitle(character: character)
-          .frame(width: geometry.size.width - 16*2, height: 10, alignment: .center)
+          .frame(
+            width: geometry.size.width - 16 * 2,
+            height: 10,
+            alignment: .center
+          )
           
           // Move everything upwards to counter the
           // auto-padding in a NavigationView.

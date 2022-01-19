@@ -42,7 +42,7 @@ enum Api {
   
   static func getSingleHouse(
     id: Int,
-    completion: @escaping (Result<HouseBasic, NetworkError>) -> ()
+    completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   ) {
     fetch(
       HouseBasic.self,
@@ -57,7 +57,7 @@ enum Api {
   static func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,
-    completion: @escaping (Result<T, NetworkError>) -> ()
+    completion: @escaping (Result<T, NetworkError>) -> Void
   ) {
     guard let url = URL(string: url) else {
       return
@@ -66,7 +66,7 @@ enum Api {
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get
     
-    URLSession.shared.dataTask(with: request) { (data, response, _) in
+    URLSession.shared.dataTask(with: request) { data, response, _ in
       // When the response is not a code 200 (success), return an error.
       if response.statusCode != 200 {
         DispatchQueue.main.async {

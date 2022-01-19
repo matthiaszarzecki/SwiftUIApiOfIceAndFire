@@ -78,33 +78,29 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: MockClasses.housesBasic,
         isLoading: false,
         showError: false,
-        initialLoadingPhase: false,
-        onScrolledAtBottom: {}
-      )
+        initialLoadingPhase: false
+      ) {}
       
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: false,
-        initialLoadingPhase: false,
-        onScrolledAtBottom: {}
-      )
+        initialLoadingPhase: false
+      ) {}
       
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: true,
-        initialLoadingPhase: false,
-        onScrolledAtBottom: {}
-      )
+        initialLoadingPhase: false
+      ) {}
       
       AllHousesDisplay(
         fetchResults: MockClasses.housesBasic,
         isLoading: true,
         showError: false,
-        initialLoadingPhase: true,
-        onScrolledAtBottom: {}
-      )
+        initialLoadingPhase: true
+      ) {}
     }
   }
 }

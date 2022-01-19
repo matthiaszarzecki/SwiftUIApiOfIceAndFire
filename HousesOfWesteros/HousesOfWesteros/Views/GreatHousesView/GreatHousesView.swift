@@ -27,10 +27,8 @@ struct GreatHousesDisplay: View {
   /// A boolean indicating whether houses
   /// contains at least 1 non-nil entry.
   var hasViableEntries: Bool {
-    for house in houses {
-      if house != nil {
-        return true
-      }
+    for house in houses where house != nil {
+      return true
     }
     return false
   }
@@ -51,7 +49,10 @@ struct GreatHousesDisplay: View {
                   }
                   .buttonStyle(PlainButtonStyle())
                   
-                  HouseCellLarge(house: unwrappedHouse, width: geometry.size.width - 38*2)
+                  HouseCellLarge(
+                    house: unwrappedHouse,
+                    width: geometry.size.width - 38 * 2
+                  )
                 }
               }
             }
@@ -59,7 +60,7 @@ struct GreatHousesDisplay: View {
           }
           .navigationTitle(viewTitle)
         } else {
-          GreatHousesLoadingView(width: geometry.size.width - 38*2)
+          GreatHousesLoadingView(width: geometry.size.width - 38 * 2)
             .navigationTitle(viewTitle)
         }
       }
