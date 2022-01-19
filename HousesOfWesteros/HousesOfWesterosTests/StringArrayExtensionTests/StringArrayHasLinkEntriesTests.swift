@@ -33,7 +33,7 @@ class StringArrayHasLinkEntriesTests: XCTestCase {
 
   func testEmptyStringArrayHasLinkEntries() {
     // GIVEN an empty string-array
-    let array = [String]()
+    let array: [String] = []
 
     // WHEN we call the "hasLinkEntries" function
     let result = array.hasLinkEntries

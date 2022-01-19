@@ -22,7 +22,7 @@ class ArrayHasEntriesTests: XCTestCase {
 
   func testHasNoEntries() {
     // GIVEN an empty array
-    let array = [Int]()
+    let array: [Int] = []
 
     // WHEN we call the "hasEntries" variable
     let result = array.hasEntries

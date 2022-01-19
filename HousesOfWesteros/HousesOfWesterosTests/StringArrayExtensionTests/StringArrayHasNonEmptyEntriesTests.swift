@@ -33,7 +33,7 @@ class StringArrayHasNonEmptyEntriesTests: XCTestCase {
 
   func testEmptyStringArrayHasNonEmptyEntries() {
     // GIVEN an empty string-array
-    let array = [String]()
+    let array: [String] = []
 
     // WHEN we call the "hasNonEmptyEntries" function
     let result = array.hasNonEmptyEntries

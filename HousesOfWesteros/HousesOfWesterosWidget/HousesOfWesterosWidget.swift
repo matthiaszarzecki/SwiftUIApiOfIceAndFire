@@ -24,7 +24,8 @@ struct Provider: IntentTimelineProvider {
   // when choosing widget-sizes.
   func getSnapshot(
     for configuration: ConfigurationIntent,
-    in context: Context, completion: @escaping (SimpleEntry) -> Void
+    in context: Context,
+    completion: @escaping (SimpleEntry) -> Void
   ) {
     let entry = SimpleEntry(
       date: Date(),

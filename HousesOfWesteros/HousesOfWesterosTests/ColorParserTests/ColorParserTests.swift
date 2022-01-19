@@ -37,7 +37,7 @@ class ColorParserTests: XCTestCase {
 
   func testGetNoColor() {
     // GIVEN a string that contains no color mention
-    let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
 
     // WHEN we parse the string with the color-parser
     let result = ColorParser.getColors(fromString: text)
@@ -80,7 +80,23 @@ class ColorParserTests: XCTestCase {
     let result = ColorParser.getColors(fromString: text)
 
     // THEN the resulting orders of colors will be identical.
-    let allColors: [Color] = [.yellow, .orange, .customBrown, .red, .customPink, .purple, .blue, .customLightBlue, .customCyan, .customLightGreen, .green, .customDarkGreen, .customWhite, .gray, .customBlack]
+    let allColors: [Color] = [
+      .yellow,
+      .orange,
+      .customBrown,
+      .red,
+      .customPink,
+      .purple,
+      .blue,
+      .customLightBlue,
+      .customCyan,
+      .customLightGreen,
+      .green,
+      .customDarkGreen,
+      .customWhite,
+      .gray,
+      .customBlack
+    ]
     XCTAssertEqual(result, allColors)
   }
 }

@@ -35,8 +35,8 @@ class StringArrayHasAtLeastOneItemFromArrayTests: XCTestCase {
 
   func testEmptyStringArrayDoesNotHaveAtLeastOneItemFromArray() {
     // GIVEN two empty string-arrays
-    let array1 = [String]()
-    let array2 = [String]()
+    let array1: [String] = []
+    let array2: [String] = []
 
     // WHEN we call the "hasAtLeastOneItem" function
     let result = array1.hasAtLeastOneItem(fromArray: array2)

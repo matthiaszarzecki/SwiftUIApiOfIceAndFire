@@ -12,7 +12,7 @@ struct CadetBranchesSection: View {
 
   var body: some View {
     if let cadetBranches = house.cadetBranches,
-       cadetBranches.hasEntries {
+      cadetBranches.hasEntries {
       let sectionHeader = cadetBranches.count > 1
         ? SectionHeader(text: "Cadet Branches: \(cadetBranches.count)")
         : SectionHeader(text: "Cadet Branch")

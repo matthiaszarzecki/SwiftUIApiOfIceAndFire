@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ColorParser {
+enum ColorParser {
   /// Reads the colors named in a string and turns
   /// these into an array of SwiftUI Colors.
   static func getColors(fromString text: String) -> [Color] {
