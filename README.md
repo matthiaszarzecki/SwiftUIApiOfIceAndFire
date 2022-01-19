@@ -32,14 +32,16 @@ Contains:
 - Skeleton Loading Views
 - Major Houses Display
 - Downloader-Protocol for unit-test mocking
+- SwiftLint
 
 Todo:
 - Nicer Widgets
 - Open House-page on tap on widget
 - Timeout on Main Screen
-- Tap tabbar icons to reset view
+- Tap tabbar icons to reset views
 - More Unit-Tests
 - More Unit-tests for ViewModels
+- Figure out more elegant way to return manual error on bad url in combine-call
 
 Nice to Have:
 - CodeCov integration in CICD
@@ -51,7 +53,7 @@ Nice to Have:
 - Dark Color Scheme & scheme switching
 - Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
-- RealmDB Caching
+- Data Caching
 - Welcome Tab with House of the Day View
 
 Created by Matthias Zarzecki, 2021-01
