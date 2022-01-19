@@ -18,7 +18,13 @@ extension Array where Element == String {
   /// Checks that there are >0 entries and the first
   /// one is not an empty string.
   var hasNonEmptyEntries: Bool {
-    return self.hasEntries && self.first != ""
+    if self.hasEntries,
+      let first = self.first,
+      first.exists {
+      return true
+    }
+
+    return false
   }
 
   /// A Boolean indicating whether an array
