@@ -18,8 +18,11 @@ class HouseBasicIDTests: XCTestCase {
 
     // THEN the result is an integer
     XCTAssertNotNil(result)
-    // AND that it is part of the url
-    XCTAssertTrue(house.url.contains("\(result!)"))
+
+    if let unwrappedResult = result {
+      // AND that it is part of the url
+      XCTAssertTrue(house.url.contains("\(unwrappedResult)"))
+    }
   }
 
   func testHouseBasicWithNoID() {
