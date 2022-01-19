@@ -10,7 +10,7 @@ import Foundation
 
 /// Contains functions to request and
 /// receive data from the ApiOfIceAndFire.
-struct Api {
+enum Api {
   /// The number of houses that are
   /// requested in a single call.
   static let pageSize = 30

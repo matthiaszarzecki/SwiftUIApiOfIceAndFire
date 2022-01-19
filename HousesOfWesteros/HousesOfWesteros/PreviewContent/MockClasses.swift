@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MockClasses {
+enum MockClasses {
   static let idGreatHouse = 17
   
   static let characterLink = "https://www.anapioficeandfire.com/api/characters/298"
