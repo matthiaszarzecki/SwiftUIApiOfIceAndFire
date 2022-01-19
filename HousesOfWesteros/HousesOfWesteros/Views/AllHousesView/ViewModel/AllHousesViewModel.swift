@@ -17,18 +17,20 @@ class AllHousesViewModel: ObservableObject {
       return
     }
 
-    Api.getHouses(page: state.page)
-      .sink(
-        receiveCompletion: onReceive,
-        receiveValue: onReceive
-      )
-      .store(in: &subscriptions)
+    if let publisher = Api.getHouses(page: state.page) {
+      publisher
+        .sink(
+          receiveCompletion: onReceive,
+          receiveValue: onReceive
+        )
+        .store(in: &subscriptions)
 
-    // If after 3 seconds nothing has been loaded, show error
-    DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
-      if self.subscriptions.isEmpty {
-        state.intitialLoadingPhase = false
-        state.showError = true
+      // If after 3 seconds nothing has been loaded, show error
+      DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+        if self.subscriptions.isEmpty {
+          state.intitialLoadingPhase = false
+          state.showError = true
+        }
       }
     }
   }

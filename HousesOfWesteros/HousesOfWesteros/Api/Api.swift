@@ -18,8 +18,11 @@ enum Api {
   /// Gets 30 ASOIAF Houses.
   static func getHouses(
     page: Int
-  ) -> AnyPublisher<[HouseBasic], Error> {
-    let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")!
+  ) -> AnyPublisher<[HouseBasic], Error>? {
+    guard let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)") else {
+      return nil
+    }
+
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get
 
