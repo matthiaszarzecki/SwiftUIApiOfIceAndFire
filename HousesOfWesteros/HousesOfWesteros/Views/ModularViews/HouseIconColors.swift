@@ -35,7 +35,7 @@ struct HouseIconColors: View {
             .foregroundColor(.westerosRed)
             .shadow(color: .westerosRed, radius: 6)
             .frame(width: iconSize.rawValue, height: iconSize.rawValue, alignment: .center)
-            
+          
           Text("\(initialLetter)")
             .foregroundColor(.white)
         }
@@ -48,7 +48,7 @@ struct HouseIcon_Previews: PreviewProvider {
   static var previews: some View {
     let houses = [
       MockClasses.houseBasicWithLinksAndWithCoatOfArms,
-      MockClasses.houseBasicWithLinksAndWithoutCoatOfArms,
+      MockClasses.houseBasicWithLinksAndWithoutCoatOfArms
     ]
     
     ForEach(houses, id: \.self) { house in
