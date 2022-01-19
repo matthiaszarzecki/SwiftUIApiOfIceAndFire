@@ -38,7 +38,6 @@ class AllHousesViewModel: ObservableObject {
     case .finished:
       state.showError = false
       state.intitialLoadingPhase = false
-      break
     case .failure:
       state.canLoadNextPage = false
     }
@@ -51,8 +50,8 @@ class AllHousesViewModel: ObservableObject {
   }
   
   struct SearchResultsViewState {
-    var houses = [HouseBasic]()
-    var page: Int = 1
+    var houses: [HouseBasic] = []
+    var page = 1
     var canLoadNextPage = true
     var showError = false
     var intitialLoadingPhase = true
