@@ -41,7 +41,7 @@ Todo:
 - Tap tabbar icons to reset views
 - More Unit-Tests
 - More Unit-tests for ViewModels
-- Figure out more elegant way to return manual error on bad url in combine-call
+- Better error-handling in combine-call
 
 Nice to Have:
 - CodeCov integration in CICD
