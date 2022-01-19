@@ -147,66 +147,30 @@ enum ColorParser {
     // Remove empty array entries.
     words.removeAll { $0.isEmpty || $0 == " " }
 
+    let colorCombinations: [([String], Color)] = [
+      (synonymsForYellow, .yellow),
+      (synonymsForOrange, .orange),
+      (synonymsForBrown, .customBrown),
+      (synonymsForRed, .red),
+      (synonymsForPink, .customPink),
+      (synonymsForPurple, .purple),
+      (synonymsForBlue, .blue),
+      (synonymsForLightBlue, .customLightBlue),
+      (synonymsForCyan, .customCyan),
+      (synonymsForLightGreen, .customLightGreen),
+      (synonymsForGreen, .green),
+      (synonymsForDarkGreen, .customDarkGreen),
+      (synonymsForWhite, .customWhite),
+      (synonymsForGray, .gray),
+      (synonymsForBlack, .customBlack)
+    ]
+
     // Check if any words that describe colors are present, and
     // if so add the corresponding color to the return-collection.
-    if words.hasAtLeastOneItem(fromArray: synonymsForYellow) {
-      colors.append(.yellow)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForOrange) {
-      colors.append(.orange)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForBrown) {
-      colors.append(.customBrown)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForRed) {
-      colors.append(.red)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForPink) {
-      colors.append(.customPink)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForPurple) {
-      colors.append(.purple)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForBlue) {
-      colors.append(.blue)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForLightBlue) {
-      colors.append(.customLightBlue)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForCyan) {
-      colors.append(.customCyan)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForLightGreen) {
-      colors.append(.customLightGreen)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForGreen) {
-      colors.append(.green)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForDarkGreen) {
-      colors.append(.customDarkGreen)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForWhite) {
-      colors.append(.customWhite)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForGray) {
-      colors.append(.gray)
-    }
-
-    if words.hasAtLeastOneItem(fromArray: synonymsForBlack) {
-      colors.append(.customBlack)
+    for colorCombination in colorCombinations {
+      if words.hasAtLeastOneItem(fromArray: colorCombination.0) {
+        colors.append(colorCombination.1)
+      }
     }
 
     return colors
