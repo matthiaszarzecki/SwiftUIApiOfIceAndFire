@@ -41,7 +41,17 @@ enum ColorParser {
       colors.append(.yellow)
     }
 
-    let synonymsForOrange = ["orange", "tenné", "tenny", "ochre", "copper", "saffron", "rusty", "black-and-orange", "bronze"]
+    let synonymsForOrange = [
+      "orange",
+      "tenné",
+      "tenny",
+      "ochre",
+      "copper",
+      "saffron",
+      "rusty",
+      "black-and-orange",
+      "bronze"
+    ]
     if words.hasAtLeastOneItem(fromArray: synonymsForOrange) {
       colors.append(.orange)
     }

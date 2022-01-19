@@ -17,7 +17,7 @@ struct HouseCellLarge: View {
 
   var icon: some View {
     if let unwrappedId = house.id,
-       house.isGreatHouse {
+      house.isGreatHouse {
       return AnyView(
         HouseIconSigil(
           iconSize: .greatHouseCell,
