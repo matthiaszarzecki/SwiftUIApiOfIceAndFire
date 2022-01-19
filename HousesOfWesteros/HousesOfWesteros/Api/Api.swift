@@ -26,9 +26,13 @@ enum Api {
     return URLSession.shared
       .dataTaskPublisher(for: request)
       .handleEvents(
+        receiveSubscription: nil,
         receiveOutput: {
           $0.data.printJsonFromData()
-        }
+        },
+        receiveCompletion: nil,
+        receiveCancel: nil,
+        receiveRequest: nil
       )
       .tryMap {
         return try JSONDecoder().decode(
