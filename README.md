@@ -44,6 +44,7 @@ Todo:
 - Better error-handling in combine-call
 
 Nice to Have:
+- Fastlane function to create and resize screenshots for this readme
 - CodeCov integration in CICD
 - Unit-Testing Views with ViewInspector Plugin
 - Monkey-Tests
