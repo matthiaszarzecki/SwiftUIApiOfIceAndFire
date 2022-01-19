@@ -81,6 +81,10 @@ custom_rules:
     match_kinds: comment
     message: "Comment starting with lowercase letter - did you forget to delete old code?"
 
+  avoid_anyview:
+    regex: 'AnyView'
+    message: "Avoid using AnyView - use @ViewBuilder instead."
+
 
 attributes:
   always_on_same_line:
