@@ -22,8 +22,11 @@ struct SettingsRow: View {
 
 struct SettingsRow_Previews: PreviewProvider {
   static var previews: some View {
-    SettingsRow(systemIcon: "square.and.arrow.up", text: "Share")
-      .padding()
-      .previewLayout(.sizeThatFits)
+    SettingsRow(
+      systemIcon: "square.and.arrow.up",
+      text: "Share"
+    )
+    .padding()
+    .previewLayout(.sizeThatFits)
   }
 }

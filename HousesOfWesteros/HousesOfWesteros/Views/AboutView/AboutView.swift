@@ -21,102 +21,79 @@ struct AboutView: View {
   /// device. On the simulator this does not work, so we open
   /// a link to a different website instead (appstore-links that
   /// work in a desktop-browser are not allowed on iOS Safari).
+  @ViewBuilder
   var appsAndGamesRow: some View {
-    let settingsRow = SettingsRow(
-      systemIcon: "square.grid.2x2.fill",
-      text: "More Apps & Games"
-    )
-
     if Device.isSimulator {
-      return AnyView(
-        Link(
-          destination: URL(string: "https://github.com/matthiaszarzecki")!
-        ) {
-          settingsRow
-        }
+      LinkSettingsRow(
+        systemIcon: "square.grid.2x2.fill",
+        text: "More Apps",
+        urlString: "https://github.com/matthiaszarzecki"
       )
     } else {
-      return AnyView(
-        Button(
-          action: {
-            if let url = URL(
-              string: "itms-apps://apple.com/app/id1394075736"
-            ) {
-              UIApplication.shared.open(url)
-            }
-          },
-          label: {
-            settingsRow
+      Button(
+        action: {
+          if let url = URL(
+            string: "itms-apps://apple.com/app/id1394075736"
+          ) {
+            UIApplication.shared.open(url)
           }
-        )
+        },
+        label: {
+          SettingsRow(
+            systemIcon: "square.grid.2x2.fill",
+            text: "More Apps & Games"
+          )
+        }
       )
     }
   }
 
   var twitterLink: some View {
-    Link(
-      destination: URL(string: "https://twitter.com/matthias_code")!
-    ) {
-      SettingsRow(
-        systemIcon: "number.square",
-        text: "Twitter"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "number.square",
+      text: "Twitter",
+      urlString: "https://twitter.com/matthias_code"
+    )
   }
 
   var githubLink: some View {
-    Link(
-      destination: URL(string: "https://github.com/matthiaszarzecki")!
-    ) {
-      SettingsRow(
-        systemIcon: "chevron.left.forwardslash.chevron.right",
-        text: "Github"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "chevron.left.forwardslash.chevron.right",
+      text: "Github",
+      urlString: "https://github.com/matthiaszarzecki"
+    )
   }
 
   var youtubeLink: some View {
-    Link(
-      destination: URL(string: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g")!
-    ) {
-      SettingsRow(
-        systemIcon: "film",
-        text: "Youtube"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "film",
+      text: "Youtube",
+      urlString: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g"
+    )
   }
 
   var linkedInLink: some View {
-    Link(
-      destination: URL(string: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/")!
-    ) {
-      SettingsRow(
-        systemIcon: "doc.richtext",
-        text: "LinkedIn"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "doc.richtext",
+      text: "LinkedIn",
+      urlString: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/"
+    )
   }
 
   var developedByLink: some View {
-    Link(
-      destination: URL(string: "https://twitter.com/matthias_code")!
-    ) {
-      SettingsRow(
-        systemIcon: "signature",
-        text: "Matthias Zarzecki"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "signature",
+      text: "Matthias Zarzecki",
+      urlString: "https://twitter.com/matthias_code"
+    )
   }
 
   var apiLink: some View {
-    Link(
-      destination: URL(string: "https://anapioficeandfire.com/")!
-    ) {
-      SettingsRow(
-        systemIcon: "chevron.left.slash.chevron.right",
-        text: "The Api of Ice and Fire"
-      )
-    }
+    LinkSettingsRow(
+      systemIcon: "chevron.left.slash.chevron.right",
+      text: "The Api of Ice and Fire",
+      urlString: "https://anapioficeandfire.com/"
+    )
   }
 
   var appVersion: some View {
