@@ -9,6 +9,32 @@ import Foundation
 import SwiftUI
 
 enum ColorParser {
+  static private let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
+  static private let synonymsForOrange = [
+    "orange",
+    "tenné",
+    "tenny",
+    "ochre",
+    "copper",
+    "saffron",
+    "rusty",
+    "black-and-orange",
+    "bronze"
+  ]
+  static private let synonymsForBrown = ["brown", "ermine", "ermines", "erminois", "oaken", "oak", "tree", "moose"]
+  static private let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody", "pommes"]
+  static private let synonymsForPink = ["pink", "carnation"]
+  static private let synonymsForPurple = ["purple", "purpure", "murrey", "grape", "amaranth"]
+  static private let synonymsForBlue = ["blue", "azure", "indigo", "fountain", "vair"]
+  static private let synonymsForLightBlue = ["sky", "celeste", "sky-blue"]
+  static private let synonymsForCyan = ["cyan", "turquoise", "blue-green"]
+  static private let synonymsForLightGreen = ["pale-green"]
+  static private let synonymsForGreen = ["green", "vert"]
+  static private let synonymsForDarkGreen = ["dark-green", "grey-green"]
+  static private let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain", "ice-white", "scythe"]
+  static private let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword", "scythe"]
+  static private let synonymsForBlack = ["black", "sable", "black-and-orange"]
+
   /// Reads the colors named in a string and turns
   /// these into an array of SwiftUI Colors.
   static func getColors(fromString text: String) -> [Color] {
@@ -36,87 +62,62 @@ enum ColorParser {
 
     // Check if any words that describe colors are present, and
     // if so add the corresponding color to the return-collection.
-    let synonymsForYellow = ["yellow", "gold", "golden", "or", "sun"]
     if words.hasAtLeastOneItem(fromArray: synonymsForYellow) {
       colors.append(.yellow)
     }
 
-    let synonymsForOrange = [
-      "orange",
-      "tenné",
-      "tenny",
-      "ochre",
-      "copper",
-      "saffron",
-      "rusty",
-      "black-and-orange",
-      "bronze"
-    ]
     if words.hasAtLeastOneItem(fromArray: synonymsForOrange) {
       colors.append(.orange)
     }
 
-    let synonymsForBrown = ["brown", "ermine", "ermines", "erminois", "oaken", "oak", "tree", "moose"]
     if words.hasAtLeastOneItem(fromArray: synonymsForBrown) {
       colors.append(.customBrown)
     }
 
-    let synonymsForRed = ["red", "gules", "sanguine", "fiery", "blood", "bloody", "pommes"]
     if words.hasAtLeastOneItem(fromArray: synonymsForRed) {
       colors.append(.red)
     }
 
-    let synonymsForPink = ["pink", "carnation"]
     if words.hasAtLeastOneItem(fromArray: synonymsForPink) {
       colors.append(.customPink)
     }
 
-    let synonymsForPurple = ["purple", "purpure", "murrey", "grape", "amaranth"]
     if words.hasAtLeastOneItem(fromArray: synonymsForPurple) {
       colors.append(.purple)
     }
 
-    let synonymsForBlue = ["blue", "azure", "indigo", "fountain", "vair"]
     if words.hasAtLeastOneItem(fromArray: synonymsForBlue) {
       colors.append(.blue)
     }
 
-    let synonymsForLightBlue = ["sky", "celeste", "sky-blue"]
     if words.hasAtLeastOneItem(fromArray: synonymsForLightBlue) {
       colors.append(.customLightBlue)
     }
 
-    let synonymsForCyan = ["cyan", "turquoise", "blue-green"]
     if words.hasAtLeastOneItem(fromArray: synonymsForCyan) {
       colors.append(.customCyan)
     }
 
-    let synonymsForLightGreen = ["pale-green"]
     if words.hasAtLeastOneItem(fromArray: synonymsForLightGreen) {
       colors.append(.customLightGreen)
     }
 
-    let synonymsForGreen = ["green", "vert"]
     if words.hasAtLeastOneItem(fromArray: synonymsForGreen) {
       colors.append(.green)
     }
 
-    let synonymsForDarkGreen = ["dark-green", "grey-green"]
     if words.hasAtLeastOneItem(fromArray: synonymsForDarkGreen) {
       colors.append(.customDarkGreen)
     }
 
-    let synonymsForWhite = ["white", "argent", "silver", "ice", "fountain", "ice-white", "scythe"]
     if words.hasAtLeastOneItem(fromArray: synonymsForWhite) {
       colors.append(.customWhite)
     }
 
-    let synonymsForGray = ["grey", "gray", "gules", "cendrée", "sword", "scythe"]
     if words.hasAtLeastOneItem(fromArray: synonymsForGray) {
       colors.append(.gray)
     }
 
-    let synonymsForBlack = ["black", "sable", "black-and-orange"]
     if words.hasAtLeastOneItem(fromArray: synonymsForBlack) {
       colors.append(.customBlack)
     }
