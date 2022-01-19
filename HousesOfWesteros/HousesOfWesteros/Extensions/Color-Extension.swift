@@ -60,7 +60,7 @@ extension Color {
   /// major color of a great houses sigil
   /// for use as background-color.
   static func greatHousesMajorColor(id: Int) -> Color {
-    switch(id) {
+    switch id {
     case 7:
       return Color(hex: "A8C0DC")
     case 17:

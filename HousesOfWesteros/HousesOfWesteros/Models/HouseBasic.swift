@@ -17,7 +17,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// also the last part of the url.
   var id: Int? {
     let urlElements = url.components(separatedBy: "/")
-    return Int(urlElements.last ?? "") ?? nil
+    return Int(urlElements.last ?? "")
   }
   
   let url: String
