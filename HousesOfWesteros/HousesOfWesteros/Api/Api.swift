@@ -21,7 +21,7 @@ enum Api {
   ) -> AnyPublisher<[HouseBasic], Error>? {
     guard
       let url = URL(
-        string: "https://www.anapioficeandfire.com/api/housses?page=\(page)&pageSize=\(pageSize)"
+        string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)"
       )
     else {
       return nil
