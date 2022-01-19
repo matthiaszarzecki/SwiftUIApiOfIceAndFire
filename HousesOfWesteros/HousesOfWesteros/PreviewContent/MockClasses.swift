@@ -29,10 +29,7 @@ enum MockClasses {
   ]
   static let foundingPeriod = "Coming of the Andals"
   static let diedOutPeriod = "260 AC"
-  static let ancestralWeapons = [
-    "Blackfyre",
-    "Whitefyre"
-  ]
+  static let ancestralWeapons = ["Blackfyre", "Whitefyre"]
 
   static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/7",
@@ -91,7 +88,7 @@ enum MockClasses {
     swornMembers: []
   )
 
-  static let houseBasicWithoutLinksAndWithoutCoatOfArms = HouseBasic(
+  static let houseBasicWithoutLinksWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/293",
     name: houseName,
     region: houseRegion,
@@ -152,7 +149,7 @@ enum MockClasses {
     houseBasicWithLinksAndWithCoatOfArms,
     houseBasicWithLinksAndWithoutCoatOfArms,
     houseBasicWithoutLinksAndWithCoatOfArms,
-    houseBasicWithoutLinksAndWithoutCoatOfArms
+    houseBasicWithoutLinksWithoutCoatOfArms
   ]
 
   static let character = CharacterBasic(

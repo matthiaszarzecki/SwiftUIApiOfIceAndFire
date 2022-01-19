@@ -53,14 +53,16 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   /// the name is empty tries to return an
   /// alias. Returns empty string otherwise.
   var displayName: String {
-    if name == "" {
+    if name.isEmpty {
       if aliases.hasNonEmptyEntries {
         if let firstAlias = aliases.first {
           return firstAlias
         }
+      } else {
+        return "Unknown Name"
       }
-      return "Unknown Name"
     }
+
     return name
   }
 

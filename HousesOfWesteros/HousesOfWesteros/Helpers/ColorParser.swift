@@ -32,7 +32,7 @@ enum ColorParser {
     var words = adaptedText.components(separatedBy: " ")
 
     // Remove empty array entries.
-    words.removeAll { $0 == "" || $0 == " " }
+    words.removeAll { $0.isEmpty || $0 == " " }
 
     // Check if any words that describe colors are present, and
     // if so add the corresponding color to the return-collection.

@@ -8,7 +8,7 @@
 import XCTest
 @testable import HousesOfWesteros
 
-class StringArrayHasAtLeastOneItemFromArrayTests: XCTestCase {
+class StringArrayHasOneItemFromArrayTests: XCTestCase {
   func testStringArrayHasAtLeastOneItemFromArray() {
     // GIVEN two string-arrays with one entry appearing in both
     let array1 = ["hello", "lorem"]
