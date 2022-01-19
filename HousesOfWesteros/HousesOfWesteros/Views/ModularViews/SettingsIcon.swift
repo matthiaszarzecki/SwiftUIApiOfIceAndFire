@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsIcon: View {
   let systemIcon: String
-  
+
   var body: some View {
     Image(systemName: systemIcon)
       .frame(width: 28, height: 20, alignment: .center)

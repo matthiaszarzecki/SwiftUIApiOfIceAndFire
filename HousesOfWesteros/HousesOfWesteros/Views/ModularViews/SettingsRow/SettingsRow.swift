@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsRow: View {
   let systemIcon: String
   let text: String
-  
+
   var body: some View {
     HStack {
       SettingsIcon(systemIcon: systemIcon)
@@ -22,8 +22,11 @@ struct SettingsRow: View {
 
 struct SettingsRow_Previews: PreviewProvider {
   static var previews: some View {
-    SettingsRow(systemIcon: "square.and.arrow.up", text: "Share")
-      .padding()
-      .previewLayout(.sizeThatFits)
+    SettingsRow(
+      systemIcon: "square.and.arrow.up",
+      text: "Share"
+    )
+    .padding()
+    .previewLayout(.sizeThatFits)
   }
 }

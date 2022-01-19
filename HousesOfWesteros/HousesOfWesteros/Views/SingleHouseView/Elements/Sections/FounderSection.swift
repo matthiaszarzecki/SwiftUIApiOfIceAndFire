@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FounderSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if let character = house.foundedByCharacter {
       Section(

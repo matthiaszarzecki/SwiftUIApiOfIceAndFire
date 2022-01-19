@@ -12,21 +12,21 @@ import SwiftUI
 struct CircularColorDisplay: View {
   var colors: [Color]
   var size: CGFloat
-  
+
   /// The amount each segment will take up.
   private var degreesForEachElement: Double {
     360.0 / Double(colors.count)
   }
-  
+
   var body: some View {
     ZStack {
       ForEach(0..<colors.count) { index in
         let rotation = getRotationAngleForElement(withIndex: index)
-        
+
         Path { path in
           let center: CGPoint = .init(x: size / 2, y: size / 2)
           path.move(to: .init(x: center.x, y: center.y))
-          
+
           path.addArc(
             center: center,
             radius: center.x - 0.05 * center.x,
@@ -44,7 +44,7 @@ struct CircularColorDisplay: View {
     }
     .frame(width: size, height: size, alignment: .center)
   }
-  
+
   /// Gets the amount an elements needs to be rotated
   /// to align with the other circle elements. Returns
   /// 0.0 when it is the first element.

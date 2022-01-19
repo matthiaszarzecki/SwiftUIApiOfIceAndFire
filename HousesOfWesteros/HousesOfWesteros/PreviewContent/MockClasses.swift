@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct MockClasses {
+enum MockClasses {
   static let idGreatHouse = 17
-  
+
   static let characterLink = "https://www.anapioficeandfire.com/api/characters/298"
   static let houseLink = "https://www.anapioficeandfire.com/api/houses/285"
-  
+
   static let houseName = "House Goodbrother of Crow Spike Keep"
   static let houseRegion = "Dorne"
   static let coatOfArms = "A Gold Dove on a Green Field"
@@ -29,11 +29,8 @@ struct MockClasses {
   ]
   static let foundingPeriod = "Coming of the Andals"
   static let diedOutPeriod = "260 AC"
-  static let ancestralWeapons = [
-    "Blackfyre",
-    "Whitefyre"
-  ]
-  
+  static let ancestralWeapons = ["Blackfyre", "Whitefyre"]
+
   static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/7",
     name: houseName,
@@ -52,7 +49,7 @@ struct MockClasses {
     cadetBranches: Array.init(repeating: houseLink, count: 2),
     swornMembers: Array.init(repeating: characterLink, count: 4)
   )
-  
+
   static let houseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/17",
     name: houseName,
@@ -71,7 +68,7 @@ struct MockClasses {
     cadetBranches: Array.init(repeating: houseLink, count: 2),
     swornMembers: Array.init(repeating: characterLink, count: 4)
   )
-  
+
   static let houseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/292",
     name: houseName,
@@ -90,8 +87,8 @@ struct MockClasses {
     cadetBranches: [],
     swornMembers: []
   )
-  
-  static let houseBasicWithoutLinksAndWithoutCoatOfArms = HouseBasic(
+
+  static let houseBasicWithoutLinksWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/293",
     name: houseName,
     region: houseRegion,
@@ -147,14 +144,14 @@ struct MockClasses {
     cadetBranches: [],
     swornMembers: []
   )
-  
+
   static let housesBasic = [
     houseBasicWithLinksAndWithCoatOfArms,
     houseBasicWithLinksAndWithoutCoatOfArms,
     houseBasicWithoutLinksAndWithCoatOfArms,
-    houseBasicWithoutLinksAndWithoutCoatOfArms
+    houseBasicWithoutLinksWithoutCoatOfArms
   ]
-  
+
   static let character = CharacterBasic(
     url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
@@ -226,9 +223,9 @@ struct MockClasses {
     bookAppearances: [],
     hasPointOfViewChaptersInBooks: []
   )
-  
+
   static let characters = Array.init(repeating: character, count: 3)
-  
+
   static let houseUpdatedWithLinks = HouseUpdated(
     fromHouse: houseBasicWithLinksAndWithCoatOfArms,
     currentLord: character,
@@ -238,7 +235,7 @@ struct MockClasses {
     cadetBranches: housesBasic,
     swornMembers: characters
   )
-  
+
   static let houseUpdatedWithoutLinks = HouseUpdated(
     fromHouse: houseBasicWithoutLinksAndWithCoatOfArms
   )

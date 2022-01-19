@@ -10,7 +10,7 @@ import SwiftUI
 struct HouseIconSigil: View {
   var iconSize: IconSize
   var id: Int
-  
+
   var body: some View {
     Image("house_icon_\(id)")
       .resizable()

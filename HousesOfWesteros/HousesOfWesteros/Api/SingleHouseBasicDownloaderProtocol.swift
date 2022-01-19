@@ -8,6 +8,6 @@
 protocol SingleHouseBasicDownloaderProtocol {
   func getSingleHouse(
     id: Int,
-    completion: @escaping (Result<HouseBasic, NetworkError>) -> ()
+    completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   )
 }

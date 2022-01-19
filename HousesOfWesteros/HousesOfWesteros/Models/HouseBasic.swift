@@ -12,14 +12,14 @@ import SwiftUI
 struct HouseBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a
   // field is not assigned it will return an empty string "".
-  
+
   /// The number-id for the house. Is
   /// also the last part of the url.
   var id: Int? {
     let urlElements = url.components(separatedBy: "/")
-    return Int(urlElements.last ?? "") ?? nil
+    return Int(urlElements.last ?? "")
   }
-  
+
   let url: String
   let name: String
   let region: String
@@ -38,7 +38,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   let foundedByCharacter: String
   let cadetBranches: [String]
   let swornMembers: [String]
-  
+
   /// A Boolean indicating whether at least one
   /// field that can contain an URL has an URL.
   var containsLinks: Bool {
@@ -57,13 +57,13 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   var heraldryColors: [Color] {
     return ColorParser.getColors(fromString: coatOfArms)
   }
-  
+
   /// The initial letter of the House-name
   /// without "House " (with space) prefixed.
   var initialLetter: String {
     return name[6]
   }
-  
+
   /// Boolean indicating whether this house
   /// belongs to the great houses and has
   /// an image file associated.
@@ -73,7 +73,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
     }
     return false
   }
-  
+
   enum CodingKeys: String, CodingKey {
     case url
     case name

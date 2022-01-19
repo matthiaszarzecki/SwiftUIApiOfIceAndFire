@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Constants {
+enum Constants {
   /// The ID's of the 9 great houses:
   ///   7 - Arryn of the Eyrie
   ///  17 - Baratheon of Storm's End

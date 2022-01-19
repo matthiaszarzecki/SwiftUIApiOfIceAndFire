@@ -7,12 +7,12 @@
 
 import Foundation
 
-class Device {
+enum Device {
   static var isSimulator: Bool {
-#if targetEnvironment(simulator)
+  #if targetEnvironment(simulator)
     return true
-#else
+  #else
     return false
-#endif
+  #endif
   }
 }

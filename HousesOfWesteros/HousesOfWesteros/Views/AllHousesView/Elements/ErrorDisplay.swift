@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ErrorDisplay: View {
   let reloadData: () -> Void
-  
+
   var body: some View {
     List {
       Text("Oh No!")
@@ -31,6 +31,6 @@ struct ErrorDisplay: View {
 
 struct ErrorDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    ErrorDisplay(reloadData: {})
+    ErrorDisplay {}
   }
 }

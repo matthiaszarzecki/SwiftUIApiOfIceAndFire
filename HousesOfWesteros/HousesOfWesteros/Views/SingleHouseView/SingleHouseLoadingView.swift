@@ -13,10 +13,10 @@ struct SingleHouseLoadingView: View {
       Text("AAAAAAAAAAAAAA")
         .font(.largeTitle)
         .redacted(reason: .placeholder)
-      
+
       Text("AAAAAAAAAAAAAA")
         .redacted(reason: .placeholder)
-      
+
       Form {
         ForEach(0..<4, id: \.self) { _ in
           Section(header: LoadingSectionHeader()) {

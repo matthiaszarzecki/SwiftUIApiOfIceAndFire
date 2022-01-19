@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PortrayedBySection: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     if character.portrayedBy.hasNonEmptyEntries {
       Section(header: SectionHeader(text: "Portayed by")) {

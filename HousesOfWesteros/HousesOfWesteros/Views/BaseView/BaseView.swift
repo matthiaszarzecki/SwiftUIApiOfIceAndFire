@@ -15,15 +15,15 @@ struct BaseView: View {
   init() {
     // Set font for Title in large view
     if let font = UIFont(name: "GameofThrones", size: 20) {
-      UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
+      UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
     }
 
     // Set font for Title in navigation bar
     if let font = UIFont(name: "GameofThrones", size: 16) {
-      UINavigationBar.appearance().titleTextAttributes = [.font : font]
+      UINavigationBar.appearance().titleTextAttributes = [.font: font]
     }
   }
-  
+
   var body: some View {
     TabView {
       GreatHousesView()
@@ -34,7 +34,7 @@ struct BaseView: View {
           )
         }
         .tag(0)
-      
+
       AllHousesView()
         .tabItem {
           Label(
@@ -43,7 +43,7 @@ struct BaseView: View {
           )
         }
         .tag(1)
-      
+
       AboutView()
         .tabItem {
           Label(

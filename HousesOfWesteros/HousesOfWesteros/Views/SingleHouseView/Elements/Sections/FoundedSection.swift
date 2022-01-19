@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FoundedSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if house.foundingPeriod.exists {
       Section(header: SectionHeader(text: "Founded During")) {

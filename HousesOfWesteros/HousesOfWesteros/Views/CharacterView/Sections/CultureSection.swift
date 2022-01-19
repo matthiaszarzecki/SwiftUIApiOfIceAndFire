@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CultureSection: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     if character.culture.exists {
       Section(header: SectionHeader(text: "Culture")) {

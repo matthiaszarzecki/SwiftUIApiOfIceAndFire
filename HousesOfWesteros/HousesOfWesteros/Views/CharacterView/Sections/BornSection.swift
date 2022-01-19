@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BornSection: View {
   var character: CharacterBasic
-  
+
   var body: some View {
     if character.born.exists {
       Section(header: SectionHeader(text: "Born")) {

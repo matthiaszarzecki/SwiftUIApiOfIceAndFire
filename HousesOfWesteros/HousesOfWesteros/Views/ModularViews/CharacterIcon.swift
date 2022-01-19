@@ -10,14 +10,14 @@ import SwiftUI
 struct CharacterIcon: View {
   var initialLetter: String
   var size: CGFloat
-  
+
   var body: some View {
     ZStack {
       Circle()
         .foregroundColor(.westerosRed)
         .shadow(color: .westerosRed, radius: 6)
         .frame(width: size, height: size, alignment: .center)
-      
+
       Text("\(initialLetter)")
         .foregroundColor(.white)
     }

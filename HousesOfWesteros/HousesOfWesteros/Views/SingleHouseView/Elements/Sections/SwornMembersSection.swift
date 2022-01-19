@@ -9,14 +9,14 @@ import SwiftUI
 
 struct SwornMembersSection: View {
   var house: HouseUpdated
-  
+
   var body: some View {
     if let swornMembers = house.swornMembers,
-       swornMembers.hasEntries {
+      swornMembers.hasEntries {
       let sectionHeader = swornMembers.count > 1
         ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
         : SectionHeader(text: "Sworn Member")
-      
+
       Section(header: sectionHeader) {
         ForEach(swornMembers, id: \.self) { character in
           if character.hasInformation {
