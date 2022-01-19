@@ -36,11 +36,11 @@ struct AllHousesDisplay: View {
 
   var body: some View {
     NavigationView {
-      if initialLoadingPhase {
-        AllHousesLoadingView()
-          .navigationTitle(viewTitle)
-      } else if showError {
+      if showError {
         ErrorDisplay(reloadData: onScrolledAtBottom)
+          .navigationTitle(viewTitle)
+      } else if initialLoadingPhase {
+        AllHousesLoadingView()
           .navigationTitle(viewTitle)
       } else {
         // This cannot be a scrollview as
@@ -50,7 +50,10 @@ struct AllHousesDisplay: View {
             NavigationLink(
               destination: SingleHouseView(houseBasic: house)
             ) {
-              HouseCellBasic(house: house, iconSize: .largeForMajorCells)
+              HouseCellBasic(
+                house: house,
+                iconSize: .largeForMajorCells
+              )
             }
             .onAppear {
               if self.fetchResults.last == house {

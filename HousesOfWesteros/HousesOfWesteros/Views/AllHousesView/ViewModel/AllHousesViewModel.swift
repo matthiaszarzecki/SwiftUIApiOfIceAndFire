@@ -28,11 +28,17 @@ class AllHousesViewModel: ObservableObject {
       // If after 3 seconds nothing has been loaded, show error
       DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
         if self.subscriptions.isEmpty {
-          state.intitialLoadingPhase = false
-          state.showError = true
+          showError()
         }
       }
+    } else {
+      showError()
     }
+  }
+
+  private func showError() {
+    state.showError = true
+    state.intitialLoadingPhase = false
   }
 
   private func onReceive(_ completion: Subscribers.Completion<Error>) {

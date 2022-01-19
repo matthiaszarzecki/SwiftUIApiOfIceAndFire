@@ -19,7 +19,11 @@ enum Api {
   static func getHouses(
     page: Int
   ) -> AnyPublisher<[HouseBasic], Error>? {
-    guard let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)") else {
+    guard
+      let url = URL(
+        string: "https://www.anapioficeandfire.com/api/housses?page=\(page)&pageSize=\(pageSize)"
+      )
+    else {
       return nil
     }
 
