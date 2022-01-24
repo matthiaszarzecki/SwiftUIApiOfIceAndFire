@@ -15,22 +15,19 @@ struct HouseCellLarge: View {
     return width - 120
   }
 
+  @ViewBuilder
   var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
-      return AnyView(
-        HouseIconSigil(
-          iconSize: .greatHouseCell,
-          id: unwrappedId
-        )
+      HouseIconSigil(
+        iconSize: .greatHouseCell,
+        id: unwrappedId
       )
     } else {
-      return AnyView(
-        HouseIconColors(
-          colors: house.heraldryColors,
-          initialLetter: house.initialLetter,
-          iconSize: .greatHouseCell
-        )
+      HouseIconColors(
+        colors: house.heraldryColors,
+        initialLetter: house.initialLetter,
+        iconSize: .greatHouseCell
       )
     }
   }
