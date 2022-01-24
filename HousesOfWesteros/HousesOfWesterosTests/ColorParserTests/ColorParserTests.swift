@@ -75,7 +75,7 @@ class ColorParserTests: XCTestCase {
   func testGetAllColors() {
     // GIVEN a strings that contains all possible colors
     let text = """
-      gold, orange, brown, red, pink, purple, blue, sky,
+      gold, orange, brown, red, pink, purple, blue, sky,\
       cyan, pale-green, green, dark-green, white, grey, black
       """
 
