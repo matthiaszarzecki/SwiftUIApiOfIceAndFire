@@ -49,6 +49,7 @@ struct GreatHousesLoadingView: View {
         cell
       }
     }
+    .listRowBackground(Color.clear)
   }
 }
 
