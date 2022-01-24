@@ -11,22 +11,19 @@ struct HouseCellUpdated: View {
   var house: HouseUpdated
   var iconSize: IconSize
 
+  @ViewBuilder
   var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
-      return AnyView(
-        HouseIconSigil(
-          iconSize: iconSize,
-          id: unwrappedId
-        )
+      HouseIconSigil(
+        iconSize: iconSize,
+        id: unwrappedId
       )
     } else {
-      return AnyView(
-        HouseIconColors(
-          colors: house.heraldryColors,
-          initialLetter: house.initialLetter,
-          iconSize: iconSize
-        )
+      HouseIconColors(
+        colors: house.heraldryColors,
+        initialLetter: house.initialLetter,
+        iconSize: iconSize
       )
     }
   }
@@ -49,22 +46,19 @@ struct HouseCellBasic: View {
   var house: HouseBasic
   var iconSize: IconSize
 
+  @ViewBuilder
   var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
-      return AnyView(
-        HouseIconSigil(
-          iconSize: iconSize,
-          id: unwrappedId
-        )
+      HouseIconSigil(
+        iconSize: iconSize,
+        id: unwrappedId
       )
     } else {
-      return AnyView(
-        HouseIconColors(
-          colors: house.heraldryColors,
-          initialLetter: house.initialLetter,
-          iconSize: iconSize
-        )
+      HouseIconColors(
+        colors: house.heraldryColors,
+        initialLetter: house.initialLetter,
+        iconSize: iconSize
       )
     }
   }

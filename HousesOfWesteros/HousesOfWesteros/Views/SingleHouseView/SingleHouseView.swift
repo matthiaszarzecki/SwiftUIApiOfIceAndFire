@@ -29,51 +29,48 @@ struct SingleHouseDisplay: View {
   let showError: Bool
   let updateData: () -> Void
 
+  @ViewBuilder
   var body: some View {
-    if let unwrappedHouseUpdated = houseUpdated {
-      return AnyView(
-        GeometryReader { geometry in
-          VStack {
-            HouseNameAndTitle(
-              house: unwrappedHouseUpdated,
-              width: geometry.size.width - 16 * 2
-            )
+    GeometryReader { geometry in
+      if let unwrappedHouseUpdated = houseUpdated {
+        VStack {
+          HouseNameAndTitle(
+            house: unwrappedHouseUpdated,
+            width: geometry.size.width - 16 * 2
+          )
 
-            Form {
-              Group {
-                CoatOfArmsSection(house: unwrappedHouseUpdated)
+          Form {
+            Group {
+              CoatOfArmsSection(house: unwrappedHouseUpdated)
 
-                if !unwrappedHouseUpdated.isGreatHouse {
-                  HeraldryColorsSection(
-                    house: unwrappedHouseUpdated,
-                    width: geometry.size.width
-                  )
-                }
-
-                HouseMottoSection(house: unwrappedHouseUpdated)
-                TitlesSection(house: unwrappedHouseUpdated)
-                SeatsSection(house: unwrappedHouseUpdated)
-                CurrentLordSection(house: unwrappedHouseUpdated)
-                CurrentHeirSection(house: unwrappedHouseUpdated)
+              if !unwrappedHouseUpdated.isGreatHouse {
+                HeraldryColorsSection(
+                  house: unwrappedHouseUpdated,
+                  width: geometry.size.width
+                )
               }
-              Group {
-                OverlordHouseSection(house: unwrappedHouseUpdated)
-                FoundedSection(house: unwrappedHouseUpdated)
-                FounderSection(house: unwrappedHouseUpdated)
-                DiedOutSection(house: unwrappedHouseUpdated)
-                AncestralWeaponsSection(house: unwrappedHouseUpdated)
-                CadetBranchesSection(house: unwrappedHouseUpdated)
-                SwornMembersSection(house: unwrappedHouseUpdated)
-                ErrorSection(showError: showError, updateData: updateData)
-              }
+
+              HouseMottoSection(house: unwrappedHouseUpdated)
+              TitlesSection(house: unwrappedHouseUpdated)
+              SeatsSection(house: unwrappedHouseUpdated)
+              CurrentLordSection(house: unwrappedHouseUpdated)
+              CurrentHeirSection(house: unwrappedHouseUpdated)
+            }
+            Group {
+              OverlordHouseSection(house: unwrappedHouseUpdated)
+              FoundedSection(house: unwrappedHouseUpdated)
+              FounderSection(house: unwrappedHouseUpdated)
+              DiedOutSection(house: unwrappedHouseUpdated)
+              AncestralWeaponsSection(house: unwrappedHouseUpdated)
+              CadetBranchesSection(house: unwrappedHouseUpdated)
+              SwornMembersSection(house: unwrappedHouseUpdated)
+              ErrorSection(showError: showError, updateData: updateData)
             }
           }
         }
-      )
-    } else {
-      return AnyView(
+      } else {
         SingleHouseLoadingView()
-      )
+      }
     }
   }
 }

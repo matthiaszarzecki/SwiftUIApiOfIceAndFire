@@ -12,34 +12,38 @@ struct HouseIconColors: View {
   var initialLetter: String
   var iconSize: IconSize
 
+  @ViewBuilder
   var body: some View {
     if colors.hasEntries {
-      // When colors exists, create
-      // a CircularColorDisplay.
-      return AnyView(
-        ZStack {
-          let backgroundSize = iconSize.rawValue - 2
-          Circle()
-            .frame(width: backgroundSize, height: backgroundSize, alignment: .center)
-            .shadow(color: .westerosRed, radius: 6)
+      // When colors exists, create a CircularColorDisplay.
+      ZStack {
+        let backgroundSize = iconSize.rawValue - 2
+        Circle()
+          .frame(
+            width: backgroundSize,
+            height: backgroundSize,
+            alignment: .center
+          )
+          .shadow(color: .westerosRed, radius: 6)
 
-          CircularColorDisplay(colors: colors, size: iconSize.rawValue)
-        }
-      )
+        CircularColorDisplay(colors: colors, size: iconSize.rawValue)
+      }
     } else {
       // When no colors exists, show first
       // letter of house on colored circle.
-      return AnyView(
-        ZStack {
-          Circle()
-            .foregroundColor(.westerosRed)
-            .shadow(color: .westerosRed, radius: 6)
-            .frame(width: iconSize.rawValue, height: iconSize.rawValue, alignment: .center)
+      ZStack {
+        Circle()
+          .foregroundColor(.westerosRed)
+          .shadow(color: .westerosRed, radius: 6)
+          .frame(
+            width: iconSize.rawValue,
+            height: iconSize.rawValue,
+            alignment: .center
+          )
 
-          Text("\(initialLetter)")
-            .foregroundColor(.white)
-        }
-      )
+        Text("\(initialLetter)")
+          .foregroundColor(.white)
+      }
     }
   }
 }
