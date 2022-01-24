@@ -33,6 +33,7 @@ Contains:
 - Major Houses Display
 - Downloader-Protocol for unit-test mocking
 - SwiftLint
+- Custom SwiftLint rules
 
 Todo:
 - Nicer Widgets

@@ -1,3 +1,5 @@
+# Houses of Westeros Linting Rules
+
 excluded:
   - ${PWD}/Carthage
   - ${PWD}/Pods
@@ -57,12 +59,12 @@ custom_rules:
     name: "Array/Dictionary initializer"
     regex: '[let,var] .+ = (\[.+\]\(\))'
     capture_group: 1
-    message: "Use explicit type annotation when initializing empty arrays and dictionaries"
+    message: "Use explicit type annotation when initializing empty arrays and dictionaries."
     severity: warning
 
   auto_generated_leftovers:
     regex: 'func [^\n]*\{\n(\s*super\.[^\n]*\n(\s*\/\/[^\n]*\n)*|(\s*\/\/[^\n]*\n)+)\s*\}'
-    message: "Delete auto-generated functions that you don't use"
+    message: "Delete auto-generated functions that you don't use."
 
   already_true:
     regex: "== true"
@@ -87,7 +89,11 @@ custom_rules:
 
   avoid_multiline_comment_markers:
     regex: '*/'
-    message: "Avoid using multi-line comment markers like */ and /* - use // and /// instead"
+    message: "Avoid using multi-line comment markers like */ and /* - use // and /// instead."
+
+  avoid_background_color:
+    regex: '.background(Color.'
+    message: "Avoid using .background(Color), use .backgroundColor() instead."
 
 
 attributes:
