@@ -85,6 +85,10 @@ custom_rules:
     regex: 'AnyView'
     message: "Avoid using AnyView - use @ViewBuilder instead."
 
+  avoid_multiline_comment_markers:
+    regex: '*/'
+    message: "Avoid using multi-line comment markers like */ and /* - use // and /// instead"
+
 
 attributes:
   always_on_same_line:
@@ -113,8 +117,8 @@ indentation_width:
 
 line_length:
   ignores_urls: true
-  ignores_function_declarations: true
-  ignores_comments: true
+  ignores_function_declarations: false
+  ignores_comments: false
 
 multiline_arguments:
   first_argument_location: next_line
