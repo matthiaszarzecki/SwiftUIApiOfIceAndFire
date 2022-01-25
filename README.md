@@ -41,7 +41,7 @@ Todo:
 - Timeout on Main Screen
 - Tap tabbar icons to reset views
 - More Unit-Tests
-- More Unit-tests for ViewModels
+- More Unit-Tests for ViewModels
 - Better error-handling in combine-call
 
 Nice to Have:
@@ -55,7 +55,7 @@ Nice to Have:
 - Dark Color Scheme & scheme switching
 - Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
-- Data Caching
+- Data Caching (Realm or CoreData)
 - Welcome Tab with House of the Day View
 
 Created by Matthias Zarzecki, 2021-01
