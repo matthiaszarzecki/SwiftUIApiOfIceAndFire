@@ -15,13 +15,13 @@ struct HouseNameAndTitle: View {
     // Very rarely a house has no region. We
     // add a default here to ensure the view
     // still works.
-    return house.region.exists
+    house.region.exists
       ? house.region
       : "Westeros"
   }
 
   var body: some View {
-    return VStack {
+    VStack {
       let isGreatHouse = house.isGreatHouse
       let adaptedWidth = isGreatHouse ? width - 72 : width
 

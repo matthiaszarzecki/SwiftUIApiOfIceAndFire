@@ -11,7 +11,7 @@ struct GreatHousesLoadingView: View {
   var width: CGFloat
 
   var textElementWidth: CGFloat {
-    return width - 120
+    width - 120
   }
 
   var cell: some View {

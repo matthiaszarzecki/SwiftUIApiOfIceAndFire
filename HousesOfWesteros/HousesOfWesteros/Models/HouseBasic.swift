@@ -44,7 +44,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   var containsLinks: Bool {
     // We are leaving out the "url" field as that URL
     // leads back to this house, and not anywhere else.
-    return foundedByCharacter.isLink
+    foundedByCharacter.isLink
       || currentLord.isLink
       || heir.isLink
       || overlordHouse.isLink
@@ -55,13 +55,13 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   /// The colors mentioned in the Coat
   /// of Arms, as SwiftUI Colors.
   var heraldryColors: [Color] {
-    return ColorParser.getColors(fromString: coatOfArms)
+    ColorParser.getColors(fromString: coatOfArms)
   }
 
   /// The initial letter of the House-name
   /// without "House " (with space) prefixed.
   var initialLetter: String {
-    return name[6]
+    name[6]
   }
 
   /// Boolean indicating whether this house

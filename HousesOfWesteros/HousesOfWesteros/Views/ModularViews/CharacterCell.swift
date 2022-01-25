@@ -11,7 +11,7 @@ struct CharacterCell: View {
   var character: CharacterBasic
 
   var body: some View {
-    return HStack {
+    HStack {
       CharacterIcon(
         initialLetter: character.initialLetter,
         size: 24

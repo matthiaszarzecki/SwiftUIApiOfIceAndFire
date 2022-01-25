@@ -15,7 +15,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   // The identifier for this house. Is
   // also the direct URL to its data.
   var id: String {
-    return url
+    url
   }
 
   let url: String
@@ -40,13 +40,13 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   let hasPointOfViewChaptersInBooks: [String]
 
   var initialLetter: String {
-    return displayName.first
+    displayName.first
   }
 
   /// A boolean indicating whether this
   /// character was portayed by an actor.
   var hasActor: Bool {
-    return portrayedBy.hasNonEmptyEntries
+    portrayedBy.hasNonEmptyEntries
   }
 
   /// Returns the name of the character. If
@@ -72,7 +72,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   var hasInformation: Bool {
     // We are leaving out the "url" field as that URL
     // leads back to this character, and not anywhere else.
-    return culture.exists ||
+    culture.exists ||
       born.exists ||
       died.exists ||
       titles.hasNonEmptyEntries ||
