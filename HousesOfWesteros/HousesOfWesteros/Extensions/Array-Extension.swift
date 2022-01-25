@@ -11,6 +11,6 @@ extension Array {
   /// A Boolean value indicating whether
   /// an array has entries.
   var hasEntries: Bool {
-    return !self.isEmpty
+    !isEmpty
   }
 }

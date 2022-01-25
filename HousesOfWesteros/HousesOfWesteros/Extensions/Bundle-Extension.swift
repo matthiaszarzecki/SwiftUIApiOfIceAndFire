@@ -10,6 +10,6 @@ import Foundation
 extension Bundle {
   /// The version of the app, as defined in the build-settings.
   static var appVersion: String {
-    return self.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
+    main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0"
   }
 }

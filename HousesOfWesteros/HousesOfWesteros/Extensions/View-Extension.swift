@@ -9,6 +9,6 @@ import SwiftUI
 
 extension View {
   func backgroundColor(_ color: Color) -> some View {
-    return self.background(Rectangle().foregroundColor(color))
+    background(Rectangle().foregroundColor(color))
   }
 }

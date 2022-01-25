@@ -11,7 +11,7 @@ extension String {
   /// Returns the first character as String. Returns
   /// an empty string when called on an empty string.
   var first: String {
-    return self[0]
+    self[0]
   }
 
   /// Allows to access characters as strings via
@@ -19,17 +19,15 @@ extension String {
   /// empty string when string is already empty,
   /// or the index is out of bounds.
   subscript (index: Int) -> String {
-    if self.isEmpty || index >= self.count || index < 0 {
-      return ""
-    }
-
-    return String(self[self.index(self.startIndex, offsetBy: index)])
+    isEmpty || index >= count || index < 0
+      ? ""
+      : String(self[self.index(startIndex, offsetBy: index)])
   }
 
   /// A Boolean value indicating whether
   /// a string has characters.
   public var exists: Bool {
-    return !self.isEmpty
+    !isEmpty
   }
 
   /// A Boolean value indicating whether a
@@ -37,13 +35,13 @@ extension String {
   public var isLink: Bool {
     // Doing a quick check here as this one will be called A LOT, and
     // is presumably quicker than URL-casting or using a RegEx.
-    return self.contains("http")
+    contains("http")
   }
 
   /// Returns a new string with the
   /// first letter capitalized.
   func capitalizeFirstLetter() -> String {
-    return prefix(1).capitalized + dropFirst()
+    prefix(1).capitalized + dropFirst()
   }
 
   /// Capitalizes the first letter
