@@ -13,6 +13,6 @@ class MockSingleHouseBasicDownloader: SingleHouseBasicDownloaderProtocol {
     id: Int,
     completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   ) {
-    return completion(.success(MockClasses.houseBasicWithLinksAndWithCoatOfArms))
+    completion(.success(MockClasses.houseBasicWithLinksAndWithCoatOfArms))
   }
 }

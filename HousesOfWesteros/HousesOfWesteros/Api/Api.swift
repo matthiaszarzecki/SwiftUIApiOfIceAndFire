@@ -42,7 +42,7 @@ enum Api {
         receiveRequest: nil
       )
       .tryMap {
-        return try JSONDecoder().decode(
+        try JSONDecoder().decode(
           [HouseBasic].self,
           from: $0.data
         )
