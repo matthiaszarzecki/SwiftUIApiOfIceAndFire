@@ -24,7 +24,9 @@ opt_in_rules:
   - empty_count
   - empty_string
   - enum_case_associated_values_count
+  - explicit_init
   - fatal_error_message
+  - file_name_no_space
   - first_where
   - force_unwrapping
   - implicit_return

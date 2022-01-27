@@ -46,8 +46,8 @@ enum MockClasses {
     heir: characterLink,
     overlordHouse: houseLink,
     foundedByCharacter: characterLink,
-    cadetBranches: Array.init(repeating: houseLink, count: 2),
-    swornMembers: Array.init(repeating: characterLink, count: 4)
+    cadetBranches: Array(repeating: houseLink, count: 2),
+    swornMembers: Array(repeating: characterLink, count: 4)
   )
 
   static let houseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
@@ -65,8 +65,8 @@ enum MockClasses {
     heir: characterLink,
     overlordHouse: houseLink,
     foundedByCharacter: characterLink,
-    cadetBranches: Array.init(repeating: houseLink, count: 2),
-    swornMembers: Array.init(repeating: characterLink, count: 4)
+    cadetBranches: Array(repeating: houseLink, count: 2),
+    swornMembers: Array(repeating: characterLink, count: 4)
   )
 
   static let houseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
@@ -224,7 +224,7 @@ enum MockClasses {
     hasPointOfViewChaptersInBooks: []
   )
 
-  static let characters = Array.init(repeating: character, count: 3)
+  static let characters = Array(repeating: character, count: 3)
 
   static let houseUpdatedWithLinks = HouseUpdated(
     fromHouse: houseBasicWithLinksAndWithCoatOfArms,
