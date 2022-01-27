@@ -60,7 +60,6 @@ opt_in_rules:
   - yoda_condition
   - weak_delegate
 
-
 custom_rules:
   array_constructor:
     name: "Array/Dictionary initializer"
