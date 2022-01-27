@@ -41,8 +41,12 @@ opt_in_rules:
   - overridden_super_call
   - pattern_matching_keywords
   - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
+  - private_action
   - redundant_nil_coalescing
   - redundant_type_annotation
+  - sorted_first_last
+  - switch_case_on_newline
   - strict_fileprivate
   - toggle_bool
   - trailing_closure
