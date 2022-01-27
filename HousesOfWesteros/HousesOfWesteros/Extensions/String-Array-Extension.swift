@@ -8,12 +8,6 @@
 import Foundation
 
 extension Array where Element == String {
-  /// Returns true if the array contains at least
-  /// one entry that is also in the passed array.
-  func hasAtLeastOneItem(fromArray array: [String]) -> Bool {
-    contains(where: array.contains)
-  }
-
   /// Returns true if the array has usable entries.
   /// Checks that there are >0 entries and the first
   /// one is not an empty string.
@@ -37,5 +31,11 @@ extension Array where Element == String {
       }
     }
     return false
+  }
+
+  /// Returns true if the array contains at least
+  /// one entry that is also in the passed array.
+  func hasAtLeastOneItem(fromArray array: [String]) -> Bool {
+    contains(where: array.contains)
   }
 }

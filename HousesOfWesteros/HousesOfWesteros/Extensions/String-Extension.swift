@@ -14,16 +14,6 @@ extension String {
     self[0]
   }
 
-  /// Allows to access characters as strings via
-  /// array-index, e.g. "hello[2]". Returns an
-  /// empty string when string is already empty,
-  /// or the index is out of bounds.
-  subscript (index: Int) -> String {
-    isEmpty || index >= count || index < 0
-      ? ""
-      : String(self[self.index(startIndex, offsetBy: index)])
-  }
-
   /// A Boolean value indicating whether
   /// a string has characters.
   public var exists: Bool {
@@ -48,5 +38,15 @@ extension String {
   /// of a string in place.
   mutating func capitalizeFirstLetterInPlace() {
     self = self.capitalizeFirstLetter()
+  }
+
+  /// Allows to access characters as strings via
+  /// array-index, e.g. "hello[2]". Returns an
+  /// empty string when string is already empty,
+  /// or the index is out of bounds.
+  subscript (index: Int) -> String {
+    isEmpty || index >= count || index < 0
+      ? ""
+      : String(self[self.index(startIndex, offsetBy: index)])
   }
 }
