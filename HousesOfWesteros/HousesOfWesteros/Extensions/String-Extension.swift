@@ -23,9 +23,7 @@ extension String {
   /// A Boolean value indicating whether a
   /// string is actually an URL.
   public var isLink: Bool {
-    // Doing a quick check here as this one will be called A LOT, and
-    // is presumably quicker than URL-casting or using a RegEx.
-    contains("http")
+    URL(string: self) != nil
   }
 
   /// Returns a new string with the
