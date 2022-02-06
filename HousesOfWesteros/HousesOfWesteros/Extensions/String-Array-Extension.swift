@@ -25,10 +25,8 @@ extension Array where Element == String {
   /// contains hyperlinks. Checks that there are
   /// >0 entries and if the first entry is a link.
   var hasLinkEntries: Bool {
-    if hasEntries {
-      if let first = first {
-        return first.isLink
-      }
+    if hasEntries, let first = first {
+      return first.isLink
     }
     return false
   }
