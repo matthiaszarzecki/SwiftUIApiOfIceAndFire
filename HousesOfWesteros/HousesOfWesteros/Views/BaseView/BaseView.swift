@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseView: View {
-  @State private var selection = 0
+  @State private var selection: Int = .zero
   @State private var resetNavigationIDForGreatHousesView = UUID()
   @State private var resetNavigationIDForAllHousesView = UUID()
 
