@@ -111,10 +111,13 @@ custom_rules:
     regex: '.background(Color.'
     message: "Avoid using .background(Color), use .backgroundColor() instead."
 
-  use_int_zero_property:
+  use_int_zero_property_in_initialization:
     regex: ' = 0'
-    message: "Avoid using initialing an int to '0', use .zero instead."
+    message: "Avoid using initializing an int to '0', use .zero instead."
 
+  use_int_zero_property_in_single_check:
+    regex: ' == 0[^( {)]'
+    message: "Avoid checking for '0' in single check, use '== .zero' instead."
 
 attributes:
   always_on_same_line:

@@ -49,7 +49,7 @@ struct CircularColorDisplay: View {
   /// to align with the other circle elements. Returns
   /// 0.0 when it is the first element.
   private func getRotationAngleForElement(withIndex index: Int) -> Double {
-    index == 0
+    index == .zero
       ? 0.0
       : Double(index) * degreesForEachElement
   }
