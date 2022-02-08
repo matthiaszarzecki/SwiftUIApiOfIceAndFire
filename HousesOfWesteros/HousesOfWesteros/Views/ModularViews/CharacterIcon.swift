@@ -24,7 +24,7 @@ struct CharacterIcon: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterIcon_Previews: PreviewProvider {
   static var previews: some View {
     CharacterIcon(

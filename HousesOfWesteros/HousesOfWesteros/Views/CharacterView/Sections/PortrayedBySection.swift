@@ -27,7 +27,7 @@ struct PortrayedBySection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct PortrayedBySection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

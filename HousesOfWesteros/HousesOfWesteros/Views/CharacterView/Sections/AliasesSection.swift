@@ -25,7 +25,7 @@ struct AliasesSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct AliasesSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

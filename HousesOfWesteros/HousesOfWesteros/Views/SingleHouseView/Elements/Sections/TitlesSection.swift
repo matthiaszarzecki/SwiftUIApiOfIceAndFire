@@ -29,7 +29,7 @@ struct TitlesSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Titles_Previews: PreviewProvider {
   static var previews: some View {
     Form {

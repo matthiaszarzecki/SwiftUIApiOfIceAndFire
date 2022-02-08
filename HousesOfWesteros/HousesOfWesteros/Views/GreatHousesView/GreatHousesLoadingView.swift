@@ -53,7 +53,7 @@ struct GreatHousesLoadingView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct GreatHousesLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesLoadingView(

@@ -29,7 +29,7 @@ struct FounderSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Founder_Previews: PreviewProvider {
   static var previews: some View {
     Form {

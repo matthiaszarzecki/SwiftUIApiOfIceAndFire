@@ -28,7 +28,7 @@ struct OverlordHouseSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
     Form {

@@ -19,7 +19,7 @@ struct FoundedSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Founded_Previews: PreviewProvider {
   static var previews: some View {
     Form {

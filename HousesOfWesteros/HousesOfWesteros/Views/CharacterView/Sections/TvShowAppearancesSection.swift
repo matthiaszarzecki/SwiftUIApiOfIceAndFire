@@ -23,7 +23,7 @@ struct TvShowAppearancesSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct TvShowAppearancesSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

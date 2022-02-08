@@ -28,7 +28,7 @@ struct SearchSpinnerView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct SearchSpinnerView_Previews: PreviewProvider {
   static var previews: some View {
     SearchSpinnerView()

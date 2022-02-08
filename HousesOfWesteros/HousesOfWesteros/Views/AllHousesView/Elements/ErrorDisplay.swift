@@ -29,7 +29,7 @@ struct ErrorDisplay: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct ErrorDisplay_Previews: PreviewProvider {
   static var previews: some View {
     ErrorDisplay {}

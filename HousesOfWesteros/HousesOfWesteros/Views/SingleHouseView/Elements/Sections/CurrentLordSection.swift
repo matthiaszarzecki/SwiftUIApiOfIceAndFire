@@ -29,7 +29,7 @@ struct CurrentLordSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CurrentLord_Previews: PreviewProvider {
   static var previews: some View {
     Form {

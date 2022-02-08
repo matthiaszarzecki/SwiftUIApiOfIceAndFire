@@ -29,7 +29,7 @@ struct CurrentHeirSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Heir_Previews: PreviewProvider {
   static var previews: some View {
     Form {

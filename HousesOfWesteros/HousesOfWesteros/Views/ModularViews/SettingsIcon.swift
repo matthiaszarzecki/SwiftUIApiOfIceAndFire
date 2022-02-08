@@ -20,7 +20,7 @@ struct SettingsIcon: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct SettingsIcon_Previews: PreviewProvider {
   static var previews: some View {
     SettingsIcon(systemIcon: "square.and.arrow.up")

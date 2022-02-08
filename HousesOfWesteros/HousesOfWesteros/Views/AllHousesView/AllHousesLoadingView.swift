@@ -27,7 +27,7 @@ struct AllHousesLoadingView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct AllHousesLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     AllHousesLoadingView()

@@ -31,7 +31,7 @@ struct HeraldryColorsSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

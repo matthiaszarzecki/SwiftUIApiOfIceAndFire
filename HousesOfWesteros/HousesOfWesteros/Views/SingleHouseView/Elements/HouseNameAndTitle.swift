@@ -57,7 +57,7 @@ struct HouseNameAndTitle: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
     HouseNameAndTitle(

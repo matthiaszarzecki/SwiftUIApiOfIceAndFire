@@ -68,7 +68,7 @@ struct GreatHousesDisplay: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(

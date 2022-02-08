@@ -157,7 +157,7 @@ struct AboutView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct AboutView_Previews: PreviewProvider {
   static var previews: some View {
     AboutView()

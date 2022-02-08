@@ -25,7 +25,7 @@ struct CharacterTitlesSections: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterTitlesSections_Previews: PreviewProvider {
   static var previews: some View {
     Form {

@@ -19,7 +19,7 @@ struct BornSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct BornSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

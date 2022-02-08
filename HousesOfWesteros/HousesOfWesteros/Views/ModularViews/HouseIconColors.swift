@@ -48,7 +48,7 @@ struct HouseIconColors: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct HouseIcon_Previews: PreviewProvider {
   static var previews: some View {
     let houses = [

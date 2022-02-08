@@ -19,7 +19,7 @@ struct CharacterDeathSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterDeathSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

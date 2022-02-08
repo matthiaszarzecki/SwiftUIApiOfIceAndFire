@@ -29,7 +29,7 @@ struct SingleHouseLoadingView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct SingleHouseLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     SingleHouseLoadingView()

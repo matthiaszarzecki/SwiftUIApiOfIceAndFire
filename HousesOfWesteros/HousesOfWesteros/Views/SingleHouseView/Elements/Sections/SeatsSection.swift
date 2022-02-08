@@ -29,7 +29,7 @@ struct SeatsSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct Seats_Previews: PreviewProvider {
   static var previews: some View {
     Form {

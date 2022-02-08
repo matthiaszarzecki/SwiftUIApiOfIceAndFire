@@ -16,7 +16,7 @@ struct CharacterTitle: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterTitle_Previews: PreviewProvider {
   static var previews: some View {
     CharacterTitle(character: MockClasses.character)

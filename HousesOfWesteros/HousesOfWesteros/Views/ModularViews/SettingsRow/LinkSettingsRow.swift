@@ -29,7 +29,7 @@ struct LinkSettingsRow: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct LinkSettingsRow_Previews: PreviewProvider {
   static var previews: some View {
     LinkSettingsRow(

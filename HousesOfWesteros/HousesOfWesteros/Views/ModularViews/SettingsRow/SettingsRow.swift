@@ -20,7 +20,7 @@ struct SettingsRow: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct SettingsRow_Previews: PreviewProvider {
   static var previews: some View {
     SettingsRow(

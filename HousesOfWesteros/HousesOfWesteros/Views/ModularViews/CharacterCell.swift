@@ -26,7 +26,7 @@ struct CharacterCell: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterCell_Previews: PreviewProvider {
   static var previews: some View {
     CharacterCell(character: MockClasses.character)

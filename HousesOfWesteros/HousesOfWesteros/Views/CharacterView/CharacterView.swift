@@ -39,7 +39,7 @@ struct CharacterView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CharacterView_Previews: PreviewProvider {
   static var previews: some View {
     CharacterView(character: MockClasses.character)

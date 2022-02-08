@@ -31,7 +31,7 @@ struct ErrorSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct ErrorSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {

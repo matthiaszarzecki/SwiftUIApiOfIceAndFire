@@ -19,7 +19,7 @@ struct CoatOfArmsSection: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
     Form {

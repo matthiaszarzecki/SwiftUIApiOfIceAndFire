@@ -57,7 +57,7 @@ struct BaseView: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct BaseView_Previews: PreviewProvider {
   static var previews: some View {
     BaseView()

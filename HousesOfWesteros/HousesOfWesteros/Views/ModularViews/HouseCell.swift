@@ -77,7 +77,7 @@ struct HouseCellBasic: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct HouseCell_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellUpdated(

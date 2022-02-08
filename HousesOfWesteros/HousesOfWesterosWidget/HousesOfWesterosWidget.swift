@@ -124,7 +124,7 @@ struct HousesOfWesterosWidget: Widget {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct HousesOfWesterosWidget_Previews: PreviewProvider {
   static var previews: some View {
     HousesOfWesterosWidgetEntryView(

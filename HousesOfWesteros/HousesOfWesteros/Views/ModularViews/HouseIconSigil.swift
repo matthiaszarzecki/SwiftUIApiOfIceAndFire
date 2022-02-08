@@ -19,7 +19,7 @@ struct HouseIconSigil: View {
   }
 }
 
-#if !DEBUG
+#if !TESTING
 struct HouseIconSigil_Previews: PreviewProvider {
   static var previews: some View {
     HouseIconSigil(
