@@ -42,8 +42,7 @@ class ColorParserTests: XCTestCase {
     // WHEN we parse the string with the color-parser
     let result = ColorParser.getColors(fromString: text)
 
-    // THEN we receive an array with a single
-    // entry corresponding to the color.
+    // THEN we receive an array with no colors.
     XCTAssertEqual([Color](), result)
   }
 
@@ -54,8 +53,8 @@ class ColorParserTests: XCTestCase {
     // WHEN we parse the string with the color-parser
     let result = ColorParser.getColors(fromString: text)
 
-    // THEN we receive an array with a single
-    // entry corresponding to the color.
+    // THEN we receive an array with 3
+    // corresponding colors.
     XCTAssertEqual([.yellow, .red, .green], result)
   }
 
