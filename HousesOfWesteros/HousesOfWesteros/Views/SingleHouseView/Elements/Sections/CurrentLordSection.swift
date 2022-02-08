@@ -29,6 +29,7 @@ struct CurrentLordSection: View {
   }
 }
 
+#if !DEBUG
 struct CurrentLord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -36,3 +37,4 @@ struct CurrentLord_Previews: PreviewProvider {
     }
   }
 }
+#endif

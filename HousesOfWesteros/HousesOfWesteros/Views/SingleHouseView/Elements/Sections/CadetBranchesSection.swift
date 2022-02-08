@@ -35,6 +35,7 @@ struct CadetBranchesSection: View {
   }
 }
 
+#if !DEBUG
 struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -44,3 +45,4 @@ struct CadetBranches_Previews: PreviewProvider {
     }
   }
 }
+#endif

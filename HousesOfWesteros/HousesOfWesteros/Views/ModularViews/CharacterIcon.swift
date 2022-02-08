@@ -24,6 +24,7 @@ struct CharacterIcon: View {
   }
 }
 
+#if !DEBUG
 struct CharacterIcon_Previews: PreviewProvider {
   static var previews: some View {
     CharacterIcon(
@@ -34,3 +35,4 @@ struct CharacterIcon_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

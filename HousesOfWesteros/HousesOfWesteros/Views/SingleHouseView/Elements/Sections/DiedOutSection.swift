@@ -19,6 +19,7 @@ struct DiedOutSection: View {
   }
 }
 
+#if !DEBUG
 struct DiedOut_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -26,3 +27,4 @@ struct DiedOut_Previews: PreviewProvider {
     }
   }
 }
+#endif

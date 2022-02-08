@@ -74,6 +74,7 @@ struct AllHousesDisplay: View {
   }
 }
 
+#if !DEBUG
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
@@ -107,3 +108,4 @@ struct AllHousesDisplay_Previews: PreviewProvider {
     }
   }
 }
+#endif

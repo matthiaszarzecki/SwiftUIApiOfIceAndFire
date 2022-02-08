@@ -34,6 +34,7 @@ struct SwornMembersSection: View {
   }
 }
 
+#if !DEBUG
 struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -43,3 +44,4 @@ struct SwornMembers_Previews: PreviewProvider {
     }
   }
 }
+#endif

@@ -19,6 +19,7 @@ struct CultureSection: View {
   }
 }
 
+#if !DEBUG
 struct CultureSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -26,3 +27,4 @@ struct CultureSection_Previews: PreviewProvider {
     }
   }
 }
+#endif

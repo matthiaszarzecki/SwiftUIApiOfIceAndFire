@@ -75,6 +75,7 @@ struct SingleHouseDisplay: View {
   }
 }
 
+#if !DEBUG
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
@@ -99,3 +100,4 @@ struct SingleHouseDisplay_Previews: PreviewProvider {
     }
   }
 }
+#endif

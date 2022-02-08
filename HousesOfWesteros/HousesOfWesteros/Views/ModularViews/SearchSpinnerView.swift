@@ -28,9 +28,11 @@ struct SearchSpinnerView: View {
   }
 }
 
+#if !DEBUG
 struct SearchSpinnerView_Previews: PreviewProvider {
   static var previews: some View {
     SearchSpinnerView()
       .previewLayout(.sizeThatFits)
   }
 }
+#endif

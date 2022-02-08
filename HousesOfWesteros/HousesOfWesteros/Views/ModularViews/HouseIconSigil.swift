@@ -19,6 +19,7 @@ struct HouseIconSigil: View {
   }
 }
 
+#if !DEBUG
 struct HouseIconSigil_Previews: PreviewProvider {
   static var previews: some View {
     HouseIconSigil(
@@ -29,3 +30,4 @@ struct HouseIconSigil_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

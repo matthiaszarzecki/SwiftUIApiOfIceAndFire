@@ -19,6 +19,7 @@ struct HouseMottoSection: View {
   }
 }
 
+#if !DEBUG
 struct HouseMotto_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -26,3 +27,4 @@ struct HouseMotto_Previews: PreviewProvider {
     }
   }
 }
+#endif

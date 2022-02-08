@@ -29,7 +29,7 @@ struct LinkSettingsRow: View {
   }
 }
 
-
+#if !DEBUG
 struct LinkSettingsRow_Previews: PreviewProvider {
   static var previews: some View {
     LinkSettingsRow(
@@ -49,3 +49,4 @@ struct LinkSettingsRow_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

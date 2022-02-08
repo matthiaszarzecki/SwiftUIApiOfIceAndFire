@@ -27,6 +27,7 @@ struct PortrayedBySection: View {
   }
 }
 
+#if !DEBUG
 struct PortrayedBySection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -34,3 +35,4 @@ struct PortrayedBySection_Previews: PreviewProvider {
     }
   }
 }
+#endif

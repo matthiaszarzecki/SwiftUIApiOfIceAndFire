@@ -68,6 +68,7 @@ struct GreatHousesDisplay: View {
   }
 }
 
+#if !DEBUG
 struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(
@@ -79,3 +80,4 @@ struct GreatHousesView_Previews: PreviewProvider {
     )
   }
 }
+#endif

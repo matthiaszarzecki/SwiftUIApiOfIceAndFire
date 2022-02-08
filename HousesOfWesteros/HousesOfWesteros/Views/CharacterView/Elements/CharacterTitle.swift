@@ -16,6 +16,7 @@ struct CharacterTitle: View {
   }
 }
 
+#if !DEBUG
 struct CharacterTitle_Previews: PreviewProvider {
   static var previews: some View {
     CharacterTitle(character: MockClasses.character)
@@ -23,3 +24,4 @@ struct CharacterTitle_Previews: PreviewProvider {
       .previewLayout(.sizeThatFits)
   }
 }
+#endif

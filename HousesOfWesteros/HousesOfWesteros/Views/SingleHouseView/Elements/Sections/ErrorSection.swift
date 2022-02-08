@@ -31,6 +31,7 @@ struct ErrorSection: View {
   }
 }
 
+#if !DEBUG
 struct ErrorSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -40,3 +41,4 @@ struct ErrorSection_Previews: PreviewProvider {
     }
   }
 }
+#endif

@@ -124,6 +124,7 @@ struct HousesOfWesterosWidget: Widget {
   }
 }
 
+#if !DEBUG
 struct HousesOfWesterosWidget_Previews: PreviewProvider {
   static var previews: some View {
     HousesOfWesterosWidgetEntryView(
@@ -154,3 +155,4 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     .previewContext(WidgetPreviewContext(family: .systemLarge))
   }
 }
+#endif

@@ -77,6 +77,7 @@ struct HouseCellBasic: View {
   }
 }
 
+#if !DEBUG
 struct HouseCell_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellUpdated(
@@ -94,3 +95,4 @@ struct HouseCell_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

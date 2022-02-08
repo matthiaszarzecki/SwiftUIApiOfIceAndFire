@@ -31,6 +31,7 @@ struct HeraldryColorsSection: View {
   }
 }
 
+#if !DEBUG
 struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -41,3 +42,4 @@ struct HeraldryColorsSection_Previews: PreviewProvider {
     }
   }
 }
+#endif

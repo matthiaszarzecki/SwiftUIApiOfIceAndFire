@@ -20,6 +20,7 @@ struct SettingsRow: View {
   }
 }
 
+#if !DEBUG
 struct SettingsRow_Previews: PreviewProvider {
   static var previews: some View {
     SettingsRow(
@@ -30,3 +31,4 @@ struct SettingsRow_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

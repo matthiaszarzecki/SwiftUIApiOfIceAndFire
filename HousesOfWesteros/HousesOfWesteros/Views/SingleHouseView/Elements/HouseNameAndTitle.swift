@@ -57,6 +57,7 @@ struct HouseNameAndTitle: View {
   }
 }
 
+#if !DEBUG
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
     HouseNameAndTitle(
@@ -68,3 +69,4 @@ struct Title_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
   }
 }
+#endif

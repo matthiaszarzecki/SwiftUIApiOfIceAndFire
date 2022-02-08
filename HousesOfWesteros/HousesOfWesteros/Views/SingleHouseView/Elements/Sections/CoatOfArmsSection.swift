@@ -19,6 +19,7 @@ struct CoatOfArmsSection: View {
   }
 }
 
+#if !DEBUG
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -26,3 +27,4 @@ struct CoatOfArms_Previews: PreviewProvider {
     }
   }
 }
+#endif

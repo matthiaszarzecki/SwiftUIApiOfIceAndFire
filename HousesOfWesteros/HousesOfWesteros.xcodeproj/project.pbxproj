@@ -497,7 +497,6 @@
 				CC0E1E35262597D800C285D8 /* Helpers */,
 				CC0E1E3B262597D800C285D8 /* Models */,
 				CC0E1E31262597D800C285D8 /* PreviewContent */,
-				CC0E1DFB262597D800C285D8 /* AllHousesLoadingView.swift */,
 				CC0E1DF1262597D700C285D8 /* SupportingFiles */,
 				CC0E1DF7262597D800C285D8 /* Views */,
 			);
@@ -582,6 +581,7 @@
 		CC0E1DF8262597D800C285D8 /* AllHousesView */ = {
 			isa = PBXGroup;
 			children = (
+				CC0E1DFB262597D800C285D8 /* AllHousesLoadingView.swift */,
 				CC0E1DFC262597D800C285D8 /* AllHousesView.swift */,
 				CC0E1DFD262597D800C285D8 /* Elements */,
 				CC0E1DF9262597D800C285D8 /* ViewModel */,

@@ -53,6 +53,7 @@ struct GreatHousesLoadingView: View {
   }
 }
 
+#if !DEBUG
 struct GreatHousesLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesLoadingView(
@@ -60,3 +61,4 @@ struct GreatHousesLoadingView_Previews: PreviewProvider {
     )
   }
 }
+#endif

@@ -39,6 +39,7 @@ struct SectionHeaderStyle: ViewModifier {
   }
 }
 
+#if !DEBUG
 struct SectionHeader_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -53,3 +54,4 @@ struct SectionHeader_Previews: PreviewProvider {
     }
   }
 }
+#endif

@@ -29,8 +29,10 @@ struct SingleHouseLoadingView: View {
   }
 }
 
+#if !DEBUG
 struct SingleHouseLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     SingleHouseLoadingView()
   }
 }
+#endif

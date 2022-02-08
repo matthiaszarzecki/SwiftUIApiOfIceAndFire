@@ -55,6 +55,7 @@ struct CircularColorDisplay: View {
   }
 }
 
+#if !DEBUG
 struct CircularColorDisplay_Previews: PreviewProvider {
   static var previews: some View {
     CircularColorDisplay(colors: [.red, .green, .blue], size: 100)
@@ -62,3 +63,4 @@ struct CircularColorDisplay_Previews: PreviewProvider {
       .previewLayout(.sizeThatFits)
   }
 }
+#endif

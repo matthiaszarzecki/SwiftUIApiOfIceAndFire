@@ -29,6 +29,7 @@ struct CurrentHeirSection: View {
   }
 }
 
+#if !DEBUG
 struct Heir_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -36,3 +37,4 @@ struct Heir_Previews: PreviewProvider {
     }
   }
 }
+#endif

@@ -26,6 +26,7 @@ struct CharacterCell: View {
   }
 }
 
+#if !DEBUG
 struct CharacterCell_Previews: PreviewProvider {
   static var previews: some View {
     CharacterCell(character: MockClasses.character)
@@ -33,3 +34,4 @@ struct CharacterCell_Previews: PreviewProvider {
       .previewLayout(.sizeThatFits)
   }
 }
+#endif

@@ -25,6 +25,7 @@ struct AncestralWeaponsSection: View {
   }
 }
 
+#if !DEBUG
 struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -32,3 +33,4 @@ struct AncestralWeapons_Previews: PreviewProvider {
     }
   }
 }
+#endif

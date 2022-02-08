@@ -19,6 +19,7 @@ struct FoundedSection: View {
   }
 }
 
+#if !DEBUG
 struct Founded_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -26,3 +27,4 @@ struct Founded_Previews: PreviewProvider {
     }
   }
 }
+#endif

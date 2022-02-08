@@ -28,6 +28,7 @@ struct OverlordHouseSection: View {
   }
 }
 
+#if !DEBUG
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
@@ -35,3 +36,4 @@ struct Overlord_Previews: PreviewProvider {
     }
   }
 }
+#endif

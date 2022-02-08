@@ -57,8 +57,10 @@ struct BaseView: View {
   }
 }
 
+#if !DEBUG
 struct BaseView_Previews: PreviewProvider {
   static var previews: some View {
     BaseView()
   }
 }
+#endif
