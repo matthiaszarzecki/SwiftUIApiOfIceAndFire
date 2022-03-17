@@ -45,7 +45,7 @@ struct Provider: IntentTimelineProvider {
     let numberOfHouses = 444
     let id = Int.random(in: 0..<numberOfHouses)
 
-    Api.getSingleHouse(id: id) { result in
+    Api.shared.getSingleHouse(id: id) { result in
       switch result {
       case .success(let receivedObject):
         let house: HouseBasic = receivedObject

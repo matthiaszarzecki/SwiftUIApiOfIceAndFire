@@ -10,13 +10,15 @@ import Foundation
 
 /// Contains functions to request and
 /// receive data from the ApiOfIceAndFire.
-enum Api {
+class Api {
+  static let shared = Api()
+
   /// The number of houses that are
   /// requested in a single call.
-  static let pageSize = 30
+  let pageSize = 30
 
   /// Gets 30 ASOIAF Houses.
-  static func getHouses(
+  func getHouses(
     page: Int
   ) -> AnyPublisher<[HouseBasic], Error>? {
     guard
@@ -51,7 +53,7 @@ enum Api {
       .eraseToAnyPublisher()
   }
 
-  static func getSingleHouse(
+  func getSingleHouse(
     id: Int,
     completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   ) {
@@ -65,7 +67,7 @@ enum Api {
 
   /// Does a GET-call to the specified URL
   /// and returns the type in a completion.
-  static func fetch<T: Codable>(
+  func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: String,
     completion: @escaping (Result<T, NetworkError>) -> Void

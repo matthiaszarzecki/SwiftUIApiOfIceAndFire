@@ -10,6 +10,6 @@ class SingleHouseBasicDownloader: SingleHouseBasicDownloaderProtocol {
     id: Int,
     completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
   ) {
-    Api.getSingleHouse(id: id, completion: completion)
+    Api.shared.getSingleHouse(id: id, completion: completion)
   }
 }

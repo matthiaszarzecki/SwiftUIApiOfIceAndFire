@@ -53,7 +53,7 @@ class SingleHouseViewModel: ObservableObject {
     let linkField = getSingleLinkField(forType: type)
 
     if linkField.isLink {
-      Api.fetch(T.self, url: linkField) { result in
+      Api.shared.fetch(T.self, url: linkField) { result in
         switch result {
         case .success(let receivedObject):
           // Sets the value of the HouseUpdated
@@ -130,7 +130,7 @@ class SingleHouseViewModel: ObservableObject {
       createArray(ofType: type)
 
       for index in 0..<arrayField.count where arrayField[index].isLink {
-        Api.fetch(T.self, url: arrayField[index]) { result in
+        Api.shared.fetch(T.self, url: arrayField[index]) { result in
           switch result {
           case .success(let receivedObject):
             // Sets the value of the HouseUpdated

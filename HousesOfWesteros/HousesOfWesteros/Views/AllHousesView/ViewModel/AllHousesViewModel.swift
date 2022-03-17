@@ -17,7 +17,7 @@ class AllHousesViewModel: ObservableObject {
       return
     }
 
-    if let publisher = Api.getHouses(page: state.page) {
+    if let publisher = Api.shared.getHouses(page: state.page) {
       publisher
         .sink(
           receiveCompletion: onReceive,
@@ -54,7 +54,7 @@ class AllHousesViewModel: ObservableObject {
   private func onReceive(_ batch: [HouseBasic]) {
     state.houses += batch
     state.page += 1
-    state.canLoadNextPage = batch.count == Api.pageSize
+    state.canLoadNextPage = batch.count == Api.shared.pageSize
   }
 
   struct SearchResultsViewState {
