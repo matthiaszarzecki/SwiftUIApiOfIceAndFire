@@ -7,16 +7,42 @@
 
 import SwiftUI
 
+struct HouseCellLargeViewModel {
+  var house: HouseBasic
+
+  init(_ house: HouseBasic) {
+    self.house = house
+  }
+
+  var backgroundColor: Color {
+    if let unwrappedId = house.id {
+      return .greatHousesMajorColor(id: unwrappedId)
+    }
+    return .white
+  }
+
+  var subtitle: String {
+    var text = "Members: \(house.swornMembers.count)"
+
+    if house.cadetBranches.hasEntries {
+      text += " - Branches: \(house.cadetBranches.count)"
+    }
+
+    return text
+  }
+}
+
 struct HouseCellLarge: View {
+  var viewModel: HouseCellLargeViewModel
   var house: HouseBasic
   var width: CGFloat
 
-  var textElementWidth: CGFloat {
+  private var textElementWidth: CGFloat {
     width - 120
   }
 
   @ViewBuilder
-  var icon: some View {
+  private var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
       HouseIconSigil(
@@ -32,24 +58,11 @@ struct HouseCellLarge: View {
     }
   }
 
-  var subtitleText: some View {
-    var text = "Members: \(house.swornMembers.count)"
-
-    if house.cadetBranches.hasEntries {
-      text += " - Branches: \(house.cadetBranches.count)"
-    }
-
-    return Text(text)
+  private var subtitleText: some View {
+    Text(viewModel.subtitle)
       .shadow(color: .white, radius: 6)
       .frame(width: textElementWidth, height: 24, alignment: .leading)
       .multilineTextAlignment(.leading)
-  }
-
-  var backgroundColor: Color {
-    if let unwrappedId = house.id {
-      return .greatHousesMajorColor(id: unwrappedId)
-    }
-    return .white
   }
 
   var body: some View {
@@ -71,7 +84,7 @@ struct HouseCellLarge: View {
       }
     }
     .frame(width: width, height: 100, alignment: .center)
-    .backgroundColor(backgroundColor)
+    .backgroundColor(viewModel.backgroundColor)
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }
@@ -81,6 +94,9 @@ struct HouseCellLarge: View {
 struct HouseCellLarge_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellLarge(
+      viewModel: HouseCellLargeViewModel(
+        .mockHouseBasicWithLinksAndWithCoatOfArms
+      ),
       house: .mockHouseBasicWithLinksAndWithCoatOfArms,
       width: PreviewConstants.width
     )
