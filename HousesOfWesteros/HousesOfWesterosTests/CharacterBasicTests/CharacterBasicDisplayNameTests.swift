@@ -11,7 +11,7 @@ import XCTest
 class CharacterBasicDisplayNameTests: XCTestCase {
   func testDisplayName() {
     // GIVEN a character that has a name
-    let character: CharacterBasic = .character
+    let character: CharacterBasic = .mockCharacter
 
     // WHEN we call the "displayName" variable
     let result = character.displayName
@@ -22,7 +22,7 @@ class CharacterBasicDisplayNameTests: XCTestCase {
 
   func testDisplayNameWithNoName() {
     // GIVEN a character that has a no name, but an alias
-    let character: CharacterBasic = .characterWithNoNameButAlias
+    let character: CharacterBasic = .mockCharacterWithNoNameButAlias
 
     // WHEN we call the "displayName" variable
     let result = character.displayName
@@ -33,7 +33,7 @@ class CharacterBasicDisplayNameTests: XCTestCase {
 
   func testDisplayNameWithNoNameAndNoAlias() {
     // GIVEN a character that has a no name and no aliases
-    let character: CharacterBasic = .characterWithNoData
+    let character: CharacterBasic = .mockCharacterWithNoData
 
     // WHEN we call the "displayName" variable
     let result = character.displayName

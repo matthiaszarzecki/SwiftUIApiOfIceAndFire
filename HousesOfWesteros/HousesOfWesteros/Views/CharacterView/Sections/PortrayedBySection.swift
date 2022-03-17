@@ -31,7 +31,7 @@ struct PortrayedBySection: View {
 struct PortrayedBySection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      PortrayedBySection(character: .character)
+      PortrayedBySection(character: .mockCharacter)
     }
   }
 }

@@ -29,7 +29,7 @@ struct AliasesSection: View {
 struct AliasesSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      AliasesSection(character: .character)
+      AliasesSection(character: .mockCharacter)
     }
   }
 }

@@ -19,7 +19,7 @@ struct CharacterTitle: View {
 #if !TESTING
 struct CharacterTitle_Previews: PreviewProvider {
   static var previews: some View {
-    CharacterTitle(character: .character)
+    CharacterTitle(character: .mockCharacter)
       .padding()
       .previewLayout(.sizeThatFits)
   }

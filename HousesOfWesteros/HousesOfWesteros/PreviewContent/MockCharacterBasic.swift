@@ -8,7 +8,7 @@
 import Foundation
 
 extension CharacterBasic {
-  static let character = CharacterBasic(
+  static let mockCharacter = CharacterBasic(
     url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "Delonne Allyrion",
     culture: "Northmen",
@@ -44,7 +44,7 @@ extension CharacterBasic {
     ]
   )
 
-  static let characterWithNoData = CharacterBasic(
+  static let mockCharacterWithNoData = CharacterBasic(
     url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "",
     culture: "",
@@ -62,7 +62,7 @@ extension CharacterBasic {
     hasPointOfViewChaptersInBooks: []
   )
 
-  static let characterWithNoNameButAlias = CharacterBasic(
+  static let mockCharacterWithNoNameButAlias = CharacterBasic(
     url: "https://www.anapioficeandfire.com/api/characters/290",
     name: "",
     culture: "",
@@ -82,5 +82,5 @@ extension CharacterBasic {
 }
 
 extension Array where Element == CharacterBasic {
-  static let characters: [CharacterBasic] = Array(repeating: .character, count: 3)
+  static let mockCharacters: [CharacterBasic] = Array(repeating: .mockCharacter, count: 3)
 }
