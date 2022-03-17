@@ -73,6 +73,8 @@
 		6ED491CB27E3CB1400ECC763 /* MockHouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */; };
 		6ED491CD27E3CEF000ECC763 /* MockHouseUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */; };
 		6ED491CE27E3CF0E00ECC763 /* MockHouseUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */; };
+		6ED491D027E3D70800ECC763 /* MockCharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */; };
+		6ED491D127E3D71400ECC763 /* MockCharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */; };
 		6EE5C39F265D872000188DE2 /* StringIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5C39E265D872000188DE2 /* StringIdTests.swift */; };
 		6EFAD30F2798134200CDC895 /* LinkSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFAD30E2798134200CDC895 /* LinkSettingsRow.swift */; };
 		CC0E1DD7262597B200C285D8 /* HousesOfWesterosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DD6262597B200C285D8 /* HousesOfWesterosUITests.swift */; };
@@ -227,6 +229,7 @@
 		6EBD6EB5272072CA000B9C1D /* String-Extension-Main-App-Target-Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension-Main-App-Target-Only.swift"; sourceTree = "<group>"; };
 		6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseBasic.swift; sourceTree = "<group>"; };
 		6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseUpdated.swift; sourceTree = "<group>"; };
+		6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterBasic.swift; sourceTree = "<group>"; };
 		6EE5C39E265D872000188DE2 /* StringIdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIdTests.swift; sourceTree = "<group>"; };
 		6EFAD30E2798134200CDC895 /* LinkSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSettingsRow.swift; sourceTree = "<group>"; };
 		CC0E1DB6262597B000C285D8 /* HousesOfWesteros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfWesteros.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -738,6 +741,7 @@
 		CC0E1E31262597D800C285D8 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
+				6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */,
 				CC0E1E34262597D800C285D8 /* MockClasses.swift */,
 				6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */,
 				6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */,
@@ -969,6 +973,7 @@
 				6E90CB592720646B008D5585 /* Api.swift in Sources */,
 				6E90CB6627206D91008D5585 /* MockClasses.swift in Sources */,
 				6E90CB6127206625008D5585 /* URLResponse-Optional-Extension.swift in Sources */,
+				6ED491D127E3D71400ECC763 /* MockCharacterBasic.swift in Sources */,
 				6E90CB5A272065DC008D5585 /* HouseBasic.swift in Sources */,
 				6E90CB6927206E8B008D5585 /* CharacterBasic.swift in Sources */,
 				6E90CB5E2720660F008D5585 /* String-Extension.swift in Sources */,
@@ -1023,6 +1028,7 @@
 				CC0E1E61262597D800C285D8 /* TitlesSection.swift in Sources */,
 				CC0E1E74262597D800C285D8 /* HousesOfWesterosApp.swift in Sources */,
 				CC0E1E59262597D800C285D8 /* CharacterTitle.swift in Sources */,
+				6ED491D027E3D70800ECC763 /* MockCharacterBasic.swift in Sources */,
 				CC0E1E63262597D800C285D8 /* SwornMembersSection.swift in Sources */,
 				CC0E1E7C262597D800C285D8 /* HouseBasic.swift in Sources */,
 				CC0E1E6F262597D800C285D8 /* CharacterIcon.swift in Sources */,

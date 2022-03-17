@@ -11,7 +11,7 @@ import XCTest
 class CharacterBasicHasActorTests: XCTestCase {
   func testHasActor() {
     // GIVEN a character that has an actor
-    let character = MockClasses.character
+    let character: CharacterBasic = .character
 
     // WHEN we call the "hasActor" function
     let result = character.hasActor
@@ -22,7 +22,7 @@ class CharacterBasicHasActorTests: XCTestCase {
 
   func testHasNoActor() {
     // GIVEN a character that has no actor
-    let character = MockClasses.characterWithNoData
+    let character: CharacterBasic = .characterWithNoData
 
     // WHEN we call the "hasActor" function
     let result = character.hasActor

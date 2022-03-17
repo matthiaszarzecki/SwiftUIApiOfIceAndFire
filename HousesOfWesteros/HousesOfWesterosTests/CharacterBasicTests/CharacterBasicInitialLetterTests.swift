@@ -11,7 +11,7 @@ import XCTest
 class CharacterBasicInitialLetterTests: XCTestCase {
   func testInitialLetter() {
     // GIVEN a character that has a name
-    let character = MockClasses.character
+    let character: CharacterBasic = .character
 
     // WHEN we call the "initialLetter" variable
     let result = character.initialLetter

@@ -11,7 +11,7 @@ import XCTest
 class CharacterBasicHasInformationTests: XCTestCase {
   func testHasInformation() {
     // GIVEN a character that has some showable information
-    let character = MockClasses.character
+    let character: CharacterBasic = .character
 
     // WHEN we call the "hasInformation" variable
     let result = character.hasInformation
@@ -22,7 +22,7 @@ class CharacterBasicHasInformationTests: XCTestCase {
 
   func testHasNoInformation() {
     // GIVEN a character that has no showable information
-    let character = MockClasses.characterWithNoData
+    let character: CharacterBasic = .characterWithNoData
 
     // WHEN we call the "hasInformation" variable
     let result = character.hasInformation
