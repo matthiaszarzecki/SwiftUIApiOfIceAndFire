@@ -52,8 +52,8 @@ struct HouseIconColors: View {
 struct HouseIcon_Previews: PreviewProvider {
   static var previews: some View {
     let houses: [HouseBasic] = [
-      .houseBasicWithLinksAndWithCoatOfArms,
-      .houseBasicWithLinksAndWithoutCoatOfArms
+      .mockHouseBasicWithLinksAndWithCoatOfArms,
+      .mockHouseBasicWithLinksAndWithoutCoatOfArms
     ]
 
     ForEach(houses, id: \.self) { house in

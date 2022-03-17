@@ -11,7 +11,7 @@ import XCTest
 class HouseBasicInitialLetterTests: XCTestCase {
   func testHouseInitialLetter() {
     // GIVEN a house that contains at least one link
-    let house: HouseBasic = .houseBasicWithLinksAndWithCoatOfArms
+    let house: HouseBasic = .mockHouseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we check if it contains links at all
     let result = house.initialLetter
@@ -22,7 +22,7 @@ class HouseBasicInitialLetterTests: XCTestCase {
 
   func testHouseInitialLetterFromHouseWithNoData() {
     // GIVEN a house that contains at least one link
-    let house: HouseBasic = .houseWithOnlyUrl
+    let house: HouseBasic = .mockHouseBasicWithOnlyUrl
 
     // WHEN we check if it contains links at all
     let result = house.initialLetter

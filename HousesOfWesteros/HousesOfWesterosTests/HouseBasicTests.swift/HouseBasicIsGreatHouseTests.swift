@@ -11,7 +11,7 @@ import XCTest
 class HouseBasicIsGreatHouseTests: XCTestCase {
   func testHouseIsGreatHouse() {
     // GIVEN a house that is a Great House
-    let house: HouseBasic = .houseBasicWithLinksAndWithCoatOfArms
+    let house: HouseBasic = .mockHouseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we check the "isGreatHouse" variable
     let result = house.isGreatHouse
@@ -22,7 +22,7 @@ class HouseBasicIsGreatHouseTests: XCTestCase {
 
   func testHouseIsNotGreatHouse() {
     // GIVEN a house that is not a Great House
-    let house = HouseBasic.houseWithOnlyUrl
+    let house = HouseBasic.mockHouseBasicWithOnlyUrl
 
     // WHEN we check the "isGreatHouse" variable
     let result = house.isGreatHouse

@@ -11,7 +11,7 @@ import XCTest
 class HouseBasicIDTests: XCTestCase {
   func testHouseBasicID() {
     // GIVEN a house that has a proper url
-    let house: HouseBasic = .houseBasicWithLinksAndWithCoatOfArms
+    let house: HouseBasic = .mockHouseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we check the id
     let result = house.id
@@ -27,7 +27,7 @@ class HouseBasicIDTests: XCTestCase {
 
   func testHouseBasicWithNoID() {
     // GIVEN a house that does not have a proper url
-    let house: HouseBasic = .houseWithNoData
+    let house: HouseBasic = .mockHouseBasicWithNoData
 
     // WHEN we check the id
     let result = house.id

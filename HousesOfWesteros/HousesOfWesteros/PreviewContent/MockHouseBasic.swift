@@ -9,7 +9,7 @@ import Foundation
 
 /// Mock Houses
 extension HouseBasic {
-  static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
+  static let mockHouseBasicWithLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/7",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -28,7 +28,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
-  static let houseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
+  static let mockHouseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/17",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -47,7 +47,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
-  static let houseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
+  static let mockHouseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/292",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -66,7 +66,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
-  static let houseBasicWithoutLinksWithoutCoatOfArms = HouseBasic(
+  static let mockHouseBasicWithoutLinksWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/293",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -85,7 +85,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
-  static let houseWithOnlyUrl = HouseBasic(
+  static let mockHouseBasicWithOnlyUrl = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/113",
     name: "",
     region: "",
@@ -104,7 +104,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
-  static let houseWithNoData = HouseBasic(
+  static let mockHouseBasicWithNoData = HouseBasic(
     url: "",
     name: "",
     region: "",
@@ -125,10 +125,10 @@ extension HouseBasic {
 }
 
 extension Array where Element == HouseBasic {
-  static let housesBasic: [HouseBasic] = [
-    .houseBasicWithLinksAndWithCoatOfArms,
-    .houseBasicWithLinksAndWithoutCoatOfArms,
-    .houseBasicWithoutLinksAndWithCoatOfArms,
-    .houseBasicWithoutLinksWithoutCoatOfArms
+  static let mockHousesBasic: [HouseBasic] = [
+    .mockHouseBasicWithLinksAndWithCoatOfArms,
+    .mockHouseBasicWithLinksAndWithoutCoatOfArms,
+    .mockHouseBasicWithoutLinksAndWithCoatOfArms,
+    .mockHouseBasicWithoutLinksWithoutCoatOfArms
   ]
 }

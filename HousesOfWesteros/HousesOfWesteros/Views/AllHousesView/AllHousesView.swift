@@ -79,28 +79,28 @@ struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       AllHousesDisplay(
-        fetchResults: .housesBasic,
+        fetchResults: .mockHousesBasic,
         isLoading: false,
         showError: false,
         initialLoadingPhase: false
       ) {}
 
       AllHousesDisplay(
-        fetchResults: .housesBasic,
+        fetchResults: .mockHousesBasic,
         isLoading: true,
         showError: false,
         initialLoadingPhase: false
       ) {}
 
       AllHousesDisplay(
-        fetchResults: .housesBasic,
+        fetchResults: .mockHousesBasic,
         isLoading: true,
         showError: true,
         initialLoadingPhase: false
       ) {}
 
       AllHousesDisplay(
-        fetchResults: .housesBasic,
+        fetchResults: .mockHousesBasic,
         isLoading: true,
         showError: false,
         initialLoadingPhase: true
