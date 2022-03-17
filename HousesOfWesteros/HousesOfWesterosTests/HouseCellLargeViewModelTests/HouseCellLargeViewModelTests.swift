@@ -12,7 +12,9 @@ import XCTest
 class HouseCellLargeViewModelTests: XCTestCase {
   func testBackgroundColorWithMajorHouse() {
     // GIVEN a major house
-    let viewModel = HouseCellLargeViewModel(.mockHouseBasicWithLinksAndWithCoatOfArms)
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseBasicWithLinksAndWithCoatOfArms
+    )
 
     // WHEN we call the backgroundColor variable
     let result = viewModel.backgroundColor
@@ -23,7 +25,9 @@ class HouseCellLargeViewModelTests: XCTestCase {
 
   func testBackgroundColorWithRegularHouse() {
     // GIVEN a regular house
-    let viewModel = HouseCellLargeViewModel(.mockHouseWithoutLinksAndWithCoatOfArms)
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseWithoutLinksAndWithCoatOfArms
+    )
 
     // WHEN we call the backgroundColor variable
     let result = viewModel.backgroundColor
@@ -34,7 +38,9 @@ class HouseCellLargeViewModelTests: XCTestCase {
 
   func testBackgroundColorWithFaultyId() {
     // GIVEN a house without a valid id
-    let viewModel = HouseCellLargeViewModel(.mockHouseBasicWithNoData)
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseBasicWithNoData
+    )
 
     // WHEN we call the backgroundColor variable
     let result = viewModel.backgroundColor
@@ -45,18 +51,22 @@ class HouseCellLargeViewModelTests: XCTestCase {
 
   func testGreatHouseIdWithGreatHouse() {
     // GIVEN a major house
-    let viewModel = HouseCellLargeViewModel(.mockHouseBasicWithLinksAndWithCoatOfArms)
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseBasicWithLinksAndWithCoatOfArms
+    )
 
     // WHEN we call the greatHouseId variable
     let result = viewModel.greatHouseId
 
     // THEN the result is the id
-    XCTAssertEqual(result, HouseBasic.mockHouseBasicWithLinksAndWithCoatOfArms.id!)
+    XCTAssertEqual(result, HouseBasic.mockHouseBasicWithLinksAndWithCoatOfArms.id)
   }
 
   func testGreatHouseIdWithRegularHouse() {
     // GIVEN a regular house
-    let viewModel = HouseCellLargeViewModel(.mockHouseWithoutLinksAndWithCoatOfArms)
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseWithoutLinksAndWithCoatOfArms
+    )
 
     // WHEN we call the greatHouseId variable
     let result = viewModel.greatHouseId

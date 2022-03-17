@@ -543,10 +543,10 @@
 				6EAC70202630B22C00988D47 /* ColorParserTests */,
 				6E89D84B269869F100F0B069 /* GreatHousesViewModelTests */,
 				6E170B63262B09160074314E /* HouseBasicTests.swift */,
+				6ED491D727E3E19800ECC763 /* HouseCellLargeViewModelTests */,
 				6E89D84A269869D900F0B069 /* MockClasses */,
 				6E350A452652002F00FD520F /* StringArrayExtensionTests */,
 				6E170B5C262B09000074314E /* StringExtensionTests */,
-				6ED491D727E3E19800ECC763 /* HouseCellLargeViewModelTests */,
 			);
 			path = HousesOfWesterosTests;
 			sourceTree = "<group>";
