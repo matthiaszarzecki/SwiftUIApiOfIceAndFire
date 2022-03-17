@@ -22,12 +22,6 @@ struct HouseCellLarge: View {
         iconSize: .greatHouseCell,
         id: unwrappedGreatHouseId
       )
-    } else {
-      HouseIconColors(
-        colors: viewModel.house.heraldryColors,
-        initialLetter: viewModel.house.initialLetter,
-        iconSize: .greatHouseCell
-      )
     }
   }
 

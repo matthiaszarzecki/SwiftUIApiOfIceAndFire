@@ -74,4 +74,30 @@ class HouseCellLargeViewModelTests: XCTestCase {
     // THEN the result is nil
     XCTAssertNil(result)
   }
+
+  func testSubtitleNoMembers() {
+    // GIVEN a house with no members
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseWithoutLinksAndWithCoatOfArms
+    )
+
+    // WHEN we call the susbtitle variable
+    let result = viewModel.subtitle
+
+    // THEN the result is "Members: 0"
+    XCTAssertEqual(result, "Members: 0")
+  }
+
+  func testSubtitleWithMembersAndBranches() {
+    // GIVEN a house with members and branches
+    let viewModel = HouseCellLargeViewModel(
+      .mockHouseWithLinksAndWithoutCoatOfArms
+    )
+
+    // WHEN we call the susbtitle variable
+    let result = viewModel.subtitle
+
+    // THEN the result is "Members: 4 - Branches: 2"
+    XCTAssertEqual(result, "Members: 4 - Branches: 2")
+  }
 }
