@@ -9,6 +9,7 @@ import Foundation
 
 /// Mock Houses
 extension HouseBasic {
+  /// A Great house
   static let mockHouseBasicWithLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/7",
     name: MockClasses.houseName,
@@ -28,6 +29,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
+  /// A great house
   static let mockHouseWithLinksAndWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/17",
     name: MockClasses.houseName,
@@ -67,6 +69,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
+  /// A Regular (non-major) House
   static let mockHouseWithoutLinksWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/293",
     name: MockClasses.houseName,
@@ -86,6 +89,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
+  /// A Regular (non-major) House
   static let mockHouseBasicWithOnlyUrl = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/113",
     name: "",
