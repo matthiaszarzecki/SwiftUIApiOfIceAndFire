@@ -111,7 +111,7 @@ enum MockClasses {
     heir: MockClasses.character,
     overlord: .houseBasicWithLinksAndWithCoatOfArms,
     founder: MockClasses.character,
-    cadetBranches: HouseBasic.housesBasic,
+    cadetBranches: .housesBasic,
     swornMembers: MockClasses.characters
   )
 

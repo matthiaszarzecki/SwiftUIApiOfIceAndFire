@@ -94,6 +94,7 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   }
 }
 
+/// Mock Houses
 extension HouseBasic {
   static let houseBasicWithLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/7",
@@ -208,11 +209,13 @@ extension HouseBasic {
     cadetBranches: [],
     swornMembers: []
   )
+}
 
-  static let housesBasic = [
-    houseBasicWithLinksAndWithCoatOfArms,
-    houseBasicWithLinksAndWithoutCoatOfArms,
-    houseBasicWithoutLinksAndWithCoatOfArms,
-    houseBasicWithoutLinksWithoutCoatOfArms
+extension Array where Element == HouseBasic {
+  static let housesBasic: [HouseBasic] = [
+    .houseBasicWithLinksAndWithCoatOfArms,
+    .houseBasicWithLinksAndWithoutCoatOfArms,
+    .houseBasicWithoutLinksAndWithCoatOfArms,
+    .houseBasicWithoutLinksWithoutCoatOfArms
   ]
 }
