@@ -21,13 +21,22 @@ class Api {
   func getHouses(
     page: Int
   ) -> AnyPublisher<[HouseBasic], Error>? {
+    var components = URLComponents()
+    components.scheme = "https"
+    components.host = "www.anapioficeandfire.com"
+    components.path = "/api/houses"
+    components.queryItems = [
+      URLQueryItem(name: "page", value: "\(page)"),
+      URLQueryItem(name: "pageSize", value: "\(pageSize)")
+    ]
+
     guard
-      let url = URL(
-        string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)"
-      )
+      let url = components.url
     else {
       return nil
     }
+
+    // let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")
 
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get
