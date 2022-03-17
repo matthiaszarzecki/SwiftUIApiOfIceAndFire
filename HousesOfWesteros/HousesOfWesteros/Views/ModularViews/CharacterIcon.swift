@@ -28,7 +28,7 @@ struct CharacterIcon: View {
 struct CharacterIcon_Previews: PreviewProvider {
   static var previews: some View {
     CharacterIcon(
-      initialLetter: MockClasses.character.initialLetter,
+      initialLetter: CharacterBasic.character.initialLetter,
       size: 32
     )
     .padding()

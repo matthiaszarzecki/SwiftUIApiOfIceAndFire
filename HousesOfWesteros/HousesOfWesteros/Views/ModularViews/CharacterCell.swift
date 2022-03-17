@@ -29,7 +29,7 @@ struct CharacterCell: View {
 #if !TESTING
 struct CharacterCell_Previews: PreviewProvider {
   static var previews: some View {
-    CharacterCell(character: MockClasses.character)
+    CharacterCell(character: .character)
       .padding()
       .previewLayout(.sizeThatFits)
   }

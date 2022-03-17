@@ -23,7 +23,7 @@ struct BornSection: View {
 struct BornSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      BornSection(character: MockClasses.character)
+      BornSection(character: .character)
     }
   }
 }

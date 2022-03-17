@@ -10,12 +10,12 @@ import Foundation
 extension HouseUpdated {
   static let houseUpdatedWithLinks = HouseUpdated(
     fromHouse: .houseBasicWithLinksAndWithCoatOfArms,
-    currentLord: MockClasses.character,
-    heir: MockClasses.character,
+    currentLord: .character,
+    heir: .character,
     overlord: .houseBasicWithLinksAndWithCoatOfArms,
-    founder: MockClasses.character,
+    founder: .character,
     cadetBranches: .housesBasic,
-    swornMembers: MockClasses.characters
+    swornMembers: .characters
   )
 
   static let houseUpdatedWithoutLinks = HouseUpdated(

@@ -28,7 +28,7 @@ struct TvShowAppearancesSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       TvShowAppearancesSection(
-        character: MockClasses.character
+        character: .character
       )
     }
   }
