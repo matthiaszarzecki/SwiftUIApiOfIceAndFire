@@ -12,7 +12,7 @@ import XCTest
 class ColorGreatHousesMajorColorTests: XCTestCase {
   func testGettingAColorOfAGreatHouse() {
     // GIVEN a house that is a Great House
-    let house = MockClasses.houseBasicWithLinksAndWithCoatOfArms
+    let house: HouseBasic = .houseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we access a the associated GreatHouseMajorColor
     let invalidHouseId = -1
@@ -24,7 +24,7 @@ class ColorGreatHousesMajorColorTests: XCTestCase {
 
   func testNotGettingAColorOfAGreatHouse() {
     // GIVEN a house that is not a Great House
-    let house = MockClasses.houseWithOnlyUrl
+    let house: HouseBasic = .houseWithOnlyUrl
 
     // WHEN we access a the associated GreatHouseMajorColor
     let invalidHouseId = -1

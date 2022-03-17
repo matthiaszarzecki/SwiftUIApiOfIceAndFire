@@ -12,7 +12,7 @@ import XCTest
 class HouseBasicHeraldryColorsTests: XCTestCase {
   func testGetHeraldryColors() {
     // GIVEN a house with a sigil-description
-    let house = MockClasses.houseBasicWithLinksAndWithCoatOfArms
+    let house: HouseBasic = .houseBasicWithLinksAndWithCoatOfArms
 
     // WHEN we call the heraldryColors variable
     let result = house.heraldryColors
@@ -23,7 +23,7 @@ class HouseBasicHeraldryColorsTests: XCTestCase {
 
   func testGetNoHeraldryColors() {
     // GIVEN a house with a sigil-description
-    let house = MockClasses.houseBasicWithoutLinksWithoutCoatOfArms
+    let house: HouseBasic = .houseBasicWithoutLinksWithoutCoatOfArms
 
     // WHEN we call the heraldryColors variable
     let result = house.heraldryColors
