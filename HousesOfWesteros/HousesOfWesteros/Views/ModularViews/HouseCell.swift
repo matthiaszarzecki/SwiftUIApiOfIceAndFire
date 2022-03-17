@@ -88,7 +88,7 @@ struct HouseCell_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
 
     HouseCellBasic(
-      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+      house: .houseBasicWithLinksAndWithCoatOfArms,
       iconSize: .smallForNestedCells
     )
     .padding()

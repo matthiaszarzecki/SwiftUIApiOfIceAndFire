@@ -72,7 +72,7 @@ struct GreatHousesDisplay: View {
 struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(
-      houses: MockClasses.housesBasic
+      houses: HouseBasic.housesBasic
     )
 
     GreatHousesDisplay(

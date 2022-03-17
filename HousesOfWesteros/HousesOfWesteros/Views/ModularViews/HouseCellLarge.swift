@@ -81,7 +81,7 @@ struct HouseCellLarge: View {
 struct HouseCellLarge_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellLarge(
-      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+      house: .houseBasicWithLinksAndWithCoatOfArms,
       width: PreviewConstants.width
     )
     .padding()

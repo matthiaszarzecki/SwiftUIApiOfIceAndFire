@@ -51,9 +51,9 @@ struct HouseIconColors: View {
 #if !TESTING
 struct HouseIcon_Previews: PreviewProvider {
   static var previews: some View {
-    let houses = [
-      MockClasses.houseBasicWithLinksAndWithCoatOfArms,
-      MockClasses.houseBasicWithLinksAndWithoutCoatOfArms
+    let houses: [HouseBasic] = [
+      .houseBasicWithLinksAndWithCoatOfArms,
+      .houseBasicWithLinksAndWithoutCoatOfArms
     ]
 
     ForEach(houses, id: \.self) { house in

@@ -15,7 +15,7 @@ struct Provider: IntentTimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(
       date: Date(),
-      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+      house: .houseBasicWithLinksAndWithCoatOfArms,
       configuration: ConfigurationIntent()
     )
   }
@@ -29,7 +29,7 @@ struct Provider: IntentTimelineProvider {
   ) {
     let entry = SimpleEntry(
       date: Date(),
-      house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+      house: .houseBasicWithLinksAndWithCoatOfArms,
       configuration: configuration
     )
     completion(entry)
@@ -130,7 +130,7 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+        house: .houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
     )
@@ -139,7 +139,7 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+        house: .houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
     )
@@ -148,7 +148,7 @@ struct HousesOfWesterosWidget_Previews: PreviewProvider {
     HousesOfWesterosWidgetEntryView(
       entry: SimpleEntry(
         date: Date(),
-        house: MockClasses.houseBasicWithLinksAndWithCoatOfArms,
+        house: .houseBasicWithLinksAndWithCoatOfArms,
         configuration: ConfigurationIntent()
       )
     )
