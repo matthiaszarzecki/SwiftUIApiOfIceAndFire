@@ -39,7 +39,7 @@ struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       SwornMembersSection(
-        house: MockClasses.houseUpdatedWithLinks
+        house: .houseUpdatedWithLinks
       )
     }
   }

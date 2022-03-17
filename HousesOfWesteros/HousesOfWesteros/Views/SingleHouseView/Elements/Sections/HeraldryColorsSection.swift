@@ -36,7 +36,7 @@ struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       HeraldryColorsSection(
-        house: MockClasses.houseUpdatedWithLinks,
+        house: .houseUpdatedWithLinks,
         width: PreviewConstants.width
       )
     }

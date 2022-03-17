@@ -81,13 +81,13 @@ struct SingleHouseDisplay_Previews: PreviewProvider {
     Group {
       NavigationView {
         SingleHouseDisplay(
-          houseUpdated: MockClasses.houseUpdatedWithLinks,
+          houseUpdated: .houseUpdatedWithLinks,
           showError: true
         ) {}
       }
       NavigationView {
         SingleHouseDisplay(
-          houseUpdated: MockClasses.houseUpdatedWithoutLinks,
+          houseUpdated: .houseUpdatedWithoutLinks,
           showError: false
         ) {}
       }

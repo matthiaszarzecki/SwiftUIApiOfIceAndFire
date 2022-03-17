@@ -29,7 +29,7 @@ struct AncestralWeaponsSection: View {
 struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      AncestralWeaponsSection(house: MockClasses.houseUpdatedWithLinks)
+      AncestralWeaponsSection(house: .houseUpdatedWithLinks)
     }
   }
 }

@@ -32,7 +32,7 @@ struct OverlordHouseSection: View {
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      OverlordHouseSection(house: MockClasses.houseUpdatedWithLinks)
+      OverlordHouseSection(house: .houseUpdatedWithLinks)
     }
   }
 }

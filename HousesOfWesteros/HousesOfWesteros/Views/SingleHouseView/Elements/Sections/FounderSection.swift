@@ -33,7 +33,7 @@ struct FounderSection: View {
 struct Founder_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      FounderSection(house: MockClasses.houseUpdatedWithLinks)
+      FounderSection(house: .houseUpdatedWithLinks)
     }
   }
 }

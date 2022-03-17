@@ -23,7 +23,7 @@ struct FoundedSection: View {
 struct Founded_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      FoundedSection(house: MockClasses.houseUpdatedWithLinks)
+      FoundedSection(house: .houseUpdatedWithLinks)
     }
   }
 }

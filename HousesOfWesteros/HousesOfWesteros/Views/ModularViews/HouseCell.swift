@@ -81,7 +81,7 @@ struct HouseCellBasic: View {
 struct HouseCell_Previews: PreviewProvider {
   static var previews: some View {
     HouseCellUpdated(
-      house: MockClasses.houseUpdatedWithLinks,
+      house: .houseUpdatedWithLinks,
       iconSize: .smallForNestedCells
     )
     .padding()

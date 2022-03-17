@@ -40,7 +40,7 @@ struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       CadetBranchesSection(
-        house: MockClasses.houseUpdatedWithLinks
+        house: .houseUpdatedWithLinks
       )
     }
   }

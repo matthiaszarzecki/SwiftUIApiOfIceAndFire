@@ -104,18 +104,4 @@ enum MockClasses {
   )
 
   static let characters = Array(repeating: character, count: 3)
-
-  static let houseUpdatedWithLinks = HouseUpdated(
-    fromHouse: .houseBasicWithLinksAndWithCoatOfArms,
-    currentLord: MockClasses.character,
-    heir: MockClasses.character,
-    overlord: .houseBasicWithLinksAndWithCoatOfArms,
-    founder: MockClasses.character,
-    cadetBranches: .housesBasic,
-    swornMembers: MockClasses.characters
-  )
-
-  static let houseUpdatedWithoutLinks = HouseUpdated(
-    fromHouse: .houseBasicWithoutLinksAndWithCoatOfArms
-  )
 }

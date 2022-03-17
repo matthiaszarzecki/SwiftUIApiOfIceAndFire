@@ -33,7 +33,7 @@ struct TitlesSection: View {
 struct Titles_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      TitlesSection(house: MockClasses.houseUpdatedWithLinks)
+      TitlesSection(house: .houseUpdatedWithLinks)
     }
   }
 }

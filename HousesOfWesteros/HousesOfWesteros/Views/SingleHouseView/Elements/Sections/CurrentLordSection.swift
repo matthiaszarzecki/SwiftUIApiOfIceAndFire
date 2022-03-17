@@ -33,7 +33,7 @@ struct CurrentLordSection: View {
 struct CurrentLord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CurrentLordSection(house: MockClasses.houseUpdatedWithLinks)
+      CurrentLordSection(house: .houseUpdatedWithLinks)
     }
   }
 }

@@ -61,7 +61,7 @@ struct HouseNameAndTitle: View {
 struct Title_Previews: PreviewProvider {
   static var previews: some View {
     HouseNameAndTitle(
-      house: MockClasses.houseUpdatedWithLinks,
+      house: .houseUpdatedWithLinks,
       width: PreviewConstants.width
     )
     .offset(y: 50)

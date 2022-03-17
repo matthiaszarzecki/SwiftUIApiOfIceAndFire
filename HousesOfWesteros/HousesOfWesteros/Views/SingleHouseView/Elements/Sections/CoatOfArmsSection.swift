@@ -23,7 +23,7 @@ struct CoatOfArmsSection: View {
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CoatOfArmsSection(house: MockClasses.houseUpdatedWithLinks)
+      CoatOfArmsSection(house: .houseUpdatedWithLinks)
     }
   }
 }

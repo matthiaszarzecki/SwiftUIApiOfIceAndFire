@@ -33,7 +33,7 @@ struct SeatsSection: View {
 struct Seats_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      SeatsSection(house: MockClasses.houseUpdatedWithLinks)
+      SeatsSection(house: .houseUpdatedWithLinks)
     }
   }
 }
