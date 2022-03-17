@@ -23,7 +23,7 @@ class HouseCellLargeViewModelTests: XCTestCase {
 
   func testBackgroundColorWithRegularHouse() {
     // GIVEN a regular house
-    let viewModel = HouseCellLargeViewModel(.mockHouseBasicWithOnlyUrl)
+    let viewModel = HouseCellLargeViewModel(.mockHouseWithoutLinksAndWithCoatOfArms)
 
     // WHEN we call the backgroundColor variable
     let result = viewModel.backgroundColor
@@ -41,5 +41,27 @@ class HouseCellLargeViewModelTests: XCTestCase {
 
     // THEN the color is white
     XCTAssertEqual(result, .white)
+  }
+
+  func testGreatHouseIdWithGreatHouse() {
+    // GIVEN a major house
+    let viewModel = HouseCellLargeViewModel(.mockHouseBasicWithLinksAndWithCoatOfArms)
+
+    // WHEN we call the greatHouseId variable
+    let result = viewModel.greatHouseId
+
+    // THEN the result is the id
+    XCTAssertEqual(result, HouseBasic.mockHouseBasicWithLinksAndWithCoatOfArms.id!)
+  }
+
+  func testGreatHouseIdWithRegularHouse() {
+    // GIVEN a regular house
+    let viewModel = HouseCellLargeViewModel(.mockHouseWithoutLinksAndWithCoatOfArms)
+
+    // WHEN we call the greatHouseId variable
+    let result = viewModel.greatHouseId
+
+    // THEN the result is nil
+    XCTAssertNil(result)
   }
 }

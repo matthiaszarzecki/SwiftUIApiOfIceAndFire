@@ -47,6 +47,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
+  /// A Regular (non-major) House
   static let mockHouseWithoutLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/292",
     name: MockClasses.houseName,

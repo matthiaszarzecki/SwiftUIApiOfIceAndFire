@@ -36,8 +36,7 @@ struct HouseCellLargeViewModel {
     if house.id != nil,
       house.isGreatHouse {
       return house.id
-    } else {
-      return nil
     }
+    return nil
   }
 }
