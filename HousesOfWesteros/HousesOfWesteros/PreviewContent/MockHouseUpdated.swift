@@ -19,6 +19,6 @@ extension HouseUpdated {
   )
 
   static let houseUpdatedWithoutLinks = HouseUpdated(
-    fromHouse: .mockHouseBasicWithoutLinksAndWithCoatOfArms
+    fromHouse: .mockHouseWithoutLinksAndWithCoatOfArms
   )
 }

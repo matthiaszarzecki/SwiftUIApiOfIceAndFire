@@ -53,7 +53,7 @@ struct HouseIcon_Previews: PreviewProvider {
   static var previews: some View {
     let houses: [HouseBasic] = [
       .mockHouseBasicWithLinksAndWithCoatOfArms,
-      .mockHouseBasicWithLinksAndWithoutCoatOfArms
+      .mockHouseWithLinksAndWithoutCoatOfArms
     ]
 
     ForEach(houses, id: \.self) { house in

@@ -22,7 +22,7 @@ class HouseBasicContainsLinksTests: XCTestCase {
 
   func testHouseWithoutLinksShowsContainsNoLinks() {
     // GIVEN a house that contains no links
-    let house: HouseBasic = .mockHouseBasicWithoutLinksAndWithCoatOfArms
+    let house: HouseBasic = .mockHouseWithoutLinksAndWithCoatOfArms
 
     // WHEN we check if it contains links at all
     let result = house.containsLinks

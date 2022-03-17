@@ -28,7 +28,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
-  static let mockHouseBasicWithLinksAndWithoutCoatOfArms = HouseBasic(
+  static let mockHouseWithLinksAndWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/17",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -47,7 +47,7 @@ extension HouseBasic {
     swornMembers: Array(repeating: MockClasses.characterLink, count: 4)
   )
 
-  static let mockHouseBasicWithoutLinksAndWithCoatOfArms = HouseBasic(
+  static let mockHouseWithoutLinksAndWithCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/292",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -66,7 +66,7 @@ extension HouseBasic {
     swornMembers: []
   )
 
-  static let mockHouseBasicWithoutLinksWithoutCoatOfArms = HouseBasic(
+  static let mockHouseWithoutLinksWithoutCoatOfArms = HouseBasic(
     url: "https://www.anapioficeandfire.com/api/house/293",
     name: MockClasses.houseName,
     region: MockClasses.houseRegion,
@@ -127,8 +127,8 @@ extension HouseBasic {
 extension Array where Element == HouseBasic {
   static let mockHousesBasic: [HouseBasic] = [
     .mockHouseBasicWithLinksAndWithCoatOfArms,
-    .mockHouseBasicWithLinksAndWithoutCoatOfArms,
-    .mockHouseBasicWithoutLinksAndWithCoatOfArms,
-    .mockHouseBasicWithoutLinksWithoutCoatOfArms
+    .mockHouseWithLinksAndWithoutCoatOfArms,
+    .mockHouseWithoutLinksAndWithCoatOfArms,
+    .mockHouseWithoutLinksWithoutCoatOfArms
   ]
 }
