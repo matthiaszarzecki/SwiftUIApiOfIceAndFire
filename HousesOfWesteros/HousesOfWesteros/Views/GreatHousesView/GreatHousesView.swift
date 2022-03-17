@@ -51,7 +51,6 @@ struct GreatHousesDisplay: View {
 
                   HouseCellLarge(
                     viewModel: HouseCellLargeViewModel(unwrappedHouse),
-                    house: unwrappedHouse,
                     width: geometry.size.width - 38 * 2
                   )
                 }

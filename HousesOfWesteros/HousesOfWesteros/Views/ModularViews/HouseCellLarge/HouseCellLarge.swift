@@ -7,34 +7,8 @@
 
 import SwiftUI
 
-struct HouseCellLargeViewModel {
-  var house: HouseBasic
-
-  init(_ house: HouseBasic) {
-    self.house = house
-  }
-
-  var backgroundColor: Color {
-    if let unwrappedId = house.id {
-      return .greatHousesMajorColor(id: unwrappedId)
-    }
-    return .white
-  }
-
-  var subtitle: String {
-    var text = "Members: \(house.swornMembers.count)"
-
-    if house.cadetBranches.hasEntries {
-      text += " - Branches: \(house.cadetBranches.count)"
-    }
-
-    return text
-  }
-}
-
 struct HouseCellLarge: View {
   var viewModel: HouseCellLargeViewModel
-  var house: HouseBasic
   var width: CGFloat
 
   private var textElementWidth: CGFloat {
@@ -43,16 +17,15 @@ struct HouseCellLarge: View {
 
   @ViewBuilder
   private var icon: some View {
-    if let unwrappedId = house.id,
-      house.isGreatHouse {
+    if let unwrappedGreatHouseId = viewModel.greatHouseId {
       HouseIconSigil(
         iconSize: .greatHouseCell,
-        id: unwrappedId
+        id: unwrappedGreatHouseId
       )
     } else {
       HouseIconColors(
-        colors: house.heraldryColors,
-        initialLetter: house.initialLetter,
+        colors: viewModel.house.heraldryColors,
+        initialLetter: viewModel.house.initialLetter,
         iconSize: .greatHouseCell
       )
     }
@@ -72,7 +45,7 @@ struct HouseCellLarge: View {
           .padding()
 
         VStack {
-          Text(house.name)
+          Text(viewModel.house.name)
             .shadow(color: .white, radius: 6)
             .font(.title2)
             .frame(width: textElementWidth, height: 60, alignment: .topLeading)
@@ -97,7 +70,6 @@ struct HouseCellLarge_Previews: PreviewProvider {
       viewModel: HouseCellLargeViewModel(
         .mockHouseBasicWithLinksAndWithCoatOfArms
       ),
-      house: .mockHouseBasicWithLinksAndWithCoatOfArms,
       width: PreviewConstants.width
     )
     .padding()

@@ -75,6 +75,7 @@
 		6ED491CE27E3CF0E00ECC763 /* MockHouseUpdated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */; };
 		6ED491D027E3D70800ECC763 /* MockCharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */; };
 		6ED491D127E3D71400ECC763 /* MockCharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */; };
+		6ED491D427E3E0D200ECC763 /* HouseCellLargeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491D327E3E0D200ECC763 /* HouseCellLargeViewModel.swift */; };
 		6EE5C39F265D872000188DE2 /* StringIdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE5C39E265D872000188DE2 /* StringIdTests.swift */; };
 		6EFAD30F2798134200CDC895 /* LinkSettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFAD30E2798134200CDC895 /* LinkSettingsRow.swift */; };
 		CC0E1DD7262597B200C285D8 /* HousesOfWesterosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DD6262597B200C285D8 /* HousesOfWesterosUITests.swift */; };
@@ -230,6 +231,7 @@
 		6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseBasic.swift; sourceTree = "<group>"; };
 		6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseUpdated.swift; sourceTree = "<group>"; };
 		6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterBasic.swift; sourceTree = "<group>"; };
+		6ED491D327E3E0D200ECC763 /* HouseCellLargeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCellLargeViewModel.swift; sourceTree = "<group>"; };
 		6EE5C39E265D872000188DE2 /* StringIdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIdTests.swift; sourceTree = "<group>"; };
 		6EFAD30E2798134200CDC895 /* LinkSettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSettingsRow.swift; sourceTree = "<group>"; };
 		CC0E1DB6262597B000C285D8 /* HousesOfWesteros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesOfWesteros.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -463,6 +465,15 @@
 				6EB4C06226532112006DA267 /* ColorHexInitTests.swift */,
 			);
 			path = ColorExtensionTests;
+			sourceTree = "<group>";
+		};
+		6ED491D227E3E0B800ECC763 /* HouseCellLarge */ = {
+			isa = PBXGroup;
+			children = (
+				6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */,
+				6ED491D327E3E0D200ECC763 /* HouseCellLargeViewModel.swift */,
+			);
+			path = HouseCellLarge;
 			sourceTree = "<group>";
 		};
 		6EFAD3102798139000CDC895 /* SettingsRow */ = {
@@ -719,12 +730,12 @@
 				CC0E1E2A262597D800C285D8 /* CharacterIcon.swift */,
 				CC0E1E2B262597D800C285D8 /* CircularColorDisplay.swift */,
 				6EAC70352630CB0500988D47 /* HouseCell.swift */,
-				6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */,
 				CC0E1E29262597D800C285D8 /* HouseIconColors.swift */,
 				6E1DE0EF2634489E00222676 /* HouseIconSigil.swift */,
 				CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */,
 				CC0E1E2E262597D800C285D8 /* SectionHeader.swift */,
 				CC0E1E28262597D800C285D8 /* SettingsIcon.swift */,
+				6ED491D227E3E0B800ECC763 /* HouseCellLarge */,
 				6EFAD3102798139000CDC895 /* SettingsRow */,
 			);
 			path = ModularViews;
@@ -1032,6 +1043,7 @@
 				CC0E1E63262597D800C285D8 /* SwornMembersSection.swift in Sources */,
 				CC0E1E7C262597D800C285D8 /* HouseBasic.swift in Sources */,
 				CC0E1E6F262597D800C285D8 /* CharacterIcon.swift in Sources */,
+				6ED491D427E3E0D200ECC763 /* HouseCellLargeViewModel.swift in Sources */,
 				CC0E1E70262597D800C285D8 /* CircularColorDisplay.swift in Sources */,
 				6E2A528127510E82006345AB /* Bundle-Extension.swift in Sources */,
 				CC0E1E55262597D800C285D8 /* AliasesSection.swift in Sources */,
