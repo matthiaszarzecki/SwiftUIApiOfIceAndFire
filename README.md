@@ -43,6 +43,7 @@ Todo:
 - More Unit-Tests
 - More Unit-Tests for ViewModels
 - Better error-handling in combine-call
+- More ViewModels in smaller views
 
 Nice to Have:
 - Fastlane function to create and resize screenshots for this readme
