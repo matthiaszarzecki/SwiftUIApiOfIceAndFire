@@ -79,19 +79,3 @@ struct HouseUpdated {
     self.swornMembers = swornMembers
   }
 }
-
-extension HouseUpdated {
-  static let houseUpdatedWithLinks = HouseUpdated(
-    fromHouse: .houseBasicWithLinksAndWithCoatOfArms,
-    currentLord: MockClasses.character,
-    heir: MockClasses.character,
-    overlord: .houseBasicWithLinksAndWithCoatOfArms,
-    founder: MockClasses.character,
-    cadetBranches: .housesBasic,
-    swornMembers: MockClasses.characters
-  )
-
-  static let houseUpdatedWithoutLinks = HouseUpdated(
-    fromHouse: .houseBasicWithoutLinksAndWithCoatOfArms
-  )
-}
