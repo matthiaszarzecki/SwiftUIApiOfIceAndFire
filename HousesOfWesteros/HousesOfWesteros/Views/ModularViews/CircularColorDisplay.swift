@@ -20,7 +20,7 @@ struct CircularColorDisplay: View {
 
   var body: some View {
     ZStack {
-      ForEach(0..<colors.count) { index in
+      ForEach(0..<colors.count, id: \.self) { index in
         let rotation = getRotationAngleForElement(withIndex: index)
 
         Path { path in
