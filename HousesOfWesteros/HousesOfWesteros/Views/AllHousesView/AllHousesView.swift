@@ -63,7 +63,7 @@ struct AllHousesDisplay: View {
           }
 
           if isLoading {
-            SearchSpinnerView()
+            TinyLoadingIndicator()
               .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
           }
         }

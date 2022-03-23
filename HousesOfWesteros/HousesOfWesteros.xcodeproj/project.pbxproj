@@ -130,7 +130,7 @@
 		CC0E1E6F262597D800C285D8 /* CharacterIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2A262597D800C285D8 /* CharacterIcon.swift */; };
 		CC0E1E70262597D800C285D8 /* CircularColorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2B262597D800C285D8 /* CircularColorDisplay.swift */; };
 		CC0E1E71262597D800C285D8 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2C262597D800C285D8 /* SettingsRow.swift */; };
-		CC0E1E72262597D800C285D8 /* SearchSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */; };
+		CC0E1E72262597D800C285D8 /* TinyLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2D262597D800C285D8 /* TinyLoadingIndicator.swift */; };
 		CC0E1E73262597D800C285D8 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2E262597D800C285D8 /* SectionHeader.swift */; };
 		CC0E1E74262597D800C285D8 /* HousesOfWesterosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E30262597D800C285D8 /* HousesOfWesterosApp.swift */; };
 		CC0E1E75262597D800C285D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */; };
@@ -294,7 +294,7 @@
 		CC0E1E2A262597D800C285D8 /* CharacterIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterIcon.swift; sourceTree = "<group>"; };
 		CC0E1E2B262597D800C285D8 /* CircularColorDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularColorDisplay.swift; sourceTree = "<group>"; };
 		CC0E1E2C262597D800C285D8 /* SettingsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
-		CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSpinnerView.swift; sourceTree = "<group>"; };
+		CC0E1E2D262597D800C285D8 /* TinyLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinyLoadingIndicator.swift; sourceTree = "<group>"; };
 		CC0E1E2E262597D800C285D8 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		CC0E1E30262597D800C285D8 /* HousesOfWesterosApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesOfWesterosApp.swift; sourceTree = "<group>"; };
 		CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -746,9 +746,9 @@
 				6EAC70352630CB0500988D47 /* HouseCell.swift */,
 				CC0E1E29262597D800C285D8 /* HouseIconColors.swift */,
 				6E1DE0EF2634489E00222676 /* HouseIconSigil.swift */,
-				CC0E1E2D262597D800C285D8 /* SearchSpinnerView.swift */,
 				CC0E1E2E262597D800C285D8 /* SectionHeader.swift */,
 				CC0E1E28262597D800C285D8 /* SettingsIcon.swift */,
+				CC0E1E2D262597D800C285D8 /* TinyLoadingIndicator.swift */,
 				6ED491D227E3E0B800ECC763 /* HouseCellLarge */,
 				6EFAD3102798139000CDC895 /* SettingsRow */,
 			);
@@ -1085,7 +1085,7 @@
 				6ED491C927E3CAC100ECC763 /* MockHouseBasic.swift in Sources */,
 				CC0E1E41262597D800C285D8 /* String-Extension.swift in Sources */,
 				CC0E1E4C262597D800C285D8 /* AllHousesView.swift in Sources */,
-				CC0E1E72262597D800C285D8 /* SearchSpinnerView.swift in Sources */,
+				CC0E1E72262597D800C285D8 /* TinyLoadingIndicator.swift in Sources */,
 				CC0E1E44262597D800C285D8 /* View-Extension.swift in Sources */,
 				CC0E1E76262597D800C285D8 /* MockClasses.swift in Sources */,
 				CC0E1E43262597D800C285D8 /* Array-Extension.swift in Sources */,
