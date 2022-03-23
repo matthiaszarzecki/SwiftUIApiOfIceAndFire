@@ -8,8 +8,6 @@
 import Foundation
 
 class URLCreator {
-  static let shared = URLCreator()
-
   private let scheme = "https"
   private let host = "www.anapioficeandfire.com"
 

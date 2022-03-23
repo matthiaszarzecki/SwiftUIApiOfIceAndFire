@@ -12,6 +12,7 @@ import Foundation
 /// receive data from the ApiOfIceAndFire.
 class Api {
   static let shared = Api()
+  private let urlCreator = URLCreator()
 
   /// The number of houses that are
   /// requested in a single call.
@@ -22,7 +23,7 @@ class Api {
     page: Int
   ) -> AnyPublisher<[HouseBasic], Error>? {
     guard
-      let url = URLCreator.shared.getHousesURL(page: page, pageSize: pageSize)
+      let url = urlCreator.getHousesURL(page: page, pageSize: pageSize)
     else {
       return nil
     }
@@ -57,7 +58,7 @@ class Api {
   ) {
     fetch(
       HouseBasic.self,
-      url: URLCreator.shared.getSingleHouseURL(id: id)
+      url: urlCreator.getSingleHouseURL(id: id)
     ) { result in
       completion(result)
     }
