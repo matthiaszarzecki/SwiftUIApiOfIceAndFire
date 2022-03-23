@@ -791,11 +791,11 @@
 			isa = PBXGroup;
 			children = (
 				CC0E1E39262597D800C285D8 /* Api.swift */,
-				6E032F7127EB1C830091BD9F /* URLCreator.swift */,
 				CC0E1E3A262597D800C285D8 /* NetworkError.swift */,
 				CC0E1E38262597D800C285D8 /* RequestMethod.swift */,
 				6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */,
 				6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */,
+				6E032F7127EB1C830091BD9F /* URLCreator.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";

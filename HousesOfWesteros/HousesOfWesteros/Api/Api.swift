@@ -27,8 +27,6 @@ class Api {
       return nil
     }
 
-    // let url = URL(string: "https://www.anapioficeandfire.com/api/houses?page=\(page)&pageSize=\(pageSize)")
-
     var request = URLRequest(url: url)
     request.httpMethod = RequestMethod.get
 
@@ -59,10 +57,48 @@ class Api {
   ) {
     fetch(
       HouseBasic.self,
-      url: "https://anapioficeandfire.com/api/houses/\(id)"
+      url: URLCreator.shared.getSingleHouseURL(id: id)
     ) { result in
       completion(result)
     }
+  }
+
+  /// Does a GET-call to the specified URL
+  /// and returns the type in a completion.
+  func fetch<T: Codable>(
+    _ for: T.Type = T.self,
+    url: URL?,
+    completion: @escaping (Result<T, NetworkError>) -> Void
+  ) {
+    guard let url = url else {
+      return
+    }
+
+    var request = URLRequest(url: url)
+    request.httpMethod = RequestMethod.get
+
+    URLSession.shared.dataTask(with: request) { data, response, _ in
+      // When the response is not a code 200 (success), return an error.
+      if response.statusCode != 200 {
+        DispatchQueue.main.async {
+          completion(.failure(.requestFailed))
+        }
+      } else {
+        // Try to unwrap the received data, return it on success.
+        if let unwrappedData = data,
+          let result = try? JSONDecoder().decode(T.self, from: unwrappedData) {
+          // Call succesful. Proceed with decoding the json-response.
+          DispatchQueue.main.async {
+            completion(.success(result))
+          }
+        } else {
+          DispatchQueue.main.async {
+            completion(.failure(.parsingFailed))
+          }
+        }
+      }
+    }
+    .resume()
   }
 
   /// Does a GET-call to the specified URL
