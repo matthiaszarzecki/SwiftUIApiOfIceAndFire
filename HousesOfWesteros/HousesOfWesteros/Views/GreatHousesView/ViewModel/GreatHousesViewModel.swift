@@ -20,10 +20,10 @@ class GreatHousesViewModel: ObservableObject {
 
   func loadAllGreatHouses() {
     for (index, id) in Constants.greatHouses.enumerated() {
-      downloader.getSingleHouse(id: id) { result in
+      downloader.getSingleHouse(id: id) { [weak self] result in
         switch result {
         case .success(let receivedObject):
-          self.state.houses[index] = receivedObject
+          self?.state.houses[index] = receivedObject
         case .failure(let error):
           print("Error! \(error)")
         }
