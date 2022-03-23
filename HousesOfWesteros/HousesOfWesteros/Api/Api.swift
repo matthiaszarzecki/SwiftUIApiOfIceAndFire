@@ -36,7 +36,7 @@ class Api {
       .handleEvents(
         receiveSubscription: nil,
         receiveOutput: {
-          $0.data.printJsonFromData()
+          print($0.data.jsonStringFromData)
         },
         receiveCompletion: nil,
         receiveCancel: nil,

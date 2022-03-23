@@ -8,7 +8,7 @@
 import Foundation
 
 extension Data {
-  func printJsonFromData() {
-    print("JSON String: \(String(data: self, encoding: .utf8) ?? "")")
+  var jsonStringFromData: String {
+    "JSON String: \(String(data: self, encoding: .utf8) ?? "")"
   }
 }
