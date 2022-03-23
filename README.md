@@ -34,6 +34,7 @@ Contains:
 - Downloader-Protocol for unit-test mocking
 - SwiftLint
 - Custom SwiftLint rules
+- URLComponents
 
 Todo:
 - Nicer Widgets
