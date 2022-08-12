@@ -57,7 +57,6 @@ class Api {
   ) {
     fetch(
       HouseBasic.self,
-      // TODO: Move URL Creator values to static extension on URL
       url: urlCreator.getSingleHouseURL(id: id)
     ) { result in
       completion(result)
