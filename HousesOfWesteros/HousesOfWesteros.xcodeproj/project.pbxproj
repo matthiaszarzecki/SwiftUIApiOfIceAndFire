@@ -31,7 +31,6 @@
 		6E7EF0972657BABF00C4D876 /* CharacterBasicInitialLetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EF0962657BABF00C4D876 /* CharacterBasicInitialLetterTests.swift */; };
 		6E7EF0992657BB6400C4D876 /* CharacterBasicDisplayNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EF0982657BB6400C4D876 /* CharacterBasicDisplayNameTests.swift */; };
 		6E7EF09C2657D06E00C4D876 /* HouseBasicInitialLetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7EF09B2657D06E00C4D876 /* HouseBasicInitialLetterTests.swift */; };
-		6E89D8432698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */; };
 		6E89D845269866F600F0B069 /* SingleHouseBasicDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */; };
 		6E89D8472698672200F0B069 /* MockSingleHouseBasicDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D8462698672200F0B069 /* MockSingleHouseBasicDownloader.swift */; };
 		6E89D8492698688300F0B069 /* GreatHousesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89D8482698688300F0B069 /* GreatHousesViewModelTests.swift */; };
@@ -210,7 +209,6 @@
 		6E7EF0962657BABF00C4D876 /* CharacterBasicInitialLetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBasicInitialLetterTests.swift; sourceTree = "<group>"; };
 		6E7EF0982657BB6400C4D876 /* CharacterBasicDisplayNameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterBasicDisplayNameTests.swift; sourceTree = "<group>"; };
 		6E7EF09B2657D06E00C4D876 /* HouseBasicInitialLetterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseBasicInitialLetterTests.swift; sourceTree = "<group>"; };
-		6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseBasicDownloaderProtocol.swift; sourceTree = "<group>"; };
 		6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHouseBasicDownloader.swift; sourceTree = "<group>"; };
 		6E89D8462698672200F0B069 /* MockSingleHouseBasicDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSingleHouseBasicDownloader.swift; sourceTree = "<group>"; };
 		6E89D8482698688300F0B069 /* GreatHousesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatHousesViewModelTests.swift; sourceTree = "<group>"; };
@@ -794,7 +792,6 @@
 				CC0E1E3A262597D800C285D8 /* NetworkError.swift */,
 				CC0E1E38262597D800C285D8 /* RequestMethod.swift */,
 				6E89D844269866F600F0B069 /* SingleHouseBasicDownloader.swift */,
-				6E89D8422698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift */,
 				6E032F7127EB1C830091BD9F /* URLCreator.swift */,
 			);
 			path = Api;
@@ -1045,7 +1042,6 @@
 				CC0E1E60262597D800C285D8 /* ErrorSection.swift in Sources */,
 				CC0E1E4A262597D800C285D8 /* AllHousesViewModel.swift in Sources */,
 				CC0E1E77262597D800C285D8 /* ColorParser.swift in Sources */,
-				6E89D8432698654100F0B069 /* SingleHouseBasicDownloaderProtocol.swift in Sources */,
 				CC0E1E58262597D800C285D8 /* CharacterView.swift in Sources */,
 				CC0E1E6B262597D800C285D8 /* HouseNameAndTitle.swift in Sources */,
 				CC0E1E7D262597D800C285D8 /* HouseUpdated.swift in Sources */,
