@@ -14,8 +14,6 @@ class Api {
   static let shared = Api()
   private let urlCreator = URLCreator()
 
-  // MARK: - Public Functions
-
   /// Gets 30 ASOIAF Houses.
   func getHouses(
     page: Int,
@@ -63,11 +61,9 @@ class Api {
     }
   }
 
-  // MARK: - Private Methods
-
   /// Does a GET-call to the specified URL
   /// and returns the type in a completion.
-  private func fetch<T: Codable>(
+  func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: URL?,
     completion: @escaping (Result<T, NetworkError>) -> Void
