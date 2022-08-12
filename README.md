@@ -46,6 +46,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - More Unit-Tests for ViewModels
 - Better error-handling in combine-call
 - More ViewModels in smaller views
+- Add timeout error case, move timeout to api calls
 
 ### Nice to Have:
 - Fastlane function to create and resize screenshots for this readme
