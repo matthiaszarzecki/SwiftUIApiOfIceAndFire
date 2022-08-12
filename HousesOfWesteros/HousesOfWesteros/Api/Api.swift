@@ -58,6 +58,7 @@ class Api {
   ) {
     fetch(
       HouseBasic.self,
+      // TODO: Move URL Creator values to static extension on URL
       url: urlCreator.getSingleHouseURL(id: id)
     ) { result in
       completion(result)
@@ -66,7 +67,7 @@ class Api {
 
   /// Does a GET-call to the specified URL
   /// and returns the type in a completion.
-  func fetch<T: Codable>(
+  private func fetch<T: Codable>(
     _ for: T.Type = T.self,
     url: URL?,
     completion: @escaping (Result<T, NetworkError>) -> Void
