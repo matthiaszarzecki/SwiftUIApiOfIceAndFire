@@ -16,4 +16,13 @@ extension Optional where Wrapped == URLResponse {
     }
     return nil
   }
+
+  var isSuccesful: Bool {
+    if let unwrappedStatusCode = self.statusCode {
+      if 200...299 ~= unwrappedStatusCode {
+        return true
+      }
+    }
+    return false
+  }
 }
