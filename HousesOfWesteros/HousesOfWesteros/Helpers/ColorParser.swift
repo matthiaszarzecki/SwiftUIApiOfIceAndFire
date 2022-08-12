@@ -147,7 +147,7 @@ enum ColorParser {
     // Remove empty array entries.
     words.removeAll { $0.isEmpty || $0 == " " }
 
-    let colorCombinations: [([String], Color)] = [
+    let colorCombinations: [(synonyms: [String], color: Color)] = [
       (synonymsForYellow, .yellow),
       (synonymsForOrange, .orange),
       (synonymsForBrown, .customBrown),
@@ -168,8 +168,8 @@ enum ColorParser {
     // Check if any words that describe colors are present, and
     // if so add the corresponding color to the return-collection.
     for colorCombination in colorCombinations {
-      if words.hasAtLeastOneItem(fromArray: colorCombination.0) {
-        colors.append(colorCombination.1)
+      if words.hasAtLeastOneItem(fromArray: colorCombination.synonyms) {
+        colors.append(colorCombination.color)
       }
     }
 
