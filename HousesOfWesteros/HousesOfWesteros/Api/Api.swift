@@ -14,13 +14,12 @@ class Api {
   static let shared = Api()
   private let urlCreator = URLCreator()
 
-  /// The number of houses that are
-  /// requested in a single call.
-  let pageSize = 30
+  // MARK: - Public Functions
 
   /// Gets 30 ASOIAF Houses.
   func getHouses(
-    page: Int
+    page: Int,
+    pageSize: Int
   ) -> AnyPublisher<[HouseBasic], Error>? {
     guard
       let url = urlCreator.getHousesURL(page: page, pageSize: pageSize)
@@ -64,6 +63,8 @@ class Api {
       completion(result)
     }
   }
+
+  // MARK: - Private Methods
 
   /// Does a GET-call to the specified URL
   /// and returns the type in a completion.

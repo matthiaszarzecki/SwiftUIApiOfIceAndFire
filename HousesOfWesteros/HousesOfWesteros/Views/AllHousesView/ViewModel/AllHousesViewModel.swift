@@ -10,14 +10,16 @@ import SwiftUI
 
 class AllHousesViewModel: ObservableObject {
   @Published private(set) var state = SearchResultsViewState()
+
   private var subscriptions = Set<AnyCancellable>()
+  private let pageSize = 30
 
   public func fetchNextPageIfPossible() {
     guard state.canLoadNextPage else {
       return
     }
 
-    if let publisher = Api.shared.getHouses(page: state.page) {
+    if let publisher = Api.shared.getHouses(page: state.page, pageSize: pageSize) {
       publisher
         .sink(
           receiveCompletion: onReceive,
@@ -54,7 +56,7 @@ class AllHousesViewModel: ObservableObject {
   private func onReceive(_ batch: [HouseBasic]) {
     state.houses += batch
     state.page += 1
-    state.canLoadNextPage = batch.count == Api.shared.pageSize
+    state.canLoadNextPage = batch.count == pageSize
   }
 
   struct SearchResultsViewState {
