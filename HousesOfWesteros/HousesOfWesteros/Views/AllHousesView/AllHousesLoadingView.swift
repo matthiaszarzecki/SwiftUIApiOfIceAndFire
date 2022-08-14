@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct AllHousesLoadingView: View {
+  private let numberOfPlacerholders = 14
+
   var body: some View {
     List {
-      ForEach(0..<14, id: \.self) { _ in
+      ForEach(0..<numberOfPlacerholders, id: \.self) { _ in
         HStack {
           Circle()
             .frame(width: 32, height: 32, alignment: .center)
             .foregroundColor(.redactedGray)
           Spacer()
           Text("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+            .minimumScaleFactor(0.5)
             .redacted(reason: .placeholder)
           Spacer()
           Image(systemName: "chevron.right")
             .foregroundColor(.redactedGray)
         }
+        .frame(height: 36)
       }
     }
   }
