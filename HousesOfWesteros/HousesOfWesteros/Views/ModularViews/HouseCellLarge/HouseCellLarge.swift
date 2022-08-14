@@ -30,6 +30,7 @@ struct HouseCellLarge: View {
       .shadow(color: .white, radius: 6)
       .frame(width: textElementWidth, height: 24, alignment: .leading)
       .multilineTextAlignment(.leading)
+      .minimumScaleFactor(0.5)
   }
 
   var body: some View {
@@ -38,12 +39,13 @@ struct HouseCellLarge: View {
         icon
           .padding()
 
-        VStack {
+        VStack(spacing: 0) {
           Text(viewModel.house.name)
             .shadow(color: .white, radius: 6)
             .font(.title2)
-            .frame(width: textElementWidth, height: 60, alignment: .topLeading)
+            .frame(width: textElementWidth, height: 60, alignment: .leading)
             .multilineTextAlignment(.leading)
+            .minimumScaleFactor(0.5)
 
           subtitleText
         }
@@ -63,6 +65,15 @@ struct HouseCellLarge_Previews: PreviewProvider {
     HouseCellLarge(
       viewModel: HouseCellLargeViewModel(
         .mockHouseBasicWithLinksAndWithCoatOfArms
+      ),
+      width: PreviewConstants.width
+    )
+    .padding()
+    .previewLayout(.sizeThatFits)
+
+    HouseCellLarge(
+      viewModel: HouseCellLargeViewModel(
+        .mockHouseWithLinksAndWithoutCoatOfArms
       ),
       width: PreviewConstants.width
     )
