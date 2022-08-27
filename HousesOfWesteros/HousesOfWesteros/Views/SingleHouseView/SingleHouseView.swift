@@ -57,7 +57,10 @@ struct SingleHouseDisplay: View {
               CurrentHeirSection(house: unwrappedHouseUpdated)
             }
             Group {
-              OverlordHouseSection(house: unwrappedHouseUpdated)
+              if let overlordHouse = unwrappedHouseUpdated.overlordHouse {
+                OverlordHouseSection(overlordHouse: overlordHouse)
+              }
+
               FoundedSection(house: unwrappedHouseUpdated)
               FounderSection(house: unwrappedHouseUpdated)
               DiedOutSection(house: unwrappedHouseUpdated)

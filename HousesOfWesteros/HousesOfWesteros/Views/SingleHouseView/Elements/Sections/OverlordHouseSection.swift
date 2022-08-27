@@ -8,21 +8,19 @@
 import SwiftUI
 
 struct OverlordHouseSection: View {
-  let house: HouseUpdated
+  let overlordHouse: HouseBasic
 
   var body: some View {
-    if let overlordHouse = house.overlordHouse {
-      Section(
-        header: SectionHeader(text: "Overlord")
+    Section(
+      header: SectionHeader(text: "Overlord")
+    ) {
+      NavigationLink(
+        destination: SingleHouseView(houseBasic: overlordHouse)
       ) {
-        NavigationLink(
-          destination: SingleHouseView(houseBasic: overlordHouse)
-        ) {
-          HouseCellBasic(
-            house: overlordHouse,
-            iconSize: .smallForNestedCells
-          )
-        }
+        HouseCellBasic(
+          house: overlordHouse,
+          iconSize: .smallForNestedCells
+        )
       }
     }
   }
@@ -32,7 +30,9 @@ struct OverlordHouseSection: View {
 struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      OverlordHouseSection(house: .houseUpdatedWithLinks)
+      OverlordHouseSection(
+        overlordHouse: HouseBasic.mockHouseBasicWithLinksAndWithCoatOfArms
+      )
     }
   }
 }
