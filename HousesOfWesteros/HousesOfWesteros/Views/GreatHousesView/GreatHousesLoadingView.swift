@@ -26,11 +26,13 @@ struct GreatHousesLoadingView: View {
         VStack {
           Text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.title2)
+            .minimumScaleFactor(0.5)
             .frame(width: textElementWidth, height: 60, alignment: .topLeading)
             .redacted(reason: .placeholder)
 
           Text("aaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.body)
+            .minimumScaleFactor(0.5)
             .frame(width: textElementWidth, height: 24, alignment: .leading)
             .redacted(reason: .placeholder)
         }
