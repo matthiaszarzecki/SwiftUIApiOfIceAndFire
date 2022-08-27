@@ -77,33 +77,25 @@ struct AllHousesDisplay: View {
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    Group {
-      AllHousesDisplay(
-        fetchResults: .mockHousesBasic,
-        isLoading: false,
-        showError: false,
-        initialLoadingPhase: false
-      ) {}
+    let configurations: [(
+      houses: [HouseBasic],
+      isLoading: Bool,
+      showError: Bool,
+      initialLoadingPhase: Bool
+    )] = [
+      (.mockHousesBasic, false, false, false),
+      (.mockHousesBasic, true, false, false),
+      (.mockHousesBasic, true, true, false),
+      (.mockHousesBasic, true, false, true)
+    ]
 
+    ForEach(0..<configurations.count, id: \.self) { index in
+      let configuration = configurations[index]
       AllHousesDisplay(
-        fetchResults: .mockHousesBasic,
-        isLoading: true,
-        showError: false,
-        initialLoadingPhase: false
-      ) {}
-
-      AllHousesDisplay(
-        fetchResults: .mockHousesBasic,
-        isLoading: true,
-        showError: true,
-        initialLoadingPhase: false
-      ) {}
-
-      AllHousesDisplay(
-        fetchResults: .mockHousesBasic,
-        isLoading: true,
-        showError: false,
-        initialLoadingPhase: true
+        fetchResults: configuration.houses,
+        isLoading: configuration.isLoading,
+        showError: configuration.showError,
+        initialLoadingPhase: configuration.initialLoadingPhase
       ) {}
     }
   }
