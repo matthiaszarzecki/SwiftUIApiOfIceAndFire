@@ -16,7 +16,7 @@ struct CharacterCell: View {
         initialLetter: character.initialLetter,
         size: 24
       )
-      Text("\(character.displayName)")
+      Text(character.displayName)
 
       if character.hasActor {
         Image(systemName: "person")

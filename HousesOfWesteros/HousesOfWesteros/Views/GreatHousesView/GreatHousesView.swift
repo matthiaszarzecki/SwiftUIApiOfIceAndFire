@@ -76,7 +76,7 @@ struct GreatHousesView_Previews: PreviewProvider {
     )
 
     GreatHousesDisplay(
-      houses: [HouseBasic]()
+      houses: .mockHousesEmtpyArray
     )
   }
 }

@@ -58,9 +58,12 @@ struct CircularColorDisplay: View {
 #if !TESTING
 struct CircularColorDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    CircularColorDisplay(colors: [.red, .green, .blue], size: 100)
-      .padding()
-      .previewLayout(.sizeThatFits)
+    CircularColorDisplay(
+      colors: .mockHeraldryColors,
+      size: 100
+    )
+    .padding()
+    .previewLayout(.sizeThatFits)
   }
 }
 #endif

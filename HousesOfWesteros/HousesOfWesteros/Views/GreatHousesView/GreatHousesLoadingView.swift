@@ -59,7 +59,7 @@ struct GreatHousesLoadingView: View {
 struct GreatHousesLoadingView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesLoadingView(
-      width: PreviewConstants.width
+      width: .previewWidth
     )
   }
 }

@@ -136,4 +136,6 @@ extension Array where Element == HouseBasic {
     .mockHouseWithoutLinksAndWithCoatOfArms,
     .mockHouseWithoutLinksWithoutCoatOfArms
   ]
+
+  static let mockHousesEmtpyArray: [HouseBasic] = []
 }
