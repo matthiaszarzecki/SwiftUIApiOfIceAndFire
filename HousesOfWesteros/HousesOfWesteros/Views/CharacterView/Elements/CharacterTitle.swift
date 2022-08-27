@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CharacterTitle: View {
-  var character: CharacterBasic
+  var name: String
 
   var body: some View {
-    Text(character.displayName)
+    Text(name)
       .font(.title)
   }
 }
@@ -19,7 +19,7 @@ struct CharacterTitle: View {
 #if !TESTING
 struct CharacterTitle_Previews: PreviewProvider {
   static var previews: some View {
-    CharacterTitle(character: .mockCharacter)
+    CharacterTitle(name: .mockCharacterName)
       .padding()
       .previewLayout(.sizeThatFits)
   }

@@ -32,7 +32,10 @@ struct HouseNameAndTitle: View {
           let unwrappedId = house.id,
           isGreatHouse
         {
-          HouseIconSigil(iconSize: .largeForHeader, id: unwrappedId)
+          HouseIconSigil(
+            iconSize: .largeForHeader,
+            id: unwrappedId
+          )
         }
 
         if house.name.exists {
@@ -40,7 +43,11 @@ struct HouseNameAndTitle: View {
             .font(.system(size: 200))
             .minimumScaleFactor(0.08)
             .multilineTextAlignment(.center)
-            .frame(width: adaptedWidth, height: 40, alignment: .center)
+            .frame(
+              width: adaptedWidth,
+              height: 40,
+              alignment: .center
+            )
         }
       }
 
