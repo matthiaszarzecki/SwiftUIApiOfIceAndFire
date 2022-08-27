@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct HeraldryColorsSection: View {
-  let house: HouseUpdated
+  let colors: [Color]
   let width: CGFloat
 
   var body: some View {
-    if house.heraldryColors.hasEntries {
+    if colors.hasEntries {
       Section(header: SectionHeader(text: "Heraldry Colors")) {
         HStack {
           let estimatedPadding: CGFloat = .spacing38 * 2
-          let colorWidth = (width - estimatedPadding) / CGFloat(house.heraldryColors.count)
+          let colorWidth = (width - estimatedPadding) / CGFloat(colors.count)
 
-          ForEach(house.heraldryColors, id: \.self) { color in
+          ForEach(colors, id: \.self) { color in
             Rectangle()
               .frame(width: colorWidth, height: 32, alignment: .center)
               .foregroundColor(color)
@@ -42,7 +42,7 @@ struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       HeraldryColorsSection(
-        house: .houseUpdatedWithLinks,
+        colors: HouseUpdated.houseUpdatedWithLinks.heraldryColors,
         width: PreviewConstants.width
       )
     }

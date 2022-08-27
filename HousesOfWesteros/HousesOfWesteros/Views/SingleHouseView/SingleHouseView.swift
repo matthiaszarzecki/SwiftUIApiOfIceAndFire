@@ -43,9 +43,9 @@ struct SingleHouseDisplay: View {
             Group {
               CoatOfArmsSection(house: unwrappedHouseUpdated)
 
-              if !unwrappedHouseUpdated.isGreatHouse {
+              if unwrappedHouseUpdated.heraldryColors.hasEntries {
                 HeraldryColorsSection(
-                  house: unwrappedHouseUpdated,
+                  colors: unwrappedHouseUpdated.heraldryColors,
                   width: geometry.size.width
                 )
               }
