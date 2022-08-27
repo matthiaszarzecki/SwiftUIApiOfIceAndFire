@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SeatsSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if house.seats.hasNonEmptyEntries {
@@ -19,7 +19,7 @@ struct SeatsSection: View {
       Section(header: sectionHeader) {
         ForEach(house.seats, id: \.self) { seat in
           // Occasionally a seat with a lowercase
-          // name ("unnamed castle") is returned.
+          // name (e.g. "unnamed castle") is returned.
           let displaySeat = seat.capitalizeFirstLetter()
 
           Text("🏰 \(displaySeat)")

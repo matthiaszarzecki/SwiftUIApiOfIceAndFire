@@ -20,12 +20,16 @@ struct LoadingSectionHeader: View {
   var body: some View {
     Text("AAAAAAAAAAAA")
       .modifier(SectionHeaderStyle())
+      .minimumScaleFactor(0.5)
       .redacted(reason: .placeholder)
   }
 }
 
 struct SectionHeaderStyle: ViewModifier {
   func body(content: Content) -> some View {
+    // The header alignment is fiddly, we need to do nonstandard
+    // offsets and paddings here for it to look alright.
+
     content
       .lineLimit(1)
       .textCase(nil)
@@ -44,11 +48,11 @@ struct SectionHeader_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       Section(header: SectionHeader(text: "Title")) {
-        Text("\(MockClasses.houseName)")
+        Text(MockClasses.houseName)
       }
 
       Section(header: LoadingSectionHeader()) {
-        Text("\(MockClasses.houseName)")
+        Text(MockClasses.houseName)
           .redacted(reason: .placeholder)
       }
     }

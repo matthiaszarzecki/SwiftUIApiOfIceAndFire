@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HouseIconColors: View {
-  var colors: [Color]
-  var initialLetter: String
-  var iconSize: IconSize
+  let colors: [Color]
+  let initialLetter: String
+  let iconSize: IconSize
 
   @ViewBuilder
   var body: some View {
@@ -41,7 +41,7 @@ struct HouseIconColors: View {
             alignment: .center
           )
 
-        Text("\(initialLetter)")
+        Text(initialLetter)
           .foregroundColor(.white)
       }
     }

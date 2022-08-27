@@ -36,7 +36,7 @@ struct SingleHouseDisplay: View {
         VStack {
           HouseNameAndTitle(
             house: unwrappedHouseUpdated,
-            width: geometry.size.width - 16 * 2
+            width: geometry.size.width - .spacing16 * 2
           )
 
           Form {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiedOutSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if house.diedOutPeriod.exists {

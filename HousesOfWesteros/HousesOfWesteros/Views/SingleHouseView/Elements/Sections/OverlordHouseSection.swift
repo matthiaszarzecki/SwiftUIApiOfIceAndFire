@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OverlordHouseSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if let overlordHouse = house.overlordHouse {

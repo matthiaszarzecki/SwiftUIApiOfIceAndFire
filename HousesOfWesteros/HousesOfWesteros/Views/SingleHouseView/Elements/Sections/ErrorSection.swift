@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ErrorSection: View {
-  var showError: Bool
+  let showError: Bool
   let updateData: () -> Void
 
   var body: some View {

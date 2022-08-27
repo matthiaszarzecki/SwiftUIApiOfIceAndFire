@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct HeraldryColorsSection: View {
-  var house: HouseUpdated
-  var width: CGFloat
+  let house: HouseUpdated
+  let width: CGFloat
 
   var body: some View {
     if house.heraldryColors.hasEntries {
       Section(header: SectionHeader(text: "Heraldry Colors")) {
         HStack {
-          let estimatedPadding: CGFloat = 76
+          let estimatedPadding: CGFloat = .spacing38 * 2
           let colorWidth = (width - estimatedPadding) / CGFloat(house.heraldryColors.count)
 
           ForEach(house.heraldryColors, id: \.self) { color in
@@ -25,7 +25,13 @@ struct HeraldryColorsSection: View {
               .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
           }
         }
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        .frame(
+          minWidth: 0,
+          maxWidth: .infinity,
+          minHeight: 0,
+          maxHeight: .infinity,
+          alignment: .center
+        )
       }
     }
   }

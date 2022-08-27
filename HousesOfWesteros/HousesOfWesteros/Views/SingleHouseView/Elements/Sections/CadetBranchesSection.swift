@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CadetBranchesSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
-    if let cadetBranches = house.cadetBranches,
-      cadetBranches.hasEntries {
+    if
+      let cadetBranches = house.cadetBranches,
+      cadetBranches.hasEntries
+    {
       let sectionHeader = cadetBranches.count > 1
         ? SectionHeader(text: "Cadet Branches: \(cadetBranches.count)")
         : SectionHeader(text: "Cadet Branch")

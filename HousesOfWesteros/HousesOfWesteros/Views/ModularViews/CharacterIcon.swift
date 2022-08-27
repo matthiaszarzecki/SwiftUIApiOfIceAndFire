@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CharacterIcon: View {
-  var initialLetter: String
-  var size: CGFloat
+  let initialLetter: String
+  let size: CGFloat
 
   var body: some View {
     ZStack {
@@ -18,7 +18,7 @@ struct CharacterIcon: View {
         .shadow(color: .westerosRed, radius: 6)
         .frame(width: size, height: size, alignment: .center)
 
-      Text("\(initialLetter)")
+      Text(initialLetter)
         .foregroundColor(.white)
     }
   }

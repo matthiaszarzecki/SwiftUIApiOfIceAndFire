@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HouseNameAndTitle: View {
-  var house: HouseUpdated
-  var width: CGFloat
+  let house: HouseUpdated
+  let width: CGFloat
 
-  var displayRegion: String {
+  private var displayRegion: String {
     // Very rarely a house has no region. We
     // add a default here to ensure the view
     // still works.
@@ -23,11 +23,15 @@ struct HouseNameAndTitle: View {
   var body: some View {
     VStack {
       let isGreatHouse = house.isGreatHouse
-      let adaptedWidth = isGreatHouse ? width - 72 : width
+      let adaptedWidth = isGreatHouse
+        ? width - .spacing36 * 2
+        : width
 
       HStack {
-        if let unwrappedId = house.id,
-          isGreatHouse {
+        if
+          let unwrappedId = house.id,
+          isGreatHouse
+        {
           HouseIconSigil(iconSize: .largeForHeader, id: unwrappedId)
         }
 
@@ -41,9 +45,9 @@ struct HouseNameAndTitle: View {
       }
 
       Text("of \(displayRegion)")
-        .padding(.bottom, 16)
+        .padding(.bottom, .spacing16)
     }
-    .padding(.top, 24)
+    .padding(.top, .spacing24)
 
     // In order for this to look good on the view above
     // on top of a Form this needs to be super-small and

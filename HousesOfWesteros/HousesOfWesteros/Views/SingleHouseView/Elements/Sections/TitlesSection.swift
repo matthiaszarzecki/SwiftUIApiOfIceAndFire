@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TitlesSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if house.titles.hasNonEmptyEntries {
@@ -19,7 +19,7 @@ struct TitlesSection: View {
       Section(header: sectionHeader) {
         ForEach(house.titles, id: \.self) { title in
           // Occasionally a title with a lowercase
-          // name ("the Knight of...") is returned.
+          // name (e.g. "the Knight of...") is returned.
           let displayTitle = title.capitalizeFirstLetter()
 
           Text("🎖️ \(displayTitle)")

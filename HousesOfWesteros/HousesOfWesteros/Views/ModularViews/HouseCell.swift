@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct HouseCellUpdated: View {
-  var house: HouseUpdated
-  var iconSize: IconSize
+  let house: HouseUpdated
+  let iconSize: IconSize
 
   @ViewBuilder
-  var icon: some View {
+  private var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
       HouseIconSigil(
@@ -32,7 +32,7 @@ struct HouseCellUpdated: View {
     HStack {
       icon
 
-      Text("\(house.name)")
+      Text(house.name)
 
       if house.containsSubViews {
         Image(systemName: "link")
@@ -43,11 +43,11 @@ struct HouseCellUpdated: View {
 }
 
 struct HouseCellBasic: View {
-  var house: HouseBasic
-  var iconSize: IconSize
+  let house: HouseBasic
+  let iconSize: IconSize
 
   @ViewBuilder
-  var icon: some View {
+  private var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
       HouseIconSigil(
@@ -67,7 +67,7 @@ struct HouseCellBasic: View {
     HStack {
       icon
 
-      Text("\(house.name)")
+      Text(house.name)
 
       if house.containsLinks {
         Image(systemName: "link")

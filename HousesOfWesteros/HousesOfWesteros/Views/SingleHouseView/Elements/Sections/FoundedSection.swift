@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FoundedSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if house.foundingPeriod.exists {

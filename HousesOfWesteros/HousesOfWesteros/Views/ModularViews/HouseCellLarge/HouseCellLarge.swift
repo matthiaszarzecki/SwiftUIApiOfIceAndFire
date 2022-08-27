@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HouseCellLarge: View {
-  var viewModel: HouseCellLargeViewModel
-  var width: CGFloat
+  let viewModel: HouseCellLargeViewModel
+  let width: CGFloat
 
   private var textElementWidth: CGFloat {
     width - 120

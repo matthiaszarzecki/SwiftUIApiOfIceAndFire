@@ -10,8 +10,8 @@ import SwiftUI
 /// Creates a pie chart from the entered colors,
 /// where each segment has the same size.
 struct CircularColorDisplay: View {
-  var colors: [Color]
-  var size: CGFloat
+  let colors: [Color]
+  let size: CGFloat
 
   /// The amount each segment will take up.
   private var degreesForEachElement: Double {

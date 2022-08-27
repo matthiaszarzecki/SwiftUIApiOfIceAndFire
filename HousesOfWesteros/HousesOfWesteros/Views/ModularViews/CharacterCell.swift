@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterCell: View {
-  var character: CharacterBasic
+  let character: CharacterBasic
 
   var body: some View {
     HStack {

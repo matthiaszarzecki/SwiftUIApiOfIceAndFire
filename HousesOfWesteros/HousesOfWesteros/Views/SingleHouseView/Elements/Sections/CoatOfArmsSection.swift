@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct CoatOfArmsSection: View {
-  var house: HouseUpdated
+  let house: HouseUpdated
 
   var body: some View {
     if house.coatOfArms.exists {
       Section(header: SectionHeader(text: "Coat of Arms")) {
-        Text("\(house.coatOfArms)")
+        Text(house.coatOfArms)
       }
     }
   }
