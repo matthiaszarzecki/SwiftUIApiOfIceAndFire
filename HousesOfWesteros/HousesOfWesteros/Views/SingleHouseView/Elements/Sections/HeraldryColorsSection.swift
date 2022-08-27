@@ -43,7 +43,7 @@ struct HeraldryColorsSection_Previews: PreviewProvider {
     Form {
       HeraldryColorsSection(
         colors: .mockHeraldryColors,
-        width: PreviewConstants.width
+        width: .previewWidth
       )
     }
   }

@@ -49,7 +49,9 @@ struct SectionHeader_Previews: PreviewProvider {
     let houseName: String = .mockHouseName
 
     Form {
-      Section(header: SectionHeader(text: "Title")) {
+      Section(
+        header: SectionHeader(text: "Title")
+      ) {
         Text(houseName)
       }
 

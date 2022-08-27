@@ -66,7 +66,7 @@ struct Title_Previews: PreviewProvider {
   static var previews: some View {
     HouseNameAndTitle(
       house: .houseUpdatedWithLinks,
-      width: PreviewConstants.width
+      width: .previewWidth
     )
     .offset(y: 50)
     .padding()

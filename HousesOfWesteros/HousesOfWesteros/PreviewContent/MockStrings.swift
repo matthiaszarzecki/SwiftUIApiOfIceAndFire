@@ -16,6 +16,7 @@ extension String {
   static let mockMotto = "No Foe May Pass"
   static let mockFoundingPeriod = "Coming of the Andals"
   static let mockDiedOutPeriod = "260 AC"
+  static let mockInitialLetter = "S"
 }
 
 extension Array where Element == String {

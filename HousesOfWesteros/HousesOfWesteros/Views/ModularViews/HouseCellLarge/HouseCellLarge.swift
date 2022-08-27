@@ -62,23 +62,19 @@ struct HouseCellLarge: View {
 #if !TESTING
 struct HouseCellLarge_Previews: PreviewProvider {
   static var previews: some View {
-    HouseCellLarge(
-      viewModel: HouseCellLargeViewModel(
-        .mockHouseBasicWithLinksAndWithCoatOfArms
-      ),
-      width: PreviewConstants.width
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
+    let houses: [HouseBasic] = [
+      .mockHouseBasicWithLinksAndWithCoatOfArms,
+      .mockHouseWithLinksAndWithoutCoatOfArms
+    ]
 
-    HouseCellLarge(
-      viewModel: HouseCellLargeViewModel(
-        .mockHouseWithLinksAndWithoutCoatOfArms
-      ),
-      width: PreviewConstants.width
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
+    ForEach(houses, id: \.self) { house in
+      HouseCellLarge(
+        viewModel: HouseCellLargeViewModel(house),
+        width: .previewWidth
+      )
+      .padding()
+      .previewLayout(.sizeThatFits)
+    }
   }
 }
 #endif
