@@ -69,7 +69,10 @@ struct SingleHouseDisplay: View {
                 FounderSection(founder: founder)
               }
 
-              DiedOutSection(house: unwrappedHouseUpdated)
+              if unwrappedHouseUpdated.diedOutPeriod.exists {
+                DiedOutSection(diedOutPeriod: unwrappedHouseUpdated.diedOutPeriod)
+              }
+
               AncestralWeaponsSection(house: unwrappedHouseUpdated)
               CadetBranchesSection(house: unwrappedHouseUpdated)
 

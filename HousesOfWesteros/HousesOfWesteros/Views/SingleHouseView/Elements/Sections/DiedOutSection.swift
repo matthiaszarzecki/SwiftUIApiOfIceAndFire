@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct DiedOutSection: View {
-  let house: HouseUpdated
+  let diedOutPeriod: String
 
   var body: some View {
-    if house.diedOutPeriod.exists {
-      Section(header: SectionHeader(text: "House Died out")) {
-        Text("☠️ \(house.diedOutPeriod)")
-      }
+    Section(header: SectionHeader(text: "House Died out")) {
+      Text("☠️ \(diedOutPeriod)")
     }
   }
 }
@@ -23,7 +21,7 @@ struct DiedOutSection: View {
 struct DiedOut_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      DiedOutSection(house: .houseUpdatedWithLinks)
+      DiedOutSection(diedOutPeriod: HouseUpdated.houseUpdatedWithLinks.diedOutPeriod)
     }
   }
 }
