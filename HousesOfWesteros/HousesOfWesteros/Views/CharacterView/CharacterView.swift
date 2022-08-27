@@ -26,8 +26,13 @@ struct CharacterView: View {
           .offset(y: -20)
 
         Form {
-          BornSection(character: character)
-          CultureSection(character: character)
+          if character.born.exists {
+            BornSection(born: character.born)
+          }
+
+          if character.culture.exists {
+            CultureSection(culture: character.culture)
+          }
 
           if character.died.exists {
             CharacterDeathSection(died: character.died)

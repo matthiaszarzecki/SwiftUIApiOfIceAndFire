@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct BornSection: View {
-  let character: CharacterBasic
+  let born: String
 
   var body: some View {
-    if character.born.exists {
-      Section(header: SectionHeader(text: "Born")) {
-        Text(character.born)
-      }
+    Section(
+      header: SectionHeader(text: "Born")
+    ) {
+      Text(born)
     }
   }
 }
@@ -23,7 +23,7 @@ struct BornSection: View {
 struct BornSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      BornSection(character: .mockCharacter)
+      BornSection(born: CharacterBasic.mockCharacter.born)
     }
   }
 }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CultureSection: View {
-  let character: CharacterBasic
+  let culture: String
 
   var body: some View {
-    if character.culture.exists {
-      Section(header: SectionHeader(text: "Culture")) {
-        Text(character.culture)
-      }
+    Section(
+      header: SectionHeader(text: "Culture")
+    ) {
+      Text(culture)
     }
   }
 }
@@ -23,7 +23,7 @@ struct CultureSection: View {
 struct CultureSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CultureSection(character: .mockCharacter)
+      CultureSection(culture: CharacterBasic.mockCharacter.culture)
     }
   }
 }
