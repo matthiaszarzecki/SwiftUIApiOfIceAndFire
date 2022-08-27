@@ -14,15 +14,7 @@ struct FounderSection: View {
     Section(
       header: SectionHeader(text: "Founded by")
     ) {
-      if founder.hasInformation {
-        NavigationLink(
-          destination: CharacterView(character: founder)
-        ) {
-          CharacterCell(character: founder)
-        }
-      } else {
-        CharacterCell(character: founder)
-      }
+      NavigationCharacterCell(character: founder)
     }
   }
 }

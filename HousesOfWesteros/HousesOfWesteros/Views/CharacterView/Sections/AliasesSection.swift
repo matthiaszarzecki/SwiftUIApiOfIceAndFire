@@ -12,8 +12,8 @@ struct AliasesSection: View {
 
   var body: some View {
     let sectionHeader = aliases.count > 1
-    ? SectionHeader(text: "Aliases: \(aliases.count)")
-    : SectionHeader(text: "Alias")
+      ? SectionHeader(text: "Aliases: \(aliases.count)")
+      : SectionHeader(text: "Alias")
 
     Section(header: sectionHeader) {
       ForEach(aliases, id: \.self) { alias in

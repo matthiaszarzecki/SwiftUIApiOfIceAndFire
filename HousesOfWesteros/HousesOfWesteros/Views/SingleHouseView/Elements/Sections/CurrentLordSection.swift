@@ -14,15 +14,7 @@ struct CurrentLordSection: View {
     Section(
       header: SectionHeader(text: "Current Lord")
     ) {
-      if currentLord.hasInformation {
-        NavigationLink(
-          destination: CharacterView(character: currentLord)
-        ) {
-          CharacterCell(character: currentLord)
-        }
-      } else {
-        CharacterCell(character: currentLord)
-      }
+      NavigationCharacterCell(character: currentLord)
     }
   }
 }

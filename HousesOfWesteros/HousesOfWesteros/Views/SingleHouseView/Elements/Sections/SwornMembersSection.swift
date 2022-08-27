@@ -18,15 +18,7 @@ struct SwornMembersSection: View {
 
       Section(header: sectionHeader) {
         ForEach(swornMembers, id: \.self) { character in
-          if character.hasInformation {
-            NavigationLink(
-              destination: CharacterView(character: character)
-            ) {
-              CharacterCell(character: character)
-            }
-          } else {
-            CharacterCell(character: character)
-          }
+          NavigationCharacterCell(character: character)
         }
       }
     }

@@ -14,15 +14,7 @@ struct CurrentHeirSection: View {
     Section(
       header: SectionHeader(text: "Current Heir")
     ) {
-      if heir.hasInformation {
-        NavigationLink(
-          destination: CharacterView(character: heir)
-        ) {
-          CharacterCell(character: heir)
-        }
-      } else {
-        CharacterCell(character: heir)
-      }
+      NavigationCharacterCell(character: heir)
     }
   }
 }
