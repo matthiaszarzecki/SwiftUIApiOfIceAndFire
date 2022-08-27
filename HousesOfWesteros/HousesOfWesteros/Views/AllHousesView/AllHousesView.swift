@@ -28,8 +28,8 @@ struct AllHousesView: View {
 struct AllHousesDisplay: View {
   let fetchResults: [HouseBasic]
   let isLoading: Bool
-  var showError: Bool
-  var initialLoadingPhase: Bool
+  let showError: Bool
+  let initialLoadingPhase: Bool
   let onScrolledAtBottom: () -> Void
 
   private let viewTitle = "All Houses of Westeros"

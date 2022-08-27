@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AboutView: View {
-  var shareRow: some View {
-    Button(action: shareApp) {
-      SettingsRow(
-        systemIcon: "square.and.arrow.up",
-        text: "Share"
-      )
-    }
+  private var shareRow: some View {
+    Button(
+      action: {
+        shareApp()
+      },
+      label: {
+        SettingsRow(
+          systemIcon: "square.and.arrow.up",
+          text: "Share"
+        )
+      }
+    )
   }
 
   /// Button that opens the AppStore, when running on an actual
@@ -22,7 +27,7 @@ struct AboutView: View {
   /// a link to a different website instead (appstore-links that
   /// work in a desktop-browser are not allowed on iOS Safari).
   @ViewBuilder
-  var appsAndGamesRow: some View {
+  private var appsAndGamesRow: some View {
     if Device.isSimulator {
       LinkSettingsRow(
         systemIcon: "square.grid.2x2.fill",
@@ -48,7 +53,7 @@ struct AboutView: View {
     }
   }
 
-  var twitterLink: some View {
+  private var twitterLink: some View {
     LinkSettingsRow(
       systemIcon: "number.square",
       text: "Twitter",
@@ -56,7 +61,7 @@ struct AboutView: View {
     )
   }
 
-  var githubLink: some View {
+  private var githubLink: some View {
     LinkSettingsRow(
       systemIcon: "chevron.left.forwardslash.chevron.right",
       text: "Github",
@@ -64,7 +69,7 @@ struct AboutView: View {
     )
   }
 
-  var youtubeLink: some View {
+  private var youtubeLink: some View {
     LinkSettingsRow(
       systemIcon: "film",
       text: "Youtube",
@@ -72,7 +77,7 @@ struct AboutView: View {
     )
   }
 
-  var linkedInLink: some View {
+  private var linkedInLink: some View {
     LinkSettingsRow(
       systemIcon: "doc.richtext",
       text: "LinkedIn",
@@ -80,7 +85,7 @@ struct AboutView: View {
     )
   }
 
-  var developedByLink: some View {
+  private var developedByLink: some View {
     LinkSettingsRow(
       systemIcon: "signature",
       text: "Matthias Zarzecki",
@@ -88,7 +93,7 @@ struct AboutView: View {
     )
   }
 
-  var apiLink: some View {
+  private var apiLink: some View {
     LinkSettingsRow(
       systemIcon: "chevron.left.slash.chevron.right",
       text: "The Api of Ice and Fire",
@@ -96,7 +101,7 @@ struct AboutView: View {
     )
   }
 
-  var appVersion: some View {
+  private var appVersion: some View {
     Text("Houses of Westeros - Version \(Bundle.appVersion)")
       .font(.caption)
   }
@@ -138,7 +143,7 @@ struct AboutView: View {
     }
   }
 
-  func shareApp() {
+  private func shareApp() {
     guard let data = URL(
       string: "https://github.com/matthiaszarzecki/SwiftUIApiOfIceAndFire"
     ) else {
@@ -149,7 +154,7 @@ struct AboutView: View {
       activityItems: [data],
       applicationActivities: nil
     )
-    UIApplication.shared.windows.first?.rootViewController?.present(
+    UIApplication.shared.currentUIWindow()?.rootViewController?.present(
       viewController,
       animated: true,
       completion: nil
