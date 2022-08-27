@@ -8,7 +8,7 @@
 import WidgetKit
 
 enum MockDevice {
-  static public let widgetSizes: [WidgetFamily] = [
+  static let widgetSizes: [WidgetFamily] = [
     .systemSmall,
     .systemMedium,
     .systemLarge

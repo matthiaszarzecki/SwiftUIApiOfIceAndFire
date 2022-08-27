@@ -40,7 +40,7 @@ opt_in_rules:
   - last_where
   - legacy_random
   - literal_expression_end_indentation
-  # - lower_acl_than_parent
+  - lower_acl_than_parent
   - multiline_arguments
   - multiline_function_chains
   - multiline_literal_brackets

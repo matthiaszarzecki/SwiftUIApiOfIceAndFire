@@ -14,7 +14,7 @@ class AllHousesViewModel: ObservableObject {
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
 
-  public func fetchNextPageIfPossible() {
+  internal func fetchNextPageIfPossible() {
     guard state.canLoadNextPage else {
       return
     }
