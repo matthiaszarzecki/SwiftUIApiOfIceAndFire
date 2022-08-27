@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct CadetBranchesSection: View {
-  let house: HouseUpdated
+  let cadetBranches: [HouseBasic]
 
   var body: some View {
-    if house.cadetBranches.hasEntries {
-      let sectionHeader = house.cadetBranches.count > 1
-        ? SectionHeader(text: "Cadet Branches: \(house.cadetBranches.count)")
-        : SectionHeader(text: "Cadet Branch")
+    let sectionHeader = cadetBranches.count > 1
+    ? SectionHeader(text: "Cadet Branches: \(cadetBranches.count)")
+    : SectionHeader(text: "Cadet Branch")
 
-      Section(header: sectionHeader) {
-        ForEach(house.cadetBranches, id: \.self) { cadetBranch in
-          NavigationLink(
-            destination: SingleHouseView(
-              houseBasic: cadetBranch
-            )
-          ) {
-            HouseCellBasic(
-              house: cadetBranch,
-              iconSize: .smallForNestedCells
-            )
-          }
+    Section(header: sectionHeader) {
+      ForEach(cadetBranches, id: \.self) { cadetBranch in
+        NavigationLink(
+          destination: SingleHouseView(
+            houseBasic: cadetBranch
+          )
+        ) {
+          HouseCellBasic(
+            house: cadetBranch,
+            iconSize: .smallForNestedCells
+          )
         }
       }
     }
@@ -39,7 +37,7 @@ struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       CadetBranchesSection(
-        house: .houseUpdatedWithLinks
+        cadetBranches: HouseUpdated.houseUpdatedWithLinks.cadetBranches
       )
     }
   }

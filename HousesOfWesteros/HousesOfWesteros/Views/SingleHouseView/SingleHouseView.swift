@@ -64,6 +64,7 @@ struct SingleHouseDisplay: View {
                 CurrentHeirSection(heir: heir)
               }
             }
+
             Group {
               if let overlordHouse = unwrappedHouseUpdated.overlordHouse {
                 OverlordHouseSection(overlordHouse: overlordHouse)
@@ -76,13 +77,18 @@ struct SingleHouseDisplay: View {
               if let founder = unwrappedHouseUpdated.foundedByCharacter {
                 FounderSection(founder: founder)
               }
+            }
 
+            Group {
               if unwrappedHouseUpdated.diedOutPeriod.exists {
                 DiedOutSection(diedOutPeriod: unwrappedHouseUpdated.diedOutPeriod)
               }
 
               AncestralWeaponsSection(house: unwrappedHouseUpdated)
-              CadetBranchesSection(house: unwrappedHouseUpdated)
+
+              if unwrappedHouseUpdated.cadetBranches.hasEntries {
+                CadetBranchesSection(cadetBranches: unwrappedHouseUpdated.cadetBranches)
+              }
 
               SwornMembersSection(
                 swornMembers: unwrappedHouseUpdated.swornMembers
