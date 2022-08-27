@@ -29,7 +29,10 @@ struct CharacterView: View {
           BornSection(character: character)
           CultureSection(character: character)
           CharacterDeathSection(character: character)
-          CharacterTitlesSections(character: character)
+
+          if character.titles.hasEntries {
+            CharacterTitlesSections(titles: character.titles)
+          }
 
           if character.aliases.hasEntries {
             AliasesSection(aliases: character.aliases)

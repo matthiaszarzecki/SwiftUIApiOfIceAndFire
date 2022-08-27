@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct CharacterTitlesSections: View {
-  let character: CharacterBasic
+  let titles: [String]
 
   var body: some View {
-    if character.titles.hasNonEmptyEntries {
-      let sectionHeader = character.titles.count > 1
-        ? SectionHeader(text: "Titles: \(character.titles.count)")
-        : SectionHeader(text: "Title")
+    let sectionHeader = titles.count > 1
+      ? SectionHeader(text: "Titles: \(titles.count)")
+      : SectionHeader(text: "Title")
 
-      Section(header: sectionHeader) {
-        ForEach(character.titles, id: \.self) { title in
-          Text("🎖️ \(title)")
-        }
+    Section(header: sectionHeader) {
+      ForEach(titles, id: \.self) { title in
+        Text("🎖️ \(title)")
       }
     }
   }
@@ -29,7 +27,7 @@ struct CharacterTitlesSections: View {
 struct CharacterTitlesSections_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CharacterTitlesSections(character: .mockCharacter)
+      CharacterTitlesSections(titles: CharacterBasic.mockCharacter.titles)
     }
   }
 }
