@@ -77,7 +77,9 @@ struct SingleHouseDisplay: View {
                 swornMembers: unwrappedHouseUpdated.swornMembers
               )
 
-              ErrorSection(showError: showError, updateData: updateData)
+              if showError {
+                ErrorSection { updateData() }
+              }
             }
           }
         }
