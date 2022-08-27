@@ -20,4 +20,6 @@ enum Constants {
   /// 395 - Tully of Riverrun
   /// 398 - Tyrell of Highgarden
   static let greatHouses = [7, 17, 169, 229, 285, 362, 378, 395, 398]
+
+  static let numberOfHouses = 444
 }

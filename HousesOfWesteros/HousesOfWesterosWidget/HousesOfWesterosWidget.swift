@@ -5,9 +5,9 @@
 //  Created by Matthias Zarzecki on 20.10.21.
 //
 
-import WidgetKit
-import SwiftUI
 import Intents
+import SwiftUI
+import WidgetKit
 
 struct Provider: IntentTimelineProvider {
   // Is shown as "redacted" when placing widget,
@@ -42,8 +42,7 @@ struct Provider: IntentTimelineProvider {
   ) {
     var entries: [SimpleEntry] = []
 
-    let numberOfHouses = 444
-    let id = Int.random(in: 0..<numberOfHouses)
+    let id = Int.random(in: 0..<Constants.numberOfHouses)
 
     Api.shared.getSingleHouse(id: id) { result in
       switch result {
