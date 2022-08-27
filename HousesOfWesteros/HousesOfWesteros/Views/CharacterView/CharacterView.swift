@@ -30,7 +30,10 @@ struct CharacterView: View {
           CultureSection(character: character)
           CharacterDeathSection(character: character)
           CharacterTitlesSections(character: character)
-          AliasesSection(character: character)
+
+          if character.aliases.hasEntries {
+            AliasesSection(aliases: character.aliases)
+          }
 
           if character.tvShowAppearances.hasEntries {
             TvShowAppearancesSection(
@@ -39,7 +42,7 @@ struct CharacterView: View {
           }
 
           if character.portrayedBy.hasEntries {
-            PortrayedBySection(character: character.portrayedBy)
+            PortrayedBySection(portrayedBy: character.portrayedBy)
           }
         }
       }
