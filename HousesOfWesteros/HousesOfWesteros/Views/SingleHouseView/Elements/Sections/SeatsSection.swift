@@ -31,7 +31,7 @@ struct SeatsSection: View {
 struct Seats_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      SeatsSection(seats: HouseUpdated.houseUpdatedWithLinks.seats)
+      SeatsSection(seats: .mockSeats)
     }
   }
 }

@@ -21,7 +21,7 @@ struct HouseMottoSection: View {
 struct HouseMotto_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      HouseMottoSection(motto: HouseUpdated.houseUpdatedWithLinks.motto)
+      HouseMottoSection(motto: .mockMotto)
     }
   }
 }

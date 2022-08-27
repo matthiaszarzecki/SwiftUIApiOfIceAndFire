@@ -28,7 +28,7 @@ struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       AncestralWeaponsSection(
-        ancestralWeapons: HouseUpdated.houseUpdatedWithLinks.ancestralWeapons
+        ancestralWeapons: .mockAncestralWeapons
       )
     }
   }

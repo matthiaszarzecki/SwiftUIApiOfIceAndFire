@@ -21,7 +21,7 @@ struct DiedOutSection: View {
 struct DiedOut_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      DiedOutSection(diedOutPeriod: HouseUpdated.houseUpdatedWithLinks.diedOutPeriod)
+      DiedOutSection(diedOutPeriod: .mockDiedOutPeriod)
     }
   }
 }

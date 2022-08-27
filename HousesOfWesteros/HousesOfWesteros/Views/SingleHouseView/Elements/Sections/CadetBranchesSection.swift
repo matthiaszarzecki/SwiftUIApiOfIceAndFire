@@ -16,7 +16,7 @@ struct CadetBranchesSection: View {
     : SectionHeader(text: "Cadet Branch")
 
     Section(header: sectionHeader) {
-      ForEach(cadetBranches, id: \.self) { cadetBranch in
+      ForEach(.cadetBranches, id: \.self) { cadetBranch in
         NavigationLink(
           destination: SingleHouseView(
             houseBasic: cadetBranch
@@ -37,7 +37,7 @@ struct CadetBranches_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       CadetBranchesSection(
-        cadetBranches: HouseUpdated.houseUpdatedWithLinks.cadetBranches
+        cadetBranches: .mockHousesBasic
       )
     }
   }
