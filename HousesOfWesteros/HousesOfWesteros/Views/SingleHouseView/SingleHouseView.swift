@@ -56,8 +56,13 @@ struct SingleHouseDisplay: View {
                 HouseMottoSection(motto: unwrappedHouseUpdated.motto)
               }
 
-              TitlesSection(titles: unwrappedHouseUpdated.titles)
-              SeatsSection(seats: unwrappedHouseUpdated.seats)
+              if unwrappedHouseUpdated.titles.hasEntries {
+                TitlesSection(titles: unwrappedHouseUpdated.titles)
+              }
+
+              if unwrappedHouseUpdated.seats.hasEntries {
+                SeatsSection(seats: unwrappedHouseUpdated.seats)
+              }
 
               if let currentLord = unwrappedHouseUpdated.currentLord {
                 CurrentLordSection(currentLord: currentLord)

@@ -11,19 +11,17 @@ struct SeatsSection: View {
   let seats: [String]
 
   var body: some View {
-    if seats.hasNonEmptyEntries {
-      let sectionHeader = seats.count > 1
-        ? SectionHeader(text: "Seats: \(seats.count)")
-        : SectionHeader(text: "Seat")
+    let sectionHeader = seats.count > 1
+    ? SectionHeader(text: "Seats: \(seats.count)")
+    : SectionHeader(text: "Seat")
 
-      Section(header: sectionHeader) {
-        ForEach(seats, id: \.self) { seat in
-          // Occasionally a seat with a lowercase
-          // name (e.g. "unnamed castle") is returned.
-          let displaySeat = seat.capitalizeFirstLetter()
+    Section(header: sectionHeader) {
+      ForEach(seats, id: \.self) { seat in
+        // Occasionally a seat with a lowercase
+        // name (e.g. "unnamed castle") is returned.
+        let displaySeat = seat.capitalizeFirstLetter()
 
-          Text("🏰 \(displaySeat)")
-        }
+        Text("🏰 \(displaySeat)")
       }
     }
   }

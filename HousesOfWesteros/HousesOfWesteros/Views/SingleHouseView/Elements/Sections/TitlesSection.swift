@@ -11,19 +11,17 @@ struct TitlesSection: View {
   let titles: [String]
 
   var body: some View {
-    if titles.hasNonEmptyEntries {
-      let sectionHeader = titles.count > 1
-        ? SectionHeader(text: "Titles: \(titles.count)")
-        : SectionHeader(text: "Title")
+    let sectionHeader = titles.count > 1
+    ? SectionHeader(text: "Titles: \(titles.count)")
+    : SectionHeader(text: "Title")
 
-      Section(header: sectionHeader) {
-        ForEach(titles, id: \.self) { title in
-          // Occasionally a title with a lowercase
-          // name (e.g. "the Knight of...") is returned.
-          let displayTitle = title.capitalizeFirstLetter()
+    Section(header: sectionHeader) {
+      ForEach(titles, id: \.self) { title in
+        // Occasionally a title with a lowercase
+        // name (e.g. "the Knight of...") is returned.
+        let displayTitle = title.capitalizeFirstLetter()
 
-          Text("🎖️ \(displayTitle)")
-        }
+        Text("🎖️ \(displayTitle)")
       }
     }
   }
