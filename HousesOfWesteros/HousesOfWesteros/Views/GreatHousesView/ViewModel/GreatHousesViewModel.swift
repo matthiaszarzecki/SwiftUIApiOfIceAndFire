@@ -8,9 +8,17 @@
 import Foundation
 
 class GreatHousesViewModel: ObservableObject {
+  struct GreatHousesViewState {
+    // The great houses are always supposed
+    // to be in the same order, therefore
+    // we create slots for them here.
+    var houses: [HouseBasic?] = Array(repeating: nil, count: Constants.greatHouses.count)
+  }
+
   @Published private(set) var state = GreatHousesViewState()
 
   private let downloader: SingleHouseBasicDownloaderProtocol
+
 
   init(downloader: SingleHouseBasicDownloaderProtocol) {
     self.downloader = downloader
@@ -29,12 +37,5 @@ class GreatHousesViewModel: ObservableObject {
         }
       }
     }
-  }
-
-  struct GreatHousesViewState {
-    // The great houses are always supposed
-    // to be in the same order, therefore
-    // we create slots for them here.
-    var houses: [HouseBasic?] = Array(repeating: nil, count: Constants.greatHouses.count)
   }
 }

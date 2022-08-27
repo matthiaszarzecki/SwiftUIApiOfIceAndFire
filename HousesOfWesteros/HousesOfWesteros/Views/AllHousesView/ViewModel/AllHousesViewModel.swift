@@ -9,11 +9,6 @@ import Combine
 import SwiftUI
 
 class AllHousesViewModel: ObservableObject {
-  private var subscriptions = Set<AnyCancellable>()
-  private let pageSize = 30
-
-  @Published private(set) var state = SearchResultsViewState()
-
   struct SearchResultsViewState {
     var houses: [HouseBasic] = []
     var page = 1
@@ -21,6 +16,11 @@ class AllHousesViewModel: ObservableObject {
     var showError = false
     var intitialLoadingPhase = true
   }
+
+  @Published private(set) var state = SearchResultsViewState()
+
+  private var subscriptions = Set<AnyCancellable>()
+  private let pageSize = 30
 
   internal func fetchNextPageIfPossible() {
     guard state.canLoadNextPage else {
