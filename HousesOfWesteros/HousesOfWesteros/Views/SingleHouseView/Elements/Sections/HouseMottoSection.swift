@@ -11,10 +11,8 @@ struct HouseMottoSection: View {
   let motto: String
 
   var body: some View {
-    if motto.exists {
-      Section(header: SectionHeader(text: "Words")) {
-        Text("🪶 \(motto)")
-      }
+    Section(header: SectionHeader(text: "Words")) {
+      Text("🪶 \(motto)")
     }
   }
 }

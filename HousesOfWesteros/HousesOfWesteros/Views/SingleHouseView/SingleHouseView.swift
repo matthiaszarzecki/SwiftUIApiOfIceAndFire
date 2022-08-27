@@ -52,7 +52,10 @@ struct SingleHouseDisplay: View {
                 )
               }
 
-              HouseMottoSection(motto: unwrappedHouseUpdated.motto)
+              if unwrappedHouseUpdated.motto.exists {
+                HouseMottoSection(motto: unwrappedHouseUpdated.motto)
+              }
+
               TitlesSection(titles: unwrappedHouseUpdated.titles)
               SeatsSection(seats: unwrappedHouseUpdated.seats)
 
