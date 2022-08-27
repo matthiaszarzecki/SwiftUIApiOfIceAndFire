@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct AncestralWeaponsSection: View {
-  let house: HouseUpdated
+  let ancestralWeapons: [String]
 
   var body: some View {
-    if house.ancestralWeapons.hasNonEmptyEntries {
-      let sectionHeader = house.ancestralWeapons.count > 1
-        ? SectionHeader(text: "Ancestral Weapons: \(house.ancestralWeapons.count)")
-        : SectionHeader(text: "Ancestral Weapon")
+    let sectionHeader = ancestralWeapons.count > 1
+    ? SectionHeader(text: "Ancestral Weapons: \(ancestralWeapons.count)")
+    : SectionHeader(text: "Ancestral Weapon")
 
-      Section(header: sectionHeader) {
-        ForEach(house.ancestralWeapons, id: \.self) { weapon in
-          Text("🗡️ \(weapon)")
-        }
+    Section(header: sectionHeader) {
+      ForEach(ancestralWeapons, id: \.self) { weapon in
+        Text("🗡️ \(weapon)")
       }
     }
   }
@@ -29,7 +27,9 @@ struct AncestralWeaponsSection: View {
 struct AncestralWeapons_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      AncestralWeaponsSection(house: .houseUpdatedWithLinks)
+      AncestralWeaponsSection(
+        ancestralWeapons: HouseUpdated.houseUpdatedWithLinks.ancestralWeapons
+      )
     }
   }
 }

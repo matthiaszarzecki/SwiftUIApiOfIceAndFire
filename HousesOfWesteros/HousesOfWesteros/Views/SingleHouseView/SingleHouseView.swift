@@ -84,7 +84,11 @@ struct SingleHouseDisplay: View {
                 DiedOutSection(diedOutPeriod: unwrappedHouseUpdated.diedOutPeriod)
               }
 
-              AncestralWeaponsSection(house: unwrappedHouseUpdated)
+              if unwrappedHouseUpdated.ancestralWeapons.hasEntries {
+                AncestralWeaponsSection(
+                  ancestralWeapons: unwrappedHouseUpdated.ancestralWeapons
+                )
+              }
 
               if unwrappedHouseUpdated.cadetBranches.hasEntries {
                 CadetBranchesSection(cadetBranches: unwrappedHouseUpdated.cadetBranches)
