@@ -8,6 +8,25 @@
 import SwiftUI
 
 class SingleHouseViewModel: ObservableObject {
+  struct SingleHouseViewState {
+    var houseUpdated: HouseUpdated?
+    var showError = false
+  }
+
+  /// Enum for updatable fields that are arrays.
+  private enum ArrayHouseFieldType {
+    case cadetBranches
+    case swornMembers
+  }
+
+  /// Enum for updatable fields that are not arrays.
+  private enum SingleHouseFieldType {
+    case founder
+    case currentLord
+    case heir
+    case overlord
+  }
+
   var houseBasic: HouseBasic
   @Published private(set) var state = SingleHouseViewState()
 
@@ -35,11 +54,6 @@ class SingleHouseViewModel: ObservableObject {
         self.updateArrayField(HouseBasic.self, ofType: .cadetBranches)
       }
     }
-  }
-
-  struct SingleHouseViewState {
-    var houseUpdated: HouseUpdated?
-    var showError = false
   }
 
   // MARK: - Single Field Update Functions
@@ -71,14 +85,6 @@ class SingleHouseViewModel: ObservableObject {
         }
       }
     }
-  }
-
-  /// Enum for updatable fields that are not arrays.
-  private enum SingleHouseFieldType {
-    case founder
-    case currentLord
-    case heir
-    case overlord
   }
 
   /// Returns the variables (and the therein saved
@@ -149,12 +155,6 @@ class SingleHouseViewModel: ObservableObject {
         }
       }
     }
-  }
-
-  /// Enum for updatable fields that are arrays.
-  private enum ArrayHouseFieldType {
-    case cadetBranches
-    case swornMembers
   }
 
   /// Returns the array (and the therein saved
