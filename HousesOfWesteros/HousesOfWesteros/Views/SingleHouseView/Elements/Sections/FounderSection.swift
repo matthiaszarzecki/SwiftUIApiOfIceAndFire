@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct FounderSection: View {
-  let house: HouseUpdated
+  let founder: CharacterBasic
 
   var body: some View {
-    if let character = house.foundedByCharacter {
-      Section(
-        header: SectionHeader(text: "Founded by")
-      ) {
-        if character.hasInformation {
-          NavigationLink(
-            destination: CharacterView(character: character)
-          ) {
-            CharacterCell(character: character)
-          }
-        } else {
-          CharacterCell(character: character)
+    Section(
+      header: SectionHeader(text: "Founded by")
+    ) {
+      if founder.hasInformation {
+        NavigationLink(
+          destination: CharacterView(character: founder)
+        ) {
+          CharacterCell(character: founder)
         }
+      } else {
+        CharacterCell(character: founder)
       }
     }
   }
@@ -33,7 +31,7 @@ struct FounderSection: View {
 struct Founder_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      FounderSection(house: .houseUpdatedWithLinks)
+      FounderSection(founder: .mockCharacter)
     }
   }
 }

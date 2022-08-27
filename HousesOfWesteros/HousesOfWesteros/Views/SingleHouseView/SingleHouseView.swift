@@ -62,7 +62,11 @@ struct SingleHouseDisplay: View {
               }
 
               FoundedSection(house: unwrappedHouseUpdated)
-              FounderSection(house: unwrappedHouseUpdated)
+
+              if let founder = unwrappedHouseUpdated.foundedByCharacter {
+                FounderSection(founder: founder)
+              }
+
               DiedOutSection(house: unwrappedHouseUpdated)
               AncestralWeaponsSection(house: unwrappedHouseUpdated)
               CadetBranchesSection(house: unwrappedHouseUpdated)
