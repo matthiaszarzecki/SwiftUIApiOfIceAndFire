@@ -38,21 +38,21 @@ struct CharacterView: View {
             CharacterDeathSection(died: character.died)
           }
 
-          if character.titles.hasEntries {
+          if character.titles.hasNonEmptyEntries {
             CharacterTitlesSections(titles: character.titles)
           }
 
-          if character.aliases.hasEntries {
+          if character.aliases.hasNonEmptyEntries {
             AliasesSection(aliases: character.aliases)
           }
 
-          if character.tvShowAppearances.hasEntries {
+          if character.tvShowAppearances.hasNonEmptyEntries {
             TvShowAppearancesSection(
               tvShowAppearances: character.tvShowAppearances
             )
           }
 
-          if character.portrayedBy.hasEntries {
+          if character.portrayedBy.hasNonEmptyEntries {
             PortrayedBySection(portrayedBy: character.portrayedBy)
           }
         }
