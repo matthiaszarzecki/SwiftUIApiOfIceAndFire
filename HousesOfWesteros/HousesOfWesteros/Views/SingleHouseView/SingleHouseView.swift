@@ -53,7 +53,11 @@ struct SingleHouseDisplay: View {
               HouseMottoSection(motto: unwrappedHouseUpdated.motto)
               TitlesSection(titles: unwrappedHouseUpdated.titles)
               SeatsSection(seats: unwrappedHouseUpdated.seats)
-              CurrentLordSection(house: unwrappedHouseUpdated)
+
+              if let currentLord = unwrappedHouseUpdated.currentLord {
+                CurrentLordSection(currentLord: unwrappedHouseUpdated.currentLord)
+              }
+
               CurrentHeirSection(house: unwrappedHouseUpdated)
             }
             Group {
