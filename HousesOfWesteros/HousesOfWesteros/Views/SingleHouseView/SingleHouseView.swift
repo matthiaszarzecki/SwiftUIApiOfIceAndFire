@@ -56,11 +56,11 @@ struct SingleHouseDisplay: View {
                 HouseMottoSection(motto: unwrappedHouseUpdated.motto)
               }
 
-              if unwrappedHouseUpdated.titles.hasEntries {
+              if unwrappedHouseUpdated.titles.hasNonEmptyEntries {
                 TitlesSection(titles: unwrappedHouseUpdated.titles)
               }
 
-              if unwrappedHouseUpdated.seats.hasEntries {
+              if unwrappedHouseUpdated.seats.hasNonEmptyEntries {
                 SeatsSection(seats: unwrappedHouseUpdated.seats)
               }
 
@@ -92,7 +92,7 @@ struct SingleHouseDisplay: View {
                 DiedOutSection(diedOutPeriod: unwrappedHouseUpdated.diedOutPeriod)
               }
 
-              if unwrappedHouseUpdated.ancestralWeapons.hasEntries {
+              if unwrappedHouseUpdated.ancestralWeapons.hasNonEmptyEntries {
                 AncestralWeaponsSection(
                   ancestralWeapons: unwrappedHouseUpdated.ancestralWeapons
                 )

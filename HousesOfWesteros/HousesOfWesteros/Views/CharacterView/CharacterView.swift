@@ -14,7 +14,7 @@ struct CharacterView: View {
   var body: some View {
     GeometryReader { geometry in
       VStack {
-        CharacterTitle(character: character)
+        CharacterTitle(name: character.displayName)
           .frame(
             width: geometry.size.width - .spacing16 * 2,
             height: 10,

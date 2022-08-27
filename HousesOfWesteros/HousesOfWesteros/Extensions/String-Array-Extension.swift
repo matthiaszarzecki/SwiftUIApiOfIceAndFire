@@ -12,9 +12,11 @@ extension Array where Element == String {
   /// Checks that there are >0 entries and the first
   /// one is not an empty string.
   var hasNonEmptyEntries: Bool {
-    if hasEntries,
+    if
+      hasEntries,
       let first = first,
-      first.exists {
+      first.exists
+    {
       return true
     }
 

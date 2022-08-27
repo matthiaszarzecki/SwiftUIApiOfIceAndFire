@@ -8,8 +8,8 @@
 import Foundation
 
 extension Array {
-  /// A Boolean value indicating whether
-  /// an array has entries.
+  /// A Boolean value indicating whether an array has entries.
+  /// Use hasNonEmptyEntries when this is a string-array.
   var hasEntries: Bool {
     !isEmpty
   }

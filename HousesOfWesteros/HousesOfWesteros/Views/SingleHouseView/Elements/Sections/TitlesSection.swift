@@ -12,8 +12,8 @@ struct TitlesSection: View {
 
   var body: some View {
     let sectionHeader = titles.count > 1
-    ? SectionHeader(text: "Titles: \(titles.count)")
-    : SectionHeader(text: "Title")
+      ? SectionHeader(text: "Titles: \(titles.count)")
+      : SectionHeader(text: "Title")
 
     Section(header: sectionHeader) {
       ForEach(titles, id: \.self) { title in
