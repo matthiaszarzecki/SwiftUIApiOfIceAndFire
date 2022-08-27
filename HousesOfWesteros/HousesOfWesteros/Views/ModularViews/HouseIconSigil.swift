@@ -24,7 +24,7 @@ struct HouseIconSigil_Previews: PreviewProvider {
   static var previews: some View {
     HouseIconSigil(
       iconSize: .largeForMajorCells,
-      id: MockClasses.idGreatHouse
+      id: .mockIdGreatHouse
     )
     .padding()
     .previewLayout(.sizeThatFits)

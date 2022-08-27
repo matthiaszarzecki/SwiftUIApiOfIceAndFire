@@ -46,13 +46,15 @@ struct SectionHeaderStyle: ViewModifier {
 #if !TESTING
 struct SectionHeader_Previews: PreviewProvider {
   static var previews: some View {
+    let houseName: String = .mockHouseName
+
     Form {
       Section(header: SectionHeader(text: "Title")) {
-        Text(MockClasses.houseName)
+        Text(houseName)
       }
 
       Section(header: LoadingSectionHeader()) {
-        Text(MockClasses.houseName)
+        Text(houseName)
           .redacted(reason: .placeholder)
       }
     }

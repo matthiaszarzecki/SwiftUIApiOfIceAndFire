@@ -58,7 +58,7 @@
 		6E90CB622720662C008D5585 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E36262597D800C285D8 /* ColorParser.swift */; };
 		6E90CB6327206635008D5585 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9FF7B1262CCB7900CA7743 /* Constants.swift */; };
 		6E90CB652720663A008D5585 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1DED262597D700C285D8 /* Color-Extension.swift */; };
-		6E90CB6627206D91008D5585 /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E34262597D800C285D8 /* MockClasses.swift */; };
+		6E90CB6627206D91008D5585 /* MockInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E34262597D800C285D8 /* MockInt.swift */; };
 		6E90CB6727206E63008D5585 /* HouseIconColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E29262597D800C285D8 /* HouseIconColors.swift */; };
 		6E90CB6827206E65008D5585 /* IconSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E7012635DBB80057D715 /* IconSize.swift */; };
 		6E90CB6927206E8B008D5585 /* CharacterBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3C262597D800C285D8 /* CharacterBasic.swift */; };
@@ -76,6 +76,8 @@
 		6EB5E70C263615FE0057D715 /* HouseCellLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */; };
 		6EB8C6F828BA32300024B79C /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8C6F728BA32300024B79C /* UIApplicationExtension.swift */; };
 		6EB8C6FA28BA47100024B79C /* MockColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8C6F928BA47100024B79C /* MockColors.swift */; };
+		6EB8C6FD28BA48370024B79C /* MockStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8C6FC28BA48370024B79C /* MockStrings.swift */; };
+		6EB8C6FE28BA4A370024B79C /* MockStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB8C6FC28BA48370024B79C /* MockStrings.swift */; };
 		6EBD6EB6272072CA000B9C1D /* String-Extension-Main-App-Target-Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBD6EB5272072CA000B9C1D /* String-Extension-Main-App-Target-Only.swift */; };
 		6ED491C927E3CAC100ECC763 /* MockHouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */; };
 		6ED491CB27E3CB1400ECC763 /* MockHouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */; };
@@ -140,7 +142,7 @@
 		CC0E1E73262597D800C285D8 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E2E262597D800C285D8 /* SectionHeader.swift */; };
 		CC0E1E74262597D800C285D8 /* HousesOfWesterosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E30262597D800C285D8 /* HousesOfWesterosApp.swift */; };
 		CC0E1E75262597D800C285D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */; };
-		CC0E1E76262597D800C285D8 /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E34262597D800C285D8 /* MockClasses.swift */; };
+		CC0E1E76262597D800C285D8 /* MockInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E34262597D800C285D8 /* MockInt.swift */; };
 		CC0E1E77262597D800C285D8 /* ColorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E36262597D800C285D8 /* ColorParser.swift */; };
 		CC0E1E78262597D800C285D8 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E38262597D800C285D8 /* RequestMethod.swift */; };
 		CC0E1E79262597D800C285D8 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E39262597D800C285D8 /* Api.swift */; };
@@ -240,6 +242,7 @@
 		6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCellLarge.swift; sourceTree = "<group>"; };
 		6EB8C6F728BA32300024B79C /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		6EB8C6F928BA47100024B79C /* MockColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockColors.swift; sourceTree = "<group>"; };
+		6EB8C6FC28BA48370024B79C /* MockStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStrings.swift; sourceTree = "<group>"; };
 		6EBD6EB5272072CA000B9C1D /* String-Extension-Main-App-Target-Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension-Main-App-Target-Only.swift"; sourceTree = "<group>"; };
 		6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseBasic.swift; sourceTree = "<group>"; };
 		6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseUpdated.swift; sourceTree = "<group>"; };
@@ -307,7 +310,7 @@
 		CC0E1E2E262597D800C285D8 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		CC0E1E30262597D800C285D8 /* HousesOfWesterosApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesOfWesterosApp.swift; sourceTree = "<group>"; };
 		CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CC0E1E34262597D800C285D8 /* MockClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClasses.swift; sourceTree = "<group>"; };
+		CC0E1E34262597D800C285D8 /* MockInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockInt.swift; sourceTree = "<group>"; };
 		CC0E1E36262597D800C285D8 /* ColorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorParser.swift; sourceTree = "<group>"; };
 		CC0E1E38262597D800C285D8 /* RequestMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		CC0E1E39262597D800C285D8 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -779,10 +782,11 @@
 			isa = PBXGroup;
 			children = (
 				6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */,
-				CC0E1E34262597D800C285D8 /* MockClasses.swift */,
 				6EB8C6F928BA47100024B79C /* MockColors.swift */,
 				6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */,
 				6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */,
+				CC0E1E34262597D800C285D8 /* MockInt.swift */,
+				6EB8C6FC28BA48370024B79C /* MockStrings.swift */,
 				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
 				CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */,
 			);
@@ -1012,7 +1016,7 @@
 				6E90CB592720646B008D5585 /* Api.swift in Sources */,
 				6E10E5EF28B9FBE600EF6A70 /* MockDevice.swift in Sources */,
 				6E10E5EA28B9F95300EF6A70 /* CGFloat-Extension.swift in Sources */,
-				6E90CB6627206D91008D5585 /* MockClasses.swift in Sources */,
+				6E90CB6627206D91008D5585 /* MockInt.swift in Sources */,
 				6E90CB6127206625008D5585 /* URLResponse-Optional-Extension.swift in Sources */,
 				6ED491D127E3D71400ECC763 /* MockCharacterBasic.swift in Sources */,
 				6E90CB5A272065DC008D5585 /* HouseBasic.swift in Sources */,
@@ -1029,6 +1033,7 @@
 				6E90CB5027206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */,
 				6E90CB4B27206422008D5585 /* HousesOfWesterosWidget.swift in Sources */,
 				6E90CB5D27206608008D5585 /* Data-Extension.swift in Sources */,
+				6EB8C6FE28BA4A370024B79C /* MockStrings.swift in Sources */,
 				6E90CB5C27206600008D5585 /* RequestMethod.swift in Sources */,
 				6E10E5EB28B9FA4A00EF6A70 /* View-Extension.swift in Sources */,
 				6E90CB5B272065F7008D5585 /* NetworkError.swift in Sources */,
@@ -1103,13 +1108,14 @@
 				CC0E1E4C262597D800C285D8 /* AllHousesView.swift in Sources */,
 				CC0E1E72262597D800C285D8 /* TinyLoadingIndicator.swift in Sources */,
 				CC0E1E44262597D800C285D8 /* View-Extension.swift in Sources */,
-				CC0E1E76262597D800C285D8 /* MockClasses.swift in Sources */,
+				CC0E1E76262597D800C285D8 /* MockInt.swift in Sources */,
 				CC0E1E43262597D800C285D8 /* Array-Extension.swift in Sources */,
 				CC0E1E5B262597D800C285D8 /* SingleHouseView.swift in Sources */,
 				CC0E1E56262597D800C285D8 /* TvShowAppearancesSection.swift in Sources */,
 				CC0E1E42262597D800C285D8 /* Color-Extension.swift in Sources */,
 				6EB8C6FA28BA47100024B79C /* MockColors.swift in Sources */,
 				CC0E1E6A262597D800C285D8 /* OverlordHouseSection.swift in Sources */,
+				6EB8C6FD28BA48370024B79C /* MockStrings.swift in Sources */,
 				CC0E1E7B262597D800C285D8 /* CharacterBasic.swift in Sources */,
 				6E90CB5127206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */,
 				6EB5E7072635DFBE0057D715 /* PreviewConstants.swift in Sources */,
