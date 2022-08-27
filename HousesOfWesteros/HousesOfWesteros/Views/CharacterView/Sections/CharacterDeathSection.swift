@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CharacterDeathSection: View {
-  let character: CharacterBasic
+  let died: String
 
   var body: some View {
-    if character.died.exists {
-      Section(header: SectionHeader(text: "Died")) {
-        Text("☠️ \(character.died)")
-      }
+    Section(
+      header: SectionHeader(text: "Died")
+    ) {
+      Text("☠️ \(died)")
     }
   }
 }
@@ -23,7 +23,7 @@ struct CharacterDeathSection: View {
 struct CharacterDeathSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CharacterDeathSection(character: .mockCharacter)
+      CharacterDeathSection(died: CharacterBasic.mockCharacter.died)
     }
   }
 }

@@ -28,7 +28,10 @@ struct CharacterView: View {
         Form {
           BornSection(character: character)
           CultureSection(character: character)
-          CharacterDeathSection(character: character)
+
+          if character.died.exists {
+            CharacterDeathSection(died: character.died)
+          }
 
           if character.titles.hasEntries {
             CharacterTitlesSections(titles: character.titles)
