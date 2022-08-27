@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct TvShowAppearancesSection: View {
-  let character: CharacterBasic
+  let tvShowAppearances: [String]
 
   var body: some View {
-    if character.tvShowAppearances.hasNonEmptyEntries {
-      Section(
-        header: SectionHeader(text: "TV Show Appearances")
-      ) {
-        ForEach(character.tvShowAppearances, id: \.self) { appearance in
-          Text("📺 \(appearance)")
-        }
+    Section(
+      header: SectionHeader(text: "TV Show Appearances")
+    ) {
+      ForEach(tvShowAppearances, id: \.self) { appearance in
+        Text("📺 \(appearance)")
       }
     }
   }
