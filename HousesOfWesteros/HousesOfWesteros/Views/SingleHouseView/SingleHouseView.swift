@@ -55,7 +55,7 @@ struct SingleHouseDisplay: View {
               SeatsSection(seats: unwrappedHouseUpdated.seats)
 
               if let currentLord = unwrappedHouseUpdated.currentLord {
-                CurrentLordSection(currentLord: unwrappedHouseUpdated.currentLord)
+                CurrentLordSection(currentLord: currentLord)
               }
 
               CurrentHeirSection(house: unwrappedHouseUpdated)
