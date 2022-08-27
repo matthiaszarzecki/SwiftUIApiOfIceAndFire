@@ -41,7 +41,9 @@ struct SingleHouseDisplay: View {
 
           Form {
             Group {
-              CoatOfArmsSection(house: unwrappedHouseUpdated)
+              if unwrappedHouseUpdated.coatOfArms.exists {
+                CoatOfArmsSection(coatOfArms: unwrappedHouseUpdated.coatOfArms)
+              }
 
               if unwrappedHouseUpdated.heraldryColors.hasEntries {
                 HeraldryColorsSection(

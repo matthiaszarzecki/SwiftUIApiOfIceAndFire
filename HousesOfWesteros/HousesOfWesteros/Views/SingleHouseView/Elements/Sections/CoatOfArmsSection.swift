@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CoatOfArmsSection: View {
-  let house: HouseUpdated
+  let coatOfArms: String
 
   var body: some View {
-    if house.coatOfArms.exists {
-      Section(header: SectionHeader(text: "Coat of Arms")) {
-        Text(house.coatOfArms)
-      }
+    Section(
+      header: SectionHeader(text: "Coat of Arms")
+    ) {
+      Text(coatOfArms)
     }
   }
 }
@@ -23,7 +23,7 @@ struct CoatOfArmsSection: View {
 struct CoatOfArms_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CoatOfArmsSection(house: .houseUpdatedWithLinks)
+      CoatOfArmsSection(coatOfArms: HouseUpdated.houseUpdatedWithLinks.coatOfArms)
     }
   }
 }
