@@ -27,7 +27,7 @@ struct CharacterTitlesSections: View {
 struct CharacterTitlesSections_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CharacterTitlesSections(titles: CharacterBasic.mockCharacter.titles)
+      CharacterTitlesSections(titles: .mockTitles)
     }
   }
 }

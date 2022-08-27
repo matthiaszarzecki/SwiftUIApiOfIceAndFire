@@ -23,7 +23,7 @@ struct CultureSection: View {
 struct CultureSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CultureSection(culture: CharacterBasic.mockCharacter.culture)
+      CultureSection(culture: .mockCulture)
     }
   }
 }

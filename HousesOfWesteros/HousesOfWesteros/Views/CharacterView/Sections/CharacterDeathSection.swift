@@ -23,7 +23,7 @@ struct CharacterDeathSection: View {
 struct CharacterDeathSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CharacterDeathSection(died: CharacterBasic.mockCharacter.died)
+      CharacterDeathSection(died: .mockDied)
     }
   }
 }

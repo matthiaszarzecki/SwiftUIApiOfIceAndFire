@@ -9,28 +9,15 @@ import Foundation
 
 extension CharacterBasic {
   static let mockCharacter = CharacterBasic(
-    url: "https://www.anapioficeandfire.com/api/characters/290",
-    name: "Delonne Allyrion",
-    culture: "Northmen",
-    born: "In 283 AC",
-    died: "In 372 AC",
-    titles: ["Lord Commander of the Night's Watch"],
-    aliases: [
-      "Lord Snow",
-      "Ned Stark's Bastard",
-      "The Snow of Winterfell",
-      "The Crow-Come-Over",
-      "The 998th Lord Commander of the Night's Watch"
-    ],
-    tvShowAppearances: [
-      "Season 1",
-      "Season 2",
-      "Season 3",
-      "Season 4",
-      "Season 5",
-      "Season 6"
-    ],
-    portrayedBy: ["Kit Harington"],
+    url: .mockCharacterLink,
+    name: .mockCharacterName,
+    culture: .mockCulture,
+    born: .mockBorn,
+    died: .mockBorn,
+    titles: .mockCharacterTitles,
+    aliases: .mockAliases,
+    tvShowAppearances: .mockTvShowAppearances,
+    portrayedBy: .mockPortrayedBy,
     father: "https://www.anapioficeandfire.com/api/characters/836",
     mother: "https://www.anapioficeandfire.com/api/characters/112",
     spouse: "https://www.anapioficeandfire.com/api/characters/66",
@@ -45,7 +32,7 @@ extension CharacterBasic {
   )
 
   static let mockCharacterWithNoData = CharacterBasic(
-    url: "https://www.anapioficeandfire.com/api/characters/290",
+    url: .mockCharacterLink,
     name: "",
     culture: "",
     born: "",
@@ -63,13 +50,13 @@ extension CharacterBasic {
   )
 
   static let mockCharacterWithNoNameButAlias = CharacterBasic(
-    url: "https://www.anapioficeandfire.com/api/characters/290",
+    url: .mockCharacterLink,
     name: "",
     culture: "",
     born: "",
     died: "",
     titles: [],
-    aliases: ["The Knight"],
+    aliases: .mockAliases,
     tvShowAppearances: [],
     portrayedBy: [],
     father: "",

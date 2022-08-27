@@ -17,6 +17,11 @@ extension String {
   static let mockFoundingPeriod = "Coming of the Andals"
   static let mockDiedOutPeriod = "260 AC"
   static let mockInitialLetter = "S"
+
+  static let mockCharacterName = "Delonne Allyrion"
+  static let mockCulture = "Northmen"
+  static let mockBorn = "In 283 AC"
+  static let mockDied = "In 372 AC"
 }
 
 extension Array where Element == String {
@@ -36,4 +41,25 @@ extension Array where Element == String {
     "Blackfyre",
     "Whitefyre"
   ]
+
+  static let mockCharacterTitles = ["Lord Commander of the Night's Watch"]
+
+  static let mockAliases = [
+    "Lord Snow",
+    "Ned Stark's Bastard",
+    "The Snow of Winterfell",
+    "The Crow-Come-Over",
+    "The 998th Lord Commander of the Night's Watch"
+  ]
+
+  static let mockTvShowAppearances = [
+    "Season 1",
+    "Season 2",
+    "Season 3",
+    "Season 4",
+    "Season 5",
+    "Season 6"
+  ]
+
+  static let mockPortrayedBy = ["Kit Harington"]
 }
