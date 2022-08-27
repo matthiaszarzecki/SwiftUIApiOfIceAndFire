@@ -82,24 +82,65 @@ struct SimpleEntry: TimelineEntry {
 struct HousesOfWesterosWidgetEntryView: View {
   var entry: Provider.Entry
 
-  var body: some View {
-    ZStack {
-      HouseIconColors(
-        colors: entry.house.heraldryColors,
-        initialLetter: entry.house.initialLetter,
-        iconSize: .widgetBackground
-      )
-      VStack {
-        Text("House of the Day:")
-          .font(.caption)
-          .shadow(color: .white, radius: 5)
+  @Environment(\.widgetFamily) var widgetFamily
 
-        Text(entry.house.name)
-          .font(.caption)
-          .shadow(color: .white, radius: 5)
+  @ViewBuilder
+  var body: some View {
+    switch widgetFamily {
+    case .systemSmall, .systemMedium:
+      GeometryReader { geometry in
+        ZStack {
+          HouseIconColors(
+            colors: entry.house.heraldryColors,
+            initialLetter: entry.house.initialLetter,
+            iconSize: .widgetBackgroundSmall
+          )
+          VStack(spacing: .spacing8) {
+            Text("House of the Day:")
+              .font(.system(size: 14))
+              .multilineTextAlignment(.center)
+              .shadow(color: .white, radius: 5)
+
+            Text(entry.house.name)
+              .font(.caption)
+              .multilineTextAlignment(.center)
+              .shadow(color: .white, radius: 5)
+          }
+        }
+        .frame(
+          width: geometry.size.width,
+          height: geometry.size.height,
+          alignment: .center
+        )
+        .background(
+          Image("background_01")
+            .resizable(resizingMode: .tile)
+        )
       }
+    case .systemLarge:
+      ZStack {
+        HouseIconColors(
+          colors: entry.house.heraldryColors,
+          initialLetter: entry.house.initialLetter,
+          iconSize: .widgetBackgroundLarge
+        )
+        VStack(spacing: .spacing8) {
+          Text("House of the Day:")
+            .font(.system(size: 14))
+            .multilineTextAlignment(.center)
+            .shadow(color: .white, radius: 5)
+
+          Text(entry.house.name)
+            .font(.caption)
+            .multilineTextAlignment(.center)
+            .shadow(color: .white, radius: 5)
+        }
+      }
+    case .systemExtraLarge:
+      Text("XLarge")
+    @unknown default:
+      Text("Default")
     }
-    .padding()
   }
 }
 
@@ -126,32 +167,18 @@ struct HousesOfWesterosWidget: Widget {
 #if !TESTING
 struct HousesOfWesterosWidget_Previews: PreviewProvider {
   static var previews: some View {
-    HousesOfWesterosWidgetEntryView(
-      entry: SimpleEntry(
-        date: Date(),
-        house: .mockHouseBasicWithLinksAndWithCoatOfArms,
-        configuration: ConfigurationIntent()
+    ForEach(MockDevice.widgetSizes, id: \.self) { widgetSize in
+      HousesOfWesterosWidgetEntryView(
+        entry: SimpleEntry(
+          date: Date(),
+          house: .mockHouseBasicWithLinksAndWithCoatOfArms,
+          configuration: ConfigurationIntent()
+        )
       )
-    )
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
-
-    HousesOfWesterosWidgetEntryView(
-      entry: SimpleEntry(
-        date: Date(),
-        house: .mockHouseBasicWithLinksAndWithCoatOfArms,
-        configuration: ConfigurationIntent()
+      .previewContext(
+        WidgetPreviewContext(family: widgetSize)
       )
-    )
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
-
-    HousesOfWesterosWidgetEntryView(
-      entry: SimpleEntry(
-        date: Date(),
-        house: .mockHouseBasicWithLinksAndWithCoatOfArms,
-        configuration: ConfigurationIntent()
-      )
-    )
-    .previewContext(WidgetPreviewContext(family: .systemLarge))
+    }
   }
 }
 #endif
