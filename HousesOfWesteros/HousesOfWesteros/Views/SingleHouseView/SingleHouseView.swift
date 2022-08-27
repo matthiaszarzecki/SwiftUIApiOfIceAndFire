@@ -90,9 +90,11 @@ struct SingleHouseDisplay: View {
                 CadetBranchesSection(cadetBranches: unwrappedHouseUpdated.cadetBranches)
               }
 
-              SwornMembersSection(
-                swornMembers: unwrappedHouseUpdated.swornMembers
-              )
+              if unwrappedHouseUpdated.swornMembers.hasEntries {
+                SwornMembersSection(
+                  swornMembers: unwrappedHouseUpdated.swornMembers
+                )
+              }
 
               if showError {
                 ErrorSection { updateData() }
