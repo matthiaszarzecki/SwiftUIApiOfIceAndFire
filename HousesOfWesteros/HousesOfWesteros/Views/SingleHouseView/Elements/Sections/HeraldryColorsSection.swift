@@ -42,7 +42,7 @@ struct HeraldryColorsSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       HeraldryColorsSection(
-        colors: HouseUpdated.houseUpdatedWithLinks.heraldryColors,
+        colors: .mockHeraldryColors,
         width: PreviewConstants.width
       )
     }
