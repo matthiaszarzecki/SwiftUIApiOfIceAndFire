@@ -191,11 +191,11 @@ class SingleHouseViewModel: ObservableObject {
     switch type {
     case .cadetBranches:
       if let houseBasic = value as? HouseBasic {
-        self.state.houseUpdated?.cadetBranches?.append(houseBasic)
+        self.state.houseUpdated?.cadetBranches.append(houseBasic)
       }
     case .swornMembers:
       if let character = value as? CharacterBasic {
-        self.state.houseUpdated?.swornMembers?.append(character)
+        self.state.houseUpdated?.swornMembers.append(character)
       }
     }
   }

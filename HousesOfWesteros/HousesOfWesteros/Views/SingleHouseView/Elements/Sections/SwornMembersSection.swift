@@ -11,16 +11,13 @@ struct SwornMembersSection: View {
   let house: HouseUpdated
 
   var body: some View {
-    if
-      let swornMembers = house.swornMembers,
-      swornMembers.hasEntries
-    {
-      let sectionHeader = swornMembers.count > 1
-        ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
+    if house.swornMembers.hasEntries {
+      let sectionHeader = house.swornMembers.count > 1
+        ? SectionHeader(text: "Sworn Members: \(house.swornMembers.count)")
         : SectionHeader(text: "Sworn Member")
 
       Section(header: sectionHeader) {
-        ForEach(swornMembers, id: \.self) { character in
+        ForEach(house.swornMembers, id: \.self) { character in
           if character.hasInformation {
             NavigationLink(
               destination: CharacterView(character: character)

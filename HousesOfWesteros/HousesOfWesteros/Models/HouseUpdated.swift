@@ -43,8 +43,8 @@ struct HouseUpdated {
   var heir: CharacterBasic?
   var overlordHouse: HouseBasic?
   var foundedByCharacter: CharacterBasic?
-  var cadetBranches: [HouseBasic]?
-  var swornMembers: [CharacterBasic]?
+  var cadetBranches: [HouseBasic]
+  var swornMembers: [CharacterBasic]
 
   init(
     fromHouse house: HouseBasic,
@@ -52,8 +52,8 @@ struct HouseUpdated {
     heir: CharacterBasic? = nil,
     overlord: HouseBasic? = nil,
     founder: CharacterBasic? = nil,
-    cadetBranches: [HouseBasic]? = nil,
-    swornMembers: [CharacterBasic]? = nil
+    cadetBranches: [HouseBasic] = [],
+    swornMembers: [CharacterBasic] = []
   ) {
     id = house.id
     url = house.url
