@@ -33,8 +33,10 @@ struct HouseCellLargeViewModel {
   }
 
   var greatHouseId: Int? {
-    if house.id != nil,
-      house.isGreatHouse {
+    if
+      house.id != nil,
+      house.isGreatHouse
+    {
       return house.id
     }
     return nil

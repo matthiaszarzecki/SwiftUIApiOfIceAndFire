@@ -124,23 +124,21 @@ struct SingleHouseDisplay: View {
 #if !TESTING
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    Group {
+    let configurations: [(
+      house: HouseUpdated?,
+      showError: Bool
+    )] = [
+      (.houseUpdatedWithLinks, false),
+      (.houseUpdatedWithoutLinks, true),
+      (nil, true)
+    ]
+
+    ForEach(0..<configurations.count, id: \.self) { index in
+      let configuration = configurations[index]
       NavigationView {
         SingleHouseDisplay(
-          houseUpdated: .houseUpdatedWithLinks,
-          showError: true
-        ) {}
-      }
-      NavigationView {
-        SingleHouseDisplay(
-          houseUpdated: .houseUpdatedWithoutLinks,
-          showError: false
-        ) {}
-      }
-      NavigationView {
-        SingleHouseDisplay(
-          houseUpdated: nil,
-          showError: false
+          houseUpdated: configuration.house,
+          showError: configuration.showError
         ) {}
       }
     }
