@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct SwornMembersSection: View {
-  let house: HouseUpdated
+  let swornMembers: [CharacterBasic]
 
   var body: some View {
-    if house.swornMembers.hasEntries {
-      let sectionHeader = house.swornMembers.count > 1
-        ? SectionHeader(text: "Sworn Members: \(house.swornMembers.count)")
+    if swornMembers.hasEntries {
+      let sectionHeader = swornMembers.count > 1
+        ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
         : SectionHeader(text: "Sworn Member")
 
       Section(header: sectionHeader) {
-        ForEach(house.swornMembers, id: \.self) { character in
+        ForEach(swornMembers, id: \.self) { character in
           if character.hasInformation {
             NavigationLink(
               destination: CharacterView(character: character)
@@ -38,7 +38,7 @@ struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       SwornMembersSection(
-        house: .houseUpdatedWithLinks
+        swornMembers: .mockCharacters
       )
     }
   }
