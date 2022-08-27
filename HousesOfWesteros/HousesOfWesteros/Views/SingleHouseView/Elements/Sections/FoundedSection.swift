@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct FoundedSection: View {
-  let house: HouseUpdated
+  let foundingPeriod: String
 
   var body: some View {
-    if house.foundingPeriod.exists {
-      Section(header: SectionHeader(text: "Founded During")) {
-        Text("📜 \(house.foundingPeriod)")
-      }
+    Section(
+      header: SectionHeader(text: "Founded During")
+    ) {
+      Text("📜 \(foundingPeriod)")
     }
   }
 }
@@ -23,7 +23,7 @@ struct FoundedSection: View {
 struct Founded_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      FoundedSection(house: .houseUpdatedWithLinks)
+      FoundedSection(foundingPeriod: HouseUpdated.houseUpdatedWithLinks.foundingPeriod)
     }
   }
 }

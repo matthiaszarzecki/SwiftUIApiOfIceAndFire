@@ -61,7 +61,9 @@ struct SingleHouseDisplay: View {
                 OverlordHouseSection(overlordHouse: overlordHouse)
               }
 
-              FoundedSection(house: unwrappedHouseUpdated)
+              if unwrappedHouseUpdated.foundingPeriod.exists {
+                FoundedSection(foundingPeriod: unwrappedHouseUpdated.foundingPeriod)
+              }
 
               if let founder = unwrappedHouseUpdated.foundedByCharacter {
                 FounderSection(founder: founder)
@@ -70,9 +72,11 @@ struct SingleHouseDisplay: View {
               DiedOutSection(house: unwrappedHouseUpdated)
               AncestralWeaponsSection(house: unwrappedHouseUpdated)
               CadetBranchesSection(house: unwrappedHouseUpdated)
+
               SwornMembersSection(
                 swornMembers: unwrappedHouseUpdated.swornMembers
               )
+
               ErrorSection(showError: showError, updateData: updateData)
             }
           }
