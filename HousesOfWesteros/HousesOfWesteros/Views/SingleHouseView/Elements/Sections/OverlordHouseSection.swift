@@ -31,7 +31,7 @@ struct Overlord_Previews: PreviewProvider {
   static var previews: some View {
     Form {
       OverlordHouseSection(
-        overlordHouse: HouseBasic.mockHouseBasicWithLinksAndWithCoatOfArms
+        overlordHouse: .mockHouseBasicWithLinksAndWithCoatOfArms
       )
     }
   }
