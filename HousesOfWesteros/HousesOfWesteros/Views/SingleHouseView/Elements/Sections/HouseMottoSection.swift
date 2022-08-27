@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HouseMottoSection: View {
-  let house: HouseUpdated
+  let motto: String
 
   var body: some View {
-    if house.motto.exists {
+    if motto.exists {
       Section(header: SectionHeader(text: "Words")) {
-        Text("🪶 \(house.motto)")
+        Text("🪶 \(motto)")
       }
     }
   }
@@ -23,7 +23,7 @@ struct HouseMottoSection: View {
 struct HouseMotto_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      HouseMottoSection(house: .houseUpdatedWithLinks)
+      HouseMottoSection(motto: HouseUpdated.houseUpdatedWithLinks.motto)
     }
   }
 }
