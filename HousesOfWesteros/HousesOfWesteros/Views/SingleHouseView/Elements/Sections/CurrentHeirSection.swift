@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct CurrentHeirSection: View {
-  let house: HouseUpdated
+  let heir: CharacterBasic
 
   var body: some View {
-    if let character = house.heir {
-      Section(
-        header: SectionHeader(text: "Current Heir")
-      ) {
-        if character.hasInformation {
-          NavigationLink(
-            destination: CharacterView(character: character)
-          ) {
-            CharacterCell(character: character)
-          }
-        } else {
-          CharacterCell(character: character)
+    Section(
+      header: SectionHeader(text: "Current Heir")
+    ) {
+      if heir.hasInformation {
+        NavigationLink(
+          destination: CharacterView(character: heir)
+        ) {
+          CharacterCell(character: heir)
         }
+      } else {
+        CharacterCell(character: heir)
       }
     }
   }
@@ -33,7 +31,7 @@ struct CurrentHeirSection: View {
 struct Heir_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      CurrentHeirSection(house: .houseUpdatedWithLinks)
+      CurrentHeirSection(heir: .mockCharacter)
     }
   }
 }
