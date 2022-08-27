@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct PortrayedBySection: View {
-  let character: CharacterBasic
+  let portrayedBy: [String]
 
   var body: some View {
-    if character.portrayedBy.hasNonEmptyEntries {
-      Section(header: SectionHeader(text: "Portayed by")) {
-        ForEach(character.portrayedBy, id: \.self) { characterActor in
-          HStack {
-            CharacterIcon(
-              initialLetter: characterActor.first,
-              size: 24
-            )
-            Text(characterActor)
-          }
+    Section(
+      header: SectionHeader(text: "Portayed by")
+    ) {
+      ForEach(portrayedBy, id: \.self) { characterActor in
+        HStack {
+          CharacterIcon(
+            initialLetter: characterActor.first,
+            size: 24
+          )
+          Text(characterActor)
         }
       }
     }
@@ -31,7 +31,7 @@ struct PortrayedBySection: View {
 struct PortrayedBySection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      PortrayedBySection(character: .mockCharacter)
+      PortrayedBySection(portrayedBy: CharacterBasic.mockCharacter.portrayedBy)
     }
   }
 }

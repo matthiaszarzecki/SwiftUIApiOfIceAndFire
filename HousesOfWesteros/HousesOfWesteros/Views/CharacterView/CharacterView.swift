@@ -38,7 +38,9 @@ struct CharacterView: View {
             )
           }
 
-          PortrayedBySection(character: character)
+          if character.portrayedBy.hasEntries {
+            PortrayedBySection(character: character.portrayedBy)
+          }
         }
       }
     }
