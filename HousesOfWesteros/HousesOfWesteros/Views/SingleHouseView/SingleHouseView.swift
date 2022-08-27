@@ -11,16 +11,16 @@ import SwiftUI
 struct SingleHouseView: View {
   @ObservedObject private var singleHouseViewModel: SingleHouseViewModel
 
-  init(houseBasic: HouseBasic) {
-    singleHouseViewModel = SingleHouseViewModel(houseBasic: houseBasic)
-  }
-
   var body: some View {
     SingleHouseDisplay(
       houseUpdated: singleHouseViewModel.state.houseUpdated,
       showError: singleHouseViewModel.state.showError,
       updateData: singleHouseViewModel.getDataFromNestedLinks
     )
+  }
+
+  init(houseBasic: HouseBasic) {
+    singleHouseViewModel = SingleHouseViewModel(houseBasic: houseBasic)
   }
 }
 

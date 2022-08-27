@@ -11,10 +11,6 @@ import SwiftUI
 struct HouseCellLargeViewModel {
   var house: HouseBasic
 
-  init(_ house: HouseBasic) {
-    self.house = house
-  }
-
   var backgroundColor: Color {
     if let unwrappedId = house.id {
       return .greatHousesMajorColor(id: unwrappedId)
@@ -40,5 +36,9 @@ struct HouseCellLargeViewModel {
       return house.id
     }
     return nil
+  }
+
+  init(_ house: HouseBasic) {
+    self.house = house
   }
 }

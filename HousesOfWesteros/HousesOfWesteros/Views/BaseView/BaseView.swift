@@ -12,18 +12,6 @@ struct BaseView: View {
   @State private var resetNavigationIDForGreatHousesView = UUID()
   @State private var resetNavigationIDForAllHousesView = UUID()
 
-  init() {
-    // Set font for Title in large view
-    if let font = UIFont(name: "GameofThrones", size: 20) {
-      UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
-    }
-
-    // Set font for Title in navigation bar
-    if let font = UIFont(name: "GameofThrones", size: 16) {
-      UINavigationBar.appearance().titleTextAttributes = [.font: font]
-    }
-  }
-
   var body: some View {
     TabView {
       GreatHousesView()
@@ -54,6 +42,18 @@ struct BaseView: View {
         .tag(2)
     }
     .accentColor(.westerosRed)
+  }
+
+  init() {
+    // Set font for Title in large view
+    if let font = UIFont(name: "GameofThrones", size: 20) {
+      UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
+    }
+
+    // Set font for Title in navigation bar
+    if let font = UIFont(name: "GameofThrones", size: 16) {
+      UINavigationBar.appearance().titleTextAttributes = [.font: font]
+    }
   }
 }
 
