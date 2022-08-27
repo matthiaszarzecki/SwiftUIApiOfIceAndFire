@@ -13,6 +13,25 @@ struct HouseBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a
   // field is not assigned it will return an empty string "".
 
+  enum CodingKeys: String, CodingKey {
+    case url
+    case name
+    case region
+    case coatOfArms
+    case motto = "words"
+    case titles
+    case seats
+    case currentLord
+    case heir
+    case overlordHouse = "overlord"
+    case foundingPeriod = "founded"
+    case foundedByCharacter = "founder"
+    case diedOutPeriod = "diedOut"
+    case ancestralWeapons
+    case cadetBranches
+    case swornMembers
+  }
+
   /// The number-id for the house. Is
   /// also the last part of the url.
   var id: Int? {
@@ -72,24 +91,5 @@ struct HouseBasic: Codable, Identifiable, Hashable {
       return Constants.greatHouses.contains(unwrappedId)
     }
     return false
-  }
-
-  enum CodingKeys: String, CodingKey {
-    case url
-    case name
-    case region
-    case coatOfArms
-    case motto = "words"
-    case titles
-    case seats
-    case currentLord
-    case heir
-    case overlordHouse = "overlord"
-    case foundingPeriod = "founded"
-    case foundedByCharacter = "founder"
-    case diedOutPeriod = "diedOut"
-    case ancestralWeapons
-    case cadetBranches
-    case swornMembers
   }
 }

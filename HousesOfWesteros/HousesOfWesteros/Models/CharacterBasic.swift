@@ -12,6 +12,24 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   // The Api ALWAYS returns a string for each field. If a field
   // is not assigned it will return an empty string "".
 
+  enum CodingKeys: String, CodingKey {
+    case url
+    case name
+    case culture
+    case born
+    case died
+    case titles
+    case aliases
+    case father
+    case mother
+    case spouse
+    case allegiances
+    case bookAppearances = "books"
+    case hasPointOfViewChaptersInBooks = "povBooks"
+    case tvShowAppearances = "tvSeries"
+    case portrayedBy = "playedBy"
+  }
+
   // The identifier for this house. Is
   // also the direct URL to its data.
   var id: String {
@@ -79,23 +97,5 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
       aliases.hasNonEmptyEntries ||
       tvShowAppearances.hasNonEmptyEntries ||
       portrayedBy.hasNonEmptyEntries
-  }
-
-  enum CodingKeys: String, CodingKey {
-    case url
-    case name
-    case culture
-    case born
-    case died
-    case titles
-    case aliases
-    case father
-    case mother
-    case spouse
-    case allegiances
-    case bookAppearances = "books"
-    case hasPointOfViewChaptersInBooks = "povBooks"
-    case tvShowAppearances = "tvSeries"
-    case portrayedBy = "playedBy"
   }
 }
