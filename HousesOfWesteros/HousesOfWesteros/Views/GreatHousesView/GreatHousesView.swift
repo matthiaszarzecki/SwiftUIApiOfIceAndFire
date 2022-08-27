@@ -20,13 +20,13 @@ struct GreatHousesView: View {
 }
 
 struct GreatHousesDisplay: View {
-  var houses: [HouseBasic?]
+  let houses: [HouseBasic?]
 
   private let viewTitle = "Great Houses of Westeros"
 
   /// A boolean indicating whether houses
   /// contains at least 1 non-nil entry.
-  var hasViableEntries: Bool {
+  private var hasViableEntries: Bool {
     for house in houses where house != nil {
       return true
     }
@@ -51,7 +51,7 @@ struct GreatHousesDisplay: View {
 
                   HouseCellLarge(
                     viewModel: HouseCellLargeViewModel(unwrappedHouse),
-                    width: geometry.size.width - 38 * 2
+                    width: geometry.size.width - .spacing38 * 2
                   )
                 }
               }
@@ -60,7 +60,7 @@ struct GreatHousesDisplay: View {
           }
           .navigationTitle(viewTitle)
         } else {
-          GreatHousesLoadingView(width: geometry.size.width - 38 * 2)
+          GreatHousesLoadingView(width: geometry.size.width - .spacing38 * 2)
             .navigationTitle(viewTitle)
         }
       }

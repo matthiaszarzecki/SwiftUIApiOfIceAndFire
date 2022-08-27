@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct PortrayedBySection: View {
-  var character: CharacterBasic
+  let character: CharacterBasic
 
   var body: some View {
     if character.portrayedBy.hasNonEmptyEntries {
       Section(header: SectionHeader(text: "Portayed by")) {
-        ForEach(character.portrayedBy, id: \.self) { actor in
+        ForEach(character.portrayedBy, id: \.self) { characterActor in
           HStack {
             CharacterIcon(
-              initialLetter: actor.first,
+              initialLetter: characterActor.first,
               size: 24
             )
-            Text("\(actor)")
+            Text(characterActor)
           }
         }
       }

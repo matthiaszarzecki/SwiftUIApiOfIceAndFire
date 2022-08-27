@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct BornSection: View {
-  var character: CharacterBasic
+  let character: CharacterBasic
 
   var body: some View {
     if character.born.exists {
       Section(header: SectionHeader(text: "Born")) {
-        Text("\(character.born)")
+        Text(character.born)
       }
     }
   }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct GreatHousesLoadingView: View {
-  var width: CGFloat
+  let width: CGFloat
 
-  var textElementWidth: CGFloat {
+  private var textElementWidth: CGFloat {
     width - 120
   }
 
-  var cell: some View {
+  private var cell: some View {
     VStack {
       HStack {
         let circleSize = IconSize.greatHouseCell.rawValue

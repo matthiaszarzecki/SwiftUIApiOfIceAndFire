@@ -16,7 +16,7 @@ struct CharacterView: View {
       VStack {
         CharacterTitle(character: character)
           .frame(
-            width: geometry.size.width - 16 * 2,
+            width: geometry.size.width - .spacing16 * 2,
             height: 10,
             alignment: .center
           )

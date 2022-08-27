@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AliasesSection: View {
-  var character: CharacterBasic
+  let character: CharacterBasic
 
   var body: some View {
     if character.aliases.hasNonEmptyEntries {
@@ -18,7 +18,7 @@ struct AliasesSection: View {
 
       Section(header: sectionHeader) {
         ForEach(character.aliases, id: \.self) { alias in
-          Text("\(alias)")
+          Text(alias)
         }
       }
     }

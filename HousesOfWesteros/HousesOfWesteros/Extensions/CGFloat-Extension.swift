@@ -15,4 +15,5 @@ extension CGFloat {
   static let spacing16: CGFloat = 16
   static let spacing24: CGFloat = 24
   static let spacing32: CGFloat = 24
+  static let spacing38: CGFloat = 38
 }
