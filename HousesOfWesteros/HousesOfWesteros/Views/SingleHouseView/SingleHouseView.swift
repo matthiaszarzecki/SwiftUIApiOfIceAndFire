@@ -51,7 +51,7 @@ struct SingleHouseDisplay: View {
               }
 
               HouseMottoSection(house: unwrappedHouseUpdated)
-              TitlesSection(house: unwrappedHouseUpdated)
+              TitlesSection(titles: unwrappedHouseUpdated.titles)
               SeatsSection(house: unwrappedHouseUpdated)
               CurrentLordSection(house: unwrappedHouseUpdated)
               CurrentHeirSection(house: unwrappedHouseUpdated)

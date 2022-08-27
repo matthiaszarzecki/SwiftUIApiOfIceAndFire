@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct TitlesSection: View {
-  let house: HouseUpdated
+  let titles: [String]
 
   var body: some View {
-    if house.titles.hasNonEmptyEntries {
-      let sectionHeader = house.titles.count > 1
-        ? SectionHeader(text: "Titles: \(house.titles.count)")
+    if titles.hasNonEmptyEntries {
+      let sectionHeader = titles.count > 1
+        ? SectionHeader(text: "Titles: \(titles.count)")
         : SectionHeader(text: "Title")
 
       Section(header: sectionHeader) {
-        ForEach(house.titles, id: \.self) { title in
+        ForEach(titles, id: \.self) { title in
           // Occasionally a title with a lowercase
           // name (e.g. "the Knight of...") is returned.
           let displayTitle = title.capitalizeFirstLetter()
@@ -33,7 +33,7 @@ struct TitlesSection: View {
 struct Titles_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      TitlesSection(house: .houseUpdatedWithLinks)
+      TitlesSection(titles: HouseUpdated.houseUpdatedWithLinks.titles)
     }
   }
 }
