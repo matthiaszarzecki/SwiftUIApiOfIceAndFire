@@ -65,6 +65,7 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture
   - unused_import
+  - unused_optional_binding
   - vertical_whitespace_closing_braces
   - vertical_whitespace_opening_braces
   - yoda_condition
