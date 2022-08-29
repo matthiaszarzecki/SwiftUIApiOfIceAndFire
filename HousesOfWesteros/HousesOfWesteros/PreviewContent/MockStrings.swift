@@ -42,6 +42,10 @@ extension Array where Element == String {
     "Whitefyre"
   ]
 
+  static let mockCadetBranches = Array(repeating: .mockHouseLink, count: 3)
+
+  static let mockSwornMembers = Array(repeating: .mockCharacterLink, count: 4)
+
   static let mockCharacterTitles = ["Lord Commander of the Night's Watch"]
 
   static let mockAliases = [

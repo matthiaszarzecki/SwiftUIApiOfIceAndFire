@@ -25,7 +25,7 @@ extension HouseBasic {
     heir: .mockCharacterLink,
     overlordHouse: .mockHouseLink,
     foundedByCharacter: .mockCharacterLink,
-    cadetBranches: Array(repeating: .mockHouseLink, count: 2),
+    cadetBranches: .mockCadetBranches,
     swornMembers: Array(repeating: .mockCharacterLink, count: 4)
   )
 
@@ -45,7 +45,7 @@ extension HouseBasic {
     heir: .mockCharacterLink,
     overlordHouse: .mockHouseLink,
     foundedByCharacter: .mockCharacterLink,
-    cadetBranches: Array(repeating: .mockHouseLink, count: 2),
+    cadetBranches: .mockCadetBranches,
     swornMembers: Array(repeating: .mockCharacterLink, count: 4)
   )
 
