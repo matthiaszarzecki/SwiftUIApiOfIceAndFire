@@ -46,7 +46,10 @@ extension Array where Element == String {
 
   static let mockSwornMembers = Array(repeating: .mockCharacterLink, count: 4)
 
-  static let mockCharacterTitles = ["Lord Commander of the Night's Watch"]
+  static let mockCharacterTitles = [
+    "Lord Commander of the Night's Watch",
+    "The Heir"
+  ]
 
   static let mockAliases = [
     "Lord Snow",
@@ -65,5 +68,8 @@ extension Array where Element == String {
     "Season 6"
   ]
 
-  static let mockPortrayedBy = ["Kit Harington"]
+  static let mockPortrayedBy = [
+    "Kit Harington",
+    "Harrington Harington"
+  ]
 }
