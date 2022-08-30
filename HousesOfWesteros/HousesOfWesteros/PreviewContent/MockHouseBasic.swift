@@ -26,7 +26,7 @@ extension HouseBasic {
     overlordHouse: .mockHouseLink,
     foundedByCharacter: .mockCharacterLink,
     cadetBranches: .mockCadetBranches,
-    swornMembers: Array(repeating: .mockCharacterLink, count: 4)
+    swornMembers: .mockSwornMembers
   )
 
   /// A great house
@@ -46,7 +46,7 @@ extension HouseBasic {
     overlordHouse: .mockHouseLink,
     foundedByCharacter: .mockCharacterLink,
     cadetBranches: .mockCadetBranches,
-    swornMembers: Array(repeating: .mockCharacterLink, count: 4)
+    swornMembers: .mockSwornMembers
   )
 
   /// A Regular (non-major) House
