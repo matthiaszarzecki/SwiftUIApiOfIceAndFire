@@ -18,8 +18,13 @@ struct GreatHousesLoadingView: View {
     VStack {
       HStack {
         let circleSize = IconSize.greatHouseCell.rawValue
+
         Circle()
-          .frame(width: circleSize, height: circleSize, alignment: .center)
+          .frame(
+            width: circleSize,
+            height: circleSize,
+            alignment: .center
+          )
           .foregroundColor(.redactedGray)
           .padding()
 
@@ -27,20 +32,28 @@ struct GreatHousesLoadingView: View {
           Text("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.title2)
             .minimumScaleFactor(0.5)
-            .frame(width: textElementWidth, height: 60, alignment: .topLeading)
+            .frame(
+              width: textElementWidth,
+              height: 60,
+              alignment: .topLeading
+            )
             .redacted(reason: .placeholder)
 
           Text("aaaaaaaaaaaaaaaaaaaaaaaaa")
             .font(.body)
             .minimumScaleFactor(0.5)
-            .frame(width: textElementWidth, height: 24, alignment: .leading)
+            .frame(
+              width: textElementWidth,
+              height: 24,
+              alignment: .leading
+            )
             .redacted(reason: .placeholder)
         }
         .frame(width: textElementWidth, height: 80, alignment: .center)
       }
     }
     .frame(width: width, height: 100, alignment: .center)
-    .backgroundColor(.white)
+    .backgroundColor(.clear)
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
   }

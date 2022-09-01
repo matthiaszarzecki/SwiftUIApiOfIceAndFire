@@ -167,10 +167,10 @@ enum ColorParser {
 
     // Check if any words that describe colors are present, and
     // if so add the corresponding color to the return-collection.
-    for colorCombination in colorCombinations {
-      if words.hasAtLeastOneItem(fromArray: colorCombination.synonyms) {
-        colors.append(colorCombination.color)
-      }
+    for colorCombination in colorCombinations where words.hasAtLeastOneItem(
+      fromArray: colorCombination.synonyms
+    ) {
+      colors.append(colorCombination.color)
     }
 
     return colors

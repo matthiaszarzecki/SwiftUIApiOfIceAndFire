@@ -35,9 +35,12 @@ struct GreatHousesDisplay: View {
 
   var body: some View {
     GeometryReader { geometry in
+      let spacing: CGFloat = .spacing32
+      let elementWidth = geometry.size.width - spacing * 2
+
       NavigationView {
         if hasViableEntries {
-          List {
+          ScrollView {
             ForEach(houses, id: \.self) { house in
               if let unwrappedHouse = house {
                 ZStack {
@@ -51,16 +54,19 @@ struct GreatHousesDisplay: View {
 
                   HouseCellLarge(
                     viewModel: HouseCellLargeViewModel(unwrappedHouse),
-                    width: geometry.size.width - .spacing38 * 2
+                    width: elementWidth
                   )
+                  // Padding to work around ScrollView auto-constricting
+                  .padding(.horizontal, spacing)
                 }
               }
             }
+            .frame(width: geometry.size.width)
             .listRowBackground(Color.clear)
           }
           .navigationTitle(viewTitle)
         } else {
-          GreatHousesLoadingView(width: geometry.size.width - .spacing38 * 2)
+          GreatHousesLoadingView(width: elementWidth)
             .navigationTitle(viewTitle)
         }
       }
