@@ -34,12 +34,16 @@ struct SectionHeaderStyle: ViewModifier {
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
-      .padding(.vertical, 8)
+      .padding(.vertical, 10)
       .padding(.horizontal, 14)
       .backgroundColor(.gray)
-      .mask(RoundedRectangle(cornerRadius: 10, style: .continuous))
-      .padding(.leading, -9)
-      .padding(.bottom, -10)
+      .mask(
+        RoundedRectangle(
+          cornerRadius: 10,
+          style: .continuous
+        )
+      )
+      .offset(y: 18)
   }
 }
 
