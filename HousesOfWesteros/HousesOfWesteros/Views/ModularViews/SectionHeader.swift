@@ -34,7 +34,7 @@ struct SectionHeaderStyle: ViewModifier {
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
-      .padding(.vertical, 10)
+      .padding(.vertical, 8)
       .padding(.horizontal, 14)
       .backgroundColor(.gray)
       .mask(
@@ -43,7 +43,7 @@ struct SectionHeaderStyle: ViewModifier {
           style: .continuous
         )
       )
-      .offset(y: 18)
+      .offset(y: 14)
   }
 }
 
