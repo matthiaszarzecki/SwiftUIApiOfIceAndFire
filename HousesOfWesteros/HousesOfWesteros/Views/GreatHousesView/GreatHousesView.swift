@@ -47,17 +47,14 @@ struct GreatHousesDisplay: View {
                   NavigationLink(
                     destination: SingleHouseView(houseBasic: unwrappedHouse)
                   ) {
-                    // Workaround to remove indicators
-                    EmptyView()
+                    HouseCellLarge(
+                      viewModel: HouseCellLargeViewModel(unwrappedHouse),
+                      width: elementWidth
+                    )
+                    // Padding to work around ScrollView auto-constricting
+                    .padding(.horizontal, spacing)
                   }
                   .buttonStyle(PlainButtonStyle())
-
-                  HouseCellLarge(
-                    viewModel: HouseCellLargeViewModel(unwrappedHouse),
-                    width: elementWidth
-                  )
-                  // Padding to work around ScrollView auto-constricting
-                  .padding(.horizontal, spacing)
                 }
               }
             }
