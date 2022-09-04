@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
   private let viewModel: AboutViewModel
-  private let iconCode = "chevron.left.slash.chevron.right"
+  private let iconForProgramming = "chevron.left.slash.chevron.right"
 
   private var shareRow: some View {
     Button(
@@ -64,7 +64,7 @@ struct AboutView: View {
 
   private var githubLink: some View {
     LinkSettingsRow(
-      systemIcon: iconCode,
+      systemIcon: iconForProgramming,
       text: viewModel.textGithub,
       urlString: viewModel.urlGitHub
     )
@@ -96,7 +96,7 @@ struct AboutView: View {
 
   private var apiLink: some View {
     LinkSettingsRow(
-      systemIcon: iconCode,
+      systemIcon: iconForProgramming,
       text: viewModel.textTheApiOfIceAndFire,
       urlString: viewModel.urlApiOfIceAndFire
     )

@@ -41,9 +41,7 @@ struct AboutViewModel {
   }
 
   func shareApp() {
-    guard let data = URL(
-      string: urlGithubProject
-    ) else {
+    guard let data = URL(string: urlGithubProject) else {
       return
     }
 
@@ -59,9 +57,7 @@ struct AboutViewModel {
   }
 
   func openBasketballAppOnAppstore() {
-    if let url = URL(
-      string: urlBasketballApp
-    ) {
+    if let url = URL(string: urlBasketballApp) {
       UIApplication.shared.open(url)
     }
   }
