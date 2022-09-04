@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct AboutView: View {
+  private let viewModel: AboutViewModel
+  private let iconCode = "chevron.left.slash.chevron.right"
+
   private var shareRow: some View {
     Button(
       action: {
-        shareApp()
+        viewModel.shareApp()
       },
       label: {
         SettingsRow(
           systemIcon: "square.and.arrow.up",
-          text: "Share"
+          text: viewModel.textShare
         )
       }
     )
@@ -28,25 +31,23 @@ struct AboutView: View {
   /// work in a desktop-browser are not allowed on iOS Safari).
   @ViewBuilder
   private var appsAndGamesRow: some View {
-    if Device.isSimulator {
+    let iconName = "square.grid.2x2.fill"
+
+    if viewModel.isSimulator {
       LinkSettingsRow(
-        systemIcon: "square.grid.2x2.fill",
-        text: "More Apps",
-        urlString: "https://github.com/matthiaszarzecki"
+        systemIcon: iconName,
+        text: viewModel.textMoreApps,
+        urlString: viewModel.urlGitHub
       )
     } else {
       Button(
         action: {
-          if let url = URL(
-            string: "itms-apps://apple.com/app/id1394075736"
-          ) {
-            UIApplication.shared.open(url)
-          }
+          viewModel.openBasketballAppOnAppstore()
         },
         label: {
           SettingsRow(
-            systemIcon: "square.grid.2x2.fill",
-            text: "More Apps & Games"
+            systemIcon: iconName,
+            text: viewModel.textMoreAppsAndGames
           )
         }
       )
@@ -56,53 +57,53 @@ struct AboutView: View {
   private var twitterLink: some View {
     LinkSettingsRow(
       systemIcon: "number.square",
-      text: "Twitter",
-      urlString: "https://twitter.com/matthias_code"
+      text: viewModel.textTwitter,
+      urlString: viewModel.urlTwitter
     )
   }
 
   private var githubLink: some View {
     LinkSettingsRow(
-      systemIcon: "chevron.left.forwardslash.chevron.right",
-      text: "Github",
-      urlString: "https://github.com/matthiaszarzecki"
+      systemIcon: iconCode,
+      text: viewModel.textGithub,
+      urlString: viewModel.urlGitHub
     )
   }
 
   private var youtubeLink: some View {
     LinkSettingsRow(
       systemIcon: "film",
-      text: "Youtube",
-      urlString: "https://www.youtube.com/channel/UCvMdsKesM05bIG0eq7M5z1g"
+      text: viewModel.textYoutube,
+      urlString: viewModel.urlYoutube
     )
   }
 
   private var linkedInLink: some View {
     LinkSettingsRow(
       systemIcon: "doc.richtext",
-      text: "LinkedIn",
-      urlString: "https://www.linkedin.com/in/%F0%9F%8D%8F-matthias-zarzecki-b743353b/"
+      text: viewModel.textLinkedIn,
+      urlString: viewModel.urlLinkedIn
     )
   }
 
   private var developedByLink: some View {
     LinkSettingsRow(
       systemIcon: "signature",
-      text: "Matthias Zarzecki",
-      urlString: "https://twitter.com/matthias_code"
+      text: viewModel.textMatthiasZarzecki,
+      urlString: viewModel.urlTwitter
     )
   }
 
   private var apiLink: some View {
     LinkSettingsRow(
-      systemIcon: "chevron.left.slash.chevron.right",
-      text: "The Api of Ice and Fire",
-      urlString: "https://anapioficeandfire.com/"
+      systemIcon: iconCode,
+      text: viewModel.textTheApiOfIceAndFire,
+      urlString: viewModel.urlApiOfIceAndFire
     )
   }
 
   private var appVersion: some View {
-    Text("Houses of Westeros - Version \(Bundle.appVersion)")
+    Text(viewModel.textAppVersion)
       .font(.caption)
   }
 
@@ -110,14 +111,14 @@ struct AboutView: View {
     NavigationView {
       Form {
         Section(
-          header: SectionHeader(text: "About")
+          header: SectionHeader(text: viewModel.textAbout)
         ) {
           shareRow
           appsAndGamesRow
         }
 
         Section(
-          header: SectionHeader(text: "Follow Us")
+          header: SectionHeader(text: viewModel.textFollowUs)
         ) {
           twitterLink
           githubLink
@@ -126,39 +127,25 @@ struct AboutView: View {
         }
 
         Section(
-          header: SectionHeader(text: "Developed by")
+          header: SectionHeader(text: viewModel.textDevelopedBy)
         ) {
           developedByLink
         }
 
         Section(
-          header: SectionHeader(text: "Based on")
+          header: SectionHeader(text: viewModel.textBasedOn)
         ) {
           apiLink
         }
 
         appVersion
       }
-      .navigationTitle("About")
+      .navigationTitle(viewModel.textAbout)
     }
   }
 
-  private func shareApp() {
-    guard let data = URL(
-      string: "https://github.com/matthiaszarzecki/SwiftUIApiOfIceAndFire"
-    ) else {
-      return
-    }
-
-    let viewController = UIActivityViewController(
-      activityItems: [data],
-      applicationActivities: nil
-    )
-    UIApplication.shared.currentUIWindow()?.rootViewController?.present(
-      viewController,
-      animated: true,
-      completion: nil
-    )
+  init(viewModel: AboutViewModel = AboutViewModel()) {
+    self.viewModel = viewModel
   }
 }
 
