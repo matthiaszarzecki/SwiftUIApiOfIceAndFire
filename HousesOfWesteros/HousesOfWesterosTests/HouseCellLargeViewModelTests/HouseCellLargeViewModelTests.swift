@@ -98,6 +98,6 @@ class HouseCellLargeViewModelTests: XCTestCase {
     let result = viewModel.subtitle
 
     // THEN the result is "Members: 4 - Branches: 2"
-    XCTAssertEqual(result, "Members: 4 - Branches: 2")
+    XCTAssertEqual(result, "Members: 4 - Branches: 3")
   }
 }
