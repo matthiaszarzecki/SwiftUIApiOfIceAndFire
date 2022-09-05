@@ -7,20 +7,56 @@
 
 import SwiftUI
 
+// TODO: Insert ViewModel
+// TODO: Create Mock ViewModel
+// TODO: Fix Loading Logic
+// TODO: Fix Loading Indicator
+// TODO: Rename variables
+// TODO: Check which variables in viewmodel can be private
+
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
   @ObservedObject private var viewModel = AllHousesViewModel()
 
   var body: some View {
-    AllHousesDisplay(
-      houses: viewModel.state.houses,
-      isLoading: viewModel.state.canLoadNextPage,
-      showError: viewModel.state.showError,
-      initialLoadingPhase: viewModel.state.intitialLoadingPhase,
-      viewTitle: viewModel.viewTitle,
-      checkIfNextBatchShouldBeLoadedAndLoad: viewModel.checkIfNextBatchShouldBeLoadedAndLoad,
-      loadNextBatch: viewModel.fetchNextPageIfPossible
-    )
+    NavigationView {
+      if viewModel.showError {
+        ErrorDisplay(reloadData: viewModel.fetchNextPageIfPossible)
+          .navigationTitle(viewModel.viewTitle)
+      } else if viewModel.initialLoadingPhase {
+        AllHousesLoadingView()
+          .navigationTitle(viewModel.viewTitle)
+      } else {
+        // This cannot be a scrollview as
+        // that tanks the performance.
+        List {
+          ForEach(viewModel.houses) { house in
+            NavigationLink(
+              destination: SingleHouseView(houseBasic: house)
+            ) {
+              HouseCellBasic(
+                house: house,
+                iconSize: .largeForMajorCells
+              )
+            }
+            .onAppear {
+              viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
+            }
+          }
+
+          if viewModel.initialLoadingPhase {
+            TinyLoadingIndicator()
+              .frame(
+                idealWidth: .infinity,
+                maxWidth: .infinity,
+                alignment: .center
+              )
+          }
+        }
+        .navigationTitle(viewModel.viewTitle)
+      }
+    }
+    .accentColor(.westerosRed)
     .onAppear {
       viewModel.fetchNextPageIfPossible()
     }
@@ -37,44 +73,7 @@ struct AllHousesDisplay: View {
   let loadNextBatch: () -> Void
 
   var body: some View {
-    NavigationView {
-      if showError {
-        ErrorDisplay(reloadData: loadNextBatch)
-          .navigationTitle(viewTitle)
-      } else if initialLoadingPhase {
-        AllHousesLoadingView()
-          .navigationTitle(viewTitle)
-      } else {
-        // This cannot be a scrollview as
-        // that tanks the performance.
-        List {
-          ForEach(houses) { house in
-            NavigationLink(
-              destination: SingleHouseView(houseBasic: house)
-            ) {
-              HouseCellBasic(
-                house: house,
-                iconSize: .largeForMajorCells
-              )
-            }
-            .onAppear {
-              checkIfNextBatchShouldBeLoadedAndLoad(house.url)
-            }
-          }
-
-          if isLoading {
-            TinyLoadingIndicator()
-              .frame(
-                idealWidth: .infinity,
-                maxWidth: .infinity,
-                alignment: .center
-              )
-          }
-        }
-        .navigationTitle(viewTitle)
-      }
-    }
-    .accentColor(.westerosRed)
+    Text("Hello")
   }
 }
 
