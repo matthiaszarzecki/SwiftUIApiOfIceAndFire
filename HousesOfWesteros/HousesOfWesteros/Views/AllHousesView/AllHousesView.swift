@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: Insert ViewModel
 // TODO: Create Mock ViewModel
 // TODO: Fix Loading Logic
 // TODO: Fix Loading Indicator
@@ -16,10 +15,12 @@ import SwiftUI
 // TODO: Fix Loading Indicator
 // TODO: Loading Indicator no outside frame
 // TODO: Trigger reload earlier
+// TODO: Create state enum
+// TODO: Create isLoadingMorehouses variable
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
-  @ObservedObject private var viewModel = AllHousesViewModel()
+  @ObservedObject private var viewModel: AllHousesViewModel
 
   var body: some View {
     NavigationView {
@@ -63,6 +64,10 @@ struct AllHousesView: View {
     .onAppear {
       viewModel.fetchNextPageIfPossible()
     }
+  }
+
+  init(viewModel: AllHousesViewModel = AllHousesViewModel()) {
+    self.viewModel = viewModel
   }
 }
 
