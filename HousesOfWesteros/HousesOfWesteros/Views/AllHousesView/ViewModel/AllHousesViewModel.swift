@@ -30,6 +30,16 @@ final class AllHousesViewModel: ObservableObject {
     self.downloader = downloader
   }
 
+  convenience init(forState state: AllHousesViewState) {
+    self.init(downloader: MockHousesBasicDownloader())
+
+    if state == .loading {
+      self.state = .loading
+    } else if state == .error {
+      self.state = .loading
+    }
+  }
+
   func fetchNextPageIfPossible() {
     guard canLoadNextPage else {
       return
