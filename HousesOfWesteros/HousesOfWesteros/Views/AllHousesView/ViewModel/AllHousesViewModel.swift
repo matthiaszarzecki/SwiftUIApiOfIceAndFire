@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-class AllHousesViewModel: ObservableObject {
+final class AllHousesViewModel: ObservableObject {
   struct SearchResultsViewState {
     var houses: [HouseBasic] = []
     var page = 1
@@ -48,8 +48,10 @@ class AllHousesViewModel: ObservableObject {
     }
   }
 
-  func shouldLoadNextBatch(houseUrl: String) -> Bool {
-    state.houses.last?.url == houseUrl
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {
+    if state.houses.last?.url == houseUrl {
+      fetchNextPageIfPossible()
+    }
   }
 
   // MARK: - Private Functions

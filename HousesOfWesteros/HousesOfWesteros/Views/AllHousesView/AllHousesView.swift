@@ -18,8 +18,8 @@ struct AllHousesView: View {
       showError: viewModel.state.showError,
       initialLoadingPhase: viewModel.state.intitialLoadingPhase,
       viewTitle: viewModel.viewTitle,
-      shouldLoadNextBatch: viewModel.shouldLoadNextBatch,
-      onScrolledAtBottom: viewModel.fetchNextPageIfPossible
+      checkIfNextBatchShouldBeLoadedAndLoad: viewModel.checkIfNextBatchShouldBeLoadedAndLoad,
+      loadNextBatch: viewModel.fetchNextPageIfPossible
     )
     .onAppear {
       viewModel.fetchNextPageIfPossible()
@@ -33,13 +33,13 @@ struct AllHousesDisplay: View {
   let showError: Bool
   let initialLoadingPhase: Bool
   let viewTitle: String
-  let shouldLoadNextBatch: (_ houseUrl: String) -> Bool
-  let onScrolledAtBottom: () -> Void
+  let checkIfNextBatchShouldBeLoadedAndLoad: (_ houseUrl: String) -> Void
+  let loadNextBatch: () -> Void
 
   var body: some View {
     NavigationView {
       if showError {
-        ErrorDisplay(reloadData: onScrolledAtBottom)
+        ErrorDisplay(reloadData: loadNextBatch)
           .navigationTitle(viewTitle)
       } else if initialLoadingPhase {
         AllHousesLoadingView()
@@ -58,9 +58,7 @@ struct AllHousesDisplay: View {
               )
             }
             .onAppear {
-              if shouldLoadNextBatch(house.url) {
-                self.onScrolledAtBottom()
-              }
+              checkIfNextBatchShouldBeLoadedAndLoad(house.url)
             }
           }
 
@@ -103,8 +101,8 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         showError: configuration.showError,
         initialLoadingPhase: configuration.initialLoadingPhase,
         viewTitle: "All Houses of Westeros",
-        shouldLoadNextBatch: { _ in false },
-        onScrolledAtBottom: {}
+        checkIfNextBatchShouldBeLoadedAndLoad: { _ in },
+        loadNextBatch: {}
       )
     }
   }
