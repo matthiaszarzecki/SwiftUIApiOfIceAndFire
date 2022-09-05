@@ -19,8 +19,9 @@ class GreatHousesViewModel: ObservableObject {
 
   private let downloader: SingleHouseBasicDownloaderProtocol
 
-
-  init(downloader: SingleHouseBasicDownloaderProtocol) {
+  init(
+    downloader: SingleHouseBasicDownloaderProtocol = SingleHouseBasicDownloader()
+  ) {
     self.downloader = downloader
 
     loadAllGreatHouses()
