@@ -8,11 +8,8 @@
 import SwiftUI
 
 // TODO: Add Downloader logic
-// TODO: Add Mock Downloader
-// TODO: Fix Loading Logic
-// TODO: Fix Loading Indicator
-// TODO: Rename variables
 // TODO: Create isLoadingMorehouses logic, variable
+// TODO: Add Mock Downloader
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
