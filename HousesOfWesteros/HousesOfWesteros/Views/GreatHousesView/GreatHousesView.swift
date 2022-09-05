@@ -13,7 +13,8 @@ struct GreatHousesView: View {
   var body: some View {
     GreatHousesDisplay(
       houses: viewModel.state.houses,
-      hasViableEntries: viewModel.hasViableEntries
+      hasViableEntries: viewModel.hasViableEntries,
+      viewTitle: viewModel.viewTitle
     )
   }
 }
@@ -21,8 +22,7 @@ struct GreatHousesView: View {
 struct GreatHousesDisplay: View {
   let houses: [HouseBasic?]
   let hasViableEntries: Bool
-
-  private let viewTitle = "Great Houses of Westeros"
+  let viewTitle: String
 
   var body: some View {
     GeometryReader { geometry in
@@ -67,12 +67,14 @@ struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(
       houses: .mockHousesBasic,
-      hasViableEntries: true
+      hasViableEntries: true,
+      viewTitle: "Great Houses of Westeros"
     )
 
     GreatHousesDisplay(
       houses: .mockHousesEmtpyArray,
-      hasViableEntries: true
+      hasViableEntries: true,
+      viewTitle: "Great Houses of Westeros"
     )
   }
 }

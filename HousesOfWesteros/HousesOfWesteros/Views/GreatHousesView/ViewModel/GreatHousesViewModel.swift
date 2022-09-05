@@ -16,6 +16,7 @@ class GreatHousesViewModel: ObservableObject {
   }
 
   @Published private(set) var state = GreatHousesViewState()
+  let viewTitle = "Great Houses of Westeros"
 
   private let downloader: SingleHouseBasicDownloaderProtocol
 
