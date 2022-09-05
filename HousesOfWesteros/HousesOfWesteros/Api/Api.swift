@@ -49,12 +49,6 @@ class Api {
       .eraseToAnyPublisher()
   }
 
-  func mockGetHouses() -> AnyPublisher<[HouseBasic], Error>? {
-    Just(.mockHousesBasic)
-      .setFailureType(to: Error.self)
-      .eraseToAnyPublisher()
-  }
-
   func getSingleHouse(
     id: Int,
     completion: @escaping (Result<HouseBasic, NetworkError>) -> Void

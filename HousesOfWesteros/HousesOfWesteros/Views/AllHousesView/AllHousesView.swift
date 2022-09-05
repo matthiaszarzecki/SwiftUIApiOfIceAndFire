@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-// TODO: Add Downloader logic
 // TODO: Create isLoadingMorehouses logic, variable
-// TODO: Add Mock Downloader
+// TODO: Add failure mock downloader
+// TODO: Add viewmodel with loading state
+// TODO: Add static mock viewmodels in various states
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
@@ -88,7 +89,12 @@ struct AllHousesDisplay: View {
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    let configurations: [(
+    AllHousesView(
+      viewModel: AllHousesViewModel(
+        downloader: MockHousesBasicDownloader()
+      )
+    )
+    /*let configurations: [(
       houses: [HouseBasic],
       isLoading: Bool,
       showError: Bool,
@@ -111,7 +117,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         checkIfNextBatchShouldBeLoadedAndLoad: { _ in },
         loadNextBatch: {}
       )
-    }
+    }*/
   }
 }
 #endif

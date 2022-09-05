@@ -24,15 +24,18 @@ final class AllHousesViewModel: ObservableObject {
   private var canLoadNextPage = true
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
+  private let downloader: HousesBasicDownloaderProtocol
+
+  init(downloader: HousesBasicDownloaderProtocol = HousesBasicDownloader()) {
+    self.downloader = downloader
+  }
 
   func fetchNextPageIfPossible() {
     guard canLoadNextPage else {
       return
     }
-    
-    // if let publisher = Api.shared.mockGetHouses() {
 
-    if let publisher = Api.shared.getHouses(page: page, pageSize: pageSize) {
+    if let publisher = downloader.getHouses(page: page, pageSize: pageSize) {
       publisher
         .sink(
           receiveCompletion: onReceive,
