@@ -10,9 +10,12 @@ import SwiftUI
 struct ErrorDisplay: View {
   let reloadData: () -> Void
 
+  private let ohNoText = "Oh No!"
+  private let errorText = "Something went wrong fetching the data. Click here to try again!"
+
   var body: some View {
     List {
-      Text("Oh No!")
+      Text(ohNoText)
       Button(
         action: {
           reloadData()
@@ -20,7 +23,7 @@ struct ErrorDisplay: View {
         label: {
           HStack {
             Image(systemName: "arrow.triangle.2.circlepath")
-            Text("Something went wrong fetching the data. Click here to try again!")
+            Text(errorText)
           }
           .foregroundColor(.red)
         }
