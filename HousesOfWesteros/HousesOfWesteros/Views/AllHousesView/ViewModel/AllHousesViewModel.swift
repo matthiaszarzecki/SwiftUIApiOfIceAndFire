@@ -9,11 +9,16 @@ import Combine
 import SwiftUI
 
 final class AllHousesViewModel: ObservableObject {
+  enum AllHousesViewState {
+    case loading
+    case error
+    case regular
+  }
+
   let viewTitle = "All Houses of Westeros"
 
   @Published private(set) var houses: [HouseBasic] = []
-  @Published private(set) var showError = false
-  @Published private(set) var initialLoadingPhase = true
+  @Published private(set) var state: AllHousesViewState = .loading
 
   private var page = 1
   private var canLoadNextPage = true
@@ -36,11 +41,11 @@ final class AllHousesViewModel: ObservableObject {
       // If after 3 seconds nothing has been loaded, show error
       DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
         if self.subscriptions.isEmpty {
-          setErrorStateToTrue()
+          state = .error
         }
       }
     } else {
-      setErrorStateToTrue()
+      state = .error
     }
   }
 
@@ -52,16 +57,10 @@ final class AllHousesViewModel: ObservableObject {
 
   // MARK: - Private Functions
 
-  private func setErrorStateToTrue() {
-    showError = true
-    initialLoadingPhase = false
-  }
-
   private func onReceive(_ completion: Subscribers.Completion<Error>) {
     switch completion {
     case .finished:
-      showError = false
-      initialLoadingPhase = false
+      state = .regular
     case .failure:
       canLoadNextPage = false
     }

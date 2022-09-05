@@ -14,50 +14,60 @@ import SwiftUI
 // TODO: Rename variables
 // TODO: Loading Indicator no outside frame
 // TODO: Trigger reload 10 items earlier
-// TODO: Create state enum
 // TODO: Create isLoadingMorehouses logic, variable
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
   @ObservedObject private var viewModel: AllHousesViewModel
 
+  private var loadingView: some View {
+    AllHousesLoadingView()
+  }
+
+  private var errorView: some View {
+    ErrorDisplay(reloadData: viewModel.fetchNextPageIfPossible)
+  }
+
+  private var regularView: some View {
+    // This cannot be a scrollview as
+    // that tanks the performance.
+    List {
+      ForEach(viewModel.houses) { house in
+        NavigationLink(
+          destination: SingleHouseView(houseBasic: house)
+        ) {
+          HouseCellBasic(
+            house: house,
+            iconSize: .largeForMajorCells
+          )
+        }
+        .onAppear {
+          viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
+        }
+      }
+
+      TinyLoadingIndicator()
+        .frame(
+          idealWidth: .infinity,
+          maxWidth: .infinity,
+          alignment: .center
+        )
+    }
+  }
+
   var body: some View {
     NavigationView {
-      if viewModel.showError {
-        ErrorDisplay(reloadData: viewModel.fetchNextPageIfPossible)
-          .navigationTitle(viewModel.viewTitle)
-      } else if viewModel.initialLoadingPhase {
-        AllHousesLoadingView()
-          .navigationTitle(viewModel.viewTitle)
-      } else {
-        // This cannot be a scrollview as
-        // that tanks the performance.
-        List {
-          ForEach(viewModel.houses) { house in
-            NavigationLink(
-              destination: SingleHouseView(houseBasic: house)
-            ) {
-              HouseCellBasic(
-                house: house,
-                iconSize: .largeForMajorCells
-              )
-            }
-            .onAppear {
-              viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
-            }
-          }
-
-          if viewModel.initialLoadingPhase {
-            TinyLoadingIndicator()
-              .frame(
-                idealWidth: .infinity,
-                maxWidth: .infinity,
-                alignment: .center
-              )
-          }
+      Group {
+        switch viewModel.state {
+        case .loading:
+          loadingView
+        case .error:
+          errorView
+        case .regular:
+          regularView
         }
-        .navigationTitle(viewModel.viewTitle)
       }
+      .navigationTitle(viewModel.viewTitle)
     }
     .accentColor(.westerosRed)
     .onAppear {
