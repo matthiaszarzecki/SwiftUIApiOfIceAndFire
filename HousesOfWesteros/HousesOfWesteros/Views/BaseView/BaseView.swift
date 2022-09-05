@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct BaseView: View {
+  private let viewModel: BaseViewViewModel
+
   @State private var selection: Int = .zero
-  @State private var resetNavigationIDForGreatHousesView = UUID()
-  @State private var resetNavigationIDForAllHousesView = UUID()
 
   var body: some View {
     TabView {
       GreatHousesView()
         .tabItem {
           Label(
-            "Great Houses",
+            viewModel.textGreatHouses,
             systemImage: "shield.checkerboard"
           )
         }
@@ -26,7 +26,7 @@ struct BaseView: View {
       AllHousesView()
         .tabItem {
           Label(
-            "All Houses",
+            viewModel.textAllHouses,
             systemImage: "shield.lefthalf.fill"
           )
         }
@@ -35,7 +35,7 @@ struct BaseView: View {
       AboutView()
         .tabItem {
           Label(
-            "About",
+            viewModel.textAbout,
             systemImage: "gear"
           )
         }
@@ -44,16 +44,10 @@ struct BaseView: View {
     .accentColor(.westerosRed)
   }
 
-  init() {
-    // Set font for Title in large view
-    if let font = UIFont(name: "GameofThrones", size: 20) {
-      UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
-    }
+  init(viewModel: BaseViewViewModel = BaseViewViewModel()) {
+    self.viewModel = viewModel
 
-    // Set font for Title in navigation bar
-    if let font = UIFont(name: "GameofThrones", size: 16) {
-      UINavigationBar.appearance().titleTextAttributes = [.font: font]
-    }
+    viewModel.setupCustomFonts()
   }
 }
 
