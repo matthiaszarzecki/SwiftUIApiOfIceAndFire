@@ -29,6 +29,8 @@ final class AllHousesViewModel: ObservableObject {
     guard canLoadNextPage else {
       return
     }
+    
+    // if let publisher = Api.shared.mockGetHouses() {
 
     if let publisher = Api.shared.getHouses(page: page, pageSize: pageSize) {
       publisher
