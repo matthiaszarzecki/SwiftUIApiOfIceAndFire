@@ -48,8 +48,8 @@ class AllHousesViewModel: ObservableObject {
     }
   }
 
-  func shouldLoadNextBatch(house: HouseBasic) -> Bool {
-    state.houses.last == house
+  func shouldLoadNextBatch(houseUrl: String) -> Bool {
+    state.houses.last?.url == houseUrl
   }
 
   // MARK: - Private Functions

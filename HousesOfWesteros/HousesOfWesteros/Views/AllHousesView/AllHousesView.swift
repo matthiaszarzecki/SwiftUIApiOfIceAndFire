@@ -33,7 +33,7 @@ struct AllHousesDisplay: View {
   let showError: Bool
   let initialLoadingPhase: Bool
   let viewTitle: String
-  let shouldLoadNextBatch: (_ house: HouseBasic) -> Bool
+  let shouldLoadNextBatch: (_ houseUrl: String) -> Bool
   let onScrolledAtBottom: () -> Void
 
   var body: some View {
@@ -58,7 +58,7 @@ struct AllHousesDisplay: View {
               )
             }
             .onAppear {
-              if shouldLoadNextBatch(house) {
+              if shouldLoadNextBatch(house.url) {
                 self.onScrolledAtBottom()
               }
             }
