@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-// TODO: Create Mock ViewModel
+// TODO: Add Downloader logic
+// TODO: Add Mock Downloader
 // TODO: Fix Loading Logic
 // TODO: Fix Loading Indicator
 // TODO: Rename variables
-// TODO: Check which variables in viewmodel can be private
-// TODO: Fix Loading Indicator
 // TODO: Loading Indicator no outside frame
-// TODO: Trigger reload earlier
+// TODO: Trigger reload 10 items earlier
 // TODO: Create state enum
-// TODO: Create isLoadingMorehouses variable
+// TODO: Create isLoadingMorehouses logic, variable
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
