@@ -13,6 +13,9 @@ import SwiftUI
 // TODO: Fix Loading Indicator
 // TODO: Rename variables
 // TODO: Check which variables in viewmodel can be private
+// TODO: Fix Loading Indicator
+// TODO: Loading Indicator no outside frame
+// TODO: Trigger reload earlier
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {

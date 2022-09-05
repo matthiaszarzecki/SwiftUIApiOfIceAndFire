@@ -9,14 +9,14 @@ import Combine
 import SwiftUI
 
 final class AllHousesViewModel: ObservableObject {
+  let viewTitle = "All Houses of Westeros"
+
   @Published private(set) var houses: [HouseBasic] = []
-  @Published private(set) var page = 1
-  @Published private(set) var canLoadNextPage = true
   @Published private(set) var showError = false
   @Published private(set) var initialLoadingPhase = true
 
-  let viewTitle = "All Houses of Westeros"
-
+  private var page = 1
+  private var canLoadNextPage = true
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
 
