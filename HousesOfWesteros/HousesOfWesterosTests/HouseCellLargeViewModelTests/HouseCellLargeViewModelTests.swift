@@ -97,7 +97,7 @@ class HouseCellLargeViewModelTests: XCTestCase {
     // WHEN we call the susbtitle variable
     let result = viewModel.subtitle
 
-    // THEN the result is "Members: 4 - Branches: 2"
+    // THEN the result is "Members: 4 - Branches: 3"
     XCTAssertEqual(result, "Members: 4 - Branches: 3")
   }
 }
