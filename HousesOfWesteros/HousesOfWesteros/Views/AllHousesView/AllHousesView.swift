@@ -9,18 +9,19 @@ import SwiftUI
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
-  @ObservedObject private var allHousesViewModel = AllHousesViewModel()
+  @ObservedObject private var viewModel = AllHousesViewModel()
 
   var body: some View {
     AllHousesDisplay(
-      fetchResults: allHousesViewModel.state.houses,
-      isLoading: allHousesViewModel.state.canLoadNextPage,
-      showError: allHousesViewModel.state.showError,
-      initialLoadingPhase: allHousesViewModel.state.intitialLoadingPhase,
-      onScrolledAtBottom: allHousesViewModel.fetchNextPageIfPossible
+      fetchResults: viewModel.state.houses,
+      isLoading: viewModel.state.canLoadNextPage,
+      showError: viewModel.state.showError,
+      initialLoadingPhase: viewModel.state.intitialLoadingPhase,
+      viewTitle: viewModel.viewTitle,
+      onScrolledAtBottom: viewModel.fetchNextPageIfPossible
     )
     .onAppear {
-      allHousesViewModel.fetchNextPageIfPossible()
+      viewModel.fetchNextPageIfPossible()
     }
   }
 }
@@ -30,9 +31,8 @@ struct AllHousesDisplay: View {
   let isLoading: Bool
   let showError: Bool
   let initialLoadingPhase: Bool
+  let viewTitle: String
   let onScrolledAtBottom: () -> Void
-
-  private let viewTitle = "All Houses of Westeros"
 
   var body: some View {
     NavigationView {
@@ -64,7 +64,11 @@ struct AllHousesDisplay: View {
 
           if isLoading {
             TinyLoadingIndicator()
-              .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+              .frame(
+                idealWidth: .infinity,
+                maxWidth: .infinity,
+                alignment: .center
+              )
           }
         }
         .navigationTitle(viewTitle)
@@ -95,7 +99,8 @@ struct AllHousesDisplay_Previews: PreviewProvider {
         fetchResults: configuration.houses,
         isLoading: configuration.isLoading,
         showError: configuration.showError,
-        initialLoadingPhase: configuration.initialLoadingPhase
+        initialLoadingPhase: configuration.initialLoadingPhase,
+        viewTitle: "All Houses of Westeros"
       ) {}
     }
   }

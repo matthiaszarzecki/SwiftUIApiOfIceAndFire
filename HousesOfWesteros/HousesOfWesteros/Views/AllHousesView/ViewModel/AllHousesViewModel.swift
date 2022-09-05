@@ -18,6 +18,7 @@ class AllHousesViewModel: ObservableObject {
   }
 
   @Published private(set) var state = SearchResultsViewState()
+  let viewTitle = "All Houses of Westeros"
 
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
