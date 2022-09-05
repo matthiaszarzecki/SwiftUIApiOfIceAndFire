@@ -8,14 +8,7 @@
 import Combine
 import SwiftUI
 
-protocol AllHousesViewModelProtocol: ObservableObject {
-  var viewTitle: String { get }
-  var houses: [HouseBasic] { get }
-  var showError: Bool { get }
-  var initialLoadingPhase: Bool { get }
-}
-
-final class AllHousesViewModel: AllHousesViewModelProtocol {
+final class AllHousesViewModel: ObservableObject {
   let viewTitle = "All Houses of Westeros"
 
   @Published private(set) var houses: [HouseBasic] = []
