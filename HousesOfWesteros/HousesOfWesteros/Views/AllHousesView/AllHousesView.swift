@@ -13,11 +13,12 @@ struct AllHousesView: View {
 
   var body: some View {
     AllHousesDisplay(
-      fetchResults: viewModel.state.houses,
+      houses: viewModel.state.houses,
       isLoading: viewModel.state.canLoadNextPage,
       showError: viewModel.state.showError,
       initialLoadingPhase: viewModel.state.intitialLoadingPhase,
       viewTitle: viewModel.viewTitle,
+      shouldLoadNextBatch: viewModel.shouldLoadNextBatch,
       onScrolledAtBottom: viewModel.fetchNextPageIfPossible
     )
     .onAppear {
@@ -27,11 +28,12 @@ struct AllHousesView: View {
 }
 
 struct AllHousesDisplay: View {
-  let fetchResults: [HouseBasic]
+  let houses: [HouseBasic]
   let isLoading: Bool
   let showError: Bool
   let initialLoadingPhase: Bool
   let viewTitle: String
+  let shouldLoadNextBatch: (_ house: HouseBasic) -> Bool
   let onScrolledAtBottom: () -> Void
 
   var body: some View {
@@ -46,7 +48,7 @@ struct AllHousesDisplay: View {
         // This cannot be a scrollview as
         // that tanks the performance.
         List {
-          ForEach(fetchResults) { house in
+          ForEach(houses) { house in
             NavigationLink(
               destination: SingleHouseView(houseBasic: house)
             ) {
@@ -56,7 +58,7 @@ struct AllHousesDisplay: View {
               )
             }
             .onAppear {
-              if self.fetchResults.last == house {
+              if shouldLoadNextBatch(house) {
                 self.onScrolledAtBottom()
               }
             }
@@ -96,12 +98,14 @@ struct AllHousesDisplay_Previews: PreviewProvider {
     ForEach(0..<configurations.count, id: \.self) { index in
       let configuration = configurations[index]
       AllHousesDisplay(
-        fetchResults: configuration.houses,
+        houses: configuration.houses,
         isLoading: configuration.isLoading,
         showError: configuration.showError,
         initialLoadingPhase: configuration.initialLoadingPhase,
-        viewTitle: "All Houses of Westeros"
-      ) {}
+        viewTitle: "All Houses of Westeros",
+        shouldLoadNextBatch: { _ in false },
+        onScrolledAtBottom: {}
+      )
     }
   }
 }

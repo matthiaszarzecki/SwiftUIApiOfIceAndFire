@@ -18,12 +18,13 @@ class AllHousesViewModel: ObservableObject {
   }
 
   @Published private(set) var state = SearchResultsViewState()
+
   let viewTitle = "All Houses of Westeros"
 
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
 
-  internal func fetchNextPageIfPossible() {
+  func fetchNextPageIfPossible() {
     guard state.canLoadNextPage else {
       return
     }
@@ -46,6 +47,12 @@ class AllHousesViewModel: ObservableObject {
       showError()
     }
   }
+
+  func shouldLoadNextBatch(house: HouseBasic) -> Bool {
+    state.houses.last == house
+  }
+
+  // MARK: - Private Functions
 
   private func showError() {
     state.showError = true
