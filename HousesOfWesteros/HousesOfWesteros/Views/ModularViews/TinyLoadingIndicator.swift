@@ -13,9 +13,15 @@ struct TinyLoadingIndicator: View {
   private let size: CGFloat = 24
 
   var body: some View {
-    Image("dragon_no_background")
-      .resizable()
-      .frame(width: size, height: size, alignment: .center)
+    HStack {
+      Spacer()
+
+      Image("dragon_no_background")
+        .resizable()
+        .frame(width: size, height: size, alignment: .center)
+
+      Spacer()
+    }
   }
 }
 

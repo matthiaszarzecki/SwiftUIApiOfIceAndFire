@@ -12,7 +12,6 @@ import SwiftUI
 // TODO: Fix Loading Logic
 // TODO: Fix Loading Indicator
 // TODO: Rename variables
-// TODO: Loading Indicator no outside frame
 // TODO: Create isLoadingMorehouses logic, variable
 
 /// Shows a list of all ASOIAF Houses.
@@ -45,12 +44,8 @@ struct AllHousesView: View {
         }
       }
 
+      // Show Loading indicator all the time
       TinyLoadingIndicator()
-        .frame(
-          idealWidth: .infinity,
-          maxWidth: .infinity,
-          alignment: .center
-        )
     }
   }
 
