@@ -25,7 +25,7 @@ struct AllHousesView: View {
   }
 
   private var errorView: some View {
-    ErrorDisplay(reloadData: viewModel.fetchNextPageIfPossible)
+    ErrorDisplay { viewModel.fetchNextPageIfPossible() }
   }
 
   private var regularView: some View {

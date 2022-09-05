@@ -50,7 +50,10 @@ final class AllHousesViewModel: ObservableObject {
   }
 
   func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {
-    if houses.last?.url == houseUrl {
+    if
+      let house10SpotsFromLast = houses[safe: houses.count - 10],
+      house10SpotsFromLast.url == houseUrl
+    {
       fetchNextPageIfPossible()
     }
   }
