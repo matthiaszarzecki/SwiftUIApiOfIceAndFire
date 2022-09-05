@@ -8,28 +8,21 @@
 import SwiftUI
 
 struct GreatHousesView: View {
-  @ObservedObject private var greatHousesViewModel = GreatHousesViewModel()
+  @ObservedObject private var viewModel = GreatHousesViewModel()
 
   var body: some View {
     GreatHousesDisplay(
-      houses: greatHousesViewModel.state.houses
+      houses: viewModel.state.houses,
+      hasViableEntries: viewModel.hasViableEntries
     )
   }
 }
 
 struct GreatHousesDisplay: View {
   let houses: [HouseBasic?]
+  let hasViableEntries: Bool
 
   private let viewTitle = "Great Houses of Westeros"
-
-  /// A boolean indicating whether houses
-  /// contains at least 1 non-nil entry.
-  private var hasViableEntries: Bool {
-    for house in houses where house != nil {
-      return true
-    }
-    return false
-  }
 
   var body: some View {
     GeometryReader { geometry in
@@ -73,11 +66,13 @@ struct GreatHousesDisplay: View {
 struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
     GreatHousesDisplay(
-      houses: .mockHousesBasic
+      houses: .mockHousesBasic,
+      hasViableEntries: true
     )
 
     GreatHousesDisplay(
-      houses: .mockHousesEmtpyArray
+      houses: .mockHousesEmtpyArray,
+      hasViableEntries: true
     )
   }
 }

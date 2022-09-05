@@ -19,6 +19,15 @@ class GreatHousesViewModel: ObservableObject {
 
   private let downloader: SingleHouseBasicDownloaderProtocol
 
+  /// A boolean indicating whether houses
+  /// contains at least 1 non-nil entry.
+  var hasViableEntries: Bool {
+    for house in state.houses where house != nil {
+      return true
+    }
+    return false
+  }
+
   init(
     downloader: SingleHouseBasicDownloaderProtocol = SingleHouseBasicDownloader()
   ) {
