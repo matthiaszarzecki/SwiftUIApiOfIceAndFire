@@ -13,7 +13,6 @@ import SwiftUI
 // TODO: Fix Loading Indicator
 // TODO: Rename variables
 // TODO: Loading Indicator no outside frame
-// TODO: Trigger reload 10 items earlier
 // TODO: Create isLoadingMorehouses logic, variable
 
 /// Shows a list of all ASOIAF Houses.
