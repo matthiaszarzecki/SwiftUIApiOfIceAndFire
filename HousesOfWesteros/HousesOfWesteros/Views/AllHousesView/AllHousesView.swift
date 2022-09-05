@@ -90,9 +90,15 @@ struct AllHousesDisplay: View {
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
     AllHousesView(
-      viewModel: AllHousesViewModel(
-        downloader: MockHousesBasicDownloader()
-      )
+      viewModel: .mockViewModelRegular
+    )
+
+    AllHousesView(
+      viewModel: .mockViewModelError
+    )
+
+    AllHousesView(
+      viewModel: .mockViewModelLoading
     )
     /*let configurations: [(
       houses: [HouseBasic],

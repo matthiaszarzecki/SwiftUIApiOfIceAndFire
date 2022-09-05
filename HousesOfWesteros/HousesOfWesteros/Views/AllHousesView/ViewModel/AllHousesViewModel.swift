@@ -36,9 +36,15 @@ final class AllHousesViewModel: ObservableObject {
     if state == .loading {
       self.state = .loading
     } else if state == .error {
-      self.state = .loading
+      self.state = .error
     }
   }
+
+  static let mockViewModelError: AllHousesViewModel = .init(forState: .error)
+  static let mockViewModelLoading: AllHousesViewModel = .init(forState: .loading)
+  static let mockViewModelRegular = AllHousesViewModel(
+    downloader: MockHousesBasicDownloader()
+  )
 
   func fetchNextPageIfPossible() {
     guard canLoadNextPage else {
