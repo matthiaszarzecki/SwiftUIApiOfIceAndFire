@@ -12,18 +12,18 @@ final class AllHousesViewModel: ObservableObject {
   enum AllHousesViewState {
     case loading
     case error
-    case regular
+    case regularAndNotLoadingMore
+    case regularAndLoadingMore
   }
 
   static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
   static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regular)
+  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
 
   let viewTitle = "All Houses of Westeros"
 
   @Published private(set) var houses: [HouseBasic] = []
   @Published private(set) var state: AllHousesViewState = .loading
-  @Published private(set) var canLoadNextPage = true
 
   private var page = 1
   private var subscriptions = Set<AnyCancellable>()
@@ -41,7 +41,7 @@ final class AllHousesViewModel: ObservableObject {
   }
 
   func fetchNextPageIfPossible() {
-    guard canLoadNextPage else {
+    guard state != .regularAndNotLoadingMore else {
       return
     }
 
@@ -78,15 +78,18 @@ final class AllHousesViewModel: ObservableObject {
   private func onReceive(_ completion: Subscribers.Completion<Error>) {
     switch completion {
     case .finished:
-      state = .regular
+      state = .regularAndLoadingMore
     case .failure:
-      canLoadNextPage = false
+      state = .regularAndNotLoadingMore
     }
   }
 
   private func onReceive(_ batch: [HouseBasic]) {
     houses += batch
     page += 1
-    canLoadNextPage = batch.count == pageSize
+
+    if batch.count != pageSize {
+      state = .regularAndNotLoadingMore
+    }
   }
 }

@@ -39,9 +39,7 @@ struct AllHousesView: View {
         }
       }
 
-      if viewModel.canLoadNextPage {
-        TinyLoadingIndicator()
-      }
+      TinyLoadingIndicator()
     }
   }
 
@@ -53,7 +51,9 @@ struct AllHousesView: View {
           loadingView
         case .error:
           errorView
-        case .regular:
+        case .regularAndNotLoadingMore:
+          regularView
+        case .regularAndLoadingMore:
           regularView
         }
       }
