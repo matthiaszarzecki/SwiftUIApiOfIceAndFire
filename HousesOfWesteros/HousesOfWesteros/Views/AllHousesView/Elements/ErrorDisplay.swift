@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-struct ErrorDisplay: View {
-  let reloadData: () -> Void
+struct ErrorDisplayViewModel {
+  var reloadData: () -> Void
 
-  private let ohNoText = "Oh No!"
-  private let errorText = "Something went wrong fetching the data. Click here to try again!"
+  let textTitle = "Oh No!"
+  let textExplanation = "Something went wrong fetching the data. Click here to try again!"
+}
+
+struct ErrorDisplay: View {
+  let viewModel: ErrorDisplayViewModel
 
   var body: some View {
     List {
-      Text(ohNoText)
+      Text(viewModel.textTitle)
       Button(
         action: {
-          reloadData()
+          viewModel.reloadData()
         },
         label: {
           HStack {
             Image(systemName: "arrow.triangle.2.circlepath")
-            Text(errorText)
+            Text(viewModel.textExplanation)
           }
           .foregroundColor(.red)
         }
@@ -35,7 +39,7 @@ struct ErrorDisplay: View {
 #if !TESTING
 struct ErrorDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    ErrorDisplay {}
+    ErrorDisplay(viewModel: ErrorDisplayViewModel {})
   }
 }
 #endif
