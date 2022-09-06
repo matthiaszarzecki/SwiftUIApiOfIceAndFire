@@ -31,20 +31,21 @@ final class AllHousesViewModel: ObservableObject {
   }
 
   convenience init(forMockState state: AllHousesViewState) {
-    self.init(downloader: MockHousesBasicDownloader())
-
-    if state == .loading {
-      self.state = .loading
-    } else if state == .error {
-      self.state = .error
+    switch state {
+    case .regular:
+      self.init(downloader: MockHousesBasicDownloader())
+    case .loading:
+      self.init(downloader: MockHousesBasicDownloader())
+    case .error:
+      self.init(downloader: MockHousesBasicDownloader())
     }
+
+    self.state = state
   }
 
   static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
   static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegular = AllHousesViewModel(
-    downloader: MockHousesBasicDownloader()
-  )
+  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regular)
 
   func fetchNextPageIfPossible() {
     guard canLoadNextPage else {
