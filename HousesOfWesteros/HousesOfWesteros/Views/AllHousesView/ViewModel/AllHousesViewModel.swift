@@ -15,6 +15,10 @@ final class AllHousesViewModel: ObservableObject {
     case regular
   }
 
+  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
+  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
+  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regular)
+
   let viewTitle = "All Houses of Westeros"
 
   @Published private(set) var houses: [HouseBasic] = []
@@ -28,24 +32,13 @@ final class AllHousesViewModel: ObservableObject {
 
   init(downloader: HousesBasicDownloaderProtocol = HousesBasicDownloader()) {
     self.downloader = downloader
+    fetchNextPageIfPossible()
   }
 
   convenience init(forMockState state: AllHousesViewState) {
-    switch state {
-    case .regular:
-      self.init(downloader: MockHousesBasicDownloader())
-    case .loading:
-      self.init(downloader: MockHousesBasicDownloader())
-    case .error:
-      self.init(downloader: MockHousesBasicDownloader())
-    }
-
+    self.init(downloader: MockHousesBasicDownloader())
     self.state = state
   }
-
-  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
-  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regular)
 
   func fetchNextPageIfPossible() {
     guard canLoadNextPage else {

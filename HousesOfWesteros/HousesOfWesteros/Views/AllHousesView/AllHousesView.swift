@@ -8,9 +8,6 @@
 import SwiftUI
 
 // TODO: Create isLoadingMorehouses logic, variable
-// TODO: Add failure mock downloader
-// TODO: Add viewmodel with loading state
-// TODO: Add static mock viewmodels in various states
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
@@ -62,9 +59,6 @@ struct AllHousesView: View {
       .navigationTitle(viewModel.viewTitle)
     }
     .accentColor(.westerosRed)
-    .onAppear {
-      viewModel.fetchNextPageIfPossible()
-    }
   }
 
   init(viewModel: AllHousesViewModel = AllHousesViewModel()) {
@@ -89,17 +83,12 @@ struct AllHousesDisplay: View {
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    AllHousesView(
-      viewModel: .mockViewModelRegular
-    )
+    AllHousesView(viewModel: .mockViewModelLoading)
 
-    AllHousesView(
-      viewModel: .mockViewModelError
-    )
+    AllHousesView(viewModel: .mockViewModelError)
 
-    AllHousesView(
-      viewModel: .mockViewModelLoading
-    )
+    AllHousesView(viewModel: .mockViewModelRegular)
+
     /*let configurations: [(
       houses: [HouseBasic],
       isLoading: Bool,
