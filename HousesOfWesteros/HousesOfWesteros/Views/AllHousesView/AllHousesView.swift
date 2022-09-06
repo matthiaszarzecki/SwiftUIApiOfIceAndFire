@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: Create isLoadingMorehouses logic, variable
-
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
   @ObservedObject private var viewModel: AllHousesViewModel
@@ -21,25 +19,36 @@ struct AllHousesView: View {
     ErrorDisplay { viewModel.fetchNextPageIfPossible() }
   }
 
-  private var regularView: some View {
+  private var regularViewAndLoadingMore: some View {
     // This cannot be a scrollview as
     // that tanks the performance.
     List {
-      ForEach(viewModel.houses) { house in
-        NavigationLink(
-          destination: SingleHouseView(houseBasic: house)
-        ) {
-          HouseCellBasic(
-            house: house,
-            iconSize: .largeForMajorCells
-          )
-        }
-        .onAppear {
-          viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
-        }
-      }
-
+      houseElements
       TinyLoadingIndicator()
+    }
+  }
+
+  private var regularViewAndNotLoadingMore: some View {
+    // This cannot be a scrollview as
+    // that tanks the performance.
+    List {
+      houseElements
+    }
+  }
+
+  private var houseElements: some View {
+    ForEach(viewModel.houses) { house in
+      NavigationLink(
+        destination: SingleHouseView(houseBasic: house)
+      ) {
+        HouseCellBasic(
+          house: house,
+          iconSize: .largeForMajorCells
+        )
+      }
+      .onAppear {
+        viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
+      }
     }
   }
 
@@ -52,9 +61,9 @@ struct AllHousesView: View {
         case .error:
           errorView
         case .regularAndNotLoadingMore:
-          regularView
+          regularViewAndNotLoadingMore
         case .regularAndLoadingMore:
-          regularView
+          regularViewAndLoadingMore
         }
       }
       .navigationTitle(viewModel.viewTitle)
