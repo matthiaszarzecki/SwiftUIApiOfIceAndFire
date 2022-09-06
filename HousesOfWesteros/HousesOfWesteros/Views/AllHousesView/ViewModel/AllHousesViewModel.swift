@@ -8,19 +8,6 @@
 import Combine
 import SwiftUI
 
-// Contains mock view model variants of the AllHousesViewModel
-extension AllHousesViewModel {
-  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
-  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
-  static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
-
-  convenience init(forMockState state: AllHousesViewState) {
-    self.init(downloader: MockHousesBasicDownloader())
-    self.state = state
-  }
-}
-
 final class AllHousesViewModel: ObservableObject {
   enum AllHousesViewState {
     case loading
@@ -95,5 +82,18 @@ final class AllHousesViewModel: ObservableObject {
     if batch.count != pageSize {
       state = .regularAndNotLoadingMore
     }
+  }
+}
+
+// Contains mock view model variants of the AllHousesViewModel
+extension AllHousesViewModel {
+  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
+  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
+  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
+  static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
+
+  convenience init(forMockState state: AllHousesViewState) {
+    self.init(downloader: MockHousesBasicDownloader())
+    self.state = state
   }
 }
