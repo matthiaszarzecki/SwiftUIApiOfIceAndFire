@@ -30,7 +30,7 @@ final class AllHousesViewModel: ObservableObject {
     self.downloader = downloader
   }
 
-  convenience init(forState state: AllHousesViewState) {
+  convenience init(forMockState state: AllHousesViewState) {
     self.init(downloader: MockHousesBasicDownloader())
 
     if state == .loading {
@@ -40,8 +40,8 @@ final class AllHousesViewModel: ObservableObject {
     }
   }
 
-  static let mockViewModelError: AllHousesViewModel = .init(forState: .error)
-  static let mockViewModelLoading: AllHousesViewModel = .init(forState: .loading)
+  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
+  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
   static let mockViewModelRegular = AllHousesViewModel(
     downloader: MockHousesBasicDownloader()
   )
