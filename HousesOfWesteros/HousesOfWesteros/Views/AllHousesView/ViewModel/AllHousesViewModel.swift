@@ -8,6 +8,10 @@
 import Combine
 import SwiftUI
 
+extension AllHousesViewModel {
+  
+}
+
 final class AllHousesViewModel: ObservableObject {
   enum AllHousesViewState {
     case loading
@@ -18,7 +22,8 @@ final class AllHousesViewModel: ObservableObject {
 
   static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
   static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegular: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
+  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
+  static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
 
   let viewTitle = "All Houses of Westeros"
 

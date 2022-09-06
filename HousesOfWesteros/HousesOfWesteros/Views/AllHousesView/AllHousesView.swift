@@ -67,53 +67,20 @@ struct AllHousesView: View {
   }
 }
 
-struct AllHousesDisplay: View {
-  let houses: [HouseBasic]
-  let isLoading: Bool
-  let showError: Bool
-  let initialLoadingPhase: Bool
-  let viewTitle: String
-  let checkIfNextBatchShouldBeLoadedAndLoad: (_ houseUrl: String) -> Void
-  let loadNextBatch: () -> Void
-
-  var body: some View {
-    Text("Hello")
-  }
-}
-
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    AllHousesView(viewModel: .mockViewModelLoading)
-
-    AllHousesView(viewModel: .mockViewModelError)
-
-    AllHousesView(viewModel: .mockViewModelRegular)
-
-    /*let configurations: [(
-      houses: [HouseBasic],
-      isLoading: Bool,
-      showError: Bool,
-      initialLoadingPhase: Bool
-    )] = [
-      (.mockHousesBasic, false, false, false),
-      (.mockHousesBasic, true, false, false),
-      (.mockHousesBasic, true, true, false),
-      (.mockHousesBasic, true, false, true)
+    let configurations: [AllHousesViewModel] = [
+      .mockViewModelLoading,
+      .mockViewModelError,
+      .mockViewModelRegularAndLoadingMore,
+      .mockViewModelRegularAndNotLoadingMore
     ]
 
     ForEach(0..<configurations.count, id: \.self) { index in
       let configuration = configurations[index]
-      AllHousesDisplay(
-        houses: configuration.houses,
-        isLoading: configuration.isLoading,
-        showError: configuration.showError,
-        initialLoadingPhase: configuration.initialLoadingPhase,
-        viewTitle: "All Houses of Westeros",
-        checkIfNextBatchShouldBeLoadedAndLoad: { _ in },
-        loadNextBatch: {}
-      )
-    }*/
+      AllHousesView(viewModel: configuration)
+    }
   }
 }
 #endif
