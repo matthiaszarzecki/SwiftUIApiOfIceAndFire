@@ -9,101 +9,86 @@ import SwiftUI
 
 /// Shows a list of all ASOIAF Houses.
 struct AllHousesView: View {
-  @ObservedObject private var viewModel = AllHousesViewModel()
+  @ObservedObject private var viewModel: AllHousesViewModel
 
-  var body: some View {
-    AllHousesDisplay(
-      houses: viewModel.state.houses,
-      isLoading: viewModel.state.canLoadNextPage,
-      showError: viewModel.state.showError,
-      initialLoadingPhase: viewModel.state.intitialLoadingPhase,
-      viewTitle: viewModel.viewTitle,
-      checkIfNextBatchShouldBeLoadedAndLoad: viewModel.checkIfNextBatchShouldBeLoadedAndLoad,
-      loadNextBatch: viewModel.fetchNextPageIfPossible
-    )
-    .onAppear {
-      viewModel.fetchNextPageIfPossible()
+  private var loadingView: some View {
+    AllHousesLoadingView()
+  }
+
+  private var errorView: some View {
+    ErrorDisplay { viewModel.fetchNextPageIfPossible() }
+  }
+
+  private var regularViewAndLoadingMore: some View {
+    // This cannot be a scrollview as
+    // that tanks the performance.
+    List {
+      houseElements
+      TinyLoadingIndicator()
     }
   }
-}
 
-struct AllHousesDisplay: View {
-  let houses: [HouseBasic]
-  let isLoading: Bool
-  let showError: Bool
-  let initialLoadingPhase: Bool
-  let viewTitle: String
-  let checkIfNextBatchShouldBeLoadedAndLoad: (_ houseUrl: String) -> Void
-  let loadNextBatch: () -> Void
+  private var regularViewAndNotLoadingMore: some View {
+    // This cannot be a scrollview as
+    // that tanks the performance.
+    List {
+      houseElements
+    }
+  }
+
+  private var houseElements: some View {
+    ForEach(viewModel.houses) { house in
+      NavigationLink(
+        destination: SingleHouseView(houseBasic: house)
+      ) {
+        HouseCellBasic(
+          house: house,
+          iconSize: .largeForMajorCells
+        )
+      }
+      .onAppear {
+        viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
+      }
+    }
+  }
 
   var body: some View {
     NavigationView {
-      if showError {
-        ErrorDisplay(reloadData: loadNextBatch)
-          .navigationTitle(viewTitle)
-      } else if initialLoadingPhase {
-        AllHousesLoadingView()
-          .navigationTitle(viewTitle)
-      } else {
-        // This cannot be a scrollview as
-        // that tanks the performance.
-        List {
-          ForEach(houses) { house in
-            NavigationLink(
-              destination: SingleHouseView(houseBasic: house)
-            ) {
-              HouseCellBasic(
-                house: house,
-                iconSize: .largeForMajorCells
-              )
-            }
-            .onAppear {
-              checkIfNextBatchShouldBeLoadedAndLoad(house.url)
-            }
-          }
-
-          if isLoading {
-            TinyLoadingIndicator()
-              .frame(
-                idealWidth: .infinity,
-                maxWidth: .infinity,
-                alignment: .center
-              )
-          }
+      Group {
+        switch viewModel.state {
+        case .loading:
+          loadingView
+        case .error:
+          errorView
+        case .regularAndNotLoadingMore:
+          regularViewAndNotLoadingMore
+        case .regularAndLoadingMore:
+          regularViewAndLoadingMore
         }
-        .navigationTitle(viewTitle)
       }
+      .navigationTitle(viewModel.viewTitle)
     }
     .accentColor(.westerosRed)
+  }
+
+  init(viewModel: AllHousesViewModel = AllHousesViewModel()) {
+    self.viewModel = viewModel
   }
 }
 
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    let configurations: [(
-      houses: [HouseBasic],
-      isLoading: Bool,
-      showError: Bool,
-      initialLoadingPhase: Bool
-    )] = [
-      (.mockHousesBasic, false, false, false),
-      (.mockHousesBasic, true, false, false),
-      (.mockHousesBasic, true, true, false),
-      (.mockHousesBasic, true, false, true)
+    let configurations: [AllHousesViewModel] = [
+      .mockViewModelLoading,
+      .mockViewModelError,
+      .mockViewModelRegularAndLoadingMore,
+      .mockViewModelRegularAndNotLoadingMore
     ]
 
     ForEach(0..<configurations.count, id: \.self) { index in
       let configuration = configurations[index]
-      AllHousesDisplay(
-        houses: configuration.houses,
-        isLoading: configuration.isLoading,
-        showError: configuration.showError,
-        initialLoadingPhase: configuration.initialLoadingPhase,
-        viewTitle: "All Houses of Westeros",
-        checkIfNextBatchShouldBeLoadedAndLoad: { _ in },
-        loadNextBatch: {}
-      )
+      AllHousesView(viewModel: configuration)
     }
   }
 }

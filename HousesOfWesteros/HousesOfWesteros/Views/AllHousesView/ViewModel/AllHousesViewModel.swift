@@ -9,27 +9,34 @@ import Combine
 import SwiftUI
 
 final class AllHousesViewModel: ObservableObject {
-  struct SearchResultsViewState {
-    var houses: [HouseBasic] = []
-    var page = 1
-    var canLoadNextPage = true
-    var showError = false
-    var intitialLoadingPhase = true
+  enum AllHousesViewState {
+    case loading
+    case error
+    case regularAndNotLoadingMore
+    case regularAndLoadingMore
   }
-
-  @Published private(set) var state = SearchResultsViewState()
 
   let viewTitle = "All Houses of Westeros"
 
+  @Published private(set) var houses: [HouseBasic] = []
+  @Published private(set) var state: AllHousesViewState = .loading
+
+  private var page = 1
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
+  private let downloader: HousesBasicDownloaderProtocol
+
+  init(downloader: HousesBasicDownloaderProtocol = HousesBasicDownloader()) {
+    self.downloader = downloader
+    fetchNextPageIfPossible()
+  }
 
   func fetchNextPageIfPossible() {
-    guard state.canLoadNextPage else {
+    guard state != .regularAndNotLoadingMore else {
       return
     }
 
-    if let publisher = Api.shared.getHouses(page: state.page, pageSize: pageSize) {
+    if let publisher = downloader.getHouses(page: page, pageSize: pageSize) {
       publisher
         .sink(
           receiveCompletion: onReceive,
@@ -40,40 +47,53 @@ final class AllHousesViewModel: ObservableObject {
       // If after 3 seconds nothing has been loaded, show error
       DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
         if self.subscriptions.isEmpty {
-          showError()
+          state = .error
         }
       }
     } else {
-      showError()
+      state = .error
     }
   }
 
   func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {
-    if state.houses.last?.url == houseUrl {
+    if
+      let house10SpotsFromLast = houses[safe: houses.count - 10],
+      house10SpotsFromLast.url == houseUrl
+    {
       fetchNextPageIfPossible()
     }
   }
 
   // MARK: - Private Functions
 
-  private func showError() {
-    state.showError = true
-    state.intitialLoadingPhase = false
-  }
-
   private func onReceive(_ completion: Subscribers.Completion<Error>) {
     switch completion {
     case .finished:
-      state.showError = false
-      state.intitialLoadingPhase = false
+      state = .regularAndLoadingMore
     case .failure:
-      state.canLoadNextPage = false
+      state = .regularAndNotLoadingMore
     }
   }
 
   private func onReceive(_ batch: [HouseBasic]) {
-    state.houses += batch
-    state.page += 1
-    state.canLoadNextPage = batch.count == pageSize
+    houses += batch
+    page += 1
+
+    if batch.count != pageSize {
+      state = .regularAndNotLoadingMore
+    }
+  }
+}
+
+// Contains mock view model variants of the AllHousesViewModel
+extension AllHousesViewModel {
+  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
+  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
+  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
+  static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
+
+  convenience init(forMockState state: AllHousesViewState) {
+    self.init(downloader: MockHousesBasicDownloader())
+    self.state = state
   }
 }
