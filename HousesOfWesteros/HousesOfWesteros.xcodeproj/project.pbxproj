@@ -511,7 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB5E70B263615FE0057D715 /* HouseCellLarge.swift */,
-				6ED491D327E3E0D200ECC763 /* HouseCellLargeViewModel.swift */,
+				CC4DC81528C7826D0043984C /* ViewModel */,
 			);
 			path = HouseCellLarge;
 			sourceTree = "<group>";
@@ -859,6 +859,14 @@
 			isa = PBXGroup;
 			children = (
 				CC4DC81228C781160043984C /* ErrorDisplayViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC4DC81528C7826D0043984C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6ED491D327E3E0D200ECC763 /* HouseCellLargeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
