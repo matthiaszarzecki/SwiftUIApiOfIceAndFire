@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-struct ErrorDisplayViewModel {
-  var reloadData: () -> Void
-
-  let textTitle = "Oh No!"
-  let textExplanation = "Something went wrong fetching the data. Click here to try again!"
-}
-
 struct ErrorDisplay: View {
   let viewModel: ErrorDisplayViewModel
 
@@ -39,7 +32,7 @@ struct ErrorDisplay: View {
 #if !TESTING
 struct ErrorDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    ErrorDisplay(viewModel: ErrorDisplayViewModel {})
+    ErrorDisplay(viewModel: .mockErrorDisplayViewModel)
   }
 }
 #endif
