@@ -39,8 +39,9 @@ struct AllHousesView: View {
         }
       }
 
-      // Show Loading indicator all the time
-      TinyLoadingIndicator()
+      if viewModel.canLoadNextPage {
+        TinyLoadingIndicator()
+      }
     }
   }
 

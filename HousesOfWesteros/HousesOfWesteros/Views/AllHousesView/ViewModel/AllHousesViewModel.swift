@@ -23,9 +23,9 @@ final class AllHousesViewModel: ObservableObject {
 
   @Published private(set) var houses: [HouseBasic] = []
   @Published private(set) var state: AllHousesViewState = .loading
+  @Published private(set) var canLoadNextPage = true
 
   private var page = 1
-  private var canLoadNextPage = true
   private var subscriptions = Set<AnyCancellable>()
   private let pageSize = 30
   private let downloader: HousesBasicDownloaderProtocol
