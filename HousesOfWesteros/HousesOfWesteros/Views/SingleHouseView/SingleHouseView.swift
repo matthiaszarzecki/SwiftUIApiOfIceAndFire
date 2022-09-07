@@ -109,7 +109,9 @@ struct SingleHouseDisplay: View {
               }
 
               if showError {
-                ErrorSection { updateData() }
+                ErrorSection(
+                  viewModel: ErrorDisplayViewModel { updateData() }
+                )
               }
             }
           }

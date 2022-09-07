@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct ErrorSection: View {
-  let updateData: () -> Void
+  let viewModel: ErrorDisplayViewModel
 
   var body: some View {
     Section(
-      header: SectionHeader(text: "Oh No!")
+      header: SectionHeader(text: viewModel.textTitle)
     ) {
       Button(
         action: {
-          updateData()
+          viewModel.reloadData()
         },
         label: {
           HStack {
             Image(systemName: "arrow.triangle.2.circlepath")
-            Text("Something went wrong fetching additional data. Click here to try again!")
+            Text(viewModel.textExplanation)
           }
           .foregroundColor(.red)
         }
@@ -34,7 +34,7 @@ struct ErrorSection: View {
 struct ErrorSection_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      ErrorSection {}
+      ErrorSection(viewModel: .mockErrorDisplayViewModel)
     }
   }
 }

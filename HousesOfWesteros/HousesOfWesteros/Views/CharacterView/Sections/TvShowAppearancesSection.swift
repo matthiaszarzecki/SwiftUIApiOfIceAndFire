@@ -10,11 +10,11 @@ import SwiftUI
 struct TvShowAppearancesSection: View {
   let tvShowAppearances: [String]
 
-  private let tvShowAppearances = "TV Show Appearances"
+  private let textTvShowAppearances = "TV Show Appearances"
 
   var body: some View {
     Section(
-      header: SectionHeader(text: tvShowAppearances)
+      header: SectionHeader(text: textTvShowAppearances)
     ) {
       ForEach(tvShowAppearances, id: \.self) { appearance in
         Text("📺 \(appearance)")
