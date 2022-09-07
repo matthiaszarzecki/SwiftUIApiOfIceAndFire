@@ -10,9 +10,11 @@ import SwiftUI
 struct CurrentHeirSection: View {
   let heir: CharacterBasic
 
+  private let textCurrentHeir = "Current Heir"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Current Heir")
+      header: SectionHeader(text: textCurrentHeir)
     ) {
       NavigationCharacterCell(character: heir)
     }

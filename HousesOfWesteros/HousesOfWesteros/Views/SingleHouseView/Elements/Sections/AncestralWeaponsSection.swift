@@ -10,10 +10,13 @@ import SwiftUI
 struct AncestralWeaponsSection: View {
   let ancestralWeapons: [String]
 
+  private let textAncestralWeapons = "Ancestral Weapons"
+  private let textAncestralWeapon = "Ancestral Weapon"
+
   var body: some View {
     let sectionHeader = ancestralWeapons.count > 1
-    ? SectionHeader(text: "Ancestral Weapons: \(ancestralWeapons.count)")
-    : SectionHeader(text: "Ancestral Weapon")
+    ? SectionHeader(text: "\(textAncestralWeapons): \(ancestralWeapons.count)")
+    : SectionHeader(text: textAncestralWeapon)
 
     Section(header: sectionHeader) {
       ForEach(ancestralWeapons, id: \.self) { weapon in

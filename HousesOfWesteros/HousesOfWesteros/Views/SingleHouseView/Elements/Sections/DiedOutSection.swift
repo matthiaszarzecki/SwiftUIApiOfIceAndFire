@@ -10,8 +10,10 @@ import SwiftUI
 struct DiedOutSection: View {
   let diedOutPeriod: String
 
+  private let textHouseDiedOut = "House Died out"
+
   var body: some View {
-    Section(header: SectionHeader(text: "House Died out")) {
+    Section(header: SectionHeader(text: textHouseDiedOut)) {
       Text("☠️ \(diedOutPeriod)")
     }
   }

@@ -10,10 +10,13 @@ import SwiftUI
 struct CadetBranchesSection: View {
   let cadetBranches: [HouseBasic]
 
+  private let textCadetBranches = "Cadet Branches"
+  private let textCadetBranch = "Cadet Branch"
+
   var body: some View {
     let sectionHeader = cadetBranches.count > 1
-    ? SectionHeader(text: "Cadet Branches: \(cadetBranches.count)")
-    : SectionHeader(text: "Cadet Branch")
+    ? SectionHeader(text: "\(textCadetBranches): \(cadetBranches.count)")
+    : SectionHeader(text: textCadetBranch)
 
     Section(header: sectionHeader) {
       ForEach(cadetBranches, id: \.self) { cadetBranch in

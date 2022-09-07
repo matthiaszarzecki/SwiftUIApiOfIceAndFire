@@ -10,9 +10,11 @@ import SwiftUI
 struct CoatOfArmsSection: View {
   let coatOfArms: String
 
+  private let textCoatOfArms = "Coat of Arms"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Coat of Arms")
+      header: SectionHeader(text: textCoatOfArms)
     ) {
       Text(coatOfArms)
     }
