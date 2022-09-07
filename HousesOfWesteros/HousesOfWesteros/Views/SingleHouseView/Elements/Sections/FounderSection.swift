@@ -10,9 +10,11 @@ import SwiftUI
 struct FounderSection: View {
   let founder: CharacterBasic
 
+  private let textFoundedBy = "Founded by"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Founded by")
+      header: SectionHeader(text: textFoundedBy)
     ) {
       NavigationCharacterCell(character: founder)
     }

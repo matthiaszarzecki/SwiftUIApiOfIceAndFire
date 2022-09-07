@@ -10,6 +10,9 @@ import SwiftUI
 struct TitlesSection: View {
   let titles: [String]
 
+  private let textTitles = "Titles"
+  private let textTitle = "Title"
+
   var body: some View {
     let sectionHeader = titles.count > 1
       ? SectionHeader(text: "Titles: \(titles.count)")

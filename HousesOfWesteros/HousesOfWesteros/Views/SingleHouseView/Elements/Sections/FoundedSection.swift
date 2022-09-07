@@ -10,9 +10,11 @@ import SwiftUI
 struct FoundedSection: View {
   let foundingPeriod: String
 
+  private let textFoundedDuring = "Founded During"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Founded During")
+      header: SectionHeader(text: textFoundedDuring)
     ) {
       Text("📜 \(foundingPeriod)")
     }

@@ -10,9 +10,11 @@ import SwiftUI
 struct OverlordHouseSection: View {
   let overlordHouse: HouseBasic
 
+  private let textOverlord = "Overlord"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Overlord")
+      header: SectionHeader(text: textOverlord)
     ) {
       NavigationLink(
         destination: SingleHouseView(houseBasic: overlordHouse)

@@ -11,9 +11,11 @@ struct HeraldryColorsSection: View {
   let colors: [Color]
   let width: CGFloat
 
+  private let textHeraldryColors = "Heraldry Colors"
+
   var body: some View {
     if colors.hasEntries {
-      Section(header: SectionHeader(text: "Heraldry Colors")) {
+      Section(header: SectionHeader(text: textHeraldryColors)) {
         HStack {
           let estimatedPadding: CGFloat = .spacing38 * 2
           let colorWidth = (width - estimatedPadding) / CGFloat(colors.count)

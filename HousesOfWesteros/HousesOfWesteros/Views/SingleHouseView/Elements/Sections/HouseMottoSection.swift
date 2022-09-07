@@ -10,8 +10,10 @@ import SwiftUI
 struct HouseMottoSection: View {
   let motto: String
 
+  private let textWords = "Words"
+
   var body: some View {
-    Section(header: SectionHeader(text: "Words")) {
+    Section(header: SectionHeader(text: )) {
       Text("🪶 \(motto)")
     }
   }

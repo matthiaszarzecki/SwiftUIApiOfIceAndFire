@@ -10,11 +10,14 @@ import SwiftUI
 struct SwornMembersSection: View {
   let swornMembers: [CharacterBasic]
 
+  private let textSwornMembers = "Sworn Members"
+  private let textSwornMember = "Sworn Member"
+
   var body: some View {
     if swornMembers.hasEntries {
       let sectionHeader = swornMembers.count > 1
-        ? SectionHeader(text: "Sworn Members: \(swornMembers.count)")
-        : SectionHeader(text: "Sworn Member")
+        ? SectionHeader(text: "\(textSwornMembers): \(swornMembers.count)")
+        : SectionHeader(text: textSwornMember)
 
       Section(header: sectionHeader) {
         ForEach(swornMembers, id: \.self) { character in

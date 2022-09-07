@@ -10,10 +10,13 @@ import SwiftUI
 struct SeatsSection: View {
   let seats: [String]
 
+  private let textSeats = "Seats"
+  private let textSeat = "Seat"
+
   var body: some View {
     let sectionHeader = seats.count > 1
-    ? SectionHeader(text: "Seats: \(seats.count)")
-    : SectionHeader(text: "Seat")
+    ? SectionHeader(text: "\(textSeats): \(seats.count)")
+    : SectionHeader(text: "\(textSeat)")
 
     Section(header: sectionHeader) {
       ForEach(seats, id: \.self) { seat in
