@@ -13,7 +13,7 @@ struct HouseMottoSection: View {
   private let textWords = "Words"
 
   var body: some View {
-    Section(header: SectionHeader(text: )) {
+    Section(header: SectionHeader(text: textWords)) {
       Text("🪶 \(motto)")
     }
   }
