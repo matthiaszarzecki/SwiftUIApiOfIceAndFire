@@ -10,9 +10,11 @@ import SwiftUI
 struct CultureSection: View {
   let culture: String
 
+  private let textCulture = "Culture"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Culture")
+      header: SectionHeader(text: textCulture)
     ) {
       Text(culture)
     }

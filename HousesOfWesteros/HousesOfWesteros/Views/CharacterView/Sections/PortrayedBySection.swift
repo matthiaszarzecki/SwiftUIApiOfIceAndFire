@@ -10,11 +10,11 @@ import SwiftUI
 struct PortrayedBySection: View {
   let portrayedBy: [String]
 
-  private let headerTitle = "Portrayed by"
+  private let textPortrayedBy = "Portrayed by"
 
   var body: some View {
     Section(
-      header: SectionHeader(text: headerTitle)
+      header: SectionHeader(text: textPortrayedBy)
     ) {
       ForEach(portrayedBy, id: \.self) { characterActor in
         HStack {

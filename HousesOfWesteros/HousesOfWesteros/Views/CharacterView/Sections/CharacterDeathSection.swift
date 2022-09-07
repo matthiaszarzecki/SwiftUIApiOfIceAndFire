@@ -10,9 +10,11 @@ import SwiftUI
 struct CharacterDeathSection: View {
   let died: String
 
+  private let textDied = "Died"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Died")
+      header: SectionHeader(text: textDied)
     ) {
       Text("☠️ \(died)")
     }

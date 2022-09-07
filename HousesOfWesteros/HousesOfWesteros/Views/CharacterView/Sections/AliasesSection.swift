@@ -10,10 +10,13 @@ import SwiftUI
 struct AliasesSection: View {
   let aliases: [String]
 
+  private let textAliases = "Aliases"
+  private let textAlias = "Alias"
+
   var body: some View {
     let sectionHeader = aliases.count > 1
-      ? SectionHeader(text: "Aliases: \(aliases.count)")
-      : SectionHeader(text: "Alias")
+      ? SectionHeader(text: "\(textAliases): \(aliases.count)")
+      : SectionHeader(text: textAlias)
 
     Section(header: sectionHeader) {
       ForEach(aliases, id: \.self) { alias in

@@ -10,9 +10,11 @@ import SwiftUI
 struct BornSection: View {
   let born: String
 
+  private let textBorn = "Born"
+
   var body: some View {
     Section(
-      header: SectionHeader(text: "Born")
+      header: SectionHeader(text: textBorn)
     ) {
       Text(born)
     }
