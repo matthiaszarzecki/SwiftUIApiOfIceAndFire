@@ -9,14 +9,25 @@ import XCTest
 @testable import HousesOfWesteros
 
 class ErrorDisplayViewModelTests: XCTestCase {
-  func testErrorViewModel() {
-    // GIVEN two string-arrays with one entry appearing in both
+  func testErrorViewModelTextTitle() {
+    // GIVEN an error view model
     let viewModel: ErrorDisplayViewModel = .mockErrorDisplayViewModel
 
-    // WHEN we call the "hasAtLeastOneItem" function
+    // WHEN we call the "textTitle" property
     let result = viewModel.textTitle
 
-    // THEN true is returned
+    // THEN a non-empty string is returned
+    XCTAssertNotEqual(result, "")
+  }
+
+  func testErrorViewModelTextExplanation() {
+    // GIVEN an error view model
+    let viewModel: ErrorDisplayViewModel = .mockErrorDisplayViewModel
+
+    // WHEN we call the "textExplanation" property
+    let result = viewModel.textExplanation
+
+    // THEN a non-empty string is returned
     XCTAssertNotEqual(result, "")
   }
 }
