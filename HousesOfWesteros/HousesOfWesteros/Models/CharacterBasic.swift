@@ -62,7 +62,7 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
   }
 
   /// A boolean indicating whether this
-  /// character was portayed by an actor.
+  /// character was portrayed by an actor.
   var hasActor: Bool {
     portrayedBy.hasNonEmptyEntries
   }
