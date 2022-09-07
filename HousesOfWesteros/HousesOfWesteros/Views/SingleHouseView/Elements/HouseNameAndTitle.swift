@@ -11,13 +11,16 @@ struct HouseNameAndTitle: View {
   let house: HouseUpdated
   let width: CGFloat
 
+  private let textWesteros = "Westeros"
+  private let textOf = "of"
+
   private var displayRegion: String {
     // Very rarely a house has no region. We
     // add a default here to ensure the view
     // still works.
     house.region.exists
       ? house.region
-      : "Westeros"
+      : textWesteros
   }
 
   var body: some View {
@@ -51,7 +54,7 @@ struct HouseNameAndTitle: View {
         }
       }
 
-      Text("of \(displayRegion)")
+      Text("\(textOf) \(displayRegion)")
         .padding(.bottom, .spacing16)
     }
     .padding(.top, .spacing24)

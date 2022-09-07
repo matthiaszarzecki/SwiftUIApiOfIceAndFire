@@ -447,12 +447,12 @@
 			path = CharacterBasicTests;
 			sourceTree = "<group>";
 		};
-		6E89D84A269869D900F0B069 /* MockClasses */ = {
+		6E89D84A269869D900F0B069 /* _MockClasses */ = {
 			isa = PBXGroup;
 			children = (
 				6E89D8462698672200F0B069 /* MockSingleHouseBasicDownloader.swift */,
 			);
-			path = MockClasses;
+			path = _MockClasses;
 			sourceTree = "<group>";
 		};
 		6E89D84B269869F100F0B069 /* GreatHousesViewModelTests */ = {
@@ -526,6 +526,14 @@
 			path = HouseCellLargeViewModelTests;
 			sourceTree = "<group>";
 		};
+		6EDA3B6628C929AF00A35A6C /* ErrorDisplayViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC4DC81628C785920043984C /* ErrorDisplayViewModelTests.swift */,
+			);
+			path = ErrorDisplayViewModelTests;
+			sourceTree = "<group>";
+		};
 		6EFAD3102798139000CDC895 /* SettingsRow */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,17 +585,17 @@
 			isa = PBXGroup;
 			children = (
 				CC0E1DCD262597B200C285D8 /* Info.plist */,
+				6E89D84A269869D900F0B069 /* _MockClasses */,
 				6E350A3E2651F84D00FD520F /* ArrayExtensionTests */,
 				6E7BC56F2656950D00E805C8 /* CharacterBasicTests */,
 				6EB4C061265320D6006DA267 /* ColorExtensionTests */,
 				6EAC70202630B22C00988D47 /* ColorParserTests */,
+				6EDA3B6628C929AF00A35A6C /* ErrorDisplayViewModelTests */,
 				6E89D84B269869F100F0B069 /* GreatHousesViewModelTests */,
 				6E170B63262B09160074314E /* HouseBasicTests.swift */,
 				6ED491D727E3E19800ECC763 /* HouseCellLargeViewModelTests */,
-				6E89D84A269869D900F0B069 /* MockClasses */,
 				6E350A452652002F00FD520F /* StringArrayExtensionTests */,
 				6E170B5C262B09000074314E /* StringExtensionTests */,
-				CC4DC81628C785920043984C /* ErrorDisplayViewModelTests.swift */,
 			);
 			path = HousesOfWesterosTests;
 			sourceTree = "<group>";
