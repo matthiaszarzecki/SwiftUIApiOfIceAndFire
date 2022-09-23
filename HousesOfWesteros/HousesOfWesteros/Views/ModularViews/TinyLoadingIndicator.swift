@@ -23,8 +23,8 @@ struct TinyLoadingIndicator: View {
         .rotationEffect(.degrees(spin ? 360 : 0))
         .animation(
           Animation.linear
-          .repeatForever(autoreverses: false)
-          .speed(0.2)
+            .repeatForever(autoreverses: false)
+            .speed(0.2)
         )
         .onAppear {
           spin.toggle()
