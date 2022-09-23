@@ -11,7 +11,7 @@ import SwiftUI
 struct TinyLoadingIndicator: View {
   private let size: CGFloat = 24
 
-  @State private var spin = true
+  @State private var spin = false
 
   var body: some View {
     HStack {
