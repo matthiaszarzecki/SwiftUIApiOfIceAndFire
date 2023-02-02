@@ -24,7 +24,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - Elegant in-view error-handling on SingleHouse and Character Views (no popups!)
 - Continuous Integration with BitRise
 - Unit-Tests
-- Extensive, detailed comments
+- Detailed comments
 - Custom color-parser to create icons per house from text-only description of the Coat of Arms
 - Small Screen Support
 - Extensive SwiftUI Previews
@@ -48,6 +48,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - Add timeout error case, move timeout to api calls
 
 ### Nice to Have:
+- SwiftFormat
 - Fastlane function to create and resize screenshots for this readme
 - CodeCov integration in CICD
 - Unit-Testing Views with ViewInspector Plugin
