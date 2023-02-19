@@ -509,6 +509,20 @@
 			path = ColorExtensionTests;
 			sourceTree = "<group>";
 		};
+		6EC5D4FA29A0C896009E57D7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */,
+				6EB8C6F928BA47100024B79C /* MockColors.swift */,
+				6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */,
+				6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */,
+				CC0E1E34262597D800C285D8 /* MockInt.swift */,
+				6EB8C6FC28BA48370024B79C /* MockStrings.swift */,
+				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		6ED491D227E3E0B800ECC763 /* HouseCellLarge */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +587,7 @@
 				CC0E1E2F262597D800C285D8 /* AppDelegate */,
 				CC0E1DEA262597D700C285D8 /* Extensions */,
 				CC0E1E35262597D800C285D8 /* Helpers */,
+				6EC5D4FA29A0C896009E57D7 /* Mocks */,
 				CC0E1E3B262597D800C285D8 /* Models */,
 				CC0E1E31262597D800C285D8 /* PreviewContent */,
 				CC0E1DF1262597D700C285D8 /* SupportingFiles */,
@@ -819,13 +834,6 @@
 		CC0E1E31262597D800C285D8 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
-				6ED491CF27E3D70800ECC763 /* MockCharacterBasic.swift */,
-				6EB8C6F928BA47100024B79C /* MockColors.swift */,
-				6ED491C827E3CAC100ECC763 /* MockHouseBasic.swift */,
-				6ED491CC27E3CEF000ECC763 /* MockHouseUpdated.swift */,
-				CC0E1E34262597D800C285D8 /* MockInt.swift */,
-				6EB8C6FC28BA48370024B79C /* MockStrings.swift */,
-				6EB5E7062635DFBE0057D715 /* PreviewConstants.swift */,
 				CC0E1E32262597D800C285D8 /* Preview Assets.xcassets */,
 			);
 			path = PreviewContent;

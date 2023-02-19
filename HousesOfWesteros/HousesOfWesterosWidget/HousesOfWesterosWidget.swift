@@ -137,9 +137,15 @@ struct HousesOfWesterosWidgetEntryView: View {
         }
       }
     case .systemExtraLarge:
-      Text("XLarge")
+      Text("systemExtraLarge")
+    case .accessoryCircular:
+      Text("accessoryCircular")
+    case .accessoryRectangular:
+      Text("accessoryRectangular")
+    case .accessoryInline:
+      Text("accessoryInline")
     @unknown default:
-      Text("Default")
+      Text("default")
     }
   }
 }
