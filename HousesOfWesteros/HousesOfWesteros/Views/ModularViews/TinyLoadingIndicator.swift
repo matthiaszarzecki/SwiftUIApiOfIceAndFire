@@ -24,7 +24,8 @@ struct TinyLoadingIndicator: View {
         .animation(
           Animation.linear
             .repeatForever(autoreverses: false)
-            .speed(0.2)
+            .speed(0.2),
+          value: spin
         )
         .onAppear {
           spin.toggle()
