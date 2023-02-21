@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,7 +45,7 @@
 		6E90CB4E27206425008D5585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E90CB4D27206425008D5585 /* Assets.xcassets */; };
 		6E90CB5027206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */; };
 		6E90CB5127206425008D5585 /* HousesOfWesterosWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6E90CB4C27206422008D5585 /* HousesOfWesterosWidget.intentdefinition */; };
-		6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6E90CB4327206422008D5585 /* HousesOfWesterosWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6E90CB592720646B008D5585 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E39262597D800C285D8 /* Api.swift */; };
 		6E90CB5A272065DC008D5585 /* HouseBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3D262597D800C285D8 /* HouseBasic.swift */; };
 		6E90CB5B272065F7008D5585 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E1E3A262597D800C285D8 /* NetworkError.swift */; };
@@ -190,15 +190,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6E90CB5527206425008D5585 /* Embed App Extensions */ = {
+		6E90CB5527206425008D5585 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed App Extensions */,
+				6E90CB5427206425008D5585 /* HousesOfWesterosWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -925,7 +925,7 @@
 				CC0E1DB2262597B000C285D8 /* Sources */,
 				CC0E1DB3262597B000C285D8 /* Frameworks */,
 				CC0E1DB4262597B000C285D8 /* Resources */,
-				6E90CB5527206425008D5585 /* Embed App Extensions */,
+				6E90CB5527206425008D5585 /* Embed Foundation Extensions */,
 				6EDA3CE02797B070008A7E0C /* SwiftLint */,
 			);
 			buildRules = (
@@ -981,7 +981,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					6E90CB4227206422008D5585 = {
 						CreatedOnToolsVersion = 13.0;
@@ -1061,6 +1061,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		6EDA3CE02797B070008A7E0C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
