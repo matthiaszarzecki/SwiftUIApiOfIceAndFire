@@ -550,6 +550,14 @@
 			path = ErrorDisplayViewModelTests;
 			sourceTree = "<group>";
 		};
+		6EDE1F9029A4D6E000FF8A8D /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EDE1F8E29A4CA8A00FF8A8D /* ViewTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
 		6EFAD3102798139000CDC895 /* SettingsRow */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,7 +621,7 @@
 				6ED491D727E3E19800ECC763 /* HouseCellLargeViewModelTests */,
 				6E350A452652002F00FD520F /* StringArrayExtensionTests */,
 				6E170B5C262B09000074314E /* StringExtensionTests */,
-				6EDE1F8E29A4CA8A00FF8A8D /* ViewTests.swift */,
+				6EDE1F9029A4D6E000FF8A8D /* ViewTests */,
 			);
 			path = HousesOfWesterosTests;
 			sourceTree = "<group>";

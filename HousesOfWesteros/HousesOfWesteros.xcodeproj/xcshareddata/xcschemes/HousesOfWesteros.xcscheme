@@ -27,15 +27,9 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
       <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC0E1DC6262597B200C285D8"
-            BuildableName = "HousesOfWesterosTests.xctest"
-            BlueprintName = "HousesOfWesterosTests"
-            ReferencedContainer = "container:HousesOfWesteros.xcodeproj">
-         </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CC0E1DB5262597B000C285D8"
