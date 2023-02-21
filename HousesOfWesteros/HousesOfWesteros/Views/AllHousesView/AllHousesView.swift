@@ -21,7 +21,7 @@ struct AllHousesView: View {
     )
   }
 
-  private var regularViewAndLoadingMore: some View {
+  private var regularViewAndLoadingMoreView: some View {
     // This cannot be a scrollview as
     // that tanks the performance.
     List {
@@ -30,7 +30,7 @@ struct AllHousesView: View {
     }
   }
 
-  private var regularViewAndNotLoadingMore: some View {
+  private var regularViewAndNotLoadingMoreView: some View {
     // This cannot be a scrollview as
     // that tanks the performance.
     List {
@@ -62,10 +62,10 @@ struct AllHousesView: View {
           loadingView
         case .error:
           errorView
-        case .regularAndNotLoadingMore:
-          regularViewAndNotLoadingMore
+        case .regularAndFinishedLoading:
+          regularViewAndNotLoadingMoreView
         case .regularAndLoadingMore:
-          regularViewAndLoadingMore
+          regularViewAndLoadingMoreView
         }
       }
       .navigationTitle(viewModel.viewTitle)
@@ -91,6 +91,7 @@ struct AllHousesDisplay_Previews: PreviewProvider {
     ForEach(0..<configurations.count, id: \.self) { index in
       let configuration = configurations[index]
       AllHousesView(viewModel: configuration)
+        .previewDisplayName("\(configuration.state)")
     }
   }
 }

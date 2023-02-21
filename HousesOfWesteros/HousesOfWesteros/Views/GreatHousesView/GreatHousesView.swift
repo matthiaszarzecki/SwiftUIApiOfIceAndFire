@@ -72,7 +72,7 @@ struct GreatHousesView_Previews: PreviewProvider {
     )
 
     GreatHousesDisplay(
-      houses: .mockHousesEmtpyArray,
+      houses: .mockHousesEmptyArray,
       hasViableEntries: true,
       viewTitle: "Great Houses of Westeros"
     )

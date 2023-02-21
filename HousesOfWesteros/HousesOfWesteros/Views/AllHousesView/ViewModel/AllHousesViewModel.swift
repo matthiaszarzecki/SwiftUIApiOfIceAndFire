@@ -12,7 +12,7 @@ final class AllHousesViewModel: ObservableObject {
   enum AllHousesViewState {
     case loading
     case error
-    case regularAndNotLoadingMore
+    case regularAndFinishedLoading
     case regularAndLoadingMore
   }
 
@@ -32,7 +32,7 @@ final class AllHousesViewModel: ObservableObject {
   }
 
   func fetchNextPageIfPossible() {
-    guard state != .regularAndNotLoadingMore else {
+    guard state != .regularAndFinishedLoading else {
       return
     }
 
@@ -71,7 +71,7 @@ final class AllHousesViewModel: ObservableObject {
     case .finished:
       state = .regularAndLoadingMore
     case .failure:
-      state = .regularAndNotLoadingMore
+      state = .regularAndFinishedLoading
     }
   }
 
@@ -80,16 +80,16 @@ final class AllHousesViewModel: ObservableObject {
     page += 1
 
     if batch.count != pageSize {
-      state = .regularAndNotLoadingMore
+      state = .regularAndFinishedLoading
     }
   }
 }
 
-// Contains mock view model variants of the AllHousesViewModel
+// MARK: - Mock view model Variants & Convenience Init
 extension AllHousesViewModel {
   static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
   static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndNotLoadingMore)
+  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndFinishedLoading)
   static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
 
   convenience init(forMockState state: AllHousesViewState) {

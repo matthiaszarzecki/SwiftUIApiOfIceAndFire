@@ -23,7 +23,7 @@ struct BaseView: View {
         }
         .tag(0)
 
-      AllHousesView()
+      AllHousesView(viewModel: .mockViewModelError)
         .tabItem {
           Label(
             viewModel.textAllHouses,

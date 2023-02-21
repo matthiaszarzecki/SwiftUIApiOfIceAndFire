@@ -137,5 +137,5 @@ extension Array where Element == HouseBasic {
     .mockHouseWithoutLinksWithoutCoatOfArms
   ]
 
-  static let mockHousesEmtpyArray: [HouseBasic] = []
+  static let mockHousesEmptyArray: [HouseBasic] = []
 }
