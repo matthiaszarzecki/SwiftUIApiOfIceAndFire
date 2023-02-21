@@ -36,4 +36,8 @@ class ViewTests: XCTestCase {
       )
     }
   }
+
+  func testCharacterView() {
+    _ = CharacterView(character: .mockCharacter)
+  }
 }
