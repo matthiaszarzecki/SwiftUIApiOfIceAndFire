@@ -36,7 +36,9 @@ struct GreatHousesDisplay: View {
               if let unwrappedHouse = house {
                 ZStack {
                   NavigationLink(
-                    destination: SingleHouseView(houseBasic: unwrappedHouse)
+                    destination: SingleHouseView(
+                      viewModel: SingleHouseViewModel(houseBasic: unwrappedHouse)
+                    )
                   ) {
                     HouseCellLarge(
                       viewModel: HouseCellLargeViewModel(unwrappedHouse),

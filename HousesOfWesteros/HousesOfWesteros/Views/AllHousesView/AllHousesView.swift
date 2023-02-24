@@ -41,7 +41,7 @@ struct AllHousesView: View {
   private var houseElements: some View {
     ForEach(viewModel.houses) { house in
       NavigationLink(
-        destination: SingleHouseView(houseBasic: house)
+        destination: SingleHouseView(viewModel: SingleHouseViewModel(houseBasic: house))
       ) {
         HouseCellBasic(
           house: house,

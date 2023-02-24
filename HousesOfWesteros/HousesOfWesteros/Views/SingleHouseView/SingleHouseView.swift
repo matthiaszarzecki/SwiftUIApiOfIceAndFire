@@ -19,8 +19,8 @@ struct SingleHouseView: View {
     )
   }
 
-  init(houseBasic: HouseBasic) {
-    singleHouseViewModel = SingleHouseViewModel(houseBasic: houseBasic)
+  init(viewModel: SingleHouseViewModel) {
+    singleHouseViewModel = viewModel
   }
 }
 

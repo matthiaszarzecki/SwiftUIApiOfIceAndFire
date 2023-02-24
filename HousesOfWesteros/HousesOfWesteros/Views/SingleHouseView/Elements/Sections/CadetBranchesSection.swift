@@ -22,7 +22,7 @@ struct CadetBranchesSection: View {
       ForEach(cadetBranches, id: \.self) { cadetBranch in
         NavigationLink(
           destination: SingleHouseView(
-            houseBasic: cadetBranch
+            viewModel: SingleHouseViewModel(houseBasic: cadetBranch)
           )
         ) {
           HouseCellBasic(
