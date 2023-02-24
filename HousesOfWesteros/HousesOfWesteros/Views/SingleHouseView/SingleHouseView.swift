@@ -9,7 +9,7 @@ import SwiftUI
 
 /// Shows information about the specified House.
 struct SingleHouseView: View {
-  @ObservedObject var viewModel: SingleHouseViewModel
+  @ObservedObject private var viewModel: SingleHouseViewModel
 
   var body: some View {
     GeometryReader { geometry in
@@ -121,6 +121,10 @@ struct SingleHouseView: View {
         SingleHouseLoadingView()
       }
     }
+  }
+
+  init(viewModel: SingleHouseViewModel) {
+    self.viewModel = viewModel
   }
 }
 
