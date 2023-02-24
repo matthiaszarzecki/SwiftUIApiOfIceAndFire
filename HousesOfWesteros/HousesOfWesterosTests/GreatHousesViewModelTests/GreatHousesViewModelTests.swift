@@ -26,4 +26,17 @@ class GreatHousesLoadAllGreatHousesTests: XCTestCase {
       XCTAssertNotNil(entry)
     }
   }
+
+  func testLoadAllGreatHousesWithError() {
+    // GIVEN a GreatHousesViewModel with a downloader that returns an error
+    let viewModel = GreatHousesViewModel(downloader: MockSingleHouseBasicDownloaderWithError())
+
+    // WHEN we load all great houses
+    viewModel.loadAllGreatHouses()
+
+    // THEN every entry in the state object is nil
+    for entry in viewModel.state.houses {
+      XCTAssertNil(entry)
+    }
+  }
 }

@@ -16,3 +16,12 @@ class MockSingleHouseBasicDownloader: SingleHouseBasicDownloaderProtocol {
     completion(.success(.mockHouseBasicWithLinksAndWithCoatOfArms))
   }
 }
+
+class MockSingleHouseBasicDownloaderWithError: SingleHouseBasicDownloaderProtocol {
+  func getSingleHouse(
+    id: Int,
+    completion: @escaping (Result<HouseBasic, NetworkError>) -> Void
+  ) {
+    completion(.failure(.unknown))
+  }
+}
