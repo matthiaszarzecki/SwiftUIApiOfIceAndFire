@@ -9,30 +9,11 @@ import SwiftUI
 
 /// Shows information about the specified House.
 struct SingleHouseView: View {
-  @ObservedObject private var singleHouseViewModel: SingleHouseViewModel
+  @ObservedObject var viewModel: SingleHouseViewModel
 
-  var body: some View {
-    SingleHouseDisplay(
-      houseUpdated: singleHouseViewModel.state.houseUpdated,
-      showError: singleHouseViewModel.state.showError,
-      updateData: singleHouseViewModel.getDataFromNestedLinks
-    )
-  }
-
-  init(viewModel: SingleHouseViewModel) {
-    singleHouseViewModel = viewModel
-  }
-}
-
-struct SingleHouseDisplay: View {
-  let houseUpdated: HouseUpdated?
-  let showError: Bool
-  let updateData: () -> Void
-
-  @ViewBuilder
   var body: some View {
     GeometryReader { geometry in
-      if let unwrappedHouseUpdated = houseUpdated {
+      if let unwrappedHouseUpdated = viewModel.state.houseUpdated {
         VStack {
           HouseNameAndTitle(
             house: unwrappedHouseUpdated,
@@ -128,9 +109,9 @@ struct SingleHouseDisplay: View {
                 )
               }
 
-              if showError {
+              if viewModel.state.showError {
                 ErrorSection(
-                  viewModel: ErrorDisplayViewModel { updateData() }
+                  viewModel: ErrorDisplayViewModel { viewModel.getDataFromNestedLinks() }
                 )
               }
             }
@@ -146,23 +127,19 @@ struct SingleHouseDisplay: View {
 #if !TESTING
 struct SingleHouseDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    let configurations: [(
-      house: HouseUpdated?,
-      showError: Bool
-    )] = [
-      (.houseUpdatedWithLinks, false),
-      (.houseUpdatedWithoutLinks, true),
-      (nil, true)
+    let configurations: [(house: HouseBasic, previewName: String)] = [
+      (.mockHouseBasicWithLinksAndWithCoatOfArms, "WithLinksAndWithCoatOfArms"),
+      (.mockHouseWithoutLinksWithoutCoatOfArms, "WithoutLinksWithoutCoatOfArms")
     ]
 
     ForEach(0..<configurations.count, id: \.self) { index in
       let configuration = configurations[index]
       NavigationView {
-        SingleHouseDisplay(
-          houseUpdated: configuration.house,
-          showError: configuration.showError
-        ) {}
+        SingleHouseView(
+          viewModel: SingleHouseViewModel(houseBasic: configuration.house)
+        )
       }
+      .previewDisplayName(configuration.previewName)
     }
   }
 }
