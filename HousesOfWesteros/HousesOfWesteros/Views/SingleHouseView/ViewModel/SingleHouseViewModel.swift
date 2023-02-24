@@ -30,6 +30,13 @@ class SingleHouseViewModel: ObservableObject {
   var houseBasic: HouseBasic
   @Published private(set) var state = SingleHouseViewState()
 
+  let headerMajorMembersPlural = "Major Members"
+  let headerMajorMembersSingle = "Major Member"
+  let headerNoteworthyMembersPlural = "Noteworthy Members"
+  let headerNoteworthyMembersSingle = "Noteworthy Member"
+  let headerOtherMembersPlural = "Other Members"
+  let headerOtherMembersSingle = "Other Member"
+
   init(houseBasic: HouseBasic) {
     self.houseBasic = houseBasic
     getDataFromNestedLinks()

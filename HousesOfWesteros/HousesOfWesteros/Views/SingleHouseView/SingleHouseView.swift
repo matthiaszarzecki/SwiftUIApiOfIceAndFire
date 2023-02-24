@@ -85,24 +85,24 @@ struct SingleHouseView: View {
 
               if unwrappedHouseUpdated.swornMembers.hasEntries {
                 MembersSection(
-                  headerMultiple: "Major Members",
-                  headerSingle: "Major Member",
+                  headerMultiple: viewModel.headerMajorMembersPlural,
+                  headerSingle: viewModel.headerMajorMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
                     $0.hasActor
                   }
                 )
 
                 MembersSection(
-                  headerMultiple: "Noteworthy Members",
-                  headerSingle: "Noteworthy Member",
+                  headerMultiple: viewModel.headerNoteworthyMembersPlural,
+                  headerSingle: viewModel.headerNoteworthyMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
                     !$0.hasActor && $0.hasInformation
                   }
                 )
 
                 MembersSection(
-                  headerMultiple: "Other Members",
-                  headerSingle: "Other Member",
+                  headerMultiple: viewModel.headerOtherMembersPlural,
+                  headerSingle: viewModel.headerOtherMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
                     !$0.hasActor && !$0.hasInformation
                   }
