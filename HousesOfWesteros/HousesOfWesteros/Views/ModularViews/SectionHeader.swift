@@ -34,8 +34,8 @@ struct SectionHeaderStyle: ViewModifier {
       .lineLimit(1)
       .textCase(nil)
       .foregroundColor(.white)
-      .padding(.vertical, 8)
-      .padding(.horizontal, 14)
+      .padding(.vertical, 4)
+      .padding(.horizontal, 16)
       .backgroundColor(.gray)
       .mask(
         RoundedRectangle(
@@ -43,7 +43,7 @@ struct SectionHeaderStyle: ViewModifier {
           style: .continuous
         )
       )
-      .offset(y: 14)
+      .offset(y: 10)
   }
 }
 
@@ -53,9 +53,7 @@ struct SectionHeader_Previews: PreviewProvider {
     let houseName: String = .mockHouseName
 
     Form {
-      Section(
-        header: SectionHeader(text: "Title")
-      ) {
+      Section(header: SectionHeader(text: "Title")) {
         Text(houseName)
       }
 
