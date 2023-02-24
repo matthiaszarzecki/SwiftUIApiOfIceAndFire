@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HouseCellLarge: View {
-  let viewModel: HouseCellLargeViewModel
-  let width: CGFloat
+  private let viewModel: HouseCellLargeViewModel
+  private let width: CGFloat
 
   private var textElementWidth: CGFloat {
     width - 120
@@ -56,6 +56,11 @@ struct HouseCellLarge: View {
     .backgroundColor(viewModel.backgroundColor)
     .mask(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .shadow(radius: 10)
+  }
+
+  init(viewModel: HouseCellLargeViewModel, width: CGFloat) {
+    self.viewModel = viewModel
+    self.width = width
   }
 }
 
