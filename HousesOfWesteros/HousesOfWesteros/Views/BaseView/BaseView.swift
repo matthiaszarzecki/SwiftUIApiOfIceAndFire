@@ -47,7 +47,7 @@ struct BaseView: View {
   init(viewModel: BaseViewViewModel = BaseViewViewModel()) {
     self.viewModel = viewModel
 
-    viewModel.setupCustomFonts()
+    viewModel.customizeNavigationBar()
   }
 }
 

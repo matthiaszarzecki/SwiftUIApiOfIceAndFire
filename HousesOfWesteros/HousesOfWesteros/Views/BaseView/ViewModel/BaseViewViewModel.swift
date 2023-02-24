@@ -13,15 +13,21 @@ struct BaseViewViewModel {
   let textAllHouses = "All Houses"
   let textAbout = "About"
 
-  func setupCustomFonts() {
+  func customizeNavigationBar() {
     // Set font for Title in large view
     if let font = UIFont(name: "GameofThrones", size: 20) {
-      UINavigationBar.appearance().largeTitleTextAttributes = [.font: font]
+      UINavigationBar.appearance().largeTitleTextAttributes = [
+        .font: font,
+        .foregroundColor: UIColor(.westerosRed)
+      ]
     }
 
     // Set font for Title in navigation bar
     if let font = UIFont(name: "GameofThrones", size: 16) {
-      UINavigationBar.appearance().titleTextAttributes = [.font: font]
+      UINavigationBar.appearance().titleTextAttributes = [
+        .font: font,
+        .foregroundColor: UIColor(.westerosRed)
+      ]
     }
   }
 }
