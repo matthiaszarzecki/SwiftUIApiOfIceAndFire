@@ -8,21 +8,7 @@
 import SwiftUI
 
 struct GreatHousesView: View {
-  @ObservedObject private var viewModel = GreatHousesViewModel()
-
-  var body: some View {
-    GreatHousesDisplay(
-      houses: viewModel.state.houses,
-      hasViableEntries: viewModel.hasViableEntries,
-      viewTitle: viewModel.viewTitle
-    )
-  }
-}
-
-struct GreatHousesDisplay: View {
-  let houses: [HouseBasic?]
-  let hasViableEntries: Bool
-  let viewTitle: String
+  @ObservedObject private var viewModel: GreatHousesViewModel
 
   var body: some View {
     GeometryReader { geometry in
@@ -30,9 +16,9 @@ struct GreatHousesDisplay: View {
       let elementWidth = geometry.size.width - spacing * 2
 
       NavigationView {
-        if hasViableEntries {
+        if viewModel.hasViableEntries {
           ScrollView {
-            ForEach(houses, id: \.self) { house in
+            ForEach(viewModel.state.houses, id: \.self) { house in
               if let unwrappedHouse = house {
                 ZStack {
                   NavigationLink(
@@ -54,30 +40,24 @@ struct GreatHousesDisplay: View {
             .frame(width: geometry.size.width)
             .listRowBackground(Color.clear)
           }
-          .navigationTitle(viewTitle)
+          .navigationTitle(viewModel.viewTitle)
         } else {
           GreatHousesLoadingView(width: elementWidth)
-            .navigationTitle(viewTitle)
+            .navigationTitle(viewModel.viewTitle)
         }
       }
     }
+  }
+
+  init(viewModel: GreatHousesViewModel = GreatHousesViewModel()) {
+    self.viewModel = viewModel
   }
 }
 
 #if !TESTING
 struct GreatHousesView_Previews: PreviewProvider {
   static var previews: some View {
-    GreatHousesDisplay(
-      houses: .mockHousesBasic,
-      hasViableEntries: true,
-      viewTitle: "Great Houses of Westeros"
-    )
-
-    GreatHousesDisplay(
-      houses: .mockHousesEmptyArray,
-      hasViableEntries: true,
-      viewTitle: "Great Houses of Westeros"
-    )
+    GreatHousesView()
   }
 }
 #endif
