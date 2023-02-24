@@ -96,7 +96,7 @@ class Api {
         }
       }
     }
-    .resume()
+    .start()
   }
 
   /// Does a GET-call to the specified String-URL
