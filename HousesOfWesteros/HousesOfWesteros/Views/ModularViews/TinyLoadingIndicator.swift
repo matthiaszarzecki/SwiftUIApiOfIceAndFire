@@ -28,7 +28,10 @@ struct TinyLoadingIndicator: View {
           value: spin
         )
         .onAppear {
-          spin.toggle()
+          spin = true
+        }
+        .onDisappear {
+          spin = false
         }
 
       Spacer()
