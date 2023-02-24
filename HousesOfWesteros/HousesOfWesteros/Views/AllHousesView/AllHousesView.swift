@@ -43,9 +43,10 @@ struct AllHousesView: View {
       NavigationLink(
         destination: SingleHouseView(viewModel: SingleHouseViewModel(houseBasic: house))
       ) {
-        HouseCellBasicForList(
+        HouseCellBasicForVStack(
           house: house,
-          iconSize: .largeForMajorCells
+          iconSize: .largeForMajorCells,
+          width: 300
         )
       }
       .onAppear {

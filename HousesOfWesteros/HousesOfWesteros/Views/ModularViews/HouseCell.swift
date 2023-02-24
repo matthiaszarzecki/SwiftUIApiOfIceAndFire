@@ -77,6 +77,39 @@ struct HouseCellBasicForList: View {
   }
 }
 
+struct HouseCellBasicForVStack: View {
+  let house: HouseBasic
+  let iconSize: IconSize
+  let width: CGFloat
+
+  var body: some View {
+    HStack {
+      HouseIconColors(
+        colors: house.heraldryColors,
+        initialLetter: house.initialLetter,
+        iconSize: iconSize
+      )
+      .padding(.spacing8)
+
+      Text(house.name)
+        .frame(width: width * 0.7, height: 60, alignment: .leading)
+        .multilineTextAlignment(.leading)
+
+      Spacer()
+
+      if house.containsLinks {
+        Image(systemName: "link")
+          .foregroundColor(.westerosRed)
+          .padding(.spacing8)
+      }
+    }
+    .frame(width: width, height: 50, alignment: .center)
+    .backgroundColor(.gray)
+    .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
+    .shadow(radius: 10)
+  }
+}
+
 #if !TESTING
 struct HouseCell_Previews: PreviewProvider {
   static var previews: some View {
@@ -86,6 +119,7 @@ struct HouseCell_Previews: PreviewProvider {
     )
     .padding()
     .previewLayout(.sizeThatFits)
+    .previewDisplayName("\(HouseCellUpdated.self)")
 
     HouseCellBasicForList(
       house: .mockHouseBasicWithLinksAndWithCoatOfArms,
@@ -93,6 +127,16 @@ struct HouseCell_Previews: PreviewProvider {
     )
     .padding()
     .previewLayout(.sizeThatFits)
+    .previewDisplayName("\(HouseCellBasicForList.self)")
+
+    HouseCellBasicForVStack(
+      house: .mockHouseBasicWithLinksAndWithCoatOfArms,
+      iconSize: .smallForNestedCells,
+      width: 350
+    )
+    .padding()
+    .previewLayout(.sizeThatFits)
+    .previewDisplayName("\(HouseCellBasicForVStack.self)")
   }
 }
 #endif
