@@ -7,20 +7,19 @@
 
 import SwiftUI
 
-struct SwornMembersSection: View {
-  let swornMembers: [CharacterBasic]
-
-  private let textSwornMembers = "Sworn Members"
-  private let textSwornMember = "Sworn Member"
+struct MembersSection: View {
+  let headerMultiple: String
+  let headerSingle: String
+  let members: [CharacterBasic]
 
   var body: some View {
-    if swornMembers.hasEntries {
-      let sectionHeader = swornMembers.count > 1
-        ? SectionHeader(text: "\(textSwornMembers): \(swornMembers.count)")
-        : SectionHeader(text: textSwornMember)
+    if members.hasEntries {
+      let sectionHeader = members.count > 1
+        ? SectionHeader(text: "\(headerMultiple): \(members.count)")
+        : SectionHeader(text: headerSingle)
 
       Section(header: sectionHeader) {
-        ForEach(swornMembers, id: \.self) { character in
+        ForEach(members.sorted(), id: \.self) { character in
           NavigationCharacterCell(character: character)
         }
       }
@@ -32,8 +31,10 @@ struct SwornMembersSection: View {
 struct SwornMembers_Previews: PreviewProvider {
   static var previews: some View {
     Form {
-      SwornMembersSection(
-        swornMembers: .mockCharacters
+      MembersSection(
+        headerMultiple: "Major Members",
+        headerSingle: "Member",
+        members: .mockCharacters
       )
     }
   }

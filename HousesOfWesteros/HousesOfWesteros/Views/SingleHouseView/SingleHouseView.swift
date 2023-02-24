@@ -103,8 +103,28 @@ struct SingleHouseDisplay: View {
               }
 
               if unwrappedHouseUpdated.swornMembers.hasEntries {
-                SwornMembersSection(
-                  swornMembers: unwrappedHouseUpdated.swornMembers
+                MembersSection(
+                  headerMultiple: "Major Members",
+                  headerSingle: "Major Member",
+                  members: unwrappedHouseUpdated.swornMembers.filter {
+                    $0.hasActor
+                  }
+                )
+
+                MembersSection(
+                  headerMultiple: "Noteworthy Members",
+                  headerSingle: "Noteworthy Member",
+                  members: unwrappedHouseUpdated.swornMembers.filter {
+                    !$0.hasActor && $0.hasInformation
+                  }
+                )
+
+                MembersSection(
+                  headerMultiple: "Other Members",
+                  headerSingle: "Other Member",
+                  members: unwrappedHouseUpdated.swornMembers.filter {
+                    !$0.hasActor && !$0.hasInformation
+                  }
                 )
               }
 

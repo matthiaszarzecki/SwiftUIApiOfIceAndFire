@@ -99,3 +99,9 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
       portrayedBy.hasNonEmptyEntries
   }
 }
+
+extension CharacterBasic: Comparable {
+  static func < (lhs: CharacterBasic, rhs: CharacterBasic) -> Bool {
+    lhs.name < rhs.name
+  }
+}
