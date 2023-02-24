@@ -22,19 +22,19 @@ struct AllHousesView: View {
   }
 
   private var regularViewAndLoadingMoreView: some View {
-    // This cannot be a scrollview as
-    // that tanks the performance.
-    List {
-      houseElements
-      TinyLoadingIndicator()
+    ScrollView {
+      LazyVStack {
+        houseElements
+        TinyLoadingIndicator()
+      }
     }
   }
 
   private var regularViewAndNotLoadingMoreView: some View {
-    // This cannot be a scrollview as
-    // that tanks the performance.
-    List {
-      houseElements
+    ScrollView {
+      LazyVStack {
+        houseElements
+      }
     }
   }
 
@@ -43,7 +43,7 @@ struct AllHousesView: View {
       NavigationLink(
         destination: SingleHouseView(viewModel: SingleHouseViewModel(houseBasic: house))
       ) {
-        HouseCellBasic(
+        HouseCellBasicForList(
           house: house,
           iconSize: .largeForMajorCells
         )

@@ -25,7 +25,7 @@ struct CadetBranchesSection: View {
             viewModel: SingleHouseViewModel(houseBasic: cadetBranch)
           )
         ) {
-          HouseCellBasic(
+          HouseCellBasicForList(
             house: cadetBranch,
             iconSize: .smallForNestedCells
           )

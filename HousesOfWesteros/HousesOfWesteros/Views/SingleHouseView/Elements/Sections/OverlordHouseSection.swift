@@ -21,7 +21,7 @@ struct OverlordHouseSection: View {
           viewModel: SingleHouseViewModel(houseBasic: overlordHouse)
         )
       ) {
-        HouseCellBasic(
+        HouseCellBasicForList(
           house: overlordHouse,
           iconSize: .smallForNestedCells
         )

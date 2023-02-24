@@ -42,7 +42,7 @@ struct HouseCellUpdated: View {
   }
 }
 
-struct HouseCellBasic: View {
+struct HouseCellBasicForList: View {
   let house: HouseBasic
   let iconSize: IconSize
 
@@ -87,7 +87,7 @@ struct HouseCell_Previews: PreviewProvider {
     .padding()
     .previewLayout(.sizeThatFits)
 
-    HouseCellBasic(
+    HouseCellBasicForList(
       house: .mockHouseBasicWithLinksAndWithCoatOfArms,
       iconSize: .smallForNestedCells
     )
