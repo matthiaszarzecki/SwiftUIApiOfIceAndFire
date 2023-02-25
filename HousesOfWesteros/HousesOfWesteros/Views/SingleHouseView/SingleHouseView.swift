@@ -88,7 +88,7 @@ struct SingleHouseView: View {
                   headerMultiple: viewModel.headerMajorMembersPlural,
                   headerSingle: viewModel.headerMajorMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
-                    $0.hasActor
+                    $0.importance == .major
                   }
                 )
 
@@ -96,7 +96,7 @@ struct SingleHouseView: View {
                   headerMultiple: viewModel.headerNoteworthyMembersPlural,
                   headerSingle: viewModel.headerNoteworthyMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
-                    !$0.hasActor && $0.hasInformation
+                    $0.importance == .noteworthy
                   }
                 )
 
@@ -104,7 +104,7 @@ struct SingleHouseView: View {
                   headerMultiple: viewModel.headerOtherMembersPlural,
                   headerSingle: viewModel.headerOtherMembersSingle,
                   members: unwrappedHouseUpdated.swornMembers.filter {
-                    !$0.hasActor && !$0.hasInformation
+                    $0.importance == .other
                   }
                 )
               }

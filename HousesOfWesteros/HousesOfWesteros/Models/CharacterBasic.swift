@@ -98,6 +98,15 @@ struct CharacterBasic: Codable, Identifiable, Hashable {
       tvShowAppearances.hasNonEmptyEntries ||
       portrayedBy.hasNonEmptyEntries
   }
+
+  var importance: Importance {
+    if hasActor {
+      return .major
+    } else if !hasActor && hasInformation {
+      return .noteworthy
+    }
+    return .other
+  }
 }
 
 extension CharacterBasic: Comparable {
