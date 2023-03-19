@@ -80,7 +80,8 @@ enum ColorParser {
   static private let synonymsForCyan = [
     "cyan",
     "turquoise",
-    "blue-green"
+    "blue-green",
+    "aquamarine"
   ]
 
   static private let synonymsForLightGreen = [
