@@ -67,11 +67,17 @@ extension Color {
       return Color(hex: "EBE1A7")
     case 169:
       return Color(hex: "F5E6AA")
+    case 195:
+      // Hightower
+      return Color(hex: "F0F0F0")
     case 229:
       return Color(hex: "D49995")
     case 285:
       return Color(hex: "E4C3A1")
     case 362:
+      return Color(hex: "F0F0F0")
+    case 369:
+      // Strong
       return Color(hex: "F0F0F0")
     case 378:
       return Color(hex: "DEADA9")
@@ -79,6 +85,9 @@ extension Color {
       return Color(hex: "9C9BD6")
     case 398:
       return Color(hex: "A8C998")
+    case 407:
+      // Velaryon
+      return Color(hex: "BBF9FA")
     default:
       return .white
     }

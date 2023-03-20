@@ -19,7 +19,12 @@ enum Constants {
   /// 378 - Targaryen of King's Landing
   /// 395 - Tully of Riverrun
   /// 398 - Tyrell of Highgarden
-  static let greatHouses = [7, 17, 169, 229, 285, 362, 378, 395, 398]
+  ///
+  /// HotD Houses:
+  /// 195 - Hightower
+  /// 369 - Strong
+  /// 407 - Velaryon
+  static let greatHouses = [7, 17, 169, 195, 229, 285, 362, 369, 378, 395, 398, 407]
 
   static let numberOfHouses = 444
 }

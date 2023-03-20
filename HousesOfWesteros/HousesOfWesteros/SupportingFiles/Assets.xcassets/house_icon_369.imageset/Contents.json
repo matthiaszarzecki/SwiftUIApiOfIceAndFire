@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "House_Strong.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
