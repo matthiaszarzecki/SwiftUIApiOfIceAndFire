@@ -34,6 +34,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - SwiftLint
 - Custom SwiftLint rules
 - URLComponents
+- SwiftUI Animations
 
 ### TODO:
 - Improved Accessibility Features
@@ -49,18 +50,19 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 
 ### Nice to Have:
 - SwiftFormat
-- Fastlane function to create and resize screenshots for this readme
+- Fastlane function to create screenshots for this readme
 - CodeCov integration in CICD
 - Unit-Testing Views with ViewInspector Plugin
 - Monkey-Tests
 - Fetch nested data for Characters
 - UI-Tests
-- Actor Images through a movie api
 - Dark Color Scheme & scheme switching
 - Automated tests for error-handling
 - Replace generic native calls with combine-subscriptions
 - Data Caching (Realm or CoreData)
 - Welcome Tab with House of the Day View
+- Async Await Calls
+- Apple Watch integration
 
 Created by Matthias Zarzecki, 2021-01
 
