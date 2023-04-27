@@ -26,6 +26,7 @@ struct AllHousesView<T: AllHousesViewModelProtocol>: View {
       LazyVStack {
         houseElements
         TinyLoadingIndicator()
+          .padding()
       }
     }
   }
@@ -40,15 +41,35 @@ struct AllHousesView<T: AllHousesViewModelProtocol>: View {
 
   private var houseElements: some View {
     ForEach(viewModel.houses) { house in
-      NavigationLink(
+      var height: CGFloat = 60
+      if house.isGreatHouse {
+        height = 100
+      }
+
+      return NavigationLink(
         destination: SingleHouseView(viewModel: SingleHouseViewModel(houseBasic: house))
       ) {
-        HouseCellBasicForVStack(
-          house: house,
-          iconSize: .largeForMajorCells,
-          width: 300
-        )
+        GeometryReader { geometry in
+          let spacing: CGFloat = .spacing16
+          let width = geometry.size.width - spacing * 2
+
+          if house.isGreatHouse {
+            HouseCellLarge(
+              viewModel: HouseCellLargeViewModel(house),
+              width: width
+            )
+            .padding(.leading, spacing)
+          } else {
+            HouseCellBasicForVStack(
+              house: house,
+              iconSize: .largeForMajorCells,
+              width: width
+            )
+            .padding(.leading, spacing)
+          }
+        }
       }
+      .frame(height: height)
       .onAppear {
         viewModel.checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: house.url)
       }

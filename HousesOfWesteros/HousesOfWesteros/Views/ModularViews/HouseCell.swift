@@ -13,8 +13,10 @@ struct HouseCellUpdated: View {
 
   @ViewBuilder
   private var icon: some View {
-    if let unwrappedId = house.id,
-      house.isGreatHouse {
+    if
+      let unwrappedId = house.id,
+      house.isGreatHouse
+    {
       HouseIconSigil(
         iconSize: iconSize,
         id: unwrappedId
@@ -33,6 +35,7 @@ struct HouseCellUpdated: View {
       icon
 
       Text(house.name)
+        .foregroundColor(.black)
 
       if house.containsSubViews {
         Image(systemName: "link")
@@ -68,6 +71,7 @@ struct HouseCellBasicForList: View {
       icon
 
       Text(house.name)
+        .foregroundColor(.black)
 
       if house.containsLinks {
         Image(systemName: "link")
@@ -92,6 +96,7 @@ struct HouseCellBasicForVStack: View {
       .padding(.spacing8)
 
       Text(house.name)
+        .foregroundColor(.black)
         .frame(width: width * 0.7, height: 60, alignment: .leading)
         .multilineTextAlignment(.leading)
 
@@ -103,8 +108,8 @@ struct HouseCellBasicForVStack: View {
           .padding(.spacing8)
       }
     }
-    .frame(width: width, height: 50, alignment: .center)
-    .backgroundColor(.gray)
+    .frame(width: width, alignment: .center)
+    .backgroundColor(.white)
     .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
     .shadow(radius: 10)
   }
