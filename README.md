@@ -4,7 +4,7 @@
 
 A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [API of Ice And Fire](https://anapioficeandfire.com/).
 
-| Screenshots | _ | _ |
+| _ | _ | _ |
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="media/screenshot_12.png">|<img src="media/screenshot_13.png">|<img src="media/screenshot_14.png">
 <img src="media/screenshot_15.png">|<img src="media/screenshot_16.png">|
