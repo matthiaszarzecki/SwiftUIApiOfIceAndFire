@@ -60,36 +60,24 @@ extension Color {
   /// major color of a great houses sigil
   /// for use as background-color.
   static func greatHousesMajorColor(id: Int) -> Color {
-    switch id {
-    case 7:
-      return Color(hex: "A8C0DC")
-    case 17:
-      return Color(hex: "EBE1A7")
-    case 169:
-      return Color(hex: "F5E6AA")
-    case 195:
-      // Hightower
-      return Color(hex: "F0F0F0")
-    case 229:
-      return Color(hex: "D49995")
-    case 285:
-      return Color(hex: "E4C3A1")
-    case 362:
-      return Color(hex: "F0F0F0")
-    case 369:
-      // Strong
-      return Color(hex: "F0F0F0")
-    case 378:
-      return Color(hex: "DEADA9")
-    case 395:
-      return Color(hex: "9C9BD6")
-    case 398:
-      return Color(hex: "A8C998")
-    case 407:
-      // Velaryon
-      return Color(hex: "BBF9FA")
-    default:
-      return .white
+    let houseColors = [
+      7: Color(hex: "A8C0DC"),
+      17: Color(hex: "EBE1A7"),
+      169: Color(hex: "F5E6AA"),
+      195: Color(hex: "F0F0F0"),
+      229: Color(hex: "D49995"),
+      285: Color(hex: "E4C3A1"),
+      362: Color(hex: "F0F0F0"),
+      378: Color(hex: "DEADA9"),
+      395: Color(hex: "9C9BD6"),
+      398: Color(hex: "A8C998"),
+      407: Color(hex: "BBF9FA")
+    ]
+
+    if let color = houseColors[id] {
+      return color
     }
+
+    return .white
   }
 }
