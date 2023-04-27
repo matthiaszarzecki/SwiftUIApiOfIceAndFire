@@ -8,8 +8,8 @@
 import SwiftUI
 
 /// Shows a list of all ASOIAF Houses.
-struct AllHousesView: View {
-  @ObservedObject private var viewModel: AllHousesViewModel
+struct AllHousesView<T : AllHousesViewModelProtocol>: View {
+  @ObservedObject private var viewModel: T
 
   private var loadingView: some View {
     AllHousesLoadingView()
@@ -74,7 +74,7 @@ struct AllHousesView: View {
     .accentColor(.westerosRed)
   }
 
-  init(viewModel: AllHousesViewModel = AllHousesViewModel()) {
+  init(viewModel: T) {
     self.viewModel = viewModel
   }
 }
@@ -82,18 +82,14 @@ struct AllHousesView: View {
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    let configurations: [AllHousesViewModel] = [
-      .mockViewModelLoading,
-      .mockViewModelError,
-      .mockViewModelRegularAndLoadingMore,
-      .mockViewModelRegularAndNotLoadingMore
-    ]
-
-    ForEach(0..<configurations.count, id: \.self) { index in
-      let configuration = configurations[index]
-      AllHousesView(viewModel: configuration)
-        .previewDisplayName("\(configuration.state)")
-    }
+    AllHousesView(viewModel: AllHousesMockViewModelRegularAndNotLoadingMore())
+      .previewDisplayName("RegularAndNotLoadingMore")
+    AllHousesView(viewModel: AllHousesMockViewModelRegularAndLoadingMore())
+      .previewDisplayName("RegularAndLoadingMore")
+    AllHousesView(viewModel: AllHousesMockViewModelError())
+      .previewDisplayName("Error")
+    AllHousesView(viewModel: AllHousesMockViewModelLoading())
+      .previewDisplayName("Loading")
   }
 }
 #endif

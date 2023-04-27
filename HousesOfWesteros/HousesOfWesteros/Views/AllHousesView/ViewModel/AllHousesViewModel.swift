@@ -8,18 +8,27 @@
 import Combine
 import SwiftUI
 
-final class AllHousesViewModel: ObservableObject {
-  enum AllHousesViewState {
-    case loading
-    case error
-    case regularAndFinishedLoading
-    case regularAndLoadingMore
-  }
+enum AllHousesViewState {
+  case loading
+  case error
+  case regularAndFinishedLoading
+  case regularAndLoadingMore
+}
 
+protocol AllHousesViewModelProtocol: ObservableObject {
+  var houses: [HouseBasic] { get set }
+  var state: AllHousesViewState { get set }
+  var viewTitle: String { get }
+
+  func fetchNextPageIfPossible()
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String)
+}
+
+final class AllHousesViewModel: AllHousesViewModelProtocol {
   let viewTitle = "All Houses of Westeros"
 
-  @Published private(set) var houses: [HouseBasic] = []
-  @Published private(set) var state: AllHousesViewState = .loading
+  @Published var houses: [HouseBasic] = []
+  @Published var state: AllHousesViewState = .loading
 
   private var page = 1
   private var subscriptions = Set<AnyCancellable>()
@@ -85,15 +94,53 @@ final class AllHousesViewModel: ObservableObject {
   }
 }
 
-// MARK: - Mock view model Variants & Convenience Init
+// MARK: - Mock view models
 extension AllHousesViewModel {
-  static let mockViewModelError: AllHousesViewModel = .init(forMockState: .error)
-  static let mockViewModelLoading: AllHousesViewModel = .init(forMockState: .loading)
-  static let mockViewModelRegularAndNotLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndFinishedLoading)
-  static let mockViewModelRegularAndLoadingMore: AllHousesViewModel = .init(forMockState: .regularAndLoadingMore)
+  static let mockViewModelError = AllHousesMockViewModelError()
+  static let mockViewModelLoading = AllHousesMockViewModelLoading()
+  static let mockViewModelRegularAndNotLoadingMore = AllHousesMockViewModelRegularAndNotLoadingMore()
+  static let mockViewModelRegularAndLoadingMore = AllHousesMockViewModelRegularAndLoadingMore()
 
-  convenience init(forMockState state: AllHousesViewState) {
-    self.init(downloader: MockHousesBasicDownloader())
-    self.state = state
-  }
+  static let allMockViewModels: [any AllHousesViewModelProtocol] = [
+    mockViewModelError,
+    mockViewModelLoading,
+    mockViewModelRegularAndNotLoadingMore,
+    mockViewModelRegularAndLoadingMore
+  ]
+}
+
+final class AllHousesMockViewModelError: AllHousesViewModelProtocol {
+  var houses: [HouseBasic] = .mockHousesEmptyArray
+  var state: AllHousesViewState = .error
+  var viewTitle: String = "All Houses of Westeros"
+
+  func fetchNextPageIfPossible() {}
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
+}
+
+final class AllHousesMockViewModelLoading: AllHousesViewModelProtocol {
+  var houses: [HouseBasic] = .mockHousesEmptyArray
+  var state: AllHousesViewState = .loading
+  var viewTitle: String = "All Houses of Westeros"
+
+  func fetchNextPageIfPossible() {}
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
+}
+
+final class AllHousesMockViewModelRegularAndNotLoadingMore: AllHousesViewModelProtocol {
+  var houses: [HouseBasic] = .mockHousesBasic
+  var state: AllHousesViewState = .regularAndFinishedLoading
+  var viewTitle: String = "All Houses of Westeros"
+
+  func fetchNextPageIfPossible() {}
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
+}
+
+final class AllHousesMockViewModelRegularAndLoadingMore: AllHousesViewModelProtocol {
+  var houses: [HouseBasic] = .mockHousesBasic
+  var state: AllHousesViewState = .regularAndLoadingMore
+  var viewTitle: String = "All Houses of Westeros"
+
+  func fetchNextPageIfPossible() {}
+  func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
 }
