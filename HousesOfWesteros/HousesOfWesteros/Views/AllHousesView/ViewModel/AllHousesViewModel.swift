@@ -96,10 +96,10 @@ final class AllHousesViewModel: AllHousesViewModelProtocol {
 
 // MARK: - Mock view models
 extension AllHousesViewModel {
-  static let mockViewModelError = AllHousesMockViewModelError()
-  static let mockViewModelLoading = AllHousesMockViewModelLoading()
-  static let mockViewModelRegularAndNotLoadingMore = AllHousesMockViewModelRegularAndNotLoadingMore()
-  static let mockViewModelRegularAndLoadingMore = AllHousesMockViewModelRegularAndLoadingMore()
+  static let mockViewModelError = AllHousesMockError()
+  static let mockViewModelLoading = AllHousesMockLoading()
+  static let mockViewModelRegularAndNotLoadingMore = AllHousesMockRegularAndNotLoadingMore()
+  static let mockViewModelRegularAndLoadingMore = AllHousesMockRegularAndLoadingMore()
 
   static let allMockViewModels: [any AllHousesViewModelProtocol] = [
     mockViewModelError,
@@ -109,7 +109,7 @@ extension AllHousesViewModel {
   ]
 }
 
-final class AllHousesMockViewModelError: AllHousesViewModelProtocol {
+final class AllHousesMockError: AllHousesViewModelProtocol {
   var houses: [HouseBasic] = .mockHousesEmptyArray
   var state: AllHousesViewState = .error
   var viewTitle: String = "All Houses of Westeros"
@@ -118,7 +118,7 @@ final class AllHousesMockViewModelError: AllHousesViewModelProtocol {
   func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
 }
 
-final class AllHousesMockViewModelLoading: AllHousesViewModelProtocol {
+final class AllHousesMockLoading: AllHousesViewModelProtocol {
   var houses: [HouseBasic] = .mockHousesEmptyArray
   var state: AllHousesViewState = .loading
   var viewTitle: String = "All Houses of Westeros"
@@ -127,7 +127,7 @@ final class AllHousesMockViewModelLoading: AllHousesViewModelProtocol {
   func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
 }
 
-final class AllHousesMockViewModelRegularAndNotLoadingMore: AllHousesViewModelProtocol {
+final class AllHousesMockRegularAndNotLoadingMore: AllHousesViewModelProtocol {
   var houses: [HouseBasic] = .mockHousesBasic
   var state: AllHousesViewState = .regularAndFinishedLoading
   var viewTitle: String = "All Houses of Westeros"
@@ -136,7 +136,7 @@ final class AllHousesMockViewModelRegularAndNotLoadingMore: AllHousesViewModelPr
   func checkIfNextBatchShouldBeLoadedAndLoad(houseUrl: String) {}
 }
 
-final class AllHousesMockViewModelRegularAndLoadingMore: AllHousesViewModelProtocol {
+final class AllHousesMockRegularAndLoadingMore: AllHousesViewModelProtocol {
   var houses: [HouseBasic] = .mockHousesBasic
   var state: AllHousesViewState = .regularAndLoadingMore
   var viewTitle: String = "All Houses of Westeros"

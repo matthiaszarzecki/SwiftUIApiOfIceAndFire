@@ -82,13 +82,13 @@ struct AllHousesView<T: AllHousesViewModelProtocol>: View {
 #if !TESTING
 struct AllHousesDisplay_Previews: PreviewProvider {
   static var previews: some View {
-    AllHousesView(viewModel: AllHousesMockViewModelRegularAndNotLoadingMore())
+    AllHousesView(viewModel: AllHousesMockRegularAndNotLoadingMore())
       .previewDisplayName("RegularAndNotLoadingMore")
-    AllHousesView(viewModel: AllHousesMockViewModelRegularAndLoadingMore())
+    AllHousesView(viewModel: AllHousesMockRegularAndLoadingMore())
       .previewDisplayName("RegularAndLoadingMore")
-    AllHousesView(viewModel: AllHousesMockViewModelError())
+    AllHousesView(viewModel: AllHousesMockError())
       .previewDisplayName("Error")
-    AllHousesView(viewModel: AllHousesMockViewModelLoading())
+    AllHousesView(viewModel: AllHousesMockLoading())
       .previewDisplayName("Loading")
   }
 }
