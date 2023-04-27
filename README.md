@@ -6,8 +6,8 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 
 | Screenshots | _ | _ |
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="media/screenshot_06.png">|<img src="media/screenshot_07.png">|<img src="media/screenshot_08.png">
-<img src="media/screenshot_10.png">|<img src="media/screenshot_11.png">|
+<img src="media/screenshot_12.png">|<img src="media/screenshot_13.png">|<img src="media/screenshot_14.png">
+<img src="media/screenshot_15.png">|<img src="media/screenshot_16.png">|
 
 ### Contains:
 - SwiftUI
