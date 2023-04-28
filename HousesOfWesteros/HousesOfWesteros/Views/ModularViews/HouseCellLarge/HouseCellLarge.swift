@@ -12,7 +12,7 @@ struct HouseCellLarge: View {
   private let width: CGFloat
 
   private var textElementWidth: CGFloat {
-    width * 0.75
+    width * 0.7
   }
 
   @ViewBuilder

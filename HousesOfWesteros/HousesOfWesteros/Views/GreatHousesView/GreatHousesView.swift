@@ -12,7 +12,7 @@ struct GreatHousesView: View {
 
   var body: some View {
     GeometryReader { geometry in
-      let spacing: CGFloat = .spacing32
+      let spacing: CGFloat = .spacing8
       let elementWidth = geometry.size.width - spacing * 2
 
       NavigationView {

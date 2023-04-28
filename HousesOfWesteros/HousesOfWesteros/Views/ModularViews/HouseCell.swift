@@ -93,7 +93,8 @@ struct HouseCellBasicForVStack: View {
         initialLetter: house.initialLetter,
         iconSize: iconSize
       )
-      .padding(.spacing8)
+      .padding(.leading, .spacing16)
+      .padding(.trailing, .spacing8)
 
       Text(house.name)
         .foregroundColor(.black)
@@ -105,7 +106,8 @@ struct HouseCellBasicForVStack: View {
       if house.containsLinks {
         Image(systemName: "link")
           .foregroundColor(.westerosRed)
-          .padding(.spacing8)
+          .padding(.leading, .spacing8)
+          .padding(.trailing, .spacing16)
       }
     }
     .frame(width: width, alignment: .center)
@@ -134,14 +136,16 @@ struct HouseCell_Previews: PreviewProvider {
     .previewLayout(.sizeThatFits)
     .previewDisplayName("\(HouseCellBasicForList.self)")
 
-    HouseCellBasicForVStack(
-      house: .mockHouseBasicWithLinksAndWithCoatOfArms,
-      iconSize: .smallForNestedCells,
-      width: 350
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
-    .previewDisplayName("\(HouseCellBasicForVStack.self)")
+    GeometryReader { geometry in
+      HouseCellBasicForVStack(
+        house: .mockHouseBasicWithLinksAndWithCoatOfArms,
+        iconSize: .smallForNestedCells,
+        width: geometry.size.width - .spacing8 * 2
+      )
+      .padding(.leading, .spacing8)
+      .previewLayout(.sizeThatFits)
+      .previewDisplayName("\(HouseCellBasicForVStack.self)")
+    }
   }
 }
 #endif
