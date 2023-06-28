@@ -9,7 +9,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 <img src="media/screenshot_12.png">|<img src="media/screenshot_13.png">|<img src="media/screenshot_14.png">
 <img src="media/screenshot_15.png">|<img src="media/screenshot_16.png">|
 
-### Contains:
+### Contains
 - SwiftUI
 - Combine-Subscriptions
 - Native API Calls with generic types 
@@ -36,7 +36,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - URLComponents
 - SwiftUI Animations
 
-### TODO:
+### TODO
 - Improved Accessibility Features
 - Nicer Widgets
 - Open House-page on tap on widget
@@ -48,7 +48,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - More ViewModels in smaller views
 - Add timeout error case, move timeout to api calls
 
-### Nice to Have:
+### Nice to Have
 - SwiftFormat
 - Fastlane function to create screenshots for this readme
 - CodeCov integration in CICD
@@ -66,6 +66,9 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 
 Created by Matthias Zarzecki, 2021-01
 
+### See Also
+- [Flutter Api of Ice and Fire](https://github.com/matthiaszarzecki/FlutterApiOfIceAndFire)
+
 ### Attribution
-- Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License.
-- Dragon Icon created by Ramy Wafaa.
+- Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License
+- Dragon Icon created by Ramy Wafaa
