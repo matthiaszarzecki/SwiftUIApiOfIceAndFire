@@ -64,11 +64,11 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 - Async Await Calls
 - Apple Watch integration
 
-Created by Matthias Zarzecki, 2021-01
-
 ### See Also
 - [Flutter Api of Ice and Fire](https://github.com/matthiaszarzecki/FlutterApiOfIceAndFire)
 
 ### Attribution
 - Images for Great Houses taken from the Wiki of Ice and Fire using CC-BY-SA 3.0 License
 - Dragon Icon created by Ramy Wafaa
+
+Created by Matthias Zarzecki, 2021-01
