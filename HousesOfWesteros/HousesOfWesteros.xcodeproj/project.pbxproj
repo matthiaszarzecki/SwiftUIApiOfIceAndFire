@@ -26,6 +26,7 @@
 		6E350A422651F9C200FD520F /* StringCapitalizeFirstLetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E350A412651F9C200FD520F /* StringCapitalizeFirstLetterTests.swift */; };
 		6E350A442651FE1400FD520F /* StringCapitalizeFirstLetterInPlaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E350A432651FE1400FD520F /* StringCapitalizeFirstLetterInPlaceTests.swift */; };
 		6E350A472652005400FD520F /* StringArrayHasOneItemFromArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E350A462652005400FD520F /* StringArrayHasOneItemFromArrayTests.swift */; };
+		6E3F407C2B655B0700C7E0C3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3F407B2B655B0700C7E0C3 /* Shimmer */; };
 		6E5DCAA026529DA300BC8AB0 /* StringArrayHasLinkEntriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5DCA9F26529DA300BC8AB0 /* StringArrayHasLinkEntriesTests.swift */; };
 		6E5DCAA226529FE300BC8AB0 /* StringArrayHasNonEmptyEntriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5DCAA126529FE300BC8AB0 /* StringArrayHasNonEmptyEntriesTests.swift */; };
 		6E7598EE265CDF930030D56A /* HouseBasicIsGreatHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7598ED265CDF930030D56A /* HouseBasicIsGreatHouseTests.swift */; };
@@ -360,6 +361,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3F407C2B655B0700C7E0C3 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -942,6 +944,9 @@
 				6E90CB5327206425008D5585 /* PBXTargetDependency */,
 			);
 			name = HousesOfWesteros;
+			packageProductDependencies = (
+				6E3F407B2B655B0700C7E0C3 /* Shimmer */,
+			);
 			productName = HousesOfWesteros;
 			productReference = CC0E1DB6262597B000C285D8 /* HousesOfWesteros.app */;
 			productType = "com.apple.product-type.application";
@@ -1017,6 +1022,9 @@
 				Base,
 			);
 			mainGroup = CC0E1DAD262597B000C285D8;
+			packageReferences = (
+				6E3F407A2B6558EE00C7E0C3 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */,
+			);
 			productRefGroup = CC0E1DB7262597B000C285D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1813,6 +1821,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E3F407A2B6558EE00C7E0C3 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/markiv/SwiftUI-Shimmer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E3F407B2B655B0700C7E0C3 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E3F407A2B6558EE00C7E0C3 /* XCRemoteSwiftPackageReference "SwiftUI-Shimmer" */;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC0E1DAE262597B000C285D8 /* Project object */;
 }
