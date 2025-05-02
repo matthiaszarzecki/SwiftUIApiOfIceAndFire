@@ -38,6 +38,7 @@ A SwiftUI-App that lists the houses in A Song of Ice and Fire, taken from the [A
 
 ### TODO
 - Improved Accessibility Features
+- Integrate to my SonarQube
 - Nicer Widgets
 - Open House-page on tap on widget
 - Timeout on Main Screen
