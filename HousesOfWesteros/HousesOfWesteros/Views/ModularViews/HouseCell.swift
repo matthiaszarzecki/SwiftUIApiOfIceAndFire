@@ -49,8 +49,7 @@ struct HouseCellBasicForList: View {
   let house: HouseBasic
   let iconSize: IconSize
 
-  @ViewBuilder
-  private var icon: some View {
+  @ViewBuilder private var icon: some View {
     if let unwrappedId = house.id,
       house.isGreatHouse {
       HouseIconSigil(

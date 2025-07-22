@@ -82,10 +82,10 @@ struct SimpleEntry: TimelineEntry {
 struct HousesOfWesterosWidgetEntryView: View {
   var entry: Provider.Entry
 
-  @Environment(\.widgetFamily) var widgetFamily
+  @Environment(\.widgetFamily)
+  var widgetFamily
 
-  @ViewBuilder
-  var body: some View {
+  @ViewBuilder var body: some View {
     switch widgetFamily {
     case .systemSmall, .systemMedium:
       GeometryReader { geometry in

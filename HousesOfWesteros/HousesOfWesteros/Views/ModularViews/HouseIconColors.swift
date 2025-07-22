@@ -12,8 +12,7 @@ struct HouseIconColors: View {
   let initialLetter: String
   let iconSize: IconSize
 
-  @ViewBuilder
-  var body: some View {
+  @ViewBuilder var body: some View {
     if colors.hasEntries {
       // When colors exists, create a CircularColorDisplay.
       ZStack {

@@ -16,8 +16,7 @@ struct HouseCellLarge: View {
     width * 0.7
   }
 
-  @ViewBuilder
-  private var icon: some View {
+  @ViewBuilder private var icon: some View {
     if let unwrappedGreatHouseId = viewModel.greatHouseId {
       HouseIconSigil(
         iconSize: .greatHouseCell,

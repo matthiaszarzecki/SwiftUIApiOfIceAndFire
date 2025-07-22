@@ -12,8 +12,7 @@ struct LinkSettingsRow: View {
   let text: String
   let urlString: String
 
-  @ViewBuilder
-  var body: some View {
+  @ViewBuilder var body: some View {
     if let url = URL(string: urlString) {
       Link(
         destination: url

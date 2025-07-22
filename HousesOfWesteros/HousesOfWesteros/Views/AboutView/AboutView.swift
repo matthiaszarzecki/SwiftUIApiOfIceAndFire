@@ -29,8 +29,7 @@ struct AboutView: View {
   /// device. On the simulator this does not work, so we open
   /// a link to a different website instead (appstore-links that
   /// work in a desktop-browser are not allowed on iOS Safari).
-  @ViewBuilder
-  private var appsAndGamesRow: some View {
+  @ViewBuilder private var appsAndGamesRow: some View {
     let iconName = "square.grid.2x2.fill"
 
     if viewModel.isSimulator {
