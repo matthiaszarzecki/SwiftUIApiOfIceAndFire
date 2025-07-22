@@ -11,8 +11,7 @@ struct HouseCellUpdated: View {
   let house: HouseUpdated
   let iconSize: IconSize
 
-  @ViewBuilder
-  private var icon: some View {
+  @ViewBuilder private var icon: some View {
     if
       let unwrappedId = house.id,
       house.isGreatHouse
