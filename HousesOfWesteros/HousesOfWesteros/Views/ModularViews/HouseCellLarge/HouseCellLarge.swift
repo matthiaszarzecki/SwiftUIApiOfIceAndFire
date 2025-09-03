@@ -5,7 +5,6 @@
 //  Created by Matthias Zarzecki on 25.04.21.
 //
 
-import Shimmer
 import SwiftUI
 
 struct HouseCellLarge: View {
@@ -27,7 +26,6 @@ struct HouseCellLarge: View {
 
   private var subtitleText: some View {
     Text(viewModel.subtitle)
-      .shimmering()
       .foregroundColor(.black)
       .shadow(color: .white, radius: 6)
       .frame(width: textElementWidth, height: 24, alignment: .leading)
@@ -49,7 +47,6 @@ struct HouseCellLarge: View {
             .frame(width: textElementWidth, height: 60, alignment: .leading)
             .multilineTextAlignment(.leading)
             .minimumScaleFactor(0.5)
-            .shimmering()
 
           subtitleText
         }
