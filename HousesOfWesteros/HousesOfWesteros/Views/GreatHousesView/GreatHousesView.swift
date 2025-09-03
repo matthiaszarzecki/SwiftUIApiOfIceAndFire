@@ -39,6 +39,8 @@ struct GreatHousesView: View {
             }
             .frame(width: geometry.size.width)
             .listRowBackground(Color.clear)
+
+            bottomSpacer
           }
           .navigationTitle(viewModel.viewTitle)
         } else {
@@ -47,6 +49,10 @@ struct GreatHousesView: View {
         }
       }
     }
+  }
+
+  private var bottomSpacer: some View {
+    Color.clear.frame(width: 10, height: 60)
   }
 
   init(viewModel: GreatHousesViewModel = GreatHousesViewModel()) {
