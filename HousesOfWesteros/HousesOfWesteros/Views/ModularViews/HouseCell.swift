@@ -12,10 +12,7 @@ struct HouseCellUpdated: View {
   let iconSize: IconSize
 
   @ViewBuilder private var icon: some View {
-    if
-      let unwrappedId = house.id,
-      house.isGreatHouse
-    {
+    if let unwrappedId = house.id, house.isGreatHouse {
       HouseIconSigil(
         iconSize: iconSize,
         id: unwrappedId

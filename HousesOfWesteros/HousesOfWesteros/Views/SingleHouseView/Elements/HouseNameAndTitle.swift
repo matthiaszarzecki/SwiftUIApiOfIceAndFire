@@ -31,10 +31,7 @@ struct HouseNameAndTitle: View {
         : width
 
       HStack {
-        if
-          let unwrappedId = house.id,
-          isGreatHouse
-        {
+        if let unwrappedId = house.id, isGreatHouse {
           HouseIconSigil(
             iconSize: .largeForHeader,
             id: unwrappedId

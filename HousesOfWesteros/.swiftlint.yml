@@ -9,7 +9,6 @@ disabled_rules:
   - discarded_notification_center_observer
   - notification_center_detachment
   - orphaned_doc_comment
-  - opening_brace # using a custom opening brace function instead that allows forward braces in multi-conditions
 
 opt_in_rules:
   - array_init
@@ -47,6 +46,7 @@ opt_in_rules:
   - multiline_parameters
   - multiline_parameters_brackets
   - object_literal
+  - opening_brace
   - operator_usage_whitespace
   - overridden_super_call
   - pattern_matching_keywords
@@ -118,12 +118,6 @@ custom_rules:
   use_int_zero_property_in_single_check:
     regex: ' == 0[^( {)]'
     message: "Avoid checking for '0' in single check, use '== .zero' instead."
-
-  opening_brace_style:
-    name: "Opening Brace Style"
-    regex: '(?<!,)\n\s*\{'
-    message: "Opening braces should be preceded by a single space and on the same line as the declaration, unless the preceding line ends with a comma (multi-condition statement)."
-    severity: warning
 
 attributes:
   always_on_same_line:
