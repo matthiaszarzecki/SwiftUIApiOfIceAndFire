@@ -931,6 +931,7 @@
 			buildConfigurationList = CC0E1DDB262597B200C285D8 /* Build configuration list for PBXNativeTarget "HousesOfWesteros" */;
 			buildPhases = (
 				CC0E1DB2262597B000C285D8 /* Sources */,
+				6E25F1042F58475300F8906E /* SwiftLint */,
 				CC0E1DB3262597B000C285D8 /* Frameworks */,
 				CC0E1DB4262597B000C285D8 /* Resources */,
 				6E90CB5527206425008D5585 /* Embed Foundation Extensions */,
@@ -1069,6 +1070,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E25F1042F58475300F8906E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelif [ -f \"/opt/homebrew/bin/swiftlint\" ]; then\n  /opt/homebrew/bin/swiftlint\nelse\n  echo \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E90CB3F27206422008D5585 /* Sources */ = {
@@ -1400,6 +1422,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/PreviewContent\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1614,6 +1637,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/PreviewContent\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1637,6 +1661,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HousesOfWesteros/PreviewContent\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = HousesOfWesteros/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
